@@ -1,0 +1,117 @@
+% ****** Note template ****** %
+
+%\RequirePackage{lineno} 
+
+\documentclass[aps,prd,superscriptaddress,floatfix]{revtex4}
+
+
+\usepackage{graphicx}  % needed for 
+\usepackage{dcolumn}   % needed for some tables
+\usepackage{bm}        % for math
+\usepackage{amssymb}   % for math
+
+%\def\linenumberfont{\normalfont\small\sffamily}
+
+\usepackage{psfrag}
+
+
+\def\pp{$p\bar{p}$}
+
+
+\topmargin=-1.1cm
+
+\begin{document}
+
+%\pacs{}
+
+
+\title{  
+\vspace{0.5cm}
+Planar Silicon Detector Data Format
+}
+
+\author {Matthew Herndon}
+
+\address{University of Wisconsin, Madison, Wisconsin, Fermi
+  National Accelerator Laboratory, Illinois}
+
+%\date{\today}
+
+\begin{abstract}
+\vskip 0.5cm
+\noindent
+This document describes the data format and classes used
+to store data for a planer silicon strip detector.
+\end{abstract}
+\maketitle
+
+%\tableofcontents
+%\setpagewiselinenumbers
+%%%\modulolinenumbers[10]
+%%%\linenumbers
+
+\vspace{0.3cm}
+
+\section{Introduction}
+Digitized data from the planer silicon strip detector is stored
+in bit packed format.
+
+The detector geometry of the silicon sensors is defined in ~\cite{detectorGeometry}.
+
+
+\section{Data Format}
+Data is stored in individual bytes or pairs of bytes for information
+that does not fit in one byte.  The data structure is as follows.
+
+\begin{itemize}
+\item  1 byte: event number, max 256
+\item - 1 byte: layer number, max 5 (repeated number of events times)
+\item -- 1 byte: number of strips, max 256 (repeated 5 times)
+\item --- 2 bytes: strip number, 11 bytes max 2048, 5 bytes, max 32
+  (repeated number of strips times)
+\end{itemize}
+
+Note event numbers and layer numbers are not necessary to the
+structure but included to facilitate synchronization with reading of
+other event information and with layer ordering.
+
+\section{Data input and output}
+Data input and output is controlled via standard C++ library binary input and
+output functions. std::ofstream, ifstream.  Byte writing is performed
+write and read function as:
+
+stripdata.write (reinterpret\_cast<const char *>(\&myInt), 1);\\
+stripdata.read (myCharByte, 1);\\
+
+A planned upgrade is to hide the read and write implementations to allow the
+underlying method to be optimized to improve performance for all
+software using the byte input output format.
+
+
+\section{stripSet class}
+Strip data can be stored in the stripSet class implemented in the
+stripSet.cc and stripSet.hh files.
+
+Class variables:
+\begin{itemize}
+\item type\_def map layer\_map: int key int value map of strip and adc data, with
+\item vector layer\_map\_vector: vector of number of sensor layers layer\_maps
+\end{itemize}
+
+Class functions:
+\begin{itemize}
+\item void clear(void) to clear the layer\_map\_vector
+\end{itemize}
+
+
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{detectorGeometry}
+detectorGeometry note, M. Herndon (2014)
+
+\end{thebibliography}
+% 
+\end{document}

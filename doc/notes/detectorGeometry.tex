@@ -1,0 +1,133 @@
+% ****** Note template ****** %
+
+%\RequirePackage{lineno} 
+
+\documentclass[aps,prd,superscriptaddress,floatfix]{revtex4}
+
+
+\usepackage{graphicx}  % needed for 
+\usepackage{dcolumn}   % needed for some tables
+\usepackage{bm}        % for math
+\usepackage{amssymb}   % for math
+
+%\def\linenumberfont{\normalfont\small\sffamily}
+
+\usepackage{psfrag}
+
+
+\def\pp{$p\bar{p}$}
+
+
+\topmargin=-1.1cm
+
+\begin{document}
+
+%\pacs{}
+
+
+\title{  
+\vspace{0.5cm}
+Planar Silicon Detector Geometry Description
+}
+
+\author {Matthew Herndon}
+
+\address{University of Wisconsin, Madison, Wisconsin, USA}
+
+%\date{\today}
+
+\begin{abstract}
+\vskip 0.5cm
+\noindent
+This document describes the geometry class used to describe a planer silicon strip
+detector in two dimensions immersed in a magnetic field for measuring
+the trajectories on charged particles.  
+\end{abstract}
+\maketitle
+
+%\tableofcontents
+%\setpagewiselinenumbers
+%%%\modulolinenumbers[10]
+%%%\linenumbers
+
+\vspace{0.3cm}
+
+\section{Introduction}
+The detector consists of a five layer silicon detector immersed in a 1
+Tesla magnetic field oriented perpendicular to the measurement
+directions of the silicon sensors.  Measurements are only consider in
+2D.
+
+
+\section{Detector layout and performance}
+The silicon strip sensors are oriented perpendicular to the y axis in
+the x-z plane in 2 cm intervals.  Strips in the sensors run in the z
+direction.  The two inner, lowest y,  sensors have strips spaced 25 micron
+intervals in x. While the 3 outer sensors have strips spaced in 50 micron
+intervals in x.  Each sensor has 2048 strips symmetrically positioned
+around x = 0.  The magnetic filed is oriented in the z direction such
+that each sensor makes measurements of the x-y position allowing
+the curvature in the magnetic field to be measured.
+
+The sensors digitize approximately 32 ADC counts of charge per charged
+particle hit and have a hit resolution given in microns which is due to
+digitization and intrinsic resolution uncertainties.
+
+The sensors are described by yposition, stripPtich, number of strips
+and resolution as give in table~\ref{tab:detectorTable}
+
+
+
+\begin{table}
+\caption{\label{tab:detectorTable} Sensor properties.}
+\begin{tabular}{|l|l|l|l|l|}
+\hline 
+Layer & Number Strips & Strip Pitch (um) & Y Pos (cm) & Res (um)\\
+\hline
+0 & 2048 & 25	& 2.0 & 7	 \\
+2 & 2048 & 25	& 4.0 & 7	 \\
+3 & 2048 & 50	& 6.0 & 12	 \\
+4 & 2048 & 50	& 8.0 & 12	 \\
+5 & 2048 & 50	& 10.0 & 12	 \\
+\hline
+\end{tabular}
+\end{table}
+
+\section{Class Description}
+The detector geometry is available through the detectorGeometry class
+described in the detectorGeometry.cc and detectorGeomergy.hh classes.
+
+Class variables:
+\begin{itemize}
+\item int nSensors: number for sensors in y
+\item double bField: magnetic field strength, oriented along z-axis
+\item sensorDecriptor structs: describing silicon sensors
+\end{itemize}
+
+
+
+
+sensorDecriptor struct:\\
+Instances sensor0, sensor1, sensor2, sensor3, sensor4.\\
+Variables:\\
+\begin{itemize}
+\item int nStrips
+\item double stripPitch
+\item double yPos
+\item double resolution
+\end{itemize}
+
+
+
+% \begin{thebibliography}{99}
+
+% \bibitem{higgs}
+% P.W. Higgs, Phys. Rev. Lett. 12, 132 (1964),
+% {\it idem\rm}, Phys. Rev. 145, 1156 (1966),
+% F. Englert and R. Brout, Phys. Rev. Lett. 13, 321 (1964), 
+% G.S. Guralnik, C.R. Hagen, and T.W. Kibble, Phys. Rev. Lett. 13, 585 (1964)
+
+
+% \end{thebibliography}
+% 
+\end{document}
