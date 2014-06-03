@@ -30,7 +30,7 @@ clean:
 	\rm *.o *~ dataGen 
 
 tar:
-	tar -z --create --file module0.tgz dataGen.cc DataGenModule.cc DataGenModule.hh \
+	tar -z --create --file day0.tgz dataGen.cc DataGenModule.cc DataGenModule.hh \
 	DetectorGeometry.cc DetectorGeometry.hh StripSet.cc StripSet.hh \
-        commands0.txt makefile \
+        commands0.txt sensorgeometry.txt makefile doxygen.cfg \
         doc
