@@ -21,7 +21,7 @@ void DataGenModule::run(void)
 
   // Debugging
   // Eventually this will come from the framework
-  int debugLevel = 5;
+  int debugLevel = 1;
   _debugLevel = debugLevel;
   // six levels of degug
   // 5 most verbose with all printouts
