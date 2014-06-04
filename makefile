@@ -1,7 +1,7 @@
 OBJS = Random.o DetectorGeometry.o StripSet.o DataGenModule.o dataGen.o
 NOTES = notes/
 CC = g++
-DEBUG = -g
+DEBUG = -g -O0
 INCDIRS = -I${ROOTSYS}include
 CFLAGS = -std=c++11 -Wall -c $(DEBUG) `root-config --cflags`
 LDIRS = -L$(ROOTSYS)lib

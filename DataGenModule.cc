@@ -6,75 +6,47 @@
 #include "DetectorGeometry.hh"
 #include "StripSet.hh"
 #include "DataGenModule.hh"
-//#include "TGeoHelix.h"
 
-void DataGenModule::run(void)
-{
+DataGenModule::DataGenModule(int debugLevel, DetectorGeometry &myDetectorGeometry , StripSet & myStripSet,std::ofstream& genoutputeventdatafile){
 
-
-  // Physical constants, !! move to header/include file
-  const double C = 2.99792458e8;
-
-  // binary output
-  std::ofstream stripdata;
-  stripdata.open("stripdata.bin",std::ios::binary);
-
-  // Debugging
-  // Eventually this will come from the framework
-  int debugLevel = 1;
   _debugLevel = debugLevel;
-  // six levels of degug
-  // 5 most verbose with all printouts
-  // 1 basic information on progress
-  // 0 none
+  _myDetectorGeometry = & myDetectorGeometry;
+  _myStripSet = & myStripSet;
+  _genoutputeventdatafile = & genoutputeventdatafile;
 
-
-  // Intialize DetectorGeomentry and StripSet
-  // Eventually these will come from the framework
-  DetectorGeometry myDetectorGeometry;
-  setDetectorGeometry(myDetectorGeometry);
-  _myDetectorGeometry->_initSensorGeometryFromFile();
-  if (_debugLevel > 0) _myDetectorGeometry->printSensorGeometry();
-  StripSet myStripSet;
-  setStripSet(myStripSet);
+  // Event counter
+  _event = 0;
 
   // Intialize commonly used DetectorGeometry data
-  int nLayers = _myDetectorGeometry->getNSensors();
-  _nLayers = nLayers;
-  _curvatureC = _myDetectorGeometry->getZBField()*C/1.0e9;
-
-
-
-  for (int ii_event = 0; ii_event < 128; ++ii_event) {
-
-    
-    for (int ii_track = 0; ii_track < 10; ++ii_track) {
-
-      generateTrack();
-
-      calculateHitPositions();
-
-    } // end track loop
-
-    _myStripSet->writeEvent(stripdata, ii_event);
-
-    _myStripSet->clear();
-
-  } // end event loop
+  _nLayers = _myDetectorGeometry->getNSensors();
+  _curvatureC = _myDetectorGeometry->getZBField()*2.99792458e8/1.0e9;
+  _event = 0;
 
 }
 
-void DataGenModule::setDetectorGeometry(DetectorGeometry & myDetectorGeometry){
+void DataGenModule::event(void)
+{
 
-  _myDetectorGeometry = & myDetectorGeometry;
+  for (int ii_track = 0; ii_track < 10; ++ii_track) {
+
+    generateTrack();
+
+    calculateHitPositions();
+
+  } // end track loop
+
+  _myStripSet->setEvent(_event);
+  _myStripSet->writeEvent(*_genoutputeventdatafile);
+
+  if (_debugLevel >=2) _myStripSet->print();
+
+  _myStripSet->clear();
+
+  _event++;
+
 
 }
 
-void DataGenModule::setStripSet(StripSet & myStripSet){
-
-  _myStripSet = & myStripSet;
-
-}
 
 
 void DataGenModule::generateTrack(){
@@ -82,7 +54,7 @@ void DataGenModule::generateTrack(){
 
   // Generate track data
     
-  // Track pT and charge
+  // Track pT, phi0 and charge
   double trackPT = getUniformDouble()*10.0 + 10.0;
   int trackCharge = (getUniformDouble() > 0.5) ? 1 : -1;
   double trackPhi0 = getUniformDouble()*2.0*M_PI/6.0 - 1.0*M_PI/6.0 + M_PI/2.0;
@@ -97,7 +69,7 @@ void DataGenModule::generateTrack(){
   double trackCurvature = (_curvatureC)/trackPT;
 
 
- if (_debugLevel >=5 ) {
+  if (_debugLevel >=5 ) {
     std::cout << "Track pT " << trackPT << std::endl;
     std::cout << "Track Charge " << trackCharge << std::endl;
     std::cout << "Track phi0 " << trackPhi0 << std::endl;
@@ -125,7 +97,6 @@ void DataGenModule::calculateHitPositions(){
   // y coordinate of hits.  Eqauls Y postion of sensor layers
   double yHitPosition[_nLayers];
   for (int ii_layer = 0; ii_layer < _nLayers; ++ii_layer) {
-    std::cout << "layer " << ii_layer << std::endl;
     yHitPosition[ii_layer] = _myDetectorGeometry->getSensor(ii_layer)._yPos;
   }
 
@@ -185,9 +156,8 @@ void DataGenModule::calculateHitPositions(){
     }
 
     // Store data in strip set.
-    // !!!!! upgrade could be to move data binary output/input to StripSet
-    _myStripSet->insertStrip(ii_layer,xStripNumber[ii_layer][0],xStripADC[ii_layer][0]);
-    _myStripSet->insertStrip(ii_layer,xStripNumber[ii_layer][1],xStripADC[ii_layer][1]);
+    if (xStripNumber[ii_layer][0] > 0 && xStripNumber[ii_layer][0] < 2048) _myStripSet->insertStrip(ii_layer,xStripNumber[ii_layer][0],xStripADC[ii_layer][0]);
+    if (xStripNumber[ii_layer][1] > 0 && xStripNumber[ii_layer][1] < 2048) _myStripSet->insertStrip(ii_layer,xStripNumber[ii_layer][1],xStripADC[ii_layer][1]);
 
 
 

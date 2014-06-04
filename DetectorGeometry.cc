@@ -6,11 +6,16 @@
 #include "Exception.hh"
 
 DetectorGeometry::DetectorGeometry(){
-  _initSensorGeometry();
+  _initDetectorGeometry();
+}
+
+DetectorGeometry::DetectorGeometry(std::ifstream & detectorgeometryfile){
+  _initDetectorGeometry();
+  _initDetectorGeometryFromFile(detectorgeometryfile);
 }
 
 
-void DetectorGeometry::_initSensorGeometry( void ) {
+void DetectorGeometry::_initDetectorGeometry( void ) {
 
   // Minimum and maximum sensor limits
   // Confirms that users and entering a reasonable geometry
@@ -28,6 +33,8 @@ void DetectorGeometry::_initSensorGeometry( void ) {
 
   _zBField = 1.0;
 
+
+  // Default geometry
 
   _sensor[0]._nStrips = 2048;
   _sensor[0]._stripPitch = 0.0025;
@@ -58,33 +65,29 @@ void DetectorGeometry::_initSensorGeometry( void ) {
 
 }
 
-void DetectorGeometry::_initSensorGeometryFromFile( void ) {
+void DetectorGeometry::_initDetectorGeometryFromFile(std::ifstream & detectorgeometryfile) {
 
-  // Sensor geometry file format is ridgid to prevent mistakes
+  // Sensor geometry file format is ridgid to make mistakes less likley
 
-  std::ifstream sensorgeometry;
-  sensorgeometry.open("sensorgeometry.txt");
-
+ 
   bool badGeometry = false;
 
-
-  if (!sensorgeometry){
+  if (!detectorgeometryfile){
     std::cerr << "can't open sensorgeometry.txt file: using default geometry" << std::endl;
     badGeometry = true;
   }
 
-  std::string sensorGeometryString;
+  std::string detectorGeometryString;
   int sensorNumber;
 
-  sensorgeometry >> sensorGeometryString;
-  if (sensorGeometryString == "zBField"){
-    sensorgeometry >> _zBField;
+  detectorgeometryfile >> detectorGeometryString;
+  if (detectorGeometryString == "zBField"){
+    detectorgeometryfile >> _zBField;
     if (std::fabs(_zBField) > 10.0) {
       std::cerr << "BField is " << _zBField << ", and should not be greater than 10.0 Tesla" << std::endl;
       std::cerr << "using default geometry" << std::endl;
       badGeometry = true;
     }
-
   } else {
     std::cerr << "Bad format sensorgeometry.txt" << std::endl;
     std::cerr << "Reverting to default geometry" << std::endl;
@@ -94,14 +97,14 @@ void DetectorGeometry::_initSensorGeometryFromFile( void ) {
 
 
   for (int ii_layer = 0; ii_layer < _nSensors; ++ii_layer){
-    sensorgeometry >> sensorGeometryString;
-    if (sensorGeometryString == "Sensor"){
-      sensorgeometry >> sensorNumber;
+    detectorgeometryfile >> detectorGeometryString;
+    if (detectorGeometryString == "Sensor"){
+      detectorgeometryfile >> sensorNumber;
       if (sensorNumber == ii_layer){
-	sensorgeometry >> _sensor[ii_layer]._nStrips;
-	sensorgeometry >> _sensor[ii_layer]._stripPitch;
-	sensorgeometry >> _sensor[ii_layer]._yPos;
-	sensorgeometry >> _sensor[ii_layer]._resolution;
+	detectorgeometryfile >> _sensor[ii_layer]._nStrips;
+	detectorgeometryfile >> _sensor[ii_layer]._stripPitch;
+	detectorgeometryfile >> _sensor[ii_layer]._yPos;
+	detectorgeometryfile >> _sensor[ii_layer]._resolution;
 	if ( _sensor[ii_layer]._nStrips < _sensorMinLimits._nStrips|| _sensor[ii_layer]._nStrips > _sensorMaxLimits._nStrips ) badGeometry = true;
 	if ( _sensor[ii_layer]._stripPitch < _sensorMinLimits._stripPitch|| _sensor[ii_layer]._stripPitch > _sensorMaxLimits._stripPitch ) badGeometry = true;
 	if ( _sensor[ii_layer]._yPos < _sensorMinLimits._yPos|| _sensor[ii_layer]._yPos > _sensorMaxLimits._yPos ) badGeometry = true;
@@ -123,15 +126,14 @@ void DetectorGeometry::_initSensorGeometryFromFile( void ) {
     }
   }
 
-  if (badGeometry) _initSensorGeometry();
+  if (badGeometry) _initDetectorGeometry();
 
   if (!badGeometry) _defaultGeometry = false;
 
 
 }
 
-void DetectorGeometry::printSensorGeometry( void ) {
-
+void DetectorGeometry::printDetectorGeometry( void ) {
 
   std::cout << "Detector Geometry information" << std::endl;
   std::cout << "Magnetic field " << _zBField << " Tesla" << std::endl;
@@ -151,9 +153,9 @@ void DetectorGeometry::printSensorGeometry( void ) {
 
 void DetectorGeometry::printSensorLimits( void ) {
 
-   std::cout << "Detector Geometry limit information" << std::endl;
-   std::cout << "Custom Geometry specified sensor information outside of allowed limits" << std::endl;
-   std::cout << "This may be intentional in which case allowed limits in _initSensorGeometry should be reprogramed" << std::endl;
+   std::cout << "Detector Sencor Geometry limit information" << std::endl;
+   std::cout << "Custom Geometry specified sensor information may be outside of allowed limits" << std::endl;
+   std::cout << "This may be intentional in which case allowed limits in _initDetectorGeometry should be reprogramed" << std::endl;
 
    std::cout << "N strips    min - max "  << _sensorMinLimits._nStrips    << " - " <<  _sensorMaxLimits._nStrips << std::endl;
    std::cout << "Strip pitch min - max "  << _sensorMinLimits._stripPitch << " - " <<  _sensorMaxLimits._stripPitch << std::endl;

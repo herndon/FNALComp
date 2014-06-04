@@ -17,7 +17,6 @@
 #include <fstream>
 #include <iostream>
 #include "DetectorGeometry.hh"
-#include "StripSet.hh"
 
   typedef std::map<int, int> layerMap; //!< Map of strip number and acd counts for one layer
 
@@ -32,8 +31,11 @@ private:
 
   static const int bitmask1 = 0x00FF;
   static const int bitmask2 = 0xFF00;
+  static const int adcBitmask = 0x001F;
+  static const int stripBitmask = 0xFFE0;
 
   layerMap _layerMapVector[DetectorGeometry::_nSensors];
+  int _event;
 
 public:
 
@@ -44,13 +46,16 @@ public:
 
   void insertStrip(int, int, int); //!< Insert strip by layer, strip number, adc count
 
-  void writeEvent(std::ofstream &, int); //!< Write all strip information for all sensors to an output file
-  //void readEvent(std::ifstream &);
+  int getEvent(void){return _event;}
+  void setEvent(int event) {_event = event;}
 
+  void writeEvent(std::ofstream&); //!< Write all strip information for all sensors std::ofstream file for event _event
+  void readEvent(std::ifstream&);  //!< Read all strip information for all sensors std::ifstream file for event _event
+
+  void print(void);
+  void printRawData(std::ifstream&);
 
   void clear(void);
-
-
 
 };
 #endif // StripSet_hh

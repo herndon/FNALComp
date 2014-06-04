@@ -29,15 +29,18 @@ class DataGenModule {
 
 public:
 
-  DataGenModule() {};
+  DataGenModule(int,DetectorGeometry &,StripSet &,std::ofstream&);
   ~DataGenModule() {};
 
-  void run(void);
+  void event(void);
+
 
 private:
 
   int _debugLevel;
 
+  // Generator Output event data file
+  std::ofstream * _genoutputeventdatafile;
 
   // Detector information
   DetectorGeometry * _myDetectorGeometry;
@@ -45,17 +48,18 @@ private:
   int _nLayers;
   double _curvatureC;
 
-  // Track information
-  TGeoHelix* _helix;
+  // Events
+  int _event;
 
-  void setDetectorGeometry(DetectorGeometry &);
-  void setStripSet(StripSet &);
+  // Track information
+  TGeoHelix* _helix = NULL;
+
 
   void generateTrack();
   void calculateHitPositions();
 
 
-  void writeStripSetEvent(std::ofstream &, int);
+  void writeStripSetEvent(std::ofstream &, int); //!< Read int event from std::ofstream file
 
 };
 

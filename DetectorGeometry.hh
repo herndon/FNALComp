@@ -10,7 +10,8 @@
 //                       Fermi National Accelerator Laborator
 // 2014-05-01
 //============================================================================
-
+#include <fstream>
+#include <iostream>
 
 struct sensorDescriptor {
   int _nStrips;
@@ -32,19 +33,17 @@ class DetectorGeometry {
 public:
 
  DetectorGeometry();
+ DetectorGeometry(std::ifstream&);
  ~DetectorGeometry() {};
-
 
   const sensorDescriptor& getSensor(int nsensor); //!< Returns struct describing sensor number nsensor
   int getNSensors(void);
   double getZBField(void);
 
-  void _initSensorGeometryFromFile(void);
+  void _initDetectorGeometryFromFile(std::ifstream&);
 
-
-  void printSensorGeometry(void);
+  void printDetectorGeometry(void);
   void printSensorLimits(void);
-
 
 private:
 
@@ -53,16 +52,16 @@ private:
 
   double _zBField;
 
+  // Use default geometry or intialize geometry from a run time file
   bool _defaultGeometry;
 
   // limits on sensor specifications
   sensorDescriptor _sensorMinLimits;
   sensorDescriptor _sensorMaxLimits;
 
-  // !!!!! convert to vector, use _nSensors
   sensorDescriptor _sensor[_nSensors];
 
-  void _initSensorGeometry(void);
+  void _initDetectorGeometry(void);
 
 };
 
@@ -74,7 +73,5 @@ inline int DetectorGeometry::getNSensors(void) {
 inline double DetectorGeometry::getZBField(void) {
   return _zBField;
 }
- 
-
 
 #endif // DetectorGeometry_hh
