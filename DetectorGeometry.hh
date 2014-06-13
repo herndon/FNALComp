@@ -13,11 +13,14 @@
 #include <fstream>
 #include <iostream>
 
+namespace fc {
+
 struct sensorDescriptor {
   int _nStrips;
   double _stripPitch;
-  double _yPos;
   double _resolution;
+  double _center[3];
+  double _norm[3];
 };
 
 ///
@@ -29,6 +32,8 @@ struct sensorDescriptor {
 class DetectorGeometry {
 
   friend class StripSet;
+  friend class HitSet;
+  friend class HitCompareModule;
 
 public:
 
@@ -36,42 +41,41 @@ public:
  DetectorGeometry(std::ifstream&);
  ~DetectorGeometry() {};
 
-  const sensorDescriptor& getSensor(int nsensor); //!< Returns struct describing sensor number nsensor
-  int getNSensors(void);
-  double getZBField(void);
+  const sensorDescriptor& getSensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
+  int getDetectorGeometryVersion(void) const {return _detectorGeometryVersion;};
+  int getNSensors(void) const {return _nSensors;};
+  double getZBField(void) const {return _bField[2];};
+  const double * getBField(void) const {return _bField;};
+  double getCurvatureC(void) const {return _curvatureC;};
 
   void _initDetectorGeometryFromFile(std::ifstream&);
 
-  void printDetectorGeometry(void);
-  void printSensorLimits(void);
+  void printDetectorGeometry(void) const;
+  void printSensorLimits(void) const;
 
 private:
+
+  // Use default geometry or intialize geometry from a run time file and version
+  bool _defaultGeometry;
+  int _detectorGeometryVersion;
 
   // Numerology for declaring arrays
   static const int _nSensors=5;
 
-  double _zBField;
-
-  // Use default geometry or intialize geometry from a run time file
-  bool _defaultGeometry;
+  sensorDescriptor _sensor[_nSensors];
 
   // limits on sensor specifications
   sensorDescriptor _sensorMinLimits;
   sensorDescriptor _sensorMaxLimits;
 
-  sensorDescriptor _sensor[_nSensors];
+  // Useful constants
+  double _bField[3];
+  double _curvatureC;
 
+  void _initSensorLimits(void);
   void _initDetectorGeometry(void);
 
 };
-
-
-inline int DetectorGeometry::getNSensors(void) {
-  return _nSensors;
-}
-
-inline double DetectorGeometry::getZBField(void) {
-  return _zBField;
-}
+} // end namespace fc
 
 #endif // DetectorGeometry_hh

@@ -1,60 +1,76 @@
+#include <string>
 #include "StripSet.hh"
 #include "Exception.hh"
 
-const layerMap& StripSet::getLayerMap(int layer) {
-    if (layer >= 0 && layer < DetectorGeometry::_nSensors) return _layerMapVector[layer];
-     throw Exception("StripSet::genLayerMap: Out of bounds layer");  
-
+fc::StripSet::StripSet():
+  _version(1){
 }
 
-void StripSet::insertStrip(int layer, int strip, int adc) {
-  _layerMapVector[layer].insert(layerMap::value_type(strip,adc));
+fc::StripSet::StripSet(int eventNumber,bool genStrips):
+  _eventNumber(eventNumber),
+  _genStrips(genStrips),
+  _version(1){
 }
 
-void StripSet::writeEvent(std::ofstream & stripData) {
+const fc::layerStripMap& fc::StripSet::getLayerStripMap(int layer) const {
+    if (layer >= 0 && layer < DetectorGeometry::_nSensors) return _layerStripMapVector[layer];
+     throw Exception("StripSet::getLayerStripMap: Out of bounds layer");  
+}
 
+void fc::StripSet::insertStrip(int layer, int strip, int adc) {
+  if (layer >= 0 && layer < DetectorGeometry::_nSensors){
+    _layerStripMapVector[layer].insert(layerStripMap::value_type(strip,adc));
+    return;
+  } else {
+     throw Exception("StripSet::insertStrip: Out of bounds layer");  
+  }
+}
 
-  stripData.write (reinterpret_cast<const char *>(&_event), 1);
+void fc::StripSet::writeEvent(std::ofstream & stripdata) const{
+
+  stripdata << "Strips" << std::endl;
+
+  stripdata.write (reinterpret_cast<const char *>(&_version), 1);
+
+  stripdata.write (reinterpret_cast<const char *>(&_genStrips), 1);
+
+  stripdata.write (reinterpret_cast<const char *>(&_eventNumber), 1);
 
   int binaryData;
   int binaryData1;
   int binaryData2;
  
   for (int ii_layer = 0; ii_layer < DetectorGeometry::_nSensors; ++ii_layer){
-    std::map<int,int>::size_type numberStrips =_layerMapVector[ii_layer].size();
+    std::map<int,int>::size_type numberStrips =_layerStripMapVector[ii_layer].size();
 
-
-
-    stripData.write (reinterpret_cast<const char *>(&ii_layer), 1);
-    stripData.write (reinterpret_cast<const char *>(&numberStrips), 1);
+    stripdata.write (reinterpret_cast<const char *>(&ii_layer), 1);
+    stripdata.write (reinterpret_cast<const char *>(&numberStrips), 1);
  
-    layerMap::iterator layerMapIter;
-    for (layerMapIter =  _layerMapVector[ii_layer].begin(); layerMapIter != _layerMapVector[ii_layer].end(); ++layerMapIter){
+    layerStripMap::const_iterator layerStripMapIter;
+    for (layerStripMapIter =  _layerStripMapVector[ii_layer].begin(); layerStripMapIter != _layerStripMapVector[ii_layer].end(); ++layerStripMapIter){
 
-      binaryData = layerMapIter->first * 32 + layerMapIter->second;
+      binaryData = getStripNumber(layerStripMapIter) * 32 + getStripAdc(layerStripMapIter);
       binaryData1 = binaryData & bitmask1;
       binaryData2 = binaryData & bitmask2;
       binaryData2 = binaryData2 >> 8;
 
-      stripData.write (reinterpret_cast<const char *>(&binaryData2), 1);
-      stripData.write (reinterpret_cast<const char *>(&binaryData1), 1);
+      stripdata.write (reinterpret_cast<const char *>(&binaryData2), 1);
+      stripdata.write (reinterpret_cast<const char *>(&binaryData1), 1);
 
 
-    }
-  }
+    } // end strip loop
+  } // end layer loop
 }
 
-
-
-void StripSet::readEvent(std::ifstream & stripdata) {
+void fc::StripSet::readEvent(std::ifstream & stripdata) {
 
 
   // Binary data in char byte format
   // !!!!! Candidate for run time bug 
- unsigned  char * binaryData;
+  unsigned  char * binaryData;
   binaryData = new unsigned  char[1];
 
-  int event;
+  int version;
   int layer;
   int numberStrips;
   int stripData12;
@@ -63,21 +79,42 @@ void StripSet::readEvent(std::ifstream & stripdata) {
   int strip;
   int adc;
 
-   stripdata.read (reinterpret_cast<char *>(binaryData), 1);
-   event = static_cast<int>(*binaryData);
-  
-   _event = event;
+  std::string eventDataObject;
+
+  stripdata >> eventDataObject;
+
+  if (eventDataObject != "Strips"){
+    std::string wrongEventDataObject = "StripSet::readEvent: attempted to read wrong data object" + eventDataObject;
+    throw Exception(wrongEventDataObject);  
+  }
+
+  stripdata.read (reinterpret_cast<char *>(binaryData), 1);
+  stripdata.read (reinterpret_cast<char *>(binaryData), 1);
+  version = static_cast<int>(*binaryData);
+
+  if (version != _version) {
+    std::string wrongStreamerVersion = "StripSet::readEvent: attempted to read version " + std::to_string(version) + " using streamer version " + std::to_string(_version);
+    throw Exception(wrongStreamerVersion);  
+  }
+
+  stripdata.read (reinterpret_cast<char *>(binaryData), 1);
+  _genStrips = static_cast<int>(*binaryData);
+
+  stripdata.read (reinterpret_cast<char *>(binaryData), 1);
+  _eventNumber = static_cast<int>(*binaryData);
+   
   for (int ii_layer = 0; ii_layer < DetectorGeometry::_nSensors; ++ii_layer) {
  
     stripdata.read (reinterpret_cast<char *>(binaryData), 1);
     layer = static_cast<int>(*binaryData);
 
-    if (layer != ii_layer) std::cerr << "StripSet::readEvent corrupt layer data" << std::endl;
+    if (layer != ii_layer)    if (layer != ii_layer) throw Exception("StripSet::readEvent: bad strip data");
 
     stripdata.read (reinterpret_cast<char *>(binaryData), 1);
     numberStrips = static_cast<int>(*binaryData);
 
     for (int ii_strip = 0; ii_strip < numberStrips; ++ii_strip){
+
       stripdata.read (reinterpret_cast<char *>(binaryData), 1);
 
       stripData2 =  static_cast<int>(*binaryData);
@@ -91,51 +128,47 @@ void StripSet::readEvent(std::ifstream & stripdata) {
       stripData12 = stripData12&stripBitmask;
       strip = stripData12 >> 5;
 
-
       insertStrip(ii_layer,strip,adc);
 
+    } // end strip loop
 
-    }
-
-  } // layer loop 
-  //print();
+  } // end layer loop 
 
 }
 
-void StripSet::clear(void){
+void fc::StripSet::clear(void){
 
   for (int ii_layer = 0; ii_layer < DetectorGeometry::_nSensors; ++ii_layer) {
-  _layerMapVector[ii_layer].clear();
+  _layerStripMapVector[ii_layer].clear();
   }
 
 }
 
-void StripSet::print(void){
+void fc::StripSet::print(void) const{
 
-  std::cout << "Event: " << _event << std::endl;
+  std::cout << "Event: " << _eventNumber << std::endl;
 
   int strip;
   int adc;
 
   for (int ii_layer = 0; ii_layer < DetectorGeometry::_nSensors; ++ii_layer) {
  
-    std::map<int,int>::size_type numberStrips =_layerMapVector[ii_layer].size();
+    layerStripMap::size_type numberStrips =_layerStripMapVector[ii_layer].size();
 
     std::cout << "Layer: " << ii_layer << " number Strips: " << numberStrips << std::endl; 
 
-    layerMap::iterator layerMapIter;
-    for (layerMapIter =  _layerMapVector[ii_layer].begin(); layerMapIter != _layerMapVector[ii_layer].end(); ++layerMapIter){
-      strip = layerMapIter->first;
-      adc = layerMapIter->second; 
+    for (layerStripMap::const_iterator layerStripMapIter =  _layerStripMapVector[ii_layer].begin(); layerStripMapIter != _layerStripMapVector[ii_layer].end(); ++layerStripMapIter){
+      strip = getStripNumber(layerStripMapIter);
+      adc = getStripAdc(layerStripMapIter); 
  
       std::cout << "Strip: " << strip << " " << " ADC " << adc << std::endl; 
-    }
+    } // end strip loop
 
-  }
+  } // end layer loop
 
 }
 
-void StripSet::printRawData(std::ifstream & stripdata){
+void fc::StripSet::printRawData(std::ifstream & stripdata) const{
 
   int ii = 0;
 
@@ -143,9 +176,7 @@ void StripSet::printRawData(std::ifstream & stripdata){
   binaryData = new unsigned  char[1];
 
   while (stripdata) {
-    //in.get(c);
  
-
     stripdata.read (reinterpret_cast<char *>(binaryData), 1);
     if (stripdata) {
       
@@ -153,5 +184,4 @@ void StripSet::printRawData(std::ifstream & stripdata){
       ii++;
     }
   }
-
 }

@@ -2,11 +2,31 @@
 #define Random_hh
 #include<random>
 
-std::default_random_engine & globalEngine( );
+namespace fc {
 
-void seedEngine( );
+///
+/// Class Random
+/// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-05
+/// Wrapper for std library random functions
+///
 
-double getUniformDouble ( );
+class Random {
 
-double getNormalDouble ( );
+public:
+
+  Random() {};
+  Random(int);
+  ~Random() {};
+
+  std::default_random_engine engine;
+
+  std::default_random_engine & getEngine( ){ return engine; }
+
+  double getUniformDouble (double, double);
+
+  double getNormalDouble (double mean, double dev);
+
+};
+}// end namespace fc
+
 #endif // Random_hh

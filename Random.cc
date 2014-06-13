@@ -1,20 +1,15 @@
 #include "Random.hh"
 
-std::default_random_engine & globalEngine( ){
-  static std::default_random_engine engine{};
-  return engine;
+fc::Random::Random(int seed){
+  engine.seed(seed);
 }
 
-void seedEngine( ) {
-  globalEngine().seed(1);
+double fc::Random::getUniformDouble (double min, double max) {
+  std::uniform_real_distribution<double> dist(min,max);
+  return dist( getEngine());
 }
 
-double getUniformDouble ( ) {
-  static std::uniform_real_distribution<double> dist(0.0,1.0);
-  return dist( globalEngine());
-}
-
-double getNormalDouble ( ) {
-  static std::normal_distribution<double> dist(0.0,1.0);
-  return dist( globalEngine());
+double fc::Random::getNormalDouble (double mean, double dev) {
+  std::normal_distribution<double> dist(mean,dev);
+  return dist( getEngine());
 }

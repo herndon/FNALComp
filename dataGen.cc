@@ -9,9 +9,12 @@
 //                      Fermi National Accelerator Laboratory
 // 2014-05-22
 //============================================================================
-#include "DataGenModule.hh"
+#include "HitSet.hh"
+#include "TrackSet.hh"
 #include "StripSet.hh"
-#include "DataGenModule.hh"
+#include "TrackGenModule.hh"
+#include "HitStripGenModule.hh"
+#include "DataOutputModule.hh"
 #include "Random.hh"
 #include <fstream>
 #include <iostream>
@@ -19,10 +22,7 @@
 int main ()
 {
 
-  // Initialie random number generator
-  seedEngine();
-
-  // Debugging
+   // Debugging
   int debugLevel = 2;
   // six levels of degug
   // 5 most verbose with all printouts
@@ -30,36 +30,47 @@ int main ()
   // 1 basic information on progress
   // 0 none
 
-  // Intialize DetectorGeomentry and StripSet
-  // Eventually these will come from the framework
+
+  // Generator data
+  bool genData = 1;
+
+  // Intialize Objects and Modules that are persistant
  
-  std::ifstream detectorgeometryfile;
-  detectorgeometryfile.open("sensorgeometry.txt");
-  DetectorGeometry myDetectorGeometry(detectorgeometryfile);  
-  detectorgeometryfile.close();
+ // Initialie random number generator with seed = 1
+  fc::Random myRandom(1);
+
+  // DetectorGeomergy
+  std::ifstream detectorgeometryfile("sensorgeometry.txt");
+  fc::DetectorGeometry myDetectorGeometry(detectorgeometryfile);  
+  // files are closed by the default destructor
   if (debugLevel >= 2) myDetectorGeometry.printDetectorGeometry();
 
-  StripSet myStripSet;
+  // Input and output files and modules
+  std::ofstream genoutputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
-  // Open geneartor output event data file
-  std::ofstream genoutputeventdatafile;
-  genoutputeventdatafile.open("genoutputeventdatafile.bin",std::ios::binary);
 
+ 
   // Instantiate and initialize Module classes
-  DataGenModule myDataGenModule(debugLevel,myDetectorGeometry,myStripSet,genoutputeventdatafile);
+  fc::TrackGenModule myTrackGenModule(debugLevel,myDetectorGeometry,myRandom);
+  fc::HitStripGenModule myHitStripGenModule(debugLevel,myDetectorGeometry,myRandom);
+  fc::DataOutputModule myDataOutputModule(debugLevel,myDetectorGeometry.getDetectorGeometryVersion(),genoutputeventdatafile);
 
 
    // Event loop over module classes
 
   for (int ii_event = 0; ii_event < 128; ++ii_event) {
 
-    myDataGenModule.event();
+    // Initialize object persistent only for each event
+    fc::TrackSet myTrackSet(ii_event,genData,myDetectorGeometry);
+    fc::HitSet myHitSet(ii_event,genData);
+    fc::StripSet myStripSet(ii_event,genData);
+
+    myTrackGenModule.processEvent(myTrackSet);
+    myHitStripGenModule.processEvent(myTrackSet,myHitSet,myStripSet);
+    myDataOutputModule.processEvent(myTrackSet,myHitSet,myStripSet);
 
   }
 
-  // Clean up
-
-  genoutputeventdatafile.close();
 
   return 0; 
 

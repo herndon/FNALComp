@@ -4,10 +4,8 @@
 // StripSet.hh
 // header with class definition of the StripSet
 // A vector of map<int,int> layer_map's
-// Map elements are int,int pairs of strip (Key) and acd (value) information 
+// Map elements are int,int pairs of strip number (Key) and acd (value) information 
 // See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
-//
-// Planned upgrade, use detector geopmetry to access the number of layers.
 //
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
@@ -18,7 +16,9 @@
 #include <iostream>
 #include "DetectorGeometry.hh"
 
-  typedef std::map<int, int> layerMap; //!< Map of strip number and acd counts for one layer
+namespace fc {
+
+  typedef std::map<int, int> layerStripMap; //!< Map of strip number and acd counts for one layer
 
 ///
 /// Class StripSet: 
@@ -34,29 +34,39 @@ private:
   static const int adcBitmask = 0x001F;
   static const int stripBitmask = 0xFFE0;
 
-  layerMap _layerMapVector[DetectorGeometry::_nSensors];
-  int _event;
+  int _eventNumber;
+  bool _genStrips;
+  int _version; // version 1
+
+  layerStripMap _layerStripMapVector[DetectorGeometry::_nSensors];
 
 public:
 
-  StripSet() {};
+  StripSet();
+  StripSet(int eventNumber,bool genStrips);
   ~StripSet() {};
 
-  const layerMap& getLayerMap(int layer);
+  const layerStripMap& getLayerStripMap(int layer) const;
+
+  int getStripNumber(layerStripMap::const_iterator iter) const {return iter->first;};
+  //int getStripNumber(layerStripMap::const_iter iter) {return iter->first;};
+  int getStripAdc(layerStripMap::const_iterator iter) const {return iter->second;};
+  //int getStripAdc(layerStripMap::const_iter iter) {return iter->second;};
+
+  int getEventNumber(void) const {return _eventNumber;}
 
   void insertStrip(int, int, int); //!< Insert strip by layer, strip number, adc count
 
-  int getEvent(void){return _event;}
-  void setEvent(int event) {_event = event;}
-
-  void writeEvent(std::ofstream&); //!< Write all strip information for all sensors std::ofstream file for event _event
+  void writeEvent(std::ofstream&) const; //!< Write all strip information for all sensors std::ofstream file for event _event
   void readEvent(std::ifstream&);  //!< Read all strip information for all sensors std::ifstream file for event _event
 
-  void print(void);
-  void printRawData(std::ifstream&);
+  void print(void) const;
+  void printRawData(std::ifstream&) const;
 
   void clear(void);
 
 };
+} // end namespace
+
 #endif // StripSet_hh
 
