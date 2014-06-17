@@ -9,7 +9,7 @@ fc::Track::Track(double * p4, int charge, double * v3, double * bField, double c
 
   _lorentzVector.SetPxPyPzE(p4[0],p4[1],p4[2],p4[3]);
 
-  _geoHelix.SetXYcurvature(std::fabs(curvatureC)/_lorentzVector.Pt());
+  _geoHelix.SetXYcurvature(std::abs(curvatureC)/_lorentzVector.Pt());
   _geoHelix.SetCharge(charge);
   _geoHelix.SetHelixStep(2*M_PI*p4[3]/curvatureC);
   _geoHelix.SetField(bField[0],bField[1],bField[2]);
@@ -25,7 +25,7 @@ fc::Track::Track(double pT, double pZ, int charge, double phi0, double d0, doubl
 
   // !!!!! Issue. need to test setting Z direction
 
-  _geoHelix.SetXYcurvature(std::fabs(curvatureC)/pT);
+  _geoHelix.SetXYcurvature(std::abs(curvatureC)/pT);
   _geoHelix.SetCharge(charge);
   _geoHelix.SetHelixStep(2*M_PI*pZ/curvatureC);
   _geoHelix.SetField(bField[0],bField[1],bField[2]);
