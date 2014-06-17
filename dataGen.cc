@@ -9,12 +9,14 @@
 //                      Fermi National Accelerator Laboratory
 // 2014-05-22
 //============================================================================
+#include "DetectorGeometry.hh"
 #include "HitSet.hh"
 #include "TrackSet.hh"
 #include "StripSet.hh"
 #include "TrackGenModule.hh"
 #include "HitStripGenModule.hh"
 #include "DataOutputModule.hh"
+#include "Config.hh"
 #include "Random.hh"
 #include <fstream>
 #include <iostream>
@@ -34,10 +36,14 @@ int main ()
   // Generator data
   bool genData = 1;
 
-  // Intialize Objects and Modules that are persistant
+  // Configure genData using general Config class
+  std::ifstream configfile("configfile.txt");
+  fc::Config myConfig(configfile,genData);
+
+ // Intialize Objects and Modules that are persistant
  
  // Initialie random number generator with seed = 1
-  fc::Random myRandom(1);
+  fc::Random myRandom(myConfig.getSeed());
 
   // DetectorGeomergy
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
@@ -58,14 +64,14 @@ int main ()
 
    // Event loop over module classes
 
-  for (int ii_event = 0; ii_event < 128; ++ii_event) {
+  for (int ii_event = 0; ii_event < myConfig.getNumberEvents(); ++ii_event) {
 
     // Initialize object persistent only for each event
     fc::TrackSet myTrackSet(ii_event,genData,myDetectorGeometry);
     fc::HitSet myHitSet(ii_event,genData);
     fc::StripSet myStripSet(ii_event,genData);
 
-    myTrackGenModule.processEvent(myTrackSet);
+    myTrackGenModule.processEvent(myTrackSet,myConfig.getNumberTracks());
     myHitStripGenModule.processEvent(myTrackSet,myHitSet,myStripSet);
     myDataOutputModule.processEvent(myTrackSet,myHitSet,myStripSet);
 

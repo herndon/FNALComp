@@ -66,7 +66,7 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& myHitSet, const StripSet & myStrip
     // create cluster?
     // save number of strips. save gen track on strips?
 
-    hitNumber++;
+    ++hitNumber;
     stripAdcs.clear();
 
   }
@@ -88,14 +88,14 @@ void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
 
   stripAdcVector.push_back(myStripSet.getStripAdc(layerStripMapIter));
 
-  layerStripMapIter++;
+  ++layerStripMapIter;
 
 
   while ( layerStripMapIter != layerStripMapIterEnd && (myStripSet.getStripNumber(layerStripMapIter) == (intermediateStrip + 1))) {
 
     intermediateStrip = myStripSet.getStripNumber(layerStripMapIter);
     stripAdcVector.push_back(myStripSet.getStripAdc(layerStripMapIter));
-    layerStripMapIter++;
+    ++layerStripMapIter;
     if (_debugLevel >= 5) std::cout << "Intermediate strip: " << intermediateStrip  << std::endl;
     
   }

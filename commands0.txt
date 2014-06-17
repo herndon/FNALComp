@@ -4,13 +4,19 @@ Currently need to set up cms software, issues are c++11, root objects
 source /uscmst1/prod/sw/cms/cshrc prod
 and cmsenv in release
 
-g++ -std=c++11 -Wall -c -g `root-config --cflags` Random.cc
+Source code compilation
 g++ -std=c++11 -Wall -c -g `root-config --cflags` DetectorGeometry.cc
-g++ -std=c++11 -Wall -c -g `root-config --cflags` StripSet.cc
-g++ -std=c++11 -Wall -c -g `root-config --cflags` DataGenModule.cc
-g++ -std=c++11 -Wall -c -g `root-config --cflags` dataGen.cc
 
+Source code linking
 g++ -std=c++11 -Wall -g `root-config --glibs`
 /uscmst1/prod/sw/cms/slc5_amd64_gcc481/lcg/root/5.34.10-cms/lib/libGeom.so
 Random.o DetectorGeometry.o StripSet.o DataGenModule.o dataGen.o -o dataGen
 
+git commands
+
+
+git add .
+git commit -m 'commit text'
+git remote set-url origin ssh://git@github.com/herndon/FNALComp.git
+git remote -v
+git push origin master

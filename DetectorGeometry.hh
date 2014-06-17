@@ -6,6 +6,9 @@
 // Includes global detector information 
 // and detailed sensor information sensorDescriptor structs
 // For more information see <a href="doc/notes/detectorGeometry.pdf">detectorGeometry.pdf</a>
+//
+// Units: calculations are set up so that distance m, Energy GeV, magnetic field Teslaq
+//
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
 // 2014-05-01
@@ -46,9 +49,8 @@ public:
   int getNSensors(void) const {return _nSensors;};
   double getZBField(void) const {return _bField[2];};
   const double * getBField(void) const {return _bField;};
+  double getMIP(void) const {return _MIP;};
   double getCurvatureC(void) const {return _curvatureC;};
-
-  void _initDetectorGeometryFromFile(std::ifstream&);
 
   void printDetectorGeometry(void) const;
   void printSensorLimits(void) const;
@@ -68,12 +70,14 @@ private:
   sensorDescriptor _sensorMinLimits;
   sensorDescriptor _sensorMaxLimits;
 
-  // Useful constants
   double _bField[3];
+  double _MIP;
+  // Useful constants
   double _curvatureC;
 
-  void _initSensorLimits(void);
-  void _initDetectorGeometry(void);
+  void initSensorLimits(void);
+  void initDetectorGeometry(void);
+  void initDetectorGeometryFromFile(std::ifstream&);
 
 };
 } // end namespace fc

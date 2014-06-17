@@ -32,7 +32,7 @@ public:
   TrackGenModule(int,const DetectorGeometry &,Random &);
   ~TrackGenModule() {};
 
-  void processEvent(TrackSet &);
+  void processEvent(TrackSet &,int);
 
 
 private:

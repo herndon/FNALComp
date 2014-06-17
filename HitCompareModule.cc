@@ -12,6 +12,8 @@ fc::HitCompareModule::HitCompareModule(int debugLevel, const DetectorGeometry & 
   _myDetectorGeometry(myDetectorGeometry),
   _outputrootfile(outputrootfile) {
 
+
+  _outputrootfile = outputrootfile;
   // Intialize commonly used DetectorGeometry data
   _nLayers = _myDetectorGeometry.getNSensors();
 

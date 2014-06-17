@@ -16,6 +16,7 @@
 #include "HitCompareModule.hh"
 #include <fstream>
 #include <iostream>
+#include <memory>
 #include "TFile.h"
 
 int main ()
@@ -42,7 +43,7 @@ int main ()
   // Input and output files
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
-  TFile* outputrootfile = new TFile("outputfile.root", "RECREATE");
+  TFile * outputrootfile = new TFile("outputfile.root", "RECREATE");
 
 
   // Instantiate and initialize Module classes

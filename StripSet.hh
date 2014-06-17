@@ -49,9 +49,9 @@ public:
   const layerStripMap& getLayerStripMap(int layer) const;
 
   int getStripNumber(layerStripMap::const_iterator iter) const {return iter->first;};
-  //int getStripNumber(layerStripMap::const_iter iter) {return iter->first;};
+  //int getStripNumber(layerStripMap::iterator iter) {return iter->first;};
   int getStripAdc(layerStripMap::const_iterator iter) const {return iter->second;};
-  //int getStripAdc(layerStripMap::const_iter iter) {return iter->second;};
+  //int getStripAdc(layerStripMap::iterator iter) {return iter->second;};
 
   int getEventNumber(void) const {return _eventNumber;}
 

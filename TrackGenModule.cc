@@ -17,10 +17,10 @@ fc::TrackGenModule::TrackGenModule(int debugLevel, const DetectorGeometry & myDe
 
 }
 
-void fc::TrackGenModule::processEvent(TrackSet& myTrackSet)
+void fc::TrackGenModule::processEvent(TrackSet& myTrackSet,int numberTracks)
 {
 
-  for (int ii_track = 0; ii_track < 10; ++ii_track) {
+  for (int ii_track = 0; ii_track < numberTracks; ++ii_track) {
 
     Track track = generateTrack(); 
     myTrackSet.insertTrack(ii_track,track);

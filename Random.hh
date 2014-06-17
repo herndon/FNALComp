@@ -14,7 +14,7 @@ class Random {
 
 public:
 
-  Random() {};
+  Random();
   Random(int);
   ~Random() {};
 

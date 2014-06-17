@@ -1,4 +1,5 @@
 #include <string>
+#include <algorithm>
 #include "StripSet.hh"
 #include "Exception.hh"
 
@@ -22,9 +23,27 @@ void fc::StripSet::insertStrip(int layer, int strip, int adc) {
     _layerStripMapVector[layer].insert(layerStripMap::value_type(strip,adc));
     return;
   } else {
-     throw Exception("StripSet::insertStrip: Out of bounds layer");  
+    throw Exception("StripSet::insertStrip: Out of bounds layer");  
   }
 }
+
+// Improved insertStrip
+// void fc::StripSet::insertStrip(int layer, int strip, int adc) {
+//   if (layer >= 0 && layer < DetectorGeometry::_nSensors){
+    
+//     layerStripMap::iterator stripIter =  _layerStripMapVector[layer].find(strip);
+//     if (stripIter == _layerStripMapVector[layer].end()) {
+//       _layerStripMapVector[layer].insert(layerStripMap::value_type(strip,adc));
+//     } else {
+//       // second is the strip acd value in the map of key strip number and value adc
+//       stripIter->second = std::min(stripIter->second + adc, 32);
+//     }
+//     return;
+//   } else {
+//     throw Exception("StripSet::insertStrip: Out of bounds layer");  
+//   }
+// }
+
 
 void fc::StripSet::writeEvent(std::ofstream & stripdata) const{
 
@@ -181,7 +200,7 @@ void fc::StripSet::printRawData(std::ifstream & stripdata) const{
     if (stripdata) {
       
       std::cout << "Byte " << ii << " " << static_cast<int>(*binaryData) << "\n";
-      ii++;
+      ++ii;
     }
   }
 }

@@ -13,7 +13,9 @@
 // 2014-06-08
 //============================================================================
 
+#include <vector>
 #include "Random.hh"
+
 
 class DetectorGeometry;
 class TrackSet;
@@ -50,7 +52,17 @@ private:
   int _nLayers;
 
   void makeHitsStrips(HitSet &, StripSet &, Track &, int, int &);
+
   void calculateTrackSensorIntersection(Track &, int, double *);
+
+  void storeHitInfo(HitSet &,Track &,int,int &,double *,int);
+
+  void storeStripInfo(StripSet &,const double *,int);
+
+  double calculateStripHitPosition(const double *, int) const;
+  void generateCluster(double, int &, std::vector<int> &);
+  void storeCluster(StripSet &, int, int, const std::vector<int> &);
+
 
 };
 } // end namespace fc

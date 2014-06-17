@@ -11,6 +11,7 @@
 
 #include "StripSet.hh"
 #include <vector>
+#include <memory>
 #include "DetectorGeometry.hh"
 
 class DetectorGeometry;
