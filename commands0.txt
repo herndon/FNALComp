@@ -14,9 +14,62 @@ Random.o DetectorGeometry.o StripSet.o DataGenModule.o dataGen.o -o dataGen
 
 git commands
 
-
-git add .
-git commit -m 'commit text'
+# making a new repository 
+# make a directory for the repository and initialize it
+mkdir FNALComp
+cd FNALComp
+git init
+# modify README if you want
+git add README
+git commit -m 'initial project version'
+# set repository
 git remote set-url origin ssh://git@github.com/herndon/FNALComp.git
 git remote -v
+
+# commit, push to repository
 git push origin master
+
+
+
+# Checking out an existing repository to directory FNALComp
+git clone ssh://git@github.com/herndon/FNALComp.git FNALComp
+# then moving to a specific tag
+git checkout v0.4
+
+# or directory checking out to the tag
+git clone --branch v0.4 ssh://git@github.com/herndon/FNALComp.git FNALComp_v0.4
+
+
+# check status of project for modifictions
+git status -s
+git diff
+
+# committing new files.
+# add all
+git add .
+#add by name
+git add filenames
+
+#prep for commit
+git commit -m 'commit text'
+
+
+# committing changes files
+git commit -am 'commit text'
+
+
+# set repository if necessary
+git remote set-url origin ssh://git@github.com/herndon/FNALComp.git
+git remote -v
+
+# commit, push to repository
+git push origin master
+
+# tag current code
+git tag -a v0.4 -m 'Version 0.4, day 0-1 code'
+git show v0.4
+git push origin v0.4
+
+
+
+r
