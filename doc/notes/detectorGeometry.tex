@@ -40,8 +40,7 @@ Planar Silicon Detector Geometry Description
 \vskip 0.5cm
 \noindent
 This document describes the geometry class used to describe a planer silicon strip
-detector in two dimensions immersed in a magnetic field for measuring
-the trajectories on charged particles.  
+detector that measures charged particle trajectories two dimensions immersed in a magnetic field.  
 \end{abstract}
 \maketitle
 
@@ -55,8 +54,22 @@ the trajectories on charged particles.
 \section{Introduction}
 The detector consists of a five layer silicon detector immersed in a 1
 Tesla magnetic field oriented perpendicular to the measurement
-directions of the silicon sensors.  Measurements are only consider in
-2D.
+directions of the silicon sensors.  The interaction vertex is at 0,0,0 though
+the program is general enough to support different vertex position.  Particles
+generally move in the positive y direction.  The sensors are planes in x,z with
+the normal along the y axis, though an arbitrary normal is supported.  Measurements,
+are made in 2D as the y position of the sensor and the x position of the strips which
+run parallel to the z axis.  The magnetic field is oriented in the z direction to give
+bending in the x,y plane.  The detectorGeometry initialization only supports a magnetic 
+field along z and sensors normal to the y axis though this could be easily expanded.
+The sensors closest to the iteration region are smaller in x and have finer segmentation.
+
+This detector could represent a set of rectangular planes used in a fix target experiment
+or a single wedge in phi of the cylindrical collider experiment, where additional identical
+wedges could populate the cylinder to complete the cylindrical design.
+
+\section{Units}
+ The detector and magnetic field and calculation of trajectories and particle properties are set up such that the units are distance (m), Energy (GeV), magnetic field (Tesla).
 
 
 \section{Detector layout and performance}
