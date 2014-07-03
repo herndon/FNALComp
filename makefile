@@ -1,4 +1,4 @@
-OBJS = Random.o DetectorGeometry.o StripSet.o Hit.o HitSet.o TNGeoHelix.o Track.o TrackSet.o TrackGenModule.o HitStripGenModule.o DataOutputModule.o dataGen.o
+OBJS = Random.o Config.o DetectorGeometry.o StripSet.o Hit.o HitSet.o Track.o TrackSet.o TrackGenModule.o HitStripGenModule.o DataOutputModule.o dataGen.o
 NOTES = notes/
 CC = g++
 DEBUG = -g -O0
@@ -14,6 +14,9 @@ dataGen : $(OBJS)
 Random.o : Random.cc Random.hh
 	$(CC) $(CFLAGS) Random.cc
 
+Config.o : Config.cc Config.hh
+	$(CC) $(CFLAGS) Config.cc
+
 DetectorGeometry.o : DetectorGeometry.cc DetectorGeometry.hh
 	$(CC) $(CFLAGS) DetectorGeometry.cc
 
@@ -25,9 +28,6 @@ Hit.o : Hit.cc Hit.hh
 
 HitSet.o : HitSet.cc HitSet.hh
 	$(CC) $(CFLAGS) HitSet.cc
-
-TNGeoHelix.o : TNGeoHelix.cc TNGeoHelix.hh
-	$(CC) $(CFLAGS) TNGeoHelix.cc
 
 Track.o : Track.cc Track.hh
 	$(CC) $(CFLAGS) Track.cc
@@ -52,9 +52,11 @@ clean:
 
 tar:
 	tar -z --create --file day0.tgz dataGen.cc \
-	TrackGenModule.cc TrackGenModule.hh HitStripGenModule.cc HitStripGenModule.hh DataOutPutModule.cc DataOutputModule.hh \
+	TrackGenModule.cc TrackGenModule.hh HitStripGenModule.cc HitStripGenModule.hh DataOutputModule.cc DataOutputModule.hh \
 	DetectorGeometry.cc DetectorGeometry.hh \
-	StripSet.cc StripSet.hh Track.cc Track.hh TrackSet.cc TrackSet.hh \
-        Random.hh Random.cc Exception.hh \
+	StripSet.cc StripSet.hh \
+	Hit.cc Hit.hh HitSet.cc HitSet.hh \
+	Track.cc Track.hh TrackSet.cc TrackSet.hh \
+        Config.cc Config.hh Random.hh Random.cc Exception.hh \
         commands0.txt sensorgeometry.txt makefile doxygen.cfg \
         doc

@@ -15,15 +15,20 @@
 //============================================================================
 #include <fstream>
 #include <iostream>
+#include "TVector3.h"
 
 namespace fc {
 
 struct sensorDescriptor {
   int _nStrips;
   double _stripPitch;
-  double _resolution;
-  double _center[3];
-  double _norm[3];
+  double _intrinsicResolution;
+  double _hitResolution;
+  double _threshold;
+  TVector3 _center;
+  TVector3 _normal;
+  TVector3 _measurementVector;
+  TVector3 _measurementDirection;
 };
 
 ///
@@ -47,8 +52,8 @@ public:
   const sensorDescriptor& getSensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
   int getDetectorGeometryVersion(void) const {return _detectorGeometryVersion;};
   int getNSensors(void) const {return _nSensors;};
-  double getZBField(void) const {return _bField[2];};
-  const double * getBField(void) const {return _bField;};
+  double getZBField(void) const {return _bField.Z();};
+  const TVector3 & getBField(void) const {return _bField;};
   double getMIP(void) const {return _MIP;};
   double getCurvatureC(void) const {return _curvatureC;};
 
@@ -70,7 +75,7 @@ private:
   sensorDescriptor _sensorMinLimits;
   sensorDescriptor _sensorMaxLimits;
 
-  double _bField[3];
+  TVector3 _bField;
   double _MIP;
   // Useful constants
   double _curvatureC;

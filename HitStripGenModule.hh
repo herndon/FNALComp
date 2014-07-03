@@ -21,6 +21,7 @@ class DetectorGeometry;
 class TrackSet;
 class HitSet;
 class StripSet;
+class TVector3;
 
 namespace fc {
 
@@ -53,13 +54,13 @@ private:
 
   void makeHitsStrips(HitSet &, StripSet &, Track &, int, int &);
 
-  void calculateTrackSensorIntersection(Track &, int, double *);
+  void calculateTrackSensorIntersection(Track &, int, TVector3 &);
 
-  void storeHitInfo(HitSet &,Track &,int,int &,double *,int);
+  void storeHitInfo(HitSet &,Track &,int,int &,TVector3 &,int);
 
-  void storeStripInfo(StripSet &,const double *,int);
+  void storeStripInfo(StripSet &,const TVector3 &,int);
 
-  double calculateStripHitPosition(const double *, int) const;
+  double calculateStripHitPosition(const TVector3 &, int) const;
   void generateCluster(double, int &, std::vector<int> &);
   void storeCluster(StripSet &, int, int, const std::vector<int> &);
 

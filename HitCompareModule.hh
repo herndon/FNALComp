@@ -53,7 +53,6 @@ private:
 
   void compareHits(const HitSet &, const HitSet &);
 
-  void compareHitsLayer(const layerHitMap&, const layerHitMap&,const HitSet &, const HitSet &,int);
 
   double compareHitPositions(const Hit &, const Hit &);
 

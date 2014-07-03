@@ -43,6 +43,7 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& myHitSet, const StripSet & myStrip
 
   std::vector<int> stripAdcs;
   int initialStrip;
+  std::vector<int>::size_type numberStrips;
   double stripHitPosition;
   double hitPosition[3];
 
@@ -58,9 +59,11 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& myHitSet, const StripSet & myStrip
 
     calculateHitPosition(layer,stripHitPosition,hitPosition);
   
-    Hit hit(hitPosition);
+    numberStrips = stripAdcs.size();
 
-    myHitSet.insertHit(hitNumber,hit,layer);
+    Hit hit(hitPosition,layer,numberStrips);
+
+    myHitSet.insertHit(hit);
 
     // calculate hit postition function using vector of strips?
     // create cluster?
@@ -80,6 +83,13 @@ void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
 
 
   if (_debugLevel >= 5) std::cout << "findCluster " << std::endl;
+
+  while (layerStripMapIter != layerStripMapIterEnd && myStripSet.getStripAdc(layerStripMapIter) < _myDetectorGeometry.getSensor(layer)._threshold){
+    layerStripMapIter++;
+  }
+
+  if (layerStripMapIter == layerStripMapIterEnd) return;
+
   initialStrip = myStripSet.getStripNumber(layerStripMapIter);
 
   if (_debugLevel >= 5) std::cout << "Initial strip: " << initialStrip << std::endl;
@@ -91,7 +101,7 @@ void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
   ++layerStripMapIter;
 
 
-  while ( layerStripMapIter != layerStripMapIterEnd && (myStripSet.getStripNumber(layerStripMapIter) == (intermediateStrip + 1))) {
+  while ( layerStripMapIter != layerStripMapIterEnd && (myStripSet.getStripNumber(layerStripMapIter) == (intermediateStrip + 1)) && (myStripSet.getStripAdc(layerStripMapIter) >= _myDetectorGeometry.getSensor(layer)._threshold  )) {
 
     intermediateStrip = myStripSet.getStripNumber(layerStripMapIter);
     stripAdcVector.push_back(myStripSet.getStripAdc(layerStripMapIter));

@@ -6,6 +6,7 @@
 #include "Track.hh"
 #include "TrackSet.hh"
 #include "TrackGenModule.hh"
+#include "TVector3.h"
 
 fc::TrackGenModule::TrackGenModule(int debugLevel, const DetectorGeometry & myDetectorGeometry, Random & myRandom):
   _debugLevel(debugLevel),
@@ -23,7 +24,7 @@ void fc::TrackGenModule::processEvent(TrackSet& myTrackSet,int numberTracks)
   for (int ii_track = 0; ii_track < numberTracks; ++ii_track) {
 
     Track track = generateTrack(); 
-    myTrackSet.insertTrack(ii_track,track);
+    myTrackSet.insertTrack(track);
 
   } // end track loop
 
@@ -36,9 +37,9 @@ fc::Track fc::TrackGenModule::generateTrack(){
   // Generate track data
     
   // Track pT, phi0 and charge
-  double trackPT = _myRandom.getUniformDouble(10.0,20.0);
+  double trackPT = _myRandom.getUniformDouble(20.0,40.0);
   int trackCharge = (_myRandom.getUniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
-  double trackPhi0 = _myRandom.getUniformDouble(-M_PI/6.0,M_PI/6.0) + M_PI/2.0;
+  double trackPhi0 = _myRandom.getUniformDouble(-M_PI/24.0,M_PI/24.0) + M_PI/2.0;
  
   // Details of curvature calculation
   //using p = BqR, 
@@ -62,7 +63,10 @@ fc::Track fc::TrackGenModule::generateTrack(){
   double vertex[3]{0.0,0.0,0.0};
   double bField[3]{_myDetectorGeometry.getBField()[0],_myDetectorGeometry.getBField()[1],_myDetectorGeometry.getBField()[2]};
 
-  Track track(trackPT,0.0,trackCharge,trackPhi0,0.0,0.0,vertex,bField,_curvatureC);
+  // Track track(trackPT,0.0,trackCharge,trackPhi0,0.0,0.0,vertex,bField,_curvatureC);
+ 
+  Track track(trackCharge/trackPT,0.0,0.0,trackPhi0,0.0,vertex,_myDetectorGeometry,bField);
+
  
   return track;
 

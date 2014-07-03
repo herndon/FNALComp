@@ -53,7 +53,7 @@ void fc::Config::printConfig( void ) const {
   if (_genData) {
     std::cout << "genData configuration" << std::endl;
     std::cout << "Number Events: " << _numberEvents << std::endl;
-    std::cout << "Number Tracks " << _numberTracks << " Tesla" << std::endl;
+    std::cout << "Number Tracks " << _numberTracks << std::endl;
     std::cout << "Random number seed " << _seed << std::endl;
   }
 

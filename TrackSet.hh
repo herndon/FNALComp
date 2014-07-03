@@ -12,7 +12,7 @@
 //                       Fermi National Accelerator Laborator
 // 2014-06-06
 //============================================================================
-#include <map>
+#include <vector>
 #include <fstream>
 #include <iostream>
 #include "DetectorGeometry.hh"
@@ -20,7 +20,6 @@
 
 namespace fc {
 
-  typedef std::map<int, Track> TrackMap; //!< Map of track number and Tracks
 
 ///
 /// Class TrackSet: 
@@ -32,7 +31,7 @@ class TrackSet {
 private:
 
 
-  TrackMap _trackMap;
+  std::vector<Track> _trackVector;
   int _version;
   bool _genTracks;
   int _eventNumber;
@@ -48,20 +47,13 @@ public:
   TrackSet(int,bool,const DetectorGeometry & myDetectorGeometry);
   ~TrackSet() {};
 
-  const TrackMap& getConstTrackMap(void) const { return _trackMap;};
-  TrackMap& getTrackMap(void) {return _trackMap;};
+  const std::vector<Track>& getConstTrackVector(void) const { return _trackVector;};
+  std::vector<Track>& getTrackVector(void) {return _trackVector;};
 
-  //Map pair and Track object data access by type of pair element
-  int getTrackNumber(TrackMap::const_iterator iter) const { return iter->first;};
-  //int getTrackNumber(TrackMap::iterator iter) { return iter->first;};
-  const Track &getConstTrack(TrackMap::const_iterator iter) const { return iter->second;};
-  Track & getTrack(TrackMap::iterator iter) { return iter->second;};
-  const TLorentzVector & getConstLorentzVector(TrackMap::const_iterator iter) const { return iter->second.getConstLorentzVector();};
-  //TLorentzVector & getLorentzVector(TrackMap::iterator iter) { return iter->second.getLorentzVector();};
-  const TGeoHelix & getConstGeoHelix(TrackMap::const_iterator iter) const { return iter->second.getConstGeoHelix();};
-  //TGeoHelix & getGeoHelix(TrackMap::iterator iter) { return iter->second.getGeoHelix();};
+  const Track& getConstTrack(int trackNumber) const { return _trackVector[trackNumber];};
+  Track & getTrack(int trackNumber) { return _trackVector[trackNumber];};
 
-  void insertTrack(int, Track); //!< Insert track by tracknumber
+  void insertTrack(Track);
 
   int getGenTracks(void) const {return _genTracks;}
   int getEventNumber(void)const {return _eventNumber;}
@@ -71,7 +63,6 @@ public:
 
   void print(void) const;
 
-  void clear(void);
 
 };
 } // end namespace fc

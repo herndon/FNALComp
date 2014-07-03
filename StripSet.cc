@@ -14,13 +14,13 @@ fc::StripSet::StripSet(int eventNumber,bool genStrips):
 }
 
 const fc::layerStripMap& fc::StripSet::getLayerStripMap(int layer) const {
-    if (layer >= 0 && layer < DetectorGeometry::_nSensors) return _layerStripMapVector[layer];
+    if (layer >= 0 && layer < DetectorGeometry::_nSensors) return _layerStripMapArray[layer];
      throw Exception("StripSet::getLayerStripMap: Out of bounds layer");  
 }
 
 void fc::StripSet::insertStrip(int layer, int strip, int adc) {
   if (layer >= 0 && layer < DetectorGeometry::_nSensors){
-    _layerStripMapVector[layer].insert(layerStripMap::value_type(strip,adc));
+    _layerStripMapArray[layer].insert(layerStripMap::value_type(strip,adc));
     return;
   } else {
     throw Exception("StripSet::insertStrip: Out of bounds layer");  
@@ -31,9 +31,9 @@ void fc::StripSet::insertStrip(int layer, int strip, int adc) {
 // void fc::StripSet::insertStrip(int layer, int strip, int adc) {
 //   if (layer >= 0 && layer < DetectorGeometry::_nSensors){
     
-//     layerStripMap::iterator stripIter =  _layerStripMapVector[layer].find(strip);
-//     if (stripIter == _layerStripMapVector[layer].end()) {
-//       _layerStripMapVector[layer].insert(layerStripMap::value_type(strip,adc));
+//     layerStripMap::iterator stripIter =  _layerStripMapArray[layer].find(strip);
+//     if (stripIter == _layerStripMapArray[layer].end()) {
+//       _layerStripMapArray[layer].insert(layerStripMap::value_type(strip,adc));
 //     } else {
 //       // second is the strip acd value in the map of key strip number and value adc
 //       stripIter->second = std::min(stripIter->second + adc, 32);
@@ -60,13 +60,13 @@ void fc::StripSet::writeEvent(std::ofstream & stripdata) const{
   int binaryData2;
  
   for (int ii_layer = 0; ii_layer < DetectorGeometry::_nSensors; ++ii_layer){
-    std::map<int,int>::size_type numberStrips =_layerStripMapVector[ii_layer].size();
+    std::map<int,int>::size_type numberStrips =_layerStripMapArray[ii_layer].size();
 
     stripdata.write (reinterpret_cast<const char *>(&ii_layer), 1);
     stripdata.write (reinterpret_cast<const char *>(&numberStrips), 1);
  
     layerStripMap::const_iterator layerStripMapIter;
-    for (layerStripMapIter =  _layerStripMapVector[ii_layer].begin(); layerStripMapIter != _layerStripMapVector[ii_layer].end(); ++layerStripMapIter){
+    for (layerStripMapIter =  _layerStripMapArray[ii_layer].begin(); layerStripMapIter != _layerStripMapArray[ii_layer].end(); ++layerStripMapIter){
 
       binaryData = getStripNumber(layerStripMapIter) * 32 + getStripAdc(layerStripMapIter);
       binaryData1 = binaryData & bitmask1;
@@ -158,7 +158,7 @@ void fc::StripSet::readEvent(std::ifstream & stripdata) {
 void fc::StripSet::clear(void){
 
   for (int ii_layer = 0; ii_layer < DetectorGeometry::_nSensors; ++ii_layer) {
-  _layerStripMapVector[ii_layer].clear();
+  _layerStripMapArray[ii_layer].clear();
   }
 
 }
@@ -172,11 +172,11 @@ void fc::StripSet::print(void) const{
 
   for (int ii_layer = 0; ii_layer < DetectorGeometry::_nSensors; ++ii_layer) {
  
-    layerStripMap::size_type numberStrips =_layerStripMapVector[ii_layer].size();
+    layerStripMap::size_type numberStrips =_layerStripMapArray[ii_layer].size();
 
     std::cout << "Layer: " << ii_layer << " number Strips: " << numberStrips << std::endl; 
 
-    for (layerStripMap::const_iterator layerStripMapIter =  _layerStripMapVector[ii_layer].begin(); layerStripMapIter != _layerStripMapVector[ii_layer].end(); ++layerStripMapIter){
+    for (layerStripMap::const_iterator layerStripMapIter =  _layerStripMapArray[ii_layer].begin(); layerStripMapIter != _layerStripMapArray[ii_layer].end(); ++layerStripMapIter){
       strip = getStripNumber(layerStripMapIter);
       adc = getStripAdc(layerStripMapIter); 
  

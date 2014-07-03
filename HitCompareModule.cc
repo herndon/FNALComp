@@ -28,7 +28,6 @@ void fc::HitCompareModule::processEvent(const HitSet & myGenHitSet, const HitSet
 {
 
 
-
  compareHits(myGenHitSet,myRecoHitSet);
 
   // Function to histogram results
@@ -41,43 +40,32 @@ void fc::HitCompareModule::compareHits(const HitSet & myGenHitSet, const HitSet&
 {
 
 
-  for (int ii_layer =  0; ii_layer < _nLayers; ++ii_layer){
  
-    const layerHitMap& myGenLayerHitMap  = myGenHitSet.getConstLayerHitMap(ii_layer);
-    const layerHitMap& myRecoLayerHitMap  = myRecoHitSet.getConstLayerHitMap(ii_layer);
- 
-    compareHitsLayer(myGenLayerHitMap,myRecoLayerHitMap,myGenHitSet,myRecoHitSet,ii_layer);
-
-  } // end layer loop
-
-
-}
-
-
-void fc::HitCompareModule::compareHitsLayer(const layerHitMap& myGenLayerHitMap, const layerHitMap& myRecoLayerHitMap,
-					    const HitSet & myGenHitSet, const HitSet& myRecoHitSet, int layer){
-
   double deltaPosition;
   double tempDeltaPosition;
 
-  for (layerHitMap::const_iterator genLayerHitMapIter = myGenLayerHitMap.begin(); genLayerHitMapIter != myGenLayerHitMap.end(); ++genLayerHitMapIter){
+  for (std::vector<Hit>::const_iterator genHitIter =  myGenHitSet.getConstHitVector().begin(); genHitIter !=  myGenHitSet.getConstHitVector().end(); ++genHitIter){
 
     deltaPosition = 999.0;
 
-    const Hit genHit = myGenHitSet.getConstHit(genLayerHitMapIter);
+    for (std::vector<Hit>::const_iterator recoHitIter = myRecoHitSet.getConstHitVector().begin(); recoHitIter != myRecoHitSet.getConstHitVector().end(); ++recoHitIter){
 
-    for (layerHitMap::const_iterator recoLayerHitMapIter = myRecoLayerHitMap.begin(); recoLayerHitMapIter != myRecoLayerHitMap.end(); ++recoLayerHitMapIter){
 
-      const Hit recoHit = myRecoHitSet.getConstHit(recoLayerHitMapIter);
-      tempDeltaPosition = compareHitPositions(genHit,recoHit);
-      if (std::abs(tempDeltaPosition) < std::abs(deltaPosition)) deltaPosition = tempDeltaPosition;
+      if (genHitIter->getLayer()==recoHitIter->getLayer()) {
+	  tempDeltaPosition = compareHitPositions(*genHitIter,*recoHitIter);
+	  if (std::abs(tempDeltaPosition) < std::abs(deltaPosition)) deltaPosition = tempDeltaPosition;
     }
 
-    deltaHitPositions[layer]->Fill(deltaPosition);
+
+
+    }
+
+    deltaHitPositions[genHitIter->getLayer()]->Fill(deltaPosition);
+
 
   }
-
 }
+
 
 double fc::HitCompareModule::compareHitPositions(const Hit & genHit, const Hit& recoHit)
 {
@@ -90,11 +78,11 @@ void fc::HitCompareModule::initializeHistograms(){
 
   //deltaHitPositions = new TH1F("deltaHitPositions", "Delta X Hit Positions","delta X (m)", "number of hits",100, -0.1, 0.1);
 
-  deltaHitPositions[0] = new TH1F("deltaHitPositions L0", "Delta X Hit Positions",100, -0.01, 0.01);
-  deltaHitPositions[1] = new TH1F("deltaHitPositions L1", "Delta X Hit Positions",100, -0.01, 0.01);
-  deltaHitPositions[2] = new TH1F("deltaHitPositions L2", "Delta X Hit Positions",100, -0.01, 0.01);
-  deltaHitPositions[3] = new TH1F("deltaHitPositions L3", "Delta X Hit Positions",100, -0.01, 0.01);
-  deltaHitPositions[4] = new TH1F("deltaHitPositions L4", "Delta X Hit Positions",100, -0.01, 0.01);
+  deltaHitPositions[0] = new TH1F("deltaHitPositions L0", "Delta X Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[1] = new TH1F("deltaHitPositions L1", "Delta X Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[2] = new TH1F("deltaHitPositions L2", "Delta X Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[3] = new TH1F("deltaHitPositions L3", "Delta X Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[4] = new TH1F("deltaHitPositions L4", "Delta X Hit Positions",100, -0.0001, 0.0001);
 
 
   for (int ii_layer = 0; ii_layer < _nLayers; ++ii_layer) {

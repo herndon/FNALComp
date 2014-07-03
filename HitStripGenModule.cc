@@ -23,13 +23,13 @@ void fc::HitStripGenModule::processEvent(TrackSet & myTrackSet, HitSet & myHitSe
 {
 
 
-  TrackMap & myTrackMap = myTrackSet.getTrackMap();
-  std::map<int,Track>::size_type numberTracks =myTrackMap.size();
+  std::vector<Track> & myTrackVector = myTrackSet.getTrackVector();
+  int trackNumber = 0;
   int hitNumber = 0;
 
-    for (TrackMap::iterator trackMapIter =  myTrackMap.begin(); trackMapIter != myTrackMap.end(); ++trackMapIter){
+  for (std::vector<Track>::iterator trackIter =  myTrackVector.begin(); trackIter != myTrackVector.end(); ++trackIter,++trackNumber){
  
-    makeHitsStrips(myHitSet, myStripSet,myTrackSet.getTrack(trackMapIter),myTrackSet.getTrackNumber(trackMapIter),hitNumber);
+    makeHitsStrips(myHitSet, myStripSet,*trackIter,trackNumber,hitNumber);
 
    } // end track loop
 
@@ -41,7 +41,7 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& myHitSet, StripSet & myStripS
   // make a copy of the track because we don't want to change the state of the helix in the original version
   Track trackCopy(track); 
 
-  double hitPosition[3];
+  TVector3 hitPosition;
 
 
   for (int ii_layer = 0; ii_layer < _nLayers; ++ii_layer) {
@@ -57,45 +57,37 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& myHitSet, StripSet & myStripS
 
 }
 
-void fc::HitStripGenModule::calculateTrackSensorIntersection(Track & track,int layer, double * hitPosition){
+void fc::HitStripGenModule::calculateTrackSensorIntersection(Track & track,int layer, TVector3 & hitPosition){
 
   // point and normal to sensor
-  Double_t point[3];
-  Double_t norm[3];
+  TVector3 point(_myDetectorGeometry.getSensor(layer)._center);
+  TVector3 normal(_myDetectorGeometry.getSensor(layer)._normal);
 
-  point[0] = _myDetectorGeometry.getSensor(layer)._center[0];
-  point[1] = _myDetectorGeometry.getSensor(layer)._center[1];
-  point[2] = _myDetectorGeometry.getSensor(layer)._center[2];
+  // !!!!! replace with intersect with layer
 
-  // normal vector to sensor
-  norm[0] = _myDetectorGeometry.getSensor(layer)._norm[0];
-  norm[1] = _myDetectorGeometry.getSensor(layer)._norm[1];
-  norm[2] = _myDetectorGeometry.getSensor(layer)._norm[2];
-  
-  // !!!!! is this the best way to return the result?
-  track.getGeoHelix().StepToPlane(point,norm);
-  hitPosition[0] = track.getGeoHelix().GetCurrentPoint()[0];
-  hitPosition[1] = track.getGeoHelix().GetCurrentPoint()[1];
-  hitPosition[2] = track.getGeoHelix().GetCurrentPoint()[2];
+  double phi = 0.0;
+
+  track.intersectWithPlane(hitPosition,point,normal,phi);
 
 }
 
-void fc::HitStripGenModule::storeHitInfo(HitSet & myHitSet,Track & track,int trackNumber,int & hitNumber,double * hitPosition,int layer){
+void fc::HitStripGenModule::storeHitInfo(HitSet & myHitSet,Track & track,int trackNumber,int & hitNumber,TVector3 & hitPosition,int layer){
 
   if (_debugLevel >=5 ) {
     std::cout << "Layer " << layer << " Hit y " << hitPosition[0] << std::endl;
     std::cout << "Layer " << layer << " Hit x " << hitPosition[1] << std::endl;
   }
 
-  Hit hit(hitPosition,trackNumber);
+  // Pure gen hit, numberStrip = -1
+  Hit hit(hitPosition,layer,-1,trackNumber);
 
-  myHitSet.insertHit(hitNumber,hit,layer);
+  myHitSet.insertHit(hit);
 
   track.insertHit(hitNumber,layer);
 
   ++hitNumber;
 
-  hitPosition[0] = hitPosition[0] + _myRandom.getNormalDouble(0.0,_myDetectorGeometry.getSensor(layer)._resolution);
+  hitPosition[0] = hitPosition[0] + _myRandom.getNormalDouble(0.0,_myDetectorGeometry.getSensor(layer)._hitResolution);
  
   if (_debugLevel >=5 ) {
     std::cout << "Layer " << layer << " Resolution smeared Hit x " << hitPosition[0] << std::endl;
@@ -106,7 +98,7 @@ void fc::HitStripGenModule::storeHitInfo(HitSet & myHitSet,Track & track,int tra
  
 
 
-void fc::HitStripGenModule::storeStripInfo(StripSet & myStripSet,const double * hitPosition,int layer){
+void fc::HitStripGenModule::storeStripInfo(StripSet & myStripSet,const TVector3 & hitPosition,int layer){
 
   double stripHitPosition = calculateStripHitPosition(hitPosition,layer);
 
@@ -121,7 +113,7 @@ void fc::HitStripGenModule::storeStripInfo(StripSet & myStripSet,const double * 
 
 
 
-double fc::HitStripGenModule::calculateStripHitPosition(const double * hitPosition, int layer) const{
+double fc::HitStripGenModule::calculateStripHitPosition(const TVector3 & hitPosition, int layer) const{
 
   // This assumes the senstors are normal to the y axis.  Could be made more general
   return hitPosition[0]/_myDetectorGeometry.getSensor(layer)._stripPitch + _myDetectorGeometry.getSensor(layer)._nStrips/2   ;

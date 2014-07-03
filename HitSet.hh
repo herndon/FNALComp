@@ -11,15 +11,13 @@
 //                       Fermi National Accelerator Laborator
 // 2014-06-08
 //============================================================================
-#include <map>
+#include <vector>
 #include <fstream>
 #include <iostream>
-#include "DetectorGeometry.hh"
 #include "Hit.hh"
 
 namespace fc {
 
-  typedef std::map<int, Hit> layerHitMap; //!< Map of strip number and acd counts for one layer
 
 ///
 /// Class HitSet: 
@@ -30,7 +28,7 @@ namespace fc {
 class HitSet {
 private:
 
-  layerHitMap _layerHitMapVector[DetectorGeometry::_nSensors];
+  std::vector<Hit> _hitVector;
   int _version;
   bool _genHits;
   int _eventNumber;
@@ -42,17 +40,12 @@ public:
   ~HitSet() {};
 
 
-  const layerHitMap& getConstLayerHitMap(int layer) const;
-  layerHitMap& getLayerHitMap(int layer);
+  const std::vector<Hit> & getConstHitVector(void) const {return _hitVector;};
+  std::vector<Hit>& getHitVector(void) {return _hitVector;};
 
+  const Hit & getHit(int hitNumber) const {return _hitVector[hitNumber]; };
 
-  //Map pair access by type of pair element
-  int getHitNumber(layerHitMap::const_iterator iter) const {return iter->first;};
-  //int getHitNumber(layerHitMap::iterator iter) {return iter->first;};
-  const Hit & getConstHit(layerHitMap::const_iterator iter) const {return iter->second;}
-  Hit & getHit(layerHitMap::iterator iter) {return iter->second;}
-
-  void insertHit(int, Hit, int); //!< Insert by hit number, Hit and layer
+  void insertHit(Hit);
 
   int getEventNumber(void) const {return _eventNumber;}
 
@@ -60,8 +53,6 @@ public:
   void readEvent(std::ifstream&);  //!< Read all hit information for all sensors std::ifstream file for event _event
 
   void print(void) const;
-
-  void clear(void);
 
 };
 } // end namespace fc

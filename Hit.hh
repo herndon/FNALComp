@@ -13,6 +13,8 @@
 // 2014-06-08
 //============================================================================
 
+#include "TVector3.h"
+
 namespace fc {
 
 ///
@@ -24,17 +26,21 @@ namespace fc {
 class Hit {
 private:
 
-  double _hitPosition[3];
+  TVector3 _hitPosition;
+  int _layer;
+  int _numberStrips;
   int _trackNumber;  
 
 public:
 
-  Hit(double *, int);
-  Hit(double *);
+  Hit(const TVector3&, int, int, int); //!< TVector3 hitPosition, int layer, int numberStrips, int trackNumber
+  Hit(const TVector3&, int, int);      //!< TVector3 hitPosition, int layer, int numberStrips, int trackNumber
   Hit(const Hit&);
   ~Hit() {};
 
-  const double * getHitPosition(void) const {return _hitPosition; };
+  const TVector3 & getHitPosition(void) const {return _hitPosition; };
+  int getLayer(void) const {return _layer;};
+  int getNumberStrips(void) const {return _numberStrips;};
   int getTrackNumber(void) const {return _trackNumber;};
 
   void setTrackNumber(int trackNumber) { _trackNumber = trackNumber;};
