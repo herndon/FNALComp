@@ -41,7 +41,7 @@ int main ()
 
 
   // Instantiate and initialize Module classes
-  fc::DataInputModule myDataInputModule(debugLevel,myDetectorGeometry.getDetectorGeometryVersion(),inputeventdatafile);
+  fc::DataInputModule myDataInputModule(debugLevel,myDetectorGeometry,inputeventdatafile);
 
 
   // Event loop over module classes
@@ -49,12 +49,12 @@ int main ()
   for (int ii_event = 0; ii_event < 128; ++ii_event) {
  
    // Initialize object persistent only for each event
-    fc::TrackSet myGenTrackSet(myDetectorGeometry);
-    fc::HitSet myGenHitSet;
-    fc::StripSet myGenStripSet;
+    fc::TrackSet genTrackSet(myDetectorGeometry);
+    fc::HitSet genHitSet;
+    fc::StripSet genStripSet(true);
 
 
-    myDataInputModule.processEvent(myGenTrackSet,myGenHitSet,myGenStripSet);
+    myDataInputModule.processEvent(genTrackSet,genHitSet,genStripSet);
 
   }
 

@@ -1,43 +1,51 @@
 #include "TrackSet.hh"
 #include "HitSet.hh"
 #include "StripSet.hh"
+#include "StripSetIO.hh"
 #include "DataInputModule.hh"
 #include <string>
 #include "Exception.hh"
 
-fc::DataInputModule::DataInputModule(int debugLevel, int detectorGeometryVersion,std::ifstream& inputeventdatafile):
+fc::DataInputModule::DataInputModule(int debugLevel, const DetectorGeometry& detectorGeometry,std::ifstream& inputeventdatafile):
   _debugLevel(debugLevel),
-  _detectorGeometryVersion(detectorGeometryVersion),
+  _detectorGeometry(detectorGeometry),
   _inputeventdatafile(inputeventdatafile){
 
   int inputDetectorGeometryVersion;
   _inputeventdatafile >> inputDetectorGeometryVersion ;
 
-  if (inputDetectorGeometryVersion != _detectorGeometryVersion){
-    std::string wrongDetectorGeometryVersion = "DataInputModule constructor: wrong detector geometry version: Set up for " + std::to_string(_detectorGeometryVersion) + ", reading " + std::to_string(detectorGeometryVersion);
+  if (inputDetectorGeometryVersion != _detectorGeometry.getDetectorGeometryVersion()){
+    std::string wrongDetectorGeometryVersion = "DataInputModule constructor: wrong detector geometry version: Set up for " + std::to_string(_detectorGeometry.getDetectorGeometryVersion()) + ", reading " + std::to_string(inputDetectorGeometryVersion);
     throw Exception(wrongDetectorGeometryVersion); 
   }
 
 
 }
 
-void fc::DataInputModule::processEvent(TrackSet & myTrackSet, HitSet & myHitSet, StripSet & myStripSet) {
+void fc::DataInputModule::processEvent(TrackSet & trackSet, HitSet & hitSet, StripSet & stripSet) {
 
 
-  //myStripSet->printRawData(_inputeventdatafile);
+  int eventNumber;
+  _inputeventdatafile >> eventNumber;
+
+
+  trackSet.readEvent(_inputeventdatafile);
+
+
+  hitSet.readEvent(_inputeventdatafile);
+
+
+  // !!!!! chance to a construtor calling StripSetIO::readEvent and passing to an event object
+  StripSetIO stripSetIO(_detectorGeometry);
+  //stripSetIO.printRawData(_inputeventdatafile);
   // don't call rest of processEvent if you are going to do this  !!!!! could reset file pointer
 
-  myTrackSet.readEvent(_inputeventdatafile);
-  if (_debugLevel >=2) myTrackSet.print();
 
+  stripSetIO.readEvent(stripSet,_inputeventdatafile);
 
-  myHitSet.readEvent(_inputeventdatafile);
-  if (_debugLevel >=2) myHitSet.print();
-
-
-  myStripSet.readEvent(_inputeventdatafile);
-
-  if (_debugLevel >=2) myStripSet.print();
+  if (_debugLevel >=2) trackSet.print();
+  if (_debugLevel >=2) hitSet.print();
+  if (_debugLevel >=2) stripSet.print();
 
 }
 

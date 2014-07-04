@@ -15,11 +15,11 @@
 
 #include <fstream>
 #include <iostream>
+#include "DetectorGeometry.hh"
 
 class TrackSet;
 class HitSet;
 class StripSet;
-
 
 ///
 /// Class DataInputModule
@@ -32,17 +32,18 @@ class DataInputModule {
 
 public:
 
-  DataInputModule(int, int, std::ifstream&);
+  DataInputModule(int, const DetectorGeometry &, std::ifstream&);
   ~DataInputModule() {};
 
-   void processEvent(TrackSet&, HitSet&, StripSet&);
+  void processEvent(TrackSet&, HitSet&, StripSet&);
 
 
 private:
 
   int _debugLevel;
-  int _detectorGeometryVersion;
   // Input event data file
+
+  const DetectorGeometry & _detectorGeometry;
   std::ifstream & _inputeventdatafile;
 
  

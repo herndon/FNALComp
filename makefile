@@ -1,4 +1,4 @@
-OBJS = Random.o Config.o DetectorGeometry.o StripSet.o Hit.o HitSet.o Track.o TrackSet.o TrackGenModule.o HitStripGenModule.o DataOutputModule.o dataGen.o
+OBJS = Random.o Config.o DetectorGeometry.o StripSet.o StripSetIO.o Hit.o HitSet.o Track.o TrackSet.o TrackGenModule.o HitStripGenModule.o DataOutputModule.o dataGen.o
 NOTES = notes/
 CC = g++
 DEBUG = -g -O0
@@ -14,37 +14,40 @@ dataGen : $(OBJS)
 Random.o : Random.cc Random.hh
 	$(CC) $(CFLAGS) Random.cc
 
-Config.o : Config.cc Config.hh
+Config.o : Exception.hh Config.cc Config.hh
 	$(CC) $(CFLAGS) Config.cc
 
-DetectorGeometry.o : DetectorGeometry.cc DetectorGeometry.hh
+DetectorGeometry.o : Exception.hh DetectorGeometry.cc DetectorGeometry.hh
 	$(CC) $(CFLAGS) DetectorGeometry.cc
 
-StripSet.o : StripSet.cc StripSet.hh
+StripSet.o : Exception.hh DetectorGeometry.hh StripSet.cc StripSet.hh
 	$(CC) $(CFLAGS) StripSet.cc
+
+StripSetIO.o : Exception.hh DetectorGeometry.hh StripSet.hh StripSetIO.cc StripSetIO.hh
+	$(CC) $(CFLAGS) StripSetIO.cc
 
 Hit.o : Hit.cc Hit.hh
 	$(CC) $(CFLAGS) Hit.cc
 
-HitSet.o : HitSet.cc HitSet.hh
+HitSet.o : Exception.hh DetectorGeometry.hh Hit.hh HitSet.cc HitSet.hh
 	$(CC) $(CFLAGS) HitSet.cc
 
-Track.o : Track.cc Track.hh
+Track.o : Exception.hh DetectorGeometry.hh Hit.hh Track.cc Track.hh
 	$(CC) $(CFLAGS) Track.cc
 
-TrackSet.o : TrackSet.cc TrackSet.hh
+TrackSet.o : Exception.hh DetectorGeometry.hh Hit.hh Track.hh TrackSet.cc TrackSet.hh
 	$(CC) $(CFLAGS) TrackSet.cc
 
-TrackGenModule.o : TrackGenModule.cc TrackGenModule.hh
+TrackGenModule.o : Random.hh  Exception.hh DetectorGeometry.hh Hit.hh Track.hh TrackSet.hh TrackGenModule.cc TrackGenModule.hh
 	$(CC) $(CFLAGS) TrackGenModule.cc
 
-HitStripGenModule.o : HitStripGenModule.cc HitStripGenModule.hh
+HitStripGenModule.o :  Random.hh  Exception.hh DetectorGeometry.hh StripSet.hh Hit.hh HitSet.hh Track.hh TrackSet.hh HitStripGenModule.cc HitStripGenModule.hh
 	$(CC) $(CFLAGS) HitStripGenModule.cc
 
-DataOutputModule.o : DataOutputModule.cc DataOutputModule.hh
+DataOutputModule.o : Exception.hh DetectorGeometry.hh StripSet.hh StripSetIO.hh Hit.hh HitSet.hh Track.hh TrackSet.hh DataOutputModule.cc DataOutputModule.hh
 	$(CC) $(CFLAGS) DataOutputModule.cc
 
-dataGen.o : dataGen.cc
+dataGen.o : Exception.hh Config.hh DetectorGeometry.hh StripSet.hh StripSetIO.hh Hit.hh HitSet.hh Track.hh TrackSet.hh dataGen.cc
 	$(CC) $(CFLAGS) dataGen.cc
 
 clean:
@@ -54,7 +57,7 @@ tar:
 	tar -z --create --file day0.tgz dataGen.cc \
 	TrackGenModule.cc TrackGenModule.hh HitStripGenModule.cc HitStripGenModule.hh DataOutputModule.cc DataOutputModule.hh \
 	DetectorGeometry.cc DetectorGeometry.hh \
-	StripSet.cc StripSet.hh \
+	StripSet.cc StripSet.hh StripSetIO.cc StripSetIO.hh\
 	Hit.cc Hit.hh HitSet.cc HitSet.hh \
 	Track.cc Track.hh TrackSet.cc TrackSet.hh \
         Config.cc Config.hh Random.hh Random.cc Exception.hh \

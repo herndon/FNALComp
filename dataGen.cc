@@ -59,7 +59,7 @@ int main ()
   // Instantiate and initialize Module classes
   fc::TrackGenModule myTrackGenModule(debugLevel,myDetectorGeometry,myRandom);
   fc::HitStripGenModule myHitStripGenModule(debugLevel,myDetectorGeometry,myRandom);
-  fc::DataOutputModule myDataOutputModule(debugLevel,myDetectorGeometry.getDetectorGeometryVersion(),genoutputeventdatafile);
+  fc::DataOutputModule myDataOutputModule(debugLevel,myDetectorGeometry,genoutputeventdatafile);
 
 
    // Event loop over module classes
@@ -69,11 +69,11 @@ int main ()
     // Initialize object persistent only for each event
     fc::TrackSet myTrackSet(ii_event,genData,myDetectorGeometry);
     fc::HitSet myHitSet(ii_event,genData);
-    fc::StripSet myStripSet(ii_event,genData);
+    fc::StripSet myStripSet(genData);
 
     myTrackGenModule.processEvent(myTrackSet,myConfig.getNumberTracks());
     myHitStripGenModule.processEvent(myTrackSet,myHitSet,myStripSet);
-    myDataOutputModule.processEvent(myTrackSet,myHitSet,myStripSet);
+    myDataOutputModule.processEvent(ii_event,myTrackSet,myHitSet,myStripSet);
 
   }
 

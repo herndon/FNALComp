@@ -30,15 +30,16 @@ class DataOutputModule {
 
 public:
 
-  DataOutputModule(int,int,std::ofstream&);
+  DataOutputModule(int,const DetectorGeometry&,std::ofstream&);
   ~DataOutputModule() {};
 
-  void processEvent(const TrackSet&,const HitSet&, const StripSet&) const;
+  void processEvent(int, const TrackSet&,const HitSet&, const StripSet&) const;
 
 private:
 
   int _debugLevel;
-  int _detectorGeometryVersion;
+
+  const DetectorGeometry & _detectorGeometry;
 
   // Input event data file
   std::ofstream & _outputeventdatafile;
