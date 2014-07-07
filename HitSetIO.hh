@@ -29,7 +29,6 @@ namespace fc {
 class HitSetIO {
 private:
 
-  std::vector<Hit> _hitVector;
   int _version;
 
 public:

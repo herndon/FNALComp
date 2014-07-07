@@ -51,7 +51,7 @@ int main ()
    // Initialize object persistent only for each event
     fc::TrackSet genTrackSet(myDetectorGeometry);
     fc::HitSet genHitSet;
-    fc::StripSet genStripSet(true);
+    fc::StripSet genStripSet;
 
 
     myDataInputModule.processEvent(genTrackSet,genHitSet,genStripSet);

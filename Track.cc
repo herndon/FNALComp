@@ -525,7 +525,7 @@ void fc::Track::FitToHelix(const HitSet & hitSet,const DetectorGeometry & detect
 
       // Hit information
       int layer = trackHitMapIter->second;
-      TVector3 hitPosition = hitSet.getConstHitVector()[trackHitMapIter->first].getHitPosition();
+      TVector3 hitPosition = hitSet.getHitVector()[trackHitMapIter->first].getHitPosition();
 
  
       // Find XZ vector to measurement

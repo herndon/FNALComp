@@ -37,6 +37,7 @@ private:
 
 public:
 
+  StripSet();
   StripSet(bool genStrips);
   ~StripSet() {};
 

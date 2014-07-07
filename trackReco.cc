@@ -33,6 +33,9 @@ int main ()
   // 1 basic information on progress
   // 0 none
 
+  // data objects created in this module are reconstruted, not generated
+  bool genData = false;
+
   // Intialize Objects and Modules that are persistant
 
   // DetectorGeomergy
@@ -48,7 +51,7 @@ int main ()
 
 
   // Instantiate and initialize Module classes
-  fc::DataInputModule myDataInputModule(debugLevel,myDetectorGeometry.getDetectorGeometryVersion(),inputeventdatafile);
+  fc::DataInputModule myDataInputModule(debugLevel,myDetectorGeometry,inputeventdatafile);
   fc::HitRecoModule myHitRecoModule(debugLevel,myDetectorGeometry);
   fc::HitCompareModule myHitCompareModule(debugLevel,myDetectorGeometry,outputrootfile);
   fc::TrackRecoModule myTrackRecoModule(debugLevel,myDetectorGeometry);
@@ -63,9 +66,8 @@ int main ()
     fc::HitSet myGenHitSet;
     fc::StripSet myGenStripSet;
 
-    fc::HitSet myRecoHitSet;
+    fc::HitSet myRecoHitSet(genData);
     fc::TrackSet myRecoTrackSet(myDetectorGeometry);
-
 
     myDataInputModule.processEvent(myGenTrackSet,myGenHitSet,myGenStripSet);
     myHitRecoModule.processEvent(myRecoHitSet,myGenStripSet);

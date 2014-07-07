@@ -44,11 +44,11 @@ void fc::HitCompareModule::compareHits(const HitSet & myGenHitSet, const HitSet&
   double deltaPosition;
   double tempDeltaPosition;
 
-  for (std::vector<Hit>::const_iterator genHitIter =  myGenHitSet.getConstHitVector().begin(); genHitIter !=  myGenHitSet.getConstHitVector().end(); ++genHitIter){
+  for (std::vector<Hit>::const_iterator genHitIter =  myGenHitSet.getHitVector().begin(); genHitIter !=  myGenHitSet.getHitVector().end(); ++genHitIter){
 
     deltaPosition = 999.0;
 
-    for (std::vector<Hit>::const_iterator recoHitIter = myRecoHitSet.getConstHitVector().begin(); recoHitIter != myRecoHitSet.getConstHitVector().end(); ++recoHitIter){
+    for (std::vector<Hit>::const_iterator recoHitIter = myRecoHitSet.getHitVector().begin(); recoHitIter != myRecoHitSet.getHitVector().end(); ++recoHitIter){
 
 
       if (genHitIter->getLayer()==recoHitIter->getLayer()) {

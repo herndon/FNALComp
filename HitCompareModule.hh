@@ -9,12 +9,9 @@
 // 2014-06-12
 //============================================================================
 
-#include "StripSet.hh"
-#include <vector>
-#include <memory>
 #include "DetectorGeometry.hh"
 
-class DetectorGeometry;
+class Hit;
 class HitSet;
 class TFile;
 class TList;

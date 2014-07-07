@@ -9,7 +9,7 @@ fc::HitSet::HitSet():
 }
 
 
-fc::HitSet::HitSet(int eventNumber,bool genHits):
+fc::HitSet::HitSet(bool genHits):
   _version(1),
   _genHits(genHits){
 }

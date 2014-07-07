@@ -33,7 +33,7 @@ private:
 public:
 
   HitSet();
-  HitSet(int eventNumber,bool genHits);
+  HitSet(bool genHits);
   ~HitSet() {};
 
 

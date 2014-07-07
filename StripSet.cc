@@ -3,6 +3,10 @@
 #include "Exception.hh"
 
 
+fc::StripSet::StripSet():
+  _version(1){
+}
+
 fc::StripSet::StripSet(bool genStrips):
   _genStrips(genStrips),
   _version(1){

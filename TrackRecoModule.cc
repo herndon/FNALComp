@@ -51,32 +51,32 @@ void fc::TrackRecoModule::findTrack5HitCandidates(std::vector<std::vector<int>> 
 
 
   // Form 4-3-2-1-0 hit candidates
-  for (std::vector<Hit>::const_iterator hitIterO = myHitSet.getConstHitVector().begin(); hitIterO != myHitSet.getConstHitVector().end(); ++hitIterO,++hitNumberO) {
+  for (std::vector<Hit>::const_iterator hitIterO = myHitSet.getHitVector().begin(); hitIterO != myHitSet.getHitVector().end(); ++hitIterO,++hitNumberO) {
 
     if (hitIterO->getLayer() == _nLayers-1) {
 
       int hitNumberI = 0;
 
-      for (std::vector<Hit>::const_iterator hitIterI = myHitSet.getConstHitVector().begin(); hitIterI != myHitSet.getConstHitVector().end(); ++hitIterI,++hitNumberI) {
+      for (std::vector<Hit>::const_iterator hitIterI = myHitSet.getHitVector().begin(); hitIterI != myHitSet.getHitVector().end(); ++hitIterI,++hitNumberI) {
 
 	if (hitIterI->getLayer() == _nLayers-2) {
 
 	  int hitNumberII = 0;
 
-	  for (std::vector<Hit>::const_iterator hitIterII = myHitSet.getConstHitVector().begin(); hitIterII != myHitSet.getConstHitVector().end(); ++hitIterII,++hitNumberII) {
+	  for (std::vector<Hit>::const_iterator hitIterII = myHitSet.getHitVector().begin(); hitIterII != myHitSet.getHitVector().end(); ++hitIterII,++hitNumberII) {
 
 	    if (hitIterII->getLayer() == _nLayers-3) {
 
 
 	      int hitNumberIII = 0;
 
-	      for (std::vector<Hit>::const_iterator hitIterIII = myHitSet.getConstHitVector().begin(); hitIterIII != myHitSet.getConstHitVector().end(); ++hitIterIII,++hitNumberIII) {
+	      for (std::vector<Hit>::const_iterator hitIterIII = myHitSet.getHitVector().begin(); hitIterIII != myHitSet.getHitVector().end(); ++hitIterIII,++hitNumberIII) {
 
 		if (hitIterIII->getLayer() == _nLayers-4) {
 
 		  int hitNumberIIII = 0;
 
-		  for (std::vector<Hit>::const_iterator hitIterIIII = myHitSet.getConstHitVector().begin(); hitIterIIII != myHitSet.getConstHitVector().end(); ++hitIterIIII,++hitNumberIIII) {
+		  for (std::vector<Hit>::const_iterator hitIterIIII = myHitSet.getHitVector().begin(); hitIterIIII != myHitSet.getHitVector().end(); ++hitIterIIII,++hitNumberIIII) {
 
 		    if (hitIterIIII->getLayer() == _nLayers-4) {
 
@@ -117,20 +117,20 @@ void fc::TrackRecoModule::findTrack3HitCandidates(std::vector<std::vector<int>> 
 
 
   // Form 4-3-2 hit candidates
-  for (std::vector<Hit>::const_iterator hitIterO = myHitSet.getConstHitVector().begin(); hitIterO != myHitSet.getConstHitVector().end(); ++hitIterO,++hitNumberO) {
+  for (std::vector<Hit>::const_iterator hitIterO = myHitSet.getHitVector().begin(); hitIterO != myHitSet.getHitVector().end(); ++hitIterO,++hitNumberO) {
 
     int hitNumberI = 0;
 
     //!!!!! change to outer layer at some point
     if (hitIterO->getLayer() == _nLayers-1) {
 
-      for (std::vector<Hit>::const_iterator hitIterI = myHitSet.getConstHitVector().begin(); hitIterI != myHitSet.getConstHitVector().end(); ++hitIterI,++hitNumberI) {
+      for (std::vector<Hit>::const_iterator hitIterI = myHitSet.getHitVector().begin(); hitIterI != myHitSet.getHitVector().end(); ++hitIterI,++hitNumberI) {
 
 	int hitNumberII = 0;
 
 	if (hitIterI->getLayer() == _nLayers-2) {
 
-	  for (std::vector<Hit>::const_iterator hitIterII = myHitSet.getConstHitVector().begin(); hitIterII != myHitSet.getConstHitVector().end(); ++hitIterII,++hitNumberII) {
+	  for (std::vector<Hit>::const_iterator hitIterII = myHitSet.getHitVector().begin(); hitIterII != myHitSet.getHitVector().end(); ++hitIterII,++hitNumberII) {
 
 	    if (hitIterII->getLayer() == _nLayers-3) {
 
@@ -163,14 +163,14 @@ void fc::TrackRecoModule::findTrack2HitCandidates(std::vector<std::vector<int>> 
 
 
   // Form 4-3 hit candidates
-  for (std::vector<Hit>::const_iterator hitIterO = myHitSet.getConstHitVector().begin(); hitIterO != myHitSet.getConstHitVector().end(); ++hitIterO,++hitNumberO) {
+  for (std::vector<Hit>::const_iterator hitIterO = myHitSet.getHitVector().begin(); hitIterO != myHitSet.getHitVector().end(); ++hitIterO,++hitNumberO) {
 
     int hitNumberI = 0;
 
     //!!!!! change to outer layer at some point
     if (hitIterO->getLayer() == _nLayers-1) {
 
-      for (std::vector<Hit>::const_iterator hitIterI = myHitSet.getConstHitVector().begin(); hitIterI != myHitSet.getConstHitVector().end(); ++hitIterI,++hitNumberI) {
+      for (std::vector<Hit>::const_iterator hitIterI = myHitSet.getHitVector().begin(); hitIterI != myHitSet.getHitVector().end(); ++hitIterI,++hitNumberI) {
 
 	if (hitIterI->getLayer() == _nLayers-2) {
 
@@ -195,7 +195,7 @@ void fc::TrackRecoModule::build2HitTrackCandidates(TrackSet & trackCandidateSet,
 
   TVector3 primaryVertex(0.0,0.0,0.0);
   for (std::vector<std::vector<int>>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
-    Track trackCandidate(primaryVertex,myHitSet.getConstHitVector()[(*trackHitCandidateIter)[2]].getHitPosition(),myHitSet.getConstHitVector()[(*trackHitCandidateIter)[4]].getHitPosition(),primaryVertex,_myDetectorGeometry,_debugLevel);
+    Track trackCandidate(primaryVertex,myHitSet.getHitVector()[(*trackHitCandidateIter)[2]].getHitPosition(),myHitSet.getHitVector()[(*trackHitCandidateIter)[4]].getHitPosition(),primaryVertex,_myDetectorGeometry,_debugLevel);
 
     // !!!!! insert hit via constructor
     trackCandidate.insertHit((*trackHitCandidateIter)[0],4);
@@ -214,7 +214,7 @@ void fc::TrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCandidateS
 
   TVector3 primaryVertex(0.0,0.0,0.0);
   for (std::vector<std::vector<int>>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
-    Track trackCandidate(primaryVertex,myHitSet.getConstHitVector()[(*trackHitCandidateIter)[2]].getHitPosition(),myHitSet.getConstHitVector()[(*trackHitCandidateIter)[4]].getHitPosition(),primaryVertex,_myDetectorGeometry,_debugLevel);
+    Track trackCandidate(primaryVertex,myHitSet.getHitVector()[(*trackHitCandidateIter)[2]].getHitPosition(),myHitSet.getHitVector()[(*trackHitCandidateIter)[4]].getHitPosition(),primaryVertex,_myDetectorGeometry,_debugLevel);
 
     // !!!!! insert hit via constructor
     trackCandidate.insertHit((*trackHitCandidateIter)[0],4);
