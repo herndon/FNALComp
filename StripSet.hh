@@ -45,8 +45,10 @@ public:
   int getStripNumber(layerStripMap::const_iterator iter) const {return iter->first;};
   int getStripAdc(layerStripMap::const_iterator iter) const {return iter->second;};
 
-  int getGenStrips(void) const {return _genStrips;}
+  bool getGenStrips(void) const {return _genStrips;}
   int getVersion(void) const {return _version;}
+
+  void setGenStrips(bool genStrips) {_genStrips = genStrips;}
 
   void insertStrip(int, int, int); //!< Insert strip by layer, strip number, adc count
 

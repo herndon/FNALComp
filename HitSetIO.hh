@@ -1,8 +1,8 @@
-#ifndef HitSet_hh
-#define HitSet_hh
+#ifndef HitSetIO_hh
+#define HitSetIO_hh
 //============================================================================
-// HitSet.hh
-// header with class definition of the HitSet
+// HitSetIO.hh
+// header with class definition of the HitSetIO
 // A vector of map<int,Hit> layer_map's
 // Map elements are int,Hit pairs of hitnubmer (Key) and Hit information 
 // See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
@@ -12,45 +12,37 @@
 // 2014-06-08
 //============================================================================
 #include <vector>
-#include "Hit.hh"
+#include <fstream>
+#include <iostream>
+
+class HitSet;
 
 namespace fc {
 
 
 ///
-/// Class HitSet: 
+/// Class HitSetIO: 
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-06-08
 /// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a> 
 ///
 
-class HitSet {
+class HitSetIO {
 private:
 
   std::vector<Hit> _hitVector;
   int _version;
-  bool _genHits;
 
 public:
 
-  HitSet();
-  HitSet(int eventNumber,bool genHits);
-  ~HitSet() {};
+  HitSetIO();
+  ~HitSetIO() {};
 
 
-  const std::vector<Hit> & getHitVector(void) const {return _hitVector;};
+  void writeEvent(const HitSet &, std::ofstream&) const; //!< Write all hit information for all sensors std::ofstream file for event _event
+  void readEvent(HitSet &, std::ifstream&);  //!< Read all hit information for all sensors std::ifstream file for event _event
 
-  const Hit & getHit(int hitNumber) const {return _hitVector[hitNumber]; };
-
-  bool getGenHits(void) const {return _genHits;}
-  int getVersion(void) const {return _version;}
-
-  void setGenHits(bool genHits) {_genHits = genHits;}
-
-  void insertHit(Hit);
-
-  void print(void) const;
 
 };
 } // end namespace fc
-#endif // HitSet_hh
+#endif // HitSetIO_hh
 

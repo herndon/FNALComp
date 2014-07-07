@@ -60,6 +60,7 @@ void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
   binaryData = new unsigned  char[1];
 
   int version;
+  bool genStrips;
   int layer;
   int numberStrips;
   int stripData12;
@@ -92,8 +93,8 @@ void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
   }
 
   stripdata.read (reinterpret_cast<char *>(binaryData), 1);
-  int genStrips;
-  genStrips = static_cast<int>(*binaryData);
+  genStrips = static_cast<bool>(*binaryData);
+  stripSet.setGenStrips(genStrips);
 
 
   if (genStrips != stripSet.getGenStrips()) {

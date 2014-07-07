@@ -1,5 +1,6 @@
 #include "TrackSet.hh"
 #include "HitSet.hh"
+#include "HitSetIO.hh"
 #include "StripSet.hh"
 #include "StripSetIO.hh"
 #include "DataInputModule.hh"
@@ -31,8 +32,8 @@ void fc::DataInputModule::processEvent(TrackSet & trackSet, HitSet & hitSet, Str
 
   trackSet.readEvent(_inputeventdatafile);
 
-
-  hitSet.readEvent(_inputeventdatafile);
+  HitSetIO hitSetIO;
+  hitSetIO.readEvent(hitSet,_inputeventdatafile);
 
 
   // !!!!! chance to a construtor calling StripSetIO::readEvent and passing to an event object
