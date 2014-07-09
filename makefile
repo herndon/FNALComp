@@ -1,4 +1,4 @@
-OBJS = Random.o Config.o DetectorGeometry.o StripSet.o StripSetIO.o Hit.o HitSet.o HitSetIO.o Track.o TrackSet.o TrackGenModule.o HitStripGenModule.o DataOutputModule.o dataGen.o
+OBJS = Random.o Config.o DetectorGeometry.o StripSet.o StripSetIO.o Hit.o HitSet.o HitSetIO.o Helix.o Track.o TrackFit.o TrackSet.o TrackGenModule.o HitStripGenModule.o DataOutputModule.o dataGen.o
 NOTES = notes/
 CC = g++
 DEBUG = -g -O0
@@ -35,22 +35,28 @@ HitSet.o : Exception.hh DetectorGeometry.hh Hit.hh HitSet.cc HitSet.hh
 HitSetIO.o : Exception.hh DetectorGeometry.hh Hit.hh HitSet.hh HitSetIO.cc HitSetIO.hh
 	$(CC) $(CFLAGS) HitSetIO.cc
 
-Track.o : Exception.hh DetectorGeometry.hh Hit.hh Track.cc Track.hh
+Helix.o : Helix.cc Helix.hh
+	$(CC) $(CFLAGS) Helix.cc
+
+Track.o : Exception.hh DetectorGeometry.hh Hit.hh Helix.hh Track.cc Track.hh
 	$(CC) $(CFLAGS) Track.cc
 
-TrackSet.o : Exception.hh DetectorGeometry.hh Hit.hh Track.hh TrackSet.cc TrackSet.hh
+TrackFit.o : Exception.hh DetectorGeometry.hh Hit.hh Helix.hh Track.hh TrackFit.cc TrackFit.hh
+	$(CC) $(CFLAGS) TrackFit.cc
+
+TrackSet.o : Exception.hh DetectorGeometry.hh Hit.hh Helix.hh Track.hh TrackSet.cc TrackSet.hh
 	$(CC) $(CFLAGS) TrackSet.cc
 
-TrackGenModule.o : Random.hh  Exception.hh DetectorGeometry.hh Hit.hh Track.hh TrackSet.hh TrackGenModule.cc TrackGenModule.hh
+TrackGenModule.o : Random.hh  Exception.hh DetectorGeometry.hh Hit.hh Helix.hh Track.hh TrackSet.hh TrackGenModule.cc TrackGenModule.hh
 	$(CC) $(CFLAGS) TrackGenModule.cc
 
-HitStripGenModule.o :  Random.hh  Exception.hh DetectorGeometry.hh StripSet.hh Hit.hh HitSet.hh Track.hh TrackSet.hh HitStripGenModule.cc HitStripGenModule.hh
+HitStripGenModule.o :  Random.hh  Exception.hh DetectorGeometry.hh StripSet.hh Hit.hh HitSet.hh Helix.hh Track.hh TrackFit.hh TrackSet.hh HitStripGenModule.cc HitStripGenModule.hh
 	$(CC) $(CFLAGS) HitStripGenModule.cc
 
 DataOutputModule.o : Exception.hh DetectorGeometry.hh StripSet.hh StripSetIO.hh Hit.hh HitSet.hh HitSetIO.hh Track.hh TrackSet.hh DataOutputModule.cc DataOutputModule.hh
 	$(CC) $(CFLAGS) DataOutputModule.cc
 
-dataGen.o : Exception.hh Config.hh DetectorGeometry.hh StripSet.hh StripSetIO.hh Hit.hh HitSet.hh HitSetIO.hh Track.hh TrackSet.hh DataOutputModule.hh dataGen.cc
+dataGen.o : Exception.hh Config.hh DetectorGeometry.hh StripSet.hh StripSetIO.hh Hit.hh HitSet.hh HitSetIO.hh Helix.hh Track.hh TrackFit.hh TrackSet.hh DataOutputModule.hh dataGen.cc
 	$(CC) $(CFLAGS) dataGen.cc
 
 clean:

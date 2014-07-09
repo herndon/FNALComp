@@ -51,7 +51,23 @@ typedef std::map<int, int> trackHitMap; //!< Map of hit number and layer
 class Track {
 private:
 
+   // _mDim is the number of measurement dimentions for the hitss.  2: r and phi
+   // _sDim is the number of helix paramters. 5
+  static const int _mDim = 2; //!< Measurement dimention of hits
+  static const int _sDim = 5;     //!< helix dimention
+
+
+  double _dr;        // dr, drho
+  double _phi0;      // phi0
+  double _kappa;     // kappa, signed curvature
+  double _dz;        // dz
+  double _tanL;      // tanl
+
   Helix _helix;
+
+  TVector3 _primaryVertex;      // primary vertex or pivot point
+
+  TVector3 _initialPosition;
 
   TMatrixD * _covMatrix;
 
@@ -59,7 +75,11 @@ private:
   
   const DetectorGeometry & _detectorGeometry;
 
+  TVector3 _bField;
+
   double _alpha; // 1/curvatureC
+
+  int _debugLevel;
 
 
 public:
@@ -67,21 +87,54 @@ public:
 // Constructors
 
   Track();
-  Track(double kappa, double dr, double dz, double phi0, double tanl, const DetectorGeometry & detectorGeometry);
-  Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, const DetectorGeometry & detectorGeometry);
-  Track(const HitSet & myHitSet, const std::vector<int> & trackHitCandidate, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, int debugLevel);
+  Track(double kappa, double dr, double dz, double phi0, double tanl, const TVector3 & v0, const DetectorGeometry & detectorGeometry, const TVector3 & bField);
+  Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & initialPosition, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, const TVector3 & bField);
+  Track(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry,int debugLevel);
 
   Track(const Track&);
   
   // Destructor
   ~Track() {};
+ 
+
+  // Utility functions
+
+  bool intersectWithLayer(TVector3 & hitPosition, int layer, const DetectorGeometry & detectorGeometry) const;
+  bool intersectWithPlane(TVector3 & hitPosition, const TVector3 & center, const TVector3 & normal,double & phi) const;
+
+
+  TVector3 calcXAt(double phi) const;
+  TMatrixD calcDxDHC(double phi) const;
+  TMatrixD calcDxDphi(double phi) const;
+  TMatrixD calcDXZDHC(const TVector3   & hitPosition, const TMatrixD &dxphiadHC)  const;
+
+
+  TMatrixD expectedMeasurementVectorXZ(int layer, const DetectorGeometry & detectorGeometry) const;
+  TMatrixD expectedMeasurementDerivativedXZdHC(int layer, const DetectorGeometry & detectorGeometry) const;
+  TMatrixD invMeasurementRes2XZ(int layer, const DetectorGeometry & detectorGeometry) const;
+  TMatrixD measurementVectorXZ(const TVector3 & hitPosition) const;
+
+  // Fit function
+  void FitToHelix(const HitSet & hitSet, const DetectorGeometry & detectorGeometry,bool withPrimaryVertex);
+
+
+  //void MoveTo(const TVector & x0, TMatrixD & propMatrix, TMatrixD & covMatrix); 
+
+
 
   // Get objects
 
   const Helix & getHelix() const {return _helix;};
   TLorentzVector  getLorentzVector(void) const;
 
-  int getCharge(void) const {return -getHelix().getKappa()/std::abs(getHelix().getKappa());};
+  const TVector3& getConstInitialPosition(void) const {return _initialPosition;};
+
+
+
+
+  int getCharge(void) const {return -_kappa/std::abs(_kappa);};
+
+
 
 
   // Hit/measurement point information

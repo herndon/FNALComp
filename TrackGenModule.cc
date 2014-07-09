@@ -57,15 +57,9 @@ fc::Track fc::TrackGenModule::generateTrack(){
     std::cout << "Track phi0 " << trackPhi0 << std::endl;
     std::cout << "Track radius curvature " << 1/trackCurvature << std::endl;
   }
- 
-  
 
-  double vertex[3]{0.0,0.0,0.0};
-  double bField[3]{_myDetectorGeometry.getBField()[0],_myDetectorGeometry.getBField()[1],_myDetectorGeometry.getBField()[2]};
-
-  // Track track(trackPT,0.0,trackCharge,trackPhi0,0.0,0.0,vertex,bField,_curvatureC);
  
-  Track track(trackCharge/trackPT,0.0,0.0,trackPhi0,0.0,vertex,_myDetectorGeometry,bField);
+  Track track(trackCharge/trackPT,0.0,0.0,trackPhi0,0.0,_myDetectorGeometry);
 
  
   return track;

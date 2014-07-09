@@ -4,7 +4,9 @@
 #include<iostream>
 #include<cmath>
 #include "DetectorGeometry.hh"
+#include "Track.hh"
 #include "TrackSet.hh"
+#include "TrackFit.hh"
 #include "HitSet.hh"
 #include "StripSet.hh"
 #include "HitStripGenModule.hh"
@@ -59,15 +61,8 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& myHitSet, StripSet & myStripS
 
 void fc::HitStripGenModule::calculateTrackSensorIntersection(Track & track,int layer, TVector3 & hitPosition){
 
-  // point and normal to sensor
-  TVector3 point(_myDetectorGeometry.getSensor(layer)._center);
-  TVector3 normal(_myDetectorGeometry.getSensor(layer)._normal);
-
-  // !!!!! replace with intersect with layer
-
-  double phi = 0.0;
-
-  track.intersectWithPlane(hitPosition,point,normal,phi);
+  TrackFit trackFit(track.getHelix(),_myDetectorGeometry);
+  trackFit.intersectWithLayer(hitPosition,layer,_myDetectorGeometry);
 
 }
 

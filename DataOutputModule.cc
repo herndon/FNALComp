@@ -1,5 +1,6 @@
 #include "TrackSet.hh"
 #include "HitSet.hh"
+#include "HitSetIO.hh"
 #include "StripSet.hh"
 #include "StripSetIO.hh"
 #include "DataOutputModule.hh"
@@ -24,7 +25,10 @@ void fc::DataOutputModule::processEvent(int eventNumber,const TrackSet & trackSe
 
 
   trackSet.writeEvent(_outputeventdatafile);
-  hitSet.writeEvent(_outputeventdatafile);
+
+
+  HitSetIO hitSetIO;
+  hitSetIO.writeEvent(hitSet,_outputeventdatafile);
 
   StripSetIO stripSetIO(_detectorGeometry);
   stripSetIO.writeEvent(stripSet,_outputeventdatafile);

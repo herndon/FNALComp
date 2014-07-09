@@ -63,9 +63,11 @@ void fc::TrackSet::writeEvent(std::ofstream & trackdata) const{
     trackdata << lorentzVector.Pz() << std::endl;
     trackdata << lorentzVector.E()  << std::endl;
 
-    trackdata << trackIter->getConstInitialPosition().x() <<std::endl;
-    trackdata << trackIter->getConstInitialPosition().y() <<std::endl;
-    trackdata << trackIter->getConstInitialPosition().z() <<std::endl;
+    // Point of clossest approach to the the reference point 0 0 0
+
+    trackdata << trackIter->getHelix().getDr()*std::cos(trackIter->getHelix().getPhi0()) <<std::endl;
+    trackdata << trackIter->getHelix().getDr()*std::sin(trackIter->getHelix().getPhi0()) <<std::endl;
+    trackdata << trackIter->getHelix().getDz() <<std::endl;
 
     trackHitMap::size_type numberHits = trackIter->getTrackHitMap().size();
 
@@ -88,12 +90,10 @@ void fc::TrackSet::readEvent(std::ifstream & trackdata) {
   int trackNumber;
   int charge;
   std::array<double,4> p4;
-  std::array<double,3> v3;
-  TVector3 primaryVertex(0.0,0.0,0.0);
+  std::array<double,3> x3;
   int numberHits;
   int hitNumber;
   int hitLayer;
-  TVector3 bField(_myDetectorGeometry.getBField()[0],_myDetectorGeometry.getBField()[1],_myDetectorGeometry.getBField()[2]);
 
   trackdata >> eventDataObject;
 
@@ -129,14 +129,14 @@ void fc::TrackSet::readEvent(std::ifstream & trackdata) {
     // !!!!! could this be done better
     TLorentzVector p(p4[0],p4[1],p4[2],p4[3]);
  
-    trackdata >> v3[0];
-    trackdata >> v3[1];
-    trackdata >> v3[2];
+    trackdata >> x3[0];
+    trackdata >> x3[1];
+    trackdata >> x3[2];
 
-    TVector3 initialPosition(v3[0],v3[1],v3[2]);
+    TVector3 dr(x3[0],x3[1],x3[2]);
 
  
-    Track track(p,charge,initialPosition,primaryVertex,_myDetectorGeometry,bField);
+    Track track(p,charge,dr,_myDetectorGeometry);
     
    trackdata >> numberHits;
  

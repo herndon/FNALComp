@@ -2,6 +2,8 @@
 #include<vector>
 #include "DetectorGeometry.hh"
 #include "HitSet.hh"
+#include "Track.hh"
+#include "TrackFit.hh"
 #include "TrackSet.hh"
 #include "TrackRecoModule.hh"
 
@@ -195,16 +197,16 @@ void fc::TrackRecoModule::build2HitTrackCandidates(TrackSet & trackCandidateSet,
 
   TVector3 primaryVertex(0.0,0.0,0.0);
   for (std::vector<std::vector<int>>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
-    Track trackCandidate(primaryVertex,myHitSet.getHitVector()[(*trackHitCandidateIter)[2]].getHitPosition(),myHitSet.getHitVector()[(*trackHitCandidateIter)[4]].getHitPosition(),primaryVertex,_myDetectorGeometry,_debugLevel);
+    //Track trackCandidate(primaryVertex,myHitSet.getHitVector()[(*trackHitCandidateIter)[2]].getHitPosition(),myHitSet.getHitVector()[(*trackHitCandidateIter)[4]].getHitPosition(),primaryVertex,_myDetectorGeometry,_debugLevel);
 
     // !!!!! insert hit via constructor
-    trackCandidate.insertHit((*trackHitCandidateIter)[0],4);
-    trackCandidate.insertHit((*trackHitCandidateIter)[1],3);
+    //trackCandidate.insertHit((*trackHitCandidateIter)[0],4);
+    //trackCandidate.insertHit((*trackHitCandidateIter)[1],3);
     std::cout << "Track before fit" << std::endl;
 
-    if (_debugLevel >=2) trackCandidate.print();
+    //if (_debugLevel >=2) trackCandidate.print();
 
-    trackCandidateSet.insertTrack(trackCandidate);
+    //trackCandidateSet.insertTrack(trackCandidate);
   }
 
 }
@@ -214,25 +216,40 @@ void fc::TrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCandidateS
 
   TVector3 primaryVertex(0.0,0.0,0.0);
   for (std::vector<std::vector<int>>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
-    Track trackCandidate(primaryVertex,myHitSet.getHitVector()[(*trackHitCandidateIter)[2]].getHitPosition(),myHitSet.getHitVector()[(*trackHitCandidateIter)[4]].getHitPosition(),primaryVertex,_myDetectorGeometry,_debugLevel);
+    std::vector<int> trackHitCandidate = *trackHitCandidateIter;
+    Track trackCandidate(myHitSet,trackHitCandidate,primaryVertex,_myDetectorGeometry,_debugLevel);
 
     // !!!!! insert hit via constructor
-    trackCandidate.insertHit((*trackHitCandidateIter)[0],4);
-    trackCandidate.insertHit((*trackHitCandidateIter)[1],3);
-    trackCandidate.insertHit((*trackHitCandidateIter)[2],2);
-    trackCandidate.insertHit((*trackHitCandidateIter)[3],1);
-    trackCandidate.insertHit((*trackHitCandidateIter)[4],0);
+//     trackCandidate.insertHit((*trackHitCandidateIter)[0],4);
+//     trackCandidate.insertHit((*trackHitCandidateIter)[1],3);
+//     trackCandidate.insertHit((*trackHitCandidateIter)[2],2);
+//     trackCandidate.insertHit((*trackHitCandidateIter)[3],1);
+//     trackCandidate.insertHit((*trackHitCandidateIter)[4],0);
+
+
+
 
     if (_debugLevel ==2) {
-      std::cout << "Track before fit" << std::endl;
-      trackCandidate.print();
+      //std::cout << "Track before fit" << std::endl;
+      //trackCandidate.print();
+
+      //std::cout << "Track from TrackFit" << std::endl;
+      //testTrackFit1.print();
     }
 
-   trackCandidate.FitToHelix(myHitSet,_myDetectorGeometry,false);
+
+
+
+    //trackCandidate.FitToHelix(myHitSet,_myDetectorGeometry,false);
+
+   //testTrackFit1.FitToHelix(myHitSet,_myDetectorGeometry,false);
 
     if (_debugLevel ==2) {
       std::cout << "Track after fit" << std::endl;
       trackCandidate.print();
+
+      //std::cout << "Track from TrackFit after fit" << std::endl;
+      //testTrackFit1.print();
     }
 
 
