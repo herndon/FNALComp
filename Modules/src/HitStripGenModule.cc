@@ -21,20 +21,28 @@ fc::HitStripGenModule::HitStripGenModule(int debugLevel, const DetectorGeometry 
 
 }
 
-void fc::HitStripGenModule::processEvent(TrackSet & myTrackSet, HitSet & myHitSet, StripSet& myStripSet)
+void fc::HitStripGenModule::processEvent(fc::Event & event)
 {
+  auto trackSet = event.get<fc::TrackSet>("genTracks");
+  auto genData = event.get<bool>("genData");
+  std::unique_ptr<TrackSet> myTrackSet{ new TrackSet(*trackSet) };
+  
+  std::unique_ptr<HitSet> myHitSet{ new HitSet(*genData) };
+  std::unique_ptr<StripSet> myStripSet{ new StripSet(*genData) };
 
-
-  std::vector<Track> & myTrackVector = myTrackSet.getTrackVector();
+  std::vector<Track> & myTrackVector = myTrackSet->getTrackVector();
   int trackNumber = 0;
   int hitNumber = 0;
 
   for (std::vector<Track>::iterator trackIter =  myTrackVector.begin(); trackIter != myTrackVector.end(); ++trackIter,++trackNumber){
  
-    makeHitsStrips(myHitSet, myStripSet,*trackIter,trackNumber,hitNumber);
+    makeHitsStrips(*myHitSet, *myStripSet,*trackIter,trackNumber,hitNumber);
 
    } // end track loop
 
+  event.put("tracksWithHits", std::move(myTrackSet) );
+  event.put("hits", std::move(myHitSet));
+  event.put("strips",std::move(myStripSet));
 }
 
 
@@ -59,7 +67,7 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& myHitSet, StripSet & myStripS
 
 }
 
-void fc::HitStripGenModule::calculateTrackSensorIntersection(Track & track,int layer, TVector3 & hitPosition){
+void fc::HitStripGenModule::calculateTrackSensorIntersection(const Track & track,int layer, TVector3 & hitPosition){
 
   TrackFit trackFit(track.getHelix(),_myDetectorGeometry);
   trackFit.intersectWithLayer(hitPosition,layer,_myDetectorGeometry);

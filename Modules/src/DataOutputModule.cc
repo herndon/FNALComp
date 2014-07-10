@@ -15,23 +15,27 @@ fc::DataOutputModule::DataOutputModule(int debugLevel,const DetectorGeometry & d
 
 }
 
-void fc::DataOutputModule::processEvent(int eventNumber,const TrackSet & trackSet, const HitSet & hitSet, const StripSet & stripSet) const{
+void fc::DataOutputModule::processEvent(Event& event) {
 
-  if (_debugLevel >=2) trackSet.print();
-  if (_debugLevel >=2) hitSet.print();
-  if (_debugLevel >=2) stripSet.print();
+  auto trackSet = event.get<fc::TrackSet>("tracksWithHits");
+  auto hitSet = event.get<fc::HitSet>("hits");
+  auto stripSet = event.get<fc::StripSet>("strips");
 
-  _outputeventdatafile << eventNumber << std::endl;
+  if (_debugLevel >=2) trackSet->print();
+  if (_debugLevel >=2) hitSet->print();
+  if (_debugLevel >=2) stripSet->print();
+
+  _outputeventdatafile << event.eventNumber() << std::endl;
 
 
-  trackSet.writeEvent(_outputeventdatafile);
+  trackSet->writeEvent(_outputeventdatafile);
 
 
   HitSetIO hitSetIO;
-  hitSetIO.writeEvent(hitSet,_outputeventdatafile);
+  hitSetIO.writeEvent(*hitSet,_outputeventdatafile);
 
   StripSetIO stripSetIO(_detectorGeometry);
-  stripSetIO.writeEvent(stripSet,_outputeventdatafile);
+  stripSetIO.writeEvent(*stripSet,_outputeventdatafile);
 
 }
 

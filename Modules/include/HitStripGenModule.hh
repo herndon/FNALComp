@@ -15,6 +15,7 @@
 
 #include <vector>
 #include "Random.hh"
+#include "Module.hh"
 
 
 class DetectorGeometry;
@@ -30,14 +31,14 @@ namespace fc {
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-04-17
 ///
 
-class HitStripGenModule {
+class HitStripGenModule : public Module{
 
 public:
 
   HitStripGenModule(int, const DetectorGeometry &, Random &);
   ~HitStripGenModule() {};
 
-  void processEvent(TrackSet &, HitSet &,StripSet &);
+  void processEvent(Event&) override;
 
 
 private:
@@ -54,7 +55,7 @@ private:
 
   void makeHitsStrips(HitSet &, StripSet &, Track &, int, int &);
 
-  void calculateTrackSensorIntersection(Track &, int, TVector3 &);
+  void calculateTrackSensorIntersection(const Track &, int, TVector3 &);
 
   void storeHitInfo(HitSet &,Track &,int,int &,TVector3 &,int);
 

@@ -8,8 +8,9 @@
 #include "TrackGenModule.hh"
 #include "TVector3.h"
 
-fc::TrackGenModule::TrackGenModule(int debugLevel, const DetectorGeometry & myDetectorGeometry, Random & myRandom):
+fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const DetectorGeometry & myDetectorGeometry, Random & myRandom):
   _debugLevel(debugLevel),
+  _numberOfTracks(numberOfTracks),
   _myDetectorGeometry(myDetectorGeometry),
   _myRandom(myRandom) {
 
@@ -18,16 +19,19 @@ fc::TrackGenModule::TrackGenModule(int debugLevel, const DetectorGeometry & myDe
 
 }
 
-void fc::TrackGenModule::processEvent(TrackSet& myTrackSet,int numberTracks)
+void fc::TrackGenModule::processEvent(fc::Event& event)
 {
+  std::unique_ptr<TrackSet> myTrackSet{ new TrackSet(event.eventNumber(),
+						     *(event.get<bool>("genData")),
+						     _myDetectorGeometry) };
 
-  for (int ii_track = 0; ii_track < numberTracks; ++ii_track) {
+  for (int ii_track = 0; ii_track < _numberOfTracks; ++ii_track) {
 
     Track track = generateTrack(); 
-    myTrackSet.insertTrack(track);
+    myTrackSet->insertTrack(track);
 
   } // end track loop
-
+  event.put("genTracks",std::move(myTrackSet));
 }
 
 
