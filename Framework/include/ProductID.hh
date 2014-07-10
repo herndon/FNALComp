@@ -16,6 +16,9 @@ namespace fc {
 
   public:
     bool operator<( ProductID const &rhs) const {
+      if(_type == rhs._type) {
+	return _label < rhs._label;
+      }
       return _type.before(rhs._type);
     }
     
