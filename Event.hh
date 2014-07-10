@@ -14,7 +14,7 @@ namespace fc {
     std::map<ProductID, std::shared_ptr<const void>> _dataProducts;
     unsigned int _eventNumber;
 
-    void throwNotFoundException(ProductID const&);
+    void throwNotFoundException(ProductID const&) const;
   public:
     explicit Event( unsigned int iNumber): _eventNumber{iNumber} 
     {}
