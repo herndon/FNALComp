@@ -33,31 +33,14 @@ typedef std::map<int, int> trackHitMap; //!< Map of hit number and layer
 class TrackFit {
 private:
 
-  // !!!!! remove later
-  static const int _mDim = 2; //!< Measurement dimention of hits
-  static const int _sDim = 5;     //!< helix dimention
-
-  double _dr;        // dr, drho
-  double _phi0;      // phi0
-  double _kappa;     // kappa, signed curvature
-  double _dz;        // dz
-  double _tanL;      // tanl
-
+ 
   Helix _helix;
-
-  // !!!!!! Convert to referencePoint 
-  TVector3 _primaryVertex;      // primary vertex or pivot point
-
-  // !!!!! remove _initialPosition
-  TVector3 _initialPosition;
 
   TMatrixD * _covMatrix;
 
   trackHitMap _trackHitMap;
   
   const DetectorGeometry & _detectorGeometry;
-
-  TVector3 _bField;
 
   double _alpha; // 1/curvatureC
 
@@ -71,14 +54,13 @@ public:
   TrackFit(const Helix & helix,const DetectorGeometry & detectorGeometry);
   //TrackFit(const Helix & helix,const HitSet & hitSet, const std::vector<int> hitNumberVector, const DetectorGeometry & detectorGeometry,
 
-  TrackFit(double kappa, double dr, double dz, double phi0, double tanl, const TVector3 & v0, const DetectorGeometry & detectorGeometry, const TVector3 & bField);
-  TrackFit(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry,int debugLevel);
+  //TrackFit(double kappa, double dr, double dz, double phi0, double tanl, const DetectorGeometry & detectorGeometry);
+  TrackFit(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const DetectorGeometry & detectorGeometry,int debugLevel);
 
   
   // Destructor
   ~TrackFit() {};
  
-
   // Utility functions
 
   bool intersectWithLayer(TVector3 & hitPosition, int layer, const DetectorGeometry & detectorGeometry) const;
@@ -102,20 +84,11 @@ public:
 
   //void MoveTo(const TVector & x0, TMatrixD & propMatrix, TMatrixD & covMatrix); 
 
-
-
   // Get objects
 
   const Helix & getHelix() const {return _helix;};
 
-  const TVector3& getConstInitialPosition(void) const {return _initialPosition;};
-
-
-
-
-  int getCharge(void) const {return -_kappa/std::abs(_kappa);};
-
-
+  int getCharge(void) const {return -getHelix().getKappa()/std::abs(getHelix().getKappa());};
 
 
   // Hit/measurement point information

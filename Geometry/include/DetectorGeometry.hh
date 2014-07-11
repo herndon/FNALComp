@@ -60,14 +60,18 @@ public:
   void printDetectorGeometry(void) const;
   void printSensorLimits(void) const;
 
+  // Numerology for declaring arrays
+  static const int _nSensors=5;
+
+  static const int _mDim = 2; //!< Measurement dimention of hits
+ 
+
 private:
 
   // Use default geometry or intialize geometry from a run time file and version
   bool _defaultGeometry;
   int _detectorGeometryVersion;
 
-  // Numerology for declaring arrays
-  static const int _nSensors=5;
 
   sensorDescriptor _sensor[_nSensors];
 

@@ -53,7 +53,7 @@ fc::Track::Track(const HitSet & myHitSet, const std::vector<int> & trackHitCandi
 
 
 
-    TrackFit testTrackFit1(x1,x2,x3,primaryVertex,detectorGeometry,debugLevel);
+    TrackFit testTrackFit1(x1,x2,x3,detectorGeometry,debugLevel);
 
 
     testTrackFit1.insertHit(trackHitCandidate[0],4);
@@ -70,7 +70,7 @@ fc::Track::Track(const HitSet & myHitSet, const std::vector<int> & trackHitCandi
 
     testTrackFit1.FitToHelix(myHitSet,detectorGeometry,false);
 
-    (*_helix._helix) = testTrackFit1.getHelix().getHelix();
+    _helix.setHelix(testTrackFit1.getHelix().getHelix());
 
   // Set Initial covariance matrix
   if (_covMatrix) { delete _covMatrix;}

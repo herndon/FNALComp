@@ -11,49 +11,32 @@
 // Helix initialization
 
 fc::TrackFit::TrackFit(const Helix & helix,const DetectorGeometry & detectorGeometry):
-  _dr(helix.getDr()),
-  _phi0(helix.getPhi0()),
-  _kappa(helix.getKappa()),
-  _dz(helix.getDz()),
-  _tanL(helix.getTanL()),
    _helix(helix),
   _detectorGeometry(detectorGeometry),
   _alpha(1.0/_detectorGeometry.getCurvatureC()){
 
-  _primaryVertex.SetXYZ(0.0,0.0,0.0);
-
 }
 
 
 
 
-// Helix parameter initialization
-fc::TrackFit::TrackFit(double kappa, double dr, double dz, double phi0, double tanL, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, const TVector3 & bField):
-  _dr(dr),
-  _phi0(phi0+M_PI/2.0),
-  _kappa(-1.0*kappa),
-  _dz(dz),
-  _tanL(tanL),
-  _helix(dr,phi0+M_PI/2.0,-1.0*kappa,dz,tanL),
-  _primaryVertex(primaryVertex),
+// // Helix parameter initialization
+// fc::TrackFit::TrackFit(double kappa, double dr, double dz, double phi0, double tanL, const DetectorGeometry & detectorGeometry):
+//   _helix(dr,phi0+M_PI/2.0,-1.0*kappa,dz,tanL),
+//   _covMatrix(NULL),
+//   _detectorGeometry(detectorGeometry),
+//   _alpha(1.0/_detectorGeometry.getCurvatureC()),
+//   _debugLevel(0) {
+
+
+
+// }
+
+
+
+fc::TrackFit::TrackFit(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const DetectorGeometry & detectorGeometry, int debugLevel):
   _covMatrix(NULL),
   _detectorGeometry(detectorGeometry),
-  _bField(bField),
-  _alpha(1.0/_detectorGeometry.getCurvatureC()),
-  _debugLevel(0) {
-
-  _initialPosition.SetXYZ(primaryVertex.x()+dr*std::cos(_phi0),primaryVertex.y()*dr*std::sin(_phi0),primaryVertex.z()+dz);
-
-
-}
-
-
-
-fc::TrackFit::TrackFit(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, int debugLevel):
-  _primaryVertex(primaryVertex),
-  _initialPosition(x1),_covMatrix(NULL),
-  _detectorGeometry(detectorGeometry),
-  _bField(detectorGeometry.getBField()),
   _alpha(1.0/_detectorGeometry.getCurvatureC()),
   _debugLevel(debugLevel){
 
@@ -94,24 +77,23 @@ fc::TrackFit::TrackFit(const TVector3 & x1, const TVector3 & x2, const TVector3 
   // Find center of curvature
   TVector3 centerCurvature = 0.5 * (x2 + x3) + radiusCurvature * cosPhi23 * x23.Cross(z);
 
-  _kappa = _alpha / radiusCurvature;
-  _dr = 0.0; // Since x1 is set as the Pivot point dr and dz are 0.0
-  _dz = 0.0;
-  _phi0 = std::atan2(radiusCurvature * (centerCurvature.Y() - x1.Y()), radiusCurvature * (centerCurvature.X() - x1.X()));
-  _tanL = (x2.Z() - x3.Z()) / (radiusCurvature * 2 * phi23);
+  TVectorD helix(5);
+  
 
-  (*_helix._helix)(0,0) = 0.0;
-  (*_helix._helix)(1,0) = std::atan2(radiusCurvature * (centerCurvature.Y() - x1.Y()), radiusCurvature * (centerCurvature.X() - x1.X()));
-  (*_helix._helix)(2,0) = _alpha / radiusCurvature;
-  (*_helix._helix)(3,0) = 0.0;
-  (*_helix._helix)(4,0) =  (x2.Z() - x3.Z()) / (radiusCurvature * 2 * phi23);
+  helix(0) = 0.0;
+  helix(1) = std::atan2(radiusCurvature * (centerCurvature.Y() - x1.Y()), radiusCurvature * (centerCurvature.X() - x1.X()));
+  helix(2) = _alpha / radiusCurvature;
+  helix(3) = 0.0;
+  helix(4) =  (x2.Z() - x3.Z()) / (radiusCurvature * 2 * phi23);
+
+  _helix.setHelix(helix);
 
   // Set Initial covariance matrix
   if (_covMatrix) { delete _covMatrix;}
-  _covMatrix = new TMatrixD(_sDim,_sDim);
+  _covMatrix = new TMatrixD(Helix::_sDim,Helix::_sDim);
 
   _covMatrix->Zero();
-  for (int ii = 0; ii < _sDim; ++ii){
+  for (int ii = 0; ii < Helix::_sDim; ++ii){
     (*_covMatrix)(ii,ii) = 1.0e4;
   }
 
@@ -137,7 +119,7 @@ TMatrixD fc::TrackFit::expectedMeasurementVectorXZ(int layer, const DetectorGeom
     intersectWithPlane(hitPosition,center,normal,phi);
   }
 
-  TMatrixD expectedMeasurementVector(_mDim,1);
+  TMatrixD expectedMeasurementVector(DetectorGeometry::_mDim,1);
 
 
   expectedMeasurementVector.Zero();
@@ -169,23 +151,23 @@ TMatrixD fc::TrackFit::expectedMeasurementDerivativedXZdHC(int layer, const Dete
   detectorNormal(0,2) = detectorGeometry.getSensor(layer)._normal.Z();
 
 
-  TMatrixD dxdHC(3,_sDim); 
+  TMatrixD dxdHC(3,Helix::_sDim); 
   dxdHC = calcDxDHC(phi);
   TMatrixD dxdphi(3,1);
   dxdphi = calcDxDphi(phi); 
 
-  TMatrixD dphidHC(1,_sDim);
+  TMatrixD dphidHC(1,Helix::_sDim);
   dphidHC = detectorNormal*dxdHC;
   TMatrix dsdphi(1,1);
   dsdphi = detectorNormal*dxdphi; 
   double denom = -dsdphi(0,0);
   dphidHC *= 1/denom;
   
-  TMatrixD dxphidHC(3,_sDim);
+  TMatrixD dxphidHC(3,Helix::_sDim);
   dxphidHC = dxdphi*dphidHC + dxdHC;
 
  
-  TMatrixD expectedMeasurementDerivative(_mDim,_sDim);
+  TMatrixD expectedMeasurementDerivative(DetectorGeometry::_mDim,Helix::_sDim);
   expectedMeasurementDerivative.Zero();
 
   expectedMeasurementDerivative=  calcDXZDHC(hitPosition,dxphidHC);
@@ -196,7 +178,7 @@ TMatrixD fc::TrackFit::expectedMeasurementDerivativedXZdHC(int layer, const Dete
 
 TMatrixD fc::TrackFit::invMeasurementRes2XZ(int layer, const DetectorGeometry & detectorGeometry) const{
 
-  TMatrixD invMeasurementRes2XZ(_mDim,_mDim);
+  TMatrixD invMeasurementRes2XZ(DetectorGeometry::_mDim,DetectorGeometry::_mDim);
 
   invMeasurementRes2XZ.Zero();
 
@@ -210,7 +192,7 @@ TMatrixD fc::TrackFit::invMeasurementRes2XZ(int layer, const DetectorGeometry & 
 
 TMatrixD fc::TrackFit::measurementVectorXZ(const TVector3 & hitPosition) const{
 
-  TMatrixD measurementVector(_mDim,1);
+  TMatrixD measurementVector(DetectorGeometry::_mDim,1);
   measurementVector(0,0) = hitPosition.Perp()*std::atan2( hitPosition.y(),hitPosition.x());
   measurementVector(1,0) = hitPosition.z();
 
@@ -239,7 +221,6 @@ bool fc::TrackFit::intersectWithPlane(TVector3 & hitPosition, const TVector3 & c
 
  
    double  eps = 1.0e-8;
-   //double  phi = _phi0;
    double  lastphi =  phi;
    double  lasts   =  99999;
    double  lambda  =  initlambda;
@@ -303,30 +284,30 @@ bool fc::TrackFit::intersectWithPlane(TVector3 & hitPosition, const TVector3 & c
 
 TVector3 fc::TrackFit::calcXAt(double phi) const
 {
-   double csf0 = std::cos(_phi0);
-   double snf0 = std::sin(_phi0);
-   double snfd = std::sin(_phi0 + phi);
-   double csfd = std::cos(_phi0 + phi);
-   double rho  = _alpha/_kappa;
+  double csf0 = std::cos(getHelix().getPhi0());
+   double snf0 = std::sin(getHelix().getPhi0());
+   double snfd = std::sin(getHelix().getPhi0() + phi);
+   double csfd = std::cos(getHelix().getPhi0() + phi);
+   double rho  = _alpha/getHelix().getKappa();
 
-   double x    = _primaryVertex.X() + _dr * csf0 + rho * (csf0 - csfd);
-   double y    = _primaryVertex.Y() + _dr * snf0 + rho * (snf0 - snfd);
-   double z    = _primaryVertex.Z() + _dz          - rho * _tanL * phi;
+   double x    = getHelix().getDr() * csf0 + rho * (csf0 - csfd);
+   double y    = getHelix().getDr() * snf0 + rho * (snf0 - snfd);
+   double z    = getHelix().getDz()          - rho * getHelix().getTanL() * phi;
 
    return TVector3(x,y,z);
 }
 
 TMatrixD fc::TrackFit::calcDxDphi(double phi) const
 {
-   double radiusCurvature    = _alpha/_kappa;
+   double radiusCurvature    = _alpha/getHelix().getKappa();
 
-   double snfd = std::sin(_phi0 + phi);
-   double csfd = std::cos(_phi0 + phi);
+   double snfd = std::sin(getHelix().getPhi0() + phi);
+   double csfd = std::cos(getHelix().getPhi0() + phi);
 
    TMatrixD dxdphi(3,1);
    dxdphi(0,0) =  radiusCurvature * snfd;
    dxdphi(1,0) = -radiusCurvature * csfd;
-   dxdphi(2,0) = -radiusCurvature * _tanL;
+   dxdphi(2,0) = -radiusCurvature * getHelix().getTanL();
 
    return dxdphi;
 }
@@ -334,25 +315,25 @@ TMatrixD fc::TrackFit::calcDxDphi(double phi) const
 
 
 TMatrixD fc::TrackFit::calcDxDHC(double phi) const {
-   double radiusCurvature     = _alpha/_kappa;
-   double rcpar = radiusCurvature/_kappa;
+   double radiusCurvature     = _alpha/getHelix().getKappa();
+   double rcpar = radiusCurvature/getHelix().getKappa();
 
-   double snf0 = std::sin(_phi0);
-   double csf0 = std::cos(_phi0);
-   double snfd = std::sin(_phi0 + phi);
-   double csfd = std::cos(_phi0 + phi);
+   double snf0 = std::sin(getHelix().getPhi0());
+   double csf0 = std::cos(getHelix().getPhi0());
+   double snfd = std::sin(getHelix().getPhi0() + phi);
+   double csfd = std::cos(getHelix().getPhi0() + phi);
 
    TMatrixD dxDHC(3,5);
    // @x/@a
    dxDHC(0,0) =  csf0;
-   dxDHC(0,1) = -_dr * snf0 - radiusCurvature * (snf0 - snfd);
+   dxDHC(0,1) = -getHelix().getDr() * snf0 - radiusCurvature * (snf0 - snfd);
    dxDHC(0,2) = -rcpar * (csf0 - csfd);
    dxDHC(0,3) =  0;
    dxDHC(0,4) =  0;
 
    // @y/@a
    dxDHC(1,0) =  snf0;
-   dxDHC(1,1) =  _dr * csf0 + radiusCurvature *(csf0 - csfd);
+   dxDHC(1,1) =  getHelix().getDr() * csf0 + radiusCurvature *(csf0 - csfd);
    dxDHC(1,2) = -rcpar * (snf0 - snfd);
    dxDHC(1,3) =  0;
    dxDHC(1,4) =  0;
@@ -360,7 +341,7 @@ TMatrixD fc::TrackFit::calcDxDHC(double phi) const {
    // @z/@a
    dxDHC(2,0) = 0;
    dxDHC(2,1) = 0;
-   dxDHC(2,2) = rcpar * phi * _tanL;
+   dxDHC(2,2) = rcpar * phi * getHelix().getTanL();
    dxDHC(2,3) = 1;
    dxDHC(2,4) = - radiusCurvature * phi;
 
@@ -378,9 +359,9 @@ TMatrixD fc::TrackFit::calcDXZDHC(const TVector3   & hitPosition,
 
 
   // Set dX = (@h/@a) = (@d/@a, @z/@a)^t
-  TMatrixD dXZdHC(_mDim,_sDim);   
+  TMatrixD dXZdHC(DetectorGeometry::_mDim,Helix::_sDim);   
 
-  for (Int_t i=0; i<_sDim; i++) {
+  for (Int_t i=0; i<Helix::_sDim; i++) {
     dXZdHC(0,i) = - (hitPosition.Y() / r) * dxphiadHC(0,i) 
       + (hitPosition.X() / r) * dxphiadHC(1,i);
     dXZdHC(0,i) *= r;
@@ -410,13 +391,9 @@ void fc::TrackFit::FitToHelix(const HitSet & hitSet,const DetectorGeometry & det
   //                          need to be set befreo FitToHelix
 
 
-  TMatrixD    helix(_sDim   , 1); // original helix paramters
+  TVectorD    helix(Helix::_sDim); // original helix paramters
 
-  helix(0,0) = _dr;
-  helix(1,0) = _phi0;
-  helix(2,0) = _kappa;
-  helix(3,0) = _dz;
-  helix(4,0) = _tanL;
+  helix = getHelix().getHelix();
 
   TVector3 newReferencePoint(0.0,0.0,0.0);
 
@@ -424,36 +401,36 @@ void fc::TrackFit::FitToHelix(const HitSet & hitSet,const DetectorGeometry & det
   Helix newHelix(_helix);
 
 
-  TMatrixD testMatrix(_sDim,1);
+  TVectorD testMatrix(Helix::_sDim);
   testMatrix = newHelix.getHelix();
 
 
-  //std::cout << "Test helix " << _kappa << " " << testHelix.getKappa() << " " << testMatrix(2,0) << std::endl;
+  //std::cout << "Test helix " << getHelix().getTanL() << " " << testHelix.getKappa() << " " << testMatrix(2) << std::endl;
 
 
-    std::cout << "Test helix " << _kappa << " " << newHelix.getKappa() << " " << testMatrix(2,0) << " " << getHelix().getKappa() << " " << (getHelix().getHelix())(2,0) << std::endl;
+    std::cout << "Test helix " << getHelix().getKappa() << " " << newHelix.getKappa() << " " << testMatrix(2) << " " << getHelix().getKappa() << " " << (getHelix().getHelix())(2) << std::endl;
 
   if (_debugLevel >= 3){
     std::cout << "In FitToHelix" << std::endl;
     std::cout << "Initial Helix: "  << std::endl;
     helix.Print();
     std::cout.precision(std::numeric_limits<double>::digits10 + 2);
-    std::cout << "Initial Helix " << helix(0,0) << " " << helix(1,0)  << " " << helix(2,0)  << " " << helix(3,0)  << " " << helix(4,0) << std::endl;
+    std::cout << "Initial Helix " << helix(0) << " " << helix(1)  << " " << helix(2)  << " " << helix(3)  << " " << helix(4) << std::endl;
   }
 
+  helix(2) = helix(2) + 0.01;
+  _helix.setHelix(helix);
 
-  _kappa = _kappa + 0.01;
-  helix(2,0) = _kappa;
-   
+ 
   if (_debugLevel >= 3){
     std::cout << "Initial Helix Modified: "  << std::endl;
     helix.Print();
     std::cout.precision(std::numeric_limits<double>::digits10 + 2);
-    std::cout << "Initial Helix modified: " << helix(0,0) << " " << helix(1,0)  << " " << helix(2,0)  << " " << helix(3,0)  << " " << helix(4,0) << std::endl;
+    std::cout << "Initial Helix modified: " << helix(0) << " " << helix(1)  << " " << helix(2)  << " " << helix(3)  << " " << helix(4) << std::endl;
   }
 
-  TMatrixD helixBest(helix);
-  TMatrixD helixSave(helix);
+  TVectorD helixBest(helix);
+  TVectorD helixSave(helix);
 
   double   chi2best = chi2Dummy;
   //double   deltabest   = delta;
@@ -471,19 +448,19 @@ void fc::TrackFit::FitToHelix(const HitSet & hitSet,const DetectorGeometry & det
   // positions on the helix are determined by a single paramter phi
 
 
-  TMatrixD    dchi2dHCbest(1   , _sDim); // best based on chi2 _sDim contributions to chi2?
-  TMatrixD    dchi2dHC    (1   , _sDim);
-  TMatrixD    dchi2dHCT   (_sDim , 1  );
-  TMatrixD    d2chi2dHCdHC (_sDim, _sDim);
-  TMatrixD    d2chi2dHCdHCbest (_sDim, _sDim);
-  TMatrixD    expectedMeasurementVector       (_mDim, 1   );
-  TMatrixD    expectedMeasurementDerivative (_mDim, _sDim);
-  TMatrixD    expectedMeasurementDerivativeT (_sDim, _mDim);
-  TMatrixD    measurementVector(_mDim,1);
-  TMatrixD    curHt      (_sDim, _mDim);
-  TMatrixD    invMeasurementRes2    (_mDim, _mDim);
-  TMatrixD    measurementResidualVector  (_mDim, 1   );
-  TMatrixD    measurementResidualVectorT (1, _mDim);
+  TMatrixD    dchi2dHCbest(1   , Helix::_sDim); // best based on chi2 Helix::_sDim contributions to chi2?
+  TMatrixD    dchi2dHC    (1   , Helix::_sDim);
+  TMatrixD    dchi2dHCT   (Helix::_sDim , 1  );
+  TMatrixD    d2chi2dHCdHC (Helix::_sDim, Helix::_sDim);
+  TMatrixD    d2chi2dHCdHCbest (Helix::_sDim, Helix::_sDim);
+  TMatrixD    expectedMeasurementVector       (DetectorGeometry::_mDim, 1   );
+  TMatrixD    expectedMeasurementDerivative (DetectorGeometry::_mDim, Helix::_sDim);
+  TMatrixD    expectedMeasurementDerivativeT (Helix::_sDim, DetectorGeometry::_mDim);
+  TMatrixD    measurementVector(DetectorGeometry::_mDim,1);
+  TMatrixD    curHt      (Helix::_sDim, DetectorGeometry::_mDim);
+  TMatrixD    invMeasurementRes2    (DetectorGeometry::_mDim, DetectorGeometry::_mDim);
+  TMatrixD    measurementResidualVector  (DetectorGeometry::_mDim, 1   );
+  TMatrixD    measurementResidualVectorT (1, DetectorGeometry::_mDim);
 
   // Minimization loop starts here
 
@@ -496,12 +473,9 @@ void fc::TrackFit::FitToHelix(const HitSet & hitSet,const DetectorGeometry & det
       if (_debugLevel >= 5){
 	std::cout << "TrackFit::FitToHelix >>>>>>>>>>>>>>"
 		  << " Loop count limit reached. nloops = " << nloops << std::endl;
-      }
-      _dr = helixBest(0,0);
-      _phi0 = helixBest(1,0);
-      _kappa = helixBest(2,0);
-      _dz = helixBest(3,0);
-      _tanL = helixBest(4,0);
+	}
+ 
+      _helix.setHelix(helixBest);
 
       chi2  = chi2best;
       break;
@@ -627,7 +601,7 @@ void fc::TrackFit::FitToHelix(const HitSet & hitSet,const DetectorGeometry & det
 
     // Add delta to 2nd derivative and use to modify the helix
 
-    for (int i=0; i<_sDim; i++) {
+    for (int i=0; i<Helix::_sDim; i++) {
       d2chi2dHCdHC(i, i) *= (1 + delta);
     }
       
@@ -652,34 +626,28 @@ void fc::TrackFit::FitToHelix(const HitSet & hitSet,const DetectorGeometry & det
 
     if (_debugLevel >=3){
       std::cout.precision(std::numeric_limits<double>::digits10 + 2);
-      std::cout << "Intermediate Helix " << helix(0,0) << " " << helix(1,0)  << " " << helix(2,0)  << " " << helix(3,0)  << " " << helix(4,0) << std::endl;
-    }
+      std::cout << "Intermediate Helix " << helix(0) << " " << helix(1)  << " " << helix(2)  << " " << helix(3)  << " " << helix(4) << std::endl;
+      }
 
 
     // modify the helix
 
-    helix += (deltaM); // propegate the helix parameters by derivatires times residual directions sqaured and normlized by uncerainties
+ 
+
+    TVectorD deltaMVector(Helix::_sDim,deltaM.GetMatrixArray());
+    helix += (deltaMVector); // propegate the helix parameters by derivatires times residual directions sqaured and normlized by uncerainties
  
     if (_debugLevel >=5){
       std::cout << "Intermediate helix after += delta" << std::endl;
       helix.Print();
-    }
+      }
 
    if (_debugLevel >=3){
      std::cout.precision(std::numeric_limits<double>::digits10 + 2);
-     std::cout << "Intermediate Helix after += delta" << helix(0,0) << " " << helix(1,0)  << " " << helix(2,0)  << " " << helix(3,0)  << " " << helix(4,0) << std::endl;
+     std::cout << "Intermediate Helix after += delta" << helix(0) << " " << helix(1)  << " " << helix(2)  << " " << helix(3)  << " " << helix(4) << std::endl;
    }
-    _dr = helix(0,0);
-    _phi0 = helix(1,0);
-    _kappa = helix(2,0);
-    _dz = helix(3,0);
-    _tanL = helix(4,0);
 
-    (*_helix._helix) = helix;
-				  //  (*_helix._helix)(1,0) = std::atan2(radiusCurvature * (centerCurvature.Y() - x1.Y()), radiusCurvature * (centerCurvature.X() - x1.X()));
-				  //(*_helix._helix)(2,0) = _alpha / radiusCurvature;
-				  //(*_helix._helix)(3,0) = 0.0;
-				  //(*_helix._helix)(4,0) =  (x2.Z() - x3.Z()) / (radiusCurvature * 2 * phi23);
+    _helix.setHelix(helix);
 
 
 
@@ -689,7 +657,7 @@ void fc::TrackFit::FitToHelix(const HitSet & hitSet,const DetectorGeometry & det
 
   if (_debugLevel >=3){
     std::cout.precision(std::numeric_limits<double>::digits10 + 2);
-    std::cout << "Final Helix " << helix(0,0) << " " << helix(1,0)  << " " << helix(2,0)  << " " << helix(3,0)  << " " << helix(4,0) << std::endl;
+    std::cout << "Final Helix " << helix(0) << " " << helix(1)  << " " << helix(2)  << " " << helix(3)  << " " << helix(4) << std::endl;
   }
 
   // !!!! calculate chi2, ndf, and set cov matrix
@@ -705,16 +673,16 @@ void fc::TrackFit::FitToHelix(const HitSet & hitSet,const DetectorGeometry & det
 void fc::TrackFit::print(void) const{
 
   TLorentzVector lorentzVector;
-  double pT = std::abs(1.0/_kappa);
-  double pZ = _tanL*pT;
-  lorentzVector.SetPxPyPzE(pT*std::cos(_phi0-M_PI/2.0),pT*std::sin(_phi0-M_PI/2.0),pZ,std::sqrt(pT*pT+pZ*pZ));
+  double pT = std::abs(1.0/getHelix().getKappa());
+  double pZ = getHelix().getTanL()*pT;
+  lorentzVector.SetPxPyPzE(pT*std::cos(getHelix().getPhi0()-M_PI/2.0),pT*std::sin(getHelix().getPhi0()-M_PI/2.0),pZ,std::sqrt(pT*pT+pZ*pZ));
 
 
 
   std::cout << "Charge " << getCharge() << std::endl;
   std::cout << "4 momentum " << lorentzVector.Px() << " " <<  lorentzVector.Py() << " " <<  lorentzVector.Pz() << " " <<  lorentzVector.E() << " " << std::endl;
-  std::cout << "Track parameters:  pT " <<  lorentzVector.Pt() << " cot(theta) " << 1/_tanL << " phi0 " << _phi0-M_PI/2.0 << " d0 " << _dr << " z0 " << _dz << std::endl;
-  std::cout << "Helix paramters: kappa " << _kappa << " tan(Lambda) " << _tanL << " phi0 to d0 " << _phi0 << std::endl;  
+  std::cout << "Track parameters:  pT " <<  lorentzVector.Pt() << " cot(theta) " << 1/getHelix().getTanL() << " phi0 " << getHelix().getPhi0()-M_PI/2.0 << " d0 " << getHelix().getDr() << " z0 " << getHelix().getDz() << std::endl;
+  std::cout << "Helix paramters: kappa " << getHelix().getKappa() << " tan(Lambda) " << getHelix().getTanL() << " phi0 to d0 " << getHelix().getPhi0() << std::endl;  
   std::cout << "Reference Point " << 0.0 << " " << 0.0 << " " << 0.0 << std::endl;
 
 

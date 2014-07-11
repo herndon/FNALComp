@@ -31,16 +31,16 @@
 //============================================================================
 
 #include "TVector3.h"
-#include "TMatrixD.h"
+#include "TVectorD.h"
+#include <memory>
+
+
 
 
 namespace fc {
 
 
 class Helix {
-
-  friend class Track;
-  friend class TrackFit;
 
 public:
   // Static members, matrix dimentions
@@ -49,7 +49,7 @@ public:
 
 private:
 
-  TMatrixD* _helix;
+  std::unique_ptr<TVectorD> _helix;
 
 public:
 
@@ -58,25 +58,30 @@ public:
 
   Helix();
   Helix(double kappa, double dr, double dz, double phi0, double tanl);
-  //Helix(const TMatrixD& helix);
+  //Helix(const TVectorD& helix);
 
   // more complex constructors are handled by the TrackMake class
 
   Helix(const Helix&);
   
   // Destructor
-  ~Helix();
+  ~Helix(){};
  
 
   // Get track parameters
 
-  TMatrixD getHelix() const {return *_helix;}
+  TVectorD getHelix() const {return *_helix;}
 
-  double getDr() const {return (*_helix)(0,0);}
-  double getPhi0() const {return (*_helix)(1,0);}
-  double getKappa() const {return (*_helix)(2,0);}
-  double getDz() const {return (*_helix)(3,0);}
-  double getTanL() const {return (*_helix)(4,0);}
+  double getDr() const {return (*_helix)(0);}
+  double getPhi0() const {return (*_helix)(1);}
+  double getKappa() const {return (*_helix)(2);}
+  double getDz() const {return (*_helix)(3);}
+  double getTanL() const {return (*_helix)(4);}
+
+
+  // Set helix
+  void setHelix(const TVectorD& helix) {*_helix = helix;}
+
 
 };
 } // end namescape fc
