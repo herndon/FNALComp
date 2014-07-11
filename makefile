@@ -1,29 +1,33 @@
-SRCS = Geometry/src/*.cc Services/src/*.cc DataObjects/src/*.cc Algorithms/src/*.cc Modules/src/*.cc Modules/test/*.cc
-OBJS = Random.o Config.o DetectorGeometry.o StripSet.o StripSetIO.o Hit.o HitSet.o HitSetIO.o Helix.o Track.o TrackFit.o TrackSet.o TrackGenModule.o HitStripGenModule.o DataOutputModule.o DataInputModule.o HitRecoModule.o HitCompareModule.o TrackRecoModule.o
+vpath %.cc = Geometry/src:Services/src:DataObjects/src:Algorithms/src:Modules/src:Modules/test
+DIRS = Geometry Services DataObjects Algorithms Modules
+LIB_PATH = lib/
+SRCS =  $(foreach DIR,$(DIRS),$(DIR)/src/*.cc) Modules/test/*.cc
+OBJSRCS =  $(foreach DIR,$(DIRS),$(wildcard $(DIR)/src/*.cc))
+OBJS = $(addprefix  $(LIB_PATH),$(notdir $(OBJSRCS:.cc=.o)))
+DEPS =  $(patsubst %.o,%.d,$(OBJS))
 NOTES = notes/
 CC = g++
 DEBUG = -g -O0
-CFLAGS = -std=c++11 -Wall -c $(DEBUG) `root-config --cflags` -MD
-INCDIRS = -IGeometry/include/ -IServices/include/ -IDataObjects/include/ -I Algorithms/include/ -IModules/include/
+CFLAGS = -std=c++11 -Wall $(DEBUG) `root-config --cflags`
+INCDIRS =  $(foreach DIR,$(DIRS),-I$(DIR)/include/)
 LFLAGS = -std=c++11 -Wall $(DEBUG) `root-config --glibs`
 
-all : trackReco hitReco dataRead dataGen
+trackReco : $(OBJS) $(LIB_PATH)trackReco.o
+	$(CC) $(LFLAGS) $(OBJS) $(LIB_PATH)trackReco.o -o trackReco
 
-trackReco : $(OBJS)
-	$(CC) $(LFLAGS) $(OBJS) trackReco.o -o trackReco
+-include  $(LIB_PATH)*.d
 
-hitReco : $(OBJS)
-	$(CC) $(LFLAGS) $(OBJS) hitReco.o -o hitReco
+hitReco : $(OBJS) $(LIB_PATH)hitReco.o
+	$(CC) $(LFLAGS) $(OBJS)  $(LIB_PATH)hitReco.o -o hitReco
 
-dataRead : $(OBJS)
-	$(CC) $(LFLAGS) $(OBJS) dataRead.o -o dataRead
+dataRead : $(OBJS) $(LIB_PATH)dataRead.o 
+	$(CC) $(LFLAGS) $(OBJS)  $(LIB_PATH)dataRead.o -o dataRead
 
-dataGen : $(OBJS)
-	$(CC) $(LFLAGS) $(OBJS) dataGen.o -o dataGen
+dataGen : $(OBJS) $(LIB_PATH)dataGen.o
+	$(CC) $(LFLAGS) $(OBJS)  $(LIB_PATH)dataGen.o -o dataGen
 
-
-%.o: $(SRCS)
-	$(CC) $(CFLAGS) $(INCDIRS) $(SRCS)
+$(LIB_PATH)%.o: %.cc
+	$(CC) $(CFLAGS) -MMD -c $(INCDIRS) $< -o $@
 
 clean:
-	\rm *.o *.d dataGen dataRead hitReco trackReco
+	\rm *~ */*~ */*/*~ lib/*.o lib/*.d dataGen dataRead hitReco trackReco
