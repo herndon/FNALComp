@@ -70,6 +70,9 @@ git tag -a v0.4 -m 'Version 0.4, day 0-1 code'
 git show v0.4
 git push origin v0.4
 
+# update local master branch to remove master
+git fetch
+git rebase origin/master
 
 
 r

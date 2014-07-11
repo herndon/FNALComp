@@ -29,11 +29,16 @@ namespace fc {
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-06
 ///
 
-  class DataInputModule : public Module{
+class DataInputModule : public Module{
 
 public:
 
-  DataInputModule(int, const DetectorGeometry &, std::ifstream&);
+    DataInputModule(int, std::ifstream&,
+                    const std::string& iOutputTracksLabel,
+                    const std::string& iOutputHitsLabel,
+                    const std::string& iOutputStripsLabel,
+		    const DetectorGeometry&);
+ 
   ~DataInputModule() {};
 
   void processEvent(Event&) override;
@@ -41,6 +46,9 @@ public:
 
 private:
 
+  std::string const _outTracksLabel;
+  std::string const _outHitsLabel;
+  std::string const _outStripsLabel;
   int _debugLevel;
 
   const DetectorGeometry & _detectorGeometry;

@@ -7,10 +7,17 @@
 #include <string>
 #include "Exception.hh"
 
-fc::DataInputModule::DataInputModule(int debugLevel, const DetectorGeometry& detectorGeometry,std::ifstream& inputeventdatafile):
+fc::DataInputModule::DataInputModule(int debugLevel,std::ifstream& inputeventdatafile, 
+				     const std::string& iOutputTracksLabel,
+				     const std::string& iOutputHitsLabel,
+				     const std::string& iOutputStripsLabel,
+				     const DetectorGeometry& detectorGeometry):
   _debugLevel(debugLevel),
-  _detectorGeometry(detectorGeometry),
-  _inputeventdatafile(inputeventdatafile){
+  _inputeventdatafile(inputeventdatafile),
+  _outTracksLabel(iOutputTracksLabel),
+  _outHitsLabel(iOutputHitsLabel),
+  _outStripsLabel(iOutputStripsLabel),
+  _detectorGeometry(detectorGeometry){
 
   int inputDetectorGeometryVersion;
   _inputeventdatafile >> inputDetectorGeometryVersion ;
@@ -56,9 +63,9 @@ std::unique_ptr<TrackSet> trackSet{ new TrackSet(_detectorGeometry) };
   if (_debugLevel >=2) hitSet->print();
   if (_debugLevel >=2) stripSet->print();
 
-  event.put("tracksWithHits", std::move(trackSet) );
-  event.put("hits", std::move(hitSet));
-  event.put("strips",std::move(stripSet));
+  event.put("_outTracksLable", std::move(trackSet) );
+  event.put("_outHitsLable", std::move(hitSet));
+  event.put("_outStripsLable",std::move(stripSet));
 
 
 
