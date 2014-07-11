@@ -14,6 +14,7 @@
 #include <fstream>
 #include <iostream>
 #include "Random.hh"
+#include "Module.hh"
 
 class Track;
 class TrackSet;
@@ -25,19 +26,20 @@ class TrackSet;
 
 namespace fc {
 
-class TrackGenModule {
+class TrackGenModule : public Module {
 
 public:
 
-  TrackGenModule(int,const DetectorGeometry &,Random &);
+  TrackGenModule(int debugLevel, int numberOfTracks, const DetectorGeometry &,Random &);
   ~TrackGenModule() {};
 
-  void processEvent(TrackSet &,int);
+  void processEvent(Event& ) override;
 
 
 private:
 
   int _debugLevel;
+  int _numberOfTracks;
 
   // Detector information
   const DetectorGeometry & _myDetectorGeometry;

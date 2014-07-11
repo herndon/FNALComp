@@ -10,14 +10,13 @@
 // 2014-05-22
 //============================================================================
 #include "DetectorGeometry.hh"
-#include "HitSet.hh"
-#include "TrackSet.hh"
-#include "StripSet.hh"
 #include "TrackGenModule.hh"
 #include "HitStripGenModule.hh"
 #include "DataOutputModule.hh"
 #include "Config.hh"
 #include "Random.hh"
+#include "Event.hh"
+#include "EventProcessor.hh"
 #include <fstream>
 #include <iostream>
 
@@ -45,7 +44,7 @@ int main ()
  // Initialie random number generator with seed = 1
   fc::Random myRandom(myConfig.getSeed());
 
-  // DetectorGeomergy
+  // DetectorGeometry
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
   fc::DetectorGeometry myDetectorGeometry(detectorgeometryfile);  
   // files are closed by the default destructor
@@ -55,28 +54,18 @@ int main ()
   std::ofstream genoutputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
 
+  // Instantiate the class which handles the details of processing the events
+  fc::EventProcessor processor(genData);
  
   // Instantiate and initialize Module classes
-  fc::TrackGenModule myTrackGenModule(debugLevel,myDetectorGeometry,myRandom);
-  fc::HitStripGenModule myHitStripGenModule(debugLevel,myDetectorGeometry,myRandom);
-  fc::DataOutputModule myDataOutputModule(debugLevel,myDetectorGeometry,genoutputeventdatafile);
+  //  the order the modules are passed to the EventProcessor
+  //  is th eorder the modules will run
+  processor.addModule( new fc::TrackGenModule(debugLevel,myConfig.getNumberTracks(),myDetectorGeometry,myRandom));
+  processor.addModule( new fc::HitStripGenModule(debugLevel,myDetectorGeometry,myRandom) );
+  processor.addModule( new fc::DataOutputModule(debugLevel,myDetectorGeometry,genoutputeventdatafile));
 
-
-   // Event loop over module classes
-
-  for (int ii_event = 0; ii_event < myConfig.getNumberEvents(); ++ii_event) {
-
-    // Initialize object persistent only for each event
-    fc::TrackSet myTrackSet(ii_event,genData,myDetectorGeometry);
-    fc::HitSet myHitSet(genData);
-    fc::StripSet myStripSet(genData);
-
-    myTrackGenModule.processEvent(myTrackSet,myConfig.getNumberTracks());
-    myHitStripGenModule.processEvent(myTrackSet,myHitSet,myStripSet);
-    myDataOutputModule.processEvent(ii_event,myTrackSet,myHitSet,myStripSet);
-
-  }
-
+  // Event loop over module classes
+  processor.processEvents(myConfig.getNumberEvents());
 
   return 0; 
 

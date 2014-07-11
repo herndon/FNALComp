@@ -14,6 +14,7 @@
 
 #include <fstream>
 #include <iostream>
+#include "Module.hh"
 
 class TrackSet;
 class HitSet;
@@ -26,14 +27,14 @@ namespace fc {
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-06
 ///
 
-class DataOutputModule {
+class DataOutputModule : public Module {
 
 public:
 
   DataOutputModule(int,const DetectorGeometry&,std::ofstream&);
   ~DataOutputModule() {};
 
-  void processEvent(int, const TrackSet&,const HitSet&, const StripSet&) const;
+  void processEvent(Event&) override;
 
 private:
 
