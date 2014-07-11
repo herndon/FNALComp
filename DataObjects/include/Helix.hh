@@ -49,7 +49,7 @@ public:
 
 private:
 
-  std::unique_ptr<TVectorD> _helix;
+  TVectorD _helix;
 
 public:
 
@@ -70,17 +70,17 @@ public:
 
   // Get track parameters
 
-  TVectorD getHelix() const {return *_helix;}
+  TVectorD getHelix() const {return _helix;}
 
-  double getDr() const {return (*_helix)(0);}
-  double getPhi0() const {return (*_helix)(1);}
-  double getKappa() const {return (*_helix)(2);}
-  double getDz() const {return (*_helix)(3);}
-  double getTanL() const {return (*_helix)(4);}
+  double getDr() const {return _helix(0);}
+  double getPhi0() const {return _helix(1);}
+  double getKappa() const {return _helix(2);}
+  double getDz() const {return _helix(3);}
+  double getTanL() const {return _helix(4);}
 
 
   // Set helix
-  void setHelix(const TVectorD& helix) {*_helix = helix;}
+  void setHelix(const TVectorD& helix) {_helix = helix;}
 
 
 };
