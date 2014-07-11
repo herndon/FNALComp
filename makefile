@@ -1,5 +1,5 @@
 vpath %.cc = Geometry/src:Services/src:DataObjects/src:Algorithms/src:Modules/src:Modules/test:Framework/src
-DIRS = Geometry Services DataObjects Algorithms Modules
+DIRS = Geometry Services DataObjects Algorithms Modules Framework
 LIB_PATH = lib/
 SRCS =  $(foreach DIR,$(DIRS),$(DIR)/src/*.cc) Modules/test/*.cc
 OBJSRCS =  $(foreach DIR,$(DIRS),$(wildcard $(DIR)/src/*.cc))
