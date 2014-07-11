@@ -13,6 +13,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <string>
 #include "Random.hh"
 #include "Module.hh"
 
@@ -30,7 +31,9 @@ class TrackGenModule : public Module {
 
 public:
 
-  TrackGenModule(int debugLevel, int numberOfTracks, const DetectorGeometry &,Random &);
+  TrackGenModule(int debugLevel, int numberOfTracks,
+		 const std::string& iTracksLabel, //label used for the generated tracks
+		 const DetectorGeometry &,Random &);
   ~TrackGenModule() {};
 
   void processEvent(Event& ) override;
@@ -40,6 +43,8 @@ private:
 
   int _debugLevel;
   int _numberOfTracks;
+
+  const std::string _tracksLabel;
 
   // Detector information
   const DetectorGeometry & _myDetectorGeometry;

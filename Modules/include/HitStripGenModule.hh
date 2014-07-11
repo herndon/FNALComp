@@ -14,6 +14,7 @@
 //============================================================================
 
 #include <vector>
+#include <string>
 #include "Random.hh"
 #include "Module.hh"
 
@@ -35,7 +36,12 @@ class HitStripGenModule : public Module{
 
 public:
 
-  HitStripGenModule(int, const DetectorGeometry &, Random &);
+  HitStripGenModule(int, 
+		    const std::string& iInputTracksLabel,
+		    const std::string& iOutputTracksLabel,
+		    const std::string& iOutputHitsLabel,
+		    const std::string& iOutputStripsLabel,
+		    const DetectorGeometry &, Random &);
   ~HitStripGenModule() {};
 
   void processEvent(Event&) override;
@@ -43,6 +49,10 @@ public:
 
 private:
 
+  std::string const _inTracksLabel;
+  std::string const _outTracksLabel;
+  std::string const _outHitsLabel;
+  std::string const _outStripsLabel;
   int _debugLevel;
 
   // Detector information

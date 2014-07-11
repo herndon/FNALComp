@@ -61,9 +61,20 @@ int main ()
   // Instantiate and initialize Module classes
   //  the order the modules are passed to the EventProcessor
   //  is th eorder the modules will run
-  processor.addModule( new fc::TrackGenModule(debugLevel,myConfig.getNumberTracks(),myDetectorGeometry,myRandom));
-  processor.addModule( new fc::HitStripGenModule(debugLevel,myDetectorGeometry,myRandom) );
-  processor.addModule( new fc::DataOutputModule(debugLevel,myDetectorGeometry,genoutputeventdatafile));
+  processor.addModule( new fc::TrackGenModule(debugLevel,myConfig.getNumberTracks(),
+					      "genTracks", //label used for tracks put into the event
+					      myDetectorGeometry,myRandom));
+  processor.addModule( new fc::HitStripGenModule(debugLevel,
+						 "genTracks",//get these tracks
+						 "tracksWithHits", //create these tracks
+						 "hits", //create these hits
+						 "strips", //create these strips
+						 myDetectorGeometry,myRandom) );
+  processor.addModule( new fc::DataOutputModule(debugLevel,genoutputeventdatafile,
+						"tracksWithHits", //get these tracks
+						"hits", //get these hits
+						"strips", //get these strips
+						myDetectorGeometry));
 
   // Event loop over module classes
   processor.processEvents();

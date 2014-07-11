@@ -14,6 +14,7 @@
 
 #include <fstream>
 #include <iostream>
+#include <string>
 #include "Module.hh"
 
 class TrackSet;
@@ -31,7 +32,11 @@ class DataOutputModule : public Module {
 
 public:
 
-  DataOutputModule(int,const DetectorGeometry&,std::ofstream&);
+  DataOutputModule(int,std::ofstream&,
+		   const std::string& iInputTracksLabel,
+		   const std::string& iInputHitsLabel,
+		   const std::string& iInputStripsLabel,
+		   const DetectorGeometry&);
   ~DataOutputModule() {};
 
   void processEvent(Event&) override;
@@ -39,6 +44,11 @@ public:
 private:
 
   int _debugLevel;
+
+  const std::string  _inTracksLabel;
+  const std::string _inHitsLabel;
+  const std::string _inStripsLabel;
+
 
   const DetectorGeometry & _detectorGeometry;
 
