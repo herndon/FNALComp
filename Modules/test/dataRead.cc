@@ -12,21 +12,32 @@
 #include "HitSet.hh"
 #include "StripSet.hh"
 #include "DataInputModule.hh"
+#include "Config.hh"
+#include "Event.hh"
+#include "EventProcessor.hh"
 #include <fstream>
 #include <iostream>
 
 int main ()
 {
-
+ 
 
 
   // Debugging
   int debugLevel = 2;
   // six levels of degug
   // 5 most verbose with all printouts
-  // Data object printout
+  // 2 Data object printout
   // 1 basic information on progress
   // 0 none
+
+  // Generator data
+  bool genData = 0;
+
+  // Configure genData using general Config class
+  std::ifstream configfile("configfile.txt");
+  fc::Config myConfig(configfile,genData);
+
 
   // Intialize Objects and Modules that are persistant
 
@@ -39,25 +50,17 @@ int main ()
   // Input and output files
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
-
-  // Instantiate and initialize Module classes
-  fc::DataInputModule myDataInputModule(debugLevel,myDetectorGeometry,inputeventdatafile);
-
-
-  // Event loop over module classes
-
-  for (int ii_event = 0; ii_event < 128; ++ii_event) {
+ // Instantiate the class which handles the details of processing the events
+  fc::EventProcessor processor(genData);
  
-   // Initialize object persistent only for each event
-    fc::TrackSet genTrackSet(myDetectorGeometry);
-    fc::HitSet genHitSet;
-    fc::StripSet genStripSet;
+  // Instantiate and initialize Module classes
+  //  the order the modules are passed to the EventProcessor
+  //  is the order the modules will run
+  processor.addModule( new fc::DataInputModule(debugLevel,myDetectorGeometry,inputeventdatafile));
 
-
-    myDataInputModule.processEvent(genTrackSet,genHitSet,genStripSet);
-
-  }
-
+ 
+  // Event loop over module classes
+  processor.processEvents(myConfig.getNumberEvents());
 
   return 0; 
 

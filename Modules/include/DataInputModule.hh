@@ -16,39 +16,37 @@
 #include <fstream>
 #include <iostream>
 #include "DetectorGeometry.hh"
+#include "Module.hh"
 
 class TrackSet;
 class HitSet;
 class StripSet;
 
-///
-/// Class DataInputModule
-/// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-03
-///
-
 namespace fc {
 
-class DataInputModule {
+///
+/// Class DataInputModule
+/// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-06
+///
+
+  class DataInputModule : public Module{
 
 public:
 
   DataInputModule(int, const DetectorGeometry &, std::ifstream&);
   ~DataInputModule() {};
 
-  void processEvent(TrackSet&, HitSet&, StripSet&);
+  void processEvent(Event&) override;
 
 
 private:
 
   int _debugLevel;
-  // Input event data file
 
   const DetectorGeometry & _detectorGeometry;
-  std::ifstream & _inputeventdatafile;
-
  
-
-
+    // input event data file
+    std::ifstream & _inputeventdatafile;
 
 };
 } // end namespace fc

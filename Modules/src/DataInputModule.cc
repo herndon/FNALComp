@@ -23,17 +23,25 @@ fc::DataInputModule::DataInputModule(int debugLevel, const DetectorGeometry& det
 
 }
 
-void fc::DataInputModule::processEvent(TrackSet & trackSet, HitSet & hitSet, StripSet & stripSet) {
+void fc::DataInputModule::processEvent(Event& event) {
 
+  auto genData = event.get<bool>("genData");
+
+
+std::unique_ptr<TrackSet> trackSet{ new TrackSet(_detectorGeometry) };
+
+
+  std::unique_ptr<HitSet> hitSet{ new HitSet(*genData) };
+  std::unique_ptr<StripSet> stripSet{ new StripSet(*genData) };
 
   int eventNumber;
   _inputeventdatafile >> eventNumber;
 
 
-  trackSet.readEvent(_inputeventdatafile);
+  trackSet->readEvent(_inputeventdatafile);
 
   HitSetIO hitSetIO;
-  hitSetIO.readEvent(hitSet,_inputeventdatafile);
+  hitSetIO.readEvent(*hitSet,_inputeventdatafile);
 
 
   // !!!!! chance to a construtor calling StripSetIO::readEvent and passing to an event object
@@ -42,11 +50,17 @@ void fc::DataInputModule::processEvent(TrackSet & trackSet, HitSet & hitSet, Str
   // don't call rest of processEvent if you are going to do this  !!!!! could reset file pointer
 
 
-  stripSetIO.readEvent(stripSet,_inputeventdatafile);
+  stripSetIO.readEvent(*stripSet,_inputeventdatafile);
 
-  if (_debugLevel >=2) trackSet.print();
-  if (_debugLevel >=2) hitSet.print();
-  if (_debugLevel >=2) stripSet.print();
+  if (_debugLevel >=2) trackSet->print();
+  if (_debugLevel >=2) hitSet->print();
+  if (_debugLevel >=2) stripSet->print();
+
+  event.put("tracksWithHits", std::move(trackSet) );
+  event.put("hits", std::move(hitSet));
+  event.put("strips",std::move(stripSet));
+
+
 
 }
 
