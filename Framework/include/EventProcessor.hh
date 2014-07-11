@@ -3,22 +3,24 @@
 
 #include <memory>
 #include <vector>
+#include "Source.hh"
 
 namespace fc {
   class Module;
 
   class EventProcessor {
     std::vector<std::unique_ptr<Module>> _modules;
-    bool _genData;
+    std::unique_ptr<Source> _source;
   public:
-    explicit EventProcessor(bool genData):
-      _genData(genData) {}
+    explicit EventProcessor(Source*iSource):
+      _source(iSource)
+    {}
     EventProcessor( const EventProcessor& ) = delete;
 
     //takes ownership of the module
     void addModule(Module*);
 
-    void processEvents(int iNumberOfEvents);
+    void processEvents();
   };
 
 }

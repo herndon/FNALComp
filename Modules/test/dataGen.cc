@@ -13,6 +13,7 @@
 #include "TrackGenModule.hh"
 #include "HitStripGenModule.hh"
 #include "DataOutputModule.hh"
+#include "CountEventsSource.hh"
 #include "Config.hh"
 #include "Random.hh"
 #include "Event.hh"
@@ -33,7 +34,7 @@ int main ()
 
 
   // Generator data
-  bool genData = 1;
+  bool genData = true;
 
   // Configure genData using general Config class
   std::ifstream configfile("configfile.txt");
@@ -55,7 +56,7 @@ int main ()
 
 
   // Instantiate the class which handles the details of processing the events
-  fc::EventProcessor processor(genData);
+  fc::EventProcessor processor(new fc::CountEventsSource(myConfig.getNumberEvents(),genData));
  
   // Instantiate and initialize Module classes
   //  the order the modules are passed to the EventProcessor
@@ -65,7 +66,7 @@ int main ()
   processor.addModule( new fc::DataOutputModule(debugLevel,myDetectorGeometry,genoutputeventdatafile));
 
   // Event loop over module classes
-  processor.processEvents(myConfig.getNumberEvents());
+  processor.processEvents();
 
   return 0; 
 

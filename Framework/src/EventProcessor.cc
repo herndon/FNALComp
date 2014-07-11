@@ -1,6 +1,7 @@
 #include "EventProcessor.hh"
 #include "Event.hh"
 #include "Module.hh"
+#include "Source.hh"
 #include "Exception.hh"
 #include <iostream>
 
@@ -8,15 +9,15 @@ void fc::EventProcessor::addModule(Module* iModule) {
   _modules.emplace_back(iModule);
 }
 
-void fc::EventProcessor::processEvents(int iNumberOfEvents) {
+void fc::EventProcessor::processEvents() {
   try {
-    for (int ii_event = 0; ii_event < iNumberOfEvents; ++ii_event) {
+    int ii_event=0;
+    while(true) {
       fc::Event event(ii_event);
-      {
-	std::unique_ptr<bool> genDataPtr( new bool{_genData} );
-	event.put("genData", std::move(genDataPtr) );
+      ++ii_event;
+      if(not _source->fillNextEvent(event)) {
+	break;
       }
-      
       for(auto& module : _modules) {
 	module->processEvent(event);
       }
