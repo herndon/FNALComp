@@ -6,8 +6,15 @@
 #include "DataOutputModule.hh"
 
 
-fc::DataOutputModule::DataOutputModule(int debugLevel,const DetectorGeometry & detectorGeometry,std::ofstream& outputeventdatafile):
+fc::DataOutputModule::DataOutputModule(int debugLevel, std::ofstream& outputeventdatafile,
+				       const std::string& iInputTracksLabel,
+				       const std::string& iInputHitsLabel,
+				       const std::string& iInputStripsLabel,
+				       const DetectorGeometry & detectorGeometry):
   _debugLevel(debugLevel),
+  _inTracksLabel(iInputTracksLabel),
+  _inHitsLabel(iInputHitsLabel),
+  _inStripsLabel(iInputStripsLabel),
   _detectorGeometry(detectorGeometry),
   _outputeventdatafile(outputeventdatafile){
 

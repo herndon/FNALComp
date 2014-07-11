@@ -11,7 +11,16 @@
 #include "StripSet.hh"
 #include "HitStripGenModule.hh"
 
-fc::HitStripGenModule::HitStripGenModule(int debugLevel, const DetectorGeometry & myDetectorGeometry, Random & myRandom):
+fc::HitStripGenModule::HitStripGenModule(int debugLevel, 
+					 const std::string& iInputTracksLabel,
+					 const std::string& iOutputTracksLabel,
+					 const std::string& iOutputHitsLabel,
+					 const std::string& iOutputStripsLabel,
+					 const DetectorGeometry & myDetectorGeometry, Random & myRandom):
+  _inTracksLabel(iInputTracksLabel),
+  _outTracksLabel(iOutputTracksLabel),
+  _outHitsLabel(iOutputHitsLabel),
+  _outStripsLabel(iOutputStripsLabel),
   _debugLevel(debugLevel),
   _myDetectorGeometry(myDetectorGeometry),
   _myRandom(myRandom) {
@@ -23,7 +32,7 @@ fc::HitStripGenModule::HitStripGenModule(int debugLevel, const DetectorGeometry 
 
 void fc::HitStripGenModule::processEvent(fc::Event & event)
 {
-  auto trackSet = event.get<fc::TrackSet>("genTracks");
+  auto trackSet = event.get<fc::TrackSet>(_inTracksLabel);
   auto genData = event.get<bool>("genData");
   std::unique_ptr<TrackSet> myTrackSet{ new TrackSet(*trackSet) };
   
@@ -40,9 +49,9 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
 
    } // end track loop
 
-  event.put("tracksWithHits", std::move(myTrackSet) );
-  event.put("hits", std::move(myHitSet));
-  event.put("strips",std::move(myStripSet));
+  event.put(_outTracksLabel, std::move(myTrackSet) );
+  event.put(_outHitsLabel, std::move(myHitSet));
+  event.put(_outStripsLabel,std::move(myStripSet));
 }
 
 
