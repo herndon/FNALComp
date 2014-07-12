@@ -10,6 +10,7 @@
 //============================================================================
 
 #include "StripSet.hh"
+#include "Module.hh"
 #include <vector>
 
 class DetectorGeometry;
@@ -22,19 +23,23 @@ namespace fc {
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-11
 ///
 
-class TrackRecoModule {
+class TrackRecoModule : public Module {
 
 public:
 
-  TrackRecoModule(int, const DetectorGeometry &);
+  TrackRecoModule(int, const std::string& inputHitsLabel, const std::string& outputTracksLabel, 
+		  const DetectorGeometry &);
   ~TrackRecoModule() {};
 
-  void processEvent(TrackSet &,const HitSet &);
+  void processEvent(Event&) override;
 
 
 private:
 
   int _debugLevel;
+
+  const std::string _inHitsLabel;
+  const std::string _outTracksLabel;
 
   // Detector information
   const DetectorGeometry & _myDetectorGeometry;

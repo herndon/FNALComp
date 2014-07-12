@@ -3,46 +3,49 @@
 #include "HitSetIO.hh"
 #include "StripSet.hh"
 #include "StripSetIO.hh"
-#include "DataInputModule.hh"
+#include "DataSource.hh"
 #include <string>
 #include "Exception.hh"
 
-fc::DataInputModule::DataInputModule(int debugLevel,std::ifstream& inputeventdatafile, 
+fc::DataSource::DataSource(int debugLevel,std::ifstream& inputeventdatafile, bool genData, 
 				     const std::string& iOutputTracksLabel,
 				     const std::string& iOutputHitsLabel,
 				     const std::string& iOutputStripsLabel,
 				     const DetectorGeometry& detectorGeometry):
-  _debugLevel(debugLevel),
-  _inputeventdatafile(inputeventdatafile),
   _outTracksLabel(iOutputTracksLabel),
   _outHitsLabel(iOutputHitsLabel),
   _outStripsLabel(iOutputStripsLabel),
-  _detectorGeometry(detectorGeometry){
+  _debugLevel(debugLevel),
+  _detectorGeometry(detectorGeometry),
+  _inputeventdatafile(inputeventdatafile),
+  _genData(genData) {
 
   int inputDetectorGeometryVersion;
   _inputeventdatafile >> inputDetectorGeometryVersion ;
 
   if (inputDetectorGeometryVersion != _detectorGeometry.getDetectorGeometryVersion()){
-    std::string wrongDetectorGeometryVersion = "DataInputModule constructor: wrong detector geometry version: Set up for " + std::to_string(_detectorGeometry.getDetectorGeometryVersion()) + ", reading " + std::to_string(inputDetectorGeometryVersion);
+    std::string wrongDetectorGeometryVersion = "DataSource constructor: wrong detector geometry version: Set up for " + std::to_string(_detectorGeometry.getDetectorGeometryVersion()) + ", reading " + std::to_string(inputDetectorGeometryVersion);
     throw Exception(wrongDetectorGeometryVersion); 
   }
 
 
 }
 
-void fc::DataInputModule::processEvent(Event& event) {
+std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
 
-  auto genData = event.get<bool>("genData");
-
-
-std::unique_ptr<TrackSet> trackSet{ new TrackSet(_detectorGeometry) };
+    //auto genData = event.get<bool>("genData");
 
 
-  std::unique_ptr<HitSet> hitSet{ new HitSet(*genData) };
-  std::unique_ptr<StripSet> stripSet{ new StripSet(*genData) };
+  std::unique_ptr<TrackSet> trackSet{ new TrackSet(_detectorGeometry) };
 
-  int eventNumber;
-  _inputeventdatafile >> eventNumber;
+
+  std::unique_ptr<HitSet> hitSet{ new HitSet(_genData) };
+  std::unique_ptr<StripSet> stripSet{ new StripSet(_genData) };
+
+  int eventNumber = 0;
+  if( not (_inputeventdatafile >> eventNumber) ) {
+    return std::unique_ptr<Event>{};
+  }
 
 
   trackSet->readEvent(_inputeventdatafile);
@@ -63,12 +66,14 @@ std::unique_ptr<TrackSet> trackSet{ new TrackSet(_detectorGeometry) };
   if (_debugLevel >=2) hitSet->print();
   if (_debugLevel >=2) stripSet->print();
 
-  event.put("_outTracksLable", std::move(trackSet) );
-  event.put("_outHitsLable", std::move(hitSet));
-  event.put("_outStripsLable",std::move(stripSet));
+  std::unique_ptr<fc::Event> event( new fc::Event{static_cast<unsigned int>(eventNumber)} );
 
+  event->put("genData", std::unique_ptr<bool>( new bool{_genData} ) );
+  event->put(_outTracksLabel, std::move(trackSet) );
+  event->put(_outHitsLabel, std::move(hitSet));
+  event->put(_outStripsLabel,std::move(stripSet));
 
-
+  return std::move(event);
 }
 
 

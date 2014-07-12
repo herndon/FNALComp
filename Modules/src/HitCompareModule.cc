@@ -7,9 +7,14 @@
 #include "TFile.h"
 #include "TH1F.h"
 
-fc::HitCompareModule::HitCompareModule(int debugLevel, const DetectorGeometry & myDetectorGeometry, TFile * outputrootfile):
+fc::HitCompareModule::HitCompareModule(int debugLevel, 
+				       const std::string& inputGenHitsLabel,
+				       const std::string& inputRecHitsLabel,
+				       const DetectorGeometry & myDetectorGeometry, TFile * outputrootfile):
   _debugLevel(debugLevel),
   _myDetectorGeometry(myDetectorGeometry),
+  _genHitsLabel(inputGenHitsLabel),
+  _recHitsLabel(inputRecHitsLabel),
   _outputrootfile(outputrootfile) {
 
 
@@ -24,11 +29,12 @@ fc::HitCompareModule::HitCompareModule(int debugLevel, const DetectorGeometry & 
 
 }
 
-void fc::HitCompareModule::processEvent(const HitSet & myGenHitSet, const HitSet& myRecoHitSet)
+void fc::HitCompareModule::processEvent(Event& event)
 {
+ Handle<HitSet> myGenHitSet = event.get<HitSet>(_genHitsLabel);
+ Handle<HitSet> myRecoHitSet = event.get<HitSet>(_recHitsLabel);
 
-
- compareHits(myGenHitSet,myRecoHitSet);
+ compareHits(*myGenHitSet,*myRecoHitSet);
 
   // Function to histogram results
 
@@ -94,7 +100,7 @@ void fc::HitCompareModule::initializeHistograms(){
 
 }
 
-void fc::HitCompareModule::endjob(){
+void fc::HitCompareModule::endJob(){
 
   _roothistogramlist->Write();
   _outputrootfile->Close();

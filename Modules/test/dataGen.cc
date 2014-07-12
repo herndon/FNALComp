@@ -79,6 +79,7 @@ int main ()
   // Event loop over module classes
   processor.processEvents();
 
+  processor.endJob();
   return 0; 
 
 }

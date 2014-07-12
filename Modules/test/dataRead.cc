@@ -11,8 +11,7 @@
 #include "TrackSet.hh"
 #include "HitSet.hh"
 #include "StripSet.hh"
-#include "DataInputModule.hh"
-#include "CountEventsSource.hh"
+#include "DataSource.hh"
 #include "Config.hh"
 #include "Event.hh"
 #include "EventProcessor.hh"
@@ -52,21 +51,20 @@ int main ()
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
  // Instantiate the class which handles the details of processing the events
-  fc::EventProcessor processor(new fc::CountEventsSource(myConfig.getNumberEvents(),genData));
- 
-  // Instantiate and initialize Module classes
-  //  the order the modules are passed to the EventProcessor
-  //  is the order the modules will run
-  processor.addModule( new fc::DataInputModule(debugLevel,inputeventdatafile,
+  fc::EventProcessor processor( new fc::DataSource(debugLevel,inputeventdatafile, genData,
                                                "tracksWithHits", //get these tracks from file
                                                 "hits", //get these hits from file
                                                 "strips", //get these strips
                                                 myDetectorGeometry));
 
+  // Instantiate and initialize Module classes
+  //  the order the modules are passed to the EventProcessor
+  //  is the order the modules will run
  
   // Event loop over module classes
   processor.processEvents();
 
+  processor.endJob();
   return 0; 
 
 }

@@ -10,6 +10,7 @@
 //============================================================================
 
 #include "DetectorGeometry.hh"
+#include "Module.hh"
 
 class Hit;
 class HitSet;
@@ -25,16 +26,17 @@ namespace fc {
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-12
 ///
 
-class HitCompareModule {
+  class HitCompareModule : public Module {
 
 public:
 
-  HitCompareModule(int, const DetectorGeometry &, TFile *);
+  HitCompareModule(int, const std::string& iInputGenHitsLabel, const std::string& iInputRecHitsLabel,
+		   const DetectorGeometry &, TFile *);
   ~HitCompareModule() {};
 
-  void processEvent(const HitSet &,const HitSet &);
+  void processEvent(fc::Event&) override;
 
-  void endjob(void);
+  void endJob(void) override;
 
 
 private:
@@ -45,6 +47,9 @@ private:
   const DetectorGeometry & _myDetectorGeometry;
 
   int _nLayers;
+
+  const std::string _genHitsLabel;
+  const std::string _recHitsLabel;
 
   // Comparison of hits
 
