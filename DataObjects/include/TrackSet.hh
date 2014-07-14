@@ -13,8 +13,6 @@
 // 2014-06-06
 //============================================================================
 #include <vector>
-#include <fstream>
-#include <iostream>
 #include "DetectorGeometry.hh"
 #include "Track.hh"
 
@@ -55,11 +53,11 @@ public:
 
   void insertTrack(Track);
 
-  int getGenTracks(void) const {return _genTracks;}
-  int getEventNumber(void)const {return _eventNumber;}
+  int getVersion() const {return _version;}
+  int getGenTracks() const {return _genTracks;}
+  int getEventNumber()const {return _eventNumber;}
  
-  void writeEvent(std::ofstream&) const; //!< Write all track information in the event to std::ofstream file
-  void readEvent(std::ifstream&);  //!< Read all track information for on event from std::ifstream file
+  void setGenTracks(bool genTracks) {_genTracks = genTracks;}
 
   void print(void) const;
 

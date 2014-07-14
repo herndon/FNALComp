@@ -11,6 +11,13 @@ fc::HitSetIO::HitSetIO():
 
 void fc::HitSetIO::writeEvent(const HitSet & hitSet, std::ofstream & hitdata) const{
 
+  if (_version != hitSet.getVersion()) {
+    std::string wrongStreamerVersion = "HitSetIO::writeEvent: HitSet expected streamer version " + std::to_string(hitSet.getVersion()) + " using streamer version " + std::to_string(_version);
+    throw Exception(wrongStreamerVersion);  
+  }
+
+
+
   // set precision output to precision of a doulbe + 2 digits to avoid rounding problems
   hitdata.precision(std::numeric_limits<double>::digits10 + 2);
 

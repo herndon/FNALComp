@@ -14,7 +14,7 @@ fc::StripSetIO::StripSetIO(const DetectorGeometry&  detectorGeometry):
 void fc::StripSetIO::writeEvent(const StripSet & stripSet, std::ofstream & stripdata) const{
 
   if (_version != stripSet.getVersion()) {
-    std::string wrongStreamerVersion = "StripSetIO::writeEvent: Stripset expected streamer version " + std::to_string(stripSet.getVersion()) + " using streamer version " + std::to_string(_version);
+    std::string wrongStreamerVersion = "StripSetIO::writeEvent: StripSet expected streamer version " + std::to_string(stripSet.getVersion()) + " using streamer version " + std::to_string(_version);
     throw Exception(wrongStreamerVersion);  
   }
 

@@ -1,4 +1,5 @@
 #include "TrackSet.hh"
+#include "TrackSetIO.hh"
 #include "HitSet.hh"
 #include "HitSetIO.hh"
 #include "StripSet.hh"
@@ -28,6 +29,7 @@ void fc::DataOutputModule::processEvent(Event& event) {
   auto hitSet = event.get<fc::HitSet>("hits");
   auto stripSet = event.get<fc::StripSet>("strips");
 
+  if (_debugLevel >=2) std::cout << "Event: " << event.eventNumber() << std::endl;
   if (_debugLevel >=2) trackSet->print();
   if (_debugLevel >=2) hitSet->print();
   if (_debugLevel >=2) stripSet->print();
@@ -35,7 +37,8 @@ void fc::DataOutputModule::processEvent(Event& event) {
   _outputeventdatafile << event.eventNumber() << std::endl;
 
 
-  trackSet->writeEvent(_outputeventdatafile);
+  TrackSetIO trackSetIO(_detectorGeometry);
+  trackSetIO.writeEvent(*trackSet,_outputeventdatafile);
 
 
   HitSetIO hitSetIO;
