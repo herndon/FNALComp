@@ -15,7 +15,7 @@ namespace fc {
       _genData{genData}
     {}
 
-    bool fillNextEvent(Event&) override;
+    std::unique_ptr<Event> getNextEvent() override;
 
   };
 }

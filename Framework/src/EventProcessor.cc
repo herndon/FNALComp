@@ -11,15 +11,13 @@ void fc::EventProcessor::addModule(Module* iModule) {
 
 void fc::EventProcessor::processEvents() {
   try {
-    int ii_event=0;
     while(true) {
-      fc::Event event(ii_event);
-      ++ii_event;
-      if(not _source->fillNextEvent(event)) {
+      std::unique_ptr<fc::Event> event{_source->getNextEvent()};
+      if(not event) {
 	break;
       }
       for(auto& module : _modules) {
-	module->processEvent(event);
+	module->processEvent(*event);
       }
     }
   } catch( const Exception& iException) {

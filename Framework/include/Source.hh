@@ -1,5 +1,6 @@
 #ifndef Source_hh
 #define Source_hh
+#include <memory>
 
 namespace fc {
   class Event;
@@ -10,7 +11,8 @@ namespace fc {
     Source(const Source&) = delete;
     virtual ~Source();
 
-    virtual bool fillNextEvent( Event& ) = 0;
+    //Returns an empty unique_ptr when out of events
+    virtual std::unique_ptr<Event> getNextEvent() = 0;
 
   };
 }
