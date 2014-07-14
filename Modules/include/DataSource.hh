@@ -1,7 +1,7 @@
-#ifndef DataInputModule_hh
-#define DataInputModule_hh
+#ifndef DataSource_hh
+#define DataSource_hh
 //============================================================================
-// DataInputModule.hh
+// DataSource.hh
 // Module for reading raw detector data from the
 // sensors of a 5 layer planor silicon detector.
 // See detectorGeometry.pdf for detector description
@@ -16,7 +16,8 @@
 #include <fstream>
 #include <iostream>
 #include "DetectorGeometry.hh"
-#include "Module.hh"
+#include "Source.hh"
+#include "Event.hh"
 
 class TrackSet;
 class HitSet;
@@ -25,23 +26,23 @@ class StripSet;
 namespace fc {
 
 ///
-/// Class DataInputModule
+/// Class DataSource
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-06
 ///
 
-class DataInputModule : public Module{
+class DataSource : public Source {
 
 public:
 
-    DataInputModule(int, std::ifstream&,
-                    const std::string& iOutputTracksLabel,
-                    const std::string& iOutputHitsLabel,
-                    const std::string& iOutputStripsLabel,
-		    const DetectorGeometry&);
+  DataSource(int, std::ifstream&, bool genData,
+	       const std::string& iOutputTracksLabel,
+	       const std::string& iOutputHitsLabel,
+	       const std::string& iOutputStripsLabel,
+	       const DetectorGeometry&);
  
-  ~DataInputModule() {};
+  ~DataSource() {};
 
-  void processEvent(Event&) override;
+  std::unique_ptr<Event> getNextEvent() override;
 
 
 private:
@@ -55,8 +56,9 @@ private:
  
     // input event data file
     std::ifstream & _inputeventdatafile;
+    const bool _genData;
 
 };
 } // end namespace fc
 
-#endif // DataInputModule_hh
+#endif // DataSource_hh

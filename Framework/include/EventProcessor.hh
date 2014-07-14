@@ -4,6 +4,7 @@
 #include <memory>
 #include <vector>
 #include "Source.hh"
+#include "Module.hh"
 
 namespace fc {
   class Module;
@@ -21,6 +22,7 @@ namespace fc {
     void addModule(Module*);
 
     void processEvents();
+    void endJob();
   };
 
 }

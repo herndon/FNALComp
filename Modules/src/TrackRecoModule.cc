@@ -7,8 +7,12 @@
 #include "TrackSet.hh"
 #include "TrackRecoModule.hh"
 
-fc::TrackRecoModule::TrackRecoModule(int debugLevel, const DetectorGeometry & myDetectorGeometry):
+fc::TrackRecoModule::TrackRecoModule(int debugLevel, 
+				     const std::string& inputHitsLabel, const std::string& outputTracksLabel,
+				     const DetectorGeometry & myDetectorGeometry):
   _debugLevel(debugLevel),
+  _inHitsLabel(inputHitsLabel),
+  _outTracksLabel(outputTracksLabel),
   _myDetectorGeometry(myDetectorGeometry) {
 
   // Intialize commonly used DetectorGeometry data
@@ -16,13 +20,18 @@ fc::TrackRecoModule::TrackRecoModule(int debugLevel, const DetectorGeometry & my
 
 }
 
-void fc::TrackRecoModule::processEvent(TrackSet & myTrackSet, const HitSet& myHitSet)
+void fc::TrackRecoModule::processEvent(Event& event)
 {
 
-  recoTracks(myTrackSet,myHitSet);
+  Handle<HitSet> myHitSet = event.get<HitSet>(_inHitsLabel);
+  
+  std::unique_ptr<TrackSet> myTrackSet{ new TrackSet(_myDetectorGeometry) };
 
-  if (_debugLevel >= 2) myHitSet.print();
+  recoTracks(*myTrackSet,*myHitSet);
 
+  if (_debugLevel >= 2) myHitSet->print();
+
+  event.put(_outTracksLabel,std::move(myTrackSet) );
 }
 
 void fc::TrackRecoModule::recoTracks(TrackSet & myTrackSet, const HitSet& myHitSet)

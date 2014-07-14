@@ -8,10 +8,8 @@
 // 2014-06-12
 //============================================================================
 #include "DetectorGeometry.hh"
-#include "TrackSet.hh"
-#include "HitSet.hh"
-#include "StripSet.hh"
-#include "DataInputModule.hh"
+#include "EventProcessor.hh"
+#include "DataSource.hh"
 #include "HitRecoModule.hh"
 #include "HitCompareModule.hh"
 #include "TrackRecoModule.hh"
@@ -50,40 +48,24 @@ int main ()
   TFile * outputrootfile = new TFile("outputfile.root", "RECREATE");
 
 
+ // Instantiate the class which handles the details of processing the events
+  fc::EventProcessor processor( new fc::DataSource(debugLevel,inputeventdatafile, genData,
+                                               "tracksWithHits", //get these tracks from file
+                                                "genHits", //get these hits from file
+                                                "genStrips", //get these strips
+                                                myDetectorGeometry));
+
   // Instantiate and initialize Module classes
-  fc::DataInputModule myDataInputModule(debugLevel,myDetectorGeometry,inputeventdatafile);
-  fc::HitRecoModule myHitRecoModule(debugLevel,myDetectorGeometry);
-  fc::HitCompareModule myHitCompareModule(debugLevel,myDetectorGeometry,outputrootfile);
-  fc::TrackRecoModule myTrackRecoModule(debugLevel,myDetectorGeometry);
+  processor.addModule( new fc::HitRecoModule(debugLevel,"genStrips", "recoHits", myDetectorGeometry));
+  processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", myDetectorGeometry,outputrootfile));
+  processor.addModule( new fc::TrackRecoModule(debugLevel, "genHits", "recoTracks", myDetectorGeometry) );
 
 
   // Event loop over module classes
-
-  for (int ii_event = 0; ii_event < 128; ++ii_event) {
- 
-   // Initialize object persistent only for each event
-    fc::TrackSet myGenTrackSet(myDetectorGeometry);
-    fc::HitSet myGenHitSet;
-    fc::StripSet myGenStripSet;
-
-    fc::HitSet myRecoHitSet(genData);
-    fc::TrackSet myRecoTrackSet(myDetectorGeometry);
-
-    myDataInputModule.processEvent(myGenTrackSet,myGenHitSet,myGenStripSet);
-    myHitRecoModule.processEvent(myRecoHitSet,myGenStripSet);
-    myHitCompareModule.processEvent(myGenHitSet,myRecoHitSet);
-    myTrackRecoModule.processEvent(myRecoTrackSet,myGenHitSet);
-
-
-
-  }
-
+  processor.processEvents();
 
   // end job functions.  Only needed to write and close root files
-
-  myHitCompareModule.endjob();
-
-
+  processor.endJob();
 
   return 0; 
 

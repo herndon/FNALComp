@@ -9,8 +9,10 @@
 // 2014-06-11
 //============================================================================
 
+#include "Module.hh"
 #include "StripSet.hh"
 #include <vector>
+#include <string>
 
 class DetectorGeometry;
 class HitSet;
@@ -22,19 +24,21 @@ namespace fc {
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-11
 ///
 
-class HitRecoModule {
+class HitRecoModule : public Module {
 
 public:
 
-  HitRecoModule(int, const DetectorGeometry &);
+  HitRecoModule(int, const std::string& iInputStripsLabel, const std::string& iOutputHitsLabel, const DetectorGeometry &);
   ~HitRecoModule() {};
 
-  void processEvent(HitSet &,const StripSet &);
+  void processEvent(Event& ) override;
 
 
 private:
 
   int _debugLevel;
+  const std::string _inStripsLabel;
+  const std::string _outHitsLabel;
 
   // Detector information
   const DetectorGeometry & _myDetectorGeometry;

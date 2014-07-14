@@ -21,9 +21,20 @@ void fc::EventProcessor::processEvents() {
       }
     }
   } catch( const Exception& iException) {
-    std::cerr<<"caught exception: "<<iException.what();
+    std::cerr<<"caught exception: "<<iException.what()<<"\n";
   } catch( const std::exception& iException) {
-    std::cerr<<"caught std::exception: "<<iException.what();
+    std::cerr<<"caught std::exception: "<<iException.what()<<"\n";
   }
+}
 
+void fc::EventProcessor::endJob() {
+  for(auto& module : _modules) {
+    try {
+      module->endJob();
+    } catch( const Exception& iException) {
+      std::cerr<<"caught exception: "<<iException.what()<<"\n";
+    } catch( const std::exception& iException) {
+      std::cerr<<"caught std::exception: "<<iException.what()<<"\n";
+    }
+  }
 }

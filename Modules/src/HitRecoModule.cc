@@ -4,8 +4,12 @@
 #include "StripSet.hh"
 #include "HitRecoModule.hh"
 
-fc::HitRecoModule::HitRecoModule(int debugLevel, const DetectorGeometry & myDetectorGeometry):
+fc::HitRecoModule::HitRecoModule(int debugLevel,
+				 const std::string& iInputStripsLabel, const std::string& iOutputHitsLabel,
+				 const DetectorGeometry & myDetectorGeometry):
   _debugLevel(debugLevel),
+  _inStripsLabel(iInputStripsLabel),
+  _outHitsLabel(iOutputHitsLabel),
   _myDetectorGeometry(myDetectorGeometry) {
 
   // Intialize commonly used DetectorGeometry data
@@ -13,13 +17,16 @@ fc::HitRecoModule::HitRecoModule(int debugLevel, const DetectorGeometry & myDete
 
 }
 
-void fc::HitRecoModule::processEvent(HitSet & myHitSet, const StripSet& myStripSet)
+void fc::HitRecoModule::processEvent(fc::Event& event)
 {
+  Handle<StripSet> myStripSet = event.get<StripSet>(_inStripsLabel);
+  std::unique_ptr<HitSet> myHitSet( new HitSet );
 
-  recoHits(myHitSet,myStripSet);
+  recoHits(*myHitSet, *myStripSet);
 
-  if (_debugLevel >= 2) myHitSet.print();
+  if (_debugLevel >= 2) myHitSet->print();
 
+  event.put(_outHitsLabel, std::move(myHitSet));
 }
 
 void fc::HitRecoModule::recoHits(HitSet & myHitSet, const StripSet& myStripSet)
