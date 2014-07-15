@@ -12,7 +12,7 @@
 
 
 
-fc::Helix fc::FitToHelix(Helix& initialHelix, const HitSet& hitSet, const std::map<int, int>& _trackHitMap, const DetectorGeometry& detectorGeometry,int _debugLevel){
+fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap&  trackHitMap, const DetectorGeometry& detectorGeometry,int _debugLevel){
 
 
   // Define static constants...
@@ -95,11 +95,11 @@ fc::Helix fc::FitToHelix(Helix& initialHelix, const HitSet& hitSet, const std::m
  
  
 
-    for (trackHitMap::const_iterator trackHitMapIter = _trackHitMap.begin(); trackHitMapIter != _trackHitMap.end(); ++trackHitMapIter){
+    for (trackHitMap::const_iterator trackHitMapIter = trackHitMap.begin(); trackHitMapIter != trackHitMap.end(); ++trackHitMapIter){
 
       // Hit information
       int layer = trackHitMapIter->second;
-      TVector3 hitPosition = hitSet.getHitVector()[trackHitMapIter->first].getHitPosition();
+      TVector3 hitPosition = hitSet.getHits()[trackHitMapIter->first].getHitPosition();
 
  
       // Find XZ vector to measurement

@@ -13,6 +13,7 @@
 
 #include "TVector3.h"
 #include "Helix.hh"
+#include "Track.hh"
 #include <map>
 
 class DetectorGeometry;
@@ -24,7 +25,7 @@ namespace fc {
 
 
 
-  Helix FitToHelix(Helix& initialHelix, const HitSet& hitSet, const std::map<int, int>& _trackHitMap, const DetectorGeometry& detectorGeometry,int _debugLevel);
+  Helix FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap & trackHitMap, const DetectorGeometry& detectorGeometry,int _debugLevel);
 
 
 } // end namescape fc

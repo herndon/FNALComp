@@ -27,11 +27,11 @@ void fc::HitSetIO::writeEvent(const HitSet & hitSet, std::ofstream & hitdata) co
   hitdata << hitSet.getVersion() << std::endl;
   hitdata << hitSet.getGenHits() << std::endl;
 
-  std::vector<Hit>::size_type numberHits = hitSet.getHitVector().size();
+  std::vector<Hit>::size_type numberHits = hitSet.getHits().size();
 
   hitdata << numberHits << std::endl;
 
-  for (std::vector<Hit>::const_iterator hitIter =   hitSet.getHitVector().begin(); hitIter !=  hitSet.getHitVector().end(); ++hitIter,++hitNumber){
+  for (hitSet::const_iterator hitIter =   hitSet.getHits().begin(); hitIter !=  hitSet.getHits().end(); ++hitIter,++hitNumber){
 
     hitdata << hitNumber << std::endl;
     hitdata << hitIter->getHitPosition().x() << std::endl;;

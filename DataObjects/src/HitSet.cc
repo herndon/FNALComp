@@ -17,7 +17,7 @@ fc::HitSet::HitSet(bool genHits):
 
 void fc::HitSet::insertHit(Hit hit) {
   if (hit.getLayer() >= 0 && hit.getLayer() < DetectorGeometry::_nSensors) {
-    _hitVector.push_back(hit);
+    _hitSet.push_back(hit);
     return;
   } else {
     throw Exception("HitSet::insertHit: Out of bounds layer");
@@ -31,13 +31,13 @@ void fc::HitSet::print(void) const{
   std::cout << "Gen Hits: " << _genHits << std::endl;
 
  
-  std::vector<Hit>::size_type numberHits =_hitVector.size();
+  hitSet::size_type numberHits =_hitSet.size();
 
   int hitNumber = 0;
 
   std::cout << "Number Hits: " << numberHits << std::endl; 
 
-  for (std::vector<Hit>::const_iterator hitIter =  _hitVector.begin(); hitIter != _hitVector.end(); ++hitIter,++hitNumber){
+  for (hitSet::const_iterator hitIter =  _hitSet.begin(); hitIter != _hitSet.end(); ++hitIter,++hitNumber){
  
     std::cout << "Hit: " << hitNumber << " associated with track " << hitIter->getTrackNumber() << std::endl; 
     hitIter->print();

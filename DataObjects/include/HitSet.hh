@@ -3,8 +3,7 @@
 //============================================================================
 // HitSet.hh
 // header with class definition of the HitSet
-// A vector of map<int,Hit> layer_map's
-// Map elements are int,Hit pairs of hitnubmer (Key) and Hit information 
+// A vector of Hit objects
 // See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
 //
 // Author Matt Herndon, University of Wisconsin,
@@ -16,6 +15,7 @@
 
 namespace fc {
 
+  typedef std::vector<Hit> hitSet;
 
 ///
 /// Class HitSet: 
@@ -26,7 +26,7 @@ namespace fc {
 class HitSet {
 private:
 
-  std::vector<Hit> _hitVector;
+  hitSet _hitSet;
   int _version;
   bool _genHits;
 
@@ -37,9 +37,9 @@ public:
   ~HitSet() {};
 
 
-  const std::vector<Hit> & getHitVector(void) const {return _hitVector;};
+  const std::vector<Hit> & getHits(void) const {return _hitSet;};
 
-  const Hit & getHit(int hitNumber) const {return _hitVector[hitNumber]; };
+  const Hit & getHit(int hitNumber) const {return _hitSet[hitNumber]; };
 
   bool getGenHits(void) const {return _genHits;}
   int getVersion(void) const {return _version;}

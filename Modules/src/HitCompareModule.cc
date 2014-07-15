@@ -50,11 +50,11 @@ void fc::HitCompareModule::compareHits(const HitSet & myGenHitSet, const HitSet&
   double deltaPosition;
   double tempDeltaPosition;
 
-  for (std::vector<Hit>::const_iterator genHitIter =  myGenHitSet.getHitVector().begin(); genHitIter !=  myGenHitSet.getHitVector().end(); ++genHitIter){
+  for (hitSet::const_iterator genHitIter =  myGenHitSet.getHits().begin(); genHitIter !=  myGenHitSet.getHits().end(); ++genHitIter){
 
     deltaPosition = 999.0;
 
-    for (std::vector<Hit>::const_iterator recoHitIter = myRecoHitSet.getHitVector().begin(); recoHitIter != myRecoHitSet.getHitVector().end(); ++recoHitIter){
+    for (hitSet::const_iterator recoHitIter = myRecoHitSet.getHits().begin(); recoHitIter != myRecoHitSet.getHits().end(); ++recoHitIter){
 
 
       if (genHitIter->getLayer()==recoHitIter->getLayer()) {

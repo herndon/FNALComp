@@ -31,7 +31,7 @@ void fc::StripSetIO::writeEvent(const StripSet & stripSet, std::ofstream & strip
   int binaryData2;
  
   for (int ii_layer = 0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer){
-    std::map<int,int>::size_type numberStrips =stripSet.getLayerStripMap(ii_layer).size();
+    layerStripMap::size_type numberStrips =stripSet.getLayerStripMap(ii_layer).size();
 
     stripdata.write (reinterpret_cast<const char *>(&ii_layer), 1);
     stripdata.write (reinterpret_cast<const char *>(&numberStrips), 1);
