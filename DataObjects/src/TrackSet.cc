@@ -1,23 +1,23 @@
 #include "TrackSet.hh"
 
 // !!!!! Do we need this one
-fc::TrackSet::TrackSet(const DetectorGeometry & myDetectorGeometry):
+fc::TrackSet::TrackSet(const DetectorGeometry & detectorGeometry):
   _version(1),
-  _myDetectorGeometry(myDetectorGeometry) {
+  _detectorGeometry(detectorGeometry) {
 
   // Intialize commonly used DetectorGeometry data
-  _curvatureC = _myDetectorGeometry.getCurvatureC();
+  _curvatureC = _detectorGeometry.getCurvatureC();
 
 }
 
-fc::TrackSet::TrackSet(int eventNumber, bool genTracks,const DetectorGeometry & myDetectorGeometry):
+fc::TrackSet::TrackSet(int eventNumber, bool genTracks,const DetectorGeometry & detectorGeometry):
   _version(1),
   _genTracks(genTracks),
   _eventNumber(eventNumber),
-  _myDetectorGeometry(myDetectorGeometry) {
+  _detectorGeometry(detectorGeometry) {
 
   // Intialize commonly used DetectorGeometry data
-  _curvatureC = _myDetectorGeometry.getCurvatureC();
+  _curvatureC = _detectorGeometry.getCurvatureC();
 
 }
 

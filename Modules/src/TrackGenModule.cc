@@ -8,31 +8,31 @@
 #include "TrackGenModule.hh"
 #include "TVector3.h"
 
-fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std::string& iTracksLabel, const DetectorGeometry & myDetectorGeometry, Random & myRandom):
+fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std::string& iTracksLabel, const DetectorGeometry & detectorGeometry, Random & random):
   _debugLevel(debugLevel),
   _numberOfTracks(numberOfTracks),
   _tracksLabel(iTracksLabel),
-  _myDetectorGeometry(myDetectorGeometry),
-  _myRandom(myRandom) {
+  _detectorGeometry(detectorGeometry),
+  _random(random) {
 
   // Intialize commonly used DetectorGeometry data
-  _curvatureC = _myDetectorGeometry.getCurvatureC();
+  _curvatureC = _detectorGeometry.getCurvatureC();
 
 }
 
 void fc::TrackGenModule::processEvent(fc::Event& event)
 {
-  std::unique_ptr<TrackSet> myTrackSet{ new TrackSet(event.eventNumber(),
+  std::unique_ptr<TrackSet> genTrackSet{ new TrackSet(event.eventNumber(),
 						     *(event.get<bool>("genData")),
-						     _myDetectorGeometry) };
+						     _detectorGeometry) };
 
   for (int ii_track = 0; ii_track < _numberOfTracks; ++ii_track) {
 
     Track track = generateTrack(); 
-    myTrackSet->insertTrack(track);
+    genTrackSet->insertTrack(track);
 
   } // end track loop
-  event.put(_tracksLabel,std::move(myTrackSet));
+  event.put(_tracksLabel,std::move(genTrackSet));
 }
 
 
@@ -42,9 +42,9 @@ fc::Track fc::TrackGenModule::generateTrack(){
   // Generate track data
     
   // Track pT, phi0 and charge
-  double trackPT = _myRandom.getUniformDouble(20.0,40.0);
-  int trackCharge = (_myRandom.getUniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
-  double trackPhi0 = _myRandom.getUniformDouble(-M_PI/24.0,M_PI/24.0) + M_PI/2.0;
+  double trackPT = _random.getUniformDouble(20.0,40.0);
+  int trackCharge = (_random.getUniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
+  double trackPhi0 = _random.getUniformDouble(-M_PI/24.0,M_PI/24.0) + M_PI/2.0;
  
   // Details of curvature calculation
   //using p = BqR, 
@@ -64,7 +64,7 @@ fc::Track fc::TrackGenModule::generateTrack(){
   }
 
  
-  Track track(trackCharge/trackPT,0.0,0.0,trackPhi0,0.0,_myDetectorGeometry);
+  Track track(trackCharge/trackPT,0.0,0.0,trackPhi0,0.0,_detectorGeometry);
 
  
   return track;

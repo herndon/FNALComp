@@ -31,7 +31,7 @@ fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector
 }
 
 
-fc::Track::Track(const HitSet & myHitSet, const std::vector<int> & trackHitCandidate, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, int debugLevel):
+fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, int debugLevel):
   _covMatrix(NULL),
   _detectorGeometry(detectorGeometry),
   _alpha(1.0/_detectorGeometry.getCurvatureC()){
@@ -49,8 +49,8 @@ fc::Track::Track(const HitSet & myHitSet, const std::vector<int> & trackHitCandi
 
 
     TVector3 x1 = primaryVertex;
-    TVector3 x2 = myHitSet.getHit(trackHitCandidate[2]).getHitPosition();
-    TVector3 x3 = myHitSet.getHit(trackHitCandidate[0]).getHitPosition();
+    TVector3 x2 = hitSet.getHits()[trackHitCandidate[2]].getHitPosition();
+    TVector3 x3 = hitSet.getHits()[trackHitCandidate[0]].getHitPosition();
 
 
 
@@ -72,7 +72,7 @@ fc::Track::Track(const HitSet & myHitSet, const std::vector<int> & trackHitCandi
       print();
 
 
-      _helix = FitToHelix(initialHelix,myHitSet,_trackHitMap,detectorGeometry,2);
+      _helix = FitToHelix(initialHelix,hitSet,_trackHitMap,detectorGeometry,2);
 
       //_helix.setHelix(testTrackFit1.getHelix().getHelix());
       //_helix.setAlpha(1.0/_detectorGeometry.getCurvatureC());

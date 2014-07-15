@@ -42,17 +42,17 @@ private:
   const std::string _outTracksLabel;
 
   // Detector information
-  const DetectorGeometry & _myDetectorGeometry;
+  const DetectorGeometry & _detectorGeometry;
 
   int _nLayers;
 
-  void recoTracks(TrackSet & myTrackSet, const HitSet& myHitSet);
-  void findTrack2HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & myHitSet);
-  void findTrack3HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & myHitSet);
-  void findTrack5HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & myHitSet);
+  void recoTracks(TrackSet & trackSet, const HitSet& hitSet);
+  void findTrack2HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
+  void findTrack3HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
+  void findTrack5HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
 
-  void build2HitTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & myHitSet);
-  void buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & myHitSet);
+  void build2HitTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
+  void buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
 
 
 

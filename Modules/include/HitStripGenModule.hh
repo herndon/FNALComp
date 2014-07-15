@@ -56,10 +56,10 @@ private:
   int _debugLevel;
 
   // Detector information
-  const DetectorGeometry & _myDetectorGeometry;
+  const DetectorGeometry & _detectorGeometry;
 
   // Random numbers
-  Random &  _myRandom;
+  Random &  _random;
 
   int _nLayers;
 

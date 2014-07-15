@@ -47,10 +47,10 @@ private:
   const std::string _tracksLabel;
 
   // Detector information
-  const DetectorGeometry & _myDetectorGeometry;
+  const DetectorGeometry & _detectorGeometry;
 
   // Random numbers
-  Random &  _myRandom;
+  Random &  _random;
 
   double _curvatureC;
 

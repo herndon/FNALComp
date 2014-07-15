@@ -6,30 +6,30 @@
 
 fc::HitRecoModule::HitRecoModule(int debugLevel,
 				 const std::string& iInputStripsLabel, const std::string& iOutputHitsLabel,
-				 const DetectorGeometry & myDetectorGeometry):
+				 const DetectorGeometry & detectorGeometry):
   _debugLevel(debugLevel),
   _inStripsLabel(iInputStripsLabel),
   _outHitsLabel(iOutputHitsLabel),
-  _myDetectorGeometry(myDetectorGeometry) {
+  _detectorGeometry(detectorGeometry) {
 
   // Intialize commonly used DetectorGeometry data
-  _nLayers = _myDetectorGeometry.getNSensors();
+  _nLayers = _detectorGeometry.getNSensors();
 
 }
 
 void fc::HitRecoModule::processEvent(fc::Event& event)
 {
-  Handle<StripSet> myStripSet = event.get<StripSet>(_inStripsLabel);
-  std::unique_ptr<HitSet> myHitSet( new HitSet );
+  Handle<StripSet> genStripSet = event.get<StripSet>(_inStripsLabel);
+  std::unique_ptr<HitSet> recoHitSet( new HitSet );
 
-  recoHits(*myHitSet, *myStripSet);
+  recoHits(*recoHitSet, *genStripSet);
 
-  if (_debugLevel >= 2) myHitSet->print();
+  if (_debugLevel >= 2) recoHitSet->print();
 
-  event.put(_outHitsLabel, std::move(myHitSet));
+  event.put(_outHitsLabel, std::move(recoHitSet));
 }
 
-void fc::HitRecoModule::recoHits(HitSet & myHitSet, const StripSet& myStripSet)
+void fc::HitRecoModule::recoHits(HitSet & hitSet, const StripSet& stripSet)
 {
 
   int hitNumber = 0;
@@ -37,7 +37,7 @@ void fc::HitRecoModule::recoHits(HitSet & myHitSet, const StripSet& myStripSet)
   for (int ii_layer =  0; ii_layer < _nLayers; ++ii_layer){
  
     if (_debugLevel >= 5) std::cout << "HitReco layer: " << ii_layer << std::endl;
-    recoHitsLayer(myHitSet, myStripSet,ii_layer,hitNumber);
+    recoHitsLayer(hitSet, stripSet,ii_layer,hitNumber);
 
   } // end layer loop
 
@@ -45,7 +45,7 @@ void fc::HitRecoModule::recoHits(HitSet & myHitSet, const StripSet& myStripSet)
 }
 
 
-void fc::HitRecoModule::recoHitsLayer(HitSet& myHitSet, const StripSet & myStripSet, int layer, int & hitNumber){
+void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet, int layer, int & hitNumber){
 
 
   std::vector<int> stripAdcs;
@@ -54,13 +54,13 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& myHitSet, const StripSet & myStrip
   double stripHitPosition;
   double hitPosition[3];
 
-  const layerStripMap myLayerStripMap = myStripSet.getLayerStripMap(layer);
-  layerStripMap::const_iterator  layerStripMapIter = myLayerStripMap.begin();
-  layerStripMap::const_iterator  layerStripMapIterEnd = myLayerStripMap.end();
+  const layerStripMap layerStripMap = stripSet.getLayerStripMap(layer);
+  layerStripMap::const_iterator  layerStripMapIter = layerStripMap.begin();
+  layerStripMap::const_iterator  layerStripMapIterEnd = layerStripMap.end();
 
   while (layerStripMapIter != layerStripMapIterEnd) {
 
-    findCluster(initialStrip,layer,stripAdcs,layerStripMapIter,layerStripMapIterEnd,myStripSet);
+    findCluster(initialStrip,layer,stripAdcs,layerStripMapIter,layerStripMapIterEnd,stripSet);
 
     stripHitPosition = calculateStripHitPosition(initialStrip,stripAdcs);
 
@@ -70,7 +70,7 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& myHitSet, const StripSet & myStrip
 
     Hit hit(hitPosition,layer,numberStrips);
 
-    myHitSet.insertHit(hit);
+    hitSet.insertHit(hit);
 
     // calculate hit postition function using vector of strips?
     // create cluster?
@@ -86,32 +86,32 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& myHitSet, const StripSet & myStrip
 
 void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<int> & stripAdcVector,
 				    layerStripMap::const_iterator & layerStripMapIter,
-				    layerStripMap::const_iterator & layerStripMapIterEnd,const StripSet & myStripSet){
+				    layerStripMap::const_iterator & layerStripMapIterEnd,const StripSet & stripSet){
 
 
   if (_debugLevel >= 5) std::cout << "findCluster " << std::endl;
 
-  while (layerStripMapIter != layerStripMapIterEnd && myStripSet.getStripAdc(layerStripMapIter) < _myDetectorGeometry.getSensor(layer)._threshold){
+  while (layerStripMapIter != layerStripMapIterEnd && stripSet.getStripAdc(layerStripMapIter) < _detectorGeometry.getSensor(layer)._threshold){
     layerStripMapIter++;
   }
 
   if (layerStripMapIter == layerStripMapIterEnd) return;
 
-  initialStrip = myStripSet.getStripNumber(layerStripMapIter);
+  initialStrip = stripSet.getStripNumber(layerStripMapIter);
 
   if (_debugLevel >= 5) std::cout << "Initial strip: " << initialStrip << std::endl;
 
   int intermediateStrip = initialStrip;
 
-  stripAdcVector.push_back(myStripSet.getStripAdc(layerStripMapIter));
+  stripAdcVector.push_back(stripSet.getStripAdc(layerStripMapIter));
 
   ++layerStripMapIter;
 
 
-  while ( layerStripMapIter != layerStripMapIterEnd && (myStripSet.getStripNumber(layerStripMapIter) == (intermediateStrip + 1)) && (myStripSet.getStripAdc(layerStripMapIter) >= _myDetectorGeometry.getSensor(layer)._threshold  )) {
+  while ( layerStripMapIter != layerStripMapIterEnd && (stripSet.getStripNumber(layerStripMapIter) == (intermediateStrip + 1)) && (stripSet.getStripAdc(layerStripMapIter) >= _detectorGeometry.getSensor(layer)._threshold  )) {
 
-    intermediateStrip = myStripSet.getStripNumber(layerStripMapIter);
-    stripAdcVector.push_back(myStripSet.getStripAdc(layerStripMapIter));
+    intermediateStrip = stripSet.getStripNumber(layerStripMapIter);
+    stripAdcVector.push_back(stripSet.getStripAdc(layerStripMapIter));
     ++layerStripMapIter;
     if (_debugLevel >= 5) std::cout << "Intermediate strip: " << intermediateStrip  << std::endl;
     
@@ -144,9 +144,9 @@ double fc::HitRecoModule::calculateStripHitPosition(int initialStrip,const std::
 
 void  fc::HitRecoModule::calculateHitPosition(int layer, double stripHitPosition, double * hitPosition){
 
-  hitPosition[0] =  (stripHitPosition - (_myDetectorGeometry.getSensor(layer)._nStrips/2.0))*_myDetectorGeometry.getSensor(layer)._stripPitch 
-    + _myDetectorGeometry.getSensor(layer)._center[0];
-  hitPosition[1] = _myDetectorGeometry.getSensor(layer)._center[1];
-  hitPosition[2] = _myDetectorGeometry.getSensor(layer)._center[2];
+  hitPosition[0] =  (stripHitPosition - (_detectorGeometry.getSensor(layer)._nStrips/2.0))*_detectorGeometry.getSensor(layer)._stripPitch 
+    + _detectorGeometry.getSensor(layer)._center[0];
+  hitPosition[1] = _detectorGeometry.getSensor(layer)._center[1];
+  hitPosition[2] = _detectorGeometry.getSensor(layer)._center[2];
 
 }

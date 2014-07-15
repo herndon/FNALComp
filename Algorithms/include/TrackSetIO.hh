@@ -32,13 +32,13 @@ private:
   int _version;
 
   // Detector information
-  const DetectorGeometry & _myDetectorGeometry;
+  const DetectorGeometry & _detectorGeometry;
 
   double _curvatureC;
 
 public:
 
-  TrackSetIO(const DetectorGeometry & myDetectorGeometry);
+  TrackSetIO(const DetectorGeometry & detectorGeometry);
   ~TrackSetIO() {};
  
   void writeEvent(const TrackSet &, std::ofstream&) const; //!< Write all track information in the event to std::ofstream file

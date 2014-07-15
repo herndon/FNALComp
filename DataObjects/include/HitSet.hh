@@ -39,8 +39,6 @@ public:
 
   const std::vector<Hit> & getHits(void) const {return _hitSet;};
 
-  const Hit & getHit(int hitNumber) const {return _hitSet[hitNumber]; };
-
   bool getGenHits(void) const {return _genHits;}
   int getVersion(void) const {return _version;}
 

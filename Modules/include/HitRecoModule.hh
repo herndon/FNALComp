@@ -41,7 +41,7 @@ private:
   const std::string _outHitsLabel;
 
   // Detector information
-  const DetectorGeometry & _myDetectorGeometry;
+  const DetectorGeometry & _detectorGeometry;
 
   int _nLayers;
 

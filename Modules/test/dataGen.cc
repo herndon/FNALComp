@@ -38,43 +38,43 @@ int main ()
 
   // Configure genData using general Config class
   std::ifstream configfile("configfile.txt");
-  fc::Config myConfig(configfile,genData);
+  fc::Config config(configfile,genData);
 
  // Intialize Objects and Modules that are persistant
  
  // Initialie random number generator with seed = 1
-  fc::Random myRandom(myConfig.getSeed());
+  fc::Random random(config.getSeed());
 
   // DetectorGeometry
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
-  fc::DetectorGeometry myDetectorGeometry(detectorgeometryfile);  
+  fc::DetectorGeometry detectorGeometry(detectorgeometryfile);  
   // files are closed by the default destructor
-  if (debugLevel >= 2) myDetectorGeometry.printDetectorGeometry();
+  if (debugLevel >= 2) detectorGeometry.printDetectorGeometry();
 
   // Input and output files and modules
   std::ofstream genoutputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
 
   // Instantiate the class which handles the details of processing the events
-  fc::EventProcessor processor(new fc::CountEventsSource(myConfig.getNumberEvents(),genData));
+  fc::EventProcessor processor(new fc::CountEventsSource(config.getNumberEvents(),genData));
  
   // Instantiate and initialize Module classes
   //  the order the modules are passed to the EventProcessor
   //  is th eorder the modules will run
-  processor.addModule( new fc::TrackGenModule(debugLevel,myConfig.getNumberTracks(),
+  processor.addModule( new fc::TrackGenModule(debugLevel,config.getNumberTracks(),
 					      "genTracks", //label used for tracks put into the event
-					      myDetectorGeometry,myRandom));
+					      detectorGeometry,random));
   processor.addModule( new fc::HitStripGenModule(debugLevel,
 						 "genTracks",//get these tracks
 						 "tracksWithHits", //create these tracks
 						 "hits", //create these hits
 						 "strips", //create these strips
-						 myDetectorGeometry,myRandom) );
+						 detectorGeometry,random) );
   processor.addModule( new fc::DataOutputModule(debugLevel,genoutputeventdatafile,
 						"tracksWithHits", //get these tracks
 						"hits", //get these hits
 						"strips", //get these strips
-						myDetectorGeometry));
+						detectorGeometry));
 
   // Event loop over module classes
   processor.processEvents();

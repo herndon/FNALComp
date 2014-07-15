@@ -36,16 +36,16 @@ int main ()
 
   // Configure genData using general Config class
   std::ifstream configfile("configfile.txt");
-  fc::Config myConfig(configfile,genData);
+  fc::Config config(configfile,genData);
 
 
   // Intialize Objects and Modules that are persistant
 
   // DetectorGeomergy
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
-  fc::DetectorGeometry myDetectorGeometry(detectorgeometryfile);  
+  fc::DetectorGeometry detectorGeometry(detectorgeometryfile);  
   // files are closed by the default destructor
-  if (debugLevel >= 2) myDetectorGeometry.printDetectorGeometry();
+  if (debugLevel >= 2) detectorGeometry.printDetectorGeometry();
 
   // Input and output files
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
@@ -55,7 +55,7 @@ int main ()
                                                "tracksWithHits", //get these tracks from file
                                                 "hits", //get these hits from file
                                                 "strips", //get these strips
-                                                myDetectorGeometry));
+                                                detectorGeometry));
 
   // Instantiate and initialize Module classes
   //  the order the modules are passed to the EventProcessor

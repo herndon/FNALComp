@@ -36,14 +36,14 @@ private:
   int _eventNumber;
 
   // Detector information
-  const DetectorGeometry & _myDetectorGeometry;
+  const DetectorGeometry & _detectorGeometry;
 
   double _curvatureC;
 
 public:
 
-  TrackSet(const DetectorGeometry & myDetectorGeometry);
-  TrackSet(int,bool,const DetectorGeometry & myDetectorGeometry);
+  TrackSet(const DetectorGeometry & detectorGeometry);
+  TrackSet(int,bool,const DetectorGeometry & detectorGeometry);
   ~TrackSet() {};
 
   const trackSet & getTracks(void) const { return _trackSet;};

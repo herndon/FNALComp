@@ -10,9 +10,9 @@
 fc::HitCompareModule::HitCompareModule(int debugLevel, 
 				       const std::string& inputGenHitsLabel,
 				       const std::string& inputRecHitsLabel,
-				       const DetectorGeometry & myDetectorGeometry, TFile * outputrootfile):
+				       const DetectorGeometry & detectorGeometry, TFile * outputrootfile):
   _debugLevel(debugLevel),
-  _myDetectorGeometry(myDetectorGeometry),
+  _detectorGeometry(detectorGeometry),
   _genHitsLabel(inputGenHitsLabel),
   _recHitsLabel(inputRecHitsLabel),
   _outputrootfile(outputrootfile) {
@@ -20,7 +20,7 @@ fc::HitCompareModule::HitCompareModule(int debugLevel,
 
   _outputrootfile = outputrootfile;
   // Intialize commonly used DetectorGeometry data
-  _nLayers = _myDetectorGeometry.getNSensors();
+  _nLayers = _detectorGeometry.getNSensors();
 
   _roothistogramlist = new TList();
   initializeHistograms();
@@ -31,18 +31,16 @@ fc::HitCompareModule::HitCompareModule(int debugLevel,
 
 void fc::HitCompareModule::processEvent(Event& event)
 {
- Handle<HitSet> myGenHitSet = event.get<HitSet>(_genHitsLabel);
- Handle<HitSet> myRecoHitSet = event.get<HitSet>(_recHitsLabel);
+ Handle<HitSet> genHitSet = event.get<HitSet>(_genHitsLabel);
+ Handle<HitSet> recoHitSet = event.get<HitSet>(_recHitsLabel);
 
- compareHits(*myGenHitSet,*myRecoHitSet);
+ compareHits(*genHitSet,*recoHitSet);
 
   // Function to histogram results
 
-  //  if (_debugLevel >= 2) myHitSet.print();
-
 }
 
-void fc::HitCompareModule::compareHits(const HitSet & myGenHitSet, const HitSet& myRecoHitSet)
+void fc::HitCompareModule::compareHits(const HitSet & genHitSet, const HitSet& recoHitSet)
 {
 
 
@@ -50,11 +48,11 @@ void fc::HitCompareModule::compareHits(const HitSet & myGenHitSet, const HitSet&
   double deltaPosition;
   double tempDeltaPosition;
 
-  for (hitSet::const_iterator genHitIter =  myGenHitSet.getHits().begin(); genHitIter !=  myGenHitSet.getHits().end(); ++genHitIter){
+  for (hitSet::const_iterator genHitIter =  genHitSet.getHits().begin(); genHitIter !=  genHitSet.getHits().end(); ++genHitIter){
 
     deltaPosition = 999.0;
 
-    for (hitSet::const_iterator recoHitIter = myRecoHitSet.getHits().begin(); recoHitIter != myRecoHitSet.getHits().end(); ++recoHitIter){
+    for (hitSet::const_iterator recoHitIter = recoHitSet.getHits().begin(); recoHitIter != recoHitSet.getHits().end(); ++recoHitIter){
 
 
       if (genHitIter->getLayer()==recoHitIter->getLayer()) {

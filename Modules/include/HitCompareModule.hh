@@ -44,7 +44,7 @@ private:
   int _debugLevel;
 
   // Detector information
-  const DetectorGeometry & _myDetectorGeometry;
+  const DetectorGeometry & _detectorGeometry;
 
   int _nLayers;
 

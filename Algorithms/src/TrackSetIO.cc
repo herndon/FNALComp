@@ -6,12 +6,12 @@
 #include <limits>
 
 // !!!!! Do we need this one
-fc::TrackSetIO::TrackSetIO(const DetectorGeometry & myDetectorGeometry):
+fc::TrackSetIO::TrackSetIO(const DetectorGeometry & detectorGeometry):
   _version(1),
-  _myDetectorGeometry(myDetectorGeometry) {
+  _detectorGeometry(detectorGeometry) {
 
   // Intialize commonly used DetectorGeometry data
-  _curvatureC = _myDetectorGeometry.getCurvatureC();
+  _curvatureC = _detectorGeometry.getCurvatureC();
 
 }
 
@@ -121,7 +121,7 @@ void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
 
     TVector3 dr(x3[0],x3[1],x3[2]);
  
-    Track track(p,charge,dr,_myDetectorGeometry);
+    Track track(p,charge,dr,_detectorGeometry);
     
     trackdata >> numberHits;
  

@@ -38,9 +38,9 @@ int main ()
 
   // DetectorGeomergy
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
-  fc::DetectorGeometry myDetectorGeometry(detectorgeometryfile);  
+  fc::DetectorGeometry detectorGeometry(detectorgeometryfile);  
   // files are closed by the default destructor
-  if (debugLevel >= 2) myDetectorGeometry.printDetectorGeometry();
+  if (debugLevel >= 2) detectorGeometry.printDetectorGeometry();
 
   // Input and output files
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
@@ -53,11 +53,11 @@ int main ()
                                                "tracksWithHits", //get these tracks from file
                                                 "genHits", //get these hits from file
                                                 "genStrips", //get these strips
-                                                myDetectorGeometry));
+                                                detectorGeometry));
 
   // Instantiate and initialize Module classes
-  processor.addModule( new fc::HitRecoModule(debugLevel,"genStrips", "recoHits", myDetectorGeometry) );
-  processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", myDetectorGeometry,outputrootfile) );
+  processor.addModule( new fc::HitRecoModule(debugLevel,"genStrips", "recoHits", detectorGeometry) );
+  processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", detectorGeometry,outputrootfile) );
 
 
   // Event loop over module classes
