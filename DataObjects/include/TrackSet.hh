@@ -3,7 +3,7 @@
 //============================================================================
 // TrackSet.hh
 // header with class definition of the TrackSet
-// A map map<int,Track>
+// A vector of Tracks
 // Map elements are int,Track pairs of track number (Key) and Track (value) information 
 // See <A HREF="doc/notes/Track.pdf">Track.pdf</A> for more information
 //
@@ -18,6 +18,7 @@
 
 namespace fc {
 
+  typedef std::vector<Track> trackSet;
 
 ///
 /// Class TrackSet: 
@@ -29,7 +30,7 @@ class TrackSet {
 private:
 
 
-  std::vector<Track> _trackVector;
+  trackSet _trackSet;
   int _version;
   bool _genTracks;
   int _eventNumber;
@@ -45,11 +46,8 @@ public:
   TrackSet(int,bool,const DetectorGeometry & myDetectorGeometry);
   ~TrackSet() {};
 
-  const std::vector<Track>& getConstTrackVector(void) const { return _trackVector;};
-  std::vector<Track>& getTrackVector(void) {return _trackVector;};
-
-  const Track& getConstTrack(int trackNumber) const { return _trackVector[trackNumber];};
-  Track & getTrack(int trackNumber) { return _trackVector[trackNumber];};
+  const trackSet & getTracks(void) const { return _trackSet;};
+  trackSet& getTracks(void) {return _trackSet;};
 
   void insertTrack(Track);
 

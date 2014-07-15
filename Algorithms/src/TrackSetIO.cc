@@ -31,12 +31,12 @@ void fc::TrackSetIO::writeEvent(const TrackSet & trackSet, std::ofstream & track
   trackdata << trackSet.getVersion() << std::endl;
   trackdata << trackSet.getGenTracks() << std::endl;
 
-  std::vector<Track>::size_type numberTracks = trackSet.getConstTrackVector().size();
+  trackSet::size_type numberTracks = trackSet.getTracks().size();
   trackdata << numberTracks << std::endl;
 
   int trackNumber;
 
-  for (std::vector<Track>::const_iterator trackIter =  trackSet.getConstTrackVector().begin(); trackIter != trackSet.getConstTrackVector().end(); ++trackIter, ++trackNumber){
+  for (trackSet::const_iterator trackIter =  trackSet.getTracks().begin(); trackIter != trackSet.getTracks().end(); ++trackIter, ++trackNumber){
 
     // Extract a copy of the lorentzVector since functions in it are not const
     TLorentzVector lorentzVector = trackIter->getLorentzVector();

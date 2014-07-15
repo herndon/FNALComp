@@ -32,24 +32,23 @@ fc::HitStripGenModule::HitStripGenModule(int debugLevel,
 
 void fc::HitStripGenModule::processEvent(fc::Event & event)
 {
-  auto trackSet = event.get<fc::TrackSet>(_inTracksLabel);
+  auto inputTrackSet = event.get<fc::TrackSet>(_inTracksLabel);
   auto genData = event.get<bool>("genData");
-  std::unique_ptr<TrackSet> myTrackSet{ new TrackSet(*trackSet) };
+  std::unique_ptr<TrackSet> outputTrackSet{ new TrackSet(*inputTrackSet) };
   
   std::unique_ptr<HitSet> myHitSet{ new HitSet(*genData) };
   std::unique_ptr<StripSet> myStripSet{ new StripSet(*genData) };
 
-  std::vector<Track> & myTrackVector = myTrackSet->getTrackVector();
   int trackNumber = 0;
   int hitNumber = 0;
 
-  for (std::vector<Track>::iterator trackIter =  myTrackVector.begin(); trackIter != myTrackVector.end(); ++trackIter,++trackNumber){
+  for (trackSet::iterator trackIter =  outputTrackSet->getTracks().begin(); trackIter != outputTrackSet->getTracks().end(); ++trackIter,++trackNumber){
  
     makeHitsStrips(*myHitSet, *myStripSet,*trackIter,trackNumber,hitNumber);
 
    } // end track loop
 
-  event.put(_outTracksLabel, std::move(myTrackSet) );
+  event.put(_outTracksLabel, std::move(outputTrackSet) );
   event.put(_outHitsLabel, std::move(myHitSet));
   event.put(_outStripsLabel,std::move(myStripSet));
 }

@@ -23,20 +23,20 @@ fc::TrackSet::TrackSet(int eventNumber, bool genTracks,const DetectorGeometry & 
 
 
 void fc::TrackSet::insertTrack(Track track) {
-  _trackVector.push_back(track);
+  _trackSet.push_back(track);
 }
 
 
 
 void fc::TrackSet::print(void) const{
 
-  std::vector<Track>::size_type numberTracks =_trackVector.size();
+  trackSet::size_type numberTracks =_trackSet.size();
 
   std::cout << "Number Tracks: " << numberTracks << std::endl; 
 
   int trackNumber = 0;
 
-  for (std::vector<Track>::const_iterator trackIter =  _trackVector.begin(); trackIter != _trackVector.end(); ++trackIter,++trackNumber){
+  for (trackSet::const_iterator trackIter =  _trackSet.begin(); trackIter != _trackSet.end(); ++trackIter,++trackNumber){
  
     std::cout << "Track number: " << trackNumber << std::endl;
     trackIter->print(); 
