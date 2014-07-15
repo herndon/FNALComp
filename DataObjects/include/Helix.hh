@@ -50,6 +50,7 @@ public:
 private:
 
   TVectorD _helix;
+  double _alpha;
 
 public:
 
@@ -57,12 +58,7 @@ public:
 
 
   Helix();
-  Helix(double kappa, double dr, double dz, double phi0, double tanl);
-  //Helix(const TVectorD& helix);
-
-  // more complex constructors are handled by the TrackMake class
-
-  Helix(const Helix&);
+  Helix(double kappa, double dr, double dz, double phi0, double tanl, double alpha);
   
   // Destructor
   ~Helix(){};
@@ -70,7 +66,7 @@ public:
 
   // Get track parameters
 
-  TVectorD getHelix() const {return _helix;}
+  const TVectorD& getHelix() const {return _helix;}
 
   double getDr() const {return _helix(0);}
   double getPhi0() const {return _helix(1);}
@@ -78,9 +74,12 @@ public:
   double getDz() const {return _helix(3);}
   double getTanL() const {return _helix(4);}
 
+  double getAlpha() const {return _alpha;}
+
 
   // Set helix
   void setHelix(const TVectorD& helix) {_helix = helix;}
+  void setAlpha(double alpha) {_alpha = alpha;}
 
 
 };

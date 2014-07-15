@@ -1,33 +1,27 @@
-#ifndef TrackFit_hh
-#define TrackFit_hh
+#ifndef InitializeHelix_hh
+#define InitializeHelix_hh
 //============================================================================
-// TrackFit.hh
-// header with class definition of the TrackFit for reconstructed tracks
+// InitializeHelix.hh
+// header with class definition of the InitializeHelix from 3 points
 // See <A HREF="doc/notes/Track.pdf">TrackF.pdf</A> for more information  !!!!! not done yet
 //
 //
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
-// 2014-07-08
+// 2014-07-13
 //============================================================================
 
 #include "TVector3.h"
-#include "Helix.hh"
-#include <map>
 
-class DetectorGeometry;
-class HitSet;
 class Helix;
-
+class DetectorGeometry;
 
 namespace fc {
 
+  Helix initializeHelix(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const DetectorGeometry & detectorGeometry);
 
-
-  Helix FitToHelix(Helix& initialHelix, const HitSet& hitSet, const std::map<int, int>& _trackHitMap, const DetectorGeometry& detectorGeometry,int _debugLevel);
-
-
+  
 } // end namescape fc
 
-#endif // TrackFit_hh
+#endif // InitializeHelix_hh
 

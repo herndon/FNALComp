@@ -3,12 +3,12 @@
 #include<stdlib.h>
 #include<iostream>
 #include<cmath>
-#include "DetectorGeometry.hh"
 #include "Track.hh"
 #include "TrackSet.hh"
-#include "TrackFit.hh"
+#include "HelixIntersections.hh"
 #include "HitSet.hh"
 #include "StripSet.hh"
+#include "DetectorGeometry.hh"
 #include "HitStripGenModule.hh"
 
 fc::HitStripGenModule::HitStripGenModule(int debugLevel, 
@@ -78,8 +78,8 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& myHitSet, StripSet & myStripS
 
 void fc::HitStripGenModule::calculateTrackSensorIntersection(const Track & track,int layer, TVector3 & hitPosition){
 
-  TrackFit trackFit(track.getHelix(),_myDetectorGeometry);
-  trackFit.intersectWithLayer(hitPosition,layer,_myDetectorGeometry);
+  //TrackFit trackFit(track.getHelix(),_myDetectorGeometry);
+  fcf::intersectWithLayer(track.getHelix(),hitPosition,layer,_myDetectorGeometry);
 
 }
 

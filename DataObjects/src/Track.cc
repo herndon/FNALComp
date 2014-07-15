@@ -7,14 +7,15 @@
 #include "Track.hh"
 #include "Helix.hh"
 #include "TrackFit.hh"
+#include "InitializeHelix.hh"
 
 
 // Helix parameter initialization
 fc::Track::Track(double kappa, double dr, double dz, double phi0, double tanL, const DetectorGeometry & detectorGeometry):
-  _helix(dr,phi0+M_PI/2.0,-1.0*kappa,dz,tanL),
+  _helix(dr,phi0+M_PI/2.0,-1.0*kappa,dz,tanL,1.0/detectorGeometry.getCurvatureC()),
   _covMatrix(NULL),
   _detectorGeometry(detectorGeometry),
-  _alpha(1.0/_detectorGeometry.getCurvatureC()){
+  _alpha(1.0/detectorGeometry.getCurvatureC()){
 
 
 
@@ -22,10 +23,10 @@ fc::Track::Track(double kappa, double dr, double dz, double phi0, double tanL, c
 
 // Lorentz vector initialization
 fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, const DetectorGeometry & detectorGeometry):
-  _helix(dr.Perp(),lorentzVector.Phi()+M_PI/2.0,-1.0*charge/lorentzVector.Pt(),dr.z(),lorentzVector.Pz()/ lorentzVector.Pt()),
+  _helix(dr.Perp(),lorentzVector.Phi()+M_PI/2.0,-1.0*charge/lorentzVector.Pt(),dr.z(),lorentzVector.Pz()/ lorentzVector.Pt(),1.0/detectorGeometry.getCurvatureC()),
   _covMatrix(NULL),
   _detectorGeometry(detectorGeometry),
-  _alpha(1.0/_detectorGeometry.getCurvatureC()) {
+  _alpha(1.0/detectorGeometry.getCurvatureC()) {
 
 }
 
@@ -53,24 +54,29 @@ fc::Track::Track(const HitSet & myHitSet, const std::vector<int> & trackHitCandi
 
 
 
-    TrackFit testTrackFit1(x1,x2,x3,detectorGeometry,debugLevel);
+    Helix initialHelix = initializeHelix(x1,x2,x3,detectorGeometry);
+    initialHelix.setAlpha(1.0/_detectorGeometry.getCurvatureC());
+    _helix = initialHelix;
 
+    //TrackFit testTrackFit1(initialHelix,detectorGeometry);
 
-    testTrackFit1.insertHit(trackHitCandidate[0],4);
-    testTrackFit1.insertHit(trackHitCandidate[1],3);
-    testTrackFit1.insertHit(trackHitCandidate[2],2);
-    testTrackFit1.insertHit(trackHitCandidate[3],1);
-    testTrackFit1.insertHit(trackHitCandidate[4],0);
+    //testTrackFit1.insertHit(trackHitCandidate[0],4);
+    //testTrackFit1.insertHit(trackHitCandidate[1],3);
+    //testTrackFit1.insertHit(trackHitCandidate[2],2);
+    //testTrackFit1.insertHit(trackHitCandidate[3],1);
+    //testTrackFit1.insertHit(trackHitCandidate[4],0);
 
 
      std::cout << "Track before fit" << std::endl;
       //print(); 
-      testTrackFit1.print();
+      print();
 
 
-    testTrackFit1.FitToHelix(myHitSet,detectorGeometry,false);
+      _helix = FitToHelix(initialHelix,myHitSet,_trackHitMap,detectorGeometry,2);
 
-    _helix.setHelix(testTrackFit1.getHelix().getHelix());
+      //_helix.setHelix(testTrackFit1.getHelix().getHelix());
+      //_helix.setAlpha(1.0/_detectorGeometry.getCurvatureC());
+
 
   // Set Initial covariance matrix
   if (_covMatrix) { delete _covMatrix;}
