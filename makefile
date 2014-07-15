@@ -1,10 +1,12 @@
 vpath %.cc = $(wildcard */src)
 LIB_PATH = lib/
 MLIB_PATH = mlib/
+TEST_PATH = test/
 OBJSRCS =  $(wildcard */src/*.cc)
 OBJS = $(addprefix  $(LIB_PATH),$(notdir $(OBJSRCS:.cc=.o)))
-MAINSRCS = $(wildcard */test/*.cc)
-MAINEXES = $(basename $(notdir $(MAINSRCS)))
+MAINEXES = $(basename $(notdir  $(wildcard */test/*.cc)))
+TESTTARGETS = $(addsuffix  .test,$(MAINEXES))
+
 INCDIRS =   $(foreach DIR,$(wildcard */include/),-I$(DIR))
 CC = g++
 DEBUG = -g -O0
@@ -18,7 +20,7 @@ all: $(MAINEXES)
 
 -include  $(LIB_PATH)*.d
 
-.PRECIOUS: lib/%.o mlib/%.o
+.PRECIOUS: $(LIB_PATH)/%.o $(MLIB_PATH)/%.o
 
 $(LIB_PATH)%.o: %.cc
 	$(CC) $(CFLAGS) -MMD -c $(INCDIRS) $< -o $@
@@ -26,5 +28,11 @@ $(LIB_PATH)%.o: %.cc
 $(MLIB_PATH)%.o: */test/%.cc
 	$(CC) $(CFLAGS) -MMD -c $(INCDIRS) $< -o $@
 
+test: $(TESTTARGETS)
+
+%.test: 
+	./$* > testlog_$*
+	diff $(TEST_PATH)log_$* testlog_$*
+
 clean:
-	\rm *~ */*~ */*/*~ lib/*.o lib/*.d mlib/*.d mlib/*.o dataGen dataRead hitReco trackReco
+	\rm *~ */*~ */*/*~ $(LIB_PATH)/*.o $(LIB_PATH)/*.d $(MLIB_PATH)/*.o $(MLIB_PATH)/*.d dataGen dataRead hitReco trackReco testlog*
