@@ -19,6 +19,7 @@
 
 class Track;
 class TrackSet;
+class TH1D;
 
 ///
 /// Class TrackGenModule: Module for generating tracks
@@ -53,6 +54,8 @@ private:
   Random &  _random;
 
   double _curvatureC;
+
+  TH1D* _hPt;
 
   Track generateTrack();
 

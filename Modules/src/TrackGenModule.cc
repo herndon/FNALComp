@@ -6,17 +6,24 @@
 #include "Track.hh"
 #include "TrackSet.hh"
 #include "TrackGenModule.hh"
+#include "TH1D.h"
 #include "TVector3.h"
+#include "UniqueRootDirectory.hh"
 
 fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std::string& iTracksLabel, const DetectorGeometry & detectorGeometry, Random & random):
   _debugLevel(debugLevel),
   _numberOfTracks(numberOfTracks),
   _tracksLabel(iTracksLabel),
   _detectorGeometry(detectorGeometry),
-  _random(random) {
+  _random(random),
+  _hPt(nullptr)
+{
 
   // Intialize commonly used DetectorGeometry data
   _curvatureC = _detectorGeometry.getCurvatureC();
+
+  UniqueRootDirectory tDir( "TrackGen" );
+  _hPt = new TH1D ( "Pt", "Pt of Generated Track; GeV; N", 100, 0., 100.);
 
 }
 
@@ -43,6 +50,7 @@ fc::Track fc::TrackGenModule::generateTrack(){
     
   // Track pT, phi0 and charge
   double trackPT = _random.getUniformDouble(20.0,40.0);
+  _hPt->Fill(trackPT);
   int trackCharge = (_random.getUniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
   double trackPhi0 = _random.getUniformDouble(-M_PI/24.0,M_PI/24.0) + M_PI/2.0;
  
