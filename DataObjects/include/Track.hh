@@ -95,7 +95,7 @@ public:
   double getSigmaTanL() const {return std::sqrt(_covMatrix(4,4));}
 
   double getChi2() const {return _chi2;}
-  int ndof() const {return _nDof;}
+  int getNDof() const {return _nDof;}
 
   // Hit/measurement point information
 

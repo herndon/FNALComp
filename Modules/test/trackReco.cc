@@ -67,7 +67,7 @@ int main ()
 
   // Instantiate and initialize Module classes
   processor.addModule( new fc::HitRecoModule(debugLevel,"genStrips", "recoHits", detectorGeometry));
-  //processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", detectorGeometry,rootFile));
+  processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", detectorGeometry));
   processor.addModule( new fc::TrackRecoModule(debugLevel, "recoHits", "recoTracks", detectorGeometry) );
   processor.addModule( new fc::TrackCompareModule(debugLevel, "tracksWithHits", "recoTracks", detectorGeometry) );
 

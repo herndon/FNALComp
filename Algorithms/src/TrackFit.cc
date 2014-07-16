@@ -280,7 +280,7 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
   std::cout << "chi2 " << chi2Best << std::endl;
 
   workingHelix.setHelix(helixBest);
-  finalCovMatrix = d2chi2dHCdHCbest.Invert();
+  finalCovMatrix = d2chi2dHCdHCbest.Invert()*(1.0/nHits);
   finalChi2 = chi2Best;
   finalNDof = ndof;
   return workingHelix;
