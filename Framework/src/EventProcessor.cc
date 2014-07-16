@@ -3,6 +3,9 @@
 #include "Module.hh"
 #include "Source.hh"
 #include "Exception.hh"
+
+#include "TFile.h"
+
 #include <iostream>
 
 void fc::EventProcessor::addModule(Module* iModule) {
@@ -37,4 +40,10 @@ void fc::EventProcessor::endJob() {
       std::cerr<<"caught std::exception: "<<iException.what()<<"\n";
     }
   }
+  endRoot();
+}
+
+void fc::EventProcessor::endRoot(){
+  _rootFile->Write();
+  _rootFile->Close();
 }
