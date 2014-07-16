@@ -11,6 +11,7 @@
 //============================================================================
 #include <fstream>
 #include <iostream>
+//#include <stream>
 
 namespace fc {
 
@@ -32,6 +33,8 @@ public:
   int getNumberEvents() const {return _numberEvents;}; //!< Returns number of events to generate
   int getNumberTracks() const {return _numberTracks;}; //!< Returns number of tracks to generate per event
 
+  std::string const& getRootFileName() const { return _rootFileName; } //!< Returns the name of the root file to be created.
+
   void printConfig(void) const;
 
 
@@ -41,6 +44,7 @@ private:
   int _numberEvents;
   int _numberTracks;
   int _seed;
+  std::string _rootFileName;
   
   void _initConfig(std::ifstream&);
 

@@ -35,9 +35,18 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
 	configfile >> _numberTracks;
       } else if (configString == "Seed") {
 	configfile >> _seed;
+      } else if (configString == "RootFileName") {
+	configfile >> _rootFileName;
       } else {
-	throw Exception("Config::_initConfig: Unrecongnized parameter in configfile.txt");
+	throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
       }
+    } else {
+      if (configString == "RootFileName") {
+	configfile >> _rootFileName;
+      } else {
+	throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
+      }
+
     }
 
   } // endl while loop through configfile
