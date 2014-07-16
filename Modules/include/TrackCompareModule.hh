@@ -15,8 +15,6 @@
 
 class Track;
 class TrackSet;
-class TFile;
-class TList;
 class TH1F;
 
 namespace fc {
@@ -31,7 +29,7 @@ class TrackCompareModule : public Module {
 public:
 
   TrackCompareModule(int, const std::string& iInputGenTracksLabel, const std::string& iInputRecTracksLabel,
-		     const DetectorGeometry &, TFile *);
+		     const DetectorGeometry & );
   ~TrackCompareModule() {};
 
   void processEvent(fc::Event&) override;
@@ -58,9 +56,6 @@ private:
   void fillHistograms(const TVectorD &);
 
   // Histograms
-
-  TFile * _outputrootfile;
-  TList * _roothistogramlist;
 
   TH1F * deltaD0;
   TH1F * deltaPhi0;

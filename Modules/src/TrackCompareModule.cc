@@ -5,23 +5,18 @@
 #include "Track.hh"
 #include "TrackSet.hh"
 #include "TrackCompareModule.hh"
-#include "TFile.h"
 #include "TH1F.h"
+#include "UniqueRootDirectory.hh"
 
 fc::TrackCompareModule::TrackCompareModule(int debugLevel, 
 				       const std::string& inputGenTracksLabel,
 				       const std::string& inputRecTracksLabel,
-				       const DetectorGeometry & detectorGeometry, TFile * outputrootfile):
+				       const DetectorGeometry & detectorGeometry ):
   _debugLevel(debugLevel),
   _detectorGeometry(detectorGeometry),
   _genTracksLabel(inputGenTracksLabel),
-  _recTracksLabel(inputRecTracksLabel),
-  _outputrootfile(outputrootfile) {
+  _recTracksLabel(inputRecTracksLabel){
 
-
-  _outputrootfile = outputrootfile;
-
-  _roothistogramlist = new TList();
   initializeHistograms();
 
 
@@ -30,33 +25,13 @@ fc::TrackCompareModule::TrackCompareModule(int debugLevel,
 
 void fc::TrackCompareModule::initializeHistograms(){
 
+  UniqueRootDirectory tdir("TrackCompare");
 
-  deltaD0 = new TH1F("TrackDeltaD0", "Delta d0",100, -0.001, 0.001);
-  deltaD0->GetXaxis()->SetTitle("delta d0 (m)");
-  deltaD0->GetYaxis()->SetTitle("N");
-  _roothistogramlist->Add(deltaD0);
-
-  deltaPhi0 = new TH1F("TrackDeltaPhi0", "Delta phi0",100, -0.005, 0.005);
-  deltaPhi0->GetXaxis()->SetTitle("delta phi0 (rad)");
-  deltaPhi0->GetYaxis()->SetTitle("N");
-  _roothistogramlist->Add(deltaPhi0);
-
-  deltaKappa = new TH1F("TrackDeltaKappa", "Delta kappa",100, -0.01, 0.01);
-  deltaKappa->GetXaxis()->SetTitle("delta kappa (1/GeV)");
-  deltaKappa->GetYaxis()->SetTitle("N");
-  _roothistogramlist->Add(deltaKappa);
-
-  deltaZ0 = new TH1F("TrackDeltaZ0", "Delta z0",100, -0.1, 0.1);
-  deltaZ0->GetXaxis()->SetTitle("delta z0 (m)");
-  deltaZ0->GetYaxis()->SetTitle("N");
-  _roothistogramlist->Add(deltaZ0);
-
-  deltaTanL = new TH1F("TrackDeltaTanL", "Delta tanL",100, -0.1, 0.1);
-  deltaTanL->GetXaxis()->SetTitle("delta tanL");
-  deltaTanL->GetYaxis()->SetTitle("N");
-  _roothistogramlist->Add(deltaTanL);
-
-
+  deltaD0    = new TH1F("TrackDeltaD0", "Delta d0;delta d0(m);N",100, -0.001, 0.001);
+  deltaPhi0  = new TH1F("TrackDeltaPhi0", "Delta phi0;delta phi0(rad);N",100, -0.005, 0.005);
+  deltaKappa = new TH1F("TrackDeltaKappa", "Delta kappa; delta kappa (1/GeV);N",100, -0.01, 0.01);
+  deltaZ0    = new TH1F("TrackDeltaZ0", "Delta z0;delta z0 (m); N",100, -0.1, 0.1);
+  deltaTanL  = new TH1F("TrackDeltaTanL", "Delta tanL;delta tanL;N",100, -0.1, 0.1);
 
 }
 
@@ -142,8 +117,4 @@ void fc::TrackCompareModule::fillHistograms(const TVectorD & deltaHP){
 }
 
 void fc::TrackCompareModule::endJob(){
-
-  _roothistogramlist->Write();
-  _outputrootfile->Close();
-
 }
