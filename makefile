@@ -7,7 +7,7 @@ OBJS = $(addprefix  $(LIB_PATH),$(notdir $(OBJSRCS:.cc=.o)))
 MAINEXES = $(basename $(notdir  $(wildcard */test/*.cc)))
 TESTTARGETS = $(addsuffix  .test,$(MAINEXES))
 
-INCDIRS =   $(foreach DIR,$(wildcard */include/),-I$(DIR))
+INCDIRS =   $(foreach DIR,$(wildcard */include/),-I$(DIR)) -I$(ROOTSYS)/include
 CC = g++
 DEBUG = -g -O0
 CFLAGS = -std=c++11 -Wall $(DEBUG) `root-config --cflags`
