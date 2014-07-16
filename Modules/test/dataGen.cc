@@ -21,6 +21,8 @@
 #include <fstream>
 #include <iostream>
 
+#include "TFile.h"
+
 int main ()
 {
 
@@ -45,6 +47,9 @@ int main ()
  // Initialie random number generator with seed = 1
   fc::Random random(config.getSeed());
 
+  // Open a root file to hold output histograms.
+  TFile* rootFile = new TFile( config.getRootFileName().c_str(), "RECREATE");
+
   // DetectorGeometry
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
   fc::DetectorGeometry detectorGeometry(detectorgeometryfile);  
@@ -56,7 +61,7 @@ int main ()
 
 
   // Instantiate the class which handles the details of processing the events
-  fc::EventProcessor processor(new fc::CountEventsSource(config.getNumberEvents(),genData));
+  fc::EventProcessor processor(new fc::CountEventsSource(config.getNumberEvents(),genData),rootFile);
  
   // Instantiate and initialize Module classes
   //  the order the modules are passed to the EventProcessor

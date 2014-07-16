@@ -7,6 +7,7 @@
 //                      Fermi National Accelerator Laboratory
 // 2014-06-12
 //============================================================================
+#include "Config.hh"
 #include "DetectorGeometry.hh"
 #include "EventProcessor.hh"
 #include "DataSource.hh"
@@ -35,6 +36,10 @@ int main ()
   // data objects created in this module are reconstruted, not generated
   bool genData = false;
 
+  // Get configuration information.
+  std::ifstream configfile("configfilereco.txt");
+  fc::Config config(configfile,genData);
+
   // Intialize Objects and Modules that are persistant
 
   // DetectorGeomergy
@@ -46,7 +51,9 @@ int main ()
   // Input and output files
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
-  TFile * outputrootfile = new TFile("outputfile.root", "RECREATE");
+  // Open a root file to hold output histograms.
+  TFile* rootFile = new TFile( config.getRootFileName().c_str(), "RECREATE");
+  //TFile * outputrootfile = new TFile("outputfile.root", "RECREATE");
 
 
  // Instantiate the class which handles the details of processing the events
@@ -54,13 +61,15 @@ int main ()
                                                "tracksWithHits", //get these tracks from file
                                                 "genHits", //get these hits from file
                                                 "genStrips", //get these strips
-                                                detectorGeometry));
+						   detectorGeometry),
+				                   rootFile
+				);
 
   // Instantiate and initialize Module classes
   processor.addModule( new fc::HitRecoModule(debugLevel,"genStrips", "recoHits", detectorGeometry));
-  //processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", detectorGeometry,outputrootfile));
+  //processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", detectorGeometry,rootFile));
   processor.addModule( new fc::TrackRecoModule(debugLevel, "recoHits", "recoTracks", detectorGeometry) );
-  processor.addModule( new fc::TrackCompareModule(debugLevel, "tracksWithHits", "recoTracks", detectorGeometry,outputrootfile) );
+  processor.addModule( new fc::TrackCompareModule(debugLevel, "tracksWithHits", "recoTracks", detectorGeometry) );
 
 
   // Event loop over module classes

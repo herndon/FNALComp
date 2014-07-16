@@ -18,6 +18,8 @@
 #include <fstream>
 #include <iostream>
 
+#include "TFile.h"
+
 int main ()
 {
  
@@ -38,6 +40,8 @@ int main ()
   std::ifstream configfile("configfile.txt");
   fc::Config config(configfile,genData);
 
+  // Open a root file to hold output histograms.
+  TFile* rootFile = new TFile( config.getRootFileName().c_str(), "RECREATE");
 
   // Intialize Objects and Modules that are persistant
 
@@ -55,7 +59,8 @@ int main ()
                                                "tracksWithHits", //get these tracks from file
                                                 "hits", //get these hits from file
                                                 "strips", //get these strips
-                                                detectorGeometry));
+						   detectorGeometry),
+				                  rootFile );
 
   // Instantiate and initialize Module classes
   //  the order the modules are passed to the EventProcessor
