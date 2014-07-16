@@ -1,3 +1,4 @@
 NumberEvents 128 
 NumberTracks 1
 Seed 1
+RootFileName myFile.root
