@@ -60,10 +60,14 @@ void fc::Config::printConfig( void ) const {
   std::cout << "Program configuration information" << std::endl;
 
   if (_genData) {
-    std::cout << "genData configuration" << std::endl;
+    std::cout << "gen Data configuration" << std::endl;
     std::cout << "Number Events: " << _numberEvents << std::endl;
     std::cout << "Number Tracks " << _numberTracks << std::endl;
     std::cout << "Random number seed " << _seed << std::endl;
+    std::cout << "Root file name " << _rootFileName << std::endl;
+  } else {
+    std::cout << "reco Data configuration" << std::endl;
+    std::cout << "Root file name " << _rootFileName << std::endl;
   }
 
 }

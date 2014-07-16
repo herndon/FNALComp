@@ -7,14 +7,11 @@
 //                      Fermi National Accelerator Laboratory
 // 2014-06-03
 //============================================================================
-#include "DetectorGeometry.hh"
-#include "TrackSet.hh"
-#include "HitSet.hh"
-#include "StripSet.hh"
-#include "DataSource.hh"
 #include "Config.hh"
-#include "Event.hh"
+#include "DetectorGeometry.hh"
 #include "EventProcessor.hh"
+#include "DataSource.hh"
+#include "Event.hh"
 #include <fstream>
 #include <iostream>
 
@@ -34,10 +31,10 @@ int main ()
   // 0 none
 
   // Generator data
-  bool genData = 0;
+  bool genData = false;
 
   // Configure genData using general Config class
-  std::ifstream configfile("configfile.txt");
+  std::ifstream configfile("configfilereco.txt");
   fc::Config config(configfile,genData);
 
   // Open a root file to hold output histograms.

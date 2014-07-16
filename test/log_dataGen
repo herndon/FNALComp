@@ -1,8 +1,9 @@
 Program configuration information
-genData configuration
+gen Data configuration
 Number Events: 128
 Number Tracks 1
 Random number seed 1
+Root file name genHistograms.root
 Random::Random constructor. Using seed: 1
 Detector Geometry information
 Detector Geometry version: 1

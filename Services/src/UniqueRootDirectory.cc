@@ -11,7 +11,7 @@ fc::UniqueRootDirectory::UniqueRootDirectory ( std::string const& name ):
   std::string uniqueName = ensureUnique( _name );
   _tdir=gDirectory->mkdir( uniqueName.c_str() );
   _tdir->cd();
-  _tdir->ls();
+  //_tdir->ls();
 }
 
 fc::UniqueRootDirectory::~UniqueRootDirectory (){

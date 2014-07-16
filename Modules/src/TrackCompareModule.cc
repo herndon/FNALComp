@@ -83,7 +83,6 @@ const fc::Track & fc::TrackCompareModule::matchTrack(const Track & genTrack, con
 
     tmpDeltaTracks = deltaTracks(genTrack,*recoTrackIter);
 
-    std::cout << "delta Track " << tmpDeltaTracks << std::endl;
     if (tmpDeltaTracks < bestDeltaTracks) {
       bestDeltaTracks = tmpDeltaTracks;
       bestTrack = trackNumber;
