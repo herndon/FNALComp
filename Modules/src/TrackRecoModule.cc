@@ -46,8 +46,8 @@ void fc::TrackRecoModule::recoTracks(TrackSet & trackSet, const HitSet& hitSet)
   //build2HitTrackCandidates(trackCandidateSet,trackHitCandidates,hitSet);
 
   findTrack5HitCandidates(trackHitCandidates,hitSet);
-  TrackSet trackCandidateSet(-1,1,_detectorGeometry);
-  buildPerfectTrackCandidates(trackCandidateSet,trackHitCandidates,hitSet);
+  //TrackSet trackCandidateSet(-1,1,_detectorGeometry);
+  buildPerfectTrackCandidates(trackSet,trackHitCandidates,hitSet);
 
 
 

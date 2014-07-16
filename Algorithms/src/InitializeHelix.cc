@@ -47,7 +47,7 @@ fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TV
 //   helix(4) =  (x2.Z() - x3.Z()) / (radiusCurvature * 2 * phi23);
 
   Helix helix(0.0, std::atan2(radiusCurvature * (centerCurvature.Y() - x1.Y()), 
-	      radiusCurvature * (centerCurvature.X() - x1.X())), 1.0 /(radiusCurvature*detectorGeometry.getCurvatureC()),
+	      radiusCurvature * (centerCurvature.X() - x1.X())), -1.0 /(radiusCurvature*detectorGeometry.getCurvatureC()),
 	      0.0,(x2.Z() - x3.Z()) / (radiusCurvature * 2 * phi23),1.0/detectorGeometry.getCurvatureC());
  
   return helix;
