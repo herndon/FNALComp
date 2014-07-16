@@ -13,7 +13,9 @@
 // Helix parameter initialization
 fc::Track::Track(double kappa, double dr, double dz, double phi0, double tanL, const DetectorGeometry & detectorGeometry):
   _helix(dr,phi0+M_PI/2.0,-1.0*kappa,dz,tanL,1.0/detectorGeometry.getCurvatureC()),
-  _covMatrix(NULL),
+  _covMatrix(Helix::_sDim,Helix::_sDim),
+  _chi2(0.0),
+  _nDof(0),
   _detectorGeometry(detectorGeometry),
   _alpha(1.0/detectorGeometry.getCurvatureC()){
 
@@ -24,7 +26,9 @@ fc::Track::Track(double kappa, double dr, double dz, double phi0, double tanL, c
 // Lorentz vector initialization
 fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, const DetectorGeometry & detectorGeometry):
   _helix(dr.Perp(),lorentzVector.Phi()+M_PI/2.0,-1.0*charge/lorentzVector.Pt(),dr.z(),lorentzVector.Pz()/ lorentzVector.Pt(),1.0/detectorGeometry.getCurvatureC()),
-  _covMatrix(NULL),
+  _covMatrix(Helix::_sDim,Helix::_sDim),
+  _chi2(0.0),
+  _nDof(0),
   _detectorGeometry(detectorGeometry),
   _alpha(1.0/detectorGeometry.getCurvatureC()) {
 
@@ -32,7 +36,9 @@ fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector
 
 
 fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, int debugLevel):
-  _covMatrix(NULL),
+  _covMatrix(Helix::_sDim,Helix::_sDim),
+  _chi2(0.0),
+  _nDof(0),
   _detectorGeometry(detectorGeometry),
   _alpha(1.0/_detectorGeometry.getCurvatureC()){
 
@@ -71,23 +77,16 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
       //print(); 
       print();
 
+  double chi2=0.0;
+  int nDof=0;
 
-      _helix = FitToHelix(initialHelix,hitSet,_trackHitMap,detectorGeometry,2);
+  _helix = FitToHelix(initialHelix,hitSet,_trackHitMap,detectorGeometry,_covMatrix,chi2,nDof,2);
+  _chi2 = chi2;
+  _nDof = nDof;
+  std::cout << "Track chi2 " << _chi2 << " " << _nDof << std::endl;
 
       //_helix.setHelix(testTrackFit1.getHelix().getHelix());
       //_helix.setAlpha(1.0/_detectorGeometry.getCurvatureC());
-
-
-  // Set Initial covariance matrix
-  if (_covMatrix) { delete _covMatrix;}
-  _covMatrix = new TMatrixD(Helix::_sDim,Helix::_sDim);
-
-  _covMatrix->Zero();
-  for (int ii = 0; ii < Helix::_sDim; ++ii){
-    (*_covMatrix)(ii,ii) = 1.0e4;
-  }
-
-
 
 }
 
@@ -107,6 +106,8 @@ TLorentzVector fc::Track::getLorentzVector(void) const{
 fc::Track::Track(const Track & track):
   _helix(track._helix),
   _covMatrix(track._covMatrix),
+  _chi2(track._chi2),
+  _nDof(track._nDof),
   _detectorGeometry(track._detectorGeometry),
   _alpha(track._alpha) {
 
@@ -140,6 +141,12 @@ void fc::Track::print(void) const{
   std::cout << "Helix paramters: kappa " << getHelix().getKappa() << " tan(Lambda) " << getHelix().getTanL() << " phi0 to d0 " << getHelix().getPhi0() << std::endl;  
   std::cout << "Pivot Point " << 0.0 << " " << 0.0 << " " << 0.0 << std::endl;
 
+  if (_nDof > 0){
+
+    std::cout << "chi2 " << _chi2 << " ndof " << _nDof << std::endl;
+    _covMatrix.Print();
+
+    }
 
   trackHitMap::size_type numberHits =_trackHitMap.size();
 

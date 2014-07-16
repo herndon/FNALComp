@@ -12,7 +12,7 @@
 
 
 
-fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap&  trackHitMap, const DetectorGeometry& detectorGeometry,int _debugLevel){
+fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap&  trackHitMap, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int _debugLevel){
 
 
   // Define static constants...
@@ -40,12 +40,12 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
   TVectorD helixBest(helix);
   TVectorD helixSave(helix);
 
-  double   chi2best = chi2Dummy;
+  double   chi2Best = chi2Dummy;
   //double   deltabest   = delta;
   int      nloops   = 0;
 
-  //int ndf = 0;
-  double   chi2     = 0.;
+  int ndof = 0;
+  double chi2 = 0.;
 
   // Prepare some matrices
  
@@ -82,8 +82,9 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
 		  << " Loop count limit reached. nloops = " << nloops << std::endl;
       }
  
-      workingHelix.setHelix(helixBest);
-      chi2  = chi2best;
+      helix = helixBest;
+      d2chi2dHCdHC = d2chi2dHCdHCbest;
+      chi2  = chi2Best;
       break;
     }
     nloops++;
@@ -129,7 +130,7 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       invMeasurementRes2XZ.Zero();
 
       invMeasurementRes2XZ(0,0) = detectorGeometry.getSensor(layer)._hitResolution*detectorGeometry.getSensor(layer)._hitResolution;
-      invMeasurementRes2XZ(1,1) = 1.0;
+      invMeasurementRes2XZ(1,1) = 10.0;
       invMeasurementRes2XZ.Invert(); 
       invMeasurementRes2 = invMeasurementRes2XZ;
  
@@ -154,7 +155,7 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       }
 
 
-      // Accumulate chi2
+      // Accumulate chi2 !!!!! only on one measurement direction right now
       double delchi2 = (measurementResidualVectorT * invMeasurementRes2 * measurementResidualVector)(0,0);
       chi2 += delchi2; 
           
@@ -176,34 +177,33 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
 
     }// end hit loop
 
-    //
-    // if (chi2best - chi2) < chi2Tol, break while loop.
-    //
 
-    if (TMath::Abs(chi2best - chi2) < chi2Tol) {
+    if (std::abs(chi2Best - chi2) < chi2Tol) {
       if (_debugLevel >=3){
-	std::cout << "Breaking loop, chi2 " << chi2 << " chi2best " << chi2best << " chi2Tol " << chi2Tol << std::endl; 
+	std::cout << "Breaking loop, chi2 " << chi2 << " chi2Best " << chi2Best << " chi2Tol " << chi2Tol << std::endl; 
       }
       d2chi2dHCdHCbest = d2chi2dHCdHC;
+      chi2Best = chi2;
+      helixBest = helix;
       break;
     }
 
     // !!!!! need to make sure track is saved and restored 
-    if (chi2 < chi2best) {
+    if (chi2 < chi2Best) {
       // chi2 decreased. Save this step as the current best
       if (_debugLevel >=3){
-	std::cout << "Chi2 decreased " << chi2 << " compared to " << chi2best << std::endl;
+	std::cout << "Chi2 decreased " << chi2 << " compared to " << chi2Best << std::endl;
       } 
       helixSave = helix;
       helixBest = helix;
-      chi2best    = chi2;
+      chi2Best    = chi2;
       dchi2dHCbest = dchi2dHC;
       d2chi2dHCdHCbest  = d2chi2dHCdHC;
       delta     *= deltaDecr;
     } else {
       // chi2 increased. Restore the current best
       if (_debugLevel >=3){
-	std::cout << "Chi2 increased " << chi2 << " compared to " << chi2best << std::endl;
+	std::cout << "Chi2 increased " << chi2 << " compared to " << chi2Best << std::endl;
       } 
       helix = helixSave;
       helixBest = helixSave; 
@@ -271,10 +271,19 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
     std::cout.precision(std::numeric_limits<double>::digits10 + 2);
     std::cout << "Final Helix " << helix(0) << " " << helix(1)  << " " << helix(2)  << " " << helix(3)  << " " << helix(4) << std::endl;
   }
+      
+  // !!!!! right now fit is only in 2D so mDim is really 1
+  trackHitMap::size_type nHits = trackHitMap.size();
+  ndof = DetectorGeometry::_mDim*nHits - Helix::_sDim;
+  ndof = 1*nHits - 3;
+  std::cout << "ndof " << ndof << " " <<  trackHitMap.size() << std::endl;
+  std::cout << "chi2 " << chi2Best << std::endl;
 
+  workingHelix.setHelix(helixBest);
+  finalCovMatrix = d2chi2dHCdHCbest.Invert();
+  finalChi2 = chi2Best;
+  finalNDof = ndof;
   return workingHelix;
-
-  // !!!! calculate chi2, ndf, and set cov matrix
 
 }
 

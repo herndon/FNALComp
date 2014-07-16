@@ -15,12 +15,7 @@ TMatrixD fcf::expectedMeasurementVectorXZ(const fc::Helix& helix, int layer, con
 
   double phi = 0.0;
 
-  if (layer>0) fcf::intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
-  if (layer==-1) {
-    TVector3 center(0.0,0.0,0.0);
-    TVector3 normal(0.0,1.0,0.0); 
-    fcf::intersectWithPlane(helix, hitPosition,center,normal,phi);
-  }
+  fcf::intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
 
   TMatrixD expectedMeasurementVector(fc::DetectorGeometry::_mDim,1);
 

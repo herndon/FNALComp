@@ -89,7 +89,7 @@ void fc::TrackRecoModule::findTrack5HitCandidates(std::vector<std::vector<int>> 
 
 		  for (hitSet::const_iterator hitIterIIII = hitSet.getHits().begin(); hitIterIIII != hitSet.getHits().end(); ++hitIterIIII,++hitNumberIIII) {
 
-		    if (hitIterIIII->getLayer() == _nLayers-4) {
+		    if (hitIterIIII->getLayer() == _nLayers-5) {
 
 
 		      std::vector<int> trackHitCandidate;

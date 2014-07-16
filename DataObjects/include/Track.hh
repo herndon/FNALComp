@@ -33,6 +33,7 @@
 #include "TMatrixD.h"
 #include "TLorentzVector.h"
 #include "Helix.hh"
+#include<cmath>
 #include <map>
 
 class DetectorGeometry;
@@ -53,7 +54,10 @@ private:
 
   Helix _helix;
 
-  TMatrixD * _covMatrix;
+  TMatrixD _covMatrix;
+
+  double _chi2;
+  int _nDof;
 
   trackHitMap _trackHitMap;
   
@@ -83,6 +87,15 @@ public:
 
   int getCharge(void) const {return -getHelix().getKappa()/std::abs(getHelix().getKappa());};
 
+  const TMatrixD & getCovMatrix() const {return _covMatrix;}
+  double getSigmaD0() const {return std::sqrt(_covMatrix(0,0));}
+  double getSigmaPhi0() const {return std::sqrt(_covMatrix(1,1));}
+  double getSigmaKappa() const {return std::sqrt(_covMatrix(2,2));}
+  double getSigmaZ0() const {return std::sqrt(_covMatrix(3,3));}
+  double getSigmaTanL() const {return std::sqrt(_covMatrix(4,4));}
+
+  double getChi2() const {return _chi2;}
+  int ndof() const {return _nDof;}
 
   // Hit/measurement point information
 

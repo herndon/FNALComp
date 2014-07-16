@@ -53,7 +53,7 @@ private:
   const Track & matchTrack(const Track &,const TrackSet &);
   double deltaTracks(const Track &, const Track &);
   TVectorD deltaHP(const Track &, const Track &);
-  void fillHistograms(const TVectorD &);
+  void fillHistograms(const TVectorD &,const Track&);
 
   // Histograms
 
@@ -62,6 +62,12 @@ private:
   TH1F * deltaKappa;
   TH1F * deltaZ0;
   TH1F * deltaTanL;
+
+  TH1F * deltaD0Pull;
+  TH1F * deltaPhi0Pull;
+  TH1F * deltaKappaPull;
+  TH1F * deltaZ0Pull;
+  TH1F * deltaTanLPull;
 
   void initializeHistograms(void);
 

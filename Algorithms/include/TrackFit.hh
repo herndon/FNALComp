@@ -25,7 +25,7 @@ namespace fc {
 
 
 
-  Helix FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap & trackHitMap, const DetectorGeometry& detectorGeometry,int _debugLevel);
+  Helix FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap & trackHitMap, const DetectorGeometry& detectorGeometry, TMatrixD &, double&, int&, int _debugLevel);
 
 
 } // end namescape fc
