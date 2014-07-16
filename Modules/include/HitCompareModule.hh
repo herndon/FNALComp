@@ -14,8 +14,6 @@
 
 class Hit;
 class HitSet;
-class TFile;
-class TList;
 class TH1F;
 
 
@@ -31,7 +29,7 @@ namespace fc {
 public:
 
   HitCompareModule(int, const std::string& iInputGenHitsLabel, const std::string& iInputRecHitsLabel,
-		   const DetectorGeometry &, TFile *);
+		   const DetectorGeometry & );
   ~HitCompareModule() {};
 
   void processEvent(fc::Event&) override;
@@ -59,9 +57,6 @@ private:
   double compareHitPositions(const Hit &, const Hit &);
 
   // Histograms
-
-  TFile * _outputrootfile;
-  TList * _roothistogramlist;
 
   TH1F * deltaHitPositions[DetectorGeometry::_nSensors];
 

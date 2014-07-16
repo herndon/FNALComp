@@ -4,25 +4,21 @@
 #include "DetectorGeometry.hh"
 #include "HitSet.hh"
 #include "HitCompareModule.hh"
-#include "TFile.h"
 #include "TH1F.h"
+#include "UniqueRootDirectory.hh"
 
 fc::HitCompareModule::HitCompareModule(int debugLevel, 
 				       const std::string& inputGenHitsLabel,
 				       const std::string& inputRecHitsLabel,
-				       const DetectorGeometry & detectorGeometry, TFile * outputrootfile):
+				       const DetectorGeometry & detectorGeometry):
   _debugLevel(debugLevel),
   _detectorGeometry(detectorGeometry),
   _genHitsLabel(inputGenHitsLabel),
-  _recHitsLabel(inputRecHitsLabel),
-  _outputrootfile(outputrootfile) {
+  _recHitsLabel(inputRecHitsLabel){
 
-
-  _outputrootfile = outputrootfile;
   // Intialize commonly used DetectorGeometry data
   _nLayers = _detectorGeometry.getNSensors();
 
-  _roothistogramlist = new TList();
   initializeHistograms();
 
 
@@ -80,6 +76,8 @@ double fc::HitCompareModule::compareHitPositions(const Hit & genHit, const Hit& 
 
 void fc::HitCompareModule::initializeHistograms(){
 
+  UniqueRootDirectory tdir("HitCompare");
+
   //deltaHitPositions = new TH1F("deltaHitPositions", "Delta X Hit Positions","delta X (m)", "number of hits",100, -0.1, 0.1);
 
   deltaHitPositions[0] = new TH1F("deltaHitPositions L0", "Delta X Hit Positions",100, -0.0001, 0.0001);
@@ -92,15 +90,10 @@ void fc::HitCompareModule::initializeHistograms(){
   for (int ii_layer = 0; ii_layer < _nLayers; ++ii_layer) {
     deltaHitPositions[ii_layer]->GetXaxis()->SetTitle("delta (m)");
     deltaHitPositions[ii_layer]->GetYaxis()->SetTitle("N Hits");
-    _roothistogramlist->Add(deltaHitPositions[ii_layer]);
   }
 
 
 }
 
 void fc::HitCompareModule::endJob(){
-
-  _roothistogramlist->Write();
-  _outputrootfile->Close();
-
 }
