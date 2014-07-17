@@ -1,0 +1,9 @@
+*.d
+*.o
+*.so
+*.bin
+*.root
+dataGen
+dataRead
+hitReco
+trackReco
