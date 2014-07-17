@@ -11,6 +11,7 @@
 
 #include "Module.hh"
 #include "StripSet.hh"
+#include "TVector3.h"
 #include <vector>
 #include <string>
 
@@ -53,7 +54,7 @@ private:
 
   double calculateStripHitPosition(int, const std::vector<int> &);
 
-  void calculateHitPosition(int, double, double *);
+  TVector3 calculateHitPosition(int, double);
 
 
 };

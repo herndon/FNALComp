@@ -27,7 +27,7 @@ namespace fcf {
 
   TMatrixD expectedMeasurementVectorX(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry);
   TMatrixD expectedMeasurementDerivativedXdHC(const fc::Helix& helix,int layer, const fc::DetectorGeometry & detectorGeometry);
-  TMatrixD measurementVectorX(const TVector3 & hitPosition);
+  TMatrixD measurementVector1D(const TVector3 & hitPosition,int layer, const fc::DetectorGeometry & detectorGeometry);
 
 
 } // end namescape fcf

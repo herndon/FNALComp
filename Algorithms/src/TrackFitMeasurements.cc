@@ -18,7 +18,6 @@ TMatrixD fcf::expectedMeasurementVectorXZ(const fc::Helix& helix, int layer, con
 
   TMatrixD expectedMeasurementVector(fc::DetectorGeometry::_mDim,1);
 
-
   expectedMeasurementVector.Zero();
 
   expectedMeasurementVector(0,0) = hitPosition.Perp()*hitPosition.Phi();
@@ -94,11 +93,11 @@ TMatrixD fcf::expectedMeasurementVectorX(const fc::Helix& helix, int layer, cons
 
   TMatrixD expectedMeasurementVector(fc::DetectorGeometry::_mDim,1);
 
+  TVector3 measurementDirection = detectorGeometry.getSensor(layer)._measurementDirection;
 
   expectedMeasurementVector.Zero();
 
-  //  expectedMeasurementVector(0,0) = hitPosition.Perp()*hitPosition.Phi();
-  expectedMeasurementVector(0,0) = hitPosition.X();
+  expectedMeasurementVector(0,0) = hitPosition*measurementDirection;
   
   return expectedMeasurementVector;
 
@@ -139,21 +138,31 @@ TMatrixD fcf::expectedMeasurementDerivativedXdHC(const fc::Helix& helix, int lay
 
  
   TMatrixD expectedMeasurementDerivative(fc::DetectorGeometry::_mDim,fc::Helix::_sDim);
+
+  TMatrixD measurementDirection(1,3);
+
+  measurementDirection(0,0) =  detectorGeometry.getSensor(layer)._measurementDirection.X();
+  measurementDirection(0,1) =  detectorGeometry.getSensor(layer)._measurementDirection.Y();
+  measurementDirection(0,2) =  detectorGeometry.getSensor(layer)._measurementDirection.Z();
+
+
   expectedMeasurementDerivative.Zero();
 
-  expectedMeasurementDerivative=  fcf::calcDXDHC(hitPosition,dxphidHC);
+  expectedMeasurementDerivative=  fcf::calcDXDHC(hitPosition,dxphidHC,measurementDirection);
   
   return expectedMeasurementDerivative;
 
 }
 
-TMatrixD fcf::measurementVectorX(const TVector3 & hitPosition) {
+TMatrixD fcf::measurementVector1D(const TVector3 & hitPosition,int layer, const fc::DetectorGeometry & detectorGeometry) {
 
   // !!!!! not general, only works if the strip measurement direction is oriented in X
 
   TMatrixD measurementVector(fc::DetectorGeometry::_mDim,1);
-  //measurementVector(0,0) = hitPosition.Perp()*std::atan2( hitPosition.y(),hitPosition.x());
-  measurementVector(0,0) = hitPosition.X();
+
+  TVector3 measurementDirection = detectorGeometry.getSensor(layer)._measurementDirection;
+
+  measurementVector(0,0) = hitPosition*measurementDirection;
 
   return measurementVector;
 

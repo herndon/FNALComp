@@ -52,7 +52,7 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
   int initialStrip;
   std::vector<int>::size_type numberStrips;
   double stripHitPosition;
-  double hitPosition[3];
+  TVector3 hitPosition;
 
   const layerStripMap layerStripMap = stripSet.getLayerStripMap(layer);
   layerStripMap::const_iterator  layerStripMapIter = layerStripMap.begin();
@@ -64,7 +64,7 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
 
     stripHitPosition = calculateStripHitPosition(initialStrip,stripAdcs);
 
-    calculateHitPosition(layer,stripHitPosition,hitPosition);
+    hitPosition = calculateHitPosition(layer,stripHitPosition);
   
     numberStrips = stripAdcs.size();
 
@@ -142,11 +142,16 @@ double fc::HitRecoModule::calculateStripHitPosition(int initialStrip,const std::
 
 }
 
-void  fc::HitRecoModule::calculateHitPosition(int layer, double stripHitPosition, double * hitPosition){
+TVector3  fc::HitRecoModule::calculateHitPosition(int layer, double stripHitPosition){
 
-  hitPosition[0] =  (stripHitPosition - (_detectorGeometry.getSensor(layer)._nStrips/2.0))*_detectorGeometry.getSensor(layer)._stripPitch 
-    + _detectorGeometry.getSensor(layer)._center[0];
-  hitPosition[1] = _detectorGeometry.getSensor(layer)._center[1];
-  hitPosition[2] = _detectorGeometry.getSensor(layer)._center[2];
+  TVector3 hitPosition;
+
+  double localPosition = (stripHitPosition - (_detectorGeometry.getSensor(layer)._nStrips/2.0)) * _detectorGeometry.getSensor(layer)._stripPitch;
+
+
+
+  return hitPosition = _detectorGeometry.getSensor(layer)._measurementDirection*localPosition + _detectorGeometry.getSensor(layer)._center;
+ 
+
 
 }

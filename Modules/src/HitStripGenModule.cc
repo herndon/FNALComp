@@ -126,8 +126,8 @@ void fc::HitStripGenModule::storeStripInfo(StripSet & stripSet,const TVector3 & 
 
 double fc::HitStripGenModule::calculateStripHitPosition(const TVector3 & hitPosition, int layer) const{
 
-  // This assumes the senstors are normal to the y axis.  Could be made more general
-  return hitPosition[0]/_detectorGeometry.getSensor(layer)._stripPitch + _detectorGeometry.getSensor(layer)._nStrips/2   ;
+  return (hitPosition-_detectorGeometry.getSensor(layer)._center)*_detectorGeometry.getSensor(layer)._measurementDirection/
+_detectorGeometry.getSensor(layer)._stripPitch + _detectorGeometry.getSensor(layer)._nStrips/2;
   
 }
 

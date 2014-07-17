@@ -162,7 +162,7 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       if (DetectorGeometry::_mDim == 2){
 	measurementVector = fcf::measurementVectorXZ(hitPosition);
       } else if (DetectorGeometry::_mDim == 1){
-	measurementVector = fcf::measurementVectorX(hitPosition);
+	measurementVector = fcf::measurementVector1D(hitPosition,layer,detectorGeometry);
       }
 
       // Residuals in XZ

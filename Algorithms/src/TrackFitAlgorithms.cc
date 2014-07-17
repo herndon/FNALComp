@@ -96,7 +96,7 @@ TMatrixD fcf::calcDXZDHC(const TVector3   & hitPosition,
 }
 
 TMatrixD fcf::calcDXDHC(const TVector3   & hitPosition,
-			       const TMatrixD &dxphiadHC) {
+			const TMatrixD &dxphiadHC,const TMatrixD& measurementDirection) {
   // Calculate
   //    dXdHC = (@measVec/@a) = (r@phi/@HC, r@z/@HC)^t
 
@@ -110,6 +110,8 @@ TMatrixD fcf::calcDXDHC(const TVector3   & hitPosition,
     //    dXZdHC(0,i) = - (hitPosition.Y() / r) * dxphiadHC(0,i) 
     //      + (hitPosition.X() / r) * dxphiadHC(1,i);
     //    dXZdHC(0,i) *= r;
+
+    dXZdHC = measurementDirection*dxphiadHC;
      dXZdHC(0,i) = dxphiadHC(0,i);
     //dXZdHC(1,i) =  dxphiadHC(2,i);
   
