@@ -49,7 +49,7 @@ private:
   void recoTracks(TrackSet & trackSet, const HitSet& hitSet);
   void findTrack2HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
   void findTrack3HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
-  void findTrack5HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
+  void findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
 
   void build2HitTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
   void buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);

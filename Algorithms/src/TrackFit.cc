@@ -103,7 +103,7 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       TVector3 hitPosition = hitSet.getHits()[trackHitMapIter->first].getHitPosition();
 
       if (_debugLevel >= 5) {
-	std::cout << "Layer" << layer << std::endl;
+	std::cout << "Layer " << layer << std::endl;
 	hitSet.getHits()[trackHitMapIter->first].print();
 
 

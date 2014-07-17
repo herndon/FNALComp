@@ -45,7 +45,7 @@ void fc::TrackRecoModule::recoTracks(TrackSet & trackSet, const HitSet& hitSet)
   //TrackSet trackCandidateSet(-1,1,_detectorGeometry);
   //build2HitTrackCandidates(trackCandidateSet,trackHitCandidates,hitSet);
 
-  findTrack5HitCandidates(trackHitCandidates,hitSet);
+  findTrackPerfectCandidates(trackHitCandidates,hitSet);
   //TrackSet trackCandidateSet(-1,1,_detectorGeometry);
   buildPerfectTrackCandidates(trackSet,trackHitCandidates,hitSet);
 
@@ -58,13 +58,15 @@ void fc::TrackRecoModule::recoTracks(TrackSet & trackSet, const HitSet& hitSet)
 
 
 
-void fc::TrackRecoModule::findTrack5HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
+void fc::TrackRecoModule::findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
 
   int hitNumber = 0;
 
   std::vector<int> trackHitCandidate;
 
   // Form all hit candidates
+
+  if (hitSet.getHits().size() < 10) return;
   for (hitSet::const_iterator hitIterO = hitSet.getHits().begin(); hitIterO != hitSet.getHits().end(); ++hitIterO,++hitNumber) {
 
 
@@ -184,37 +186,10 @@ void fc::TrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCandidateS
     std::vector<int> trackHitCandidate = *trackHitCandidateIter;
     Track trackCandidate(hitSet,trackHitCandidate,primaryVertex,_detectorGeometry,_debugLevel);
 
-    // !!!!! insert hit via constructor
-//     trackCandidate.insertHit((*trackHitCandidateIter)[0],4);
-//     trackCandidate.insertHit((*trackHitCandidateIter)[1],3);
-//     trackCandidate.insertHit((*trackHitCandidateIter)[2],2);
-//     trackCandidate.insertHit((*trackHitCandidateIter)[3],1);
-//     trackCandidate.insertHit((*trackHitCandidateIter)[4],0);
-
-
-
-
-    if (_debugLevel ==2) {
-      //std::cout << "Track before fit" << std::endl;
-      //trackCandidate.print();
-
-      //std::cout << "Track from TrackFit" << std::endl;
-      //testTrackFit1.print();
-    }
-
-
-
-
-    //trackCandidate.FitToHelix(hitSet,_detectorGeometry,false);
-
-   //testTrackFit1.FitToHelix(hitSet,_detectorGeometry,false);
 
     if (_debugLevel ==2) {
       std::cout << "Track after fit" << std::endl;
       trackCandidate.print();
-
-      //std::cout << "Track from TrackFit after fit" << std::endl;
-      //testTrackFit1.print();
     }
 
 
