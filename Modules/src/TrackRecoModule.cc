@@ -56,67 +56,23 @@ void fc::TrackRecoModule::recoTracks(TrackSet & trackSet, const HitSet& hitSet)
   
 }
 
+
+
 void fc::TrackRecoModule::findTrack5HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
 
-  int hitNumberO = 0;
+  int hitNumber = 0;
+
+  std::vector<int> trackHitCandidate;
+
+  // Form all hit candidates
+  for (hitSet::const_iterator hitIterO = hitSet.getHits().begin(); hitIterO != hitSet.getHits().end(); ++hitIterO,++hitNumber) {
 
 
-  // Form 4-3-2-1-0 hit candidates
-  for (hitSet::const_iterator hitIterO = hitSet.getHits().begin(); hitIterO != hitSet.getHits().end(); ++hitIterO,++hitNumberO) {
-
-    if (hitIterO->getLayer() == _nLayers-1) {
-
-      int hitNumberI = 0;
-
-      for (hitSet::const_iterator hitIterI = hitSet.getHits().begin(); hitIterI != hitSet.getHits().end(); ++hitIterI,++hitNumberI) {
-
-	if (hitIterI->getLayer() == _nLayers-2) {
-
-	  int hitNumberII = 0;
-
-	  for (hitSet::const_iterator hitIterII = hitSet.getHits().begin(); hitIterII != hitSet.getHits().end(); ++hitIterII,++hitNumberII) {
-
-	    if (hitIterII->getLayer() == _nLayers-3) {
-
-
-	      int hitNumberIII = 0;
-
-	      for (hitSet::const_iterator hitIterIII = hitSet.getHits().begin(); hitIterIII != hitSet.getHits().end(); ++hitIterIII,++hitNumberIII) {
-
-		if (hitIterIII->getLayer() == _nLayers-4) {
-
-		  int hitNumberIIII = 0;
-
-		  for (hitSet::const_iterator hitIterIIII = hitSet.getHits().begin(); hitIterIIII != hitSet.getHits().end(); ++hitIterIIII,++hitNumberIIII) {
-
-		    if (hitIterIIII->getLayer() == _nLayers-5) {
-
-
-		      std::vector<int> trackHitCandidate;
-		      trackHitCandidate.push_back(hitNumberO);
-		      trackHitCandidate.push_back(hitNumberI);
-		      trackHitCandidate.push_back(hitNumberII);
-		      trackHitCandidate.push_back(hitNumberIII);
-		      trackHitCandidate.push_back(hitNumberIIII);
-
-		      trackHitCandidates.push_back(trackHitCandidate);
-		    }
-		  }
-		}
-
-	      }
-
-	    }
-
-	  }
-
-	}
-
-      }
-
-    }
-
+    trackHitCandidate.push_back(hitNumber);
   }
+
+  trackHitCandidates.push_back(trackHitCandidate);
+
 
 }
 

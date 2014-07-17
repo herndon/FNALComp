@@ -70,6 +70,8 @@ TMatrixD fcf::calcDxDHC(const fc::Helix& helix, double phi) {
    dxDHC(2,3) = 1;
    dxDHC(2,4) = - radiusCurvature * phi;
 
+   //std::cout << "radiusCurvature " << radiusCurvature << " phi " << phi << std::endl;
+
    return dxDHC;
 }
 
@@ -112,7 +114,7 @@ TMatrixD fcf::calcDXDHC(const TVector3   & hitPosition,
     //    dXZdHC(0,i) *= r;
 
     dXZdHC = measurementDirection*dxphiadHC;
-     dXZdHC(0,i) = dxphiadHC(0,i);
+    //dXZdHC(0,i) = dxphiadHC(0,i);
     //dXZdHC(1,i) =  dxphiadHC(2,i);
   
   }

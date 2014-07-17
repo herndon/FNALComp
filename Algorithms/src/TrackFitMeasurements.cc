@@ -109,6 +109,8 @@ TMatrixD fcf::expectedMeasurementDerivativedXdHC(const fc::Helix& helix, int lay
 
   double phi = 0.0;
 
+  // std::cout << "In expectedMeasurementDerivativedXdHC " << std::endl;
+
   // advances phi to the phi at crossing!
 
   fcf::intersectWithPlane(helix,hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
@@ -136,7 +138,21 @@ TMatrixD fcf::expectedMeasurementDerivativedXdHC(const fc::Helix& helix, int lay
   TMatrixD dxphidHC(3,fc::Helix::_sDim);
   dxphidHC = dxdphi*dphidHC + dxdHC;
 
- 
+//   std::cout << "dxdHC" << std::endl;
+//   dxdHC.Print();
+//   std::cout << "dxdphi" << std::endl;
+//   dxdphi.Print();
+//   std::cout << "dphidHC" << std::endl;
+//   dphidHC.Print();
+//   std::cout << "dsdphi" << std::endl;
+//   dsdphi.Print();
+//   std::cout << "dxphidHC" << std::endl;
+//   dxphidHC.Print();
+
+
+
+
+
   TMatrixD expectedMeasurementDerivative(fc::DetectorGeometry::_mDim,fc::Helix::_sDim);
 
   TMatrixD measurementDirection(1,3);

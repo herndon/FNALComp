@@ -61,7 +61,7 @@ public:
   void printSensorLimits(void) const;
 
   // Numerology for declaring arrays
-  static const int _nSensors=5;
+  static const int _nSensors=10;
 
   static const int _mDim = 1; //!< Measurement dimention of hits
  

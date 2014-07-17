@@ -25,6 +25,34 @@ fc::HitCompareModule::HitCompareModule(int debugLevel,
 
 }
 
+void fc::HitCompareModule::initializeHistograms(){
+
+  UniqueRootDirectory tdir("HitCompare");
+
+  // Generalize to number of layers
+  //deltaHitPositions = new TH1F("deltaHitPositions", "Delta X Hit Positions","delta X (m)", "number of hits",100, -0.1, 0.1);
+
+  deltaHitPositions[0] = new TH1F("deltaHitPositions L0", "Delta X Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[1] = new TH1F("deltaHitPositions L1", "Delta X Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[2] = new TH1F("deltaHitPositions L2", "Delta X Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[3] = new TH1F("deltaHitPositions L3", "Delta X Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[4] = new TH1F("deltaHitPositions L4", "Delta X Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[5] = new TH1F("deltaHitPositions L5", "Delta Z Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[6] = new TH1F("deltaHitPositions L6", "Delta Z Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[7] = new TH1F("deltaHitPositions L7", "Delta Z Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[8] = new TH1F("deltaHitPositions L8", "Delta Z Hit Positions",100, -0.0001, 0.0001);
+  deltaHitPositions[9] = new TH1F("deltaHitPositions L9", "Delta Z Hit Positions",100, -0.0001, 0.0001);
+
+
+  for (int ii_layer = 0; ii_layer < _nLayers; ++ii_layer) {
+    deltaHitPositions[ii_layer]->GetXaxis()->SetTitle("delta (m)");
+    deltaHitPositions[ii_layer]->GetYaxis()->SetTitle("N Hits");
+  }
+
+
+}
+
+
 void fc::HitCompareModule::processEvent(Event& event)
 {
  Handle<HitSet> genHitSet = event.get<HitSet>(_genHitsLabel);
@@ -70,30 +98,11 @@ void fc::HitCompareModule::compareHits(const HitSet & genHitSet, const HitSet& r
 double fc::HitCompareModule::compareHitPositions(const Hit & genHit, const Hit& recoHit)
 {
 
-  return recoHit.getHitPosition()[0] - genHit.getHitPosition()[0];
+  return recoHit.getHitPosition()*_detectorGeometry.getSensor(recoHit.getLayer())._measurementDirection
+    - genHit.getHitPosition()*_detectorGeometry.getSensor(genHit.getLayer())._measurementDirection;
 
 }
 
-void fc::HitCompareModule::initializeHistograms(){
-
-  UniqueRootDirectory tdir("HitCompare");
-
-  //deltaHitPositions = new TH1F("deltaHitPositions", "Delta X Hit Positions","delta X (m)", "number of hits",100, -0.1, 0.1);
-
-  deltaHitPositions[0] = new TH1F("deltaHitPositions L0", "Delta X Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[1] = new TH1F("deltaHitPositions L1", "Delta X Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[2] = new TH1F("deltaHitPositions L2", "Delta X Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[3] = new TH1F("deltaHitPositions L3", "Delta X Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[4] = new TH1F("deltaHitPositions L4", "Delta X Hit Positions",100, -0.0001, 0.0001);
-
-
-  for (int ii_layer = 0; ii_layer < _nLayers; ++ii_layer) {
-    deltaHitPositions[ii_layer]->GetXaxis()->SetTitle("delta (m)");
-    deltaHitPositions[ii_layer]->GetYaxis()->SetTitle("N Hits");
-  }
-
-
-}
 
 void fc::HitCompareModule::endJob(){
 }

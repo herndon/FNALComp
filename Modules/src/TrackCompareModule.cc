@@ -30,8 +30,8 @@ void fc::TrackCompareModule::initializeHistograms(){
   deltaD0    = new TH1F("TrackDeltaD0", "Delta d0;delta d0(m);N",100, -0.001, 0.001);
   deltaPhi0  = new TH1F("TrackDeltaPhi0", "Delta phi0;delta phi0(rad);N",100, -0.005, 0.005);
   deltaKappa = new TH1F("TrackDeltaKappa", "Delta kappa; delta kappa (1/GeV);N",100, -0.01, 0.01);
-  deltaZ0    = new TH1F("TrackDeltaZ0", "Delta z0;delta z0 (m); N",100, -0.1, 0.1);
-  deltaTanL  = new TH1F("TrackDeltaTanL", "Delta tanL;delta tanL;N",100, -0.1, 0.1);
+  deltaZ0    = new TH1F("TrackDeltaZ0", "Delta z0;delta z0 (m); N",100, -0.001, 0.001);
+  deltaTanL  = new TH1F("TrackDeltaTanL", "Delta tanL;delta tanL;N",100, -0.001, 0.001);
 
   deltaD0Pull    = new TH1F("TrackDeltaD0Pull", "Delta d0 Pull;delta d0  Pull);N",100, -4.0, 4.0);
   deltaPhi0Pull  = new TH1F("TrackDeltaPhi0Pull", "Delta phi0 Pull;delta phi0 Pull);N",100, -4.0, 4.0);

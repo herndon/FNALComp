@@ -72,7 +72,7 @@ fc::Track fc::TrackGenModule::generateTrack(){
   }
 
  
-  Track track(trackCharge/trackPT,0.0,0.0,trackPhi0,0.0,_detectorGeometry);
+  Track track(trackCharge/trackPT,0.0,0.0,trackPhi0,0.1,_detectorGeometry);
 
  
   return track;

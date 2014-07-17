@@ -102,6 +102,13 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       int layer = trackHitMapIter->second;
       TVector3 hitPosition = hitSet.getHits()[trackHitMapIter->first].getHitPosition();
 
+      if (_debugLevel >= 5) {
+	std::cout << "Layer" << layer << std::endl;
+	hitSet.getHits()[trackHitMapIter->first].print();
+
+
+      }
+
  
       // Find XZ vector to measurement
       if (DetectorGeometry::_mDim == 2){
@@ -250,8 +257,8 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
        
     TMatrixD d2chi2dHCdHCinv = d2chi2dHCdHC;
     if (DetectorGeometry::_mDim == 1){
-      d2chi2dHCdHCinv(3,3)=1.0;
-      d2chi2dHCdHCinv(4,4)=1.0;
+      //d2chi2dHCdHCinv(3,3)=1.0;
+      //d2chi2dHCdHCinv(4,4)=1.0;
     }
 
    d2chi2dHCdHCinv.Invert();
@@ -307,8 +314,8 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
   }
       
     if (DetectorGeometry::_mDim == 1){
-      d2chi2dHCdHCbest(3,3)=1.0;
-      d2chi2dHCdHCbest(4,4)=1.0;
+      //d2chi2dHCdHCbest(3,3)=1.0;
+      //d2chi2dHCdHCbest(4,4)=1.0;
     }
 
 

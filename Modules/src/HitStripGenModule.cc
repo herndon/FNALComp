@@ -98,7 +98,9 @@ void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,Track & track,int track
 
   ++hitNumber;
 
-  hitPosition[0] = hitPosition[0] + _random.getNormalDouble(0.0,_detectorGeometry.getSensor(layer)._hitResolution);
+  
+
+  hitPosition = hitPosition + _random.getNormalDouble(0.0,_detectorGeometry.getSensor(layer)._hitResolution)*_detectorGeometry.getSensor(layer)._measurementDirection;
  
   if (_debugLevel >=5 ) {
     std::cout << "Layer " << layer << " Resolution smeared Hit x " << hitPosition[0] << std::endl;
