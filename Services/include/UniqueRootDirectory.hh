@@ -6,6 +6,9 @@
 /// Create a uniquely named root directory at the top level of the currently opened file.
 //  This is a hack until a better solution is created.
 //
+//  This is not guaranteed to work cleaning if more than one TFile is opened during the job.
+//  Otherwise it will succeed or it will stop execution with error message.
+//
 //============================================================================
 #include <string>
 
@@ -43,9 +46,6 @@ private:
 
   // The current TDirectory after it is created.
   TDirectory* _tdir;
-
-  // Helper function to add decorations to the input name to ensure its uniqueness.
-  std::string ensureUnique( std::string const& name);
 
 };
 } // end namespace fc
