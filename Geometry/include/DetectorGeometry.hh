@@ -63,7 +63,7 @@ public:
   // Numerology for declaring arrays
   static const int _nSensors=5;
 
-  static const int _mDim = 2; //!< Measurement dimention of hits
+  static const int _mDim = 1; //!< Measurement dimention of hits
  
 
 private:

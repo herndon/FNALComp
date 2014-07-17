@@ -104,7 +104,13 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
 
  
       // Find XZ vector to measurement
-      expectedMeasurementVector = fcf::expectedMeasurementVectorXZ(workingHelix,layer,detectorGeometry); 
+      if (DetectorGeometry::_mDim == 2){
+	expectedMeasurementVector = fcf::expectedMeasurementVectorXZ(workingHelix,layer,detectorGeometry);
+      } else if (DetectorGeometry::_mDim == 1){
+	expectedMeasurementVector = fcf::expectedMeasurementVectorX(workingHelix,layer,detectorGeometry);
+
+      }
+
 
       if (_debugLevel >= 5){
 	std::cout << "expectedVector XZ mDim:" << std::endl;
@@ -112,7 +118,14 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       }
 
       // Find how the measurement expectation varies with each helix coordinate
-      expectedMeasurementDerivative = fcf::expectedMeasurementDerivativedXZdHC(workingHelix,layer,detectorGeometry);
+     if (DetectorGeometry::_mDim == 2){
+       expectedMeasurementDerivative = fcf::expectedMeasurementDerivativedXZdHC(workingHelix,layer,detectorGeometry);
+     } else if (DetectorGeometry::_mDim == 1){
+       expectedMeasurementDerivative = fcf::expectedMeasurementDerivativedXdHC(workingHelix,layer,detectorGeometry);
+     }
+
+
+
       expectedMeasurementDerivativeT.Transpose(expectedMeasurementDerivative);
  
       if (_debugLevel >= 5){
@@ -130,36 +143,52 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       invMeasurementRes2XZ.Zero();
 
       invMeasurementRes2XZ(0,0) = detectorGeometry.getSensor(layer)._hitResolution*detectorGeometry.getSensor(layer)._hitResolution;
-      invMeasurementRes2XZ(1,1) = 10.0;
+      if (DetectorGeometry::_mDim == 2){
+	invMeasurementRes2XZ(1,1) = 10.0;
+      }
+
       invMeasurementRes2XZ.Invert(); 
       invMeasurementRes2 = invMeasurementRes2XZ;
  
       if (_debugLevel >= 5){
 	std::cout << " invMeasurementRes2 XZ mDim x mDim: " << std::endl;
+	std::cout.flush();
 	invMeasurementRes2.Print();
+	std::cout.flush();
       }
 
       // Hit position in XZ
 
-      measurementVector = fcf::measurementVectorXZ(hitPosition);
+      if (DetectorGeometry::_mDim == 2){
+	measurementVector = fcf::measurementVectorXZ(hitPosition);
+      } else if (DetectorGeometry::_mDim == 1){
+	measurementVector = fcf::measurementVectorX(hitPosition);
+      }
 
       // Residuals in XZ
-
       measurementResidualVector = measurementVector - expectedMeasurementVector; // just subtracts helix position and measurement point to get residual
       measurementResidualVectorT.Transpose(measurementResidualVector);
 
-      if (_debugLevel >= 5){
-	std::cout << "measurementVector XZ " << measurementVector(0,0) << " " << measurementVector(1,0) << std::endl;
-	std::cout << "expectedMeasurementVector XZ " << expectedMeasurementVector(0,0) << " " << expectedMeasurementVector(1,0) << std::endl;
-	std::cout << "measurementResidualVector XZ " << measurementResidualVector(0,0) << " " << measurementResidualVector(1,0) << std::endl;
-      }
 
+       if (_debugLevel >= 5){
+// 	std::cout << "measurementVector XZ " << measurementVector(0,0) << " " << measurementVector(1,0) << std::endl;
+// 	std::cout << "expectedMeasurementVector XZ " << expectedMeasurementVector(0,0) << " " << expectedMeasurementVector(1,0) << std::endl;
+// 	std::cout << "measurementResidualVector XZ " << measurementResidualVector(0,0) << " " << measurementResidualVector(1,0) << std::endl;
+	 std::cout << "measurementResidualVector XZ " << std::endl;
+	 measurementResidualVector.Print();
+
+       }
+
+      
 
       // Accumulate chi2 !!!!! only on one measurement direction right now
       double delchi2 = (measurementResidualVectorT * invMeasurementRes2 * measurementResidualVector)(0,0);
       chi2 += delchi2; 
           
+
+
       if (_debugLevel >=3){
+	std::cout.flush();
 	std::cout << "Chi2 contribution: " << delchi2 << " total chi2: " << chi2 << std::endl;
       }         
 
@@ -220,7 +249,12 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       
        
     TMatrixD d2chi2dHCdHCinv = d2chi2dHCdHC;
-    d2chi2dHCdHCinv.Invert();
+    if (DetectorGeometry::_mDim == 1){
+      d2chi2dHCdHCinv(3,3)=1.0;
+      d2chi2dHCdHCinv(4,4)=1.0;
+    }
+
+   d2chi2dHCdHCinv.Invert();
 
     dchi2dHCT.Transpose(dchi2dHC);
 
@@ -272,6 +306,12 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
     std::cout << "Final Helix " << helix(0) << " " << helix(1)  << " " << helix(2)  << " " << helix(3)  << " " << helix(4) << std::endl;
   }
       
+    if (DetectorGeometry::_mDim == 1){
+      d2chi2dHCdHCbest(3,3)=1.0;
+      d2chi2dHCdHCbest(4,4)=1.0;
+    }
+
+
   // !!!!! right now fit is only in 2D so mDim is really 1
   trackHitMap::size_type nHits = trackHitMap.size();
   ndof = DetectorGeometry::_mDim*nHits - Helix::_sDim;
@@ -280,7 +320,7 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
   std::cout << "chi2 " << chi2Best << std::endl;
 
   workingHelix.setHelix(helixBest);
-  finalCovMatrix = d2chi2dHCdHCbest.Invert()*(1.0/nHits);
+  finalCovMatrix = d2chi2dHCdHCbest.Invert();
   finalChi2 = chi2Best;
   finalNDof = ndof;
   return workingHelix;

@@ -25,6 +25,11 @@ namespace fcf {
   TMatrixD expectedMeasurementDerivativedXZdHC(const fc::Helix& helix,int layer, const fc::DetectorGeometry & detectorGeometry);
   TMatrixD measurementVectorXZ(const TVector3 & hitPosition);
 
+  TMatrixD expectedMeasurementVectorX(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry);
+  TMatrixD expectedMeasurementDerivativedXdHC(const fc::Helix& helix,int layer, const fc::DetectorGeometry & detectorGeometry);
+  TMatrixD measurementVectorX(const TVector3 & hitPosition);
+
+
 } // end namescape fcf
 
 #endif // TrackFitMeasurements_hh
