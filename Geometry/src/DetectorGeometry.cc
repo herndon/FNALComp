@@ -61,7 +61,7 @@ void fc::DetectorGeometry::initDetectorGeometry( void ) {
     for (int ii = 0; ii < 3; ++ii){
       _sensor[ii_layer]._center.SetXYZ(0.0,0.0+(ii+1)*0.02,0.0);
       _sensor[ii_layer]._normal.SetXYZ(0.0,1.0,0.0);
-      _sensor[ii_layer]._measurementVector.SetXYZ(1.0,0.0,0.0);
+      _sensor[ii_layer]._measurementDirection.SetXYZ(1.0,0.0,0.0);
     }
   }
 

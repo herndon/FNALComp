@@ -13,7 +13,7 @@
 #include "DataSource.hh"
 #include "HitRecoModule.hh"
 #include "HitCompareModule.hh"
-#include "TrackRecoModule.hh"
+#include "PerfectTrackRecoModule.hh"
 #include "TrackCompareModule.hh"
 #include <fstream>
 #include <iostream>
@@ -68,8 +68,8 @@ int main ()
   // Instantiate and initialize Module classes
   processor.addModule( new fc::HitRecoModule(debugLevel,"genStrips", "recoHits", detectorGeometry));
   processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", detectorGeometry));
-  processor.addModule( new fc::TrackRecoModule(debugLevel, "recoHits", "recoTracks", detectorGeometry) );
-  processor.addModule( new fc::TrackCompareModule(debugLevel, "tracksWithHits", "recoTracks", detectorGeometry) );
+  processor.addModule( new fc::PerfectTrackRecoModule(debugLevel, "recoHits", "perfectRecoTracks", detectorGeometry) );
+  processor.addModule( new fc::TrackCompareModule(debugLevel, "tracksWithHits", "perfectRecoTracks", detectorGeometry) );
 
 
   // Event loop over module classes

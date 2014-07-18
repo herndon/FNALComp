@@ -12,13 +12,17 @@
 //============================================================================
 
 #include "TVector3.h"
+#include <vector>
 
 class Helix;
 class DetectorGeometry;
+class HitSet;
+
 
 namespace fc {
 
   Helix initializeHelix(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const DetectorGeometry & detectorGeometry);
+  void chooseHitsForInitialization(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, int& outerXHit, int& middleXHit, int& outerZHit);
 
   
 } // end namescape fc

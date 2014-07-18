@@ -2,6 +2,7 @@
 #include<cmath>
 #include "DetectorGeometry.hh"
 #include "Helix.hh"
+#include "HitSet.hh"
 #include "InitializeHelix.hh"
 
 fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const DetectorGeometry & detectorGeometry){
@@ -54,4 +55,43 @@ fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TV
 
 }
 
+void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, int& outerXHit, int& middleXHit, int& outerZHit){
 
+  int outerXLayer = -1;
+  int outerZLayer = DetectorGeometry::_nXSensors-1;
+  int middleXLayer = -1;
+
+  for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
+
+    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() > outerXLayer && hitSet.getHits()[*trackHitCandidateIter].getLayer() < DetectorGeometry::_nXSensors) {
+      outerXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
+      outerXHit = *trackHitCandidateIter;
+    }
+    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() > outerZLayer) {
+      outerZLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
+      outerZHit = *trackHitCandidateIter;
+    }
+
+    // Figuring out a way to make this general is difficult.
+    if (  hitSet.getHits()[*trackHitCandidateIter].getLayer() == 2) {
+      middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
+      middleXHit = *trackHitCandidateIter;
+    } else if (middleXLayer !=2 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 1) {
+      middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
+      middleXHit = *trackHitCandidateIter;
+    } else if (middleXLayer !=2 && middleXLayer !=1 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 3) {
+      middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
+      middleXHit = *trackHitCandidateIter;
+    } else if (middleXLayer !=2 && middleXLayer !=1 && middleXLayer !=3 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 0) {
+      middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
+      middleXHit = *trackHitCandidateIter;
+    }
+ 
+  }
+
+
+
+
+
+
+}

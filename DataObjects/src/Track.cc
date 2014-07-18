@@ -47,21 +47,21 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
   // !!!!! Move calculation to function that can be called my either 3 hit or more hit function
 
 
-    insertHit(trackHitCandidate[0],0);
-    insertHit(trackHitCandidate[1],1);
-    insertHit(trackHitCandidate[2],2);
-    insertHit(trackHitCandidate[3],3);
-    insertHit(trackHitCandidate[4],4);
-    insertHit(trackHitCandidate[5],5);
-    insertHit(trackHitCandidate[6],6);
-    insertHit(trackHitCandidate[7],7);
-    insertHit(trackHitCandidate[8],8);
-    insertHit(trackHitCandidate[9],9);
+  for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
+    insertHit(*trackHitCandidateIter,hitSet.getHits()[*trackHitCandidateIter].getLayer());
+  }
+
+  // Choose Hits to initialize Helix.  
+  int outerXHit = -1;
+  int middleXHit = -1;
+  int outerZHit = -1;
+
+  chooseHitsForInitialization(hitSet, trackHitCandidate,outerXHit, middleXHit, outerZHit);
 
 
     TVector3 x1 = primaryVertex;
-    TVector3 x2 = hitSet.getHits()[trackHitCandidate[2]].getHitPosition();
-    TVector3 x3 = hitSet.getHits()[trackHitCandidate[4]].getHitPosition();
+    TVector3 x2 = hitSet.getHits()[middleXHit].getHitPosition();
+    TVector3 x3 = hitSet.getHits()[outerXHit].getHitPosition();
 
 
 

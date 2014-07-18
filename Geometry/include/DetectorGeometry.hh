@@ -27,7 +27,6 @@ struct sensorDescriptor {
   double _threshold;
   TVector3 _center;
   TVector3 _normal;
-  TVector3 _measurementVector;
   TVector3 _measurementDirection;
 };
 
@@ -52,6 +51,8 @@ public:
   const sensorDescriptor& getSensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
   int getDetectorGeometryVersion(void) const {return _detectorGeometryVersion;};
   int getNSensors(void) const {return _nSensors;};
+  int getNXSensors(void) const {return _nXSensors;};
+  int getNZSensors(void) const {return _nZSensors;};
   double getZBField(void) const {return _bField.Z();};
   const TVector3 & getBField(void) const {return _bField;};
   double getMIP(void) const {return _MIP;};
@@ -62,6 +63,9 @@ public:
 
   // Numerology for declaring arrays
   static const int _nSensors=10;
+  static const int _nXSensors=5;
+  static const int _nZSensors=5;
+
 
   static const int _mDim = 1; //!< Measurement dimention of hits
  
