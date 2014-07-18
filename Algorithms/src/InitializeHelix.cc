@@ -38,6 +38,14 @@ fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TV
   double phi23 = std::atan2(sinPhi23, cosPhi23);
   double radiusCurvature  = -0.5 * x23Mag / sinPhi23;
 
+  std::cout << "radiusCurvature " << radiusCurvature << " x23Mag " << x23Mag << " sinPhi23 " << sinPhi23 << std::endl;
+  x1.Print();
+  x2.Print();
+  x3.Print();
+
+  // Since we are using the pV to see the track occationally you can get a bad curvature
+  if (radiusCurvature > 125.0) radiusCurvature = 125;
+
   // Find center of curvature
   TVector3 centerCurvature = 0.5 * (x2 + x3) + radiusCurvature * cosPhi23 * x23.Cross(z);
  

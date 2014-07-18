@@ -54,6 +54,8 @@ fc::Track fc::TrackGenModule::generateTrack(){
   int trackCharge = (_random.getUniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
   double trackPhi0 = _random.getUniformDouble(-M_PI/24.0,M_PI/24.0) + M_PI/2.0;
   double trackTanL = _random.getUniformDouble(-0.1,0.1); 
+  double trackD0 = _random.getUniformDouble(-0.01,0.01); 
+  double trackZ0 = _random.getUniformDouble(-0.01,0.01); 
 
   // Details of curvature calculation
   //using p = BqR, 
@@ -73,7 +75,7 @@ fc::Track fc::TrackGenModule::generateTrack(){
   }
 
  
-  Track track(trackCharge/trackPT,0.0,0.0,trackPhi0,trackTanL,_detectorGeometry);
+  Track track(trackCharge/trackPT,trackD0,trackZ0,trackPhi0,trackTanL,_detectorGeometry);
 
  
   return track;

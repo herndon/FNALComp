@@ -72,7 +72,7 @@ public:
 
   Track();
   Track(double kappa, double dr, double dz, double phi0, double tanl, const DetectorGeometry & detectorGeometry);
-  Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, const DetectorGeometry & detectorGeometry);
+  Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign, const DetectorGeometry & detectorGeometry);
   Track(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, int debugLevel);
 
   Track(const Track&);

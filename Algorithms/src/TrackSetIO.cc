@@ -50,11 +50,16 @@ void fc::TrackSetIO::writeEvent(const TrackSet & trackSet, std::ofstream & track
     trackdata << lorentzVector.Pz() << std::endl;
     trackdata << lorentzVector.E()  << std::endl;
 
-    // Point of clossest approach to the the reference point 0 0 0
+    // Point of clossest approach to the the reference point 0 0 0 and sign
 
-    trackdata << trackIter->getHelix().getDr()*std::cos(trackIter->getHelix().getPhi0()) <<std::endl;
-    trackdata << trackIter->getHelix().getDr()*std::sin(trackIter->getHelix().getPhi0()) <<std::endl;
+    trackdata << std::abs(trackIter->getHelix().getDr())*std::cos(trackIter->getHelix().getPhi0()) <<std::endl;
+    trackdata << std::abs(trackIter->getHelix().getDr())*std::sin(trackIter->getHelix().getPhi0()) <<std::endl;
     trackdata << trackIter->getHelix().getDz() <<std::endl;
+
+    int d0Sign;
+    if (std::signbit(trackIter->getHelix().getDr())) {d0Sign = -1;} else {d0Sign = 1;}
+    trackdata << d0Sign << std::endl;
+
 
     trackHitMap::size_type numberHits = trackIter->getTrackHitMap().size();
 
@@ -79,6 +84,7 @@ void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
   int charge;
   std::array<double,4> p4;
   std::array<double,3> x3;
+  int d0Sign;
   int numberHits;
   int hitNumber;
   int hitLayer;
@@ -121,7 +127,9 @@ void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
 
     TVector3 dr(x3[0],x3[1],x3[2]);
  
-    Track track(p,charge,dr,_detectorGeometry);
+    trackdata >> d0Sign;
+
+    Track track(p,charge,dr,d0Sign,_detectorGeometry);
     
     trackdata >> numberHits;
  
