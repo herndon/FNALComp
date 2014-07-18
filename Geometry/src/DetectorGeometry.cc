@@ -2,8 +2,8 @@
 #include<cmath>
 #include <fstream>
 #include <iostream>
-#include "Exception.hh"
-#include "DetectorGeometry.hh"
+#include "Services/include/Exception.hh"
+#include "Geometry/include/DetectorGeometry.hh"
 
 fc::DetectorGeometry::DetectorGeometry(){
   initSensorLimits();

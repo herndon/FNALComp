@@ -1,6 +1,6 @@
 #include <sstream>
-#include "Event.hh"
-#include "Exception.hh"
+#include "Framework/include/Event.hh"
+#include "Services/include/Exception.hh"
 
 void fc::Event::throwNotFoundException(ProductID const& id) const {
   std::ostringstream os;

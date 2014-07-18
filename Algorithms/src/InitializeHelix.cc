@@ -44,7 +44,7 @@ fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TV
   x3.Print();
 
   // Since we are using the pV to see the track occationally you can get a bad curvature
-  if (radiusCurvature > 125.0) radiusCurvature = 125;
+  if (radiusCurvature > 125.0) radiusCurvature = 125.0;
 
   // Find center of curvature
   TVector3 centerCurvature = 0.5 * (x2 + x3) + radiusCurvature * cosPhi23 * x23.Cross(z);

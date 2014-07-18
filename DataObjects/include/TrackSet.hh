@@ -13,8 +13,8 @@
 // 2014-06-06
 //============================================================================
 #include <vector>
-#include "DetectorGeometry.hh"
-#include "Track.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/Track.hh"
 
 namespace fc {
 

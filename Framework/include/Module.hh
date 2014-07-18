@@ -1,7 +1,7 @@
 #ifndef Module_hh
 #define Module_hh
 
-#include "Event.hh"
+#include "Framework/include/Event.hh"
 
 namespace fc {
   class Module {

@@ -2,12 +2,12 @@
 #include <limits>
 #include<cmath>
 #include <iostream>
-#include "HitSet.hh"
-#include "DetectorGeometry.hh"
-#include "Track.hh"
-#include "Helix.hh"
-#include "TrackFit.hh"
-#include "InitializeHelix.hh"
+#include "DataObjects/include/HitSet.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/Track.hh"
+#include "DataObjects/include/Helix.hh"
+#include "Algorithms/include/TrackFit.hh"
+#include "Algorithms/include/InitializeHelix.hh"
 
 
 // Helix parameter initialization

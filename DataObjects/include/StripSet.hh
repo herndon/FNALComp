@@ -13,7 +13,7 @@
 //============================================================================
 #include <map>
 #include <array>
-#include "DetectorGeometry.hh"
+#include "Geometry/include/DetectorGeometry.hh"
 
 namespace fc {
 

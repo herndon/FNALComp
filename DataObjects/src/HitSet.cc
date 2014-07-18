@@ -1,7 +1,7 @@
-#include "DetectorGeometry.hh"
-#include "Exception.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "Services/include/Exception.hh"
 #include "TVector3.h"
-#include "HitSet.hh"
+#include "DataObjects/include/HitSet.hh"
 
 
 fc::HitSet::HitSet():

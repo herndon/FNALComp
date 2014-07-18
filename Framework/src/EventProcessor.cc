@@ -1,8 +1,8 @@
-#include "EventProcessor.hh"
-#include "Event.hh"
-#include "Module.hh"
-#include "Source.hh"
-#include "Exception.hh"
+#include "Framework/include/EventProcessor.hh"
+#include "Framework/include/Event.hh"
+#include "Framework/include/Module.hh"
+#include "Framework/include/Source.hh"
+#include "Services/include/Exception.hh"
 
 #include "TFile.h"
 

@@ -13,8 +13,8 @@
 //============================================================================
 
 #include "TMatrixD.h"
-#include "DetectorGeometry.hh"
-#include "Helix.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/Helix.hh"
 
 class TVector3;
 class Helix;

@@ -12,8 +12,7 @@
 //============================================================================
 
 #include "TVector3.h"
-#include "Helix.hh"
-#include "Track.hh"
+#include "DataObjects/include/Track.hh"
 #include <map>
 
 class DetectorGeometry;

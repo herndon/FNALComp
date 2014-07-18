@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Hit.hh"
+#include "DataObjects/include/Hit.hh"
 
 fc::Hit::Hit(const TVector3 & hitPosition, int layer, int numberStrips, int trackNumber):
   _hitPosition(hitPosition),

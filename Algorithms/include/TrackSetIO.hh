@@ -13,7 +13,7 @@
 //============================================================================
 #include <fstream>
 #include <iostream>
-#include "DetectorGeometry.hh"
+#include "Geometry/include/DetectorGeometry.hh"
 
 class TrackSet;
 

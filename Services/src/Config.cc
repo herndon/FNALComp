@@ -1,8 +1,8 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "Exception.hh"
-#include "Config.hh"
+#include "Services/include/Exception.hh"
+#include "Services/include/Config.hh"
 
 fc::Config::Config(std::ifstream & configfile,int genData):
   _genData(genData),

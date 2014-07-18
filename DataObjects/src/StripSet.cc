@@ -1,6 +1,6 @@
 //#include <algorithm>
-#include "StripSet.hh"
-#include "Exception.hh"
+#include "DataObjects/include/StripSet.hh"
+#include "Services/include/Exception.hh"
 
 
 fc::StripSet::StripSet():

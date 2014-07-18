@@ -3,8 +3,8 @@
 
 #include <memory>
 #include <vector>
-#include "Source.hh"
-#include "Module.hh"
+#include "Framework/include/Source.hh"
+#include "Framework/include/Module.hh"
 
 class TFile;
 

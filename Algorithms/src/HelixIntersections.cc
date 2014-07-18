@@ -3,6 +3,7 @@
 #include<cmath>
 #include <iostream>
 #include "TMatrixD.h"
+#include "DetectorGeometry.hh"
 #include "HelixIntersections.hh"
 #include "TrackFitAlgorithms.hh"
 

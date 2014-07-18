@@ -13,7 +13,7 @@
 
 
 #include "TMatrixD.h"
-#include "Helix.hh"
+#include "DataObjects/include/Helix.hh"
 
 class TVector3;
 

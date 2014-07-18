@@ -5,8 +5,8 @@
 #include <map>
 #include <string>
 
-#include "Handle.hh"
-#include "ProductID.hh"
+#include "Framework/include/Handle.hh"
+#include "Framework/include/ProductID.hh"
 
 namespace fc {
 
