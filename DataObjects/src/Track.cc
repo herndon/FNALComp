@@ -62,10 +62,11 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
     TVector3 x1 = primaryVertex;
     TVector3 x2 = hitSet.getHits()[middleXHit].getHitPosition();
     TVector3 x3 = hitSet.getHits()[outerXHit].getHitPosition();
+    TVector3 z1 = hitSet.getHits()[outerZHit].getHitPosition();
 
 
 
-    Helix initialHelix = initializeHelix(x1,x2,x3,detectorGeometry);
+    Helix initialHelix = initializeHelix(x1,x2,x3,z1,detectorGeometry);
     initialHelix.setAlpha(1.0/_detectorGeometry.getCurvatureC());
     _helix = initialHelix;
 

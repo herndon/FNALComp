@@ -57,8 +57,7 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vec
 
   // Form all hit candidates
 
-  //if (hitSet.getHits().size() < 10) return;
-
+ 
   for (hitSet::const_iterator hitIterO = hitSet.getHits().begin(); hitIterO != hitSet.getHits().end(); ++hitIterO,++hitNumber) {
 
     trackHitCandidate.push_back(hitNumber);

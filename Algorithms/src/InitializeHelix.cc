@@ -5,7 +5,7 @@
 #include "HitSet.hh"
 #include "InitializeHelix.hh"
 
-fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const DetectorGeometry & detectorGeometry){
+fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const TVector3 & z1, const DetectorGeometry & detectorGeometry){
 
 
   // Use three Cartesion points to determine a helix parameters in x,y
@@ -49,7 +49,9 @@ fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TV
 
   Helix helix(0.0, std::atan2(radiusCurvature * (centerCurvature.Y() - x1.Y()), 
 	      radiusCurvature * (centerCurvature.X() - x1.X())), -1.0 /(radiusCurvature*detectorGeometry.getCurvatureC()),
-	      0.0,(x2.Z() - x3.Z()) / (radiusCurvature * 2 * phi23),1.0/detectorGeometry.getCurvatureC());
+	      0.0,(z1.Z() - x1.Z()) / (radiusCurvature * 2.0 * ((z1.Y()-x1.Y())/(x3.Y()-x2.Y())) * phi23),1.0/detectorGeometry.getCurvatureC());
+  // Note that phi23 has to be scaled up to the phi between z1 and x1
+
  
   return helix;
 
@@ -72,7 +74,7 @@ void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<in
       outerZHit = *trackHitCandidateIter;
     }
 
-    // Figuring out a way to make this general is difficult.
+    // !!!!! Figuring out a way to make this general is difficult.
     if (  hitSet.getHits()[*trackHitCandidateIter].getLayer() == 2) {
       middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
       middleXHit = *trackHitCandidateIter;
