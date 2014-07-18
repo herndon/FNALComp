@@ -1,4 +1,4 @@
-NumberEvents 10000 
+NumberEvents 128 
 NumberTracks 1
 Seed 1
 RootFileName genHistograms.root

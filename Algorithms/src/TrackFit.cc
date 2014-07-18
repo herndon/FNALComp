@@ -256,10 +256,6 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       
        
     TMatrixD d2chi2dHCdHCinv = d2chi2dHCdHC;
-    if (DetectorGeometry::_mDim == 1){
-      //d2chi2dHCdHCinv(3,3)=1.0;
-      //d2chi2dHCdHCinv(4,4)=1.0;
-    }
 
    d2chi2dHCdHCinv.Invert();
 
@@ -313,18 +309,10 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
     std::cout << "Final Helix " << helix(0) << " " << helix(1)  << " " << helix(2)  << " " << helix(3)  << " " << helix(4) << std::endl;
   }
       
-    if (DetectorGeometry::_mDim == 1){
-      //d2chi2dHCdHCbest(3,3)=1.0;
-      //d2chi2dHCdHCbest(4,4)=1.0;
-    }
 
 
-  // !!!!! right now fit is only in 2D so mDim is really 1
   trackHitMap::size_type nHits = trackHitMap.size();
   ndof = DetectorGeometry::_mDim*nHits - Helix::_sDim;
-  ndof = 1*nHits - 3;
-  std::cout << "ndof " << ndof << " " <<  trackHitMap.size() << std::endl;
-  std::cout << "chi2 " << chi2Best << std::endl;
 
   workingHelix.setHelix(helixBest);
   finalCovMatrix = d2chi2dHCdHCbest.Invert();
