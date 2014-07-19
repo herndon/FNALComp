@@ -1,11 +1,10 @@
 #include<iostream>
 #include<vector>
-#include "DetectorGeometry.hh"
-#include "HitSet.hh"
-#include "Track.hh"
-#include "TrackFit.hh"
-#include "TrackSet.hh"
-#include "PerfectTrackRecoModule.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/HitSet.hh"
+#include "DataObjects/include/Track.hh"
+#include "DataObjects/include/TrackSet.hh"
+#include "Modules/include/PerfectTrackRecoModule.hh"
 
 fc::PerfectTrackRecoModule::PerfectTrackRecoModule(int debugLevel, 
 						   const std::string& inputHitsLabel, const std::string& inputGenHitsLabel,

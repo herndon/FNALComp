@@ -9,7 +9,7 @@
 // 2014-06-11
 //============================================================================
 
-#include "Module.hh"
+#include "Framework/include/Module.hh"
 
 class DetectorGeometry;
 class HitSet;

@@ -9,8 +9,8 @@
 // 2014-06-11
 //============================================================================
 
-#include "Module.hh"
-#include "StripSet.hh"
+#include "Framework/include/Module.hh"
+#include "DataObjects/include/StripSet.hh"
 #include "TVector3.h"
 #include <vector>
 #include <string>

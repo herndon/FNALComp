@@ -2,10 +2,10 @@
 #include <limits>
 #include<cmath>
 #include <iostream>
-#include "DetectorGeometry.hh"
-#include "TrackFitAlgorithms.hh"
-#include "HelixIntersections.hh"
-#include "TrackFitMeasurements.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "Algorithms/include/TrackFitAlgorithms.hh"
+#include "Algorithms/include/HelixIntersections.hh"
+#include "Algorithms/include/TrackFitMeasurements.hh"
 
 
 TMatrixD fcf::expectedMeasurementVectorXZ(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry) {

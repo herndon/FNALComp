@@ -7,12 +7,12 @@
 //                      Fermi National Accelerator Laboratory
 // 2014-06-12
 //============================================================================
-#include "Config.hh"
-#include "DetectorGeometry.hh"
-#include "EventProcessor.hh"
-#include "DataSource.hh"
-#include "HitRecoModule.hh"
-#include "HitCompareModule.hh"
+#include "Services/include/Config.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "Framework/include/EventProcessor.hh"
+#include "Modules/include/DataSource.hh"
+#include "Modules/include/HitRecoModule.hh"
+#include "Modules/include/HitCompareModule.hh"
 #include <fstream>
 #include <iostream>
 #include <memory>

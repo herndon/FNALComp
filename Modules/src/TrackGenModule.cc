@@ -2,13 +2,13 @@
 #include <string>
 #include<stdlib.h>
 #include<cmath>
-#include "DetectorGeometry.hh"
-#include "Track.hh"
-#include "TrackSet.hh"
-#include "TrackGenModule.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/Track.hh"
+#include "DataObjects/include/TrackSet.hh"
+#include "Modules/include/TrackGenModule.hh"
 #include "TH1D.h"
 #include "TVector3.h"
-#include "UniqueRootDirectory.hh"
+#include "Services/include/UniqueRootDirectory.hh"
 
 fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std::string& iTracksLabel, const DetectorGeometry & detectorGeometry, Random & random):
   _debugLevel(debugLevel),

@@ -1,8 +1,8 @@
 #include<iostream>
-#include "DetectorGeometry.hh"
-#include "HitSet.hh"
-#include "StripSet.hh"
-#include "HitRecoModule.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/HitSet.hh"
+#include "DataObjects/include/StripSet.hh"
+#include "Modules/include/HitRecoModule.hh"
 
 fc::HitRecoModule::HitRecoModule(int debugLevel,
 				 const std::string& iInputStripsLabel, const std::string& iOutputHitsLabel,

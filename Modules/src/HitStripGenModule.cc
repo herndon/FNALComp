@@ -3,13 +3,13 @@
 #include<stdlib.h>
 #include<iostream>
 #include<cmath>
-#include "Track.hh"
-#include "TrackSet.hh"
-#include "HelixIntersections.hh"
-#include "HitSet.hh"
-#include "StripSet.hh"
-#include "DetectorGeometry.hh"
-#include "HitStripGenModule.hh"
+#include "DataObjects/include/Track.hh"
+#include "DataObjects/include/TrackSet.hh"
+#include "Algorithms/include/HelixIntersections.hh"
+#include "DataObjects/include/HitSet.hh"
+#include "DataObjects/include/StripSet.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "Modules/include/HitStripGenModule.hh"
 
 fc::HitStripGenModule::HitStripGenModule(int debugLevel, 
 					 const std::string& iInputTracksLabel,

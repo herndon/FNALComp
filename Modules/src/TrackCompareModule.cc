@@ -1,12 +1,12 @@
 #include<iostream>
 #include<cmath>
 #include<string>
-#include "DetectorGeometry.hh"
-#include "Track.hh"
-#include "TrackSet.hh"
-#include "TrackCompareModule.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/Track.hh"
+#include "DataObjects/include/TrackSet.hh"
+#include "Modules/include/TrackCompareModule.hh"
 #include "TH1F.h"
-#include "UniqueRootDirectory.hh"
+#include "Services/include/UniqueRootDirectory.hh"
 
 fc::TrackCompareModule::TrackCompareModule(int debugLevel, 
 				       const std::string& inputGenTracksLabel,

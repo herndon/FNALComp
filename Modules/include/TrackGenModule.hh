@@ -14,8 +14,8 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "Random.hh"
-#include "Module.hh"
+#include "Services/include/Random.hh"
+#include "Framework/include/Module.hh"
 
 class Track;
 class TrackSet;

@@ -1,11 +1,11 @@
 #include<iostream>
 #include<cmath>
 #include<string>
-#include "DetectorGeometry.hh"
-#include "HitSet.hh"
-#include "HitCompareModule.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/HitSet.hh"
+#include "Modules/include/HitCompareModule.hh"
 #include "TH1F.h"
-#include "UniqueRootDirectory.hh"
+#include "Services/include/UniqueRootDirectory.hh"
 
 fc::HitCompareModule::HitCompareModule(int debugLevel, 
 				       const std::string& inputGenHitsLabel,

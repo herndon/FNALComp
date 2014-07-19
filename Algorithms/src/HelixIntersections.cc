@@ -3,9 +3,9 @@
 #include<cmath>
 #include <iostream>
 #include "TMatrixD.h"
-#include "DetectorGeometry.hh"
-#include "HelixIntersections.hh"
-#include "TrackFitAlgorithms.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "Algorithms/include/HelixIntersections.hh"
+#include "Algorithms/include/TrackFitAlgorithms.hh"
 
 bool fcf::intersectWithLayer(const fc::Helix& helix, TVector3 & hitPosition, int layer, const fc::DetectorGeometry & detectorGeometry){
 

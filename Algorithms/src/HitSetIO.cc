@@ -1,8 +1,8 @@
 #include <string>
 #include <limits>
-#include "Exception.hh"
-#include "HitSet.hh"
-#include "HitSetIO.hh"
+#include "Services/include/Exception.hh"
+#include "DataObjects/include/HitSet.hh"
+#include "Algorithms/include/HitSetIO.hh"
 
 
 fc::HitSetIO::HitSetIO():

@@ -1,5 +1,5 @@
-#include "CountEventsSource.hh"
-#include "Event.hh"
+#include "Modules/include/CountEventsSource.hh"
+#include "Framework/include/Event.hh"
 
 std::unique_ptr<fc::Event> fc::CountEventsSource::getNextEvent() {
   const unsigned int eventNumber = _numberOfEventsProcessed++; 

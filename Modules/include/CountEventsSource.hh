@@ -1,7 +1,7 @@
 #ifndef CountEventsSource_hh
 #define CountEventsSource_hh
 
-#include "Source.hh"
+#include "Framework/include/Source.hh"
 
 namespace fc {
   class CountEventsSource : public Source {

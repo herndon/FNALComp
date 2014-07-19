@@ -1,9 +1,9 @@
 #define _USE_MATH_DEFINES
 #include<cmath>
-#include "DetectorGeometry.hh"
-#include "Helix.hh"
-#include "HitSet.hh"
-#include "InitializeHelix.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/Helix.hh"
+#include "DataObjects/include/HitSet.hh"
+#include "Algorithms/include/InitializeHelix.hh"
 
 fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const TVector3 & z1, const DetectorGeometry & detectorGeometry){
 

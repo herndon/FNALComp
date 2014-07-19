@@ -2,13 +2,13 @@
 #include <limits>
 #include<cmath>
 #include <iostream>
-#include "HitSet.hh"
-#include "DetectorGeometry.hh"
-#include "TrackFitAlgorithms.hh"
-#include "TrackFitMeasurements.hh"
-#include "Helix.hh"
-#include "TrackFit.hh"
-#include "Track.hh"
+#include "DataObjects/include/HitSet.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "Algorithms/include/TrackFitAlgorithms.hh"
+#include "Algorithms/include/TrackFitMeasurements.hh"
+#include "DataObjects/include/Helix.hh"
+#include "Algorithms/include/TrackFit.hh"
+#include "DataObjects/include/Track.hh"
 
 
 

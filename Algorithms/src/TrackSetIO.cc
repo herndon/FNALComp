@@ -1,8 +1,8 @@
 #include <string>
 #include <array>
-#include "Exception.hh"
-#include "TrackSet.hh"
-#include "TrackSetIO.hh"
+#include "Services/include/Exception.hh"
+#include "DataObjects/include/TrackSet.hh"
+#include "Algorithms/include/TrackSetIO.hh"
 #include <limits>
 
 // !!!!! Do we need this one

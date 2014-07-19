@@ -9,15 +9,14 @@
 //                      Fermi National Accelerator Laboratory
 // 2014-05-22
 //============================================================================
-#include "DetectorGeometry.hh"
-#include "TrackGenModule.hh"
-#include "HitStripGenModule.hh"
-#include "DataOutputModule.hh"
-#include "CountEventsSource.hh"
-#include "Config.hh"
-#include "Random.hh"
-#include "Event.hh"
-#include "EventProcessor.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "Modules/include/TrackGenModule.hh"
+#include "Modules/include/HitStripGenModule.hh"
+#include "Modules/include/DataOutputModule.hh"
+#include "Modules/include/CountEventsSource.hh"
+#include "Services/include/Config.hh"
+#include "Services/include/Random.hh"
+#include "Framework/include/EventProcessor.hh"
 #include <fstream>
 #include <iostream>
 

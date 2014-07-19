@@ -1,8 +1,8 @@
 #include <string>
 #include <algorithm>
-#include "StripSet.hh"
-#include "Exception.hh"
-#include "StripSetIO.hh"
+#include "Services/include/Exception.hh"
+#include "DataObjects/include/StripSet.hh"
+#include "Algorithms/include/StripSetIO.hh"
 
 
 fc::StripSetIO::StripSetIO(const DetectorGeometry&  detectorGeometry):

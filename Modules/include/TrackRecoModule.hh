@@ -9,8 +9,7 @@
 // 2014-06-11
 //============================================================================
 
-#include "StripSet.hh"
-#include "Module.hh"
+#include "Framework/include/Module.hh"
 #include <vector>
 
 class DetectorGeometry;

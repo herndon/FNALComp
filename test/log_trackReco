@@ -4337,7 +4337,7 @@ Layer: 9 number Strips: 2
 Strip: 576  ADC 15
 Strip: 577  ADC 16
 Hit Set version: 1
-Gen Hits: 50
+Gen Hits: 48
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.00375968 0.2 0
@@ -4413,7 +4413,7 @@ chi2 4.75626 ndof 5
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
 Hit Set version: 1
-Gen Hits: 50
+Gen Hits: 48
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.00375968 0.2 0
@@ -14569,7 +14569,7 @@ Layer: 9 number Strips: 2
 Strip: 968  ADC 20
 Strip: 969  ADC 11
 Hit Set version: 1
-Gen Hits: 50
+Gen Hits: 48
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0183226 0.2 0
@@ -14645,7 +14645,7 @@ chi2 5.12399 ndof 5
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
 Hit Set version: 1
-Gen Hits: 50
+Gen Hits: 48
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0183226 0.2 0
@@ -22937,7 +22937,7 @@ Layer: 9 number Strips: 2
 Strip: 1388  ADC 28
 Strip: 1389  ADC 3
 Hit Set version: 1
-Gen Hits: 50
+Gen Hits: 48
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0119871 0.2 0
@@ -23013,7 +23013,7 @@ chi2 5.57907 ndof 5
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
 Hit Set version: 1
-Gen Hits: 50
+Gen Hits: 48
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0119871 0.2 0

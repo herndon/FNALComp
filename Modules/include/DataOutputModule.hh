@@ -15,7 +15,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "Module.hh"
+#include "Framework/include/Module.hh"
 
 class TrackSet;
 class HitSet;

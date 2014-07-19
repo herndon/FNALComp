@@ -15,8 +15,8 @@
 
 #include <vector>
 #include <string>
-#include "Random.hh"
-#include "Module.hh"
+#include "Services/include/Random.hh"
+#include "Framework/include/Module.hh"
 
 
 class DetectorGeometry;

@@ -1,12 +1,12 @@
-#include "TrackSet.hh"
-#include "TrackSetIO.hh"
-#include "HitSet.hh"
-#include "HitSetIO.hh"
-#include "StripSet.hh"
-#include "StripSetIO.hh"
-#include "DataSource.hh"
+#include "DataObjects/include/TrackSet.hh"
+#include "Algorithms/include/TrackSetIO.hh"
+#include "DataObjects/include/HitSet.hh"
+#include "Algorithms/include/HitSetIO.hh"
+#include "DataObjects/include/StripSet.hh"
+#include "Algorithms/include/StripSetIO.hh"
+#include "Modules/include/DataSource.hh"
+#include "Services/include/Exception.hh"
 #include <string>
-#include "Exception.hh"
 
 fc::DataSource::DataSource(int debugLevel,std::ifstream& inputeventdatafile, bool genData, 
 				     const std::string& iOutputTracksLabel,

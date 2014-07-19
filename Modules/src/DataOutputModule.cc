@@ -1,10 +1,10 @@
-#include "TrackSet.hh"
-#include "TrackSetIO.hh"
-#include "HitSet.hh"
-#include "HitSetIO.hh"
-#include "StripSet.hh"
-#include "StripSetIO.hh"
-#include "DataOutputModule.hh"
+#include "DataObjects/include/TrackSet.hh"
+#include "Algorithms/include/TrackSetIO.hh"
+#include "DataObjects/include/HitSet.hh"
+#include "Algorithms/include/HitSetIO.hh"
+#include "DataObjects/include/StripSet.hh"
+#include "Algorithms/include/StripSetIO.hh"
+#include "Modules/include/DataOutputModule.hh"
 
 
 fc::DataOutputModule::DataOutputModule(int debugLevel, std::ofstream& outputeventdatafile,

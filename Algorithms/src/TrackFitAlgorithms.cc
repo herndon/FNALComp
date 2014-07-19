@@ -3,8 +3,8 @@
 #include<cmath>
 #include <iostream>
 #include "TVector3.h"
-#include "DetectorGeometry.hh"
-#include "TrackFitAlgorithms.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "Algorithms/include/TrackFitAlgorithms.hh"
 
 
 

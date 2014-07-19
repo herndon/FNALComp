@@ -9,13 +9,14 @@
 // 2014-07-15
 //============================================================================
 
-#include "DetectorGeometry.hh"
-#include "Module.hh"
+#include "Framework/include/Module.hh"
 #include "TVectorD.h"
 
+class DetectorGeometry;
 class Track;
 class TrackSet;
 class TH1F;
+
 
 namespace fc {
 
