@@ -2,6 +2,7 @@
 #include "Algorithms/include/TrackSetIO.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "Algorithms/include/HitSetIO.hh"
+#include "Algorithms/include/InitializeHelix.hh"
 #include "DataObjects/include/StripSet.hh"
 #include "Algorithms/include/StripSetIO.hh"
 #include "Modules/include/DataOutputModule.hh"
@@ -35,6 +36,7 @@ void fc::DataOutputModule::processEvent(Event& event) {
   if (_debugLevel >=2) stripSet->print();
 
   _outputeventdatafile << event.eventNumber() << std::endl;
+
 
 
   TrackSetIO trackSetIO(_detectorGeometry);

@@ -31,8 +31,6 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
 
   recoTracks(*perfectRecoTrackSet,*recoHitSet,*genHitSet);
 
-  if (_debugLevel >= 2) recoHitSet->print();
-
   event.put(_outTracksLabel,std::move(perfectRecoTrackSet) );
 }
 

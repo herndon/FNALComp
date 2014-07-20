@@ -79,7 +79,6 @@ const fc::Track & fc::TrackCompareModule::matchTrack(const Track & genTrack, con
   int trackNumber=0;
   int bestTrack=-1;
 
-  std::cout << "In match Track" <<std::endl;
   for (trackSet::const_iterator recoTrackIter =  recoTrackSet.getTracks().begin(); recoTrackIter !=  recoTrackSet.getTracks().end(); ++recoTrackIter,++trackNumber){
 
     tmpDeltaTracks = deltaTracks(genTrack,*recoTrackIter);
@@ -103,10 +102,6 @@ double fc::TrackCompareModule::deltaTracks(const Track & genTrack, const Track& 
 
 TVectorD fc::TrackCompareModule::deltaHP(const Track & genTrack, const Track& recoTrack){
 
-  std::cout << "gen Track" << std::endl;
-  genTrack.print();
-  std::cout << "reco Track" << std::endl;
-  recoTrack.print();
 
   return recoTrack.getHelix().getHelix() - genTrack.getHelix().getHelix();
 

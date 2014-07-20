@@ -38,13 +38,11 @@ fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TV
   double phi23 = std::atan2(sinPhi23, cosPhi23);
   double radiusCurvature  = -0.5 * x23Mag / sinPhi23;
 
-  std::cout << "radiusCurvature " << radiusCurvature << " x23Mag " << x23Mag << " sinPhi23 " << sinPhi23 << std::endl;
-  x1.Print();
-  x2.Print();
-  x3.Print();
 
-  // Since we are using the pV to see the track occationally you can get a bad curvature
-  if (radiusCurvature > 125.0) radiusCurvature = 125.0;
+  // !!!!! Since we are using the pV to see the track occationally you can get a bad curvature and tanL
+  if (std::abs(radiusCurvature) > 125.0) radiusCurvature = 125.0*radiusCurvature/std::abs(radiusCurvature);
+  double tanL = (z1.Z() - x1.Z()) / (radiusCurvature * 2.0 * ((z1.Y()-x1.Y())/(x3.Y()-x2.Y())) * phi23);
+  if (std::abs(tanL) > 0.2) tanL = 0.0;
 
   // Find center of curvature
   TVector3 centerCurvature = 0.5 * (x2 + x3) + radiusCurvature * cosPhi23 * x23.Cross(z);
@@ -55,9 +53,10 @@ fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TV
 //   helix(3) = 0.0;
 //   helix(4) =  (x2.Z() - x3.Z()) / (radiusCurvature * 2 * phi23);
 
+
   Helix helix(0.0, std::atan2(radiusCurvature * (centerCurvature.Y() - x1.Y()), 
 	      radiusCurvature * (centerCurvature.X() - x1.X())), -1.0 /(radiusCurvature*detectorGeometry.getCurvatureC()),
-	      0.0,(z1.Z() - x1.Z()) / (radiusCurvature * 2.0 * ((z1.Y()-x1.Y())/(x3.Y()-x2.Y())) * phi23),1.0/detectorGeometry.getCurvatureC());
+	      0.0,tanL,1.0/detectorGeometry.getCurvatureC());
   // Note that phi23 has to be scaled up to the phi between z1 and x1
 
  
@@ -99,9 +98,56 @@ void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<in
  
   }
 
+}
+
+bool fc::findZForInitialization(const HitSet & hitSet,const std::vector<int> & trackHitCandidate,TVector3& z,const DetectorGeometry & detectorGeometry){
+
+  int layer4XHit = -1;
+  int layer4SASHit = -1;
+  int layer3XHit = -1;
+  int layer3SASHit = -1;
+  
 
 
+  for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
+    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() == 4) layer4XHit = *trackHitCandidateIter;
+    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() == 9) layer4SASHit = *trackHitCandidateIter;
+    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() == 3) layer3XHit = *trackHitCandidateIter;
+    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() == 8) layer3SASHit = *trackHitCandidateIter;
+  }
 
 
+  if (layer4XHit != -1 &&  layer4SASHit != -1){
+    if (intersectStrips(hitSet.getHits()[layer4XHit],hitSet.getHits()[layer4SASHit],z,detectorGeometry)) return true;
+  }
+  if (layer3XHit != -1 &&  layer3SASHit != -1){
+    if (intersectStrips(hitSet.getHits()[layer3XHit],hitSet.getHits()[layer3SASHit],z,detectorGeometry)) return true;
+  }
+  return false;
 
 }
+
+
+bool fc::intersectStrips(const Hit & xHit, const Hit & sasHit,TVector3& z, const DetectorGeometry & detectorGeometry){
+
+  // Note, in the SAS geometry the strips will always intersect so there is no need to check for non intersecting cases
+
+  TVector3 xPos = xHit.getHitPosition();
+  TVector3 xDir = detectorGeometry.getSensor(xHit.getLayer())._normal.Cross(detectorGeometry.getSensor(xHit.getLayer())._measurementDirection); 
+  TVector3 sasPos = sasHit.getHitPosition();
+  TVector3 sasDir = detectorGeometry.getSensor(sasHit.getLayer())._normal.Cross(detectorGeometry.getSensor(sasHit.getLayer())._measurementDirection);
+
+  TVector3 num = (sasPos-xPos).Cross(sasDir);
+  TVector3 denom = xDir.Cross(sasDir);
+  
+  double disX = (num.Mag()/denom.Mag()) * (num*denom/(num.Mag()*denom.Mag()));
+
+  z = xPos + xDir*disX;
+
+
+  return true;
+}
+
+
+
+

@@ -6,6 +6,7 @@
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
 #include "Algorithms/include/HelixIntersections.hh"
+#include "Algorithms/include/InitializeHelix.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "DataObjects/include/StripSet.hh"
 #include "Geometry/include/DetectorGeometry.hh"
@@ -72,6 +73,7 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, 
    
 
   } // end layer loop
+
 
 }
 

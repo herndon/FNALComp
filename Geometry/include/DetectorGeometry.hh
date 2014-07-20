@@ -73,7 +73,6 @@ public:
 private:
 
   // Use default geometry or intialize geometry from a run time file and version
-  bool _defaultGeometry;
   int _detectorGeometryVersion;
 
 

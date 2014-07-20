@@ -62,7 +62,9 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
     TVector3 x1 = primaryVertex;
     TVector3 x2 = hitSet.getHits()[middleXHit].getHitPosition();
     TVector3 x3 = hitSet.getHits()[outerXHit].getHitPosition();
-    TVector3 z1 = hitSet.getHits()[outerZHit].getHitPosition();
+
+    TVector3 z1;
+    bool test = findZForInitialization(hitSet,trackHitCandidate,z1,_detectorGeometry);
 
 
 
@@ -145,7 +147,7 @@ void fc::Track::print(void) const{
   std::cout << "4 momentum " << lorentzVector.Px() << " " <<  lorentzVector.Py() << " " <<  lorentzVector.Pz() << " " <<  lorentzVector.E() << " " << std::endl;
   std::cout << "Track parameters:  pT " <<  lorentzVector.Pt() << " cot(theta) " << 1/getHelix().getTanL() << " phi0 " << getHelix().getPhi0()-M_PI/2.0 << " d0 " << getHelix().getDr() << " z0 " << getHelix().getDz() << std::endl;
   std::cout << "Helix paramters: kappa " << getHelix().getKappa() << " tan(Lambda) " << getHelix().getTanL() << " phi0 to d0 " << getHelix().getPhi0() << std::endl;  
-  std::cout << "Pivot Point " << 0.0 << " " << 0.0 << " " << 0.0 << std::endl;
+  std::cout << "Reference Point " << 0.0 << " " << 0.0 << " " << 0.0 << std::endl;
 
   if (_nDof > 0){
 
