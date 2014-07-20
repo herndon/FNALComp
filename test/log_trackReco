@@ -293,6 +293,23 @@ chi2 8.84512 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 2.00434 36.9453 1.36003 37.0246 
+Track parameters:  pT 36.9996 cot(theta) 27.205 phi0 1.5166 d0 0 z0 0
+Helix paramters: kappa -0.0270273 tan(Lambda) 0.036758 phi0 to d0 3.08739
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.96074e-17 0
+Track after fit
+Charge 1
+4 momentum 2.00434 36.9453 1.38642 37.0256 
+Track parameters:  pT 36.9996 cot(theta) 26.6871 phi0 1.5166 d0 4.40772e-11 z0 -1.2527e-12
+Helix paramters: kappa -0.0270273 tan(Lambda) 0.0374712 phi0 to d0 3.08739
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 1
 Number Tracks: 1
 Track number: 0
@@ -379,7 +396,7 @@ Layer: 9 number Strips: 2
 Strip: 490  ADC 5
 Strip: 491  ADC 26
 Hit Set version: 1
-Gen Hits: 134
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.012979 0.2 0
@@ -450,6 +467,23 @@ chi2 3.53698 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -0.717826 8.13879 -0.0823844 8.1708 
+Track parameters:  pT 8.17038 cot(theta) -99.1738 phi0 1.65877 d0 0 z0 0
+Helix paramters: kappa 0.122393 tan(Lambda) -0.0100833 phi0 to d0 3.22956
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 8.29271e-15 0
+Track after fit
+Charge -1
+4 momentum -0.717826 8.13879 -0.0941847 8.17092 
+Track parameters:  pT 8.17038 cot(theta) -86.7485 phi0 1.65877 d0 -9.13992e-10 z0 2.35326e-12
+Helix paramters: kappa 0.122393 tan(Lambda) -0.0115276 phi0 to d0 3.22956
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 2
 Number Tracks: 1
 Track number: 0
@@ -607,6 +641,23 @@ chi2 3.68168 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 1.23275 37.4538 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.53789 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.10869
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.09691e-17 0
+Track after fit
+Charge 1
+4 momentum 15.9707 404.719 13.6575 405.264 
+Track parameters:  pT 405.034 cot(theta) 29.6565 phi0 1.53136 d0 -5.0937e-12 z0 -3.99935e-12
+Helix paramters: kappa -0.00246893 tan(Lambda) 0.0337194 phi0 to d0 3.10215
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 3
 Number Tracks: 1
 Track number: 0
@@ -764,6 +815,23 @@ chi2 3.25147 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -1.1516 10.5487 0.0791154 10.6116 
+Track parameters:  pT 10.6113 cot(theta) 134.125 phi0 1.67954 d0 0 z0 0
+Helix paramters: kappa -0.0942388 tan(Lambda) 0.00745574 phi0 to d0 3.25033
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.16468e-17 0
+Track after fit
+Charge 1
+4 momentum -1.1516 10.5487 0.0692719 10.6116 
+Track parameters:  pT 10.6113 cot(theta) 153.184 phi0 1.67954 d0 5.63831e-11 z0 1.40268e-12
+Helix paramters: kappa -0.0942388 tan(Lambda) 0.0065281 phi0 to d0 3.25033
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 4
 Number Tracks: 1
 Track number: 0
@@ -850,7 +918,7 @@ Layer: 9 number Strips: 2
 Strip: 686  ADC 24
 Strip: 687  ADC 7
 Hit Set version: 1
-Gen Hits: 255
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0157371 0.2 0
@@ -921,6 +989,23 @@ chi2 4.15526 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -2.27249 37.4051 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.63148 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) 0 phi0 to d0 3.20227
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.00636e-16 0
+Track after fit
+Charge -1
+4 momentum -74.4212 1098.42 -21.3156 1101.14 
+Track parameters:  pT 1100.93 cot(theta) -51.6494 phi0 1.63845 d0 1.51111e-11 z0 4.18839e-12
+Helix paramters: kappa 0.000908319 tan(Lambda) -0.0193613 phi0 to d0 3.20924
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 5
 Number Tracks: 1
 Track number: 0
@@ -1078,6 +1163,23 @@ chi2 16.7762 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -0.133914 37.4738 3.33336 37.622 
+Track parameters:  pT 37.4741 cot(theta) 11.2421 phi0 1.57437 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) 0.0889513 phi0 to d0 3.14517
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.23863e-19 0
+Track after fit
+Charge -1
+4 momentum -0.806956 99.9422 3.32006 100.001 
+Track parameters:  pT 99.9455 cot(theta) 30.1035 phi0 1.57887 d0 4.23434e-13 z0 -5.56143e-13
+Helix paramters: kappa 0.0100055 tan(Lambda) 0.0332187 phi0 to d0 3.14967
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 6
 Number Tracks: 1
 Track number: 0
@@ -1235,6 +1337,23 @@ chi2 11.2701 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.10383 12.7057 0.608139 12.7207 
+Track parameters:  pT 12.7061 cot(theta) 20.8934 phi0 1.56262 d0 0 z0 0
+Helix paramters: kappa -0.0787022 tan(Lambda) 0.0478619 phi0 to d0 3.13342
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.208e-13 0
+Track after fit
+Charge 1
+4 momentum 0.10383 12.7057 0.612771 12.7209 
+Track parameters:  pT 12.7061 cot(theta) 20.7355 phi0 1.56262 d0 -1.25341e-11 z0 -1.87432e-09
+Helix paramters: kappa -0.0787022 tan(Lambda) 0.0482264 phi0 to d0 3.13342
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 7
 Number Tracks: 1
 Track number: 0
@@ -1321,7 +1440,7 @@ Layer: 9 number Strips: 2
 Strip: 1600  ADC 21
 Strip: 1601  ADC 10
 Hit Set version: 1
-Gen Hits: 255
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0197984 0.2 0
@@ -1392,6 +1511,23 @@ chi2 3.25765 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 4.09793 37.2493 -0.0370996 37.4741 
+Track parameters:  pT 37.4741 cot(theta) -1010.09 phi0 1.46122 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) -0.000990007 phi0 to d0 3.03202
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.74868e-14 0
+Track after fit
+Charge 1
+4 momentum 6.57273 58.3375 0.0416525 58.7066 
+Track parameters:  pT 58.7066 cot(theta) 1409.44 phi0 1.4586 d0 -1.21806e-09 z0 9.88151e-14
+Helix paramters: kappa -0.0170339 tan(Lambda) 0.000709502 phi0 to d0 3.0294
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 8
 Number Tracks: 1
 Track number: 0
@@ -1549,6 +1685,23 @@ chi2 1.0433 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.50786 19.1035 0.645573 19.1738 
+Track parameters:  pT 19.1629 cot(theta) 29.6836 phi0 1.49203 d0 0 z0 0
+Helix paramters: kappa 0.0521841 tan(Lambda) 0.0336887 phi0 to d0 3.06282
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.53452e-17 0
+Track after fit
+Charge -1
+4 momentum 1.50786 19.1035 0.658994 19.1742 
+Track parameters:  pT 19.1629 cot(theta) 29.079 phi0 1.49203 d0 3.90019e-11 z0 -1.27512e-12
+Helix paramters: kappa 0.0521841 tan(Lambda) 0.034389 phi0 to d0 3.06282
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 9
 Number Tracks: 1
 Track number: 0
@@ -1635,7 +1788,7 @@ Layer: 9 number Strips: 2
 Strip: 1132  ADC 2
 Strip: 1133  ADC 29
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 63
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.00957903 0.2 0
@@ -1706,6 +1859,23 @@ chi2 5.0688 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 0.421027 12.8368 -0.496115 12.8533 
+Track parameters:  pT 12.8437 cot(theta) -25.8885 phi0 1.53801 d0 0 z0 0
+Helix paramters: kappa 0.0778592 tan(Lambda) -0.0386271 phi0 to d0 3.10881
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.36426e-14 0
+Track after fit
+Charge -1
+4 momentum 0.421027 12.8368 -0.494541 12.8532 
+Track parameters:  pT 12.8437 cot(theta) -25.971 phi0 1.53801 d0 -6.19804e-12 z0 -6.27645e-10
+Helix paramters: kappa 0.0778592 tan(Lambda) -0.0385046 phi0 to d0 3.10881
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 10
 Number Tracks: 1
 Track number: 0
@@ -1790,7 +1960,7 @@ Layer: 9 number Strips: 2
 Strip: 1636  ADC 19
 Strip: 1637  ADC 12
 Hit Set version: 1
-Gen Hits: 255
+Gen Hits: 0
 Number Hits: 9
 Hit: 0 associated with track -1
 Hit position: 0.0279306 0.2 0
@@ -2014,6 +2184,23 @@ chi2 3.30792 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.204186 23.1177 -1.47802 23.1658 
+Track parameters:  pT 23.1186 cot(theta) -15.6416 phi0 1.57963 d0 0 z0 0
+Helix paramters: kappa -0.0432552 tan(Lambda) -0.063932 phi0 to d0 3.15042
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.3322e-15 0
+Track after fit
+Charge 1
+4 momentum -0.204186 23.1177 -1.47662 23.1657 
+Track parameters:  pT 23.1186 cot(theta) -15.6565 phi0 1.57963 d0 -2.37114e-12 z0 -3.11251e-10
+Helix paramters: kappa -0.0432552 tan(Lambda) -0.0638714 phi0 to d0 3.15042
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 12
 Number Tracks: 1
 Track number: 0
@@ -2171,6 +2358,23 @@ chi2 2.80217 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 1.3048 20.324 1.40596 20.4143 
+Track parameters:  pT 20.3659 cot(theta) 14.4854 phi0 1.50668 d0 0 z0 0
+Helix paramters: kappa -0.0491018 tan(Lambda) 0.0690352 phi0 to d0 3.07748
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 7.26577e-17 0
+Track after fit
+Charge 1
+4 momentum 1.3048 20.324 1.42468 20.4156 
+Track parameters:  pT 20.3659 cot(theta) 14.2951 phi0 1.50668 d0 8.50843e-11 z0 -1.80544e-12
+Helix paramters: kappa -0.0491018 tan(Lambda) 0.0699542 phi0 to d0 3.07748
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 13
 Number Tracks: 1
 Track number: 0
@@ -2328,6 +2532,23 @@ chi2 6.32972 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -2.15315 29.0278 -2.08708 29.1823 
+Track parameters:  pT 29.1075 cot(theta) -13.9465 phi0 1.64484 d0 0 z0 0
+Helix paramters: kappa -0.0343554 tan(Lambda) -0.0717025 phi0 to d0 3.21563
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.28573e-17 0
+Track after fit
+Charge 1
+4 momentum -2.15315 29.0278 -2.1073 29.1837 
+Track parameters:  pT 29.1075 cot(theta) -13.8127 phi0 1.64484 d0 -5.73328e-11 z0 1.42183e-12
+Helix paramters: kappa -0.0343554 tan(Lambda) -0.0723972 phi0 to d0 3.21563
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 14
 Number Tracks: 1
 Track number: 0
@@ -2412,7 +2633,7 @@ Layer: 9 number Strips: 2
 Strip: 316  ADC 7
 Strip: 317  ADC 24
 Hit Set version: 1
-Gen Hits: 153
+Gen Hits: 0
 Number Hits: 9
 Hit: 0 associated with track -1
 Hit position: -0.0326984 0.2 0
@@ -2636,6 +2857,23 @@ chi2 4.3849 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.22568 37.454 -4.65042 37.7615 
+Track parameters:  pT 37.4741 cot(theta) -8.05821 phi0 1.53808 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) -0.124097 phi0 to d0 3.10888
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.55874e-14 0
+Track after fit
+Charge -1
+4 momentum 1.8009 59.9972 -4.63204 60.2027 
+Track parameters:  pT 60.0242 cot(theta) -12.9585 phi0 1.54079 d0 1.24675e-09 z0 2.74812e-12
+Helix paramters: kappa 0.0166599 tan(Lambda) -0.0771696 phi0 to d0 3.11159
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 16
 Number Tracks: 1
 Track number: 0
@@ -2793,6 +3031,23 @@ chi2 1.23881 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.469816 9.57342 0.420806 9.59417 
+Track parameters:  pT 9.58494 cot(theta) 22.7776 phi0 1.61983 d0 0 z0 0
+Helix paramters: kappa -0.10433 tan(Lambda) 0.0439028 phi0 to d0 3.19063
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.74665e-14 0
+Track after fit
+Charge 1
+4 momentum -0.469816 9.57342 0.418616 9.59408 
+Track parameters:  pT 9.58494 cot(theta) 22.8968 phi0 1.61983 d0 1.25741e-11 z0 1.16773e-09
+Helix paramters: kappa -0.10433 tan(Lambda) 0.0436743 phi0 to d0 3.19063
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 17
 Number Tracks: 1
 Track number: 0
@@ -2950,6 +3205,23 @@ chi2 1.80036 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.123287 13.479 -0.961886 13.5138 
+Track parameters:  pT 13.4795 cot(theta) -14.0136 phi0 1.57994 d0 0 z0 0
+Helix paramters: kappa -0.0741866 tan(Lambda) -0.0713591 phi0 to d0 3.15074
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.37848e-14 0
+Track after fit
+Charge 1
+4 momentum -0.123287 13.479 -0.959708 13.5136 
+Track parameters:  pT 13.4795 cot(theta) -14.0455 phi0 1.57994 d0 -6.54177e-12 z0 -8.31498e-10
+Helix paramters: kappa -0.0741866 tan(Lambda) -0.0711974 phi0 to d0 3.15074
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 18
 Number Tracks: 1
 Track number: 0
@@ -3107,6 +3379,23 @@ chi2 6.30568 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.16287 37.456 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.53976 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) 0 phi0 to d0 3.11056
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.57866e-18 0
+Track after fit
+Charge -1
+4 momentum 3.26554 125.66 11.7573 126.251 
+Track parameters:  pT 125.702 cot(theta) 10.6914 phi0 1.54482 d0 1.89728e-12 z0 5.6599e-12
+Helix paramters: kappa 0.0079553 tan(Lambda) 0.0935328 phi0 to d0 3.11561
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 19
 Number Tracks: 1
 Track number: 0
@@ -3193,7 +3482,7 @@ Layer: 9 number Strips: 2
 Strip: 689  ADC 5
 Strip: 690  ADC 26
 Hit Set version: 1
-Gen Hits: 3
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.00808871 0.2 0
@@ -3264,6 +3553,23 @@ chi2 2.82257 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -0.612541 11.3864 -0.115228 11.4035 
+Track parameters:  pT 11.4029 cot(theta) -98.9596 phi0 1.62454 d0 0 z0 0
+Helix paramters: kappa 0.0876972 tan(Lambda) -0.0101051 phi0 to d0 3.19534
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 9.05567e-17 0
+Track after fit
+Charge -1
+4 momentum -0.612541 11.3864 -0.125751 11.4036 
+Track parameters:  pT 11.4029 cot(theta) -90.6784 phi0 1.62454 d0 -9.50809e-11 z0 1.50152e-12
+Helix paramters: kappa 0.0876972 tan(Lambda) -0.011028 phi0 to d0 3.19534
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 20
 Number Tracks: 1
 Track number: 0
@@ -3421,6 +3727,23 @@ chi2 15.9597 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -3.80371 31.2686 1.64023 31.5418 
+Track parameters:  pT 31.4991 cot(theta) 19.2041 phi0 1.69185 d0 0 z0 0
+Helix paramters: kappa -0.0317469 tan(Lambda) 0.0520723 phi0 to d0 3.26264
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.4533e-18 0
+Track after fit
+Charge 1
+4 momentum -3.80371 31.2686 1.59906 31.5397 
+Track parameters:  pT 31.4991 cot(theta) 19.6985 phi0 1.69185 d0 2.01355e-11 z0 1.31062e-12
+Helix paramters: kappa -0.0317469 tan(Lambda) 0.0507652 phi0 to d0 3.26264
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 21
 Number Tracks: 1
 Track number: 0
@@ -3507,7 +3830,7 @@ Layer: 9 number Strips: 2
 Strip: 953  ADC 14
 Strip: 954  ADC 17
 Hit Set version: 1
-Gen Hits: 255
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.00497258 0.2 0
@@ -3578,6 +3901,23 @@ chi2 2.01817 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.787128 37.4658 4.00815 37.6878 
+Track parameters:  pT 37.4741 cot(theta) 9.34946 phi0 1.5918 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0.106958 phi0 to d0 3.1626
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 5.50181e-18 0
+Track after fit
+Charge 1
+4 momentum -9.4367 663.953 3.90267 664.031 
+Track parameters:  pT 664.02 cot(theta) 170.145 phi0 1.58501 d0 -1.06603e-12 z0 2.615e-13
+Helix paramters: kappa -0.00150598 tan(Lambda) 0.00587734 phi0 to d0 3.1558
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 22
 Number Tracks: 1
 Track number: 0
@@ -3735,6 +4075,23 @@ chi2 9.24352 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -3.33026 29.6108 1.96576 29.8623 
+Track parameters:  pT 29.7975 cot(theta) 15.1582 phi0 1.68279 d0 0 z0 0
+Helix paramters: kappa 0.0335599 tan(Lambda) 0.0659708 phi0 to d0 3.25359
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.20202e-18 0
+Track after fit
+Charge -1
+4 momentum -3.33026 29.6108 1.92471 29.8596 
+Track parameters:  pT 29.7975 cot(theta) 15.4816 phi0 1.68279 d0 4.4443e-12 z0 1.25211e-12
+Helix paramters: kappa 0.0335599 tan(Lambda) 0.0645929 phi0 to d0 3.25359
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 23
 Number Tracks: 1
 Track number: 0
@@ -3892,6 +4249,23 @@ chi2 2.04356 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.35961 11.9058 0.240885 11.9856 
+Track parameters:  pT 11.9832 cot(theta) 49.7466 phi0 1.45709 d0 0 z0 0
+Helix paramters: kappa 0.0834502 tan(Lambda) 0.0201019 phi0 to d0 3.02789
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.10538e-17 0
+Track after fit
+Charge -1
+4 momentum 1.35961 11.9058 0.252723 11.9859 
+Track parameters:  pT 11.9832 cot(theta) 47.4163 phi0 1.45709 d0 -3.31412e-11 z0 -1.79166e-12
+Helix paramters: kappa 0.0834502 tan(Lambda) 0.0210898 phi0 to d0 3.02789
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 24
 Number Tracks: 1
 Track number: 0
@@ -4049,6 +4423,23 @@ chi2 2.27996 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.34318 14.1605 1.44719 14.2975 
+Track parameters:  pT 14.2241 cot(theta) 9.82876 phi0 1.47623 d0 0 z0 0
+Helix paramters: kappa 0.0703033 tan(Lambda) 0.101742 phi0 to d0 3.04702
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.75347e-17 0
+Track after fit
+Charge -1
+4 momentum 1.34318 14.1605 1.45784 14.2986 
+Track parameters:  pT 14.2241 cot(theta) 9.75697 phi0 1.47623 d0 6.13702e-11 z0 -1.81917e-12
+Helix paramters: kappa 0.0703033 tan(Lambda) 0.102491 phi0 to d0 3.04702
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 25
 Number Tracks: 1
 Track number: 0
@@ -4206,6 +4597,23 @@ chi2 3.35704 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.290304 12.9604 0.643386 12.9796 
+Track parameters:  pT 12.9636 cot(theta) 20.1491 phi0 1.59319 d0 0 z0 0
+Helix paramters: kappa -0.0771389 tan(Lambda) 0.0496301 phi0 to d0 3.16399
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.41413e-12 0
+Track after fit
+Charge 1
+4 momentum -0.290304 12.9604 0.643316 12.9796 
+Track parameters:  pT 12.9636 cot(theta) 20.1513 phi0 1.59319 d0 6.88181e-11 z0 1.00349e-08
+Helix paramters: kappa -0.0771389 tan(Lambda) 0.0496247 phi0 to d0 3.16399
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 26
 Number Tracks: 1
 Track number: 0
@@ -4363,6 +4771,23 @@ chi2 11.3467 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.385953 9.95974 -0.552484 9.98251 
+Track parameters:  pT 9.96721 cot(theta) -18.0407 phi0 1.53206 d0 0 z0 0
+Helix paramters: kappa -0.100329 tan(Lambda) -0.0554301 phi0 to d0 3.10286
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.85278e-17 0
+Track after fit
+Charge 1
+4 momentum 0.385953 9.95974 -0.544889 9.98209 
+Track parameters:  pT 9.96721 cot(theta) -18.2922 phi0 1.53206 d0 5.32435e-11 z0 -1.05875e-12
+Helix paramters: kappa -0.100329 tan(Lambda) -0.0546681 phi0 to d0 3.10286
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 27
 Number Tracks: 1
 Track number: 0
@@ -4520,6 +4945,23 @@ chi2 4.08482 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.615538 31.2421 -2.00577 31.3125 
+Track parameters:  pT 31.2482 cot(theta) -15.5791 phi0 1.5905 d0 0 z0 0
+Helix paramters: kappa -0.0320019 tan(Lambda) -0.0641884 phi0 to d0 3.16129
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 9.0398e-15 0
+Track after fit
+Charge 1
+4 momentum -0.615538 31.2421 -2.00888 31.3127 
+Track parameters:  pT 31.2482 cot(theta) -15.555 phi0 1.5905 d0 3.28252e-12 z0 5.12496e-10
+Helix paramters: kappa -0.0320019 tan(Lambda) -0.0642879 phi0 to d0 3.16129
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 28
 Number Tracks: 1
 Track number: 0
@@ -4677,6 +5119,23 @@ chi2 2.0658 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 2.38743 22.3602 -1.32636 22.5264 
+Track parameters:  pT 22.4873 cot(theta) -16.9542 phi0 1.46443 d0 0 z0 0
+Helix paramters: kappa -0.0444695 tan(Lambda) -0.0589826 phi0 to d0 3.03522
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 9.00353e-18 0
+Track after fit
+Charge 1
+4 momentum 2.38743 22.3602 -1.2961 22.5246 
+Track parameters:  pT 22.4873 cot(theta) -17.3499 phi0 1.46443 d0 2.88566e-11 z0 -1.37547e-12
+Helix paramters: kappa -0.0444695 tan(Lambda) -0.0576371 phi0 to d0 3.03522
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 29
 Number Tracks: 1
 Track number: 0
@@ -4763,7 +5222,7 @@ Layer: 9 number Strips: 2
 Strip: 431  ADC 3
 Strip: 432  ADC 28
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 255
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0261032 0.2 0
@@ -4834,6 +5293,23 @@ chi2 8.13573 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -4.69314 37.179 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.69636 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.26716
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 5.14686e-17 0
+Track after fit
+Charge 1
+4 momentum -35.2844 294.528 -14.6818 296.997 
+Track parameters:  pT 296.634 cot(theta) -20.2042 phi0 1.69003 d0 -4.2169e-11 z0 -1.72545e-11
+Helix paramters: kappa -0.00337116 tan(Lambda) -0.0494947 phi0 to d0 3.26082
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 30
 Number Tracks: 1
 Track number: 0
@@ -4920,7 +5396,7 @@ Layer: 9 number Strips: 2
 Strip: 701  ADC 13
 Strip: 702  ADC 18
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 97
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0140306 0.2 0
@@ -4991,6 +5467,23 @@ chi2 4.55557 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -2.19086 37.41 -2.45954 37.5547 
+Track parameters:  pT 37.4741 cot(theta) -15.2362 phi0 1.62929 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) -0.0656332 phi0 to d0 3.20009
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.40899e-18 0
+Track after fit
+Charge -1
+4 momentum -7.9187 124.451 -2.55336 124.728 
+Track parameters:  pT 124.702 cot(theta) -48.8385 phi0 1.63434 d0 9.71039e-12 z0 3.0207e-12
+Helix paramters: kappa 0.00801909 tan(Lambda) -0.0204756 phi0 to d0 3.20514
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 31
 Number Tracks: 1
 Track number: 0
@@ -5148,6 +5641,23 @@ chi2 2.51595 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 3.97417 35.5697 -3.04446 35.9203 
+Track parameters:  pT 35.791 cot(theta) -11.7561 phi0 1.45953 d0 0 z0 0
+Helix paramters: kappa -0.02794 tan(Lambda) -0.0850621 phi0 to d0 3.03032
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.33278e-17 0
+Track after fit
+Charge 1
+4 momentum 3.97417 35.5697 -2.99606 35.9162 
+Track parameters:  pT 35.791 cot(theta) -11.946 phi0 1.45953 d0 -3.62862e-11 z0 -9.43073e-13
+Helix paramters: kappa -0.02794 tan(Lambda) -0.08371 phi0 to d0 3.03032
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 32
 Number Tracks: 1
 Track number: 0
@@ -5305,6 +5815,23 @@ chi2 7.46538 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.73198 14.0199 0.651021 14.1415 
+Track parameters:  pT 14.1265 cot(theta) 21.699 phi0 1.44788 d0 0 z0 0
+Helix paramters: kappa 0.070789 tan(Lambda) 0.0460851 phi0 to d0 3.01868
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.68334e-19 0
+Track after fit
+Charge -1
+4 momentum 1.73198 14.0199 0.666664 14.1422 
+Track parameters:  pT 14.1265 cot(theta) 21.1898 phi0 1.44788 d0 -1.26965e-12 z0 -2.35819e-12
+Helix paramters: kappa 0.070789 tan(Lambda) 0.0471925 phi0 to d0 3.01868
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 33
 Number Tracks: 1
 Track number: 0
@@ -5391,7 +5918,7 @@ Layer: 9 number Strips: 2
 Strip: 794  ADC 28
 Strip: 795  ADC 3
 Hit Set version: 1
-Gen Hits: 255
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.00252258 0.2 0
@@ -5462,6 +5989,23 @@ chi2 4.1364 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -0.364547 11.0787 -0.302334 11.0888 
+Track parameters:  pT 11.0847 cot(theta) -36.6638 phi0 1.60369 d0 0 z0 0
+Helix paramters: kappa 0.0902144 tan(Lambda) -0.0272749 phi0 to d0 3.17449
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.70442e-17 0
+Track after fit
+Charge -1
+4 momentum -0.364547 11.0787 -0.310051 11.089 
+Track parameters:  pT 11.0847 cot(theta) -35.7513 phi0 1.60369 d0 -5.18336e-11 z0 1.15236e-12
+Helix paramters: kappa 0.0902144 tan(Lambda) -0.027971 phi0 to d0 3.17449
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 34
 Number Tracks: 1
 Track number: 0
@@ -5546,7 +6090,7 @@ Layer: 9 number Strips: 2
 Strip: 1697  ADC 25
 Strip: 1698  ADC 6
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 97
 Number Hits: 9
 Hit: 0 associated with track -1
 Hit position: 0.0293839 0.2 0
@@ -5699,7 +6243,7 @@ Layer: 9 number Strips: 2
 Strip: 804  ADC 20
 Strip: 805  ADC 11
 Hit Set version: 1
-Gen Hits: 255
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0140032 0.2 0
@@ -5770,6 +6314,23 @@ chi2 8.3355 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.664838 12.0888 0.943871 12.1438 
+Track parameters:  pT 12.1071 cot(theta) 12.827 phi0 1.62574 d0 0 z0 0
+Helix paramters: kappa -0.0825964 tan(Lambda) 0.0779604 phi0 to d0 3.19653
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.39194e-13 0
+Track after fit
+Charge 1
+4 momentum -0.664838 12.0888 0.939128 12.1434 
+Track parameters:  pT 12.1071 cot(theta) 12.8918 phi0 1.62574 d0 3.0436e-11 z0 1.99212e-09
+Helix paramters: kappa -0.0825964 tan(Lambda) 0.0775686 phi0 to d0 3.19653
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 36
 Number Tracks: 1
 Track number: 0
@@ -5927,6 +6488,23 @@ chi2 8.81136 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 0.763858 12.6965 -1.0907 12.7662 
+Track parameters:  pT 12.7195 cot(theta) -11.6617 phi0 1.51071 d0 0 z0 0
+Helix paramters: kappa 0.0786194 tan(Lambda) -0.0857505 phi0 to d0 3.0815
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.22632e-19 0
+Track after fit
+Charge -1
+4 momentum 0.763858 12.6965 -1.0847 12.7657 
+Track parameters:  pT 12.7195 cot(theta) -11.7263 phi0 1.51071 d0 1.24159e-12 z0 -5.18231e-13
+Helix paramters: kappa 0.0786194 tan(Lambda) -0.0852784 phi0 to d0 3.0815
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 37
 Number Tracks: 1
 Track number: 0
@@ -6084,6 +6662,23 @@ chi2 3.06727 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 2.38574 21.8149 1.32086 21.9847 
+Track parameters:  pT 21.945 cot(theta) 16.6142 phi0 1.46187 d0 0 z0 0
+Helix paramters: kappa 0.0455685 tan(Lambda) 0.0601895 phi0 to d0 3.03266
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 6.30398e-17 0
+Track after fit
+Charge -1
+4 momentum 2.38574 21.8149 1.34374 21.9861 
+Track parameters:  pT 21.945 cot(theta) 16.3313 phi0 1.46187 d0 7.9688e-11 z0 -2.26357e-12
+Helix paramters: kappa 0.0455685 tan(Lambda) 0.0612322 phi0 to d0 3.03266
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 38
 Number Tracks: 1
 Track number: 0
@@ -6170,7 +6765,7 @@ Layer: 9 number Strips: 2
 Strip: 577  ADC 1
 Strip: 578  ADC 30
 Hit Set version: 1
-Gen Hits: 49
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0221694 0.2 0
@@ -6241,6 +6836,23 @@ chi2 2.58455 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -3.4855 37.3116 0.564405 37.4783 
+Track parameters:  pT 37.4741 cot(theta) 66.3957 phi0 1.66394 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0.0150612 phi0 to d0 3.23474
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.56093e-15 0
+Track after fit
+Charge 1
+4 momentum -3.91241 42.2682 0.522779 42.4521 
+Track parameters:  pT 42.4489 cot(theta) 81.1986 phi0 1.66309 d0 -3.90591e-10 z0 -4.42995e-13
+Helix paramters: kappa -0.0235577 tan(Lambda) 0.0123155 phi0 to d0 3.23389
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 39
 Number Tracks: 1
 Track number: 0
@@ -6398,6 +7010,23 @@ chi2 6.14818 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -2.41795 37.396 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.63536 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.20616
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.34033e-16 0
+Track after fit
+Charge 1
+4 momentum -107.349 1864.84 -163.641 1875.08 
+Track parameters:  pT 1867.93 cot(theta) -11.4148 phi0 1.6283 d0 -1.12673e-11 z0 -1.64205e-11
+Helix paramters: kappa -0.000535352 tan(Lambda) -0.0876054 phi0 to d0 3.19909
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 40
 Number Tracks: 1
 Track number: 0
@@ -6555,6 +7184,23 @@ chi2 12.7254 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -0.33117 8.80231 0.364796 8.81609 
+Track parameters:  pT 8.80854 cot(theta) 24.1465 phi0 1.6084 d0 0 z0 0
+Helix paramters: kappa 0.113526 tan(Lambda) 0.0414138 phi0 to d0 3.1792
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 6.48902e-17 0
+Track after fit
+Charge -1
+4 momentum -0.33117 8.80231 0.357776 8.81581 
+Track parameters:  pT 8.80854 cot(theta) 24.6203 phi0 1.6084 d0 -8.04007e-11 z0 1.15134e-12
+Helix paramters: kappa 0.113526 tan(Lambda) 0.0406169 phi0 to d0 3.1792
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 41
 Number Tracks: 1
 Track number: 0
@@ -6641,7 +7287,7 @@ Layer: 9 number Strips: 2
 Strip: 1021  ADC 13
 Strip: 1022  ADC 18
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 1
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.00147419 0.2 0
@@ -6712,6 +7358,23 @@ chi2 5.69428 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.168982 27.9083 -0.319659 27.9107 
+Track parameters:  pT 27.9088 cot(theta) -87.3081 phi0 1.57685 d0 0 z0 0
+Helix paramters: kappa -0.0358309 tan(Lambda) -0.0114537 phi0 to d0 3.14765
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.84545e-15 0
+Track after fit
+Charge 1
+4 momentum -0.168982 27.9083 -0.318097 27.9107 
+Track parameters:  pT 27.9088 cot(theta) -87.7369 phi0 1.57685 d0 -2.34837e-12 z0 -2.87518e-10
+Helix paramters: kappa -0.0358309 tan(Lambda) -0.0113977 phi0 to d0 3.14765
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 42
 Number Tracks: 1
 Track number: 0
@@ -6798,7 +7461,7 @@ Layer: 9 number Strips: 2
 Strip: 1299  ADC 5
 Strip: 1300  ADC 26
 Hit Set version: 1
-Gen Hits: 57
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.00912581 0.2 0
@@ -6869,6 +7532,23 @@ chi2 2.85768 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 2.26515 37.4055 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.51031 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) 0 phi0 to d0 3.08111
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.56344e-18 0
+Track after fit
+Charge -1
+4 momentum 9.6473 175.849 -11.675 176.5 
+Track parameters:  pT 176.113 cot(theta) -15.0846 phi0 1.51599 d0 8.23109e-12 z0 -9.50437e-12
+Helix paramters: kappa 0.00567817 tan(Lambda) -0.0662928 phi0 to d0 3.08679
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 43
 Number Tracks: 1
 Track number: 0
@@ -6955,7 +7635,7 @@ Layer: 9 number Strips: 2
 Strip: 620  ADC 12
 Strip: 621  ADC 19
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 153
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0112984 0.2 0
@@ -7026,6 +7706,23 @@ chi2 6.75902 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -2.51495 32.5616 -2.2021 32.7328 
+Track parameters:  pT 32.6586 cot(theta) -14.8307 phi0 1.64788 d0 0 z0 0
+Helix paramters: kappa 0.0306198 tan(Lambda) -0.0674278 phi0 to d0 3.21868
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 8.30529e-17 0
+Track after fit
+Charge -1
+4 momentum -2.51495 32.5616 -2.23459 32.735 
+Track parameters:  pT 32.6586 cot(theta) -14.6151 phi0 1.64788 d0 -9.10182e-11 z0 2.02401e-12
+Helix paramters: kappa 0.0306198 tan(Lambda) -0.0684226 phi0 to d0 3.21868
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 44
 Number Tracks: 1
 Track number: 0
@@ -7112,7 +7809,7 @@ Layer: 9 number Strips: 2
 Strip: 996  ADC 4
 Strip: 997  ADC 27
 Hit Set version: 1
-Gen Hits: 7
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.00105161 0.2 0
@@ -7183,6 +7880,23 @@ chi2 7.43574 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 0.0748194 19.6908 1.82035 19.7749 
+Track parameters:  pT 19.6909 cot(theta) 10.8171 phi0 1.567 d0 0 z0 0
+Helix paramters: kappa 0.0507848 tan(Lambda) 0.0924459 phi0 to d0 3.13779
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.94925e-14 0
+Track after fit
+Charge -1
+4 momentum 0.0748194 19.6908 1.81746 19.7746 
+Track parameters:  pT 19.6909 cot(theta) 10.8343 phi0 1.567 d0 6.24367e-12 z0 7.52459e-10
+Helix paramters: kappa 0.0507848 tan(Lambda) 0.0922996 phi0 to d0 3.13779
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 45
 Number Tracks: 1
 Track number: 0
@@ -7340,6 +8054,23 @@ chi2 1.12029 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 3.12573 34.3129 -3.4508 34.6273 
+Track parameters:  pT 34.4549 cot(theta) -9.98461 phi0 1.47995 d0 0 z0 0
+Helix paramters: kappa -0.0290234 tan(Lambda) -0.100154 phi0 to d0 3.05075
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 9.29907e-18 0
+Track after fit
+Charge 1
+4 momentum 3.12573 34.3129 -3.41202 34.6235 
+Track parameters:  pT 34.4549 cot(theta) -10.0981 phi0 1.47995 d0 -2.96967e-11 z0 -8.17452e-13
+Helix paramters: kappa -0.0290234 tan(Lambda) -0.0990284 phi0 to d0 3.05075
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 46
 Number Tracks: 1
 Track number: 0
@@ -7426,7 +8157,7 @@ Layer: 9 number Strips: 2
 Strip: 1154  ADC 27
 Strip: 1155  ADC 4
 Hit Set version: 1
-Gen Hits: 153
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.00556129 0.2 0
@@ -7497,6 +8228,23 @@ chi2 1.18586 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.793531 37.4657 0.491618 37.4773 
+Track parameters:  pT 37.4741 cot(theta) 76.2259 phi0 1.54962 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0.0131189 phi0 to d0 3.12042
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.08591e-14 0
+Track after fit
+Charge 1
+4 momentum 1.27854 54.5513 0.509631 54.5686 
+Track parameters:  pT 54.5663 cot(theta) 107.07 phi0 1.54736 d0 -1.04042e-09 z0 2.39472e-13
+Helix paramters: kappa -0.0183263 tan(Lambda) 0.00933968 phi0 to d0 3.11816
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 47
 Number Tracks: 1
 Track number: 0
@@ -7583,7 +8331,7 @@ Layer: 9 number Strips: 2
 Strip: 690  ADC 1
 Strip: 691  ADC 30
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 97
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0187645 0.2 0
@@ -7654,6 +8402,23 @@ chi2 12.5816 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -2.59613 36.6633 -0.182047 36.7556 
+Track parameters:  pT 36.7551 cot(theta) -201.899 phi0 1.64149 d0 0 z0 0
+Helix paramters: kappa -0.0272071 tan(Lambda) -0.00495297 phi0 to d0 3.21228
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.08042e-17 0
+Track after fit
+Charge 1
+4 momentum -2.59613 36.6633 -0.20827 36.7557 
+Track parameters:  pT 36.7551 cot(theta) -176.478 phi0 1.64149 d0 -3.24189e-11 z0 1.15123e-12
+Helix paramters: kappa -0.0272071 tan(Lambda) -0.00566643 phi0 to d0 3.21228
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 48
 Number Tracks: 1
 Track number: 0
@@ -7740,7 +8505,7 @@ Layer: 9 number Strips: 2
 Strip: 700  ADC 21
 Strip: 701  ADC 10
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 255
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0211839 0.2 0
@@ -7811,6 +8576,23 @@ chi2 2.11392 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.75528 9.26606 -0.276139 9.30089 
+Track parameters:  pT 9.29679 cot(theta) -33.667 phi0 1.65213 d0 0 z0 0
+Helix paramters: kappa -0.107564 tan(Lambda) -0.0297027 phi0 to d0 3.22292
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.57814e-18 0
+Track after fit
+Charge 1
+4 momentum -0.75528 9.26606 -0.281076 9.30104 
+Track parameters:  pT 9.29679 cot(theta) -33.0758 phi0 1.65213 d0 -1.5743e-11 z0 9.57264e-13
+Helix paramters: kappa -0.107564 tan(Lambda) -0.0302336 phi0 to d0 3.22292
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 49
 Number Tracks: 1
 Track number: 0
@@ -7968,6 +8750,23 @@ chi2 1.18612 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -1.56074 14.6118 -0.0389851 14.695 
+Track parameters:  pT 14.695 cot(theta) -376.938 phi0 1.67721 d0 0 z0 0
+Helix paramters: kappa 0.0680506 tan(Lambda) -0.00265296 phi0 to d0 3.248
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 5.83747e-16 0
+Track after fit
+Charge -1
+4 momentum -1.56074 14.6118 -0.060356 14.6951 
+Track parameters:  pT 14.695 cot(theta) -243.471 phi0 1.67721 d0 -2.42738e-10 z0 2.35464e-12
+Helix paramters: kappa 0.0680506 tan(Lambda) -0.00410726 phi0 to d0 3.248
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 50
 Number Tracks: 1
 Track number: 0
@@ -8125,6 +8924,23 @@ chi2 3.59061 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 2.0024 18.0017 1.48344 18.1733 
+Track parameters:  pT 18.1127 cot(theta) 12.2099 phi0 1.46002 d0 0 z0 0
+Helix paramters: kappa 0.0552099 tan(Lambda) 0.0819009 phi0 to d0 3.03081
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 6.50838e-17 0
+Track after fit
+Charge -1
+4 momentum 2.0024 18.0017 1.50164 18.1748 
+Track parameters:  pT 18.1127 cot(theta) 12.0619 phi0 1.46002 d0 8.08851e-11 z0 -2.40069e-12
+Helix paramters: kappa 0.0552099 tan(Lambda) 0.0829054 phi0 to d0 3.03081
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 51
 Number Tracks: 1
 Track number: 0
@@ -8282,6 +9098,23 @@ chi2 8.57034 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.32588 12.7983 -0.171446 12.8679 
+Track parameters:  pT 12.8668 cot(theta) -75.049 phi0 1.46757 d0 0 z0 0
+Helix paramters: kappa 0.0777194 tan(Lambda) -0.0133246 phi0 to d0 3.03836
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.74894e-18 0
+Track after fit
+Charge -1
+4 momentum 1.32588 12.7983 -0.159526 12.8678 
+Track parameters:  pT 12.8668 cot(theta) -80.6566 phi0 1.46757 d0 -1.86429e-11 z0 -1.35196e-12
+Helix paramters: kappa 0.0777194 tan(Lambda) -0.0123982 phi0 to d0 3.03836
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 52
 Number Tracks: 1
 Track number: 0
@@ -8368,7 +9201,7 @@ Layer: 9 number Strips: 2
 Strip: 1580  ADC 12
 Strip: 1581  ADC 19
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 2
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0212484 0.2 0
@@ -8439,6 +9272,23 @@ chi2 6.30092 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 4.33988 37.2219 -1.41769 37.5009 
+Track parameters:  pT 37.4741 cot(theta) -26.4332 phi0 1.45473 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) -0.0378312 phi0 to d0 3.02552
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.33331e-18 0
+Track after fit
+Charge -1
+4 momentum 7.94111 70.1826 -1.32962 70.643 
+Track parameters:  pT 70.6305 cot(theta) -53.1207 phi0 1.45813 d0 2.01276e-11 z0 -3.3123e-12
+Helix paramters: kappa 0.0141582 tan(Lambda) -0.018825 phi0 to d0 3.02892
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 53
 Number Tracks: 1
 Track number: 0
@@ -8596,6 +9446,23 @@ chi2 2.60915 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 3.19665 37.3375 -3.64139 37.6506 
+Track parameters:  pT 37.4741 cot(theta) -10.2911 phi0 1.48539 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) -0.097171 phi0 to d0 3.05619
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 6.76234e-18 0
+Track after fit
+Charge 1
+4 momentum 16.3156 178.548 -3.45053 179.325 
+Track parameters:  pT 179.292 cot(theta) -51.9607 phi0 1.47967 d0 -2.22467e-11 z0 4.60857e-12
+Helix paramters: kappa -0.00557749 tan(Lambda) -0.0192453 phi0 to d0 3.05047
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 54
 Number Tracks: 1
 Track number: 0
@@ -8682,7 +9549,7 @@ Layer: 9 number Strips: 2
 Strip: 497  ADC 6
 Strip: 498  ADC 25
 Hit Set version: 1
-Gen Hits: 7
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0177452 0.2 0
@@ -8753,6 +9620,23 @@ chi2 8.18267 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -1.75708 18.0117 -0.734579 18.1121 
+Track parameters:  pT 18.0972 cot(theta) -24.6361 phi0 1.66804 d0 0 z0 0
+Helix paramters: kappa 0.0552573 tan(Lambda) -0.0405908 phi0 to d0 3.23884
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.68133e-16 0
+Track after fit
+Charge -1
+4 momentum -1.75708 18.0117 -0.758543 18.1131 
+Track parameters:  pT 18.0972 cot(theta) -23.8578 phi0 1.66804 d0 -1.64313e-10 z0 2.54821e-12
+Helix paramters: kappa 0.0552573 tan(Lambda) -0.041915 phi0 to d0 3.23884
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 55
 Number Tracks: 1
 Track number: 0
@@ -9061,6 +9945,23 @@ chi2 5.87755 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -2.34573 37.4006 -6.57271 38.0461 
+Track parameters:  pT 37.4741 cot(theta) -5.70146 phi0 1.63343 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) -0.175394 phi0 to d0 3.20423
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.95033e-18 0
+Track after fit
+Charge -1
+4 momentum -6.98925 103.767 -6.65543 104.215 
+Track parameters:  pT 104.002 cot(theta) -15.6267 phi0 1.63805 d0 9.91676e-12 z0 9.13918e-12
+Helix paramters: kappa 0.00961517 tan(Lambda) -0.0639931 phi0 to d0 3.20885
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 57
 Number Tracks: 1
 Track number: 0
@@ -9218,6 +10119,23 @@ chi2 3.52527 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -3.52514 30.5891 -2.80321 30.9189 
+Track parameters:  pT 30.7915 cot(theta) -10.9844 phi0 1.68553 d0 0 z0 0
+Helix paramters: kappa 0.0324765 tan(Lambda) -0.0910384 phi0 to d0 3.25633
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.26226e-16 0
+Track after fit
+Charge -1
+4 momentum -3.52514 30.5891 -2.84783 30.9229 
+Track parameters:  pT 30.7915 cot(theta) -10.8123 phi0 1.68553 d0 -2.07448e-10 z0 3.57011e-12
+Helix paramters: kappa 0.0324765 tan(Lambda) -0.0924874 phi0 to d0 3.25633
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 58
 Number Tracks: 1
 Track number: 0
@@ -9304,7 +10222,7 @@ Layer: 9 number Strips: 2
 Strip: 929  ADC 22
 Strip: 930  ADC 9
 Hit Set version: 1
-Gen Hits: 50
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.00291452 0.2 0
@@ -9375,6 +10293,23 @@ chi2 3.62756 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.980467 37.4612 -7.00927 38.1239 
+Track parameters:  pT 37.4741 cot(theta) -5.34635 phi0 1.59696 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) -0.187043 phi0 to d0 3.16776
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 6.02999e-19 0
+Track after fit
+Charge 1
+4 momentum -2.24021 103.876 -7.02994 104.138 
+Track parameters:  pT 103.9 cot(theta) -14.7797 phi0 1.59236 d0 -1.28213e-12 z0 -3.09511e-12
+Helix paramters: kappa -0.00962463 tan(Lambda) -0.0676606 phi0 to d0 3.16316
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 59
 Number Tracks: 1
 Track number: 0
@@ -9461,7 +10396,7 @@ Layer: 9 number Strips: 2
 Strip: 1406  ADC 10
 Strip: 1407  ADC 21
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 49
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0161806 0.2 0
@@ -9532,6 +10467,23 @@ chi2 4.48728 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.88414 22.5621 0.36053 22.6435 
+Track parameters:  pT 22.6407 cot(theta) 62.7982 phi0 1.48748 d0 0 z0 0
+Helix paramters: kappa 0.0441683 tan(Lambda) 0.015924 phi0 to d0 3.05828
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.41164e-17 0
+Track after fit
+Charge -1
+4 momentum 1.88414 22.5621 0.378454 22.6438 
+Track parameters:  pT 22.6407 cot(theta) 59.8241 phi0 1.48748 d0 3.7459e-11 z0 -1.34917e-12
+Helix paramters: kappa 0.0441683 tan(Lambda) 0.0167157 phi0 to d0 3.05828
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 60
 Number Tracks: 1
 Track number: 0
@@ -9618,7 +10570,7 @@ Layer: 9 number Strips: 2
 Strip: 751  ADC 0
 Strip: 752  ADC 31
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 2
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.00932097 0.2 0
@@ -9689,6 +10641,23 @@ chi2 3.23626 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -2.31569 37.4024 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.63263 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.20343
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.82749e-18 0
+Track after fit
+Charge 1
+4 momentum -18.804 338.958 -12.3267 339.703 
+Track parameters:  pT 339.479 cot(theta) -27.5402 phi0 1.62622 d0 -9.49987e-12 z0 -5.95176e-12
+Helix paramters: kappa -0.00294569 tan(Lambda) -0.0363106 phi0 to d0 3.19701
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 61
 Number Tracks: 1
 Track number: 0
@@ -9846,6 +10815,23 @@ chi2 1.42556 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -3.30277 28.9091 -0.49666 29.1014 
+Track parameters:  pT 29.0971 cot(theta) -58.5855 phi0 1.68455 d0 0 z0 0
+Helix paramters: kappa -0.0343677 tan(Lambda) -0.0170691 phi0 to d0 3.25535
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.35968e-17 0
+Track after fit
+Charge 1
+4 momentum -3.30277 28.9091 -0.530721 29.102 
+Track parameters:  pT 29.0971 cot(theta) -54.8257 phi0 1.68455 d0 -5.779e-11 z0 2.07287e-12
+Helix paramters: kappa -0.0343677 tan(Lambda) -0.0182396 phi0 to d0 3.25535
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 62
 Number Tracks: 1
 Track number: 0
@@ -10003,6 +10989,23 @@ chi2 6.02764 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 3.08682 37.3467 0.726939 37.4811 
+Track parameters:  pT 37.4741 cot(theta) 51.5505 phi0 1.48833 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) 0.0193985 phi0 to d0 3.05913
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 5.90042e-18 0
+Track after fit
+Charge -1
+4 momentum 10.7098 138.465 0.84599 138.881 
+Track parameters:  pT 138.878 cot(theta) 164.161 phi0 1.4936 d0 1.48414e-11 z0 1.14216e-12
+Helix paramters: kappa 0.00720054 tan(Lambda) 0.00609159 phi0 to d0 3.0644
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 63
 Number Tracks: 1
 Track number: 0
@@ -10160,6 +11163,23 @@ chi2 1.93754 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 0.844479 11.1379 0.752693 11.1952 
+Track parameters:  pT 11.1699 cot(theta) 14.8399 phi0 1.49512 d0 0 z0 0
+Helix paramters: kappa 0.0895263 tan(Lambda) 0.0673859 phi0 to d0 3.06592
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 9.36174e-18 0
+Track after fit
+Charge -1
+4 momentum 0.844479 11.1379 0.758295 11.1956 
+Track parameters:  pT 11.1699 cot(theta) 14.7303 phi0 1.49512 d0 3.0458e-11 z0 -1.02097e-12
+Helix paramters: kappa 0.0895263 tan(Lambda) 0.0678874 phi0 to d0 3.06592
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 64
 Number Tracks: 1
 Track number: 0
@@ -10317,6 +11337,23 @@ chi2 4.78252 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -2.67642 37.3784 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.64228 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.21307
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.92232e-18 0
+Track after fit
+Charge 1
+4 momentum -11.3925 172.816 -11.9098 173.6 
+Track parameters:  pT 173.191 cot(theta) -14.5419 phi0 1.63662 d0 -1.16734e-11 z0 -1.17971e-11
+Helix paramters: kappa -0.00577398 tan(Lambda) -0.068767 phi0 to d0 3.20742
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 65
 Number Tracks: 1
 Track number: 0
@@ -10403,7 +11440,7 @@ Layer: 9 number Strips: 2
 Strip: 951  ADC 5
 Strip: 952  ADC 26
 Hit Set version: 1
-Gen Hits: 7
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.00600323 0.2 0
@@ -10474,6 +11511,23 @@ chi2 8.95612 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.739997 37.4668 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.59054 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.16134
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.75427e-17 0
+Track after fit
+Charge 1
+4 momentum -14.8496 1161.88 118.483 1168 
+Track parameters:  pT 1161.97 cot(theta) 9.80709 phi0 1.58358 d0 -9.69951e-13 z0 4.18604e-12
+Helix paramters: kappa -0.000860605 tan(Lambda) 0.101967 phi0 to d0 3.15437
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 66
 Number Tracks: 1
 Track number: 0
@@ -10631,6 +11685,23 @@ chi2 8.52123 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.184676 37.4736 1.92296 37.5234 
+Track parameters:  pT 37.4741 cot(theta) 19.4877 phi0 1.56587 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0.0513144 phi0 to d0 3.13666
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.24901e-15 0
+Track after fit
+Charge 1
+4 momentum 0.289648 46.1283 1.92938 46.1695 
+Track parameters:  pT 46.1292 cot(theta) 23.9088 phi0 1.56452 d0 -6.40332e-10 z0 -1.17513e-10
+Helix paramters: kappa -0.0216782 tan(Lambda) 0.0418255 phi0 to d0 3.13531
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 67
 Number Tracks: 1
 Track number: 0
@@ -10788,6 +11859,23 @@ chi2 3.3508 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 0.27917 24.1698 1.49109 24.2173 
+Track parameters:  pT 24.1714 cot(theta) 16.2106 phi0 1.55925 d0 0 z0 0
+Helix paramters: kappa 0.0413712 tan(Lambda) 0.061688 phi0 to d0 3.13004
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.99e-16 0
+Track after fit
+Charge -1
+4 momentum 0.27917 24.1698 1.49052 24.2173 
+Track parameters:  pT 24.1714 cot(theta) 16.2167 phi0 1.55925 d0 8.85599e-13 z0 1.20282e-10
+Helix paramters: kappa 0.0413712 tan(Lambda) 0.0616646 phi0 to d0 3.13004
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 68
 Number Tracks: 1
 Track number: 0
@@ -10945,6 +12033,23 @@ chi2 10.887 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -1.55296 20.6297 1.06614 20.7155 
+Track parameters:  pT 20.6881 cot(theta) 19.4047 phi0 1.64593 d0 0 z0 0
+Helix paramters: kappa 0.0483371 tan(Lambda) 0.0515339 phi0 to d0 3.21673
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 7.34642e-18 0
+Track after fit
+Charge -1
+4 momentum -1.55296 20.6297 1.04521 20.7144 
+Track parameters:  pT 20.6881 cot(theta) 19.7933 phi0 1.64593 d0 -2.63959e-11 z0 1.2474e-12
+Helix paramters: kappa 0.0483371 tan(Lambda) 0.0505222 phi0 to d0 3.21673
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 69
 Number Tracks: 1
 Track number: 0
@@ -11102,6 +12207,23 @@ chi2 6.7208 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -2.66105 37.3795 2.64671 37.5674 
+Track parameters:  pT 37.4741 cot(theta) 14.1587 phi0 1.64187 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) 0.0706277 phi0 to d0 3.21266
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.87214e-14 0
+Track after fit
+Charge -1
+4 momentum -4.53892 61.3162 2.59113 61.5385 
+Track parameters:  pT 61.4839 cot(theta) 23.7286 phi0 1.64469 d0 1.30509e-09 z0 4.15523e-12
+Helix paramters: kappa 0.0162644 tan(Lambda) 0.0421433 phi0 to d0 3.21548
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 70
 Number Tracks: 1
 Track number: 0
@@ -11259,6 +12381,23 @@ chi2 9.24624 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.43843 37.4715 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.5591 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.12989
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 8.96473e-17 0
+Track after fit
+Charge 1
+4 momentum 14.3752 774.741 -39.1871 775.864 
+Track parameters:  pT 774.874 cot(theta) -19.7737 phi0 1.55224 d0 -1.52172e-12 z0 2.96088e-12
+Helix paramters: kappa -0.00129053 tan(Lambda) -0.0505722 phi0 to d0 3.12304
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 71
 Number Tracks: 1
 Track number: 0
@@ -11416,6 +12555,23 @@ chi2 6.77403 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -1.56836 17.822 0.278133 17.893 
+Track parameters:  pT 17.8909 cot(theta) 64.3248 phi0 1.65857 d0 0 z0 0
+Helix paramters: kappa 0.0558945 tan(Lambda) 0.0155461 phi0 to d0 3.22937
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 6.91765e-17 0
+Track after fit
+Charge -1
+4 momentum -1.56836 17.822 0.256842 17.8927 
+Track parameters:  pT 17.8909 cot(theta) 69.657 phi0 1.65857 d0 -8.30905e-11 z0 1.74896e-12
+Helix paramters: kappa 0.0558945 tan(Lambda) 0.0143561 phi0 to d0 3.22937
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 72
 Number Tracks: 1
 Track number: 0
@@ -11573,6 +12729,23 @@ chi2 3.53726 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -3.45779 32.2477 1.74698 32.4795 
+Track parameters:  pT 32.4325 cot(theta) 18.5649 phi0 1.67761 d0 0 z0 0
+Helix paramters: kappa -0.0308332 tan(Lambda) 0.053865 phi0 to d0 3.24841
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.57456e-18 0
+Track after fit
+Charge 1
+4 momentum -3.45779 32.2477 1.70981 32.4776 
+Track parameters:  pT 32.4325 cot(theta) 18.9685 phi0 1.67761 d0 8.48631e-12 z0 1.20633e-12
+Helix paramters: kappa -0.0308332 tan(Lambda) 0.0527189 phi0 to d0 3.24841
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 73
 Number Tracks: 1
 Track number: 0
@@ -11730,6 +12903,23 @@ chi2 5.11353 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -1.02558 12.1506 -0.455896 12.2023 
+Track parameters:  pT 12.1938 cot(theta) -26.7469 phi0 1.655 d0 0 z0 0
+Helix paramters: kappa 0.0820088 tan(Lambda) -0.0373875 phi0 to d0 3.2258
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 6.08083e-16 0
+Track after fit
+Charge -1
+4 momentum -1.02558 12.1506 -0.471455 12.2029 
+Track parameters:  pT 12.1938 cot(theta) -25.8642 phi0 1.655 d0 -2.47253e-10 z0 2.34382e-12
+Helix paramters: kappa 0.0820088 tan(Lambda) -0.0386634 phi0 to d0 3.2258
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 74
 Number Tracks: 1
 Track number: 0
@@ -11887,6 +13077,23 @@ chi2 5.24276 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -0.411396 13.3766 0.0444231 13.383 
+Track parameters:  pT 13.3829 cot(theta) 301.259 phi0 1.60154 d0 0 z0 0
+Helix paramters: kappa 0.0747223 tan(Lambda) 0.0033194 phi0 to d0 3.17234
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.02846e-17 0
+Track after fit
+Charge -1
+4 momentum -0.411396 13.3766 0.0362802 13.3829 
+Track parameters:  pT 13.3829 cot(theta) 368.876 phi0 1.60154 d0 -3.17445e-11 z0 9.53634e-13
+Helix paramters: kappa 0.0747223 tan(Lambda) 0.00271094 phi0 to d0 3.17234
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 75
 Number Tracks: 1
 Track number: 0
@@ -12044,6 +13251,23 @@ chi2 6.77757 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.463216 37.4712 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.58316 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.15395
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.07665e-18 0
+Track after fit
+Charge 1
+4 momentum -1.01932 145.216 11.2167 145.652 
+Track parameters:  pT 145.219 cot(theta) 12.9468 phi0 1.57782 d0 -4.63701e-13 z0 1.33453e-12
+Helix paramters: kappa -0.00688614 tan(Lambda) 0.0772394 phi0 to d0 3.14861
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 76
 Number Tracks: 1
 Track number: 0
@@ -12201,6 +13425,23 @@ chi2 6.818 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -1.91648 23.3783 2.04689 23.5459 
+Track parameters:  pT 23.4567 cot(theta) 11.4597 phi0 1.65259 d0 0 z0 0
+Helix paramters: kappa 0.0426317 tan(Lambda) 0.0872625 phi0 to d0 3.22339
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 5.70159e-19 0
+Track after fit
+Charge -1
+4 momentum -1.91648 23.3783 2.02202 23.5437 
+Track parameters:  pT 23.4567 cot(theta) 11.6006 phi0 1.65259 d0 3.80676e-12 z0 9.77281e-13
+Helix paramters: kappa 0.0426317 tan(Lambda) 0.0862022 phi0 to d0 3.22339
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 77
 Number Tracks: 1
 Track number: 0
@@ -12287,7 +13528,7 @@ Layer: 9 number Strips: 2
 Strip: 1582  ADC 29
 Strip: 1583  ADC 2
 Hit Set version: 1
-Gen Hits: 153
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0182323 0.2 0
@@ -12358,6 +13599,23 @@ chi2 4.54441 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 1.37239 13.6055 0.30791 13.678 
+Track parameters:  pT 13.6746 cot(theta) 44.4109 phi0 1.47027 d0 0 z0 0
+Helix paramters: kappa -0.0731284 tan(Lambda) 0.022517 phi0 to d0 3.04106
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 7.5402e-16 0
+Track after fit
+Charge 1
+4 momentum 1.37239 13.6055 0.32734 13.6785 
+Track parameters:  pT 13.6746 cot(theta) 41.7748 phi0 1.47027 d0 2.75724e-10 z0 -2.51845e-12
+Helix paramters: kappa -0.0731284 tan(Lambda) 0.0239379 phi0 to d0 3.04106
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 78
 Number Tracks: 1
 Track number: 0
@@ -12515,6 +13773,23 @@ chi2 2.76204 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.13254 11.6354 -0.706767 11.7117 
+Track parameters:  pT 11.6904 cot(theta) -16.5406 phi0 1.47377 d0 0 z0 0
+Helix paramters: kappa 0.0855405 tan(Lambda) -0.0604572 phi0 to d0 3.04456
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.76542e-17 0
+Track after fit
+Charge -1
+4 momentum 1.13254 11.6354 -0.696502 11.7111 
+Track parameters:  pT 11.6904 cot(theta) -16.7844 phi0 1.47377 d0 -4.20067e-11 z0 -8.9422e-13
+Helix paramters: kappa 0.0855405 tan(Lambda) -0.0595791 phi0 to d0 3.04456
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 79
 Number Tracks: 1
 Track number: 0
@@ -12672,6 +13947,23 @@ chi2 1.9326 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.849131 17.0777 0.540024 17.1073 
+Track parameters:  pT 17.0988 cot(theta) 31.663 phi0 1.52112 d0 0 z0 0
+Helix paramters: kappa -0.0584837 tan(Lambda) 0.0315826 phi0 to d0 3.09191
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.84027e-17 0
+Track after fit
+Charge 1
+4 momentum 0.849131 17.0777 0.553313 17.1077 
+Track parameters:  pT 17.0988 cot(theta) 30.9025 phi0 1.52112 d0 5.3006e-11 z0 -1.33499e-12
+Helix paramters: kappa -0.0584837 tan(Lambda) 0.0323598 phi0 to d0 3.09191
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 80
 Number Tracks: 1
 Track number: 0
@@ -12829,6 +14121,23 @@ chi2 3.31901 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.549724 30.001 -0.505073 30.0103 
+Track parameters:  pT 30.0061 cot(theta) -59.4094 phi0 1.55247 d0 0 z0 0
+Helix paramters: kappa -0.0333266 tan(Lambda) -0.0168324 phi0 to d0 3.12327
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 9.66481e-14 0
+Track after fit
+Charge 1
+4 momentum 0.549724 30.001 -0.495287 30.0102 
+Track parameters:  pT 30.0061 cot(theta) -60.5831 phi0 1.55247 d0 -1.46948e-11 z0 -1.67388e-09
+Helix paramters: kappa -0.0333266 tan(Lambda) -0.0165062 phi0 to d0 3.12327
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 81
 Number Tracks: 1
 Track number: 0
@@ -12986,6 +14295,23 @@ chi2 6.7239 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -2.46897 33.3553 1.76034 33.4928 
+Track parameters:  pT 33.4465 cot(theta) 19.0001 phi0 1.64468 d0 0 z0 0
+Helix paramters: kappa 0.0298985 tan(Lambda) 0.0526314 phi0 to d0 3.21548
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.6667e-18 0
+Track after fit
+Charge -1
+4 momentum -2.46897 33.3553 1.72876 33.4912 
+Track parameters:  pT 33.4465 cot(theta) 19.3471 phi0 1.64468 d0 -1.37107e-11 z0 1.15843e-12
+Helix paramters: kappa 0.0298985 tan(Lambda) 0.0516872 phi0 to d0 3.21548
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 82
 Number Tracks: 1
 Track number: 0
@@ -13143,6 +14469,23 @@ chi2 2.73077 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.0612 18.1319 -1.72518 18.2447 
+Track parameters:  pT 18.1629 cot(theta) -10.5282 phi0 1.51234 d0 0 z0 0
+Helix paramters: kappa 0.0550572 tan(Lambda) -0.0949833 phi0 to d0 3.08313
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 5.96367e-20 0
+Track after fit
+Charge -1
+4 momentum 1.0612 18.1319 -1.71556 18.2438 
+Track parameters:  pT 18.1629 cot(theta) -10.5872 phi0 1.51234 d0 5.26184e-14 z0 -5.61359e-13
+Helix paramters: kappa 0.0550572 tan(Lambda) -0.0944538 phi0 to d0 3.08313
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 83
 Number Tracks: 1
 Track number: 0
@@ -13300,6 +14643,23 @@ chi2 1.75796 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 2.4807 22.8293 -1.70009 23.0265 
+Track parameters:  pT 22.9637 cot(theta) -13.5074 phi0 1.46256 d0 0 z0 0
+Helix paramters: kappa -0.043547 tan(Lambda) -0.0740336 phi0 to d0 3.03335
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.20649e-18 0
+Track after fit
+Charge 1
+4 momentum 2.4807 22.8293 -1.66891 23.0243 
+Track parameters:  pT 22.9637 cot(theta) -13.7597 phi0 1.46256 d0 8.71316e-12 z0 -1.16067e-12
+Helix paramters: kappa -0.043547 tan(Lambda) -0.072676 phi0 to d0 3.03335
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 84
 Number Tracks: 1
 Track number: 0
@@ -13608,6 +14968,23 @@ chi2 2.27722 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -1.61822 18.757 1.03326 18.855 
+Track parameters:  pT 18.8267 cot(theta) 18.2207 phi0 1.65686 d0 0 z0 0
+Helix paramters: kappa -0.053116 tan(Lambda) 0.0548827 phi0 to d0 3.22765
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.42484e-19 0
+Track after fit
+Charge 1
+4 momentum -1.61822 18.757 1.01746 18.8542 
+Track parameters:  pT 18.8267 cot(theta) 18.5037 phi0 1.65686 d0 2.54896e-12 z0 9.59758e-13
+Helix paramters: kappa -0.053116 tan(Lambda) 0.0540432 phi0 to d0 3.22765
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 86
 Number Tracks: 1
 Track number: 0
@@ -13765,6 +15142,23 @@ chi2 8.03444 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -1.39586 18.4968 1.6184 18.6198 
+Track parameters:  pT 18.5494 cot(theta) 11.4616 phi0 1.64612 d0 0 z0 0
+Helix paramters: kappa 0.0539102 tan(Lambda) 0.0872481 phi0 to d0 3.21692
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.52978e-18 0
+Track after fit
+Charge -1
+4 momentum -1.39586 18.4968 1.59953 18.6182 
+Track parameters:  pT 18.5494 cot(theta) 11.5968 phi0 1.64612 d0 -1.03962e-11 z0 9.9685e-13
+Helix paramters: kappa 0.0539102 tan(Lambda) 0.0862309 phi0 to d0 3.21692
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 87
 Number Tracks: 1
 Track number: 0
@@ -13851,7 +15245,7 @@ Layer: 9 number Strips: 2
 Strip: 513  ADC 0
 Strip: 514  ADC 31
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 56
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0236613 0.2 0
@@ -13922,6 +15316,23 @@ chi2 8.44313 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -1.46183 13.0857 1.40753 13.2421 
+Track parameters:  pT 13.1671 cot(theta) 9.35474 phi0 1.68205 d0 0 z0 0
+Helix paramters: kappa -0.0759468 tan(Lambda) 0.106898 phi0 to d0 3.25284
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.48517e-16 0
+Track after fit
+Charge 1
+4 momentum -1.46183 13.0857 1.3927 13.2406 
+Track parameters:  pT 13.1671 cot(theta) 9.4544 phi0 1.68205 d0 1.22532e-10 z0 4.35072e-13
+Helix paramters: kappa -0.0759468 tan(Lambda) 0.105771 phi0 to d0 3.25284
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 88
 Number Tracks: 1
 Track number: 0
@@ -14079,6 +15490,23 @@ chi2 2.87181 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 0.0392019 34.0434 0.881881 34.0548 
+Track parameters:  pT 34.0434 cot(theta) 38.6032 phi0 1.56964 d0 0 z0 0
+Helix paramters: kappa 0.0293742 tan(Lambda) 0.0259046 phi0 to d0 3.14044
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 7.77605e-15 0
+Track after fit
+Charge -1
+4 momentum 0.0392019 34.0434 0.878732 34.0548 
+Track parameters:  pT 34.0434 cot(theta) 38.7415 phi0 1.56964 d0 3.93844e-12 z0 4.75089e-10
+Helix paramters: kappa 0.0293742 tan(Lambda) 0.0258121 phi0 to d0 3.14044
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 89
 Number Tracks: 1
 Track number: 0
@@ -14316,7 +15744,7 @@ Layer: 9 number Strips: 2
 Strip: 779  ADC 20
 Strip: 780  ADC 11
 Hit Set version: 1
-Gen Hits: 255
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.00506613 0.2 0
@@ -14387,6 +15815,23 @@ chi2 4.01289 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -0.455737 12.5992 0.605499 12.6219 
+Track parameters:  pT 12.6074 cot(theta) 20.8215 phi0 1.60695 d0 0 z0 0
+Helix paramters: kappa 0.0793184 tan(Lambda) 0.0480273 phi0 to d0 3.17775
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 8.62334e-18 0
+Track after fit
+Charge -1
+4 momentum -0.455737 12.5992 0.597009 12.6215 
+Track parameters:  pT 12.6074 cot(theta) 21.1176 phi0 1.60695 d0 -2.91438e-11 z0 9.57265e-13
+Helix paramters: kappa 0.0793184 tan(Lambda) 0.0473538 phi0 to d0 3.17775
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 91
 Number Tracks: 1
 Track number: 0
@@ -14544,6 +15989,23 @@ chi2 9.39133 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -2.8219 23.8859 0.7483 24.0636 
+Track parameters:  pT 24.052 cot(theta) 32.1422 phi0 1.68839 d0 0 z0 0
+Helix paramters: kappa -0.0415766 tan(Lambda) 0.0311118 phi0 to d0 3.25919
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 5.76751e-19 0
+Track after fit
+Charge 1
+4 momentum -2.8219 23.8859 0.718863 24.0627 
+Track parameters:  pT 24.052 cot(theta) 33.4584 phi0 1.68839 d0 3.88501e-12 z0 1.53467e-12
+Helix paramters: kappa -0.0415766 tan(Lambda) 0.0298879 phi0 to d0 3.25919
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 92
 Number Tracks: 1
 Track number: 0
@@ -14701,6 +16163,23 @@ chi2 11.6734 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -1.02173 9.87145 0.126609 9.92499 
+Track parameters:  pT 9.92418 cot(theta) 78.3846 phi0 1.67393 d0 0 z0 0
+Helix paramters: kappa 0.100764 tan(Lambda) 0.0127576 phi0 to d0 3.24473
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.95325e-15 0
+Track after fit
+Charge -1
+4 momentum -1.02173 9.87144 0.111604 9.92481 
+Track parameters:  pT 9.92418 cot(theta) 88.9235 phi0 1.67393 d0 -7.07357e-10 z0 2.29024e-12
+Helix paramters: kappa 0.100764 tan(Lambda) 0.0112456 phi0 to d0 3.24473
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 93
 Number Tracks: 1
 Track number: 0
@@ -14858,6 +16337,23 @@ chi2 3.40297 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -0.284273 29.4664 0.461228 29.4714 
+Track parameters:  pT 29.4678 cot(theta) 63.8899 phi0 1.58044 d0 0 z0 0
+Helix paramters: kappa 0.0339353 tan(Lambda) 0.0156519 phi0 to d0 3.15124
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.77489e-14 0
+Track after fit
+Charge -1
+4 momentum -0.284273 29.4664 0.454473 29.4713 
+Track parameters:  pT 29.4678 cot(theta) 64.8395 phi0 1.58044 d0 1.00147e-11 z0 1.1768e-09
+Helix paramters: kappa 0.0339353 tan(Lambda) 0.0154227 phi0 to d0 3.15124
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 94
 Number Tracks: 1
 Track number: 0
@@ -14944,7 +16440,7 @@ Layer: 9 number Strips: 2
 Strip: 1428  ADC 19
 Strip: 1429  ADC 12
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 255
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0162758 0.2 0
@@ -15015,6 +16511,23 @@ chi2 4.34657 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 2.97616 35.4078 -2.22499 35.6023 
+Track parameters:  pT 35.5327 cot(theta) -15.9698 phi0 1.48694 d0 0 z0 0
+Helix paramters: kappa 0.0281431 tan(Lambda) -0.0626183 phi0 to d0 3.05774
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.01668e-19 0
+Track after fit
+Charge -1
+4 momentum 2.97616 35.4078 -2.19331 35.6003 
+Track parameters:  pT 35.5327 cot(theta) -16.2005 phi0 1.48694 d0 7.31681e-13 z0 -9.77479e-13
+Helix paramters: kappa 0.0281431 tan(Lambda) -0.0617265 phi0 to d0 3.05774
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 95
 Number Tracks: 1
 Track number: 0
@@ -15101,7 +16614,7 @@ Layer: 9 number Strips: 2
 Strip: 1285  ADC 9
 Strip: 1286  ADC 22
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 97
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0148694 0.2 0
@@ -15172,6 +16685,23 @@ chi2 5.16373 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 2.13754 37.413 -1.84856 37.5196 
+Track parameters:  pT 37.4741 cot(theta) -20.2721 phi0 1.51372 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) -0.0493289 phi0 to d0 3.08452
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.8225e-14 0
+Track after fit
+Charge -1
+4 momentum 3.38042 62.3188 -1.81272 62.4367 
+Track parameters:  pT 62.4104 cot(theta) -34.4292 phi0 1.51661 d0 1.32819e-09 z0 2.03274e-12
+Helix paramters: kappa 0.016023 tan(Lambda) -0.0290451 phi0 to d0 3.0874
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 96
 Number Tracks: 1
 Track number: 0
@@ -15258,7 +16788,7 @@ Layer: 9 number Strips: 2
 Strip: 1172  ADC 29
 Strip: 1173  ADC 2
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 97
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.00229194 0.2 0
@@ -15329,6 +16859,23 @@ chi2 3.54303 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.82612 37.465 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.54875 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.11955
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.74928e-18 0
+Track after fit
+Charge 1
+4 momentum 4.54668 164.629 -10.2073 165.007 
+Track parameters:  pT 164.691 cot(theta) -16.1347 phi0 1.54319 d0 -2.30995e-12 z0 4.38333e-12
+Helix paramters: kappa -0.00607196 tan(Lambda) -0.0619784 phi0 to d0 3.11398
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 97
 Number Tracks: 1
 Track number: 0
@@ -15415,7 +16962,7 @@ Layer: 9 number Strips: 2
 Strip: 1086  ADC 26
 Strip: 1087  ADC 5
 Hit Set version: 1
-Gen Hits: 2
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.00588065 0.2 0
@@ -15486,6 +17033,23 @@ chi2 5.90041 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 0.76417 37.4663 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.5504 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) 0 phi0 to d0 3.1212
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.36135e-18 0
+Track after fit
+Charge -1
+4 momentum 2.56213 173.742 14.4532 174.361 
+Track parameters:  pT 173.761 cot(theta) 12.0223 phi0 1.55605 d0 9.27724e-13 z0 3.19194e-12
+Helix paramters: kappa 0.00575505 tan(Lambda) 0.0831789 phi0 to d0 3.12685
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 98
 Number Tracks: 1
 Track number: 0
@@ -15643,6 +17207,23 @@ chi2 5.26103 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.06663 18.6573 -1.31939 18.7343 
+Track parameters:  pT 18.6878 cot(theta) -14.164 phi0 1.51369 d0 0 z0 0
+Helix paramters: kappa 0.0535108 tan(Lambda) -0.0706014 phi0 to d0 3.08449
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.13999e-19 0
+Track after fit
+Charge -1
+4 momentum 1.06663 18.6573 -1.30994 18.7337 
+Track parameters:  pT 18.6878 cot(theta) -14.2662 phi0 1.51369 d0 5.93299e-12 z0 -6.09431e-13
+Helix paramters: kappa 0.0535108 tan(Lambda) -0.0700959 phi0 to d0 3.08449
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 99
 Number Tracks: 1
 Track number: 0
@@ -15729,7 +17310,7 @@ Layer: 9 number Strips: 2
 Strip: 505  ADC 3
 Strip: 506  ADC 28
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 255
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.02275 0.2 0
@@ -15800,6 +17381,23 @@ chi2 5.35175 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -2.13018 19.3968 1.80527 19.5968 
+Track parameters:  pT 19.5134 cot(theta) 10.8091 phi0 1.68018 d0 0 z0 0
+Helix paramters: kappa -0.0512467 tan(Lambda) 0.0925145 phi0 to d0 3.25098
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.50552e-17 0
+Track after fit
+Charge 1
+4 momentum -2.13018 19.3968 1.78284 19.5947 
+Track parameters:  pT 19.5134 cot(theta) 10.9451 phi0 1.68018 d0 6.71063e-11 z0 6.94728e-13
+Helix paramters: kappa -0.0512467 tan(Lambda) 0.0913649 phi0 to d0 3.25098
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 100
 Number Tracks: 1
 Track number: 0
@@ -15957,6 +17555,23 @@ chi2 10.9573 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.10516 11.4968 -0.229782 11.5521 
+Track parameters:  pT 11.5498 cot(theta) -50.2643 phi0 1.47496 d0 0 z0 0
+Helix paramters: kappa 0.0865815 tan(Lambda) -0.0198949 phi0 to d0 3.04576
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.57741e-18 0
+Track after fit
+Charge -1
+4 momentum 1.10516 11.4968 -0.220327 11.5519 
+Track parameters:  pT 11.5498 cot(theta) -52.4212 phi0 1.47496 d0 -1.56271e-11 z0 -1.15111e-12
+Helix paramters: kappa 0.0865815 tan(Lambda) -0.0190763 phi0 to d0 3.04576
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 101
 Number Tracks: 1
 Track number: 0
@@ -16041,7 +17656,7 @@ Layer: 9 number Strips: 2
 Strip: 398  ADC 27
 Strip: 399  ADC 4
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 255
 Number Hits: 9
 Hit: 0 associated with track -1
 Hit position: -0.0304 0.2 0
@@ -16265,6 +17880,23 @@ chi2 2.46738 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.69893 22.3546 -0.965576 22.3864 
+Track parameters:  pT 22.3655 cot(theta) -23.1629 phi0 1.53954 d0 0 z0 0
+Helix paramters: kappa -0.0447116 tan(Lambda) -0.0431725 phi0 to d0 3.11034
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.97525e-18 0
+Track after fit
+Charge 1
+4 momentum 0.69893 22.3546 -0.954142 22.3859 
+Track parameters:  pT 22.3655 cot(theta) -23.4405 phi0 1.53954 d0 1.69697e-11 z0 -7.43195e-13
+Helix paramters: kappa -0.0447116 tan(Lambda) -0.0426613 phi0 to d0 3.11034
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 103
 Number Tracks: 1
 Track number: 0
@@ -16422,6 +18054,23 @@ chi2 5.04882 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -1.9804 19.7319 0.629486 19.841 
+Track parameters:  pT 19.8311 cot(theta) 31.5036 phi0 1.67083 d0 0 z0 0
+Helix paramters: kappa -0.050426 tan(Lambda) 0.0317424 phi0 to d0 3.24162
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.14121e-19 0
+Track after fit
+Charge 1
+4 momentum -1.9804 19.7319 0.609773 19.8404 
+Track parameters:  pT 19.8311 cot(theta) 32.522 phi0 1.67083 d0 -2.5958e-12 z0 1.28607e-12
+Helix paramters: kappa -0.050426 tan(Lambda) 0.0307484 phi0 to d0 3.24162
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 104
 Number Tracks: 1
 Track number: 0
@@ -16579,6 +18228,23 @@ chi2 7.34844 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 4.01503 37.2583 -1.05427 37.4889 
+Track parameters:  pT 37.4741 cot(theta) -35.5451 phi0 1.46345 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) -0.0281333 phi0 to d0 3.03425
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.50212e-15 0
+Track after fit
+Charge 1
+4 momentum 4.51178 41.5743 -0.999259 41.8303 
+Track parameters:  pT 41.8184 cot(theta) -41.8494 phi0 1.4627 d0 -3.50389e-10 z0 -9.12014e-13
+Helix paramters: kappa -0.0239129 tan(Lambda) -0.0238952 phi0 to d0 3.03349
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 105
 Number Tracks: 1
 Track number: 0
@@ -16736,6 +18402,23 @@ chi2 3.33914 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.993025 7.89569 0.130414 7.95896 
+Track parameters:  pT 7.95789 cot(theta) 61.0204 phi0 1.69591 d0 0 z0 0
+Helix paramters: kappa -0.125661 tan(Lambda) 0.016388 phi0 to d0 3.2667
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 7.23281e-16 0
+Track after fit
+Charge 1
+4 momentum -0.993025 7.89569 0.122259 7.95883 
+Track parameters:  pT 7.95789 cot(theta) 65.0906 phi0 1.69591 d0 2.71041e-10 z0 1.40034e-12
+Helix paramters: kappa -0.125661 tan(Lambda) 0.0153632 phi0 to d0 3.2667
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 106
 Number Tracks: 1
 Track number: 0
@@ -16893,6 +18576,23 @@ chi2 5.36434 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -4.54393 37.1975 6.98964 38.1203 
+Track parameters:  pT 37.4741 cot(theta) 5.36137 phi0 1.69235 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0.186519 phi0 to d0 3.26315
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.32151e-17 0
+Track after fit
+Charge 1
+4 momentum -11.0299 93.6919 6.86431 94.5884 
+Track parameters:  pT 94.339 cot(theta) 13.7434 phi0 1.68798 d0 -2.79857e-11 z0 1.71238e-11
+Helix paramters: kappa -0.0106001 tan(Lambda) 0.0727622 phi0 to d0 3.25878
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 107
 Number Tracks: 1
 Track number: 0
@@ -17050,6 +18750,23 @@ chi2 2.60641 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -1.34982 20.238 0.309968 20.2853 
+Track parameters:  pT 20.2829 cot(theta) 65.4355 phi0 1.63739 d0 0 z0 0
+Helix paramters: kappa -0.0493026 tan(Lambda) 0.0152822 phi0 to d0 3.20819
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.93263e-18 0
+Track after fit
+Charge 1
+4 momentum -1.34982 20.238 0.297777 20.2851 
+Track parameters:  pT 20.2829 cot(theta) 68.1145 phi0 1.63739 d0 -1.9341e-11 z0 8.9427e-13
+Helix paramters: kappa -0.0493026 tan(Lambda) 0.0146812 phi0 to d0 3.20819
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 108
 Number Tracks: 1
 Track number: 0
@@ -17134,7 +18851,7 @@ Layer: 9 number Strips: 2
 Strip: 354  ADC 16
 Strip: 355  ADC 15
 Hit Set version: 1
-Gen Hits: 2
+Gen Hits: 0
 Number Hits: 9
 Hit: 0 associated with track -1
 Hit position: -0.0311226 0.2 0
@@ -17358,6 +19075,23 @@ chi2 1.664 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -3.12402 37.3436 1.46137 37.5025 
+Track parameters:  pT 37.4741 cot(theta) 25.6431 phi0 1.65426 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0.0389968 phi0 to d0 3.22505
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 4.02325e-15 0
+Track after fit
+Charge 1
+4 momentum -3.74612 45.4876 1.42131 45.6638 
+Track parameters:  pT 45.6416 cot(theta) 32.1125 phi0 1.65297 d0 -5.95838e-10 z0 -1.51512e-12
+Helix paramters: kappa -0.0219098 tan(Lambda) 0.0311406 phi0 to d0 3.22376
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 110
 Number Tracks: 1
 Track number: 0
@@ -17444,7 +19178,7 @@ Layer: 9 number Strips: 2
 Strip: 1301  ADC 16
 Strip: 1302  ADC 15
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 97
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0127774 0.2 0
@@ -17515,6 +19249,23 @@ chi2 4.14323 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 1.80737 37.4304 -6.83303 38.0919 
+Track parameters:  pT 37.4741 cot(theta) -5.48425 phi0 1.52255 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) -0.18234 phi0 to d0 3.09334
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.3362e-18 0
+Track after fit
+Charge 1
+4 momentum 4.80322 91.394 -6.77369 91.7705 
+Track parameters:  pT 91.5201 cot(theta) -13.5111 phi0 1.51829 d0 -5.68587e-12 z0 7.62186e-12
+Helix paramters: kappa -0.0109266 tan(Lambda) -0.0740131 phi0 to d0 3.08909
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 111
 Number Tracks: 1
 Track number: 0
@@ -17672,6 +19423,23 @@ chi2 0.938242 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 0.926617 25.0665 -2.29634 25.1885 
+Track parameters:  pT 25.0836 cot(theta) -10.9233 phi0 1.53385 d0 0 z0 0
+Helix paramters: kappa 0.0398666 tan(Lambda) -0.0915472 phi0 to d0 3.10464
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 9.14183e-14 0
+Track after fit
+Charge -1
+4 momentum 0.926617 25.0665 -2.28837 25.1878 
+Track parameters:  pT 25.0836 cot(theta) -10.9614 phi0 1.53385 d0 -2.19713e-11 z0 -1.61766e-09
+Helix paramters: kappa 0.0398666 tan(Lambda) -0.0912296 phi0 to d0 3.10464
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 112
 Number Tracks: 1
 Track number: 0
@@ -17829,6 +19597,23 @@ chi2 4.62469 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 2.61448 32.3021 -3.06693 32.5525 
+Track parameters:  pT 32.4077 cot(theta) -10.5668 phi0 1.49003 d0 0 z0 0
+Helix paramters: kappa -0.0308568 tan(Lambda) -0.0946357 phi0 to d0 3.06083
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.68179e-18 0
+Track after fit
+Charge 1
+4 momentum 2.61448 32.3021 -3.0339 32.5494 
+Track parameters:  pT 32.4077 cot(theta) -10.6819 phi0 1.49003 d0 -1.56789e-11 z0 -8.83552e-13
+Helix paramters: kappa -0.0308568 tan(Lambda) -0.0936166 phi0 to d0 3.06083
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 113
 Number Tracks: 1
 Track number: 0
@@ -17986,6 +19771,23 @@ chi2 8.82366 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -0.678911 8.62008 0.248686 8.65035 
+Track parameters:  pT 8.64678 cot(theta) 34.7698 phi0 1.64939 d0 0 z0 0
+Helix paramters: kappa 0.11565 tan(Lambda) 0.0287606 phi0 to d0 3.22019
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.52281e-15 0
+Track after fit
+Charge -1
+4 momentum -0.678911 8.62008 0.23775 8.65004 
+Track parameters:  pT 8.64678 cot(theta) 36.3691 phi0 1.64939 d0 -5.03685e-10 z0 1.8228e-12
+Helix paramters: kappa 0.11565 tan(Lambda) 0.0274958 phi0 to d0 3.22019
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 114
 Number Tracks: 1
 Track number: 0
@@ -18072,7 +19874,7 @@ Layer: 9 number Strips: 2
 Strip: 1422  ADC 20
 Strip: 1423  ADC 11
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 255
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0174032 0.2 0
@@ -18143,6 +19945,23 @@ chi2 7.81912 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 2.73407 37.3742 3.74834 37.6611 
+Track parameters:  pT 37.4741 cot(theta) 9.99751 phi0 1.49777 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0.100025 phi0 to d0 3.06857
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 5.05388e-18 0
+Track after fit
+Charge 1
+4 momentum 20.0586 252.802 3.98096 253.628 
+Track parameters:  pT 253.596 cot(theta) 63.7022 phi0 1.49162 d0 -1.81471e-11 z0 -3.51158e-12
+Helix paramters: kappa -0.00394327 tan(Lambda) 0.015698 phi0 to d0 3.06241
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 115
 Number Tracks: 1
 Track number: 0
@@ -18300,6 +20119,23 @@ chi2 3.83621 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.44316 10.5083 -0.786604 10.547 
+Track parameters:  pT 10.5176 cot(theta) -13.3709 phi0 1.61294 d0 0 z0 0
+Helix paramters: kappa -0.0950785 tan(Lambda) -0.0747891 phi0 to d0 3.18374
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.31364e-14 0
+Track after fit
+Charge 1
+4 momentum -0.44316 10.5083 -0.787863 10.5471 
+Track parameters:  pT 10.5176 cot(theta) -13.3496 phi0 1.61294 d0 2.10726e-12 z0 6.20219e-10
+Helix paramters: kappa -0.0950785 tan(Lambda) -0.0749088 phi0 to d0 3.18374
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 116
 Number Tracks: 1
 Track number: 0
@@ -18457,6 +20293,23 @@ chi2 2.45162 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -0.341647 9.84978 0.698825 9.88045 
+Track parameters:  pT 9.8557 cot(theta) 14.1033 phi0 1.60547 d0 0 z0 0
+Helix paramters: kappa 0.101464 tan(Lambda) 0.0709056 phi0 to d0 3.17626
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.79026e-17 0
+Track after fit
+Charge -1
+4 momentum -0.341647 9.84978 0.691782 9.87995 
+Track parameters:  pT 9.8557 cot(theta) 14.2468 phi0 1.60547 d0 -4.21556e-11 z0 9.71573e-13
+Helix paramters: kappa 0.101464 tan(Lambda) 0.070191 phi0 to d0 3.17626
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 117
 Number Tracks: 1
 Track number: 0
@@ -18614,6 +20467,23 @@ chi2 3.02989 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 2.07873 18.5401 -1.17002 18.6929 
+Track parameters:  pT 18.6562 cot(theta) -15.9452 phi0 1.45914 d0 0 z0 0
+Helix paramters: kappa 0.0536014 tan(Lambda) -0.0627146 phi0 to d0 3.02994
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 2.04554e-17 0
+Track after fit
+Charge -1
+4 momentum 2.07873 18.5401 -1.14865 18.6916 
+Track parameters:  pT 18.6562 cot(theta) -16.2419 phi0 1.45914 d0 -4.50127e-11 z0 -1.05281e-12
+Helix paramters: kappa 0.0536014 tan(Lambda) -0.0615692 phi0 to d0 3.02994
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 118
 Number Tracks: 1
 Track number: 0
@@ -18700,7 +20570,7 @@ Layer: 9 number Strips: 2
 Strip: 727  ADC 12
 Strip: 728  ADC 19
 Hit Set version: 1
-Gen Hits: 255
+Gen Hits: 50
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0190968 0.2 0
@@ -18771,6 +20641,23 @@ chi2 6.00094 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.715293 9.63431 0.361688 9.6676 
+Track parameters:  pT 9.66083 cot(theta) 26.7104 phi0 1.6449 d0 0 z0 0
+Helix paramters: kappa -0.103511 tan(Lambda) 0.0374386 phi0 to d0 3.2157
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.27932e-19 0
+Track after fit
+Charge 1
+4 momentum -0.715293 9.63431 0.356611 9.66741 
+Track parameters:  pT 9.66083 cot(theta) 27.0907 phi0 1.6449 d0 -4.34077e-12 z0 6.95077e-13
+Helix paramters: kappa -0.103511 tan(Lambda) 0.0369131 phi0 to d0 3.2157
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 119
 Number Tracks: 1
 Track number: 0
@@ -18928,6 +20815,23 @@ chi2 0.365126 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -3.39215 37.3202 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.66144 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.23224
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 8.97413e-18 0
+Track after fit
+Charge 1
+4 momentum -38.4422 456.514 12.0457 458.288 
+Track parameters:  pT 458.13 cot(theta) 38.0326 phi0 1.65481 d0 -2.20807e-11 z0 6.76092e-12
+Helix paramters: kappa -0.00218279 tan(Lambda) 0.0262933 phi0 to d0 3.2256
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 120
 Number Tracks: 1
 Track number: 0
@@ -19014,7 +20918,7 @@ Layer: 9 number Strips: 2
 Strip: 1355  ADC 31
 Strip: 1356  ADC 0
 Hit Set version: 1
-Gen Hits: 255
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: 0.0156694 0.2 0
@@ -19085,6 +20989,23 @@ chi2 4.6326 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 2.27249 37.4051 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.51012 d0 0 z0 0
+Helix paramters: kappa -0.0266851 tan(Lambda) 0 phi0 to d0 3.08091
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.38242e-15 0
+Track after fit
+Charge 1
+4 momentum 253.683 3734.61 378.895 3762.35 
+Track parameters:  pT 3743.22 cot(theta) 9.87932 phi0 1.50297 d0 -1.54664e-11 z0 -2.25145e-11
+Helix paramters: kappa -0.00026715 tan(Lambda) 0.101222 phi0 to d0 3.07377
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 121
 Number Tracks: 1
 Track number: 0
@@ -19171,7 +21092,7 @@ Layer: 9 number Strips: 2
 Strip: 471  ADC 23
 Strip: 472  ADC 8
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 255
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.0202081 0.2 0
@@ -19242,6 +21163,23 @@ chi2 5.86469 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -2.51254 24.116 0.121166 24.2468 
+Track parameters:  pT 24.2465 cot(theta) 200.11 phi0 1.67461 d0 0 z0 0
+Helix paramters: kappa 0.0412431 tan(Lambda) 0.00499725 phi0 to d0 3.2454
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 6.58937e-17 0
+Track after fit
+Charge -1
+4 momentum -2.51254 24.116 0.0889687 24.2467 
+Track parameters:  pT 24.2465 cot(theta) 272.528 phi0 1.67461 d0 -8.11212e-11 z0 2.05701e-12
+Helix paramters: kappa 0.0412431 tan(Lambda) 0.00366934 phi0 to d0 3.2454
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 122
 Number Tracks: 1
 Track number: 0
@@ -19399,6 +21337,23 @@ chi2 5.19603 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum -2.95059 37.3577 0 37.4741 
+Track parameters:  pT 37.4741 cot(theta) inf phi0 1.64961 d0 0 z0 0
+Helix paramters: kappa 0.0266851 tan(Lambda) 0 phi0 to d0 3.22041
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.05804e-16 0
+Track after fit
+Charge -1
+4 momentum -57.4146 668.765 50.5104 673.123 
+Track parameters:  pT 671.225 cot(theta) 13.2888 phi0 1.65644 d0 2.3417e-11 z0 -2.01612e-11
+Helix paramters: kappa 0.00148981 tan(Lambda) 0.0752511 phi0 to d0 3.22723
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 123
 Number Tracks: 1
 Track number: 0
@@ -19483,7 +21438,7 @@ Layer: 9 number Strips: 2
 Strip: 1661  ADC 31
 Strip: 1662  ADC 0
 Hit Set version: 1
-Gen Hits: 0
+Gen Hits: 97
 Number Hits: 9
 Hit: 0 associated with track -1
 Hit position: 0.0298468 0.2 0
@@ -19707,6 +21662,23 @@ chi2 2.27681 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge -1
+4 momentum 1.76949 22.7922 0.905027 22.8787 
+Track parameters:  pT 22.8608 cot(theta) 25.2598 phi0 1.49332 d0 0 z0 0
+Helix paramters: kappa 0.043743 tan(Lambda) 0.0395886 phi0 to d0 3.06411
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.98129e-17 0
+Track after fit
+Charge -1
+4 momentum 1.76949 22.7922 0.921343 22.8793 
+Track parameters:  pT 22.8608 cot(theta) 24.8125 phi0 1.49332 d0 4.44868e-11 z0 -1.32466e-12
+Helix paramters: kappa 0.043743 tan(Lambda) 0.0403023 phi0 to d0 3.06411
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 125
 Number Tracks: 1
 Track number: 0
@@ -19864,6 +21836,23 @@ chi2 17.6831 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.235331 32.5592 -0.352376 32.5619 
+Track parameters:  pT 32.56 cot(theta) -92.4013 phi0 1.56357 d0 0 z0 0
+Helix paramters: kappa -0.0307125 tan(Lambda) -0.0108224 phi0 to d0 3.13436
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 3.28042e-14 0
+Track after fit
+Charge 1
+4 momentum 0.235331 32.5592 -0.346191 32.5619 
+Track parameters:  pT 32.56 cot(theta) -94.0521 phi0 1.56357 d0 -8.19125e-12 z0 -9.75364e-10
+Helix paramters: kappa -0.0307125 tan(Lambda) -0.0106324 phi0 to d0 3.13436
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 126
 Number Tracks: 1
 Track number: 0
@@ -20021,6 +22010,23 @@ chi2 1.60762 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum 0.144612 12.0355 0.913477 12.071 
+Track parameters:  pT 12.0364 cot(theta) 13.1764 phi0 1.55878 d0 0 z0 0
+Helix paramters: kappa -0.0830815 tan(Lambda) 0.0758931 phi0 to d0 3.12958
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 1.66859e-13 0
+Track after fit
+Charge 1
+4 momentum 0.144612 12.0355 0.918633 12.0714 
+Track parameters:  pT 12.0364 cot(theta) 13.1025 phi0 1.55878 d0 -1.13062e-11 z0 -2.20552e-09
+Helix paramters: kappa -0.0830815 tan(Lambda) 0.0763214 phi0 to d0 3.12958
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
 Event: 127
 Number Tracks: 1
 Track number: 0
@@ -20107,7 +22113,7 @@ Layer: 9 number Strips: 2
 Strip: 1067  ADC 16
 Strip: 1068  ADC 15
 Hit Set version: 1
-Gen Hits: 255
+Gen Hits: 0
 Number Hits: 10
 Hit: 0 associated with track -1
 Hit position: -0.00645323 0.2 0
@@ -20178,3 +22184,20 @@ chi2 6.44647 ndof 5
 
 Number of hits 10
 Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Track before fit
+Charge 1
+4 momentum -0.0616782 8.53701 0.800601 8.57469 
+Track parameters:  pT 8.53723 cot(theta) 10.6635 phi0 1.57802 d0 0 z0 0
+Helix paramters: kappa -0.117134 tan(Lambda) 0.0937776 phi0 to d0 3.14882
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
+Track chi2 9.23207e-14 0
+Track after fit
+Charge 1
+4 momentum -0.0616782 8.53701 0.803326 8.57494 
+Track parameters:  pT 8.53723 cot(theta) 10.6274 phi0 1.57802 d0 -1.24684e-11 z0 -1.63614e-09
+Helix paramters: kappa -0.117134 tan(Lambda) 0.0940968 phi0 to d0 3.14882
+Reference Point 0 0 0
+Number of hits 3
+Hit layers, numbers: 3, 3: 4, 4: 9, 9: 
