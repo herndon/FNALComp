@@ -5,6 +5,7 @@
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
 #include "Modules/include/TrackRecoModule.hh"
+#include "Algorithms/include/TrackFitMeasurements.hh"
 
 fc::TrackRecoModule::TrackRecoModule(int debugLevel, 
 				     const std::string& inputHitsLabel, const std::string& outputTracksLabel,
@@ -28,7 +29,6 @@ void fc::TrackRecoModule::processEvent(Event& event)
 
   recoTracks(*recoTrackSet,*recoHitSet);
 
-  if (_debugLevel >= 2) recoHitSet->print();
 
   event.put(_outTracksLabel,std::move(recoTrackSet) );
 }
@@ -40,13 +40,10 @@ void fc::TrackRecoModule::recoTracks(TrackSet & trackSet, const HitSet& hitSet)
   std::vector<std::vector<int>> trackHitCandidates;
 
 
-  //findTrack2HitCandidates(trackHitCandidates,hitSet);
+  findTrack2X1SASHitCandidates(trackHitCandidates,hitSet);
   //TrackSet trackCandidateSet(-1,1,_detectorGeometry);
-  //build2HitTrackCandidates(trackCandidateSet,trackHitCandidates,hitSet);
+  build2X1SASHitTrackCandidates(trackSet,trackHitCandidates,hitSet);
 
-  findTrackPerfectCandidates(trackHitCandidates,hitSet);
-  //TrackSet trackCandidateSet(-1,1,_detectorGeometry);
-  buildPerfectTrackCandidates(trackSet,trackHitCandidates,hitSet);
 
 
 
@@ -57,29 +54,7 @@ void fc::TrackRecoModule::recoTracks(TrackSet & trackSet, const HitSet& hitSet)
 
 
 
-void fc::TrackRecoModule::findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
-
-  int hitNumber = 0;
-
-  std::vector<int> trackHitCandidate;
-
-  // Form all hit candidates
-
-  if (hitSet.getHits().size() < 10) return;
-  for (hitSet::const_iterator hitIterO = hitSet.getHits().begin(); hitIterO != hitSet.getHits().end(); ++hitIterO,++hitNumber) {
-
-
-    trackHitCandidate.push_back(hitNumber);
-  }
-
-  trackHitCandidates.push_back(trackHitCandidate);
-
-
-}
-
-
-
-void fc::TrackRecoModule::findTrack3HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
+void fc::TrackRecoModule::findTrack3X2SASHitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
 
   int hitNumberO = 0;
 
@@ -104,6 +79,8 @@ void fc::TrackRecoModule::findTrack3HitCandidates(std::vector<std::vector<int>> 
 
 
 
+
+
 	      std::vector<int> trackHitCandidate;
 	      trackHitCandidate.push_back(hitNumberO);
 	      trackHitCandidate.push_back(hitNumberI);
@@ -125,28 +102,43 @@ void fc::TrackRecoModule::findTrack3HitCandidates(std::vector<std::vector<int>> 
 
 }
 
-void fc::TrackRecoModule::findTrack2HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
+void fc::TrackRecoModule::findTrack2X1SASHitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
 
   int hitNumberO = 0;
 
+  if (hitSet.getHits().size() < 10) return;
 
-  // Form 4-3 hit candidates
+  // Form 4-3,9 hit candidates
   for (hitSet::const_iterator hitIterO = hitSet.getHits().begin(); hitIterO != hitSet.getHits().end(); ++hitIterO,++hitNumberO) {
 
-    int hitNumberI = 0;
 
-    //!!!!! change to outer layer at some point
-    if (hitIterO->getLayer() == _nLayers-1) {
+    if (hitIterO->getLayer() == 4) {
 
+      int hitNumberI = 0;
+ 
       for (hitSet::const_iterator hitIterI = hitSet.getHits().begin(); hitIterI != hitSet.getHits().end(); ++hitIterI,++hitNumberI) {
 
-	if (hitIterI->getLayer() == _nLayers-2) {
+	if (hitIterI->getLayer() == 3) {
 
-	  std::vector<int> trackHitCandidate;
-          trackHitCandidate.push_back(hitNumberO);
-          trackHitCandidate.push_back(hitNumberI);
+	  int hitNumberOSAS = 0;
 
-          trackHitCandidates.push_back(trackHitCandidate);
+	  for (hitSet::const_iterator hitIterOSAS = hitSet.getHits().begin(); hitIterOSAS != hitSet.getHits().end(); ++hitIterOSAS,++hitNumberOSAS) {
+
+	    if (hitIterOSAS->getLayer() == 9) {
+
+	      // !!!!! need to check if intersection is at reasonable place.
+
+	      std::vector<int> trackHitCandidate;
+	      trackHitCandidate.push_back(hitNumberO);
+	      trackHitCandidate.push_back(hitNumberI);
+	      trackHitCandidate.push_back(hitNumberOSAS);
+
+	      trackHitCandidates.push_back(trackHitCandidate);
+
+	    }
+
+	  }
+
 	}
 
       }
@@ -159,40 +151,30 @@ void fc::TrackRecoModule::findTrack2HitCandidates(std::vector<std::vector<int>> 
 
 
 
-void fc::TrackRecoModule::build2HitTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
-
-  TVector3 primaryVertex(0.0,0.0,0.0);
-  for (std::vector<std::vector<int>>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
-    //Track trackCandidate(primaryVertex,hitSet.getHits()[(*trackHitCandidateIter)[2]].getHitPosition(),hitSet.getHits()[(*trackHitCandidateIter)[4]].getHitPosition(),primaryVertex,_detectorGeometry,_debugLevel);
-
-    // !!!!! insert hit via constructor
-    //trackCandidate.insertHit((*trackHitCandidateIter)[0],4);
-    //trackCandidate.insertHit((*trackHitCandidateIter)[1],3);
-    std::cout << "Track before fit" << std::endl;
-
-    //if (_debugLevel >=2) trackCandidate.print();
-
-    //trackCandidateSet.insertTrack(trackCandidate);
-  }
-
-}
-
-
-void fc::TrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
+void fc::TrackRecoModule::build2X1SASHitTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
 
   TVector3 primaryVertex(0.0,0.0,0.0);
   for (std::vector<std::vector<int>>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
     std::vector<int> trackHitCandidate = *trackHitCandidateIter;
     Track trackCandidate(hitSet,trackHitCandidate,primaryVertex,_detectorGeometry,_debugLevel);
 
-
     if (_debugLevel ==2) {
       std::cout << "Track after fit" << std::endl;
       trackCandidate.print();
     }
 
-
    trackCandidateSet.insertTrack(trackCandidate);
-   }
+
+
+//    for (int ii_layer = 0; ii_layer < DetectorGeometry::_nSensors; ++ii_layer){
+//      double uncer = expectedMeasurementUncertianty1D(trackCandidate.getHelix(), trackCandidate.getCovMatrix(), ii_layer, _detectorGeometry);
+//      std::cout << "Uncertainty on layer " << ii_layer << ": " << uncer << std::endl;
+
+//   }
+
+
+  }
 
 }
+
+

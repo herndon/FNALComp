@@ -99,9 +99,14 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
 
       // Hit information
       int layer = trackHitMapIter->second;
-      TVector3 hitPosition = hitSet.getHits()[trackHitMapIter->first].getHitPosition();
+      TVector3 hitPosition;
+      if (layer>=0) {
+	hitPosition = hitSet.getHits()[trackHitMapIter->first].getHitPosition();
+      }else {
+	hitPosition - detectorGeometry.getSensor(layer)._center;
+      }
 
-      if (_debugLevel >= 5) {
+      if (_debugLevel >= 5 && layer>=0) {
 	std::cout << "Layer " << layer << std::endl;
 	hitSet.getHits()[trackHitMapIter->first].print();
 
@@ -321,7 +326,20 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
 
 }
 
+fc::Helix fc::FitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap&  trackHitMapNoPV, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int _debugLevel){
 
+  trackHitMap trackHitMapWithPV;
+
+  for (trackHitMap::const_iterator trackHitMapIter = trackHitMapNoPV.begin(); trackHitMapIter != trackHitMapNoPV.end(); ++trackHitMapIter){
+    int hitNumber = trackHitMapIter->first;
+    int layer = trackHitMapIter->second;
+    trackHitMapWithPV.insert(trackHitMap::value_type(hitNumber,layer));
+  }
+
+  trackHitMapWithPV.insert(trackHitMap::value_type(-2,-2));
+  trackHitMapWithPV.insert(trackHitMap::value_type(-1,-1));
+  return FitToHelix(initialHelix, hitSet, trackHitMapWithPV, detectorGeometry, finalCovMatrix, finalChi2, finalNDof, _debugLevel);
+}
 
 
 

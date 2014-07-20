@@ -78,6 +78,13 @@ private:
 
   sensorDescriptor _sensor[_nSensors];
 
+  // Parameters for the primary vetex if used in a fit
+
+  sensorDescriptor _primaryVertexX;
+  sensorDescriptor _primaryVertexZ;
+
+
+
   // limits on sensor specifications
   sensorDescriptor _sensorMinLimits;
   sensorDescriptor _sensorMaxLimits;

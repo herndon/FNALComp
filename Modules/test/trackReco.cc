@@ -14,6 +14,7 @@
 #include "Modules/include/HitRecoModule.hh"
 #include "Modules/include/HitCompareModule.hh"
 #include "Modules/include/PerfectTrackRecoModule.hh"
+#include "Modules/include/TrackRecoModule.hh"
 #include "Modules/include/TrackCompareModule.hh"
 #include <fstream>
 #include <iostream>
@@ -69,6 +70,7 @@ int main ()
   processor.addModule( new fc::HitRecoModule(debugLevel,"genStrips", "recoHits", detectorGeometry));
   processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", detectorGeometry));
   processor.addModule( new fc::PerfectTrackRecoModule(debugLevel, "recoHits", "genHits", "perfectRecoTracks", detectorGeometry) );
+  processor.addModule( new fc::TrackRecoModule(debugLevel, "recoHits", "recoTracks", detectorGeometry) );
   processor.addModule( new fc::TrackCompareModule(debugLevel, "tracksWithHits", "perfectRecoTracks", detectorGeometry) );
 
 

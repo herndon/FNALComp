@@ -112,13 +112,14 @@ void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCan
     std::vector<int> trackHitCandidate = *trackHitCandidateIter;
     Track trackCandidate(hitSet,trackHitCandidate,primaryVertex,_detectorGeometry,_debugLevel);
 
-
     if (_debugLevel ==2) {
       std::cout << "Track after fit" << std::endl;
       trackCandidate.print();
     }
 
    trackCandidateSet.insertTrack(trackCandidate);
+
+
 
   }
 

@@ -46,12 +46,10 @@ private:
   int _nLayers;
 
   void recoTracks(TrackSet & trackSet, const HitSet& hitSet);
-  void findTrack2HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
-  void findTrack3HitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
-  void findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
+  void findTrack2X1SASHitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
+  void findTrack3X2SASHitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
 
-  void build2HitTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
-  void buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
+  void build2X1SASHitTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
 
 
 

@@ -88,7 +88,12 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
   double chi2=0.0;
   int nDof=0;
 
-  _helix = FitToHelix(initialHelix,hitSet,_trackHitMap,detectorGeometry,_covMatrix,chi2,nDof,2);
+  if (_trackHitMap.size()==3)  {
+    _helix = FitToHelixWithPV(initialHelix,hitSet,_trackHitMap,detectorGeometry,_covMatrix,chi2,nDof,2);
+  } else {
+    _helix = FitToHelix(initialHelix,hitSet,_trackHitMap,detectorGeometry,_covMatrix,chi2,nDof,2);
+  }
+
   _chi2 = chi2;
   _nDof = nDof;
   std::cout << "Track chi2 " << _chi2 << " " << _nDof << std::endl;

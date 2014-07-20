@@ -151,7 +151,63 @@ void fc::DetectorGeometry::initDetectorGeometryFromFile(std::ifstream & detector
     }
   }
 
+  detectorgeometryfile >> detectorGeometryString;
+    if (detectorGeometryString == "PVX"){
+      detectorgeometryfile >> sensorNumber;
+      if (sensorNumber == -2){
+	detectorgeometryfile >> _primaryVertexX._nStrips;
+	detectorgeometryfile >> _primaryVertexX._stripPitch;
+	detectorgeometryfile >> _primaryVertexX._intrinsicResolution;
+	detectorgeometryfile >> _primaryVertexX._hitResolution;
+        detectorgeometryfile >> _primaryVertexX._center[0];
+        detectorgeometryfile >> _primaryVertexX._center[1];
+        detectorgeometryfile >> _primaryVertexX._center[2];
+        detectorgeometryfile >> _primaryVertexX._normal[0];
+        detectorgeometryfile >> _primaryVertexX._normal[1];
+        detectorgeometryfile >> _primaryVertexX._normal[2];
+        detectorgeometryfile >> _primaryVertexX._measurementDirection[0];
+        detectorgeometryfile >> _primaryVertexX._measurementDirection[1];
+        detectorgeometryfile >> _primaryVertexX._measurementDirection[2];
 
+	_primaryVertexX._normal *= 1.0/_primaryVertexX._normal.Mag();
+	_primaryVertexX._measurementDirection *= 1.0/_primaryVertexX._measurementDirection.Mag();
+
+      } else {
+	throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
+      }
+    } else {
+      throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
+
+    }
+  detectorgeometryfile >> detectorGeometryString;
+
+    if (detectorGeometryString == "PVZ"){
+      detectorgeometryfile >> sensorNumber;
+      if (sensorNumber == -1){
+	detectorgeometryfile >> _primaryVertexZ._nStrips;
+	detectorgeometryfile >> _primaryVertexZ._stripPitch;
+	detectorgeometryfile >> _primaryVertexZ._intrinsicResolution;
+	detectorgeometryfile >> _primaryVertexZ._hitResolution;
+        detectorgeometryfile >> _primaryVertexZ._center[0];
+        detectorgeometryfile >> _primaryVertexZ._center[1];
+        detectorgeometryfile >> _primaryVertexZ._center[2];
+        detectorgeometryfile >> _primaryVertexZ._normal[0];
+        detectorgeometryfile >> _primaryVertexZ._normal[1];
+        detectorgeometryfile >> _primaryVertexZ._normal[2];
+        detectorgeometryfile >> _primaryVertexZ._measurementDirection[0];
+        detectorgeometryfile >> _primaryVertexZ._measurementDirection[1];
+        detectorgeometryfile >> _primaryVertexZ._measurementDirection[2];
+
+	_primaryVertexZ._normal *= 1.0/_primaryVertexZ._normal.Mag();
+	_primaryVertexZ._measurementDirection *= 1.0/_primaryVertexZ._measurementDirection.Mag();
+
+      } else {
+	throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
+      }
+    } else {
+      throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
+
+    }
 
 }
 
@@ -199,6 +255,8 @@ void fc::DetectorGeometry::printSensorLimits( void ) const {
 const fc::sensorDescriptor& fc::DetectorGeometry::getSensor(int layer) const{
 
   if (layer >= 0 && layer < _nSensors) return _sensor[layer];
+  if (layer==-2) return _primaryVertexX;
+  if (layer==-1) return _primaryVertexZ;
   throw Exception(" DetectorGeometry::getSensor: Out of bounds layer");  
 
 }
