@@ -17,7 +17,7 @@
 
 class TVector3;
 
-namespace fcf {
+namespace fc {
 
 
   TVector3 calcXAt(const fc::Helix&,double phi);
@@ -30,7 +30,7 @@ namespace fcf {
 
   //void MoveTo(const TVector & x0, TMatrixD & propMatrix, TMatrixD & covMatrix); 
 
-} // end namescape fcf
+} // end namescape fc
 
 #endif // TrackFitAlgorithms_hh
 

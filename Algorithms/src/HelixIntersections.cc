@@ -7,15 +7,15 @@
 #include "Algorithms/include/HelixIntersections.hh"
 #include "Algorithms/include/TrackFitAlgorithms.hh"
 
-bool fcf::intersectWithLayer(const fc::Helix& helix, TVector3 & hitPosition, int layer, const fc::DetectorGeometry & detectorGeometry){
+bool fc::intersectWithLayer(const Helix& helix, TVector3 & hitPosition, int layer, const DetectorGeometry & detectorGeometry){
 
   double phi = 0.0;
 
-  return fcf::intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
+  return intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
 }
 
 
-bool fcf::intersectWithPlane(const fc::Helix& helix, TVector3 & hitPosition, const TVector3 & center, const TVector3 & normal,double & phi){
+bool fc::intersectWithPlane(const Helix& helix, TVector3 & hitPosition, const TVector3 & center, const TVector3 & normal,double & phi){
 
 
    static const int       maxcount   = 100;
@@ -23,7 +23,7 @@ bool fcf::intersectWithPlane(const fc::Helix& helix, TVector3 & hitPosition, con
    static const double    lambdaincr = 10.;
    static const double    lambdadecr = 0.1;
    
-   hitPosition = fcf::calcXAt(helix,phi);
+   hitPosition = calcXAt(helix,phi);
 
  
    double  eps = 1.0e-8;
@@ -79,11 +79,11 @@ bool fcf::intersectWithPlane(const fc::Helix& helix, TVector3 & hitPosition, con
       dsdx(0,1) = normal.Y();
       dsdx(0,2) = normal.Z();
 
-      TMatrixD dxdphi = fcf::calcDxDphi(helix,phi);
+      TMatrixD dxdphi = calcDxDphi(helix,phi);
       TMatrixD dsdphi = dsdx * dxdphi;
       double denom = (1 + lambda) * dsdphi(0,0);
       phi -= s / denom;
-      hitPosition   = fcf::calcXAt(helix,phi);
+      hitPosition   = calcXAt(helix,phi);
    }
    return (hitPosition - center) * normal == 0. ? 1 : 0; 
 

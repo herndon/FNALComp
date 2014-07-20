@@ -80,7 +80,7 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, 
 void fc::HitStripGenModule::calculateTrackSensorIntersection(const Track & track,int layer, TVector3 & hitPosition){
 
   //TrackFit trackFit(track.getHelix(),_detectorGeometry);
-  fcf::intersectWithLayer(track.getHelix(),hitPosition,layer,_detectorGeometry);
+  intersectWithLayer(track.getHelix(),hitPosition,layer,_detectorGeometry);
 
 }
 

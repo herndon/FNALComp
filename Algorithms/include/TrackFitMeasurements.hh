@@ -13,13 +13,14 @@
 //============================================================================
 
 #include "TMatrixD.h"
-#include "Geometry/include/DetectorGeometry.hh"
+
 #include "DataObjects/include/Helix.hh"
 
 class TVector3;
 class Helix;
+class DetectorGeometry;
 
-namespace fcf {
+namespace fc {
 
   TMatrixD expectedMeasurementVectorXZ(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry);
   TMatrixD expectedMeasurementDerivativedXZdHC(const fc::Helix& helix,int layer, const fc::DetectorGeometry & detectorGeometry);
@@ -29,8 +30,10 @@ namespace fcf {
   TMatrixD expectedMeasurementDerivativedXdHC(const fc::Helix& helix,int layer, const fc::DetectorGeometry & detectorGeometry);
   TMatrixD measurementVector1D(const TVector3 & hitPosition,int layer, const fc::DetectorGeometry & detectorGeometry);
 
+  double expectedMeasurementUncertianty1D(const fc::Helix & helix, const TMatrixD& covMatrix, int layer,const fc::DetectorGeometry & detectorGeometry);  
 
-} // end namescape fcf
+
+} // end namescape fc
 
 #endif // TrackFitMeasurements_hh
 

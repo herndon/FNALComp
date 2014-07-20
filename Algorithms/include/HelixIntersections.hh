@@ -19,13 +19,13 @@ class TVector3;
 class DetectorGeometry;
 class Helix;
 
-namespace fcf {
+namespace fc {
 
 
   bool intersectWithLayer(const fc::Helix& helix, TVector3 & hitPosition, int layer, const fc::DetectorGeometry & detectorGeometry);
   bool intersectWithPlane(const fc::Helix& helix, TVector3 & hitPosition, const TVector3 & center, const TVector3 & normal,double & phi);
 
-} // end namescape fcf
+} // end namescape fc
 
 #endif // HelixIntersections_hh
 

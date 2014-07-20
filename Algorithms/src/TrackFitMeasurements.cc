@@ -8,15 +8,15 @@
 #include "Algorithms/include/TrackFitMeasurements.hh"
 
 
-TMatrixD fcf::expectedMeasurementVectorXZ(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry) {
+TMatrixD fc::expectedMeasurementVectorXZ(const Helix& helix, int layer, const DetectorGeometry & detectorGeometry) {
 
   TVector3 hitPosition;
 
   double phi = 0.0;
 
-  fcf::intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
+  intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
 
-  TMatrixD expectedMeasurementVector(fc::DetectorGeometry::_mDim,1);
+  TMatrixD expectedMeasurementVector(DetectorGeometry::_mDim,1);
 
   expectedMeasurementVector.Zero();
 
@@ -27,7 +27,7 @@ TMatrixD fcf::expectedMeasurementVectorXZ(const fc::Helix& helix, int layer, con
 
 }
 
-TMatrixD fcf::expectedMeasurementDerivativedXZdHC(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry) {
+TMatrixD fc::expectedMeasurementDerivativedXZdHC(const Helix& helix, int layer, const DetectorGeometry & detectorGeometry) {
 
   TVector3 hitPosition;
 
@@ -35,7 +35,7 @@ TMatrixD fcf::expectedMeasurementDerivativedXZdHC(const fc::Helix& helix, int la
 
   // advances phi to the phi at crossing!
 
-  fcf::intersectWithPlane(helix,hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
+  intersectWithPlane(helix,hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
 
   // get normal
   // !!!!! could this be simpler and probably has to be in the correct coordinates. called dsdx
@@ -45,34 +45,34 @@ TMatrixD fcf::expectedMeasurementDerivativedXZdHC(const fc::Helix& helix, int la
   detectorNormal(0,2) = detectorGeometry.getSensor(layer)._normal.Z();
 
 
-  TMatrixD dxdHC(3,fc::Helix::_sDim); 
-  dxdHC = fcf::calcDxDHC(helix,phi);
+  TMatrixD dxdHC(3,Helix::_sDim); 
+  dxdHC = calcDxDHC(helix,phi);
   TMatrixD dxdphi(3,1);
-  dxdphi = fcf::calcDxDphi(helix,phi); 
+  dxdphi = calcDxDphi(helix,phi); 
 
-  TMatrixD dphidHC(1,fc::Helix::_sDim);
+  TMatrixD dphidHC(1,Helix::_sDim);
   dphidHC = detectorNormal*dxdHC;
   TMatrix dsdphi(1,1);
   dsdphi = detectorNormal*dxdphi; 
   double denom = -dsdphi(0,0);
   dphidHC *= 1/denom;
   
-  TMatrixD dxphidHC(3,fc::Helix::_sDim);
+  TMatrixD dxphidHC(3,Helix::_sDim);
   dxphidHC = dxdphi*dphidHC + dxdHC;
 
  
-  TMatrixD expectedMeasurementDerivative(fc::DetectorGeometry::_mDim,fc::Helix::_sDim);
+  TMatrixD expectedMeasurementDerivative(DetectorGeometry::_mDim,Helix::_sDim);
   expectedMeasurementDerivative.Zero();
 
-  expectedMeasurementDerivative=  fcf::calcDXZDHC(hitPosition,dxphidHC);
+  expectedMeasurementDerivative=  calcDXZDHC(hitPosition,dxphidHC);
   
   return expectedMeasurementDerivative;
 
 }
 
-TMatrixD fcf::measurementVectorXZ(const TVector3 & hitPosition) {
+TMatrixD fc::measurementVectorXZ(const TVector3 & hitPosition) {
 
-  TMatrixD measurementVector(fc::DetectorGeometry::_mDim,1);
+  TMatrixD measurementVector(DetectorGeometry::_mDim,1);
   measurementVector(0,0) = hitPosition.Perp()*std::atan2( hitPosition.y(),hitPosition.x());
   measurementVector(1,0) = hitPosition.z();
 
@@ -83,15 +83,15 @@ TMatrixD fcf::measurementVectorXZ(const TVector3 & hitPosition) {
 
 
 
-TMatrixD fcf::expectedMeasurementVectorX(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry) {
+TMatrixD fc::expectedMeasurementVectorX(const Helix& helix, int layer, const DetectorGeometry & detectorGeometry) {
 
   TVector3 hitPosition;
 
   double phi = 0.0;
 
-  fcf::intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
+  intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
 
-  TMatrixD expectedMeasurementVector(fc::DetectorGeometry::_mDim,1);
+  TMatrixD expectedMeasurementVector(DetectorGeometry::_mDim,1);
 
   TVector3 measurementDirection = detectorGeometry.getSensor(layer)._measurementDirection;
 
@@ -103,7 +103,7 @@ TMatrixD fcf::expectedMeasurementVectorX(const fc::Helix& helix, int layer, cons
 
 }
 
-TMatrixD fcf::expectedMeasurementDerivativedXdHC(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry) {
+TMatrixD fc::expectedMeasurementDerivativedXdHC(const Helix& helix, int layer, const DetectorGeometry & detectorGeometry) {
 
   TVector3 hitPosition;
 
@@ -113,7 +113,7 @@ TMatrixD fcf::expectedMeasurementDerivativedXdHC(const fc::Helix& helix, int lay
 
   // advances phi to the phi at crossing!
 
-  fcf::intersectWithPlane(helix,hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
+  intersectWithPlane(helix,hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
 
   // get normal
   // !!!!! could this be simpler and probably has to be in the correct coordinates. called dsdx
@@ -123,19 +123,19 @@ TMatrixD fcf::expectedMeasurementDerivativedXdHC(const fc::Helix& helix, int lay
   detectorNormal(0,2) = detectorGeometry.getSensor(layer)._normal.Z();
 
 
-  TMatrixD dxdHC(3,fc::Helix::_sDim); 
-  dxdHC = fcf::calcDxDHC(helix,phi);
+  TMatrixD dxdHC(3,Helix::_sDim); 
+  dxdHC = calcDxDHC(helix,phi);
   TMatrixD dxdphi(3,1);
-  dxdphi = fcf::calcDxDphi(helix,phi); 
+  dxdphi = calcDxDphi(helix,phi); 
 
-  TMatrixD dphidHC(1,fc::Helix::_sDim);
+  TMatrixD dphidHC(1,Helix::_sDim);
   dphidHC = detectorNormal*dxdHC;
   TMatrix dsdphi(1,1);
   dsdphi = detectorNormal*dxdphi; 
   double denom = -dsdphi(0,0);
   dphidHC *= 1/denom;
   
-  TMatrixD dxphidHC(3,fc::Helix::_sDim);
+  TMatrixD dxphidHC(3,Helix::_sDim);
   dxphidHC = dxdphi*dphidHC + dxdHC;
 
 //   std::cout << "dxdHC" << std::endl;
@@ -153,7 +153,7 @@ TMatrixD fcf::expectedMeasurementDerivativedXdHC(const fc::Helix& helix, int lay
 
 
 
-  TMatrixD expectedMeasurementDerivative(fc::DetectorGeometry::_mDim,fc::Helix::_sDim);
+  TMatrixD expectedMeasurementDerivative(DetectorGeometry::_mDim,Helix::_sDim);
 
   TMatrixD measurementDirection(1,3);
 
@@ -164,17 +164,17 @@ TMatrixD fcf::expectedMeasurementDerivativedXdHC(const fc::Helix& helix, int lay
 
   expectedMeasurementDerivative.Zero();
 
-  expectedMeasurementDerivative=  fcf::calcDXDHC(hitPosition,dxphidHC,measurementDirection);
+  expectedMeasurementDerivative=  calcDXDHC(hitPosition,dxphidHC,measurementDirection);
   
   return expectedMeasurementDerivative;
 
 }
 
-TMatrixD fcf::measurementVector1D(const TVector3 & hitPosition,int layer, const fc::DetectorGeometry & detectorGeometry) {
+TMatrixD fc::measurementVector1D(const TVector3 & hitPosition,int layer, const DetectorGeometry & detectorGeometry) {
 
   // !!!!! not general, only works if the strip measurement direction is oriented in X
 
-  TMatrixD measurementVector(fc::DetectorGeometry::_mDim,1);
+  TMatrixD measurementVector(DetectorGeometry::_mDim,1);
 
   TVector3 measurementDirection = detectorGeometry.getSensor(layer)._measurementDirection;
 
@@ -183,6 +183,19 @@ TMatrixD fcf::measurementVector1D(const TVector3 & hitPosition,int layer, const 
   return measurementVector;
 
 }
+
+double fc::expectedMeasurementUncertianty1D(const Helix & helix, const TMatrixD& covMatrix, int layer,const DetectorGeometry & detectorGeometry){
+
+  TMatrixD    expectedMeasurementDerivative (DetectorGeometry::_mDim, Helix::_sDim);
+  TMatrixD    expectedMeasurementDerivativeT (Helix::_sDim, DetectorGeometry::_mDim);
+
+  expectedMeasurementDerivative = expectedMeasurementDerivativedXdHC(helix,layer,detectorGeometry);
+  expectedMeasurementDerivativeT.Transpose(expectedMeasurementDerivative);
+
+  return std::sqrt ((expectedMeasurementDerivative*covMatrix*expectedMeasurementDerivativeT)(0,0));
+
+}
+
 
 
 

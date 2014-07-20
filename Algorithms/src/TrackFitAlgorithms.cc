@@ -8,7 +8,7 @@
 
 
 
-TVector3 fcf::calcXAt(const fc::Helix& helix, double phi) {
+TVector3 fc::calcXAt(const Helix& helix, double phi) {
   double csf0 = std::cos(helix.getPhi0());
    double snf0 = std::sin(helix.getPhi0());
    double snfd = std::sin(helix.getPhi0() + phi);
@@ -23,7 +23,7 @@ TVector3 fcf::calcXAt(const fc::Helix& helix, double phi) {
    return TVector3(x,y,z);
 }
 
-TMatrixD fcf::calcDxDphi(const fc::Helix& helix, double phi) {
+TMatrixD fc::calcDxDphi(const Helix& helix, double phi) {
   double radiusCurvature    = helix.getAlpha()/helix.getKappa();
 
    double snfd = std::sin(helix.getPhi0() + phi);
@@ -39,7 +39,7 @@ TMatrixD fcf::calcDxDphi(const fc::Helix& helix, double phi) {
 
 
 
-TMatrixD fcf::calcDxDHC(const fc::Helix& helix, double phi) {
+TMatrixD fc::calcDxDHC(const Helix& helix, double phi) {
   double radiusCurvature     = helix.getAlpha()/helix.getKappa();
    double rcpar = radiusCurvature/helix.getKappa();
 
@@ -76,7 +76,7 @@ TMatrixD fcf::calcDxDHC(const fc::Helix& helix, double phi) {
 }
 
 
-TMatrixD fcf::calcDXZDHC(const TVector3   & hitPosition,
+TMatrixD fc::calcDXZDHC(const TVector3   & hitPosition,
 			       const TMatrixD &dxphiadHC) {
   // Calculate
   //    dXZdHC = (@measVec/@a) = (r@phi/@HC, r@z/@HC)^t
@@ -85,9 +85,9 @@ TMatrixD fcf::calcDXZDHC(const TVector3   & hitPosition,
 
 
   // Set dX = (@h/@a) = (@d/@a, @z/@a)^t
-  TMatrixD dXZdHC(fc::DetectorGeometry::_mDim,fc::Helix::_sDim);   
+  TMatrixD dXZdHC(DetectorGeometry::_mDim,Helix::_sDim);   
 
-  for (Int_t i=0; i<fc::Helix::_sDim; i++) {
+  for (Int_t i=0; i<Helix::_sDim; i++) {
     dXZdHC(0,i) = - (hitPosition.Y() / r) * dxphiadHC(0,i) 
       + (hitPosition.X() / r) * dxphiadHC(1,i);
     dXZdHC(0,i) *= r;
@@ -97,7 +97,7 @@ TMatrixD fcf::calcDXZDHC(const TVector3   & hitPosition,
   return dXZdHC;
 }
 
-TMatrixD fcf::calcDXDHC(const TVector3   & hitPosition,
+TMatrixD fc::calcDXDHC(const TVector3   & hitPosition,
 			const TMatrixD &dxphiadHC,const TMatrixD& measurementDirection) {
   // Calculate
   //    dXdHC = (@measVec/@a) = (r@phi/@HC, r@z/@HC)^t
@@ -106,9 +106,9 @@ TMatrixD fcf::calcDXDHC(const TVector3   & hitPosition,
 
 
   // Set dX = (@h/@a) = (@d/@a, @z/@a)^t
-  TMatrixD dXZdHC(fc::DetectorGeometry::_mDim,fc::Helix::_sDim);   
+  TMatrixD dXZdHC(DetectorGeometry::_mDim,Helix::_sDim);   
 
-  for (Int_t i=0; i<fc::Helix::_sDim; i++) {
+  for (Int_t i=0; i<Helix::_sDim; i++) {
     //    dXZdHC(0,i) = - (hitPosition.Y() / r) * dxphiadHC(0,i) 
     //      + (hitPosition.X() / r) * dxphiadHC(1,i);
     //    dXZdHC(0,i) *= r;

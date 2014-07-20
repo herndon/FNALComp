@@ -118,8 +118,8 @@ void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCan
       trackCandidate.print();
     }
 
-
    trackCandidateSet.insertTrack(trackCandidate);
-   }
+
+  }
 
 }

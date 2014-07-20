@@ -92,7 +92,6 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
     d2chi2dHCdHC.Zero();
     dchi2dHC.Zero();
     chi2 = 0;
-
  
  
 
@@ -112,9 +111,9 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
  
       // Find XZ vector to measurement
       if (DetectorGeometry::_mDim == 2){
-	expectedMeasurementVector = fcf::expectedMeasurementVectorXZ(workingHelix,layer,detectorGeometry);
+	expectedMeasurementVector = expectedMeasurementVectorXZ(workingHelix,layer,detectorGeometry);
       } else if (DetectorGeometry::_mDim == 1){
-	expectedMeasurementVector = fcf::expectedMeasurementVectorX(workingHelix,layer,detectorGeometry);
+	expectedMeasurementVector = expectedMeasurementVectorX(workingHelix,layer,detectorGeometry);
 
       }
 
@@ -126,9 +125,9 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
 
       // Find how the measurement expectation varies with each helix coordinate
      if (DetectorGeometry::_mDim == 2){
-       expectedMeasurementDerivative = fcf::expectedMeasurementDerivativedXZdHC(workingHelix,layer,detectorGeometry);
+       expectedMeasurementDerivative = expectedMeasurementDerivativedXZdHC(workingHelix,layer,detectorGeometry);
      } else if (DetectorGeometry::_mDim == 1){
-       expectedMeasurementDerivative = fcf::expectedMeasurementDerivativedXdHC(workingHelix,layer,detectorGeometry);
+       expectedMeasurementDerivative = expectedMeasurementDerivativedXdHC(workingHelix,layer,detectorGeometry);
      }
 
 
@@ -167,9 +166,9 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       // Hit position in XZ
 
       if (DetectorGeometry::_mDim == 2){
-	measurementVector = fcf::measurementVectorXZ(hitPosition);
+	measurementVector = measurementVectorXZ(hitPosition);
       } else if (DetectorGeometry::_mDim == 1){
-	measurementVector = fcf::measurementVector1D(hitPosition,layer,detectorGeometry);
+	measurementVector = measurementVector1D(hitPosition,layer,detectorGeometry);
       }
 
       // Residuals in XZ
