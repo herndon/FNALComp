@@ -92,7 +92,7 @@ void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
   if (_debugLevel >= 5) std::cout << "findCluster " << std::endl;
 
   while (layerStripMapIter != layerStripMapIterEnd && stripSet.getStripAdc(layerStripMapIter) < _detectorGeometry.getSensor(layer)._threshold){
-    layerStripMapIter++;
+    ++layerStripMapIter;
   }
 
   if (layerStripMapIter == layerStripMapIterEnd) return;

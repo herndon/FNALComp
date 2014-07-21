@@ -116,6 +116,8 @@ void fc::DetectorGeometry::initDetectorGeometryFromFile(std::ifstream & detector
 	detectorgeometryfile >> _sensor[ii_layer]._stripPitch;
 	detectorgeometryfile >> _sensor[ii_layer]._intrinsicResolution;
 	detectorgeometryfile >> _sensor[ii_layer]._hitResolution;
+	// !!!!! This is a good place for a test case using valgrind
+        _sensor[ii_layer]._threshold = 0.0;
         detectorgeometryfile >> _sensor[ii_layer]._center[0];
         detectorgeometryfile >> _sensor[ii_layer]._center[1];
         detectorgeometryfile >> _sensor[ii_layer]._center[2];
@@ -128,7 +130,6 @@ void fc::DetectorGeometry::initDetectorGeometryFromFile(std::ifstream & detector
 
 	_sensor[ii_layer]._normal *= 1.0/_sensor[ii_layer]._normal.Mag();
 	_sensor[ii_layer]._measurementDirection *= 1.0/_sensor[ii_layer]._measurementDirection.Mag();
-
 	
          
 
