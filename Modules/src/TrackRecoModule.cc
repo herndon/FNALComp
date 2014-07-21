@@ -6,6 +6,8 @@
 #include "DataObjects/include/TrackSet.hh"
 #include "Modules/include/TrackRecoModule.hh"
 #include "Algorithms/include/TrackFitMeasurements.hh"
+#include "Algorithms/include/InitializeHelix.hh"
+
 
 fc::TrackRecoModule::TrackRecoModule(int debugLevel, 
 				     const std::string& inputHitsLabel, const std::string& outputTracksLabel,
@@ -13,7 +15,8 @@ fc::TrackRecoModule::TrackRecoModule(int debugLevel,
   _debugLevel(debugLevel),
   _inHitsLabel(inputHitsLabel),
   _outTracksLabel(outputTracksLabel),
-  _detectorGeometry(detectorGeometry) {
+  _detectorGeometry(detectorGeometry),
+  _candidatePTThreshold(1.0) {
 
   // Intialize commonly used DetectorGeometry data
   _nLayers = _detectorGeometry.getNSensors();
@@ -128,12 +131,25 @@ void fc::TrackRecoModule::findTrack2X1SASHitCandidates(std::vector<std::vector<i
 
 	      // !!!!! need to check if intersection is at reasonable place.
 
-	      std::vector<int> trackHitCandidate;
-	      trackHitCandidate.push_back(hitNumberO);
-	      trackHitCandidate.push_back(hitNumberI);
-	      trackHitCandidate.push_back(hitNumberOSAS);
+	      TVector3 zIntersection;
+	      bool goodIntersection = intersectStrips(*hitIterO,*hitIterOSAS,zIntersection,_detectorGeometry);
+	      if (goodIntersection) {
 
-	      trackHitCandidates.push_back(trackHitCandidate);
+                TVector3 primaryVertex(0.0,0.0,0.0);
+		Helix helix = initializeHelix(primaryVertex,hitIterO->getHitPosition(),hitIterI->getHitPosition(),zIntersection,_detectorGeometry);
+                TVectorD helixParameters = helix.getHelix();
+		// !!!!! change to function goodCandidate
+		if (helix.getPT() > _candidatePTThreshold) {
+		  std::vector<int> trackHitCandidate;
+
+		  trackHitCandidate.push_back(hitNumberO);
+		  trackHitCandidate.push_back(hitNumberI);
+		  trackHitCandidate.push_back(hitNumberOSAS);
+
+		  trackHitCandidates.push_back(trackHitCandidate);
+
+		}
+	      }
 
 	    }
 

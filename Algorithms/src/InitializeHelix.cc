@@ -36,10 +36,11 @@ fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TV
   double sinPhi23 = x12.Cross(x13).Z();
   double cosPhi23 = 0.5 * (x13Mag/x12Mag + (1. - x23Mag/x12Mag)*(x12Mag + x23Mag)/x13Mag);
   double phi23 = std::atan2(sinPhi23, cosPhi23);
+  if (sinPhi23 == 0.0) sinPhi23 = 1.0e-10;
   double radiusCurvature  = -0.5 * x23Mag / sinPhi23;
 
 
-  // !!!!! Since we are using the pV to see the track occationally you can get a bad curvature and tanL
+  // !!!!! Since we are using the pV  hit positions based on integer strips you occationally you can get a bad curvature and tanL
   if (std::abs(radiusCurvature) > 125.0) radiusCurvature = 125.0*radiusCurvature/std::abs(radiusCurvature);
   double tanL = (z1.Z() - x1.Z()) / (radiusCurvature * 2.0 * ((z1.Y()-x1.Y())/(x3.Y()-x2.Y())) * phi23);
   if (std::abs(tanL) > 0.2) tanL = 0.0;
@@ -144,8 +145,9 @@ bool fc::intersectStrips(const Hit & xHit, const Hit & sasHit,TVector3& z, const
 
   z = xPos + xDir*disX;
 
-
-  return true;
+  double localZ = z.Dot(xDir);
+  if (std::abs(localZ) < (detectorGeometry.getSensor(xHit.getLayer())._nStrips*detectorGeometry.getSensor(xHit.getLayer())._stripPitch/2.0)) return true;
+  return false;
 }
 
 

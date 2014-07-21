@@ -77,6 +77,9 @@ public:
   double getAlpha() const {return _alpha;}
 
 
+  double getPT() const {return std::abs(1.0/_helix(2));}
+  double getPZ() const {return _helix(4)*std::abs(1.0/_helix(2));}
+
   // Set helix
   void setHelix(const TVectorD& helix) {_helix = helix;}
   void setAlpha(double alpha) {_alpha = alpha;}

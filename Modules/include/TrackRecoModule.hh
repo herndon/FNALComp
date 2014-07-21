@@ -45,6 +45,12 @@ private:
 
   int _nLayers;
 
+  // Tracking parameters
+
+  // !!!!! initialize through configuration
+  double _candidatePTThreshold;
+
+
   void recoTracks(TrackSet & trackSet, const HitSet& hitSet);
   void findTrack2X1SASHitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
   void findTrack3X2SASHitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
