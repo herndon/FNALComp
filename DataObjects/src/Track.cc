@@ -16,10 +16,10 @@ fc::Track::Track(double kappa, double dr, double dz, double phi0, double tanL, c
   _covMatrix(Helix::_sDim,Helix::_sDim),
   _chi2(0.0),
   _nDof(0),
-  _detectorGeometry(detectorGeometry),
+  _numberXHits(0),
+  _numberSASHits(0),
+  _numberZHits(0),
   _alpha(1.0/detectorGeometry.getCurvatureC()){
-
-
 
 }
 
@@ -29,7 +29,9 @@ fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector
   _covMatrix(Helix::_sDim,Helix::_sDim),
   _chi2(0.0),
   _nDof(0),
-  _detectorGeometry(detectorGeometry),
+  _numberXHits(0),
+  _numberSASHits(0),
+  _numberZHits(0),
   _alpha(1.0/detectorGeometry.getCurvatureC()) {
 
 }
@@ -39,17 +41,29 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
   _covMatrix(Helix::_sDim,Helix::_sDim),
   _chi2(0.0),
   _nDof(0),
-  _detectorGeometry(detectorGeometry),
-  _alpha(1.0/_detectorGeometry.getCurvatureC()){
+  _numberXHits(0),
+  _numberSASHits(0),
+  _numberZHits(0),
+  _alpha(1.0/detectorGeometry.getCurvatureC()){
 
 
   // !!!!! change this to just take a hit map and HitSet for input
   // !!!!! Move calculation to function that can be called my either 3 hit or more hit function
 
 
+  // Geometry needs to understand types of sensors for use here
+  int layer;
   for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
+    layer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
     insertHit(*trackHitCandidateIter,hitSet.getHits()[*trackHitCandidateIter].getLayer());
+    if (layer >= 0 && layer <= 4) ++_numberXHits;
+    if (layer==9||layer==8) ++_numberSASHits;
+    if (layer>=5 && layer <=7) ++_numberZHits;
   }
+
+
+
+
 
   // Choose Hits to initialize Helix.  
   int outerXHit = -1;
@@ -64,21 +78,14 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
     TVector3 x3 = hitSet.getHits()[outerXHit].getHitPosition();
 
     TVector3 z1;
-    bool test = findZForInitialization(hitSet,trackHitCandidate,z1,_detectorGeometry);
+    bool test = findZForInitialization(hitSet,trackHitCandidate,z1,detectorGeometry);
 
 
 
     Helix initialHelix = initializeHelix(x1,x2,x3,z1,detectorGeometry);
-    initialHelix.setAlpha(1.0/_detectorGeometry.getCurvatureC());
+    initialHelix.setAlpha(1.0/detectorGeometry.getCurvatureC());
     _helix = initialHelix;
 
-    //TrackFit testTrackFit1(initialHelix,detectorGeometry);
-
-    //testTrackFit1.insertHit(trackHitCandidate[0],4);
-    //testTrackFit1.insertHit(trackHitCandidate[1],3);
-    //testTrackFit1.insertHit(trackHitCandidate[2],2);
-    //testTrackFit1.insertHit(trackHitCandidate[3],1);
-    //testTrackFit1.insertHit(trackHitCandidate[4],0);
 
 
      std::cout << "Track before fit" << std::endl;
@@ -88,8 +95,12 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
   double chi2=0.0;
   int nDof=0;
 
-  if (_trackHitMap.size()==3)  {
-    _helix = FitToHelixWithPV(initialHelix,hitSet,_trackHitMap,detectorGeometry,_covMatrix,chi2,nDof,2);
+  int fitType = 0;
+  if (_numberXHits <3 ) fitType += 1;
+  if ((_numberSASHits+_numberZHits)<2) fitType += 2;
+
+  if (fitType >0){
+    _helix = FitToHelixWithPV(initialHelix,hitSet,_trackHitMap,detectorGeometry,_covMatrix,chi2,nDof,fitType,2);
   } else {
     _helix = FitToHelix(initialHelix,hitSet,_trackHitMap,detectorGeometry,_covMatrix,chi2,nDof,2);
   }
@@ -99,7 +110,7 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
   std::cout << "Track chi2 " << _chi2 << " " << _nDof << std::endl;
 
       //_helix.setHelix(testTrackFit1.getHelix().getHelix());
-      //_helix.setAlpha(1.0/_detectorGeometry.getCurvatureC());
+      //_helix.setAlpha(1.0/detectorGeometry.getCurvatureC());
 
 }
 
@@ -113,7 +124,7 @@ TLorentzVector fc::Track::getLorentzVector(void) const{
   return lorentzVector;
 }
 
-
+// !!!!! revisit whether the copy constructor and assigment op are necessary.  The assignment op is to support delting in the TrackSet
 
 // Copy constructor
 fc::Track::Track(const Track & track):
@@ -121,7 +132,6 @@ fc::Track::Track(const Track & track):
   _covMatrix(track._covMatrix),
   _chi2(track._chi2),
   _nDof(track._nDof),
-  _detectorGeometry(track._detectorGeometry),
   _alpha(track._alpha) {
 
   trackHitMap inputTrackHitMap = track.getTrackHitMap();
@@ -130,6 +140,20 @@ fc::Track::Track(const Track & track):
   }
 
 }
+
+fc::Track & fc::Track:: operator=(Track track){
+
+  std::swap(_helix,track._helix);
+  std::swap(_covMatrix,track._covMatrix);
+  std::swap(_chi2,track._chi2);
+  std::swap(_nDof,track._nDof);
+  std::swap(_alpha,track._alpha);
+  std::swap(_trackHitMap,track._trackHitMap);
+
+  return *this;
+
+}
+
 
 
 void fc::Track::insertHit(int hitNumber, int layer){

@@ -59,9 +59,13 @@ private:
   double _chi2;
   int _nDof;
 
+  int _numberXHits;
+  int _numberSASHits;
+  int _numberZHits;
+
   trackHitMap _trackHitMap;
   
-  const DetectorGeometry & _detectorGeometry;
+  //const DetectorGeometry & _detectorGeometry;
 
   double _alpha; // 1/curvatureC
 
@@ -76,6 +80,7 @@ public:
   Track(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, int debugLevel);
 
   Track(const Track&);
+  Track& operator=(Track track);
   
   // Destructor
   ~Track() {};
@@ -100,6 +105,11 @@ public:
   // Hit/measurement point information
 
   const trackHitMap& getTrackHitMap(void) const {return _trackHitMap;};
+  int numberXHits() const {return _numberXHits;}
+  int numberSASHits() const {return _numberSASHits;}
+  int numberZHits() const {return _numberZHits;}
+  int numberHits() const {return _trackHitMap.size();}
+
 
   void insertHit(int,int);
 

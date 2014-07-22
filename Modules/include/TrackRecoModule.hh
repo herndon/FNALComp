@@ -14,6 +14,7 @@
 
 class DetectorGeometry;
 class HitSet;
+class TrackSet;
 
 namespace fc {
 
@@ -57,6 +58,11 @@ private:
 
   void build2X1SASHitTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
 
+  void perform2X1SASTracking(TrackSet & trackCanidateSet, const HitSet& hitSet);
+
+  void layerTracking(TrackSet& trackCandidateSet,const HitSet& recoHitSet,int layer,int expNHits);
+
+  void cleanTrackSet(TrackSet& trackCandidateSet);
 
 
 

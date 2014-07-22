@@ -326,7 +326,7 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
 
 }
 
-fc::Helix fc::FitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap&  trackHitMapNoPV, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int _debugLevel){
+fc::Helix fc::FitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap&  trackHitMapNoPV, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel){
 
   trackHitMap trackHitMapWithPV;
 
@@ -336,8 +336,8 @@ fc::Helix fc::FitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, 
     trackHitMapWithPV.insert(trackHitMap::value_type(hitNumber,layer));
   }
 
-  trackHitMapWithPV.insert(trackHitMap::value_type(-2,-2));
-  trackHitMapWithPV.insert(trackHitMap::value_type(-1,-1));
+  if (fitType ==1 || fitType ==3) trackHitMapWithPV.insert(trackHitMap::value_type(-2,-2));
+  if (fitType ==2 || fitType ==3) trackHitMapWithPV.insert(trackHitMap::value_type(-1,-1));
   return FitToHelix(initialHelix, hitSet, trackHitMapWithPV, detectorGeometry, finalCovMatrix, finalChi2, finalNDof, _debugLevel);
 }
 
