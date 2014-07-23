@@ -21,8 +21,6 @@ namespace fc {
   public:
 
 
-    void findHitCadidates(std::vector<fc::trackHitMap>& trackHitCandidates,const HitSet& hitSet) override;
-
     void findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) override;
 
 

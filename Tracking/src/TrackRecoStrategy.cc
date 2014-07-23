@@ -14,9 +14,9 @@ fc::TrackRecoStrategy::TrackRecoStrategy(int debugLevel,const DetectorGeometry d
 
 void fc::TrackRecoStrategy::recoTracks(TrackSet & recoTrackSet, const HitSet& recoHitSet){
 
-  trackSet trackCandidateSet;
 
-  findTrackCandidates(trackCandidateSet, recoHitSet);
+  // !!!!! type def a track list since we are doing may insertions and deletions
+  trackSet trackCandidateSet;
 
   findTracks(trackCandidateSet,recoHitSet);
 
@@ -24,30 +24,8 @@ void fc::TrackRecoStrategy::recoTracks(TrackSet & recoTrackSet, const HitSet& re
 
 }
 
-void fc::TrackRecoStrategy::findTrackCandidates(trackSet& trackCandidateSet, const HitSet& recoHitSet){
-
-  std::vector<trackHitMap> trackHitCandidates;
-
-  findHitCadidates(trackHitCandidates,recoHitSet);
-
-  buildTrackCandidates(trackCandidateSet,trackHitCandidates,recoHitSet);
-  
-
-}
 
 
-void fc::TrackRecoStrategy::buildTrackCandidates(fc::trackSet& trackCandidateSet,std::vector<trackHitMap>& trackHitCandidates,const HitSet& hitSet){
-
-  // !!!!! repalce with build track call
-  TVector3 primaryVertex(0.0,0.0,0.0);
-  // !!!!! until Track constructor is updated
-  std::vector<int> temp;
-  for (std::vector<trackHitMap>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
-    //Track trackCandidate(hitSet,temp,primaryVertex,_detectorGeometry,_debugLevel);
-    //trackCandidateSet.push_back(trackCandidate);
-  }
-
-}
 
 void  fc::TrackRecoStrategy::findHitsOnLayer(fc::trackSet & trackCandidateSet,const HitSet & recoHitSet,int layer){
 

@@ -26,10 +26,7 @@ namespace fc {
     // Detector information
     const DetectorGeometry & _detectorGeometry;
 
-    // candidate track parameters
-
-    double _minCandPTCut;
-
+ 
     // intermediate tracking parameters
     double _minPTCut;
     double _maxTanLCut;
@@ -48,10 +45,6 @@ namespace fc {
 
   void recoTracks(TrackSet & trackSet, const HitSet& hitSet);
 
-    void findTrackCandidates(fc::trackSet& trackCandidateSet, const HitSet& hitSet);
-
-  virtual void findHitCadidates(std::vector<trackHitMap>& trackHitCandidates,const HitSet& hitSet)= 0;
-    void buildTrackCandidates(trackSet& trackCandidateSet,std::vector<fc::trackHitMap>& trackHitCandidates,const HitSet& hitSet);
 
   virtual void findTracks(trackSet& trackCandidateSet,const HitSet & recoHitSet) = 0;
   void findHitsOnLayer(trackSet & trackCandidateSet,const HitSet & recoHitSet,int layer);
