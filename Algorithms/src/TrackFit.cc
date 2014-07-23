@@ -98,21 +98,18 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
     for (trackHitSet::const_iterator hitIter = trackHitSet.begin(); hitIter != trackHitSet.end(); ++hitIter){
 
       // Hit information
-      int layer = hitSet.getHits()[*hitIter].getLayer();
+      int hitNumber = *hitIter; 
       TVector3 hitPosition;
-      if (layer>=0) {
-	hitPosition = hitSet.getHits()[*hitIter].getHitPosition();
-      }else {
+      int layer; 
+     if (hitNumber>=0) {
+	layer = hitSet.getHits()[*hitIter].getLayer();
+ 	hitPosition = hitSet.getHits()[*hitIter].getHitPosition();
+     }else {
+       layer = *hitIter;
 	hitPosition - detectorGeometry.getSensor(layer)._center;
       }
 
-      if (_debugLevel >= 5 && layer>=0) {
-	std::cout << "Layer " << layer << std::endl;
-	hitSet.getHits()[*hitIter].print();
-
-
-      }
-
+ 
  
       // Find XZ vector to measurement
       if (DetectorGeometry::_mDim == 2){

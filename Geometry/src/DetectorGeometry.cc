@@ -258,6 +258,7 @@ const fc::sensorDescriptor& fc::DetectorGeometry::getSensor(int layer) const{
   if (layer >= 0 && layer < _nSensors) return _sensor[layer];
   if (layer==-2) return _primaryVertexX;
   if (layer==-1) return _primaryVertexZ;
+  std::cout << "layer " << layer << std::endl;
   throw Exception(" DetectorGeometry::getSensor: Out of bounds layer");  
 
 }
