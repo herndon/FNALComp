@@ -3,8 +3,7 @@
 //============================================================================
 // HitSetIO.hh
 // header with class definition of the HitSetIO
-// A vector of map<int,Hit> layer_map's
-// Map elements are int,Hit pairs of hitnubmer (Key) and Hit information 
+// A vector of Hit objects
 // See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
 //
 // Author Matt Herndon, University of Wisconsin,

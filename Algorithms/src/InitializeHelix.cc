@@ -77,9 +77,12 @@ void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<in
       outerXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
       outerXHit = *trackHitCandidateIter;
     }
+ 
+    std::cout << "outer z hit test" << outerZLayer << " " << *trackHitCandidateIter << std::endl;
     if (hitSet.getHits()[*trackHitCandidateIter].getLayer() > outerZLayer) {
       outerZLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
       outerZHit = *trackHitCandidateIter;
+      std::cout << "outer z hit " << *trackHitCandidateIter << std::endl;
     }
 
     // !!!!! Figuring out a way to make this general is difficult.

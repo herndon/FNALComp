@@ -61,14 +61,13 @@ void fc::TrackSetIO::writeEvent(const TrackSet & trackSet, std::ofstream & track
     trackdata << d0Sign << std::endl;
 
 
-    trackHitMap::size_type numberHits = trackIter->getTrackHitMap().size();
+    trackHitSet::size_type numberHits = trackIter->getHits().size();
 
     trackdata << numberHits << std::endl;
 
     // !!!!! Nice place for that reference bug 
-    for (trackHitMap::const_iterator trackHitMapIter = trackIter->getTrackHitMap().begin(); trackHitMapIter != trackIter->getTrackHitMap().end(); ++trackHitMapIter){
-      trackdata << trackHitMapIter->first << std::endl;
-      trackdata << trackHitMapIter->second << std::endl;
+    for (trackHitSet::const_iterator hitIter = trackIter->getHits().begin(); hitIter != trackIter->getHits().end(); ++hitIter){
+      trackdata << *hitIter << std::endl;
     } // end hit loop
 
   } // end track loop
@@ -87,7 +86,6 @@ void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
   int d0Sign;
   int numberHits;
   int hitNumber;
-  int hitLayer;
 
   trackdata >> eventDataObject;
 
@@ -137,9 +135,8 @@ void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
    for (int ii_hit = 0; ii_hit < numberHits; ++ii_hit) {
 
       trackdata >> hitNumber;
-      trackdata >> hitLayer;
 
-      track.insertHit(hitNumber,hitLayer);
+      track.insertHit(hitNumber);
 
     } // end hit loop
  

@@ -20,7 +20,7 @@ void fc::TrackRecoStrategy::recoTracks(TrackSet & recoTrackSet, const HitSet& re
 
   findTracks(trackCandidateSet,recoHitSet);
 
-  finalTrackEvaluation(recoTrackSet, trackCandidateSet);
+  finalTrackFilter(recoTrackSet, trackCandidateSet);
 
 }
 
@@ -31,15 +31,29 @@ void  fc::TrackRecoStrategy::findHitsOnLayer(fc::trackSet & trackCandidateSet,co
 
 }
 
-void fc::TrackRecoStrategy::intermediateTrackEvalutation(fc::trackSet & trackCandidateSet){
+void fc::TrackRecoStrategy::intermediateTrackFilter(fc::trackSet & trackCandidateSet){
 
 
 
 }
 
-void fc::TrackRecoStrategy::finalTrackEvaluation(TrackSet & trackSet, fc::trackSet & trackCandidateSet){
+void fc::TrackRecoStrategy::finalTrackFilter(TrackSet & trackSet, fc::trackSet & trackCandidateSet){
 
 
+
+}
+
+int fc::TrackRecoStrategy::numberMatchedHits(const Track& track1, const Track& track2 ) const{
+
+  int temp =0;
+  return temp;
+
+}
+
+std::vector<int> fc::TrackRecoStrategy::findBestTracks(trackSet & subTrackSet) const{
+
+  std::vector<int> temp;
+  return temp;
 
 }
 

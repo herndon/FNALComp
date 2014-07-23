@@ -41,7 +41,7 @@ class HitSet;
 
 namespace fc {
 
-typedef std::map<int, int> trackHitMap; //!< Map of hit number and layer
+typedef std::vector<int> trackHitSet; //!< Vector of hit indicies
 
 ///
 /// Class Track: TLorentzVector to track physics properties and THGeoHelix to track tracking and helix properties
@@ -63,7 +63,7 @@ private:
   int _numberSASHits;
   int _numberZHits;
 
-  trackHitMap _trackHitMap;
+  trackHitSet _trackHitSet;
   
   //const DetectorGeometry & _detectorGeometry;
 
@@ -104,14 +104,14 @@ public:
 
   // Hit/measurement point information
 
-  const trackHitMap& getTrackHitMap(void) const {return _trackHitMap;};
+  const trackHitSet& getHits(void) const {return _trackHitSet;};
   int numberXHits() const {return _numberXHits;}
   int numberSASHits() const {return _numberSASHits;}
   int numberZHits() const {return _numberZHits;}
-  int numberHits() const {return _trackHitMap.size();}
+  int numberHits() const {return _trackHitSet.size();}
 
 
-  void insertHit(int,int);
+  void insertHit(int);
 
   void print(void) const;
 

@@ -149,7 +149,7 @@ Track parameters:  pT 22.6308 cot(theta) 27.9541 phi0 1.49722 d0 0.00869386 z0 0
 Helix paramters: kappa 0.0441877 tan(Lambda) 0.0357729 phi0 to d0 3.06802
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -234,7 +234,7 @@ Track parameters:  pT 21.475 cot(theta) -140.63 phi0 1.67913 d0 -0.00899832 z0 0
 Helix paramters: kappa 0.0465658 tan(Lambda) -0.00711084 phi0 to d0 3.24993
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -319,7 +319,7 @@ Track parameters:  pT 34.1964 cot(theta) 32.882 phi0 1.52303 d0 0.00362692 z0 -0
 Helix paramters: kappa 0.0292429 tan(Lambda) 0.0304117 phi0 to d0 3.09382
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -404,7 +404,7 @@ Track parameters:  pT 24.305 cot(theta) 839.507 phi0 1.66527 d0 0.00635123 z0 -0
 Helix paramters: kappa -0.0411439 tan(Lambda) 0.00119118 phi0 to d0 3.23607
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -489,7 +489,7 @@ Track parameters:  pT 32.327 cot(theta) -60.7709 phi0 1.63031 d0 0.00361124 z0 0
 Helix paramters: kappa 0.0309339 tan(Lambda) -0.0164553 phi0 to d0 3.20111
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -574,7 +574,7 @@ Track parameters:  pT 22.3487 cot(theta) 24.6318 phi0 1.59383 d0 -0.00676625 z0 
 Helix paramters: kappa -0.0447453 tan(Lambda) 0.0405979 phi0 to d0 3.16463
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -659,7 +659,7 @@ Track parameters:  pT 20.4417 cot(theta) 19.8641 phi0 1.55421 d0 0.00391358 z0 0
 Helix paramters: kappa -0.0489197 tan(Lambda) 0.050342 phi0 to d0 3.125
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -744,7 +744,7 @@ Track parameters:  pT 39.7377 cot(theta) -483.171 phi0 1.44758 d0 0.00477917 z0 
 Helix paramters: kappa 0.025165 tan(Lambda) -0.00206966 phi0 to d0 3.01838
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -829,7 +829,7 @@ Track parameters:  pT 33.6333 cot(theta) 32.7607 phi0 1.49793 d0 -0.00257069 z0 
 Helix paramters: kappa 0.0297324 tan(Lambda) 0.0305244 phi0 to d0 3.06873
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -914,7 +914,7 @@ Track parameters:  pT 29.1014 cot(theta) -23.7831 phi0 1.55027 d0 -0.00567228 z0
 Helix paramters: kappa 0.0343626 tan(Lambda) -0.0420467 phi0 to d0 3.12106
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -999,7 +999,7 @@ Track parameters:  pT 39.5448 cot(theta) 54.5922 phi0 1.44818 d0 -0.00340842 z0 
 Helix paramters: kappa 0.0252878 tan(Lambda) 0.0183176 phi0 to d0 3.01898
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1082,7 +1082,7 @@ Track parameters:  pT 36.6251 cot(theta) -14.7675 phi0 1.57586 d0 0.00148721 z0 
 Helix paramters: kappa -0.0273037 tan(Lambda) -0.0677161 phi0 to d0 3.14665
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1167,7 +1167,7 @@ Track parameters:  pT 38.405 cot(theta) 12.515 phi0 1.50018 d0 0.00303029 z0 0.0
 Helix paramters: kappa -0.0260382 tan(Lambda) 0.0799042 phi0 to d0 3.07098
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1252,7 +1252,7 @@ Track parameters:  pT 37.6157 cot(theta) -11.706 phi0 1.62811 d0 0.0075812 z0 -0
 Helix paramters: kappa 0.0265847 tan(Lambda) -0.0854262 phi0 to d0 3.19891
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1337,7 +1337,7 @@ Track parameters:  pT 32.0027 cot(theta) -51.4085 phi0 1.70049 d0 0.00639054 z0 
 Helix paramters: kappa 0.0312474 tan(Lambda) -0.019452 phi0 to d0 3.27129
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1420,7 +1420,7 @@ Track parameters:  pT 34.3831 cot(theta) -11.733 phi0 1.53764 d0 0.00132365 z0 -
 Helix paramters: kappa 0.0290841 tan(Lambda) -0.0852299 phi0 to d0 3.10844
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1505,7 +1505,7 @@ Track parameters:  pT 23.9236 cot(theta) 29.1293 phi0 1.60306 d0 0.00742568 z0 -
 Helix paramters: kappa -0.0417998 tan(Lambda) 0.0343296 phi0 to d0 3.17386
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1590,7 +1590,7 @@ Track parameters:  pT 22.5809 cot(theta) -13.1026 phi0 1.57212 d0 0.00337809 z0 
 Helix paramters: kappa -0.0442853 tan(Lambda) -0.0763205 phi0 to d0 3.14292
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1675,7 +1675,7 @@ Track parameters:  pT 35.8556 cot(theta) 11.6679 phi0 1.53954 d0 0.00233126 z0 -
 Helix paramters: kappa 0.0278896 tan(Lambda) 0.0857055 phi0 to d0 3.11034
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1760,7 +1760,7 @@ Track parameters:  pT 22.6659 cot(theta) -121.695 phi0 1.63638 d0 -0.00530648 z0
 Helix paramters: kappa 0.0441192 tan(Lambda) -0.00821725 phi0 to d0 3.20718
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1845,7 +1845,7 @@ Track parameters:  pT 25.9842 cot(theta) 16.7857 phi0 1.69392 d0 -0.00102559 z0 
 Helix paramters: kappa -0.0384849 tan(Lambda) 0.0595745 phi0 to d0 3.26472
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -1930,7 +1930,7 @@ Track parameters:  pT 35.969 cot(theta) 69.8061 phi0 1.57702 d0 0.00357419 z0 0.
 Helix paramters: kappa 0.0278017 tan(Lambda) 0.0143254 phi0 to d0 3.14782
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2015,7 +2015,7 @@ Track parameters:  pT 22.5447 cot(theta) 13.9466 phi0 1.68022 d0 0.000986047 z0 
 Helix paramters: kappa 0.0443562 tan(Lambda) 0.0717022 phi0 to d0 3.25102
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2100,7 +2100,7 @@ Track parameters:  pT 24.0783 cot(theta) 81.7888 phi0 1.46845 d0 -0.00509011 z0 
 Helix paramters: kappa 0.0415312 tan(Lambda) 0.0122266 phi0 to d0 3.03925
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2185,7 +2185,7 @@ Track parameters:  pT 23.2486 cot(theta) 10.3001 phi0 1.48369 d0 -0.0033286 z0 -
 Helix paramters: kappa 0.0430134 tan(Lambda) 0.0970862 phi0 to d0 3.05449
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2270,7 +2270,7 @@ Track parameters:  pT 23.8629 cot(theta) 18.0516 phi0 1.58375 d0 0.00416797 z0 0
 Helix paramters: kappa -0.041906 tan(Lambda) 0.0553968 phi0 to d0 3.15455
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2355,7 +2355,7 @@ Track parameters:  pT 34.0456 cot(theta) -25.1842 phi0 1.51226 d0 0.00908583 z0 
 Helix paramters: kappa -0.0293724 tan(Lambda) -0.0397074 phi0 to d0 3.08305
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2440,7 +2440,7 @@ Track parameters:  pT 28.783 cot(theta) -14.0152 phi0 1.59086 d0 -3.29667e-06 z0
 Helix paramters: kappa -0.0347427 tan(Lambda) -0.0713511 phi0 to d0 3.16166
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2525,7 +2525,7 @@ Track parameters:  pT 23.9493 cot(theta) -19.7649 phi0 1.46365 d0 0.000341396 z0
 Helix paramters: kappa -0.0417549 tan(Lambda) -0.0505949 phi0 to d0 3.03445
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2610,7 +2610,7 @@ Track parameters:  pT 34.7632 cot(theta) -20.0525 phi0 1.68155 d0 0.00367819 z0 
 Helix paramters: kappa 0.028766 tan(Lambda) -0.0498691 phi0 to d0 3.25235
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2695,7 +2695,7 @@ Track parameters:  pT 39.3167 cot(theta) -58.8931 phi0 1.62969 d0 0.0020672 z0 0
 Helix paramters: kappa 0.0254345 tan(Lambda) -0.0169799 phi0 to d0 3.20049
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2780,7 +2780,7 @@ Track parameters:  pT 32.6368 cot(theta) -11.0684 phi0 1.46056 d0 -0.000593397 z
 Helix paramters: kappa -0.0306402 tan(Lambda) -0.0903471 phi0 to d0 3.03136
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2865,7 +2865,7 @@ Track parameters:  pT 27.3722 cot(theta) 18.4779 phi0 1.45697 d0 -0.00394258 z0 
 Helix paramters: kappa 0.0365334 tan(Lambda) 0.0541188 phi0 to d0 3.02777
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -2950,7 +2950,7 @@ Track parameters:  pT 32.8857 cot(theta) -37.5996 phi0 1.62024 d0 -0.00752554 z0
 Helix paramters: kappa 0.0304083 tan(Lambda) -0.026596 phi0 to d0 3.19103
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3035,7 +3035,7 @@ Track parameters:  pT 35.6435 cot(theta) 39.4247 phi0 1.44441 d0 -0.00376025 z0 
 Helix paramters: kappa -0.0280556 tan(Lambda) 0.0253648 phi0 to d0 3.0152
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3118,7 +3118,7 @@ Track parameters:  pT 26.3402 cot(theta) 11.6577 phi0 1.61325 d0 0.00572474 z0 0
 Helix paramters: kappa -0.0379647 tan(Lambda) 0.0857805 phi0 to d0 3.18405
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3203,7 +3203,7 @@ Track parameters:  pT 35.9003 cot(theta) -11.3426 phi0 1.52443 d0 -0.00609992 z0
 Helix paramters: kappa 0.0278549 tan(Lambda) -0.0881634 phi0 to d0 3.09523
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3288,7 +3288,7 @@ Track parameters:  pT 39.2584 cot(theta) 16.993 phi0 1.46723 d0 -0.00239799 z0 -
 Helix paramters: kappa 0.0254722 tan(Lambda) 0.0588479 phi0 to d0 3.03803
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3373,7 +3373,7 @@ Track parameters:  pT 38.6259 cot(theta) 57.6335 phi0 1.64934 d0 0.0062369 z0 0.
 Helix paramters: kappa 0.0258894 tan(Lambda) 0.017351 phi0 to d0 3.22014
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3458,7 +3458,7 @@ Track parameters:  pT 24.0217 cot(theta) -10.2699 phi0 1.63981 d0 -0.00528802 z0
 Helix paramters: kappa -0.041629 tan(Lambda) -0.0973715 phi0 to d0 3.21061
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3543,7 +3543,7 @@ Track parameters:  pT 26.0547 cot(theta) 19.8237 phi0 1.6283 d0 -0.00870933 z0 0
 Helix paramters: kappa 0.0383808 tan(Lambda) 0.0504447 phi0 to d0 3.19909
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3628,7 +3628,7 @@ Track parameters:  pT 33.1903 cot(theta) -39.035 phi0 1.57524 d0 0.000769822 z0 
 Helix paramters: kappa -0.0301293 tan(Lambda) -0.025618 phi0 to d0 3.14603
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3713,7 +3713,7 @@ Track parameters:  pT 36.0726 cot(theta) -16.7965 phi0 1.50972 d0 0.00291603 z0 
 Helix paramters: kappa 0.0277219 tan(Lambda) -0.0595361 phi0 to d0 3.08052
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3798,7 +3798,7 @@ Track parameters:  pT 37.4476 cot(theta) -13.745 phi0 1.66361 d0 -0.00712298 z0 
 Helix paramters: kappa -0.026704 tan(Lambda) -0.0727538 phi0 to d0 3.23441
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3883,7 +3883,7 @@ Track parameters:  pT 25.5329 cot(theta) 11.5507 phi0 1.56981 d0 -0.00108462 z0 
 Helix paramters: kappa 0.0391651 tan(Lambda) 0.0865749 phi0 to d0 3.1406
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -3968,7 +3968,7 @@ Track parameters:  pT 33.0591 cot(theta) -10.1607 phi0 1.46381 d0 0.00723591 z0 
 Helix paramters: kappa 0.0302489 tan(Lambda) -0.0984188 phi0 to d0 3.03461
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4053,7 +4053,7 @@ Track parameters:  pT 32.6511 cot(theta) 75.5323 phi0 1.55053 d0 -0.00134353 z0 
 Helix paramters: kappa -0.0306268 tan(Lambda) 0.0132394 phi0 to d0 3.12133
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4138,7 +4138,7 @@ Track parameters:  pT 23.9913 cot(theta) -54.9878 phi0 1.6232 d0 0.00801182 z0 -
 Helix paramters: kappa 0.0416818 tan(Lambda) -0.0181859 phi0 to d0 3.194
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4223,7 +4223,7 @@ Track parameters:  pT 36.6281 cot(theta) -30.2837 phi0 1.63088 d0 0.00930144 z0 
 Helix paramters: kappa -0.0273014 tan(Lambda) -0.0330211 phi0 to d0 3.20168
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4308,7 +4308,7 @@ Track parameters:  pT 21.7868 cot(theta) -950.617 phi0 1.6833 d0 -0.00274639 z0 
 Helix paramters: kappa 0.0458993 tan(Lambda) -0.00105195 phi0 to d0 3.2541
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4393,7 +4393,7 @@ Track parameters:  pT 27.4432 cot(theta) 10.9882 phi0 1.46502 d0 -0.00221849 z0 
 Helix paramters: kappa 0.0364389 tan(Lambda) 0.0910068 phi0 to d0 3.03582
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4478,7 +4478,7 @@ Track parameters:  pT 25.1402 cot(theta) -606.326 phi0 1.47731 d0 -0.00408952 z0
 Helix paramters: kappa 0.0397769 tan(Lambda) -0.00164928 phi0 to d0 3.0481
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4563,7 +4563,7 @@ Track parameters:  pT 29.6445 cot(theta) -50.1419 phi0 1.45301 d0 0.00218638 z0 
 Helix paramters: kappa 0.033733 tan(Lambda) -0.0199434 phi0 to d0 3.02381
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4648,7 +4648,7 @@ Track parameters:  pT 24.421 cot(theta) -82.8279 phi0 1.46706 d0 0.00563172 z0 0
 Helix paramters: kappa 0.0409483 tan(Lambda) -0.0120732 phi0 to d0 3.03785
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4733,7 +4733,7 @@ Track parameters:  pT 36.4981 cot(theta) -25.7478 phi0 1.67574 d0 -0.00346609 z0
 Helix paramters: kappa 0.0273987 tan(Lambda) -0.0388383 phi0 to d0 3.24654
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4818,7 +4818,7 @@ Track parameters:  pT 38.995 cot(theta) 23.4096 phi0 1.45252 d0 -0.00731331 z0 0
 Helix paramters: kappa 0.0256443 tan(Lambda) 0.0427176 phi0 to d0 3.02331
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4901,7 +4901,7 @@ Track parameters:  pT 36.6277 cot(theta) -17.7808 phi0 1.63367 d0 0.00176365 z0 
 Helix paramters: kappa 0.0273017 tan(Lambda) -0.0562404 phi0 to d0 3.20446
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -4986,7 +4986,7 @@ Track parameters:  pT 25.844 cot(theta) -10.7527 phi0 1.68393 d0 0.000678097 z0 
 Helix paramters: kappa 0.0386936 tan(Lambda) -0.0930002 phi0 to d0 3.25473
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5071,7 +5071,7 @@ Track parameters:  pT 33.9677 cot(theta) -13.6642 phi0 1.59759 d0 -0.00226465 z0
 Helix paramters: kappa -0.0294397 tan(Lambda) -0.0731838 phi0 to d0 3.16839
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5156,7 +5156,7 @@ Track parameters:  pT 20.8895 cot(theta) 44.32 phi0 1.48644 d0 0.000460377 z0 0.
 Helix paramters: kappa 0.0478709 tan(Lambda) 0.0225632 phi0 to d0 3.05724
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5241,7 +5241,7 @@ Track parameters:  pT 34.9827 cot(theta) -22.3091 phi0 1.63305 d0 -0.00299264 z0
 Helix paramters: kappa -0.0285856 tan(Lambda) -0.0448247 phi0 to d0 3.20385
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5326,7 +5326,7 @@ Track parameters:  pT 21.705 cot(theta) -41.267 phi0 1.68804 d0 -0.00164883 z0 -
 Helix paramters: kappa -0.0460722 tan(Lambda) -0.0242324 phi0 to d0 3.25884
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5411,7 +5411,7 @@ Track parameters:  pT 27.8305 cot(theta) 73.3152 phi0 1.50494 d0 -0.00491845 z0 
 Helix paramters: kappa -0.0359319 tan(Lambda) 0.0136397 phi0 to d0 3.07573
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5496,7 +5496,7 @@ Track parameters:  pT 29.7055 cot(theta) 14.0067 phi0 1.51003 d0 -0.00655997 z0 
 Helix paramters: kappa 0.0336639 tan(Lambda) 0.0713944 phi0 to d0 3.08083
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5581,7 +5581,7 @@ Track parameters:  pT 23.8903 cot(theta) -15.3132 phi0 1.62405 d0 0.00547142 z0 
 Helix paramters: kappa 0.0418581 tan(Lambda) -0.0653029 phi0 to d0 3.19484
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5666,7 +5666,7 @@ Track parameters:  pT 20.3793 cot(theta) 11.4801 phi0 1.5703 d0 0.00581663 z0 -0
 Helix paramters: kappa 0.0490693 tan(Lambda) 0.0871074 phi0 to d0 3.1411
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5751,7 +5751,7 @@ Track parameters:  pT 27.9093 cot(theta) 23.9673 phi0 1.54901 d0 0.00689011 z0 0
 Helix paramters: kappa 0.0358303 tan(Lambda) 0.0417236 phi0 to d0 3.1198
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5836,7 +5836,7 @@ Track parameters:  pT 37.6056 cot(theta) 17.7057 phi0 1.57746 d0 -0.00804988 z0 
 Helix paramters: kappa -0.0265918 tan(Lambda) 0.0564789 phi0 to d0 3.14826
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -5921,7 +5921,7 @@ Track parameters:  pT 31.9608 cot(theta) 18.3618 phi0 1.6506 d0 -0.0021472 z0 -0
 Helix paramters: kappa 0.0312883 tan(Lambda) 0.0544609 phi0 to d0 3.22139
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6006,7 +6006,7 @@ Track parameters:  pT 20.7004 cot(theta) 20.3073 phi0 1.63578 d0 0.00406622 z0 -
 Helix paramters: kappa 0.0483082 tan(Lambda) 0.0492433 phi0 to d0 3.20657
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6091,7 +6091,7 @@ Track parameters:  pT 32.2488 cot(theta) -17.2302 phi0 1.54289 d0 0.00442617 z0 
 Helix paramters: kappa 0.0310089 tan(Lambda) -0.0580375 phi0 to d0 3.11369
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6176,7 +6176,7 @@ Track parameters:  pT 26.7083 cot(theta) 69.2114 phi0 1.66357 d0 -0.00228729 z0 
 Helix paramters: kappa 0.0374415 tan(Lambda) 0.0144485 phi0 to d0 3.23437
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6261,7 +6261,7 @@ Track parameters:  pT 37.4065 cot(theta) 21.0259 phi0 1.66178 d0 0.00714286 z0 -
 Helix paramters: kappa 0.0267334 tan(Lambda) 0.0475603 phi0 to d0 3.23257
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6346,7 +6346,7 @@ Track parameters:  pT 31.2016 cot(theta) -26.0331 phi0 1.66838 d0 -0.00587667 z0
 Helix paramters: kappa 0.0320497 tan(Lambda) -0.0384126 phi0 to d0 3.23917
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6431,7 +6431,7 @@ Track parameters:  pT 39.5403 cot(theta) 67.8886 phi0 1.61482 d0 -0.00590632 z0 
 Helix paramters: kappa 0.0252907 tan(Lambda) 0.01473 phi0 to d0 3.18562
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6516,7 +6516,7 @@ Track parameters:  pT 39.2119 cot(theta) 13.1923 phi0 1.56878 d0 0.00416615 z0 0
 Helix paramters: kappa 0.0255025 tan(Lambda) 0.0758018 phi0 to d0 3.13957
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6601,7 +6601,7 @@ Track parameters:  pT 25.1148 cot(theta) 11.0421 phi0 1.65317 d0 -0.000183475 z0
 Helix paramters: kappa 0.0398171 tan(Lambda) 0.0905622 phi0 to d0 3.22396
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6686,7 +6686,7 @@ Track parameters:  pT 26.1996 cot(theta) 28.3155 phi0 1.46099 d0 0.00403126 z0 0
 Helix paramters: kappa -0.0381685 tan(Lambda) 0.0353163 phi0 to d0 3.03179
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6771,7 +6771,7 @@ Track parameters:  pT 39.4831 cot(theta) -17.714 phi0 1.49001 d0 -0.00719336 z0 
 Helix paramters: kappa 0.0253273 tan(Lambda) -0.0564526 phi0 to d0 3.0608
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6856,7 +6856,7 @@ Track parameters:  pT 30.8303 cot(theta) 37.3445 phi0 1.51429 d0 0.00297984 z0 -
 Helix paramters: kappa -0.0324356 tan(Lambda) 0.0267777 phi0 to d0 3.08509
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -6941,7 +6941,7 @@ Track parameters:  pT 26.2489 cot(theta) -49.1432 phi0 1.55386 d0 -0.000648608 z
 Helix paramters: kappa -0.0380968 tan(Lambda) -0.0203487 phi0 to d0 3.12466
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7026,7 +7026,7 @@ Track parameters:  pT 23.9548 cot(theta) 19.3651 phi0 1.66362 d0 -0.00827156 z0 
 Helix paramters: kappa -0.0417453 tan(Lambda) 0.0516394 phi0 to d0 3.23442
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7111,7 +7111,7 @@ Track parameters:  pT 25.0092 cot(theta) -10.9222 phi0 1.51636 d0 -0.00177558 z0
 Helix paramters: kappa 0.0399853 tan(Lambda) -0.091557 phi0 to d0 3.08716
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7196,7 +7196,7 @@ Track parameters:  pT 28.5219 cot(theta) -15.0683 phi0 1.44105 d0 0.0097016 z0 0
 Helix paramters: kappa 0.0350607 tan(Lambda) -0.0663645 phi0 to d0 3.01184
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7281,7 +7281,7 @@ Track parameters:  pT 21.5094 cot(theta) -15.1076 phi0 1.69992 d0 0.00699706 z0 
 Helix paramters: kappa -0.0464912 tan(Lambda) -0.0661917 phi0 to d0 3.27072
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7364,7 +7364,7 @@ Track parameters:  pT 21.1664 cot(theta) 22.324 phi0 1.65522 d0 0.000773154 z0 -
 Helix paramters: kappa -0.0472447 tan(Lambda) 0.0447949 phi0 to d0 3.22602
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7449,7 +7449,7 @@ Track parameters:  pT 33.349 cot(theta) 12.1517 phi0 1.65314 d0 -0.00331518 z0 0
 Helix paramters: kappa 0.0299859 tan(Lambda) 0.0822931 phi0 to d0 3.22393
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7534,7 +7534,7 @@ Track parameters:  pT 20.3299 cot(theta) 10.1822 phi0 1.67497 d0 0.00302784 z0 -
 Helix paramters: kappa -0.0491886 tan(Lambda) 0.0982105 phi0 to d0 3.24576
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7619,7 +7619,7 @@ Track parameters:  pT 21.7402 cot(theta) 53.1993 phi0 1.56568 d0 0.00157312 z0 -
 Helix paramters: kappa 0.0459977 tan(Lambda) 0.0187973 phi0 to d0 3.13647
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7704,7 +7704,7 @@ Track parameters:  pT 34.5575 cot(theta) 13.1895 phi0 1.69448 d0 0.00988996 z0 -
 Helix paramters: kappa 0.0289373 tan(Lambda) 0.0758176 phi0 to d0 3.26528
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7787,7 +7787,7 @@ Track parameters:  pT 23.2922 cot(theta) 27.5657 phi0 1.61684 d0 -0.00441207 z0 
 Helix paramters: kappa 0.0429328 tan(Lambda) 0.036277 phi0 to d0 3.18764
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7872,7 +7872,7 @@ Track parameters:  pT 26.7856 cot(theta) 28.37 phi0 1.66749 d0 0.00917561 z0 0.0
 Helix paramters: kappa 0.0373334 tan(Lambda) 0.0352485 phi0 to d0 3.23828
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -7957,7 +7957,7 @@ Track parameters:  pT 24.498 cot(theta) 76.0775 phi0 1.68989 d0 -0.00704021 z0 -
 Helix paramters: kappa 0.0408196 tan(Lambda) 0.0131445 phi0 to d0 3.26069
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8042,7 +8042,7 @@ Track parameters:  pT 38.8143 cot(theta) 432.185 phi0 1.5825 d0 -0.000826607 z0 
 Helix paramters: kappa 0.0257637 tan(Lambda) 0.00231383 phi0 to d0 3.15329
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8127,7 +8127,7 @@ Track parameters:  pT 28.7362 cot(theta) -13.5141 phi0 1.48531 d0 0.000648164 z0
 Helix paramters: kappa 0.0347993 tan(Lambda) -0.0739966 phi0 to d0 3.05611
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8212,7 +8212,7 @@ Track parameters:  pT 26.5613 cot(theta) -38.5034 phi0 1.53147 d0 -0.00676092 z0
 Helix paramters: kappa -0.0376487 tan(Lambda) -0.0259717 phi0 to d0 3.10227
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8297,7 +8297,7 @@ Track parameters:  pT 24.6515 cot(theta) -19.4036 phi0 1.53073 d0 0.005501 z0 0.
 Helix paramters: kappa 0.0405655 tan(Lambda) -0.0515367 phi0 to d0 3.10152
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8382,7 +8382,7 @@ Track parameters:  pT 30.3414 cot(theta) 10.927 phi0 1.56678 d0 -0.00487669 z0 0
 Helix paramters: kappa -0.0329583 tan(Lambda) 0.0915162 phi0 to d0 3.13757
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8467,7 +8467,7 @@ Track parameters:  pT 22.0107 cot(theta) -13.9285 phi0 1.5163 d0 -0.00134663 z0 
 Helix paramters: kappa 0.0454325 tan(Lambda) -0.0717954 phi0 to d0 3.0871
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8552,7 +8552,7 @@ Track parameters:  pT 29.9305 cot(theta) 13.2997 phi0 1.67563 d0 0.00190785 z0 -
 Helix paramters: kappa -0.0334107 tan(Lambda) 0.0751896 phi0 to d0 3.24643
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8637,7 +8637,7 @@ Track parameters:  pT 36.3343 cot(theta) -31.5639 phi0 1.49136 d0 -0.00750638 z0
 Helix paramters: kappa 0.0275222 tan(Lambda) -0.0316818 phi0 to d0 3.06216
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8722,7 +8722,7 @@ Track parameters:  pT 37.1046 cot(theta) -37.1814 phi0 1.68441 d0 0.00734465 z0 
 Helix paramters: kappa 0.0269508 tan(Lambda) -0.0268951 phi0 to d0 3.25521
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8805,7 +8805,7 @@ Track parameters:  pT 33.0711 cot(theta) -33.8371 phi0 1.53546 d0 0.00187277 z0 
 Helix paramters: kappa -0.0302379 tan(Lambda) -0.0295534 phi0 to d0 3.10625
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8890,7 +8890,7 @@ Track parameters:  pT 36.1955 cot(theta) 32.2767 phi0 1.64931 d0 0.00973965 z0 -
 Helix paramters: kappa 0.0276278 tan(Lambda) 0.0309821 phi0 to d0 3.22011
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -8975,7 +8975,7 @@ Track parameters:  pT 20.8884 cot(theta) -44.649 phi0 1.46931 d0 -0.00297709 z0 
 Helix paramters: kappa -0.0478734 tan(Lambda) -0.0223969 phi0 to d0 3.04011
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9060,7 +9060,7 @@ Track parameters:  pT 21.6151 cot(theta) 57.1313 phi0 1.67421 d0 0.00978207 z0 0
 Helix paramters: kappa -0.046264 tan(Lambda) 0.0175035 phi0 to d0 3.24501
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9145,7 +9145,7 @@ Track parameters:  pT 29.2494 cot(theta) 12.6291 phi0 1.67574 d0 0.00546892 z0 0
 Helix paramters: kappa 0.0341887 tan(Lambda) 0.079182 phi0 to d0 3.24654
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9230,7 +9230,7 @@ Track parameters:  pT 38.5561 cot(theta) 80.2411 phi0 1.63073 d0 0.00308354 z0 -
 Helix paramters: kappa -0.0259362 tan(Lambda) 0.0124624 phi0 to d0 3.20153
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9315,7 +9315,7 @@ Track parameters:  pT 37.7376 cot(theta) 247.075 phi0 1.69369 d0 0.0062101 z0 0.
 Helix paramters: kappa 0.0264988 tan(Lambda) 0.00404735 phi0 to d0 3.26449
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9398,7 +9398,7 @@ Track parameters:  pT 37.2786 cot(theta) 36.0856 phi0 1.63987 d0 0.0057626 z0 -0
 Helix paramters: kappa 0.0268251 tan(Lambda) 0.0277119 phi0 to d0 3.21067
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9483,7 +9483,7 @@ Track parameters:  pT 24.4519 cot(theta) -12.2549 phi0 1.52645 d0 -0.00365143 z0
 Helix paramters: kappa -0.0408966 tan(Lambda) -0.0815998 phi0 to d0 3.09725
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9568,7 +9568,7 @@ Track parameters:  pT 31.5253 cot(theta) -11.4543 phi0 1.55341 d0 -0.0087683 z0 
 Helix paramters: kappa -0.0317205 tan(Lambda) -0.0873038 phi0 to d0 3.12421
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9653,7 +9653,7 @@ Track parameters:  pT 31.2244 cot(theta) -11.1519 phi0 1.49057 d0 -0.00033721 z0
 Helix paramters: kappa -0.0320262 tan(Lambda) -0.0896708 phi0 to d0 3.06136
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9738,7 +9738,7 @@ Track parameters:  pT 22.607 cot(theta) 44.4393 phi0 1.66815 d0 -0.00812345 z0 -
 Helix paramters: kappa 0.0442341 tan(Lambda) 0.0225026 phi0 to d0 3.23895
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9823,7 +9823,7 @@ Track parameters:  pT 37.1934 cot(theta) 48.2544 phi0 1.49756 d0 -0.00256478 z0 
 Helix paramters: kappa -0.0268865 tan(Lambda) 0.0207235 phi0 to d0 3.06835
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9908,7 +9908,7 @@ Track parameters:  pT 28.3774 cot(theta) -15.5744 phi0 1.59672 d0 0.0072448 z0 0
 Helix paramters: kappa -0.0352393 tan(Lambda) -0.064208 phi0 to d0 3.16751
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -9993,7 +9993,7 @@ Track parameters:  pT 20.6953 cot(theta) 15.744 phi0 1.61995 d0 -0.00651116 z0 -
 Helix paramters: kappa 0.0483203 tan(Lambda) 0.0635165 phi0 to d0 3.19075
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10078,7 +10078,7 @@ Track parameters:  pT 34.0346 cot(theta) -19.1224 phi0 1.48151 d0 -0.00992222 z0
 Helix paramters: kappa -0.0293818 tan(Lambda) -0.0522948 phi0 to d0 3.05231
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10163,7 +10163,7 @@ Track parameters:  pT 32.9051 cot(theta) 34.9641 phi0 1.6258 d0 0.00824034 z0 -0
 Helix paramters: kappa -0.0303904 tan(Lambda) 0.0286007 phi0 to d0 3.1966
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10248,7 +10248,7 @@ Track parameters:  pT 37.0663 cot(theta) 27.0617 phi0 1.64681 d0 0.00356679 z0 0
 Helix paramters: kappa 0.0269787 tan(Lambda) 0.0369526 phi0 to d0 3.21761
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10333,7 +10333,7 @@ Track parameters:  pT 38.7612 cot(theta) 10.3193 phi0 1.51024 d0 -0.00339616 z0 
 Helix paramters: kappa -0.025799 tan(Lambda) 0.096906 phi0 to d0 3.08104
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10418,7 +10418,7 @@ Track parameters:  pT 35.3387 cot(theta) 205.053 phi0 1.67801 d0 -0.00147498 z0 
 Helix paramters: kappa 0.0282976 tan(Lambda) 0.0048768 phi0 to d0 3.2488
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10503,7 +10503,7 @@ Track parameters:  pT 37.5353 cot(theta) 14.4003 phi0 1.64965 d0 0.00296766 z0 -
 Helix paramters: kappa 0.0266416 tan(Lambda) 0.069443 phi0 to d0 3.22045
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10588,7 +10588,7 @@ Track parameters:  pT 25.7581 cot(theta) -84.6602 phi0 1.45677 d0 -0.00666377 z0
 Helix paramters: kappa -0.0388228 tan(Lambda) -0.0118119 phi0 to d0 3.02756
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10671,7 +10671,7 @@ Track parameters:  pT 27.3101 cot(theta) 25.3269 phi0 1.51503 d0 -0.00968974 z0 
 Helix paramters: kappa -0.0366165 tan(Lambda) 0.0394837 phi0 to d0 3.08583
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10756,7 +10756,7 @@ Track parameters:  pT 36.8358 cot(theta) 106.974 phi0 1.54701 d0 0.00771135 z0 0
 Helix paramters: kappa 0.0271475 tan(Lambda) 0.00934811 phi0 to d0 3.11781
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10841,7 +10841,7 @@ Track parameters:  pT 32.5826 cot(theta) 12.5279 phi0 1.54494 d0 0.00602889 z0 0
 Helix paramters: kappa -0.0306912 tan(Lambda) 0.0798219 phi0 to d0 3.11573
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10
@@ -10926,7 +10926,7 @@ Track parameters:  pT 28.099 cot(theta) 10.4451 phi0 1.55624 d0 0.00958592 z0 0.
 Helix paramters: kappa -0.0355884 tan(Lambda) 0.0957383 phi0 to d0 3.12703
 Reference Point 0 0 0
 Number of hits 10
-Hit layers, numbers: 0, 0: 1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7, 7: 8, 8: 9, 9: 
+Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Gen Hits: 1
 Number Hits: 10

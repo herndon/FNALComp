@@ -96,7 +96,7 @@ void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,Track & track,int track
 
   hitSet.insertHit(hit);
 
-  track.insertHit(hitNumber,layer);
+  track.insertHit(hitNumber);
 
   ++hitNumber;
 

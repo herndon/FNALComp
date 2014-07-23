@@ -43,15 +43,20 @@ namespace fc {
     TrackRecoStrategy( const TrackRecoStrategy&) = delete;
     ~TrackRecoStrategy() = default;
 
-  void recoTracks(TrackSet & trackSet, const HitSet& hitSet);
+    void recoTracks(TrackSet & trackSet, const HitSet& hitSet);
 
 
-  virtual void findTracks(trackSet& trackCandidateSet,const HitSet & recoHitSet) = 0;
-  void findHitsOnLayer(trackSet & trackCandidateSet,const HitSet & recoHitSet,int layer);
-  void intermediateTrackEvalutation(trackSet & trackCandidateSet);
+    // Iterative track reconstruction
+    virtual void findTracks(trackSet& trackCandidateSet,const HitSet & recoHitSet) = 0;
 
-    void finalTrackEvaluation(TrackSet & trackSet, fc::trackSet & trackCandidateSet);
+    void findHitsOnLayer(trackSet & trackCandidateSet,const HitSet & recoHitSet,int layer);
 
+    void intermediateTrackFilter(trackSet & trackCandidateSet);
+    void finalTrackFilter(TrackSet & trackSet, fc::trackSet & trackCandidateSet);
+
+    // Helper functions
+    int numberMatchedHits(const Track&, const Track&) const;
+    std::vector<int> findBestTracks(trackSet &) const;
 
 
 

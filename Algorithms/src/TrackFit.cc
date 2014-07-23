@@ -12,7 +12,7 @@
 
 
 
-fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap&  trackHitMap, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int _debugLevel){
+fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSet, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int _debugLevel){
 
 
   // Define static constants...
@@ -95,20 +95,20 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
  
  
 
-    for (trackHitMap::const_iterator trackHitMapIter = trackHitMap.begin(); trackHitMapIter != trackHitMap.end(); ++trackHitMapIter){
+    for (trackHitSet::const_iterator hitIter = trackHitSet.begin(); hitIter != trackHitSet.end(); ++hitIter){
 
       // Hit information
-      int layer = trackHitMapIter->second;
+      int layer = hitSet.getHits()[*hitIter].getLayer();
       TVector3 hitPosition;
       if (layer>=0) {
-	hitPosition = hitSet.getHits()[trackHitMapIter->first].getHitPosition();
+	hitPosition = hitSet.getHits()[*hitIter].getHitPosition();
       }else {
 	hitPosition - detectorGeometry.getSensor(layer)._center;
       }
 
       if (_debugLevel >= 5 && layer>=0) {
 	std::cout << "Layer " << layer << std::endl;
-	hitSet.getHits()[trackHitMapIter->first].print();
+	hitSet.getHits()[*hitIter].print();
 
 
       }
@@ -315,7 +315,7 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       
 
 
-  trackHitMap::size_type nHits = trackHitMap.size();
+  trackHitSet::size_type nHits = trackHitSet.size();
   ndof = DetectorGeometry::_mDim*nHits - Helix::_sDim;
 
   workingHelix.setHelix(helixBest);
@@ -326,19 +326,20 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
 
 }
 
-fc::Helix fc::FitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitMap&  trackHitMapNoPV, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel){
+fc::Helix fc::FitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSetNoPV, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel){
 
-  trackHitMap trackHitMapWithPV;
+  trackHitSet trackHitSetWithPV;
 
-  for (trackHitMap::const_iterator trackHitMapIter = trackHitMapNoPV.begin(); trackHitMapIter != trackHitMapNoPV.end(); ++trackHitMapIter){
-    int hitNumber = trackHitMapIter->first;
-    int layer = trackHitMapIter->second;
-    trackHitMapWithPV.insert(trackHitMap::value_type(hitNumber,layer));
+  for (trackHitSet::const_iterator hitIter = trackHitSetNoPV.begin(); hitIter != trackHitSetNoPV.end(); ++hitIter){
+    int hitNumber = *hitIter;
+    trackHitSetWithPV.push_back(hitNumber);
   }
 
-  if (fitType ==1 || fitType ==3) trackHitMapWithPV.insert(trackHitMap::value_type(-2,-2));
-  if (fitType ==2 || fitType ==3) trackHitMapWithPV.insert(trackHitMap::value_type(-1,-1));
-  return FitToHelix(initialHelix, hitSet, trackHitMapWithPV, detectorGeometry, finalCovMatrix, finalChi2, finalNDof, _debugLevel);
+  // insert an local X  PV measurement point
+  if (fitType ==1 || fitType ==3) trackHitSetWithPV.push_back(-2);
+  // insert a local Z PV measurement point
+  if (fitType ==2 || fitType ==3) trackHitSetWithPV.push_back(-1);
+  return FitToHelix(initialHelix, hitSet, trackHitSetWithPV, detectorGeometry, finalCovMatrix, finalChi2, finalNDof, _debugLevel);
 }
 
 

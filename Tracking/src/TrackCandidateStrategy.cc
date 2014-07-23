@@ -15,7 +15,7 @@ fc::TrackCandidateStrategy::TrackCandidateStrategy(int debugLevel,const Detector
 
 void fc::TrackCandidateStrategy::findTrackCandidates(TrackSet& trackCandidateSet, const HitSet& recoHitSet){
 
-  std::vector<trackHitMap> trackHitCandidates;
+  std::vector<trackHitSet> trackHitCandidates;
 
   findHitCadidates(trackHitCandidates,recoHitSet);
 
@@ -25,13 +25,13 @@ void fc::TrackCandidateStrategy::findTrackCandidates(TrackSet& trackCandidateSet
 }
 
 
-void fc::TrackCandidateStrategy::buildTrackCandidates(fc::TrackSet& trackCandidateSet,std::vector<trackHitMap>& trackHitCandidates,const HitSet& hitSet){
+void fc::TrackCandidateStrategy::buildTrackCandidates(fc::TrackSet& trackCandidateSet,std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet){
 
   // !!!!! repalce with build track call
   TVector3 primaryVertex(0.0,0.0,0.0);
   // !!!!! until Track constructor is updated
   std::vector<int> temp;
-  for (std::vector<trackHitMap>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
+  for (std::vector<trackHitSet>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
     //Track trackCandidate(hitSet,temp,primaryVertex,_detectorGeometry,_debugLevel);
     //trackCandidateSet.push_back(trackCandidate);
   }

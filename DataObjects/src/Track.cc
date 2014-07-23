@@ -55,7 +55,7 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
   int layer;
   for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
     layer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
-    insertHit(*trackHitCandidateIter,hitSet.getHits()[*trackHitCandidateIter].getLayer());
+    insertHit(*trackHitCandidateIter);
     if (layer >= 0 && layer <= 4) ++_numberXHits;
     if (layer==9||layer==8) ++_numberSASHits;
     if (layer>=5 && layer <=7) ++_numberZHits;
@@ -78,7 +78,7 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
     TVector3 x3 = hitSet.getHits()[outerXHit].getHitPosition();
 
     TVector3 z1;
-    bool test = findZForInitialization(hitSet,trackHitCandidate,z1,detectorGeometry);
+    findZForInitialization(hitSet,trackHitCandidate,z1,detectorGeometry);
 
 
 
@@ -100,9 +100,9 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
   if ((_numberSASHits+_numberZHits)<2) fitType += 2;
 
   if (fitType >0){
-    _helix = FitToHelixWithPV(initialHelix,hitSet,_trackHitMap,detectorGeometry,_covMatrix,chi2,nDof,fitType,2);
+    _helix = FitToHelixWithPV(initialHelix,hitSet,_trackHitSet,detectorGeometry,_covMatrix,chi2,nDof,fitType,2);
   } else {
-    _helix = FitToHelix(initialHelix,hitSet,_trackHitMap,detectorGeometry,_covMatrix,chi2,nDof,2);
+    _helix = FitToHelix(initialHelix,hitSet,_trackHitSet,detectorGeometry,_covMatrix,chi2,nDof,2);
   }
 
   _chi2 = chi2;
@@ -134,9 +134,9 @@ fc::Track::Track(const Track & track):
   _nDof(track._nDof),
   _alpha(track._alpha) {
 
-  trackHitMap inputTrackHitMap = track.getTrackHitMap();
+  trackHitSet inputHits = track.getHits();
 
-  for (trackHitMap::const_iterator trackHitMapIter = inputTrackHitMap.begin(); trackHitMapIter != inputTrackHitMap.end(); ++trackHitMapIter){    insertHit(trackHitMapIter->first,trackHitMapIter->second);
+  for (trackHitSet::const_iterator hitIter = inputHits.begin(); hitIter != inputHits.end(); ++hitIter){    insertHit(*hitIter);
   }
 
 }
@@ -148,7 +148,7 @@ fc::Track & fc::Track:: operator=(Track track){
   std::swap(_chi2,track._chi2);
   std::swap(_nDof,track._nDof);
   std::swap(_alpha,track._alpha);
-  std::swap(_trackHitMap,track._trackHitMap);
+  std::swap(_trackHitSet,track._trackHitSet);
 
   return *this;
 
@@ -156,8 +156,8 @@ fc::Track & fc::Track:: operator=(Track track){
 
 
 
-void fc::Track::insertHit(int hitNumber, int layer){
-   _trackHitMap.insert(trackHitMap::value_type(hitNumber,layer));
+void fc::Track::insertHit(int hitNumber){
+  _trackHitSet.push_back(hitNumber);
 }
 
 
@@ -185,13 +185,13 @@ void fc::Track::print(void) const{
 
     }
 
-  trackHitMap::size_type numberHits =_trackHitMap.size();
+  trackHitSet::size_type numberHits =_trackHitSet.size();
 
   std::cout << "Number of hits " << numberHits << std::endl;
   
-  std::cout << "Hit layers, numbers: ";
-  for (trackHitMap::const_iterator trackHitMapIter = _trackHitMap.begin(); trackHitMapIter != _trackHitMap.end(); ++trackHitMapIter){
-    std::cout << trackHitMapIter->second << ", " << trackHitMapIter->first << ": ";
+  std::cout << "Hit numbers: ";
+  for (trackHitSet::const_iterator hitIter = _trackHitSet.begin(); hitIter != _trackHitSet.end(); ++hitIter){
+    std::cout << *hitIter << " ";
   }
   std::cout << std::endl;
 

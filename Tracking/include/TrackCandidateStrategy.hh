@@ -40,8 +40,8 @@ namespace fc {
 
     void findTrackCandidates(fc::TrackSet& trackCandidateSet, const HitSet& hitSet);
 
-    virtual void findHitCadidates(std::vector<trackHitMap>& trackHitCandidates,const HitSet& hitSet)= 0;
-    void buildTrackCandidates(TrackSet& trackCandidateSet,std::vector<fc::trackHitMap>& trackHitCandidates,const HitSet& hitSet);
+    virtual void findHitCadidates(std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet)= 0;
+    void buildTrackCandidates(TrackSet& trackCandidateSet,std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet);
 
 
   };

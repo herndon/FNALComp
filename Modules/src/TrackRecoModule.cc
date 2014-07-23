@@ -185,11 +185,11 @@ void fc::TrackRecoModule::layerTracking(TrackSet & trackCandidateSet,const HitSe
   for (trackSet::iterator trackSetIter = trackCandidateSet.getTracks().begin(); trackSetIter!= trackCandidateSet.getTracks().end(); ++trackSetIter){
 
     trackSet foundTracks;
-    if (trackSetIter->getTrackHitMap().size() < (expNHits-2)) continue;
+    if (trackSetIter->getHits().size() < (expNHits-2)) continue;
 
     bool hasLayerHit = false;
-    for (trackHitMap::const_iterator trackHitIter = trackSetIter->getTrackHitMap().begin(); trackHitIter!=trackSetIter->getTrackHitMap().end(); ++trackHitIter){
-      if (trackHitIter->second == layer){
+    for (trackHitSet::const_iterator hitIter = trackSetIter->getHits().begin(); hitIter!=trackSetIter->getHits().end(); ++hitIter){
+      if (recoHitSet.getHits()[*hitIter].getLayer() == layer){
 	hasLayerHit = true;
       }
     }
@@ -209,8 +209,8 @@ void fc::TrackRecoModule::layerTracking(TrackSet & trackCandidateSet,const HitSe
 	  if ( residual < maxResidual) {
 
 	  std::vector<int> trackHitCandidate;
-	  for (trackHitMap::const_iterator trackHitIter = trackSetIter->getTrackHitMap().begin(); trackHitIter!=trackSetIter->getTrackHitMap().end(); ++trackHitIter){
-	    trackHitCandidate.push_back(trackHitIter->first);
+	  for (trackHitSet::const_iterator hitIter = trackSetIter->getHits().begin(); hitIter!=trackSetIter->getHits().end(); ++hitIter){
+	    trackHitCandidate.push_back(*hitIter);
 	  }
 	    trackHitCandidate.push_back(hitNumber);
 
@@ -219,7 +219,7 @@ void fc::TrackRecoModule::layerTracking(TrackSet & trackCandidateSet,const HitSe
 
 	    // !!!!! replace with good candidate call
 
-            if (newTrack.getHelix().getPT() > 1.0 && newTrack.getChi2()< 100.0 && std::abs(newTrack.getHelix().getDr()) < 0.05 && std::abs(newTrack.getHelix().getDz()) < 0.05 && newTrack.getTrackHitMap().size() > (expNHits-2)) {
+            if (newTrack.getHelix().getPT() > 1.0 && newTrack.getChi2()< 100.0 && std::abs(newTrack.getHelix().getDr()) < 0.05 && std::abs(newTrack.getHelix().getDz()) < 0.05 && newTrack.getHits().size() > (expNHits-2)) {
 	      foundTracks.push_back(newTrack);
 
 
@@ -284,7 +284,7 @@ void fc::TrackRecoModule::layerTracking(TrackSet & trackCandidateSet,const HitSe
 
   for (trackSet::iterator trackIter = trackCandidateSet.getTracks().begin(); trackIter != trackCandidateSet.getTracks().end(); ++trackIter){
 
-    if (trackIter->getTrackHitMap().size() < expNHits-1) {
+    if (trackIter->getHits().size() < expNHits-1) {
  	  trackCandidateSet.getTracks().erase(trackIter);
 	  trackIter--;
     }
@@ -324,27 +324,27 @@ void fc::TrackRecoModule::cleanTrackSet(TrackSet & trackCandidateSet) {
 
  
       int matchedHits = 0;
-      for (trackHitMap::const_iterator trackHitIter = trackIter->getTrackHitMap().begin(); trackHitIter!=trackIter->getTrackHitMap().end(); ++trackHitIter){
+      for (trackHitSet::const_iterator hitIter = trackIter->getHits().begin(); hitIter!=trackIter->getHits().end(); ++hitIter){
  
 
-	for (trackHitMap::const_iterator trackHitIter2 =  trackIter2->getTrackHitMap().begin(); trackHitIter2!=trackIter2->getTrackHitMap().end(); ++trackHitIter2){
+	for (trackHitSet::const_iterator hitIter2 =  trackIter2->getHits().begin(); hitIter2!=trackIter2->getHits().end(); ++hitIter2){
  
-	  if (trackHitIter2->first == trackHitIter->first) ++matchedHits;
+	  if (*hitIter == *hitIter2) ++matchedHits;
 	}
 
       }
 
       if (matchedHits>4) {
- 	if ((trackIter->getTrackHitMap().size() <= trackIter2->getTrackHitMap().size() && trackIter->getChi2()/trackIter->getNDof()> trackIter2->getChi2()/trackIter2->getNDof())||
-	    trackIter->getTrackHitMap().size() < trackIter2->getTrackHitMap().size()) {
+ 	if ((trackIter->getHits().size() <= trackIter2->getHits().size() && trackIter->getChi2()/trackIter->getNDof()> trackIter2->getChi2()/trackIter2->getNDof())||
+	    trackIter->getHits().size() < trackIter2->getHits().size()) {
 	  trackCandidateSet.getTracks().erase(trackIter);
  	  trackIter--;
 	  break;
-	} else if ((trackIter2->getTrackHitMap().size() <= trackIter->getTrackHitMap().size() && trackIter2->getChi2()/trackIter2->getNDof()> trackIter->getChi2()/trackIter->getNDof())||
-		   trackIter2->getTrackHitMap().size() <= trackIter->getTrackHitMap().size()){
+	} else if ((trackIter2->getHits().size() <= trackIter->getHits().size() && trackIter2->getChi2()/trackIter2->getNDof()> trackIter->getChi2()/trackIter->getNDof())||
+		   trackIter2->getHits().size() <= trackIter->getHits().size()){
 	  trackCandidateSet.getTracks().erase(trackIter2);
 	  trackIter2--;
-	} else if (trackIter2->getTrackHitMap().size() != trackIter->getTrackHitMap().size()){
+	} else if (trackIter2->getHits().size() != trackIter->getHits().size()){
 
 
 

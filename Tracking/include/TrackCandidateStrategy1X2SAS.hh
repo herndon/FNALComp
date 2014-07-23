@@ -20,7 +20,7 @@ namespace fc {
 
   public:
 
-    void findHitCadidates(std::vector<fc::trackHitMap>& trackHitCandidates,const HitSet& hitSet) override;
+    void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) override;
 
   };
 
