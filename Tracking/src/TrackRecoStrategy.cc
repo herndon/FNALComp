@@ -23,7 +23,7 @@ void fc::TrackRecoStrategy::recoTracks(trackSet & trackCandidateSet, const HitSe
 
 
 
-void  fc::TrackRecoStrategy::findHitsOnLayer(fc::trackSet & trackCandidateSet,const HitSet & recoHitSet,int layer){
+void  fc::TrackRecoStrategy::findHitsOnLayer(fc::trackSet & trackCandidateSet,const HitSet & recoHitSet,int layer) {
 
   trackSet allNewTracks;
 
