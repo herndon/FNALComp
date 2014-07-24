@@ -13,9 +13,10 @@
 #include "DataObjects/include/TrackSet.hh"
 #include "DataObjects/include/Track.hh"
 
-class HitSet;
-
 namespace fc {
+
+  class DetectorGeometry;
+  class HitSet;
 
   class TrackRecoStrategy {
 
@@ -38,12 +39,13 @@ namespace fc {
 
 
 
-  public:
-    TrackRecoStrategy(int debugLevel,const DetectorGeometry detectorGeometry);
-    TrackRecoStrategy( const TrackRecoStrategy&) = delete;
+  protected:
+    TrackRecoStrategy(int debugLevel,const DetectorGeometry & detectorGeometry):_debugLevel(debugLevel),_detectorGeometry(detectorGeometry) {};
+  public: 
+   TrackRecoStrategy( const TrackRecoStrategy&) = delete;
     ~TrackRecoStrategy() = default;
 
-    void recoTracks(TrackSet & trackSet, const HitSet& hitSet);
+    void recoTracks(trackSet & trackCandidateSet, const HitSet& hitSet);
 
 
     // Iterative track reconstruction
@@ -51,12 +53,14 @@ namespace fc {
 
     void findHitsOnLayer(trackSet & trackCandidateSet,const HitSet & recoHitSet,int layer);
 
-    void intermediateTrackFilter(trackSet & trackCandidateSet);
-    void finalTrackFilter(TrackSet & trackSet, fc::trackSet & trackCandidateSet);
+    void intermediateTrackFilter(trackSet & trackCandidateSet,int expNHits);
+    void finalTrackFilter(fc::trackSet & trackCandidateSet);
 
     // Helper functions
+    bool goodTrack(const Track &) const;
+    std::vector<int> bestTracks(const trackSet &) const;
     int numberMatchedHits(const Track&, const Track&) const;
-    std::vector<int> findBestTracks(trackSet &) const;
+    bool betterOverlappingTrack(const Track&, const Track&) const;
 
 
 

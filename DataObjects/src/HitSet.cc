@@ -28,8 +28,7 @@ void fc::HitSet::insertHit(Hit hit) {
 void fc::HitSet::print(void) const{
 
   std::cout << "Hit Set version: " << _version << std::endl;
-  std::cout << "Gen Hits: " << _genHits << std::endl;
-
+ 
  
   hitSet::size_type numberHits =_hitSet.size();
 

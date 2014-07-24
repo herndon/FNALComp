@@ -14,34 +14,39 @@
 #include "DataObjects/include/TrackSet.hh"
 #include "DataObjects/include/Track.hh"
 
-class HitSet;
 
 namespace fc {
+
+class HitSet;
+class DetectorGeometry;
 
   class TrackCandidateStrategy {
 
   private:
 
-    int _debugLevel;
-
-    // Detector information
-    const DetectorGeometry & _detectorGeometry;
+   int _debugLevel;
 
     // candidate track parameters
 
     double _minCandPTCut;
 
 
+  protected:
+    TrackCandidateStrategy(int, int);
+ 
   public:
-    TrackCandidateStrategy(int debugLevel,const DetectorGeometry detectorGeometry);
     TrackCandidateStrategy( const TrackCandidateStrategy&) = delete;
     ~TrackCandidateStrategy() = default;
 
 
-    void findTrackCandidates(fc::TrackSet& trackCandidateSet, const HitSet& hitSet);
+    void findTrackCandidates(trackSet& trackCandidateSet, const HitSet& hitSet,const DetectorGeometry &);
 
-    virtual void findHitCadidates(std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet)= 0;
-    void buildTrackCandidates(TrackSet& trackCandidateSet,std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet);
+    virtual void findHitCadidates(std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &)= 0;
+    void buildTrackCandidates(trackSet& trackCandidateSet,std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &);
+    virtual void filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet) = 0;
+
+    // helper functions
+    bool goodCandidate(const Helix & helix) const;
 
 
   };

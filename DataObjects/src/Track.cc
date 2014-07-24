@@ -37,7 +37,7 @@ fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector
 }
 
 
-fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, int debugLevel):
+fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel):
   _covMatrix(Helix::_sDim,Helix::_sDim),
   _chi2(0.0),
   _nDof(0),
@@ -73,9 +73,10 @@ fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandida
   chooseHitsForInitialization(hitSet, trackHitCandidate,outerXHit, middleXHit, outerZHit);
 
 
-    TVector3 x1 = primaryVertex;
-    TVector3 x2 = hitSet.getHits()[middleXHit].getHitPosition();
-    TVector3 x3 = hitSet.getHits()[outerXHit].getHitPosition();
+  // Primary vertex used to help find seed tracks
+  TVector3 x1(0.0,0.0,0.0);
+  TVector3 x2 = hitSet.getHits()[middleXHit].getHitPosition();
+  TVector3 x3 = hitSet.getHits()[outerXHit].getHitPosition();
 
     TVector3 z1;
     findZForInitialization(hitSet,trackHitCandidate,z1,detectorGeometry);

@@ -11,19 +11,19 @@
 
 #include "Tracking/include/TrackRecoStrategy.hh"
 
-class HitSet;
-
 namespace fc {
+
+class HitSet;
 
   class TrackRecoStrategy1X2SAS : public TrackRecoStrategy{
 
-
+ 
   public:
 
-
-    void findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) override;
-
-
+ 
+   TrackRecoStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry);
+  
+   void findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) override;
 
 
   };

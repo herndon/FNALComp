@@ -12,15 +12,20 @@
 
 #include "Tracking/include/TrackCandidateStrategy.hh"
 
-class HitSet;
 
 namespace fc {
+
+class HitSet;
 
   class TrackCandidateStrategy1X2SAS : public TrackCandidateStrategy{
 
   public:
 
-    void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) override;
+    TrackCandidateStrategy1X2SAS(int);
+
+
+    void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &) override;
+    void filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet) override;
 
   };
 

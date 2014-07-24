@@ -37,9 +37,10 @@
 #include <map>
 
 class DetectorGeometry;
-class HitSet;
 
 namespace fc {
+
+  class HitSet;
 
 typedef std::vector<int> trackHitSet; //!< Vector of hit indicies
 
@@ -77,7 +78,7 @@ public:
   Track();
   Track(double kappa, double dr, double dz, double phi0, double tanl, const DetectorGeometry & detectorGeometry);
   Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign, const DetectorGeometry & detectorGeometry);
-  Track(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const TVector3 & primaryVertex, const DetectorGeometry & detectorGeometry, int debugLevel);
+  Track(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel);
 
   Track(const Track&);
   Track& operator=(Track track);

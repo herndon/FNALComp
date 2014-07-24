@@ -107,10 +107,9 @@ double fc::PerfectTrackRecoModule::compareHitPositions(const Hit & genHit, const
 
 void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
 
-  TVector3 primaryVertex(0.0,0.0,0.0);
   for (std::vector<std::vector<int>>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
     std::vector<int> trackHitCandidate = *trackHitCandidateIter;
-    Track trackCandidate(hitSet,trackHitCandidate,primaryVertex,_detectorGeometry,_debugLevel);
+    Track trackCandidate(hitSet,trackHitCandidate,_detectorGeometry,_debugLevel);
 
     if (_debugLevel ==2) {
       std::cout << "Track after fit" << std::endl;
@@ -118,8 +117,6 @@ void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCan
     }
 
    trackCandidateSet.insertTrack(trackCandidate);
-
-
 
   }
 

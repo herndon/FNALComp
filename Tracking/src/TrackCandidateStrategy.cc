@@ -1,40 +1,38 @@
 #define _USE_MATH_DEFINES
 #include<cmath>
 #include <iostream>
+#include "Geometry/include/DetectorGeometry.hh"
 #include "Tracking/include/TrackCandidateStrategy.hh"
-#include "DataObjects/include/Track.hh"
 
-fc::TrackCandidateStrategy::TrackCandidateStrategy(int debugLevel,const DetectorGeometry detectorGeometry):
-
+fc::TrackCandidateStrategy::TrackCandidateStrategy(int debugLevel,int minCandPtCut):
   _debugLevel(debugLevel),
-  _detectorGeometry(detectorGeometry),
-  _minCandPTCut(1.0) {
+  _minCandPTCut(minCandPtCut) {
 }
 
-
-
-void fc::TrackCandidateStrategy::findTrackCandidates(TrackSet& trackCandidateSet, const HitSet& recoHitSet){
+void fc::TrackCandidateStrategy::findTrackCandidates(trackSet& trackCandidateSet, const HitSet& recoHitSet,const DetectorGeometry & detectorGeometry){
 
   std::vector<trackHitSet> trackHitCandidates;
 
-  findHitCadidates(trackHitCandidates,recoHitSet);
+  findHitCadidates(trackHitCandidates,recoHitSet,detectorGeometry);
 
-  buildTrackCandidates(trackCandidateSet,trackHitCandidates,recoHitSet);
+  buildTrackCandidates(trackCandidateSet,trackHitCandidates,recoHitSet,detectorGeometry);
   
 
 }
 
 
-void fc::TrackCandidateStrategy::buildTrackCandidates(fc::TrackSet& trackCandidateSet,std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet){
+void fc::TrackCandidateStrategy::buildTrackCandidates(trackSet& trackCandidateSet,std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry & detectorGeometry){
 
   // !!!!! repalce with build track call
-  TVector3 primaryVertex(0.0,0.0,0.0);
-  // !!!!! until Track constructor is updated
-  std::vector<int> temp;
   for (std::vector<trackHitSet>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
-    //Track trackCandidate(hitSet,temp,primaryVertex,_detectorGeometry,_debugLevel);
-    //trackCandidateSet.push_back(trackCandidate);
+    Track trackCandidate(hitSet,*trackHitCandidateIter,detectorGeometry,_debugLevel);
+    trackCandidateSet.push_back(trackCandidate);
   }
 
 }
 
+bool fc::TrackCandidateStrategy::goodCandidate(const Helix & helix) const {
+
+  return (helix.getPT() >= _minCandPTCut);
+
+}
