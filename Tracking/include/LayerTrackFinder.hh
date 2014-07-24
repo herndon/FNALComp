@@ -29,8 +29,7 @@ namespace fc {
 
     int _layer;
     int _sensorType; 
-    unsigned int _expNHits;
-
+ 
  
     // intermediate tracking parameters
     double _minPTCut;
@@ -43,10 +42,10 @@ namespace fc {
 
 
   public:
-    LayerTrackFinder(int debugLevel,const DetectorGeometry & detectorGeometry,int,int);
+    LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer);
     ~LayerTrackFinder() = default;
 
-    void findCandidateTracks(trackSet & trackCandidateSet,const HitSet & recoHitSet) const;
+    void findCandidateTracks(trackSet & trackCandidateSet,const HitSet & recoHitSet,unsigned int expNHit) const;
 
   private:
     void findSingleCandidateTracks(const Track &,trackSet& allnewTracks, const HitSet & recoHitSet) const;
@@ -54,7 +53,7 @@ namespace fc {
     trackSet buildTrackCandidates(const Track &, const std::vector<int> &, const HitSet & recoHitSet) const;     
     std::vector<int> bestTrackCandidates(const trackSet &) const;
     void removeSeedTrack(trackSet&, trackSet&) const;
-    void layerTrackFilter(trackSet &) const;
+    void layerTrackFilter(trackSet &,unsigned int expNHit) const;
 
     // Helper functions
     bool goodTrack(const Track&) const;

@@ -1,5 +1,5 @@
 #define _USE_MATH_DEFINES
-#include<cmath>
+#include <cmath>
 #include <iostream>
 #include <vector>
 #include "Geometry/include/DetectorGeometry.hh"
@@ -9,7 +9,13 @@
 #include "Tracking/include/LayerTrackFinder.hh"
 
 
-void fc::LayerTrackFinder::findCandidateTracks(trackSet & trackCandidateSet, const HitSet& recoHitSet) const{
+fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer):
+  _debugLevel(debugLevel),
+  _detectorGeometry(detectorGeometry),
+  _layer(layer){
+}
+
+void fc::LayerTrackFinder::findCandidateTracks(trackSet& trackCandidateSet, const HitSet& recoHitSet,unsigned int expNHit) const{
 
   trackSet allNewTracks;
 
@@ -24,7 +30,7 @@ void fc::LayerTrackFinder::findCandidateTracks(trackSet & trackCandidateSet, con
   }
 
 
-  layerTrackFilter(trackCandidateSet);
+  layerTrackFilter(trackCandidateSet,expNHit);
 
 }
 
@@ -145,13 +151,13 @@ fc::trackSet fc::LayerTrackFinder::buildTrackCandidates(const Track & track, con
 
 
 
-void fc::LayerTrackFinder::layerTrackFilter(fc::trackSet & trackCandidateSet) const{
+void fc::LayerTrackFinder::layerTrackFilter(fc::trackSet & trackCandidateSet,unsigned int expNHit) const{
 
   // Right now just checks the number of expected hits
 
   for (trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter != trackCandidateSet.end(); ++trackIter){
 
-    if (trackIter->getHits().size() < _expNHits-1) {
+    if (trackIter->getHits().size() < expNHit-1) {
       trackCandidateSet.erase(trackIter);
       trackIter--;
     }

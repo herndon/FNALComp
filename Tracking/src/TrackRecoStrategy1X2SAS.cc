@@ -1,6 +1,9 @@
 #define _USE_MATH_DEFINES
 #include<cmath>
 #include <iostream>
+#include <vector>
+#include "Geometry/include/DetectorGeometry.hh"
+#include "Tracking/include/LayerTrackFinder.hh"
 #include "Tracking/include/TrackRecoStrategy1X2SAS.hh"
 
 fc::TrackRecoStrategy1X2SAS::TrackRecoStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry):
@@ -26,24 +29,16 @@ fc::TrackRecoStrategy1X2SAS::TrackRecoStrategy1X2SAS(int debugLevel,const Detect
 
 void fc::TrackRecoStrategy1X2SAS::findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet){
 
-  findHitsOnLayer(trackCandidateSet,recoHitSet,8);
-  intermediateTrackFilter(trackCandidateSet,4);
-   
+  std::vector<int> layers {8,2,1,0,7,6,5};
+  int expNHit = 4;
 
-  findHitsOnLayer(trackCandidateSet,recoHitSet,2);
-  intermediateTrackFilter(trackCandidateSet,5);
-  findHitsOnLayer(trackCandidateSet,recoHitSet,1);
-  intermediateTrackFilter(trackCandidateSet,6);
-  findHitsOnLayer(trackCandidateSet,recoHitSet,0);
-  intermediateTrackFilter(trackCandidateSet,7);
- 
+  for (std::vector<int>::const_iterator layerIter = layers.begin();layerIter!=layers.end();++layerIter,++expNHit){
+    LayerTrackFinder layerTrackFinder(getDebugLevel(),getDetectorGeometry(),*layerIter);
+    layerTrackFinder.findCandidateTracks(trackCandidateSet,recoHitSet,expNHit);
 
-  findHitsOnLayer(trackCandidateSet,recoHitSet,7);
-  intermediateTrackFilter(trackCandidateSet,8);
-  findHitsOnLayer(trackCandidateSet,recoHitSet,6);
-  intermediateTrackFilter(trackCandidateSet,9);
-  findHitsOnLayer(trackCandidateSet,recoHitSet,5);
-  intermediateTrackFilter(trackCandidateSet,10);
- 
+    //findHitsOnLayer(trackCandidateSet,recoHitSet,*layerIter);
+    //intermediateTrackFilter(trackCandidateSet,expNHit);
+
+  }
 
 }

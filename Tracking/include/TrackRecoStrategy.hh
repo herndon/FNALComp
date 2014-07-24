@@ -28,16 +28,6 @@ namespace fc {
     const DetectorGeometry & _detectorGeometry;
 
  
-    // intermediate tracking parameters
-    double _minPTCut;
-    double _maxTanLCut;
-    double _maxDRCut;
-    double _maxDZCut;
-    double _maxChi2Cut;
-    double _maxChi2NDofCut;
-    bool _useExpHits;
-
-
 
   protected:
     TrackRecoStrategy(int debugLevel,const DetectorGeometry & detectorGeometry):_debugLevel(debugLevel),_detectorGeometry(detectorGeometry) {};
@@ -51,18 +41,15 @@ namespace fc {
     // Iterative track reconstruction
     virtual void findTracks(trackSet& trackCandidateSet,const HitSet & recoHitSet) = 0;
 
-    void findHitsOnLayer(trackSet & trackCandidateSet,const HitSet & recoHitSet,int layer);
-
-    void intermediateTrackFilter(trackSet & trackCandidateSet,int expNHits);
     void finalTrackFilter(fc::trackSet & trackCandidateSet);
 
-    // Helper functions
-    bool goodTrack(const Track &) const;
-    std::vector<int> bestTracks(const trackSet &) const;
+    // Helper functions for final track filter
     int numberMatchedHits(const Track&, const Track&) const;
     bool betterOverlappingTrack(const Track&, const Track&) const;
 
-
+    // get functions
+    const DetectorGeometry & getDetectorGeometry() const {return _detectorGeometry;}
+    int getDebugLevel() const {return _debugLevel;}
 
   };
 
