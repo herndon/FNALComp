@@ -34,14 +34,12 @@ fc::DataSource::DataSource(int debugLevel,std::ifstream& inputeventdatafile, boo
 
 std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
 
-    //auto genData = event.get<bool>("genData");
+
+  std::unique_ptr<GenTrackSet> genTrackSet{ new GenTrackSet };
 
 
-  std::unique_ptr<GenTrackSet> genTrackSet{ new GenTrackSet() };
-
-
-  std::unique_ptr<HitSet> hitSet{ new HitSet(_genData) };
-  std::unique_ptr<StripSet> stripSet{ new StripSet(_genData) };
+  std::unique_ptr<HitSet> hitSet{ new HitSet };
+  std::unique_ptr<StripSet> stripSet{ new StripSet };
 
   int eventNumber = 0;
   if( not (_inputeventdatafile >> eventNumber) ) {

@@ -27,22 +27,15 @@ class HitSet {
 private:
 
   hitSet _hitSet;
-  int _version;
-  bool _genHits;
 
 public:
 
-  HitSet();
-  HitSet(bool genHits);
+  HitSet() {};
   ~HitSet() {};
 
 
   const std::vector<Hit> & getHits(void) const {return _hitSet;};
 
-  bool getGenHits(void) const {return _genHits;}
-  int getVersion(void) const {return _version;}
-
-  void setGenHits(bool genHits) {_genHits = genHits;}
 
   void insertHit(Hit);
 

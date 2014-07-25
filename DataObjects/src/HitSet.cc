@@ -4,16 +4,7 @@
 #include "DataObjects/include/HitSet.hh"
 
 
-fc::HitSet::HitSet():
-  _version(1){
-}
-
-
-fc::HitSet::HitSet(bool genHits):
-  _version(1),
-  _genHits(genHits){
-}
-
+// Using default constructor
 
 void fc::HitSet::insertHit(Hit hit) {
   if (hit.getLayer() >= 0 && hit.getLayer() < DetectorGeometry::_nSensors) {
@@ -27,7 +18,7 @@ void fc::HitSet::insertHit(Hit hit) {
 
 void fc::HitSet::print(void) const{
 
-  std::cout << "Hit Set version: " << _version << std::endl;
+  std::cout << "HitSet" << std::endl;
  
  
   hitSet::size_type numberHits =_hitSet.size();

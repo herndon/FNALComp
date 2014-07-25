@@ -2,15 +2,7 @@
 #include "DataObjects/include/StripSet.hh"
 #include "Services/include/Exception.hh"
 
-
-fc::StripSet::StripSet():
-  _version(1){
-}
-
-fc::StripSet::StripSet(bool genStrips):
-  _genStrips(genStrips),
-  _version(1){
-}
+// Using default constructor
 
 const fc::layerStripMap& fc::StripSet::getLayerStripMap(int layer) const {
     if (layer >= 0 && layer < DetectorGeometry::_nSensors) return _layerStripMapArray[layer];
@@ -48,8 +40,7 @@ void fc::StripSet::insertStrip(int layer, int strip, int adc) {
 
 void fc::StripSet::print(void) const{
 
-  std::cout << "Version: " << _version << std::endl;
-  std::cout << "Generator strip data: " << _genStrips << std::endl;
+  std::cout << "StripSet" << std::endl;
 
   int strip;
   int adc;

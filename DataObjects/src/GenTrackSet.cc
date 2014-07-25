@@ -10,6 +10,8 @@ void fc::GenTrackSet::insertTrack(const GenTrack& genTrack) {
 
 void fc::GenTrackSet::print(void) const{
 
+  std::cout << "GenTrackSet" << std::endl;
+
   genTrackSet::size_type numberGenTracks =_genTrackSet.size();
 
   std::cout << "Number Gen Tracks: " << numberGenTracks << std::endl; 

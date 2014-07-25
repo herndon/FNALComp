@@ -13,15 +13,10 @@ fc::StripSetIO::StripSetIO(const DetectorGeometry&  detectorGeometry):
 
 void fc::StripSetIO::writeEvent(const StripSet & stripSet, std::ofstream & stripdata) const{
 
-  if (_version != stripSet.getVersion()) {
-    std::string wrongStreamerVersion = "StripSetIO::writeEvent: StripSet expected streamer version " + std::to_string(stripSet.getVersion()) + " using streamer version " + std::to_string(_version);
-    throw Exception(wrongStreamerVersion);  
-  }
 
   stripdata << "Strips" << std::endl;
 
-  int version = stripSet.getVersion();
-  stripdata.write (reinterpret_cast<const char *>(&version), 1);
+  stripdata.write (reinterpret_cast<const char *>(&_version), 1);
 
 
   int binaryData;
@@ -66,10 +61,6 @@ void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
   int strip;
   int adc;
 
-  if (_version != stripSet.getVersion()) {
-    std::string wrongStreamerVersion = "StripSetIO::readEvent: Stripset expected streamer version " + std::to_string(stripSet.getVersion()) + " using streamer version " + std::to_string(_version);
-    throw Exception(wrongStreamerVersion);  
-  }
 
   std::string eventDataString;
 

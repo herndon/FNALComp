@@ -30,26 +30,17 @@ namespace fc {
 class StripSet {
 private:
 
-  bool _genStrips;
-  int _version; // version 1
-
   std::array<layerStripMap,DetectorGeometry::_nSensors> _layerStripMapArray;
 
 public:
 
-  StripSet();
-  StripSet(bool genStrips);
+  StripSet() {};
   ~StripSet() {};
 
   const layerStripMap& getLayerStripMap(int layer) const;
 
   int getStripNumber(layerStripMap::const_iterator iter) const {return iter->first;};
   int getStripAdc(layerStripMap::const_iterator iter) const {return iter->second;};
-
-  bool getGenStrips(void) const {return _genStrips;}
-  int getVersion(void) const {return _version;}
-
-  void setGenStrips(bool genStrips) {_genStrips = genStrips;}
 
   void insertStrip(int, int, int); //!< Insert strip by layer, strip number, adc count
 

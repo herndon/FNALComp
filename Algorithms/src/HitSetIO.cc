@@ -11,12 +11,6 @@ fc::HitSetIO::HitSetIO():
 
 void fc::HitSetIO::writeEvent(const HitSet & hitSet, std::ofstream & hitdata) const{
 
-  if (_version != hitSet.getVersion()) {
-    std::string wrongStreamerVersion = "HitSetIO::writeEvent: HitSet expected streamer version " + std::to_string(hitSet.getVersion()) + " using streamer version " + std::to_string(_version);
-    throw Exception(wrongStreamerVersion);  
-  }
-
-
 
   // set precision output to precision of a doulbe + 2 digits to avoid rounding problems
   hitdata.precision(std::numeric_limits<double>::digits10 + 2);
@@ -24,7 +18,7 @@ void fc::HitSetIO::writeEvent(const HitSet & hitSet, std::ofstream & hitdata) co
   int hitNumber = 0;
 
   hitdata << "Hits" << std::endl;
-  hitdata << hitSet.getVersion() << std::endl;
+  hitdata << _version << std::endl;
 
   std::vector<Hit>::size_type numberHits = hitSet.getHits().size();
 
@@ -66,7 +60,7 @@ void fc::HitSetIO::readEvent(HitSet& hitSet, std::ifstream & hitdata) {
 
   hitdata >> version;
 
-  if (version !=  hitSet.getVersion()) {
+  if (version !=  _version) {
     std::string wrongStreamerVersion = "HitSetIO::readEvent: attempted to read version " + std::to_string(version) + " using streamer version " + std::to_string(_version);
     throw Exception(wrongStreamerVersion);  
   }

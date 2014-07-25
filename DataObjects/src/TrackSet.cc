@@ -31,6 +31,8 @@ void fc::TrackSet::insertTrack(Track track) {
 
 void fc::TrackSet::print(void) const{
 
+  std::cout << "TrackSet " << std::endl;
+
   trackSet::size_type numberTracks =_trackSet.size();
 
   std::cout << "Number Tracks: " << numberTracks << std::endl; 
