@@ -3,12 +3,15 @@
 #include<stdlib.h>
 #include<cmath>
 #include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/GenTrack.hh"
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
 #include "Modules/include/TrackGenModule.hh"
 #include "TH1D.h"
 #include "TVector3.h"
+#include "TLorentzVector.h"
 #include "Services/include/UniqueRootDirectory.hh"
+
 
 fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std::string& iTracksLabel, const DetectorGeometry & detectorGeometry, Random & random):
   _debugLevel(debugLevel),
@@ -76,8 +79,14 @@ fc::Track fc::TrackGenModule::generateTrack(){
 
  
   Track track(trackCharge/trackPT,trackD0,trackZ0,trackPhi0,trackTanL,_detectorGeometry);
+  TLorentzVector lorentzVector(trackPT*std::cos(trackPhi0),trackPT*std::sin(trackPhi0),trackTanL*trackPT,trackPT*std::sqrt(1+trackTanL*trackTanL));
+  TVector3 position(trackD0*std::cos(trackPhi0-M_PI/2.0),trackD0*std::sin(trackPhi0-M_PI/2.0),trackZ0);
+  GenTrack genTrack(lorentzVector,trackCharge,position);
 
- 
+  std::cout << "Compare track and genTrack" << std::endl;
+  track.print();
+  genTrack.print();
+
   return track;
 
 }
