@@ -59,7 +59,7 @@ int main ()
 
  // Instantiate the class which handles the details of processing the events
   fc::EventProcessor processor( new fc::DataSource(debugLevel,inputeventdatafile, genData,
-                                               "tracksWithHits", //get these tracks from file
+                                               "genTracks", //get these tracks from file
                                                 "genHits", //get these hits from file
                                                 "genStrips", //get these strips
 						   detectorGeometry),
@@ -71,8 +71,8 @@ int main ()
   processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", detectorGeometry));
   processor.addModule( new fc::PerfectTrackRecoModule(debugLevel, "recoHits", "genHits", "perfectRecoTracks", detectorGeometry) );
   processor.addModule( new fc::TrackRecoModule(debugLevel, "recoHits", "recoTracks", detectorGeometry) );
-  processor.addModule( new fc::TrackCompareModule(debugLevel, "tracksWithHits", "perfectRecoTracks", detectorGeometry) );
-  processor.addModule( new fc::TrackCompareModule(debugLevel, "tracksWithHits", "recoTracks", detectorGeometry) );
+  processor.addModule( new fc::TrackCompareModule(debugLevel, "genTracks", "perfectRecoTracks", detectorGeometry) );
+  processor.addModule( new fc::TrackCompareModule(debugLevel, "genTracks", "recoTracks", detectorGeometry) );
 
 
   // Event loop over module classes

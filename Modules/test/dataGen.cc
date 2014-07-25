@@ -70,12 +70,11 @@ int main ()
 					      detectorGeometry,random));
   processor.addModule( new fc::HitStripGenModule(debugLevel,
 						 "genTracks",//get these tracks
-						 "tracksWithHits", //create these tracks
 						 "hits", //create these hits
 						 "strips", //create these strips
 						 detectorGeometry,random) );
   processor.addModule( new fc::DataOutputModule(debugLevel,genoutputeventdatafile,
-						"tracksWithHits", //get these tracks
+						"genTracks", //get these tracks
 						"hits", //get these hits
 						"strips", //get these strips
 						detectorGeometry));

@@ -4,6 +4,8 @@
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
+#include "DataObjects/include/GenTrack.hh"
+#include "DataObjects/include/GenTrackSet.hh"
 #include "Modules/include/TrackCompareModule.hh"
 #include "TH1F.h"
 #include "Services/include/UniqueRootDirectory.hh"
@@ -46,7 +48,7 @@ void fc::TrackCompareModule::initializeHistograms(){
 
 void fc::TrackCompareModule::processEvent(Event& event)
 {
- Handle<TrackSet> genTrackSet = event.get<TrackSet>(_genTracksLabel);
+ Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_genTracksLabel);
  Handle<TrackSet> recoTrackSet = event.get<TrackSet>(_recTracksLabel);
 
  compareTracks(*genTrackSet,*recoTrackSet);
@@ -55,13 +57,13 @@ void fc::TrackCompareModule::processEvent(Event& event)
 
 }
 
-void fc::TrackCompareModule::compareTracks(const TrackSet & genTrackSet, const TrackSet& recoTrackSet)
+void fc::TrackCompareModule::compareTracks(const GenTrackSet & genTrackSet, const TrackSet& recoTrackSet)
 {
 
   
   if (recoTrackSet.getTracks().begin() == recoTrackSet.getTracks().end()) return;
 
-  for (trackSet::const_iterator genTrackIter =  genTrackSet.getTracks().begin(); genTrackIter !=  genTrackSet.getTracks().end(); ++genTrackIter){
+  for (genTrackSet::const_iterator genTrackIter =  genTrackSet.getGenTracks().begin(); genTrackIter !=  genTrackSet.getGenTracks().end(); ++genTrackIter){
 
     const Track& recoTrack = matchTrack(*genTrackIter,recoTrackSet);
     TVectorD bestDeltaHP = deltaHP(*genTrackIter,recoTrack);
@@ -72,7 +74,7 @@ void fc::TrackCompareModule::compareTracks(const TrackSet & genTrackSet, const T
 }
 
 
-const fc::Track & fc::TrackCompareModule::matchTrack(const Track & genTrack, const TrackSet& recoTrackSet){
+const fc::Track & fc::TrackCompareModule::matchTrack(const GenTrack & genTrack, const TrackSet& recoTrackSet){
 
   double bestDeltaTracks = 1000.0;
   double tmpDeltaTracks;
@@ -93,17 +95,17 @@ const fc::Track & fc::TrackCompareModule::matchTrack(const Track & genTrack, con
 
 }
 
-double fc::TrackCompareModule::deltaTracks(const Track & genTrack, const Track& recoTrack){
+double fc::TrackCompareModule::deltaTracks(const GenTrack & genTrack, const Track& recoTrack){
 
-  return std::sqrt((genTrack.getHelix().getKappa()-recoTrack.getHelix().getKappa())*(genTrack.getHelix().getKappa()-recoTrack.getHelix().getKappa())+
-		   (genTrack.getHelix().getPhi0()-recoTrack.getHelix().getPhi0())*(genTrack.getHelix().getPhi0()-recoTrack.getHelix().getPhi0()));
+  return std::sqrt((genTrack.makeHelix().getKappa()-recoTrack.getHelix().getKappa())*(genTrack.makeHelix().getKappa()-recoTrack.getHelix().getKappa())+
+		   (genTrack.makeHelix().getPhi0()-recoTrack.getHelix().getPhi0())*(genTrack.makeHelix().getPhi0()-recoTrack.getHelix().getPhi0()));
 
 }
 
-TVectorD fc::TrackCompareModule::deltaHP(const Track & genTrack, const Track& recoTrack){
+TVectorD fc::TrackCompareModule::deltaHP(const GenTrack & genTrack, const Track& recoTrack){
 
 
-  return recoTrack.getHelix().getHelix() - genTrack.getHelix().getHelix();
+  return recoTrack.getHelix().getHelix() - genTrack.makeHelix().getHelix();
 
 }
 

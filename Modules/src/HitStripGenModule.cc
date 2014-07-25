@@ -3,8 +3,8 @@
 #include<stdlib.h>
 #include<iostream>
 #include<cmath>
-#include "DataObjects/include/Track.hh"
-#include "DataObjects/include/TrackSet.hh"
+#include "DataObjects/include/GenTrack.hh"
+#include "DataObjects/include/GenTrackSet.hh"
 #include "Algorithms/include/HelixIntersections.hh"
 #include "Algorithms/include/InitializeHelix.hh"
 #include "DataObjects/include/HitSet.hh"
@@ -14,12 +14,10 @@
 
 fc::HitStripGenModule::HitStripGenModule(int debugLevel, 
 					 const std::string& iInputTracksLabel,
-					 const std::string& iOutputTracksLabel,
 					 const std::string& iOutputHitsLabel,
 					 const std::string& iOutputStripsLabel,
 					 const DetectorGeometry & detectorGeometry, Random & random):
   _inTracksLabel(iInputTracksLabel),
-  _outTracksLabel(iOutputTracksLabel),
   _outHitsLabel(iOutputHitsLabel),
   _outStripsLabel(iOutputStripsLabel),
   _debugLevel(debugLevel),
@@ -33,9 +31,9 @@ fc::HitStripGenModule::HitStripGenModule(int debugLevel,
 
 void fc::HitStripGenModule::processEvent(fc::Event & event)
 {
-  auto inputTrackSet = event.get<fc::TrackSet>(_inTracksLabel);
+
+  Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_inTracksLabel);
   auto genData = event.get<bool>("genData");
-  std::unique_ptr<TrackSet> genTrackSet{ new TrackSet(*inputTrackSet) };
   
   std::unique_ptr<HitSet> genHitSet{ new HitSet(*genData) };
   std::unique_ptr<StripSet> genStripSet{ new StripSet(*genData) };
@@ -43,31 +41,28 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
   int trackNumber = 0;
   int hitNumber = 0;
 
-  for (trackSet::iterator trackIter =  genTrackSet->getTracks().begin(); trackIter != genTrackSet->getTracks().end(); ++trackIter,++trackNumber){
+  for (genTrackSet::const_iterator genTrackIter =  genTrackSet->getGenTracks().begin(); genTrackIter != genTrackSet->getGenTracks().end(); ++genTrackIter,++trackNumber){
  
-    makeHitsStrips(*genHitSet, *genStripSet,*trackIter,trackNumber,hitNumber);
+    makeHitsStrips(*genHitSet, *genStripSet,*genTrackIter,trackNumber,hitNumber);
 
    } // end track loop
 
-  event.put(_outTracksLabel, std::move(genTrackSet) );
   event.put(_outHitsLabel, std::move(genHitSet));
   event.put(_outStripsLabel,std::move(genStripSet));
 }
 
 
-void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, Track & track,int trackNumber, int & hitNumber){
+void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, const GenTrack & genTrack,int trackNumber, int & hitNumber){
 
-  // make a copy of the track because we don't want to change the state of the helix in the original version
-  Track trackCopy(track); 
 
   TVector3 hitPosition;
 
 
   for (int ii_layer = 0; ii_layer < _nLayers; ++ii_layer) {
 
-    calculateTrackSensorIntersection(trackCopy,ii_layer, hitPosition);
+    calculateTrackSensorIntersection(genTrack,ii_layer, hitPosition);
 
-    storeHitInfo(hitSet,track,trackNumber,hitNumber,hitPosition,ii_layer);
+    storeHitInfo(hitSet,trackNumber,hitNumber,hitPosition,ii_layer);
 
     storeStripInfo(stripSet,hitPosition,ii_layer);
    
@@ -77,14 +72,15 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, 
 
 }
 
-void fc::HitStripGenModule::calculateTrackSensorIntersection(const Track & track,int layer, TVector3 & hitPosition){
+void fc::HitStripGenModule::calculateTrackSensorIntersection(const GenTrack & genTrack,int layer, TVector3 & hitPosition){
 
   //TrackFit trackFit(track.getHelix(),_detectorGeometry);
-  intersectWithLayer(track.getHelix(),hitPosition,layer,_detectorGeometry);
+  intersectWithLayer(genTrack.makeHelix(1/_detectorGeometry.getCurvatureC()),hitPosition,layer,_detectorGeometry);
 
 }
 
-void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,Track & track,int trackNumber,int & hitNumber,TVector3 & hitPosition,int layer){
+// !!!!! remove Gen track from here
+void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,int trackNumber,int & hitNumber,TVector3 & hitPosition,int layer){
 
   if (_debugLevel >=5 ) {
     std::cout << "Layer " << layer << " Hit y " << hitPosition[0] << std::endl;
@@ -96,7 +92,6 @@ void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,Track & track,int track
 
   hitSet.insertHit(hit);
 
-  track.insertHit(hitNumber);
 
   ++hitNumber;
 
@@ -109,8 +104,6 @@ void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,Track & track,int track
   }
 
 }
-
- 
 
 
 void fc::HitStripGenModule::storeStripInfo(StripSet & stripSet,const TVector3 & hitPosition,int layer){

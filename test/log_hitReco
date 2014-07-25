@@ -137,15 +137,12 @@ TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi
 Intrinsic Resolution  5e-05
 Hit Resolution  5e-05
 Event: 0
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 1.66359 22.5695 0.809569 22.6452 
 Track parameters:  pT 22.6308 cot(theta) 27.9541 phi0 1.49722 d0 0.00869386 z0 0.000388327
 Helix paramters: kappa 0.0441877 tan(Lambda) 0.0357729 phi0 to d0 3.06802
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -189,7 +186,7 @@ Hit position: 0.0583411 1.0002 -0.0354494
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1139  ADC 25
 Strip: 1140  ADC 6
@@ -263,15 +260,12 @@ Hit position: 0.0576622 1.0002 0.0010065
 Number strips: 2
 Track number -1
 Event: 1
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.32199 21.3491 -0.152705 21.4755 
 Track parameters:  pT 21.475 cot(theta) -140.63 phi0 1.67913 d0 -0.00899832 z0 0.00540409
 Helix paramters: kappa 0.0465658 tan(Lambda) -0.00711084 phi0 to d0 3.24993
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -315,7 +309,7 @@ Hit position: -0.106838 1.0002 0.012557
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 764  ADC 18
 Strip: 765  ADC 13
@@ -389,15 +383,12 @@ Hit position: -0.106616 1.0002 -0.00186099
 Number strips: 2
 Track number -1
 Event: 2
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 1.63287 34.1574 1.03997 34.2122 
 Track parameters:  pT 34.1964 cot(theta) 32.882 phi0 1.52303 d0 0.00362692 z0 -0.00224549
 Helix paramters: kappa 0.0292429 tan(Lambda) 0.0304117 phi0 to d0 3.09382
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -441,7 +432,7 @@ Hit position: 0.039786 1.0002 -0.0326868
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1139  ADC 28
 Strip: 1140  ADC 3
@@ -515,15 +506,12 @@ Hit position: 0.0392392 1.0002 0.000684923
 Number strips: 2
 Track number -1
 Event: 3
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -2.29275 24.1966 0.0289515 24.305 
 Track parameters:  pT 24.305 cot(theta) 839.507 phi0 1.66527 d0 0.00635123 z0 -0.0007551
 Helix paramters: kappa -0.0411439 tan(Lambda) 0.00119118 phi0 to d0 3.23607
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -567,7 +555,7 @@ Hit position: -0.0949001 1.0002 -0.0019519
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 522  ADC 10
 Strip: 523  ADC 21
@@ -641,15 +629,12 @@ Hit position: -0.0949339 1.0002 -0.00165708
 Number strips: 2
 Track number -1
 Event: 4
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -1.92284 32.2698 -0.531949 32.3314 
 Track parameters:  pT 32.327 cot(theta) -60.7709 phi0 1.63031 d0 0.00361124 z0 0.0067284
 Helix paramters: kappa 0.0309339 tan(Lambda) -0.0164553 phi0 to d0 3.20111
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -693,7 +678,7 @@ Hit position: -0.0678842 1.0002 0.0232245
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 709  ADC 23
 Strip: 710  ADC 8
@@ -767,15 +752,12 @@ Hit position: -0.0675445 1.0002 -0.00117899
 Number strips: 2
 Track number -1
 Event: 5
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -0.514768 22.3428 0.907311 22.3671 
 Track parameters:  pT 22.3487 cot(theta) 24.6318 phi0 1.59383 d0 -0.00676625 z0 0.00720451
 Helix paramters: kappa -0.0447453 tan(Lambda) 0.0405979 phi0 to d0 3.16463
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -819,7 +801,7 @@ Hit position: -0.00956478 1.0002 -0.0334009
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1072  ADC 28
 Strip: 1073  ADC 3
@@ -893,15 +875,12 @@ Hit position: -0.0101533 1.0002 -0.000177226
 Number strips: 2
 Track number -1
 Event: 6
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 0.339071 20.4389 1.02908 20.4676 
 Track parameters:  pT 20.4417 cot(theta) 19.8641 phi0 1.55421 d0 0.00391358 z0 0.00507725
 Helix paramters: kappa -0.0489197 tan(Lambda) 0.050342 phi0 to d0 3.125
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -945,7 +924,7 @@ Hit position: 0.0200188 1.0002 -0.0452864
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1018  ADC 31
 Strip: 1019  ADC 0
@@ -1019,15 +998,12 @@ Hit position: 0.0191326 1.0002 0.00033396
 Number strips: 2
 Track number -1
 Event: 7
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 4.88387 39.4364 -0.0822434 39.7377 
 Track parameters:  pT 39.7377 cot(theta) -483.171 phi0 1.44758 d0 0.00477917 z0 0.000725335
 Helix paramters: kappa 0.025165 tan(Lambda) -0.00206966 phi0 to d0 3.01838
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -1071,7 +1047,7 @@ Hit position: 0.115198 1.0002 0.00280904
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1419  ADC 1
 Strip: 1420  ADC 30
@@ -1145,15 +1121,12 @@ Hit position: 0.115247 1.0002 0.00201164
 Number strips: 2
 Track number -1
 Event: 8
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 2.4486 33.5441 1.02664 33.649 
 Track parameters:  pT 33.6333 cot(theta) 32.7607 phi0 1.49793 d0 -0.00257069 z0 -0.00532617
 Helix paramters: kappa 0.0297324 tan(Lambda) 0.0305244 phi0 to d0 3.06873
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -1197,7 +1170,7 @@ Hit position: 0.0710956 1.0002 -0.035934
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1363  ADC 4
 Strip: 1364  ADC 27
@@ -1271,15 +1244,12 @@ Hit position: 0.0704344 1.0002 0.00122944
 Number strips: 2
 Track number -1
 Event: 9
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 0.59743 29.0953 -1.22362 29.1272 
 Track parameters:  pT 29.1014 cot(theta) -23.7831 phi0 1.55027 d0 -0.00567228 z0 0.000548782
 Helix paramters: kappa 0.0343626 tan(Lambda) -0.0420467 phi0 to d0 3.12106
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -1323,7 +1293,7 @@ Hit position: 0.0210547 1.0002 0.042614
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1215  ADC 13
 Strip: 1216  ADC 18
@@ -1397,15 +1367,12 @@ Hit position: 0.0217838 1.0002 0.000380237
 Number strips: 2
 Track number -1
 Event: 10
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 4.83671 39.2479 0.724367 39.5514 
 Track parameters:  pT 39.5448 cot(theta) 54.5922 phi0 1.44818 d0 -0.00340842 z0 0.000730565
 Helix paramters: kappa 0.0252878 tan(Lambda) 0.0183176 phi0 to d0 3.01898
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -1449,7 +1416,7 @@ Hit position: 0.122815 1.0002 -0.0177285
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1582  ADC 12
 Strip: 1583  ADC 19
@@ -1517,15 +1484,12 @@ Hit position: 0.122459 1.0002 0.00213753
 Number strips: 2
 Track number -1
 Event: 11
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -0.185407 36.6247 -2.48011 36.709 
 Track parameters:  pT 36.6251 cot(theta) -14.7675 phi0 1.57586 d0 0.00148721 z0 0.000628546
 Helix paramters: kappa -0.0273037 tan(Lambda) -0.0677161 phi0 to d0 3.14665
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -1569,7 +1533,7 @@ Hit position: -0.00245613 1.0002 0.0683589
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 977  ADC 18
 Strip: 978  ADC 13
@@ -1643,15 +1607,12 @@ Hit position: -0.00123207 1.0002 -2.15059e-05
 Number strips: 2
 Track number -1
 Event: 12
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 2.70973 38.3093 3.06873 38.5275 
 Track parameters:  pT 38.405 cot(theta) 12.515 phi0 1.50018 d0 0.00303029 z0 0.00871872
 Helix paramters: kappa -0.0260382 tan(Lambda) 0.0799042 phi0 to d0 3.07098
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -1695,7 +1656,7 @@ Hit position: 0.0716436 1.0002 -0.071407
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1249  ADC 19
 Strip: 1250  ADC 12
@@ -1769,15 +1730,12 @@ Hit position: 0.0703828 1.0002 0.00122854
 Number strips: 2
 Track number -1
 Event: 13
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.15469 37.5539 -3.21336 37.7527 
 Track parameters:  pT 37.6157 cot(theta) -11.706 phi0 1.62811 d0 0.0075812 z0 -0.00820294
 Helix paramters: kappa 0.0265847 tan(Lambda) -0.0854262 phi0 to d0 3.19891
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -1821,7 +1779,7 @@ Hit position: -0.0689926 1.0002 0.0774386
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 639  ADC 5
 Strip: 640  ADC 26
@@ -1895,15 +1853,12 @@ Hit position: -0.0677123 1.0002 -0.00118192
 Number strips: 2
 Track number -1
 Event: 14
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -4.13898 31.7339 -0.622516 32.0087 
 Track parameters:  pT 32.0027 cot(theta) -51.4085 phi0 1.70049 d0 0.00639054 z0 -0.00251501
 Helix paramters: kappa 0.0312474 tan(Lambda) -0.019452 phi0 to d0 3.27129
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -1947,7 +1902,7 @@ Hit position: -0.141718 1.0002 0.0171343
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 370  ADC 30
 Strip: 371  ADC 1
@@ -2015,15 +1970,12 @@ Hit position: -0.141424 1.0002 -0.00246856
 Number strips: 2
 Track number -1
 Event: 15
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 1.13974 34.3642 -2.93047 34.5078 
 Track parameters:  pT 34.3831 cot(theta) -11.733 phi0 1.53764 d0 0.00132365 z0 -0.00154895
 Helix paramters: kappa 0.0290841 tan(Lambda) -0.0852299 phi0 to d0 3.10844
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -2067,7 +2019,7 @@ Hit position: 0.0274819 1.0002 0.0837299
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1126  ADC 17
 Strip: 1127  ADC 14
@@ -2141,15 +2093,12 @@ Hit position: 0.0288601 1.0002 0.000503755
 Number strips: 2
 Track number -1
 Event: 16
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -0.771756 23.9111 0.821287 23.9377 
 Track parameters:  pT 23.9236 cot(theta) 29.1293 phi0 1.60306 d0 0.00742568 z0 -0.00768787
 Helix paramters: kappa -0.0417998 tan(Lambda) 0.0343296 phi0 to d0 3.17386
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -2193,7 +2142,7 @@ Hit position: -0.0334334 1.0002 -0.0420444
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 751  ADC 25
 Strip: 752  ADC 6
@@ -2267,15 +2216,12 @@ Hit position: -0.0341561 1.0002 -0.000596197
 Number strips: 2
 Track number -1
 Event: 17
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -0.029907 22.5808 -1.72338 22.6465 
 Track parameters:  pT 22.5809 cot(theta) -13.1026 phi0 1.57212 d0 0.00337809 z0 -0.00226585
 Helix paramters: kappa -0.0442853 tan(Lambda) -0.0763205 phi0 to d0 3.14292
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -2319,7 +2265,7 @@ Hit position: 0.00193831 1.0002 0.0740719
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 956  ADC 10
 Strip: 957  ADC 21
@@ -2393,15 +2339,12 @@ Hit position: 0.00321886 1.0002 5.61855e-05
 Number strips: 2
 Track number -1
 Event: 18
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 1.12036 35.8381 3.07302 35.9871 
 Track parameters:  pT 35.8556 cot(theta) 11.6679 phi0 1.53954 d0 0.00233126 z0 -0.00287332
 Helix paramters: kappa 0.0278896 tan(Lambda) 0.0857055 phi0 to d0 3.11034
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -2445,7 +2388,7 @@ Hit position: 0.0247489 1.0002 -0.0886214
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1099  ADC 25
 Strip: 1100  ADC 6
@@ -2519,15 +2462,12 @@ Hit position: 0.0231578 1.0002 0.00040422
 Number strips: 2
 Track number -1
 Event: 19
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -1.48553 22.6171 -0.186251 22.6666 
 Track parameters:  pT 22.6659 cot(theta) -121.695 phi0 1.63638 d0 -0.00530648 z0 0.00367892
 Helix paramters: kappa 0.0441192 tan(Lambda) -0.00821725 phi0 to d0 3.20718
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -2571,7 +2511,7 @@ Hit position: -0.0670369 1.0002 0.0119165
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 862  ADC 24
 Strip: 863  ADC 7
@@ -2645,15 +2585,12 @@ Hit position: -0.0668221 1.0002 -0.00116638
 Number strips: 2
 Track number -1
 Event: 20
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -3.1912 25.7875 1.548 26.0303 
 Track parameters:  pT 25.9842 cot(theta) 16.7857 phi0 1.69392 d0 -0.00102559 z0 0.00387852
 Helix paramters: kappa -0.0384849 tan(Lambda) 0.0595745 phi0 to d0 3.26472
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -2697,7 +2634,7 @@ Hit position: -0.116847 1.0002 -0.056113
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 553  ADC 6
 Strip: 554  ADC 25
@@ -2771,15 +2708,12 @@ Hit position: -0.117666 1.0002 -0.00205387
 Number strips: 2
 Track number -1
 Event: 21
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -0.223969 35.9683 0.51527 35.9727 
 Track parameters:  pT 35.969 cot(theta) 69.8061 phi0 1.57702 d0 0.00357419 z0 0.00689281
 Helix paramters: kappa 0.0278017 tan(Lambda) 0.0143254 phi0 to d0 3.14782
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -2823,7 +2757,7 @@ Hit position: -0.0139721 1.0002 -0.00743658
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 924  ADC 14
 Strip: 925  ADC 17
@@ -2897,15 +2831,12 @@ Hit position: -0.0140882 1.0002 -0.00024591
 Number strips: 2
 Track number -1
 Event: 22
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.46206 22.4099 1.61651 22.6026 
 Track parameters:  pT 22.5447 cot(theta) 13.9466 phi0 1.68022 d0 0.000986047 z0 0.00692651
 Helix paramters: kappa 0.0443562 tan(Lambda) 0.0717022 phi0 to d0 3.25102
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -2949,7 +2880,7 @@ Hit position: -0.117663 1.0002 -0.0652846
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 559  ADC 26
 Strip: 560  ADC 5
@@ -3023,15 +2954,12 @@ Hit position: -0.118724 1.0002 -0.00207233
 Number strips: 2
 Track number -1
 Event: 23
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 2.45991 23.9523 0.294396 24.0801 
 Track parameters:  pT 24.0783 cot(theta) 81.7888 phi0 1.46845 d0 -0.00509011 z0 -0.0093992
 Helix paramters: kappa 0.0415312 tan(Lambda) 0.0122266 phi0 to d0 3.03925
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -3075,7 +3003,7 @@ Hit position: 0.101513 1.0002 -0.0216914
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1532  ADC 29
 Strip: 1533  ADC 2
@@ -3149,15 +3077,12 @@ Hit position: 0.101094 1.0002 0.00176461
 Number strips: 2
 Track number -1
 Event: 24
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 2.02249 23.1604 2.25711 23.3579 
 Track parameters:  pT 23.2486 cot(theta) 10.3001 phi0 1.48369 d0 -0.0033286 z0 -0.00291347
 Helix paramters: kappa 0.0430134 tan(Lambda) 0.0970862 phi0 to d0 3.05449
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -3201,7 +3126,7 @@ Hit position: 0.0841635 1.0002 -0.100365
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1435  ADC 26
 Strip: 1436  ADC 5
@@ -3275,15 +3200,12 @@ Hit position: 0.0823875 1.0002 0.00143808
 Number strips: 2
 Track number -1
 Event: 25
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -0.309099 23.8609 1.32193 23.8995 
 Track parameters:  pT 23.8629 cot(theta) 18.0516 phi0 1.58375 d0 0.00416797 z0 0.00767129
 Helix paramters: kappa -0.041906 tan(Lambda) 0.0553968 phi0 to d0 3.15455
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -3327,7 +3249,7 @@ Hit position: -0.0108395 1.0002 -0.0477412
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 893  ADC 4
 Strip: 894  ADC 27
@@ -3401,15 +3323,12 @@ Hit position: -0.011695 1.0002 -0.000204137
 Number strips: 2
 Track number -1
 Event: 26
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 1.99189 33.9873 -1.35186 34.0724 
 Track parameters:  pT 34.0456 cot(theta) -25.1842 phi0 1.51226 d0 0.00908583 z0 0.00804608
 Helix paramters: kappa -0.0293724 tan(Lambda) -0.0397074 phi0 to d0 3.08305
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -3453,7 +3372,7 @@ Hit position: 0.0539423 1.0002 0.0478192
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1079  ADC 3
 Strip: 1080  ADC 28
@@ -3527,15 +3446,12 @@ Hit position: 0.0547981 1.0002 0.000956504
 Number strips: 2
 Track number -1
 Event: 27
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -0.577456 28.7772 -2.0537 28.8562 
 Track parameters:  pT 28.783 cot(theta) -14.0152 phi0 1.59086 d0 -3.29667e-06 z0 -0.00834805
 Helix paramters: kappa -0.0347427 tan(Lambda) -0.0713511 phi0 to d0 3.16166
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -3579,7 +3495,7 @@ Hit position: -0.0148551 1.0002 0.0630256
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 947  ADC 4
 Strip: 948  ADC 27
@@ -3653,15 +3569,12 @@ Hit position: -0.0137785 1.0002 -0.000240505
 Number strips: 2
 Track number -1
 Event: 28
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 2.56108 23.812 -1.21171 23.9799 
 Track parameters:  pT 23.9493 cot(theta) -19.7649 phi0 1.46365 d0 0.000341396 z0 0.00735983
 Helix paramters: kappa -0.0417549 tan(Lambda) -0.0505949 phi0 to d0 3.03445
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -3705,7 +3618,7 @@ Hit position: 0.113611 1.0002 0.0582907
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1452  ADC 16
 Strip: 1453  ADC 15
@@ -3779,15 +3692,12 @@ Hit position: 0.114563 1.0002 0.00199971
 Number strips: 2
 Track number -1
 Event: 29
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -3.84241 34.5502 -1.73361 34.8064 
 Track parameters:  pT 34.7632 cot(theta) -20.0525 phi0 1.68155 d0 0.00367819 z0 -0.000521558
 Helix paramters: kappa 0.028766 tan(Lambda) -0.0498691 phi0 to d0 3.25235
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -3831,7 +3741,7 @@ Hit position: -0.119337 1.0002 0.0497103
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 501  ADC 2
 Strip: 502  ADC 29
@@ -3905,15 +3815,12 @@ Hit position: -0.118401 1.0002 -0.0020667
 Number strips: 2
 Track number -1
 Event: 30
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.31423 39.2486 -0.667595 39.3224 
 Track parameters:  pT 39.3167 cot(theta) -58.8931 phi0 1.62969 d0 0.0020672 z0 0.0097486
 Helix paramters: kappa 0.0254345 tan(Lambda) -0.0169799 phi0 to d0 3.20049
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -3957,7 +3864,7 @@ Hit position: -0.0648827 1.0002 0.0267675
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 743  ADC 19
 Strip: 744  ADC 12
@@ -4031,15 +3938,12 @@ Hit position: -0.064474 1.0002 -0.0011254
 Number strips: 2
 Track number -1
 Event: 31
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 3.59038 32.4388 -2.94864 32.7698 
 Track parameters:  pT 32.6368 cot(theta) -11.0684 phi0 1.46056 d0 -0.000593397 z0 -0.00323095
 Helix paramters: kappa -0.0306402 tan(Lambda) -0.0903471 phi0 to d0 3.03136
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -4083,7 +3987,7 @@ Hit position: 0.115986 1.0002 0.0877398
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1482  ADC 22
 Strip: 1483  ADC 9
@@ -4157,15 +4061,12 @@ Hit position: 0.11746 1.0002 0.00205026
 Number strips: 2
 Track number -1
 Event: 32
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 3.10887 27.1951 1.48135 27.4122 
 Track parameters:  pT 27.3722 cot(theta) 18.4779 phi0 1.45697 d0 -0.00394258 z0 0.00934506
 Helix paramters: kappa 0.0365334 tan(Lambda) 0.0541188 phi0 to d0 3.02777
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -4209,7 +4110,7 @@ Hit position: 0.112724 1.0002 -0.0451283
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1555  ADC 1
 Strip: 1556  ADC 30
@@ -4283,15 +4184,12 @@ Hit position: 0.111867 1.0002 0.00195264
 Number strips: 2
 Track number -1
 Event: 33
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -1.62524 32.8455 -0.87463 32.8974 
 Track parameters:  pT 32.8857 cot(theta) -37.5996 phi0 1.62024 d0 -0.00752554 z0 0.00626469
 Helix paramters: kappa 0.0304083 tan(Lambda) -0.026596 phi0 to d0 3.19103
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -4335,7 +4233,7 @@ Hit position: -0.0465319 1.0002 0.0328951
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 973  ADC 14
 Strip: 974  ADC 17
@@ -4409,15 +4307,12 @@ Hit position: -0.0459736 1.0002 -0.000802473
 Number strips: 2
 Track number -1
 Event: 34
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 4.49298 35.3592 0.904089 35.655 
 Track parameters:  pT 35.6435 cot(theta) 39.4247 phi0 1.44441 d0 -0.00376025 z0 -0.00358761
 Helix paramters: kappa -0.0280556 tan(Lambda) 0.0253648 phi0 to d0 3.0152
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -4461,7 +4356,7 @@ Hit position: 0.135201 1.0002 -0.0291877
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1611  ADC 10
 Strip: 1612  ADC 21
@@ -4529,15 +4424,12 @@ Hit position: 0.134618 1.0002 0.00234977
 Number strips: 2
 Track number -1
 Event: 35
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -1.11802 26.3165 2.25948 26.437 
 Track parameters:  pT 26.3402 cot(theta) 11.6577 phi0 1.61325 d0 0.00572474 z0 0.00302479
 Helix paramters: kappa -0.0379647 tan(Lambda) 0.0857805 phi0 to d0 3.18405
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -4581,7 +4473,7 @@ Hit position: -0.0425133 1.0002 -0.0828522
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 743  ADC 2
 Strip: 744  ADC 29
@@ -4655,15 +4547,12 @@ Hit position: -0.0439223 1.0002 -0.000766667
 Number strips: 2
 Track number -1
 Event: 36
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 1.66384 35.8617 -3.16509 36.0395 
 Track parameters:  pT 35.9003 cot(theta) -11.3426 phi0 1.52443 d0 -0.00609992 z0 0.000317514
 Helix paramters: kappa 0.0278549 tan(Lambda) -0.0881634 phi0 to d0 3.09523
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -4707,7 +4596,7 @@ Hit position: 0.0483205 1.0002 0.0886022
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1328  ADC 3
 Strip: 1329  ADC 28
@@ -4781,15 +4670,12 @@ Hit position: 0.0498118 1.0002 0.000869468
 Number strips: 2
 Track number -1
 Event: 37
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 4.05856 39.0481 2.31028 39.3264 
 Track parameters:  pT 39.2584 cot(theta) 16.993 phi0 1.46723 d0 -0.00239799 z0 -0.00720326
 Helix paramters: kappa 0.0254722 tan(Lambda) 0.0588479 phi0 to d0 3.03803
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -4833,7 +4719,7 @@ Hit position: 0.102489 1.0002 -0.0663716
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1485  ADC 31
 Strip: 1486  ADC 0
@@ -4907,15 +4793,12 @@ Hit position: 0.101333 1.0002 0.00176877
 Number strips: 2
 Track number -1
 Event: 38
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -3.03088 38.5068 0.670198 38.6317 
 Track parameters:  pT 38.6259 cot(theta) 57.6335 phi0 1.64934 d0 0.0062369 z0 0.000328819
 Helix paramters: kappa 0.0258894 tan(Lambda) 0.017351 phi0 to d0 3.22014
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -4959,7 +4842,7 @@ Hit position: -0.0889068 1.0002 -0.0170934
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 580  ADC 12
 Strip: 581  ADC 19
@@ -5033,15 +4916,12 @@ Hit position: -0.0891929 1.0002 -0.00155687
 Number strips: 2
 Track number -1
 Event: 39
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -1.65658 23.9645 -2.33903 24.1353 
 Track parameters:  pT 24.0217 cot(theta) -10.2699 phi0 1.63981 d0 -0.00528802 z0 -0.00631575
 Helix paramters: kappa -0.041629 tan(Lambda) -0.0973715 phi0 to d0 3.21061
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -5085,7 +4965,7 @@ Hit position: -0.057562 1.0002 0.0912325
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 858  ADC 22
 Strip: 859  ADC 9
@@ -5159,15 +5039,12 @@ Hit position: -0.0559463 1.0002 -0.000976547
 Number strips: 2
 Track number -1
 Event: 40
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -1.49737 26.0116 1.31432 26.0878 
 Track parameters:  pT 26.0547 cot(theta) 19.8237 phi0 1.6283 d0 -0.00870933 z0 0.00382221
 Helix paramters: kappa 0.0383808 tan(Lambda) 0.0504447 phi0 to d0 3.19909
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -5211,7 +5088,7 @@ Hit position: -0.0546355 1.0002 -0.0467087
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 963  ADC 12
 Strip: 964  ADC 19
@@ -5285,15 +5162,12 @@ Hit position: -0.0554109 1.0002 -0.000967201
 Number strips: 2
 Track number -1
 Event: 41
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -0.147346 33.1899 -0.85027 33.2012 
 Track parameters:  pT 33.1903 cot(theta) -39.035 phi0 1.57524 d0 0.000769822 z0 -0.00911251
 Helix paramters: kappa -0.0301293 tan(Lambda) -0.025618 phi0 to d0 3.14603
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -5337,7 +5211,7 @@ Hit position: -0.000692056 1.0002 0.0165108
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 994  ADC 15
 Strip: 995  ADC 16
@@ -5411,15 +5285,12 @@ Hit position: -0.000483797 1.0002 -8.44471e-06
 Number strips: 2
 Track number -1
 Event: 42
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 2.20184 36.0053 -2.14762 36.1365 
 Track parameters:  pT 36.0726 cot(theta) -16.7965 phi0 1.50972 d0 0.00291603 z0 0.00173587
 Helix paramters: kappa 0.0277219 tan(Lambda) -0.0595361 phi0 to d0 3.08052
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -5463,7 +5334,7 @@ Hit position: 0.0540671 1.0002 0.0613701
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1206  ADC 15
 Strip: 1207  ADC 16
@@ -5537,15 +5408,12 @@ Hit position: 0.0551593 1.0002 0.00096281
 Number strips: 2
 Track number -1
 Event: 43
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -3.47077 37.2864 -2.72446 37.5466 
 Track parameters:  pT 37.4476 cot(theta) -13.745 phi0 1.66361 d0 -0.00712298 z0 0.00255414
 Helix paramters: kappa -0.026704 tan(Lambda) -0.0727538 phi0 to d0 3.23441
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -5589,7 +5457,7 @@ Hit position: -0.0819005 1.0002 0.0755623
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 798  ADC 30
 Strip: 799  ADC 1
@@ -5663,15 +5531,12 @@ Hit position: -0.0806651 1.0002 -0.00140802
 Number strips: 2
 Track number -1
 Event: 44
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 0.0253068 25.5329 2.21051 25.6285 
 Track parameters:  pT 25.5329 cot(theta) 11.5507 phi0 1.56981 d0 -0.00108462 z0 -0.00459308
 Helix paramters: kappa 0.0391651 tan(Lambda) 0.0865749 phi0 to d0 3.1406
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -5715,7 +5580,7 @@ Hit position: -0.00379724 1.0002 -0.0911869
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1045  ADC 30
 Strip: 1046  ADC 1
@@ -5789,15 +5654,12 @@ Hit position: -0.00542498 1.0002 -9.46934e-05
 Number strips: 2
 Track number -1
 Event: 45
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 3.53004 32.8701 -3.25364 33.2188 
 Track parameters:  pT 33.0591 cot(theta) -10.1607 phi0 1.46381 d0 0.00723591 z0 0.00382459
 Helix paramters: kappa 0.0302489 tan(Lambda) -0.0984188 phi0 to d0 3.03461
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -5841,7 +5703,7 @@ Hit position: 0.0955344 1.0002 0.102706
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1304  ADC 27
 Strip: 1305  ADC 4
@@ -5915,15 +5777,12 @@ Hit position: 0.0972304 1.0002 0.00169716
 Number strips: 2
 Track number -1
 Event: 46
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 0.661571 32.6444 0.43228 32.654 
 Track parameters:  pT 32.6511 cot(theta) 75.5323 phi0 1.55053 d0 -0.00134353 z0 0.00206118
 Helix paramters: kappa -0.0306268 tan(Lambda) 0.0132394 phi0 to d0 3.12133
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -5967,7 +5826,7 @@ Hit position: 0.0262105 1.0002 -0.0111853
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1135  ADC 24
 Strip: 1136  ADC 7
@@ -6041,15 +5900,12 @@ Hit position: 0.0260218 1.0002 0.000454213
 Number strips: 2
 Track number -1
 Event: 47
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -1.2567 23.9583 -0.436302 23.9952 
 Track parameters:  pT 23.9913 cot(theta) -54.9878 phi0 1.6232 d0 0.00801182 z0 -0.00650293
 Helix paramters: kappa 0.0416818 tan(Lambda) -0.0181859 phi0 to d0 3.194
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -6093,7 +5949,7 @@ Hit position: -0.066773 1.0002 0.0117257
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 648  ADC 9
 Strip: 649  ADC 22
@@ -6167,15 +6023,12 @@ Hit position: -0.0665963 1.0002 -0.00116244
 Number strips: 2
 Track number -1
 Event: 48
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -2.19952 36.562 -1.2095 36.6481 
 Track parameters:  pT 36.6281 cot(theta) -30.2837 phi0 1.63088 d0 0.00930144 z0 0.00183988
 Helix paramters: kappa -0.0273014 tan(Lambda) -0.0330211 phi0 to d0 3.20168
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -6219,7 +6072,7 @@ Hit position: -0.0653699 1.0002 0.034938
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 600  ADC 21
 Strip: 601  ADC 10
@@ -6293,15 +6146,12 @@ Hit position: -0.0647256 1.0002 -0.00112979
 Number strips: 2
 Track number -1
 Event: 49
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.44597 21.6491 -0.0229186 21.7868 
 Track parameters:  pT 21.7868 cot(theta) -950.617 phi0 1.6833 d0 -0.00274639 z0 0.00510843
 Helix paramters: kappa 0.0458993 tan(Lambda) -0.00105195 phi0 to d0 3.2541
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -6345,7 +6195,7 @@ Hit position: -0.117263 1.0002 0.00616782
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 621  ADC 12
 Strip: 622  ADC 19
@@ -6419,15 +6269,12 @@ Hit position: -0.117131 1.0002 -0.00204452
 Number strips: 2
 Track number -1
 Event: 50
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 2.89734 27.2898 2.49752 27.5566 
 Track parameters:  pT 27.4432 cot(theta) 10.9882 phi0 1.46502 d0 -0.00221849 z0 0.00221989
 Helix paramters: kappa 0.0364389 tan(Lambda) 0.0910068 phi0 to d0 3.03582
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -6471,7 +6318,7 @@ Hit position: 0.102868 1.0002 -0.0892867
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1488  ADC 6
 Strip: 1489  ADC 25
@@ -6545,15 +6392,12 @@ Hit position: 0.101352 1.0002 0.00176911
 Number strips: 2
 Track number -1
 Event: 51
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 2.34689 25.0305 -0.0414632 25.1403 
 Track parameters:  pT 25.1402 cot(theta) -606.326 phi0 1.47731 d0 -0.00408952 z0 0.00935992
 Helix paramters: kappa 0.0397769 tan(Lambda) -0.00164928 phi0 to d0 3.0481
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -6597,7 +6441,7 @@ Hit position: 0.0918459 1.0002 0.0110165
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1476  ADC 8
 Strip: 1477  ADC 23
@@ -6671,15 +6515,12 @@ Hit position: 0.0919924 1.0002 0.00160573
 Number strips: 2
 Track number -1
 Event: 52
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 3.48358 29.4391 -0.591213 29.6504 
 Track parameters:  pT 29.6445 cot(theta) -50.1419 phi0 1.45301 d0 0.00218638 z0 -0.00143171
 Helix paramters: kappa 0.033733 tan(Lambda) -0.0199434 phi0 to d0 3.02381
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -6723,7 +6564,7 @@ Hit position: 0.110997 1.0002 0.0186379
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1448  ADC 1
 Strip: 1449  ADC 30
@@ -6797,15 +6638,12 @@ Hit position: 0.111306 1.0002 0.00194285
 Number strips: 2
 Track number -1
 Event: 53
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 2.52884 24.2898 -0.294841 24.4228 
 Track parameters:  pT 24.421 cot(theta) -82.8279 phi0 1.46706 d0 0.00563172 z0 0.00549572
 Helix paramters: kappa 0.0409483 tan(Lambda) -0.0120732 phi0 to d0 3.03785
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -6849,7 +6687,7 @@ Hit position: 0.0922446 1.0002 0.0176221
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1322  ADC 30
 Strip: 1323  ADC 1
@@ -6923,15 +6761,12 @@ Hit position: 0.0925536 1.0002 0.00161553
 Number strips: 2
 Track number -1
 Event: 54
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -3.82318 36.2973 -1.41753 36.5256 
 Track parameters:  pT 36.4981 cot(theta) -25.7478 phi0 1.67574 d0 -0.00346609 z0 -0.000694199
 Helix paramters: kappa 0.0273987 tan(Lambda) -0.0388383 phi0 to d0 3.24654
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -6975,7 +6810,7 @@ Hit position: -0.106043 1.0002 0.0383701
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 669  ADC 28
 Strip: 670  ADC 3
@@ -7049,15 +6884,12 @@ Hit position: -0.105223 1.0002 -0.00183667
 Number strips: 2
 Track number -1
 Event: 55
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 4.6016 38.7226 1.66577 39.0306 
 Track parameters:  pT 38.995 cot(theta) 23.4096 phi0 1.45252 d0 -0.00731331 z0 0.00576349
 Helix paramters: kappa 0.0256443 tan(Lambda) 0.0427176 phi0 to d0 3.02331
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -7101,7 +6933,7 @@ Hit position: 0.122293 1.0002 -0.037281
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1643  ADC 28
 Strip: 1644  ADC 3
@@ -7169,15 +7001,12 @@ Hit position: 0.12164 1.0002 0.00212323
 Number strips: 2
 Track number -1
 Event: 56
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.30135 36.5554 -2.05996 36.6856 
 Track parameters:  pT 36.6277 cot(theta) -17.7808 phi0 1.63367 d0 0.00176365 z0 0.00735729
 Helix paramters: kappa 0.0273017 tan(Lambda) -0.0562404 phi0 to d0 3.20446
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -7221,7 +7050,7 @@ Hit position: -0.0688564 1.0002 0.0637417
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 733  ADC 18
 Strip: 734  ADC 13
@@ -7295,15 +7124,12 @@ Hit position: -0.06768 1.0002 -0.00118136
 Number strips: 2
 Track number -1
 Event: 57
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.91773 25.6788 -2.4035 25.9556 
 Track parameters:  pT 25.844 cot(theta) -10.7527 phi0 1.68393 d0 0.000678097 z0 0.00197677
 Helix paramters: kappa 0.0386936 tan(Lambda) -0.0930002 phi0 to d0 3.25473
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -7347,7 +7173,7 @@ Hit position: -0.120253 1.0002 0.0956656
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 551  ADC 9
 Strip: 552  ADC 22
@@ -7421,15 +7247,12 @@ Hit position: -0.118575 1.0002 -0.00206974
 Number strips: 2
 Track number -1
 Event: 58
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -0.90998 33.9555 -2.48589 34.0586 
 Track parameters:  pT 33.9677 cot(theta) -13.6642 phi0 1.59759 d0 -0.00226465 z0 -0.00566569
 Helix paramters: kappa -0.0294397 tan(Lambda) -0.0731838 phi0 to d0 3.16839
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -7473,7 +7296,7 @@ Hit position: -0.0201211 1.0002 0.0675468
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 965  ADC 9
 Strip: 966  ADC 22
@@ -7547,15 +7370,12 @@ Hit position: -0.0189391 1.0002 -0.000330582
 Number strips: 2
 Track number -1
 Event: 59
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 1.76005 20.8153 0.471334 20.8948 
 Track parameters:  pT 20.8895 cot(theta) 44.32 phi0 1.48644 d0 0.000460377 z0 0.00336154
 Helix paramters: kappa 0.0478709 tan(Lambda) 0.0225632 phi0 to d0 3.05724
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -7599,7 +7419,7 @@ Hit position: 0.0768638 1.0002 -0.0192728
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1347  ADC 12
 Strip: 1348  ADC 19
@@ -7673,15 +7493,12 @@ Hit position: 0.0765238 1.0002 0.00133573
 Number strips: 2
 Track number -1
 Event: 60
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -2.17651 34.9149 -1.56809 35.0178 
 Track parameters:  pT 34.9827 cot(theta) -22.3091 phi0 1.63305 d0 -0.00299264 z0 -0.00954647
 Helix paramters: kappa -0.0285856 tan(Lambda) -0.0448247 phi0 to d0 3.20385
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -7725,7 +7542,7 @@ Hit position: -0.0550439 1.0002 0.0353544
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 837  ADC 13
 Strip: 838  ADC 18
@@ -7799,15 +7616,12 @@ Hit position: -0.0543917 1.0002 -0.000949411
 Number strips: 2
 Track number -1
 Event: 61
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -2.53902 21.556 -0.525966 21.7114 
 Track parameters:  pT 21.705 cot(theta) -41.267 phi0 1.68804 d0 -0.00164883 z0 -0.00143695
 Helix paramters: kappa -0.0460722 tan(Lambda) -0.0242324 phi0 to d0 3.25884
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -7851,7 +7665,7 @@ Hit position: -0.109111 1.0002 0.022944
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 591  ADC 10
 Strip: 592  ADC 21
@@ -7925,15 +7739,12 @@ Hit position: -0.108667 1.0002 -0.0018968
 Number strips: 2
 Track number -1
 Event: 62
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 1.83154 27.7701 0.3796 27.833 
 Track parameters:  pT 27.8305 cot(theta) 73.3152 phi0 1.50494 d0 -0.00491845 z0 0.00265686
 Helix paramters: kappa -0.0359319 tan(Lambda) 0.0136397 phi0 to d0 3.07573
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -7977,7 +7788,7 @@ Hit position: 0.0763271 1.0002 -0.0110248
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1390  ADC 17
 Strip: 1391  ADC 14
@@ -8051,15 +7862,12 @@ Hit position: 0.0761432 1.0002 0.00132909
 Number strips: 2
 Track number -1
 Event: 63
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 1.80399 29.6506 2.1208 29.7811 
 Track parameters:  pT 29.7055 cot(theta) 14.0067 phi0 1.51003 d0 -0.00655997 z0 0.00461357
 Helix paramters: kappa 0.0336639 tan(Lambda) 0.0713944 phi0 to d0 3.08083
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -8103,7 +7911,7 @@ Hit position: 0.0623486 1.0002 -0.0669349
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1394  ADC 4
 Strip: 1395  ADC 27
@@ -8177,15 +7985,12 @@ Hit position: 0.0611133 1.0002 0.00106674
 Number strips: 2
 Track number -1
 Event: 64
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -1.27159 23.8564 -1.5601 23.9412 
 Track parameters:  pT 23.8903 cot(theta) -15.3132 phi0 1.62405 d0 0.00547142 z0 0.00494045
 Helix paramters: kappa 0.0418581 tan(Lambda) -0.0653029 phi0 to d0 3.19484
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -8229,7 +8034,7 @@ Hit position: -0.0651034 1.0002 0.0703919
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 695  ADC 6
 Strip: 696  ADC 25
@@ -8303,15 +8108,12 @@ Hit position: -0.0638419 1.0002 -0.00111436
 Number strips: 2
 Track number -1
 Event: 65
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 0.0101139 20.3793 1.77519 20.4565 
 Track parameters:  pT 20.3793 cot(theta) 11.4801 phi0 1.5703 d0 0.00581663 z0 -0.00860491
 Helix paramters: kappa 0.0490693 tan(Lambda) 0.0871074 phi0 to d0 3.1411
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -8355,7 +8157,7 @@ Hit position: -0.0126788 1.0002 -0.0957323
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 903  ADC 2
 Strip: 904  ADC 29
@@ -8429,15 +8231,12 @@ Hit position: -0.0144301 1.0002 -0.000251878
 Number strips: 2
 Track number -1
 Event: 66
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 0.608035 27.9027 1.16448 27.9336 
 Track parameters:  pT 27.9093 cot(theta) 23.9673 phi0 1.54901 d0 0.00689011 z0 0.00244332
 Helix paramters: kappa 0.0358303 tan(Lambda) 0.0417236 phi0 to d0 3.1198
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -8481,7 +8280,7 @@ Hit position: 0.0095298 1.0002 -0.0392882
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 968  ADC 13
 Strip: 969  ADC 18
@@ -8555,15 +8354,12 @@ Hit position: 0.00879866 1.0002 0.000153581
 Number strips: 2
 Track number -1
 Event: 67
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -0.25063 37.6047 2.12392 37.6655 
 Track parameters:  pT 37.6056 cot(theta) 17.7057 phi0 1.57746 d0 -0.00804988 z0 -0.00582216
 Helix paramters: kappa -0.0265918 tan(Lambda) 0.0564789 phi0 to d0 3.14826
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -8607,7 +8403,7 @@ Hit position: 0.00537118 1.0002 -0.0623097
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1161  ADC 20
 Strip: 1162  ADC 11
@@ -8681,15 +8477,12 @@ Hit position: 0.00427032 1.0002 7.45387e-05
 Number strips: 2
 Track number -1
 Event: 68
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.54776 31.8591 1.74061 32.0082 
 Track parameters:  pT 31.9608 cot(theta) 18.3618 phi0 1.6506 d0 -0.0021472 z0 -0.00264813
 Helix paramters: kappa 0.0312883 tan(Lambda) 0.0544609 phi0 to d0 3.22139
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -8733,7 +8526,7 @@ Hit position: -0.0825707 1.0002 -0.0573058
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 743  ADC 13
 Strip: 744  ADC 18
@@ -8807,15 +8600,12 @@ Hit position: -0.0834712 1.0002 -0.00145699
 Number strips: 2
 Track number -1
 Event: 69
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -1.34418 20.6567 1.01936 20.7255 
 Track parameters:  pT 20.7004 cot(theta) 20.3073 phi0 1.63578 d0 0.00406622 z0 -0.000184764
 Helix paramters: kappa 0.0483082 tan(Lambda) 0.0492433 phi0 to d0 3.20657
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -8859,7 +8649,7 @@ Hit position: -0.0764616 1.0002 -0.0495802
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 675  ADC 9
 Strip: 676  ADC 22
@@ -8933,15 +8723,12 @@ Hit position: -0.077214 1.0002 -0.00134778
 Number strips: 2
 Track number -1
 Event: 70
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 0.899701 32.2362 -1.87164 32.303 
 Track parameters:  pT 32.2488 cot(theta) -17.2302 phi0 1.54289 d0 0.00442617 z0 -0.00795185
 Helix paramters: kappa 0.0310089 tan(Lambda) -0.0580375 phi0 to d0 3.11369
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -8985,7 +8772,7 @@ Hit position: 0.0188341 1.0002 0.050106
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1043  ADC 23
 Strip: 1044  ADC 8
@@ -9059,15 +8846,12 @@ Hit position: 0.0196293 1.0002 0.00034263
 Number strips: 2
 Track number -1
 Event: 71
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.47439 26.5934 0.385894 26.7111 
 Track parameters:  pT 26.7083 cot(theta) 69.2114 phi0 1.66357 d0 -0.00228729 z0 0.000867962
 Helix paramters: kappa 0.0374415 tan(Lambda) 0.0144485 phi0 to d0 3.23437
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -9111,7 +8895,7 @@ Hit position: -0.0964579 1.0002 -0.0136507
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 693  ADC 26
 Strip: 694  ADC 5
@@ -9185,15 +8969,12 @@ Hit position: -0.0967337 1.0002 -0.00168849
 Number strips: 2
 Track number -1
 Event: 72
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -3.39861 37.2517 1.77906 37.4487 
 Track parameters:  pT 37.4065 cot(theta) 21.0259 phi0 1.66178 d0 0.00714286 z0 -0.00885966
 Helix paramters: kappa 0.0267334 tan(Lambda) 0.0475603 phi0 to d0 3.23257
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -9237,7 +9018,7 @@ Hit position: -0.102492 1.0002 -0.0566762
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 512  ADC 14
 Strip: 513  ADC 17
@@ -9311,15 +9092,12 @@ Hit position: -0.103442 1.0002 -0.00180559
 Number strips: 2
 Track number -1
 Event: 73
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -3.03988 31.0532 -1.19853 31.2246 
 Track parameters:  pT 31.2016 cot(theta) -26.0331 phi0 1.66838 d0 -0.00587667 z0 0.00310176
 Helix paramters: kappa 0.0320497 tan(Lambda) -0.0384126 phi0 to d0 3.23917
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -9363,7 +9141,7 @@ Hit position: -0.0968821 1.0002 0.0417025
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 746  ADC 4
 Strip: 747  ADC 27
@@ -9437,15 +9215,12 @@ Hit position: -0.0961724 1.0002 -0.0016787
 Number strips: 2
 Track number -1
 Event: 74
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -1.74031 39.5019 0.582428 39.5445 
 Track parameters:  pT 39.5403 cot(theta) 67.8886 phi0 1.61482 d0 -0.00590632 z0 0.00933663
 Helix paramters: kappa 0.0252907 tan(Lambda) 0.01473 phi0 to d0 3.18562
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -9489,7 +9264,7 @@ Hit position: -0.041956 1.0002 -0.00540938
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 962  ADC 1
 Strip: 963  ADC 30
@@ -9563,15 +9338,12 @@ Hit position: -0.0420259 1.0002 -0.000733564
 Number strips: 2
 Track number -1
 Event: 75
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 0.0792513 39.2118 2.97233 39.3244 
 Track parameters:  pT 39.2119 cot(theta) 13.1923 phi0 1.56878 d0 0.00416615 z0 0.000250614
 Helix paramters: kappa 0.0255025 tan(Lambda) 0.0758018 phi0 to d0 3.13957
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -9615,7 +9387,7 @@ Hit position: -0.00596886 1.0002 -0.075566
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 945  ADC 5
 Strip: 946  ADC 26
@@ -9689,15 +9461,12 @@ Hit position: -0.00733437 1.0002 -0.000128022
 Number strips: 2
 Track number -1
 Event: 76
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.06635 25.0297 2.27445 25.2176 
 Track parameters:  pT 25.1148 cot(theta) 11.0421 phi0 1.65317 d0 -0.000183475 z0 0.00476269
 Helix paramters: kappa 0.0398171 tan(Lambda) 0.0905622 phi0 to d0 3.22396
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -9741,7 +9510,7 @@ Hit position: -0.0884265 1.0002 -0.0861716
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 693  ADC 27
 Strip: 694  ADC 4
@@ -9815,15 +9584,12 @@ Hit position: -0.0899411 1.0002 -0.00156993
 Number strips: 2
 Track number -1
 Event: 77
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 2.87103 26.0419 0.925276 26.216 
 Track parameters:  pT 26.1996 cot(theta) 28.3155 phi0 1.46099 d0 0.00403126 z0 0.00756759
 Helix paramters: kappa -0.0381685 tan(Lambda) 0.0353163 phi0 to d0 3.03179
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -9867,7 +9633,7 @@ Hit position: 0.112044 1.0002 -0.0279775
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1388  ADC 11
 Strip: 1389  ADC 20
@@ -9941,15 +9707,12 @@ Hit position: 0.111596 1.0002 0.00194791
 Number strips: 2
 Track number -1
 Event: 78
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 3.18641 39.3544 -2.22893 39.546 
 Track parameters:  pT 39.4831 cot(theta) -17.714 phi0 1.49001 d0 -0.00719336 z0 0.00549404
 Helix paramters: kappa 0.0253273 tan(Lambda) -0.0564526 phi0 to d0 3.0608
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -9993,7 +9756,7 @@ Hit position: 0.0843628 1.0002 0.0621587
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1488  ADC 1
 Strip: 1489  ADC 30
@@ -10067,15 +9830,12 @@ Hit position: 0.0853934 1.0002 0.00149055
 Number strips: 2
 Track number -1
 Event: 79
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 1.74103 30.7811 0.825565 30.8414 
 Track parameters:  pT 30.8303 cot(theta) 37.3445 phi0 1.51429 d0 0.00297984 z0 -0.00146243
 Helix paramters: kappa -0.0324356 tan(Lambda) 0.0267777 phi0 to d0 3.08509
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -10119,7 +9879,7 @@ Hit position: 0.0584768 1.0002 -0.0282916
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1194  ADC 14
 Strip: 1195  ADC 17
@@ -10193,15 +9953,12 @@ Hit position: 0.0579589 1.0002 0.00101168
 Number strips: 2
 Track number -1
 Event: 80
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 0.444467 26.2451 -0.534131 26.2543 
 Track parameters:  pT 26.2489 cot(theta) -49.1432 phi0 1.55386 d0 -0.000648608 z0 -3.61018e-05
 Helix paramters: kappa -0.0380968 tan(Lambda) -0.0203487 phi0 to d0 3.12466
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -10245,7 +10002,7 @@ Hit position: 0.023304 1.0002 0.0203222
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1109  ADC 25
 Strip: 1110  ADC 6
@@ -10319,15 +10076,12 @@ Hit position: 0.0236093 1.0002 0.000412102
 Number strips: 2
 Track number -1
 Event: 81
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -2.22046 23.8516 1.23701 23.9867 
 Track parameters:  pT 23.9548 cot(theta) 19.3651 phi0 1.66362 d0 -0.00827156 z0 -0.00857831
 Helix paramters: kappa -0.0417453 tan(Lambda) 0.0516394 phi0 to d0 3.23442
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -10371,7 +10125,7 @@ Hit position: -0.0784814 1.0002 -0.0603827
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 822  ADC 13
 Strip: 823  ADC 18
@@ -10445,15 +10199,12 @@ Hit position: -0.0794395 1.0002 -0.00138662
 Number strips: 2
 Track number -1
 Event: 82
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 1.36075 24.9721 -2.28977 25.1138 
 Track parameters:  pT 25.0092 cot(theta) -10.9222 phi0 1.51636 d0 -0.00177558 z0 -0.000259283
 Helix paramters: kappa 0.0399853 tan(Lambda) -0.091557 phi0 to d0 3.08716
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -10497,7 +10248,7 @@ Hit position: 0.0502598 1.0002 0.091433
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1272  ADC 7
 Strip: 1273  ADC 24
@@ -10571,15 +10322,12 @@ Hit position: 0.0518824 1.0002 0.000905611
 Number strips: 2
 Track number -1
 Event: 83
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 3.6903 28.2822 -1.89284 28.5847 
 Track parameters:  pT 28.5219 cot(theta) -15.0683 phi0 1.44105 d0 0.0097016 z0 0.0050782
 Helix paramters: kappa 0.0350607 tan(Lambda) -0.0663645 phi0 to d0 3.01184
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -10623,7 +10371,7 @@ Hit position: 0.115352 1.0002 0.0718897
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1345  ADC 5
 Strip: 1346  ADC 26
@@ -10697,15 +10445,12 @@ Hit position: 0.116582 1.0002 0.00203495
 Number strips: 2
 Track number -1
 Event: 84
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -2.76976 21.3304 -1.42375 21.5565 
 Track parameters:  pT 21.5094 cot(theta) -15.1076 phi0 1.69992 d0 0.00699706 z0 -0.00240374
 Helix paramters: kappa -0.0464912 tan(Lambda) -0.0661917 phi0 to d0 3.27072
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -10749,7 +10494,7 @@ Hit position: -0.129784 1.0002 0.0643584
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 369  ADC 30
 Strip: 370  ADC 1
@@ -10817,15 +10562,12 @@ Hit position: -0.1286 1.0002 -0.00224472
 Number strips: 2
 Track number -1
 Event: 85
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -1.78485 21.091 0.948147 21.1876 
 Track parameters:  pT 21.1664 cot(theta) 22.324 phi0 1.65522 d0 0.000773154 z0 -0.00840864
 Helix paramters: kappa -0.0472447 tan(Lambda) 0.0447949 phi0 to d0 3.22602
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -10869,7 +10611,7 @@ Hit position: -0.0782653 1.0002 -0.0533501
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 675  ADC 2
 Strip: 676  ADC 29
@@ -10943,15 +10685,12 @@ Hit position: -0.0791686 1.0002 -0.00138189
 Number strips: 2
 Track number -1
 Event: 86
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.74285 33.236 2.74439 33.4618 
 Track parameters:  pT 33.349 cot(theta) 12.1517 phi0 1.65314 d0 -0.00331518 z0 0.00204172
 Helix paramters: kappa 0.0299859 tan(Lambda) 0.0822931 phi0 to d0 3.22393
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -10995,7 +10734,7 @@ Hit position: -0.0837601 1.0002 -0.080557
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 756  ADC 13
 Strip: 757  ADC 18
@@ -11069,15 +10808,12 @@ Hit position: -0.085129 1.0002 -0.00148593
 Number strips: 2
 Track number -1
 Event: 87
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -2.11391 20.2197 1.99661 20.4277 
 Track parameters:  pT 20.3299 cot(theta) 10.1822 phi0 1.67497 d0 0.00302784 z0 -0.00875937
 Helix paramters: kappa -0.0491886 tan(Lambda) 0.0982105 phi0 to d0 3.24576
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -11121,7 +10857,7 @@ Hit position: -0.100122 1.0002 -0.107483
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 550  ADC 7
 Strip: 551  ADC 24
@@ -11195,15 +10931,12 @@ Hit position: -0.101984 1.0002 -0.00178015
 Number strips: 2
 Track number -1
 Event: 88
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 0.111267 21.7399 0.408656 21.7441 
 Track parameters:  pT 21.7402 cot(theta) 53.1993 phi0 1.56568 d0 0.00157312 z0 -0.00366587
 Helix paramters: kappa 0.0459977 tan(Lambda) 0.0187973 phi0 to d0 3.13647
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -11247,7 +10980,7 @@ Hit position: -0.00335169 1.0002 -0.0224669
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1007  ADC 19
 Strip: 1008  ADC 12
@@ -11321,15 +11054,12 @@ Hit position: -0.00370266 1.0002 -6.46302e-05
 Number strips: 2
 Track number -1
 Event: 89
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -4.26336 34.2935 2.62007 34.6567 
 Track parameters:  pT 34.5575 cot(theta) 13.1895 phi0 1.69448 d0 0.00988996 z0 -0.00417745
 Helix paramters: kappa 0.0289373 tan(Lambda) 0.0758176 phi0 to d0 3.26528
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -11373,7 +11103,7 @@ Hit position: -0.138767 1.0002 -0.0807299
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 323  ADC 28
 Strip: 324  ADC 3
@@ -11441,15 +11171,12 @@ Hit position: -0.14014 1.0002 -0.00244615
 Number strips: 2
 Track number -1
 Event: 90
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -1.07213 23.2675 0.844971 23.3075 
 Track parameters:  pT 23.2922 cot(theta) 27.5657 phi0 1.61684 d0 -0.00441207 z0 -0.00661384
 Helix paramters: kappa 0.0429328 tan(Lambda) 0.036277 phi0 to d0 3.18764
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -11493,7 +11220,7 @@ Hit position: -0.0481311 1.0002 -0.042941
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 922  ADC 10
 Strip: 923  ADC 21
@@ -11567,15 +11294,12 @@ Hit position: -0.0489216 1.0002 -0.000853929
 Number strips: 2
 Track number -1
 Event: 91
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.5859 26.6605 0.944154 26.8023 
 Track parameters:  pT 26.7856 cot(theta) 28.37 phi0 1.66749 d0 0.00917561 z0 0.00855754
 Helix paramters: kappa 0.0373334 tan(Lambda) 0.0352485 phi0 to d0 3.23828
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -11619,7 +11343,7 @@ Hit position: -0.111926 1.0002 -0.026915
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 446  ADC 7
 Strip: 447  ADC 24
@@ -11693,15 +11417,12 @@ Hit position: -0.112299 1.0002 -0.00196019
 Number strips: 2
 Track number -1
 Event: 92
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.91073 24.3245 0.322014 24.5002 
 Track parameters:  pT 24.498 cot(theta) 76.0775 phi0 1.68989 d0 -0.00704021 z0 -0.000232419
 Helix paramters: kappa 0.0408196 tan(Lambda) 0.0131445 phi0 to d0 3.26069
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -11745,7 +11466,7 @@ Hit position: -0.118848 1.0002 -0.0134724
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 682  ADC 21
 Strip: 683  ADC 10
@@ -11819,15 +11540,12 @@ Hit position: -0.119092 1.0002 -0.00207875
 Number strips: 2
 Track number -1
 Event: 93
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -0.454127 38.8117 0.0898096 38.8144 
 Track parameters:  pT 38.8143 cot(theta) 432.185 phi0 1.5825 d0 -0.000826607 z0 -0.00963203
 Helix paramters: kappa 0.0257637 tan(Lambda) 0.00231383 phi0 to d0 3.15329
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -11871,7 +11589,7 @@ Hit position: -0.014741 1.0002 -0.0119466
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 990  ADC 8
 Strip: 991  ADC 23
@@ -11945,15 +11663,12 @@ Hit position: -0.0150042 1.0002 -0.000261899
 Number strips: 2
 Track number -1
 Event: 94
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 2.45346 28.6313 -2.12638 28.8148 
 Track parameters:  pT 28.7362 cot(theta) -13.5141 phi0 1.48531 d0 0.000648164 z0 -0.0065064
 Helix paramters: kappa 0.0347993 tan(Lambda) -0.0739966 phi0 to d0 3.05611
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -11997,7 +11712,7 @@ Hit position: 0.0797875 1.0002 0.0677402
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1349  ADC 15
 Strip: 1350  ADC 16
@@ -12071,15 +11786,12 @@ Hit position: 0.0808651 1.0002 0.00141151
 Number strips: 2
 Track number -1
 Event: 95
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 1.04429 26.5408 -0.689843 26.5703 
 Track parameters:  pT 26.5613 cot(theta) -38.5034 phi0 1.53147 d0 -0.00676092 z0 0.00418555
 Helix paramters: kappa -0.0376487 tan(Lambda) -0.0259717 phi0 to d0 3.10227
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -12123,7 +11835,7 @@ Hit position: 0.0517853 1.0002 0.0301958
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1321  ADC 19
 Strip: 1322  ADC 12
@@ -12197,15 +11909,12 @@ Hit position: 0.052334 1.0002 0.000913493
 Number strips: 2
 Track number -1
 Event: 96
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 0.987526 24.6317 -1.27046 24.6842 
 Track parameters:  pT 24.6515 cot(theta) -19.4036 phi0 1.53073 d0 0.005501 z0 0.00774205
 Helix paramters: kappa 0.0405655 tan(Lambda) -0.0515367 phi0 to d0 3.10152
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -12249,7 +11958,7 @@ Hit position: 0.028502 1.0002 0.0593078
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1069  ADC 5
 Strip: 1070  ADC 26
@@ -12323,15 +12032,12 @@ Hit position: 0.0296084 1.0002 0.000516816
 Number strips: 2
 Track number -1
 Event: 97
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 0.121948 30.3411 2.77673 30.4682 
 Track parameters:  pT 30.3414 cot(theta) 10.927 phi0 1.56678 d0 -0.00487669 z0 0.00719512
 Helix paramters: kappa -0.0329583 tan(Lambda) 0.0915162 phi0 to d0 3.13757
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -12375,7 +12081,7 @@ Hit position: 0.0138397 1.0002 -0.0843452
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1141  ADC 12
 Strip: 1142  ADC 19
@@ -12449,15 +12155,12 @@ Hit position: 0.0124304 1.0002 0.000216973
 Number strips: 2
 Track number -1
 Event: 98
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 1.19886 21.978 -1.58027 22.0674 
 Track parameters:  pT 22.0107 cot(theta) -13.9285 phi0 1.5163 d0 -0.00134663 z0 0.000197578
 Helix paramters: kappa 0.0454325 tan(Lambda) -0.0717954 phi0 to d0 3.0871
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -12501,7 +12204,7 @@ Hit position: 0.049068 1.0002 0.0720948
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1263  ADC 8
 Strip: 1264  ADC 23
@@ -12575,15 +12278,12 @@ Hit position: 0.0503343 1.0002 0.000878588
 Number strips: 2
 Track number -1
 Event: 99
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -3.13211 29.7662 2.25047 30.015 
 Track parameters:  pT 29.9305 cot(theta) 13.2997 phi0 1.67563 d0 0.00190785 z0 -0.00775539
 Helix paramters: kappa -0.0334107 tan(Lambda) 0.0751896 phi0 to d0 3.24643
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -12627,7 +12327,7 @@ Hit position: -0.102073 1.0002 -0.0833515
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 568  ADC 0
 Strip: 569  ADC 31
@@ -12701,15 +12401,12 @@ Hit position: -0.103604 1.0002 -0.00180841
 Number strips: 2
 Track number -1
 Event: 100
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 2.88318 36.2197 -1.15114 36.3525 
 Track parameters:  pT 36.3343 cot(theta) -31.5639 phi0 1.49136 d0 -0.00750638 z0 -0.00840475
 Helix paramters: kappa 0.0275222 tan(Lambda) -0.0316818 phi0 to d0 3.06216
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -12753,7 +12450,7 @@ Hit position: 0.0829797 1.0002 0.0233924
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1490  ADC 31
 Strip: 1491  ADC 0
@@ -12827,15 +12524,12 @@ Hit position: 0.0833228 1.0002 0.0014544
 Number strips: 2
 Track number -1
 Event: 101
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -4.20651 36.8654 -0.997934 37.118 
 Track parameters:  pT 37.1046 cot(theta) -37.1814 phi0 1.68441 d0 0.00734465 z0 -0.000444271
 Helix paramters: kappa 0.0269508 tan(Lambda) -0.0268951 phi0 to d0 3.25521
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -12879,7 +12573,7 @@ Hit position: -0.125651 1.0002 0.0266662
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 415  ADC 0
 Strip: 416  ADC 31
@@ -12947,15 +12641,12 @@ Hit position: -0.125155 1.0002 -0.00218459
 Number strips: 2
 Track number -1
 Event: 102
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 1.16848 33.0504 -0.977361 33.0855 
 Track parameters:  pT 33.0711 cot(theta) -33.8371 phi0 1.53546 d0 0.00187277 z0 0.00800175
 Helix paramters: kappa -0.0302379 tan(Lambda) -0.0295534 phi0 to d0 3.10625
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -12999,7 +12690,7 @@ Hit position: 0.0380315 1.0002 0.0375827
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1131  ADC 12
 Strip: 1132  ADC 19
@@ -13073,15 +12764,12 @@ Hit position: 0.0387231 1.0002 0.000675915
 Number strips: 2
 Track number -1
 Event: 103
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.83893 36.084 1.12141 36.2128 
 Track parameters:  pT 36.1955 cot(theta) 32.2767 phi0 1.64931 d0 0.00973965 z0 -0.00696859
 Helix paramters: kappa 0.0276278 tan(Lambda) 0.0309821 phi0 to d0 3.22011
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -13125,7 +12813,7 @@ Hit position: -0.0926518 1.0002 -0.038087
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 510  ADC 19
 Strip: 511  ADC 12
@@ -13199,15 +12887,12 @@ Hit position: -0.093231 1.0002 -0.00162735
 Number strips: 2
 Track number -1
 Event: 104
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 2.11624 20.781 -0.467837 20.8937 
 Track parameters:  pT 20.8884 cot(theta) -44.649 phi0 1.46931 d0 -0.00297709 z0 0.00198504
 Helix paramters: kappa -0.0478734 tan(Lambda) -0.0223969 phi0 to d0 3.04011
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -13251,7 +12936,7 @@ Hit position: 0.112155 1.0002 0.0245265
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1497  ADC 26
 Strip: 1498  ADC 5
@@ -13325,15 +13010,12 @@ Hit position: 0.112583 1.0002 0.00196514
 Number strips: 2
 Track number -1
 Event: 105
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -2.23135 21.4996 0.37834 21.6184 
 Track parameters:  pT 21.6151 cot(theta) 57.1313 phi0 1.67421 d0 0.00978207 z0 0.00268153
 Helix paramters: kappa -0.046264 tan(Lambda) 0.0175035 phi0 to d0 3.24501
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -13377,7 +13059,7 @@ Hit position: -0.106587 1.0002 -0.0149251
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 417  ADC 10
 Strip: 418  ADC 21
@@ -13451,15 +13133,12 @@ Hit position: -0.106822 1.0002 -0.00186459
 Number strips: 2
 Track number -1
 Event: 106
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -3.064 29.0885 2.31603 29.341 
 Track parameters:  pT 29.2494 cot(theta) 12.6291 phi0 1.67574 d0 0.00546892 z0 0.00726837
 Helix paramters: kappa 0.0341887 tan(Lambda) 0.079182 phi0 to d0 3.24654
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -13503,7 +13182,7 @@ Hit position: -0.116078 1.0002 -0.072458
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 488  ADC 27
 Strip: 489  ADC 4
@@ -13577,15 +13256,12 @@ Hit position: -0.117369 1.0002 -0.00204869
 Number strips: 2
 Track number -1
 Event: 107
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -2.30955 38.4869 0.480503 38.5591 
 Track parameters:  pT 38.5561 cot(theta) 80.2411 phi0 1.63073 d0 0.00308354 z0 -0.0021941
 Helix paramters: kappa -0.0259362 tan(Lambda) 0.0124624 phi0 to d0 3.20153
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -13629,7 +13305,7 @@ Hit position: -0.0591998 1.0002 -0.014681
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 725  ADC 14
 Strip: 726  ADC 17
@@ -13703,15 +13379,12 @@ Hit position: -0.0595135 1.0002 -0.00103881
 Number strips: 2
 Track number -1
 Event: 108
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -4.62605 37.453 0.152737 37.7379 
 Track parameters:  pT 37.7376 cot(theta) 247.075 phi0 1.69369 d0 0.0062101 z0 0.00235541
 Helix paramters: kappa 0.0264988 tan(Lambda) 0.00404735 phi0 to d0 3.26449
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -13755,7 +13428,7 @@ Hit position: -0.133873 1.0002 -0.00172869
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 401  ADC 14
 Strip: 402  ADC 17
@@ -13823,15 +13496,12 @@ Hit position: -0.133883 1.0002 -0.00233693
 Number strips: 2
 Track number -1
 Event: 109
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.57293 37.1897 1.03306 37.2929 
 Track parameters:  pT 37.2786 cot(theta) 36.0856 phi0 1.63987 d0 0.0057626 z0 -0.00479041
 Helix paramters: kappa 0.0268251 tan(Lambda) 0.0277119 phi0 to d0 3.21067
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -13875,7 +13545,7 @@ Hit position: -0.0790311 1.0002 -0.0325932
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 628  ADC 14
 Strip: 629  ADC 17
@@ -13949,15 +13619,12 @@ Hit position: -0.079575 1.0002 -0.00138899
 Number strips: 2
 Track number -1
 Event: 110
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 1.08394 24.4279 -1.99527 24.5332 
 Track parameters:  pT 24.4519 cot(theta) -12.2549 phi0 1.52645 d0 -0.00365143 z0 -0.0052682
 Helix paramters: kappa -0.0408966 tan(Lambda) -0.0815998 phi0 to d0 3.09725
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -14001,7 +13668,7 @@ Hit position: 0.0541934 1.0002 0.0764657
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1279  ADC 14
 Strip: 1280  ADC 17
@@ -14075,15 +13742,12 @@ Hit position: 0.0554883 1.0002 0.000968552
 Number strips: 2
 Track number -1
 Event: 111
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 0.548055 31.5206 -2.75228 31.6452 
 Track parameters:  pT 31.5253 cot(theta) -11.4543 phi0 1.55341 d0 -0.0087683 z0 0.0051467
 Helix paramters: kappa -0.0317205 tan(Lambda) -0.0873038 phi0 to d0 3.12421
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -14127,7 +13791,7 @@ Hit position: 0.0309215 1.0002 0.092503
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1272  ADC 20
 Strip: 1273  ADC 11
@@ -14201,15 +13865,12 @@ Hit position: 0.0325692 1.0002 0.000568498
 Number strips: 2
 Track number -1
 Event: 112
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 2.50241 31.124 -2.79992 31.3497 
 Track parameters:  pT 31.2244 cot(theta) -11.1519 phi0 1.49057 d0 -0.00033721 z0 0.00952587
 Helix paramters: kappa -0.0320262 tan(Lambda) -0.0896708 phi0 to d0 3.06136
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -14253,7 +13914,7 @@ Hit position: 0.085609 1.0002 0.0995428
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1356  ADC 16
 Strip: 1357  ADC 15
@@ -14327,15 +13988,12 @@ Hit position: 0.0872448 1.0002 0.00152286
 Number strips: 2
 Track number -1
 Event: 113
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.19739 22.4999 0.508716 22.6127 
 Track parameters:  pT 22.607 cot(theta) 44.4393 phi0 1.66815 d0 -0.00812345 z0 -0.00775456
 Helix paramters: kappa 0.0442341 tan(Lambda) 0.0225026 phi0 to d0 3.23895
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -14379,7 +14037,7 @@ Hit position: -0.0962462 1.0002 -0.0303663
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 791  ADC 23
 Strip: 792  ADC 8
@@ -14453,15 +14111,12 @@ Hit position: -0.0967853 1.0002 -0.00168939
 Number strips: 2
 Track number -1
 Event: 114
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 2.72155 37.0937 0.770778 37.2014 
 Track parameters:  pT 37.1934 cot(theta) 48.2544 phi0 1.49756 d0 -0.00256478 z0 0.00913592
 Helix paramters: kappa -0.0268865 tan(Lambda) 0.0207235 phi0 to d0 3.06835
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -14505,7 +14160,7 @@ Hit position: 0.0800243 1.0002 -0.0116577
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1372  ADC 29
 Strip: 1373  ADC 2
@@ -14579,15 +14234,12 @@ Hit position: 0.0796588 1.0002 0.00139045
 Number strips: 2
 Track number -1
 Event: 115
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -0.735463 28.3679 -1.82206 28.4358 
 Track parameters:  pT 28.3774 cot(theta) -15.5744 phi0 1.59672 d0 0.0072448 z0 0.00910039
 Helix paramters: kappa -0.0352393 tan(Lambda) -0.064208 phi0 to d0 3.16751
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -14631,7 +14283,7 @@ Hit position: -0.027888 1.0002 0.0733473
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 780  ADC 28
 Strip: 781  ADC 3
@@ -14705,15 +14357,12 @@ Hit position: -0.026583 1.0002 -0.000464009
 Number strips: 2
 Track number -1
 Event: 116
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -1.01692 20.6703 1.31449 20.737 
 Track parameters:  pT 20.6953 cot(theta) 15.744 phi0 1.61995 d0 -0.00651116 z0 -0.00653225
 Helix paramters: kappa 0.0483203 tan(Lambda) 0.0635165 phi0 to d0 3.19075
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -14757,7 +14406,7 @@ Hit position: -0.0499611 1.0002 -0.0701428
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 951  ADC 14
 Strip: 952  ADC 17
@@ -14831,15 +14480,12 @@ Hit position: -0.0511664 1.0002 -0.000893113
 Number strips: 2
 Track number -1
 Event: 117
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 3.0347 33.8991 -1.77983 34.0812 
 Track parameters:  pT 34.0346 cot(theta) -19.1224 phi0 1.48151 d0 -0.00992222 z0 0.00900205
 Helix paramters: kappa -0.0293818 tan(Lambda) -0.0522948 phi0 to d0 3.05231
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -14883,7 +14529,7 @@ Hit position: 0.103972 1.0002 0.0615845
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1584  ADC 0
 Strip: 1585  ADC 31
@@ -14957,15 +14603,12 @@ Hit position: 0.105016 1.0002 0.00183307
 Number strips: 2
 Track number -1
 Event: 118
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum -1.80909 32.8554 0.941111 32.9186 
 Track parameters:  pT 32.9051 cot(theta) 34.9641 phi0 1.6258 d0 0.00824034 z0 -0.00430088
 Helix paramters: kappa -0.0303904 tan(Lambda) 0.0286007 phi0 to d0 3.1966
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -15009,7 +14652,7 @@ Hit position: -0.058746 1.0002 -0.0329568
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 642  ADC 29
 Strip: 643  ADC 2
@@ -15083,15 +14726,12 @@ Hit position: -0.0592684 1.0002 -0.00103453
 Number strips: 2
 Track number -1
 Event: 119
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.81496 36.9593 1.3697 37.0916 
 Track parameters:  pT 37.0663 cot(theta) 27.0617 phi0 1.64681 d0 0.00356679 z0 0.00957298
 Helix paramters: kappa 0.0269787 tan(Lambda) 0.0369526 phi0 to d0 3.21761
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -15135,7 +14775,7 @@ Hit position: -0.0838418 1.0002 -0.027516
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 644  ADC 23
 Strip: 645  ADC 8
@@ -15209,15 +14849,12 @@ Hit position: -0.0843291 1.0002 -0.00147197
 Number strips: 2
 Track number -1
 Event: 120
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 2.34572 38.6902 3.7562 38.9428 
 Track parameters:  pT 38.7612 cot(theta) 10.3193 phi0 1.51024 d0 -0.00339616 z0 -0.00239196
 Helix paramters: kappa -0.025799 tan(Lambda) 0.096906 phi0 to d0 3.08104
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -15261,7 +14898,7 @@ Hit position: 0.0679365 1.0002 -0.0995391
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1337  ADC 19
 Strip: 1338  ADC 12
@@ -15335,15 +14972,12 @@ Hit position: 0.0661899 1.0002 0.00115535
 Number strips: 2
 Track number -1
 Event: 121
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -3.78146 35.1358 0.17234 35.3391 
 Track parameters:  pT 35.3387 cot(theta) 205.053 phi0 1.67801 d0 -0.00147498 z0 0.0053649
 Helix paramters: kappa 0.0282976 tan(Lambda) 0.0048768 phi0 to d0 3.2488
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -15387,7 +15021,7 @@ Hit position: -0.110482 1.0002 0.000457413
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 619  ADC 5
 Strip: 620  ADC 26
@@ -15461,15 +15095,12 @@ Hit position: -0.110532 1.0002 -0.00192934
 Number strips: 2
 Track number -1
 Event: 122
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum -2.9567 37.4187 2.60657 37.6257 
 Track parameters:  pT 37.5353 cot(theta) 14.4003 phi0 1.64965 d0 0.00296766 z0 -0.00701852
 Helix paramters: kappa 0.0266416 tan(Lambda) 0.069443 phi0 to d0 3.22045
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -15513,7 +15144,7 @@ Hit position: -0.0860465 1.0002 -0.076731
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 645  ADC 20
 Strip: 646  ADC 11
@@ -15587,15 +15218,12 @@ Hit position: -0.0873867 1.0002 -0.00152534
 Number strips: 2
 Track number -1
 Event: 123
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 2.93086 25.5908 -0.304252 25.7599 
 Track parameters:  pT 25.7581 cot(theta) -84.6602 phi0 1.45677 d0 -0.00666377 z0 -0.00641035
 Helix paramters: kappa -0.0388228 tan(Lambda) -0.0118119 phi0 to d0 3.02756
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -15639,7 +15267,7 @@ Hit position: 0.127212 1.0002 0.00549845
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1620  ADC 2
 Strip: 1621  ADC 29
@@ -15707,15 +15335,12 @@ Hit position: 0.127381 1.0002 0.00222344
 Number strips: 2
 Track number -1
 Event: 124
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 1.52207 27.2676 1.0783 27.3313 
 Track parameters:  pT 27.3101 cot(theta) 25.3269 phi0 1.51503 d0 -0.00968974 z0 0.00127031
 Helix paramters: kappa -0.0366165 tan(Lambda) 0.0394837 phi0 to d0 3.08583
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -15759,7 +15384,7 @@ Hit position: 0.0710618 1.0002 -0.0383171
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1445  ADC 14
 Strip: 1446  ADC 17
@@ -15833,15 +15458,12 @@ Hit position: 0.0703119 1.0002 0.0012273
 Number strips: 2
 Track number -1
 Event: 125
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge -1
 4 momentum 0.875971 36.8254 0.344345 36.8374 
 Track parameters:  pT 36.8358 cot(theta) 106.974 phi0 1.54701 d0 0.00771135 z0 0.0089766
 Helix paramters: kappa 0.0271475 tan(Lambda) 0.00934811 phi0 to d0 3.11781
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -15885,7 +15507,7 @@ Hit position: 0.0120062 1.0002 -0.000373506
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 961  ADC 0
 Strip: 962  ADC 31
@@ -15959,15 +15581,12 @@ Hit position: 0.0120175 1.0002 0.000209767
 Number strips: 2
 Track number -1
 Event: 126
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 0.842452 32.5717 2.60081 32.6862 
 Track parameters:  pT 32.5826 cot(theta) 12.5279 phi0 1.54494 d0 0.00602889 z0 0.00490918
 Helix paramters: kappa -0.0306912 tan(Lambda) 0.0798219 phi0 to d0 3.11573
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -16011,7 +15630,7 @@ Hit position: 0.0244455 1.0002 -0.0749536
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 1010  ADC 20
 Strip: 1011  ADC 11
@@ -16085,15 +15704,12 @@ Hit position: 0.0231449 1.0002 0.000403995
 Number strips: 2
 Track number -1
 Event: 127
-Number Tracks: 1
-Track number: 0
+Number Gen Tracks: 1
+Gen Track number: 0
 Charge 1
 4 momentum 0.409064 28.096 2.69015 28.2275 
 Track parameters:  pT 28.099 cot(theta) 10.4451 phi0 1.55624 d0 0.00958592 z0 0.00654522
 Helix paramters: kappa -0.0355884 tan(Lambda) 0.0957383 phi0 to d0 3.12703
-Reference Point 0 0 0
-Number of hits 10
-Hit numbers: 0 1 2 3 4 5 6 7 8 9 
 Hit Set version: 1
 Number Hits: 10
 Hit: 0 associated with track 0
@@ -16137,7 +15753,7 @@ Hit position: 0.0103134 1.0002 -0.0892182
 Number strips: -1
 Track number 0
 Version: 1
-Generator strip data: 1
+Generator strip data: 0
 Layer: 0 number Strips: 2
 Strip: 894  ADC 2
 Strip: 895  ADC 29

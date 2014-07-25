@@ -1,5 +1,5 @@
-#include "DataObjects/include/TrackSet.hh"
-#include "Algorithms/include/TrackSetIO.hh"
+#include "DataObjects/include/GenTrackSet.hh"
+#include "Algorithms/include/GenTrackSetIO.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "Algorithms/include/HitSetIO.hh"
 #include "DataObjects/include/StripSet.hh"
@@ -37,7 +37,7 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
     //auto genData = event.get<bool>("genData");
 
 
-  std::unique_ptr<TrackSet> trackSet{ new TrackSet(_detectorGeometry) };
+  std::unique_ptr<GenTrackSet> genTrackSet{ new GenTrackSet() };
 
 
   std::unique_ptr<HitSet> hitSet{ new HitSet(_genData) };
@@ -48,8 +48,8 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
     return std::unique_ptr<Event>{};
   }
 
-  TrackSetIO trackSetIO(_detectorGeometry);
-  trackSetIO.readEvent(*trackSet,_inputeventdatafile);
+  GenTrackSetIO genTrackSetIO;
+  genTrackSetIO.readEvent(*genTrackSet,_inputeventdatafile);
 
   HitSetIO hitSetIO;
   hitSetIO.readEvent(*hitSet,_inputeventdatafile);
@@ -67,12 +67,12 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
   std::unique_ptr<fc::Event> event( new fc::Event{static_cast<unsigned int>(eventNumber)} );
 
   if (_debugLevel >=2) std::cout << "Event: " << event->eventNumber() << std::endl;
-  if (_debugLevel >=2) trackSet->print();
+  if (_debugLevel >=2) genTrackSet->print();
   if (_debugLevel >=2) hitSet->print();
   if (_debugLevel >=2) stripSet->print();
 
   event->put("genData", std::unique_ptr<bool>( new bool{_genData} ) );
-  event->put(_outTracksLabel, std::move(trackSet) );
+  event->put(_outTracksLabel, std::move(genTrackSet) );
   event->put(_outHitsLabel, std::move(hitSet));
   event->put(_outStripsLabel,std::move(stripSet));
 

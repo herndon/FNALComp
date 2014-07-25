@@ -20,7 +20,8 @@
 
 
 class DetectorGeometry;
-class TrackSet;
+class GenTrackSet;
+class GenTrack;
 class HitSet;
 class StripSet;
 class TVector3;
@@ -38,7 +39,6 @@ public:
 
   HitStripGenModule(int, 
 		    const std::string& iInputTracksLabel,
-		    const std::string& iOutputTracksLabel,
 		    const std::string& iOutputHitsLabel,
 		    const std::string& iOutputStripsLabel,
 		    const DetectorGeometry &, Random &);
@@ -63,11 +63,11 @@ private:
 
   int _nLayers;
 
-  void makeHitsStrips(HitSet &, StripSet &, Track &, int, int &);
+  void makeHitsStrips(HitSet &, StripSet &, const GenTrack &, int, int &);
 
-  void calculateTrackSensorIntersection(const Track &, int, TVector3 &);
+  void calculateTrackSensorIntersection(const GenTrack &, int, TVector3 &);
 
-  void storeHitInfo(HitSet &,Track &,int,int &,TVector3 &,int);
+  void storeHitInfo(HitSet &,int,int &,TVector3 &,int);
 
   void storeStripInfo(StripSet &,const TVector3 &,int);
 

@@ -13,6 +13,8 @@
 #include "TVectorD.h"
 
 class DetectorGeometry;
+class GenTrack;
+class GenTrackSet;
 class Track;
 class TrackSet;
 class TH1F;
@@ -50,10 +52,10 @@ private:
 
   // Comparison of hits
 
-  void compareTracks(const TrackSet &, const TrackSet &);
-  const Track & matchTrack(const Track &,const TrackSet &);
-  double deltaTracks(const Track &, const Track &);
-  TVectorD deltaHP(const Track &, const Track &);
+  void compareTracks(const GenTrackSet &, const TrackSet &);
+  const Track & matchTrack(const GenTrack &,const TrackSet &);
+  double deltaTracks(const GenTrack &, const Track &);
+  TVectorD deltaHP(const GenTrack &, const Track &);
   void fillHistograms(const TVectorD &,const Track&);
 
   // Histograms

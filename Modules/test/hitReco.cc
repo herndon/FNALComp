@@ -54,7 +54,7 @@ int main ()
 
  // Instantiate the class which handles the details of processing the events
   fc::EventProcessor processor( new fc::DataSource(debugLevel,inputeventdatafile, genData,
-                                               "tracksWithHits", //get these tracks from file
+                                               "genTracks", //get these tracks from file
                                                 "genHits", //get these hits from file
                                                 "genStrips", //get these strips
 						   detectorGeometry),

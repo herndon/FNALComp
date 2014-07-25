@@ -23,8 +23,6 @@ void fc::StripSetIO::writeEvent(const StripSet & stripSet, std::ofstream & strip
   int version = stripSet.getVersion();
   stripdata.write (reinterpret_cast<const char *>(&version), 1);
 
-  int genStrips = stripSet.getGenStrips();
-  stripdata.write (reinterpret_cast<const char *>(&genStrips), 1);
 
   int binaryData;
   int binaryData1;
@@ -60,8 +58,7 @@ void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
   binaryData = new unsigned  char[1];
 
   int version;
-  bool genStrips;
-  int layer;
+ int layer;
   int numberStrips;
   int stripData12;
   int stripData1;
@@ -92,15 +89,6 @@ void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
     throw Exception(wrongStreamerVersion);  
   }
 
-  stripdata.read (reinterpret_cast<char *>(binaryData), 1);
-  genStrips = static_cast<bool>(*binaryData);
-  stripSet.setGenStrips(genStrips);
-
-
-  if (genStrips != stripSet.getGenStrips()) {
-    std::string wrongGenDataType = "StripSetIO::readEvent: StripSet expected gen data type " + std::to_string(stripSet.getGenStrips()) + " found gen data type " + std::to_string(genStrips);
-    throw Exception(wrongGenDataType);  
-  }
 
  
   for (int ii_layer = 0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer) {

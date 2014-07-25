@@ -19,9 +19,10 @@
 #include "TVector3.h"
 #include "TLorentzVector.h"
 
-class DetectorGeometry;
 
 namespace fc {
+
+class Helix;
 
 
 ///
@@ -35,7 +36,7 @@ private:
 
   TLorentzVector _lorentzVector;
   int _charge;
-  TVector3 _dr;
+  TVector3 _dr; // point of clossest approach to 0,0,0cp 
 
 public:
 
@@ -52,6 +53,10 @@ public:
   TLorentzVector  getLorentzVector() const {return _lorentzVector;}
   TVector3 getPosition() const {return _dr;}
   int getCharge() const {return _charge;}
+
+  // convert to helix
+  Helix makeHelix(double alpha) const;
+  Helix makeHelix() const;
 
   // Print method
 

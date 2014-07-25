@@ -4,8 +4,7 @@
 #include<cmath>
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/GenTrack.hh"
-#include "DataObjects/include/Track.hh"
-#include "DataObjects/include/TrackSet.hh"
+#include "DataObjects/include/GenTrackSet.hh"
 #include "Modules/include/TrackGenModule.hh"
 #include "TH1D.h"
 #include "TVector3.h"
@@ -32,14 +31,13 @@ fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std
 
 void fc::TrackGenModule::processEvent(fc::Event& event)
 {
-  std::unique_ptr<TrackSet> genTrackSet{ new TrackSet(event.eventNumber(),
-						     *(event.get<bool>("genData")),
-						     _detectorGeometry) };
+
+  std::unique_ptr<GenTrackSet> genTrackSet{ new GenTrackSet() };
 
   for (int ii_track = 0; ii_track < _numberOfTracks; ++ii_track) {
 
-    Track track = generateTrack(); 
-    genTrackSet->insertTrack(track);
+    GenTrack genTrack = generateTrack(); 
+    genTrackSet->insertTrack(genTrack);
 
   } // end track loop
   event.put(_tracksLabel,std::move(genTrackSet));
@@ -47,7 +45,7 @@ void fc::TrackGenModule::processEvent(fc::Event& event)
 
 
 
-fc::Track fc::TrackGenModule::generateTrack(){
+fc::GenTrack fc::TrackGenModule::generateTrack(){
 
   // Generate track data
     
@@ -76,18 +74,16 @@ fc::Track fc::TrackGenModule::generateTrack(){
     std::cout << "Track phi0 " << trackPhi0 << std::endl;
     std::cout << "Track radius curvature " << 1/trackCurvature << std::endl;
   }
-
  
-  Track track(trackCharge/trackPT,trackD0,trackZ0,trackPhi0,trackTanL,_detectorGeometry);
+  double phi0ToD0 = 0.0;
+  if ( trackPhi0>=M_PI/2.0) phi0ToD0 = trackPhi0 - M_PI/2.0;
+  if ( trackPhi0<M_PI/2.0) phi0ToD0  = trackPhi0 + M_PI/2.0;
+
   TLorentzVector lorentzVector(trackPT*std::cos(trackPhi0),trackPT*std::sin(trackPhi0),trackTanL*trackPT,trackPT*std::sqrt(1+trackTanL*trackTanL));
-  TVector3 position(trackD0*std::cos(trackPhi0-M_PI/2.0),trackD0*std::sin(trackPhi0-M_PI/2.0),trackZ0);
+  TVector3 position(trackD0*std::cos(phi0ToD0),trackD0*std::sin(phi0ToD0),trackZ0);
   GenTrack genTrack(lorentzVector,trackCharge,position);
 
-  std::cout << "Compare track and genTrack" << std::endl;
-  track.print();
-  genTrack.print();
-
-  return track;
+  return genTrack;
 
 }
 

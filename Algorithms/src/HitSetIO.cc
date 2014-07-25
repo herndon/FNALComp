@@ -25,7 +25,6 @@ void fc::HitSetIO::writeEvent(const HitSet & hitSet, std::ofstream & hitdata) co
 
   hitdata << "Hits" << std::endl;
   hitdata << hitSet.getVersion() << std::endl;
-  hitdata << hitSet.getGenHits() << std::endl;
 
   std::vector<Hit>::size_type numberHits = hitSet.getHits().size();
 
@@ -51,7 +50,6 @@ void fc::HitSetIO::readEvent(HitSet& hitSet, std::ifstream & hitdata) {
 
   std::string eventDataObject;
   int version;
-  bool genHits;
   int numberHits;
   int hitNumber;
   int layer;
@@ -72,9 +70,6 @@ void fc::HitSetIO::readEvent(HitSet& hitSet, std::ifstream & hitdata) {
     std::string wrongStreamerVersion = "HitSetIO::readEvent: attempted to read version " + std::to_string(version) + " using streamer version " + std::to_string(_version);
     throw Exception(wrongStreamerVersion);  
   }
-
-  hitdata >>  genHits;
-  hitSet.setGenHits(genHits);
 
   hitdata >> numberHits;
  

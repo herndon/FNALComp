@@ -17,8 +17,8 @@
 #include "Services/include/Random.hh"
 #include "Framework/include/Module.hh"
 
-class Track;
-class TrackSet;
+class GenTrack;
+class GenTrackSet;
 class TH1D;
 
 ///
@@ -57,7 +57,7 @@ private:
 
   TH1D* _hPt;
 
-  Track generateTrack();
+  GenTrack generateTrack();
 
 };
 
