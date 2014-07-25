@@ -47,7 +47,6 @@ public:
   ~TrackSet() {};
 
   const trackSet & getTracks(void) const { return _trackSet;};
-  trackSet& getTracks(void) {return _trackSet;};
 
   void insertTrack(Track);
 
