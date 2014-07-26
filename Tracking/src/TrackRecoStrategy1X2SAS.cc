@@ -27,7 +27,7 @@ fc::TrackRecoStrategy1X2SAS::TrackRecoStrategy1X2SAS(int debugLevel,const Detect
 //     bool _useExpHits;
 
 
-void fc::TrackRecoStrategy1X2SAS::findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet){
+void fc::TrackRecoStrategy1X2SAS::findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) const{
 
   std::vector<int> layers {8,2,1,0,7,6,5};
   int expNHit = 4;

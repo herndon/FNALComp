@@ -15,7 +15,7 @@ fc::TrackCandidateStrategy1X2SAS::TrackCandidateStrategy1X2SAS(int debugLevel):
 
 // !!!!! Could improve to use more than outer layers
 // !!!!! control seed layers from config
-void fc::TrackCandidateStrategy1X2SAS::findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry & detectorGeometry){
+void fc::TrackCandidateStrategy1X2SAS::findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry & detectorGeometry) const{
  
   int hitNumberO = 0;
 
@@ -67,7 +67,7 @@ void fc::TrackCandidateStrategy1X2SAS::findHitCadidates(std::vector<fc::trackHit
   }
 }
 
-void fc::TrackCandidateStrategy1X2SAS::filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet){
+void fc::TrackCandidateStrategy1X2SAS::filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet) const{
   // could be used in cases where more layers are used to candidate construction
 
 }

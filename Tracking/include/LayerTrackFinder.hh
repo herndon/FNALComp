@@ -52,7 +52,7 @@ namespace fc {
     std::vector<int> findHits(const Track & track, const HitSet & recoHitSet) const;
     trackSet buildTrackCandidates(const Track &, const std::vector<int> &, const HitSet & recoHitSet) const;     
     std::vector<int> bestTrackCandidates(const trackSet &) const;
-    void removeSeedTrack(trackSet&, trackSet&) const;
+    void removeSeedTrack(trackSet&, const trackSet&) const;
     void layerTrackFilter(trackSet &,unsigned int expNHit) const;
 
     // Helper functions

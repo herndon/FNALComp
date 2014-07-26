@@ -18,7 +18,7 @@ class HitSet;
 
 namespace fc {
 
-  Track BuildTrack(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel);
+  const Track BuildTrack(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel);
 
 } // end namescape fc
 

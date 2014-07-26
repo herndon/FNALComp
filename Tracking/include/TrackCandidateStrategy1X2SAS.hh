@@ -24,8 +24,8 @@ class HitSet;
     TrackCandidateStrategy1X2SAS(int);
 
 
-    void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &) override;
-    void filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet) override;
+    void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &) const override;
+    void filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet) const override;
 
   };
 

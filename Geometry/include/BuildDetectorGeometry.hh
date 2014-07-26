@@ -16,7 +16,7 @@ namespace fc {
 
   class DetectorGeometry;
 
-  DetectorGeometry buildDetectorGeometry(std::ifstream & detectorgeometryfile);
+  const DetectorGeometry buildDetectorGeometry(std::ifstream & detectorgeometryfile);
 
 } // end namespace fc
 

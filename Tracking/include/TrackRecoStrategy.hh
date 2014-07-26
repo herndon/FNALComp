@@ -35,13 +35,13 @@ namespace fc {
    TrackRecoStrategy( const TrackRecoStrategy&) = delete;
     ~TrackRecoStrategy() = default;
 
-    void recoTracks(trackSet & trackCandidateSet, const HitSet& hitSet);
+    void recoTracks(trackSet & trackCandidateSet, const HitSet& hitSet) const;
 
 
     // Iterative track reconstruction
-    virtual void findTracks(trackSet& trackCandidateSet,const HitSet & recoHitSet) = 0;
+    virtual void findTracks(trackSet& trackCandidateSet,const HitSet & recoHitSet) const = 0;
 
-    void finalTrackFilter(fc::trackSet & trackCandidateSet);
+    void finalTrackFilter(fc::trackSet & trackCandidateSet) const;
 
     // Helper functions for final track filter
     int numberMatchedHits(const Track&, const Track&) const;

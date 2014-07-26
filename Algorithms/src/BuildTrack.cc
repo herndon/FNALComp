@@ -11,7 +11,7 @@
 
 
 
-fc::Track fc::BuildTrack(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel){
+const fc::Track fc::BuildTrack(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel){
 
   int numberXHits = 0;
   int numberSASHits = 0;

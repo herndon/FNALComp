@@ -10,7 +10,7 @@ fc::TrackCandidateStrategy::TrackCandidateStrategy(int debugLevel,int minCandPtC
   _minCandPTCut(minCandPtCut) {
 }
 
-void fc::TrackCandidateStrategy::findTrackCandidates(trackSet& trackCandidateSet, const HitSet& recoHitSet,const DetectorGeometry & detectorGeometry){
+void fc::TrackCandidateStrategy::findTrackCandidates(trackSet& trackCandidateSet, const HitSet& recoHitSet,const DetectorGeometry & detectorGeometry) const{
 
   std::vector<trackHitSet> trackHitCandidates;
 
@@ -22,7 +22,7 @@ void fc::TrackCandidateStrategy::findTrackCandidates(trackSet& trackCandidateSet
 }
 
 
-void fc::TrackCandidateStrategy::buildTrackCandidates(trackSet& trackCandidateSet,std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry & detectorGeometry){
+void fc::TrackCandidateStrategy::buildTrackCandidates(trackSet& trackCandidateSet,std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry & detectorGeometry) const {
 
   for (std::vector<trackHitSet>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
     Track trackCandidate(BuildTrack(hitSet,*trackHitCandidateIter,detectorGeometry,_debugLevel));

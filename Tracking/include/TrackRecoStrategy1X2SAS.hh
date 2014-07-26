@@ -23,7 +23,7 @@ class HitSet;
  
    TrackRecoStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry);
   
-   void findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) override;
+   void findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) const override;
 
 
   };

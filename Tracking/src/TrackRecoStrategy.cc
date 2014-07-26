@@ -9,7 +9,7 @@
 #include "Tracking/include/TrackRecoStrategy.hh"
 
 
-void fc::TrackRecoStrategy::recoTracks(trackSet & trackCandidateSet, const HitSet& recoHitSet){
+void fc::TrackRecoStrategy::recoTracks(trackSet & trackCandidateSet, const HitSet& recoHitSet) const{
 
 
   // !!!!! trackCandidateSet type def to a track list since we are doing may insertions and deletions?
@@ -21,7 +21,7 @@ void fc::TrackRecoStrategy::recoTracks(trackSet & trackCandidateSet, const HitSe
 }
 
 
-void fc::TrackRecoStrategy::finalTrackFilter(fc::trackSet & trackCandidateSet){
+void fc::TrackRecoStrategy::finalTrackFilter(fc::trackSet & trackCandidateSet) const{
 
 
   for (trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter != trackCandidateSet.end(); ++trackIter){

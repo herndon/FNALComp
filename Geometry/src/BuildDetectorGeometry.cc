@@ -5,7 +5,7 @@
 #include "Geometry/include/DetectorGeometry.hh"
 #include "Geometry/include/BuildDetectorGeometry.hh"
 
-fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeometryfile) {
+const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeometryfile) {
 
   int maxNumberStrips = 2048;
 
