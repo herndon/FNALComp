@@ -37,19 +37,22 @@ namespace fc {
 
     void recoTracks(trackSet & trackCandidateSet, const HitSet& hitSet) const;
 
-
+  protected:
     // Iterative track reconstruction
     virtual void findTracks(trackSet& trackCandidateSet,const HitSet & recoHitSet) const = 0;
 
+
+    // get functions
+    const DetectorGeometry & getDetectorGeometry() const {return _detectorGeometry;}
+    int getDebugLevel() const {return _debugLevel;}
+
+  private:
     void finalTrackFilter(fc::trackSet & trackCandidateSet) const;
 
     // Helper functions for final track filter
     int numberMatchedHits(const Track&, const Track&) const;
     bool betterOverlappingTrack(const Track&, const Track&) const;
 
-    // get functions
-    const DetectorGeometry & getDetectorGeometry() const {return _detectorGeometry;}
-    int getDebugLevel() const {return _debugLevel;}
 
   };
 

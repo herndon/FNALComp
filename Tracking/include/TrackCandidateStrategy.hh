@@ -41,12 +41,16 @@ class DetectorGeometry;
 
     void findTrackCandidates(trackSet& trackCandidateSet, const HitSet& hitSet,const DetectorGeometry &) const;
 
+  protected:
+
     virtual void findHitCadidates(std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &) const = 0;
-    void buildTrackCandidates(trackSet& trackCandidateSet,std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &) const;
     virtual void filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet) const = 0;
 
     // helper functions
     bool goodCandidate(const Helix & helix) const;
+
+  private: 
+   void buildTrackCandidates(trackSet& trackCandidateSet,std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &) const;
 
 
   };
