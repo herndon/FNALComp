@@ -6,25 +6,11 @@
 #include "Tracking/include/LayerTrackFinder.hh"
 #include "Tracking/include/TrackRecoStrategy1X2SAS.hh"
 
-fc::TrackRecoStrategy1X2SAS::TrackRecoStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry):
-  TrackRecoStrategy(debugLevel,detectorGeometry) {
+fc::TrackRecoStrategy1X2SAS::TrackRecoStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minPTCut,double maxChi2NDofCut):
+  TrackRecoStrategy(debugLevel,detectorGeometry),
+  _minPTCut(minPTCut),
+  _maxChi2NDofCut(maxChi2NDofCut) {
 }
-
-
-//   int _debugLevel;
-
-//     // Detector information
-//     const DetectorGeometry & _detectorGeometry;
-
- 
-//     // intermediate tracking parameters
-//     double _minPTCut;
-//     double _maxTanLCut;
-//     double _maxDRCut;
-//     double _maxDZCut;
-//     double _maxChi2Cut;
-//     double _maxChi2NDofCut;
-//     bool _useExpHits;
 
 
 void fc::TrackRecoStrategy1X2SAS::findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) const{
@@ -33,7 +19,7 @@ void fc::TrackRecoStrategy1X2SAS::findTracks(fc::trackSet& trackCandidateSet,con
   int expNHit = 4;
 
   for (std::vector<int>::const_iterator layerIter = layers.begin();layerIter!=layers.end();++layerIter,++expNHit){
-    LayerTrackFinder layerTrackFinder(getDebugLevel(),getDetectorGeometry(),*layerIter);
+    LayerTrackFinder layerTrackFinder(getDebugLevel(),getDetectorGeometry(),*layerIter,_minPTCut,_maxChi2NDofCut);
     layerTrackFinder.findCandidateTracks(trackCandidateSet,recoHitSet,expNHit);
   }
 

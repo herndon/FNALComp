@@ -21,9 +21,10 @@ class HitSet;
 
   public:
 
-    TrackCandidateStrategy1X2SAS(int);
+    TrackCandidateStrategy1X2SAS(int,double);
 
   private:
+
     void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &) const override;
     void filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet) const override;
 

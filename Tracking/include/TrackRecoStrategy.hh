@@ -30,7 +30,8 @@ namespace fc {
  
 
   protected:
-    TrackRecoStrategy(int debugLevel,const DetectorGeometry & detectorGeometry):_debugLevel(debugLevel),_detectorGeometry(detectorGeometry) {};
+    TrackRecoStrategy(int debugLevel,const DetectorGeometry & detectorGeometry);
+
   public: 
    TrackRecoStrategy( const TrackRecoStrategy&) = delete;
     ~TrackRecoStrategy() = default;

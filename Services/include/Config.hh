@@ -35,6 +35,11 @@ public:
 
   std::string const& getRootFileName() const { return _rootFileName; } //!< Returns the name of the root file to be created.
 
+
+  double getMinCandPTCut() const {return _minCandPTCut;}
+  double getMinPTCut() const {return _minPTCut;}
+  double getMaxChi2NDofCut() const {return _maxChi2NDofCut;}
+
   void printConfig(void) const;
 
 
@@ -45,6 +50,9 @@ private:
   int _numberTracks;
   int _seed;
   std::string _rootFileName;
+  double _minCandPTCut;
+  double _minPTCut;
+  double _maxChi2NDofCut;
   
   void _initConfig(std::ifstream&);
 

@@ -32,7 +32,7 @@ class DetectorGeometry;
 
 
   protected:
-    TrackCandidateStrategy(int, int);
+    TrackCandidateStrategy(int, double);
  
   public:
     TrackCandidateStrategy( const TrackCandidateStrategy&) = delete;

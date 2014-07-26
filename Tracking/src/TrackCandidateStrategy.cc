@@ -5,7 +5,7 @@
 #include "Tracking/include/TrackCandidateStrategy.hh"
 #include "Algorithms/include/BuildTrack.hh"
 
-fc::TrackCandidateStrategy::TrackCandidateStrategy(int debugLevel,int minCandPtCut):
+fc::TrackCandidateStrategy::TrackCandidateStrategy(int debugLevel,double minCandPtCut):
   _debugLevel(debugLevel),
   _minCandPTCut(minCandPtCut) {
 }

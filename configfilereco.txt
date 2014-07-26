@@ -1,1 +1,4 @@
 RootFileName recoHistograms.root
+minCandPTCut 1.0
+minPTCut 1.0
+maxChi2NDofCut 10.0

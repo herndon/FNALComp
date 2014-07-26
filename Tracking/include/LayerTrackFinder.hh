@@ -33,16 +33,11 @@ namespace fc {
  
     // intermediate tracking parameters
     double _minPTCut;
-    double _maxTanLCut;
-    double _maxDRCut;
-    double _maxDZCut;
-    double _maxChi2Cut;
     double _maxChi2NDofCut;
-    bool _useExpHits;
-
+ 
 
   public:
-    LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer);
+    LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer,double minPTCut,double maxChi2NDofCut);
     ~LayerTrackFinder() = default;
 
     void findCandidateTracks(trackSet & trackCandidateSet,const HitSet & recoHitSet,unsigned int expNHit) const;

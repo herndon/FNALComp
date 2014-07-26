@@ -21,11 +21,14 @@ class HitSet;
   public:
 
  
-   TrackRecoStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry);
+    TrackRecoStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minPTCut,double maxChiNDofCut);
   
   private:
 
    void findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) const override;
+
+    double _minPTCut;
+    double _maxChi2NDofCut;
 
 
   };

@@ -8,6 +8,12 @@
 #include "Algorithms/include/TrackFitMeasurements.hh"
 #include "Tracking/include/TrackRecoStrategy.hh"
 
+fc::TrackRecoStrategy::TrackRecoStrategy(int debugLevel,const DetectorGeometry & detectorGeometry)
+  :_debugLevel(debugLevel),
+   _detectorGeometry(detectorGeometry){
+}
+
+
 
 void fc::TrackRecoStrategy::recoTracks(trackSet & trackCandidateSet, const HitSet& recoHitSet) const{
 

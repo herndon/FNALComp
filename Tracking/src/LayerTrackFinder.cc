@@ -10,10 +10,12 @@
 #include "Tracking/include/LayerTrackFinder.hh"
 
 
-fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer):
+fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer,double minPTCut, double maxChi2NDofCut):
   _debugLevel(debugLevel),
   _detectorGeometry(detectorGeometry),
-  _layer(layer){
+  _layer(layer),
+  _minPTCut(minPTCut),
+  _maxChi2NDofCut(maxChi2NDofCut){
 }
 
 void fc::LayerTrackFinder::findCandidateTracks(trackSet& trackCandidateSet, const HitSet& recoHitSet,unsigned int expNHit) const{
@@ -165,8 +167,8 @@ void fc::LayerTrackFinder::layerTrackFilter(fc::trackSet & trackCandidateSet,uns
 
 bool fc::LayerTrackFinder::goodTrack(const Track& track) const{
 
-  return  track.getHelix().getPT() > 1.0 && 
-    track.getChi2()< 100.0 && 
-    std::abs(track.getHelix().getDr()) < 0.05 && 
-    std::abs(track.getHelix().getDz()) < 0.05;
+  return  track.getHelix().getPT() > _minPTCut && 
+    (track.getNDof()<=0 || track.getChi2()/track.getNDof()< _maxChi2NDofCut) && 
+    std::abs(track.getHelix().getDr()) < _detectorGeometry.getSensor(_detectorGeometry.getNSensors()-1)._perpSize && 
+    std::abs(track.getHelix().getDz()) < _detectorGeometry.getSensor(_detectorGeometry.getNSensors()-1)._nStrips*_detectorGeometry.getSensor(_detectorGeometry.getNSensors()-1)._stripPitch/2.0;
 }

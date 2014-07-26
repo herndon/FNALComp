@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include "Services/include/Config.hh"
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "DataObjects/include/Track.hh"
@@ -13,16 +14,13 @@
 
 fc::TrackRecoModule::TrackRecoModule(int debugLevel, 
 				     const std::string& inputHitsLabel, const std::string& outputTracksLabel,
-				     const DetectorGeometry & detectorGeometry):
+				     const Config& config, const DetectorGeometry & detectorGeometry):
   _debugLevel(debugLevel),
   _inHitsLabel(inputHitsLabel),
   _outTracksLabel(outputTracksLabel),
+  _config(config),
   _detectorGeometry(detectorGeometry),
-  _candidatePTThreshold(1.0) {
-
-  // Intialize commonly used DetectorGeometry data
-  _nLayers = _detectorGeometry.getNSensors();
-
+  _nLayers(_detectorGeometry.getNSensors()){
 }
 
 void fc::TrackRecoModule::processEvent(Event& event)
@@ -41,8 +39,9 @@ void fc::TrackRecoModule::processEvent(Event& event)
 void fc::TrackRecoModule::recoTracks(TrackSet & recoTrackSet, const HitSet& recoHitSet)
 {
 
-  TrackCandidateStrategy1X2SAS candStrategy(_debugLevel);
-  TrackRecoStrategy1X2SAS recoStrategy(_debugLevel,_detectorGeometry);
+
+  TrackCandidateStrategy1X2SAS candStrategy(_debugLevel,_config.getMinCandPTCut());
+  TrackRecoStrategy1X2SAS recoStrategy(_debugLevel,_detectorGeometry,_config.getMinPTCut(),_config.getMaxChi2NDofCut());
 
   trackSet trackCandidateSet;
   

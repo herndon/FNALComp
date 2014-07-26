@@ -43,6 +43,12 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
     } else {
       if (configString == "RootFileName") {
 	configfile >> _rootFileName;
+      } else if (configString == "minCandPTCut") {
+	configfile >> _minCandPTCut;
+      } else if (configString == "minPTCut") {
+	configfile >> _minPTCut;
+      } else if (configString == "maxChi2NDofCut") {
+	configfile >> _maxChi2NDofCut;
       } else {
 	throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
       }

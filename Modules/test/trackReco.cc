@@ -55,7 +55,6 @@ int main ()
 
   // Open a root file to hold output histograms.
   TFile* rootFile = new TFile( config.getRootFileName().c_str(), "RECREATE");
-  //TFile * outputrootfile = new TFile("outputfile.root", "RECREATE");
 
 
  // Instantiate the class which handles the details of processing the events
@@ -71,7 +70,7 @@ int main ()
   processor.addModule( new fc::HitRecoModule(debugLevel,"genStrips", "recoHits", detectorGeometry));
   processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", detectorGeometry));
   processor.addModule( new fc::PerfectTrackRecoModule(debugLevel, "recoHits", "genHits", "perfectRecoTracks", detectorGeometry) );
-  processor.addModule( new fc::TrackRecoModule(debugLevel, "recoHits", "recoTracks", detectorGeometry) );
+  processor.addModule( new fc::TrackRecoModule(debugLevel, "recoHits", "recoTracks",config,detectorGeometry) );
   processor.addModule( new fc::TrackCompareModule(debugLevel, "genTracks", "perfectRecoTracks", detectorGeometry) );
   processor.addModule( new fc::TrackCompareModule(debugLevel, "genTracks", "recoTracks", detectorGeometry) );
 

@@ -8,8 +8,8 @@
 #include "Tracking/include/TrackCandidateStrategy1X2SAS.hh"
 
 
-fc::TrackCandidateStrategy1X2SAS::TrackCandidateStrategy1X2SAS(int debugLevel):
-  TrackCandidateStrategy(debugLevel,1.0) {
+fc::TrackCandidateStrategy1X2SAS::TrackCandidateStrategy1X2SAS(int debugLevel,double minCandPTCut):
+  TrackCandidateStrategy(debugLevel,minCandPTCut) {
 }
 
 

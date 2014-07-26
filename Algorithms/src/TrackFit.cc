@@ -297,6 +297,3 @@ const fc::Helix fc::FitToHelixWithPV(const Helix& initialHelix, const HitSet& hi
   if (fitType ==2 || fitType ==3) trackHitSetWithPV.push_back(-1);
   return FitToHelix(initialHelix, hitSet, trackHitSetWithPV, detectorGeometry, finalCovMatrix, finalChi2, finalNDof, _debugLevel);
 }
-
-
-
