@@ -6,6 +6,7 @@
 #include "DataObjects/include/HitSet.hh"
 #include "DataObjects/include/Track.hh"
 #include "Algorithms/include/TrackFitMeasurements.hh"
+#include "Algorithms/include/BuildTrack.hh"
 #include "Tracking/include/LayerTrackFinder.hh"
 
 
@@ -139,9 +140,7 @@ fc::trackSet fc::LayerTrackFinder::buildTrackCandidates(const Track & track, con
     trackHitSet trackHitCandidate = track.getHits();
     trackHitCandidate.push_back(*hitNumberIter);
 
-    Track newTrack(recoHitSet,trackHitCandidate,_detectorGeometry, _debugLevel);
-
-    // !!!!! replace with good candidate call
+    Track newTrack(BuildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,_debugLevel));
 
     if (goodTrack(newTrack)) newTracks.push_back(newTrack);
   }

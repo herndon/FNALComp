@@ -11,17 +11,20 @@
 
 
 // Helix parameter initialization
-fc::Track::Track(double kappa, double dr, double dz, double phi0, double tanL, const DetectorGeometry & detectorGeometry):
-  _helix(dr,phi0+M_PI/2.0,-1.0*kappa,dz,tanL,1.0/detectorGeometry.getCurvatureC()),
-  _covMatrix(Helix::_sDim,Helix::_sDim),
-  _chi2(0.0),
-  _nDof(0),
-  _numberXHits(0),
-  _numberSASHits(0),
-  _numberZHits(0),
-  _alpha(1.0/detectorGeometry.getCurvatureC()){
+fc::Track::Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate,int numberXHits,int numberSASHits,int numberZHits,double alpha):
+  _helix(helix),
+  _covMatrix(covMatrix),
+  _chi2(chi2),
+  _nDof(nDof),
+  _numberXHits(numberXHits),
+  _numberSASHits(numberSASHits),
+  _numberZHits(numberZHits),
+  _trackHitSet(trackHitCandidate),
+  _alpha(alpha){
 
 }
+
+
 
 // Lorentz vector initialization
 fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign,const DetectorGeometry & detectorGeometry):
@@ -36,84 +39,6 @@ fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector
 
 }
 
-
-fc::Track::Track(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel):
-  _covMatrix(Helix::_sDim,Helix::_sDim),
-  _chi2(0.0),
-  _nDof(0),
-  _numberXHits(0),
-  _numberSASHits(0),
-  _numberZHits(0),
-  _alpha(1.0/detectorGeometry.getCurvatureC()){
-
-
-  // !!!!! change this to just take a hit map and HitSet for input
-  // !!!!! Move calculation to function that can be called my either 3 hit or more hit function
-
-
-  // Geometry needs to understand types of sensors for use here
-  int layer;
-  for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
-    layer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
-    insertHit(*trackHitCandidateIter);
-    if (layer >= 0 && layer <= 4) ++_numberXHits;
-    if (layer==9||layer==8) ++_numberSASHits;
-    if (layer>=5 && layer <=7) ++_numberZHits;
-  }
-
-
-
-
-
-  // Choose Hits to initialize Helix.  
-  int outerXHit = -1;
-  int middleXHit = -1;
-  int outerZHit = -1;
-
-  chooseHitsForInitialization(hitSet, trackHitCandidate,outerXHit, middleXHit, outerZHit);
-
-
-  // Primary vertex used to help find seed tracks
-  TVector3 x1(0.0,0.0,0.0);
-  TVector3 x2 = hitSet.getHits()[middleXHit].getHitPosition();
-  TVector3 x3 = hitSet.getHits()[outerXHit].getHitPosition();
-
-    TVector3 z1;
-    findZForInitialization(hitSet,trackHitCandidate,z1,detectorGeometry);
-
-
-
-    Helix initialHelix = initializeHelix(x1,x2,x3,z1,detectorGeometry);
-    initialHelix.setAlpha(1.0/detectorGeometry.getCurvatureC());
-    _helix = initialHelix;
-
-
-
-     std::cout << "Track before fit" << std::endl;
-      //print(); 
-      print();
-
-  double chi2=0.0;
-  int nDof=0;
-
-  int fitType = 0;
-  if (_numberXHits <3 ) fitType += 1;
-  if ((_numberSASHits+_numberZHits)<2) fitType += 2;
-
-  if (fitType >0){
-    _helix = FitToHelixWithPV(initialHelix,hitSet,_trackHitSet,detectorGeometry,_covMatrix,chi2,nDof,fitType,2);
-  } else {
-    _helix = FitToHelix(initialHelix,hitSet,_trackHitSet,detectorGeometry,_covMatrix,chi2,nDof,2);
-  }
-
-  _chi2 = chi2;
-  _nDof = nDof;
-  std::cout << "Track chi2 " << _chi2 << " " << _nDof << std::endl;
-
-      //_helix.setHelix(testTrackFit1.getHelix().getHelix());
-      //_helix.setAlpha(1.0/detectorGeometry.getCurvatureC());
-
-}
 
 
 

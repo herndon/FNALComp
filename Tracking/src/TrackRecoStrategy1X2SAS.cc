@@ -36,9 +36,6 @@ void fc::TrackRecoStrategy1X2SAS::findTracks(fc::trackSet& trackCandidateSet,con
     LayerTrackFinder layerTrackFinder(getDebugLevel(),getDetectorGeometry(),*layerIter);
     layerTrackFinder.findCandidateTracks(trackCandidateSet,recoHitSet,expNHit);
 
-    //findHitsOnLayer(trackCandidateSet,recoHitSet,*layerIter);
-    //intermediateTrackFilter(trackCandidateSet,expNHit);
-
   }
 
 }

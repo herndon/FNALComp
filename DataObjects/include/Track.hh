@@ -76,9 +76,10 @@ public:
 // Constructors
 
   Track();
-  Track(double kappa, double dr, double dz, double phi0, double tanl, const DetectorGeometry & detectorGeometry);
   Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign, const DetectorGeometry & detectorGeometry);
-  Track(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel);
+  Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate,int numberXHits,int numberSASHits,int numberZHits,double alpha);
+
+
 
   Track(const Track&);
   Track& operator=(Track track);
