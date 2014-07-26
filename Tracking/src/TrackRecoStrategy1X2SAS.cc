@@ -35,7 +35,6 @@ void fc::TrackRecoStrategy1X2SAS::findTracks(fc::trackSet& trackCandidateSet,con
   for (std::vector<int>::const_iterator layerIter = layers.begin();layerIter!=layers.end();++layerIter,++expNHit){
     LayerTrackFinder layerTrackFinder(getDebugLevel(),getDetectorGeometry(),*layerIter);
     layerTrackFinder.findCandidateTracks(trackCandidateSet,recoHitSet,expNHit);
-
   }
 
 }

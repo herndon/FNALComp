@@ -62,7 +62,7 @@ fc::Track fc::BuildTrack(const HitSet & hitSet, const std::vector<int> & trackHi
     helix = FitToHelix(initialHelix,hitSet,trackHitCandidate,detectorGeometry,covMatrix,chi2,nDof,2);
   }
 
-  Track track(helix,covMatrix,chi2,nDof,trackHitCandidate,numberXHits,numberSASHits,numberZHits,1.0/detectorGeometry.getCurvatureC());
+  Track track(helix,covMatrix,chi2,nDof,trackHitCandidate);
 
   return track;
 

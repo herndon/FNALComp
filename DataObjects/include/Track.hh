@@ -60,15 +60,10 @@ private:
   double _chi2;
   int _nDof;
 
-  int _numberXHits;
-  int _numberSASHits;
-  int _numberZHits;
 
   trackHitSet _trackHitSet;
   
   //const DetectorGeometry & _detectorGeometry;
-
-  double _alpha; // 1/curvatureC
 
 
 public:
@@ -77,9 +72,7 @@ public:
 
   Track();
   Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign, const DetectorGeometry & detectorGeometry);
-  Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate,int numberXHits,int numberSASHits,int numberZHits,double alpha);
-
-
+  Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate);
 
   Track(const Track&);
   Track& operator=(Track track);
@@ -107,9 +100,6 @@ public:
   // Hit/measurement point information
 
   const trackHitSet& getHits(void) const {return _trackHitSet;};
-  int numberXHits() const {return _numberXHits;}
-  int numberSASHits() const {return _numberSASHits;}
-  int numberZHits() const {return _numberZHits;}
   int numberHits() const {return _trackHitSet.size();}
 
 

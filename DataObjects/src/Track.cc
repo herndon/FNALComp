@@ -10,32 +10,24 @@
 #include "Algorithms/include/InitializeHelix.hh"
 
 
-// Helix parameter initialization
-fc::Track::Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate,int numberXHits,int numberSASHits,int numberZHits,double alpha):
+// Full parameter initialization
+fc::Track::Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate):
   _helix(helix),
   _covMatrix(covMatrix),
   _chi2(chi2),
   _nDof(nDof),
-  _numberXHits(numberXHits),
-  _numberSASHits(numberSASHits),
-  _numberZHits(numberZHits),
-  _trackHitSet(trackHitCandidate),
-  _alpha(alpha){
+  _trackHitSet(trackHitCandidate){
 
 }
 
 
-
+// !!!!! need to update streamer and replace
 // Lorentz vector initialization
 fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign,const DetectorGeometry & detectorGeometry):
   _helix(dr.Perp()*d0sign,lorentzVector.Phi()+M_PI/2.0,-1.0*charge/lorentzVector.Pt(),dr.z(),lorentzVector.Pz()/ lorentzVector.Pt(),1.0/detectorGeometry.getCurvatureC()),
   _covMatrix(Helix::_sDim,Helix::_sDim),
   _chi2(0.0),
-  _nDof(0),
-  _numberXHits(0),
-  _numberSASHits(0),
-  _numberZHits(0),
-  _alpha(1.0/detectorGeometry.getCurvatureC()) {
+  _nDof(0) {
 
 }
 
@@ -57,8 +49,7 @@ fc::Track::Track(const Track & track):
   _helix(track._helix),
   _covMatrix(track._covMatrix),
   _chi2(track._chi2),
-  _nDof(track._nDof),
-  _alpha(track._alpha) {
+  _nDof(track._nDof){
 
   trackHitSet inputHits = track.getHits();
 
@@ -73,7 +64,6 @@ fc::Track & fc::Track:: operator=(Track track){
   std::swap(_covMatrix,track._covMatrix);
   std::swap(_chi2,track._chi2);
   std::swap(_nDof,track._nDof);
-  std::swap(_alpha,track._alpha);
   std::swap(_trackHitSet,track._trackHitSet);
 
   return *this;
