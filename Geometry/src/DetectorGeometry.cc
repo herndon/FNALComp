@@ -7,42 +7,19 @@
 #include "Geometry/include/DetectorGeometry.hh"
 
 fc::DetectorGeometry::DetectorGeometry(){
-  initSensorLimits();
   initDetectorGeometry();
 }
 
 fc::DetectorGeometry::DetectorGeometry(std::ifstream & detectorgeometryfile){
-  initSensorLimits();
   initDetectorGeometry();
   initDetectorGeometryFromFile(detectorgeometryfile);
 }
 
-void fc::DetectorGeometry::initSensorLimits( void ) {
-
-  // Minimum and maximum sensor limits
-  // Confirms that users and entering a reasonable geometry
-
-  _sensorMinLimits._nStrips = 1;
-  _sensorMinLimits._stripPitch = 0.000005;
-  _sensorMinLimits._center[0] = -1.0;
-  _sensorMinLimits._center[1] = 0.0;
-  _sensorMinLimits._center[2] = -1.0;
-  _sensorMinLimits._intrinsicResolution = 0.000002;
-  _sensorMinLimits._hitResolution = 0.000002;
-
-  _sensorMaxLimits._nStrips = 10000;
-  _sensorMaxLimits._stripPitch = 0.000200;
-  _sensorMaxLimits._center[0] = 1.0;
-  _sensorMaxLimits._center[1] = 100;
-  _sensorMaxLimits._center[2] = 1.0;
-  _sensorMaxLimits._intrinsicResolution = 0.000100;
-  _sensorMaxLimits._hitResolution = 0.000100;
-}
 
 
 void fc::DetectorGeometry::initDetectorGeometry( void ) {
 
-  _detectorGeometryVersion = 1;
+  _detectorGeometryVersion = 2;
 
   // Only Z oriented B field allowed
   _bField.SetXYZ(0.0,0.0,1.0);
@@ -59,31 +36,37 @@ void fc::DetectorGeometry::initDetectorGeometry( void ) {
   // MIP charge
   _MIP = 32.0;
 
+  _maxNumberStrips = 2048;
+
 }
 
 void fc::DetectorGeometry::initDetectorGeometryFromFile(std::ifstream & detectorgeometryfile) {
 
-  // Sensor geometry file format is rigid to make mistakes less likley
-
-  bool badGeometry = false;
 
   if (!detectorgeometryfile){
     throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: can't open sensorgeometry.txt file");
   }
 
   std::string detectorGeometryString;
-  int sensorNumber;
+  int detectorGeometryVersion;
 
   detectorgeometryfile >> detectorGeometryString;
   if (detectorGeometryString == "DetectorGeometryVersion"){
-    detectorgeometryfile >> _detectorGeometryVersion;
+    detectorgeometryfile >> detectorGeometryVersion;
   } else {
     throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
   }
 
+   if ( detectorGeometryVersion != _detectorGeometryVersion) {
+    std::string wrongDetectorGeometryVersion = "DetectorGeometry::_initDetectorGeometryFromFile: attempted to read version " + std::to_string(detectorGeometryVersion) + " when expecting " + std::to_string(_detectorGeometryVersion);
+    throw Exception(wrongDetectorGeometryVersion);  
+  }
+
+
+
   detectorgeometryfile >> detectorGeometryString;
   if (detectorGeometryString == "zBField"){
-  // Only Z oriented B field allowed
+    // Only Z oriented B field allowed
     double zBField;
     _bField.SetX(0.0);
     _bField.SetY(0.0);
@@ -96,119 +79,97 @@ void fc::DetectorGeometry::initDetectorGeometryFromFile(std::ifstream & detector
 
   detectorgeometryfile >> detectorGeometryString;
   if (detectorGeometryString == "MIP"){
-  // Only Z oriented B field allowed
+    // Only Z oriented B field allowed
     detectorgeometryfile >> _MIP;
   } else {
     throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
   }
 
-
   _curvatureC = _bField[2]*2.99792458e8/1.0e9;  
+
+  int numberSensors;
+  int sensorNumber;
+
+  detectorgeometryfile >> detectorGeometryString;
+  if (detectorGeometryString == "NumberSensors"){
+    detectorgeometryfile >> numberSensors;
+  } else {
+    throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
+  }
 
 
   detectorgeometryfile.precision(std::numeric_limits<double>::digits10 + 2);
-  for (int ii_layer = 0; ii_layer < _nSensors; ++ii_layer){
+
+
+  for (int ii_layer = 0; ii_layer < numberSensors; ++ii_layer){
     detectorgeometryfile >> detectorGeometryString;
-    if (detectorGeometryString == "Sensor"){
-      detectorgeometryfile >> sensorNumber;
-      if (sensorNumber == ii_layer){
-	detectorgeometryfile >> _sensor[ii_layer]._nStrips;
-	detectorgeometryfile >> _sensor[ii_layer]._stripPitch;
-	detectorgeometryfile >> _sensor[ii_layer]._intrinsicResolution;
-	detectorgeometryfile >> _sensor[ii_layer]._hitResolution;
-	// !!!!! This is a good place for a test case using valgrind
-        _sensor[ii_layer]._threshold = 0.0;
-        detectorgeometryfile >> _sensor[ii_layer]._center[0];
-        detectorgeometryfile >> _sensor[ii_layer]._center[1];
-        detectorgeometryfile >> _sensor[ii_layer]._center[2];
-        detectorgeometryfile >> _sensor[ii_layer]._normal[0];
-        detectorgeometryfile >> _sensor[ii_layer]._normal[1];
-        detectorgeometryfile >> _sensor[ii_layer]._normal[2];
-        detectorgeometryfile >> _sensor[ii_layer]._measurementDirection[0];
-        detectorgeometryfile >> _sensor[ii_layer]._measurementDirection[1];
-        detectorgeometryfile >> _sensor[ii_layer]._measurementDirection[2];
+    if (detectorGeometryString != "Sensor") throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
 
-	_sensor[ii_layer]._normal *= 1.0/_sensor[ii_layer]._normal.Mag();
-	_sensor[ii_layer]._measurementDirection *= 1.0/_sensor[ii_layer]._measurementDirection.Mag();
-	
-         
+    detectorgeometryfile >> sensorNumber;
+    sensorDescriptor sensor;
+    detectorgeometryfile >> sensor._nStrips;
+    detectorgeometryfile >> sensor._stripPitch;
+    detectorgeometryfile >> sensor._intrinsicHitResolution;
+    detectorgeometryfile >> sensor._hitResolution;
+    detectorgeometryfile >> sensor._badHitResolution;
+    // !!!!! This is a good place for a test case using valgrind
+    detectorgeometryfile >> sensor._threshold;
+    detectorgeometryfile >> sensor._center[0];
+    detectorgeometryfile >> sensor._center[1];
+    detectorgeometryfile >> sensor._center[2];
+    detectorgeometryfile >> sensor._normal[0];
+    detectorgeometryfile >> sensor._normal[1];
+    detectorgeometryfile >> sensor._normal[2];
+    detectorgeometryfile >> sensor._measurementDirection[0];
+    detectorgeometryfile >> sensor._measurementDirection[1];
+    detectorgeometryfile >> sensor._measurementDirection[2];
+    detectorgeometryfile >> sensor._perpSize;
 
-	if ( _sensor[ii_layer]._nStrips < _sensorMinLimits._nStrips|| _sensor[ii_layer]._nStrips > _sensorMaxLimits._nStrips ) badGeometry = true;
-	if ( _sensor[ii_layer]._stripPitch < _sensorMinLimits._stripPitch|| _sensor[ii_layer]._stripPitch > _sensorMaxLimits._stripPitch ) badGeometry = true;
-	if ( _sensor[ii_layer]._center[0] < _sensorMinLimits._center[0]|| _sensor[ii_layer]._center[0] > _sensorMaxLimits._center[0] ||
- _sensor[ii_layer]._center[1] < _sensorMinLimits._center[1]|| _sensor[ii_layer]._center[1] > _sensorMaxLimits._center[1] ||
- _sensor[ii_layer]._center[2] < _sensorMinLimits._center[2]|| _sensor[ii_layer]._center[2] > _sensorMaxLimits._center[2]) badGeometry = true;
-	if ( _sensor[ii_layer]._intrinsicResolution < _sensorMinLimits._intrinsicResolution|| _sensor[ii_layer]._intrinsicResolution > _sensorMaxLimits._intrinsicResolution ) badGeometry = true;
-	if ( _sensor[ii_layer]._hitResolution < _sensorMinLimits._hitResolution|| _sensor[ii_layer]._hitResolution > _sensorMaxLimits._hitResolution ) badGeometry = true;
-	if (badGeometry){
-	  printSensorLimits();
-          throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Out of bounds sensor number specifications in sensorgeometry.txt");
-	}
-      } else {
-	throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
-     }
-    } else {
-	throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
-    }
+    sensor._normal *= 1.0/sensor._normal.Mag();
+    sensor._measurementDirection *= 1.0/sensor._measurementDirection.Mag();
+
+    if ( sensor._nStrips > _maxNumberStrips)  
+      throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Out of bounds sensor number specifications in sensorgeometry.txt, maximum number of strips is 2048");   
+
+    _sensors.push_back(sensor);
+
   }
 
   detectorgeometryfile >> detectorGeometryString;
-    if (detectorGeometryString == "PVX"){
-      detectorgeometryfile >> sensorNumber;
-      if (sensorNumber == -2){
-	detectorgeometryfile >> _primaryVertexX._nStrips;
-	detectorgeometryfile >> _primaryVertexX._stripPitch;
-	detectorgeometryfile >> _primaryVertexX._intrinsicResolution;
-	detectorgeometryfile >> _primaryVertexX._hitResolution;
-        detectorgeometryfile >> _primaryVertexX._center[0];
-        detectorgeometryfile >> _primaryVertexX._center[1];
-        detectorgeometryfile >> _primaryVertexX._center[2];
-        detectorgeometryfile >> _primaryVertexX._normal[0];
-        detectorgeometryfile >> _primaryVertexX._normal[1];
-        detectorgeometryfile >> _primaryVertexX._normal[2];
-        detectorgeometryfile >> _primaryVertexX._measurementDirection[0];
-        detectorgeometryfile >> _primaryVertexX._measurementDirection[1];
-        detectorgeometryfile >> _primaryVertexX._measurementDirection[2];
+  if (detectorGeometryString != "PVX") 
+    throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
+  detectorgeometryfile >> _primaryVertexX._hitResolution;
+  detectorgeometryfile >> _primaryVertexX._center[0];
+  detectorgeometryfile >> _primaryVertexX._center[1];
+  detectorgeometryfile >> _primaryVertexX._center[2];
+  detectorgeometryfile >> _primaryVertexX._normal[0];
+  detectorgeometryfile >> _primaryVertexX._normal[1];
+  detectorgeometryfile >> _primaryVertexX._normal[2];
+  detectorgeometryfile >> _primaryVertexX._measurementDirection[0];
+  detectorgeometryfile >> _primaryVertexX._measurementDirection[1];
+  detectorgeometryfile >> _primaryVertexX._measurementDirection[2];
 
-	_primaryVertexX._normal *= 1.0/_primaryVertexX._normal.Mag();
-	_primaryVertexX._measurementDirection *= 1.0/_primaryVertexX._measurementDirection.Mag();
+  _primaryVertexX._normal *= 1.0/_primaryVertexX._normal.Mag();
+  _primaryVertexX._measurementDirection *= 1.0/_primaryVertexX._measurementDirection.Mag();
 
-      } else {
-	throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
-      }
-    } else {
-      throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
-
-    }
   detectorgeometryfile >> detectorGeometryString;
 
-    if (detectorGeometryString == "PVZ"){
-      detectorgeometryfile >> sensorNumber;
-      if (sensorNumber == -1){
-	detectorgeometryfile >> _primaryVertexZ._nStrips;
-	detectorgeometryfile >> _primaryVertexZ._stripPitch;
-	detectorgeometryfile >> _primaryVertexZ._intrinsicResolution;
-	detectorgeometryfile >> _primaryVertexZ._hitResolution;
-        detectorgeometryfile >> _primaryVertexZ._center[0];
-        detectorgeometryfile >> _primaryVertexZ._center[1];
-        detectorgeometryfile >> _primaryVertexZ._center[2];
-        detectorgeometryfile >> _primaryVertexZ._normal[0];
-        detectorgeometryfile >> _primaryVertexZ._normal[1];
-        detectorgeometryfile >> _primaryVertexZ._normal[2];
-        detectorgeometryfile >> _primaryVertexZ._measurementDirection[0];
-        detectorgeometryfile >> _primaryVertexZ._measurementDirection[1];
-        detectorgeometryfile >> _primaryVertexZ._measurementDirection[2];
+  if (detectorGeometryString != "PVZ")
+    throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
 
-	_primaryVertexZ._normal *= 1.0/_primaryVertexZ._normal.Mag();
-	_primaryVertexZ._measurementDirection *= 1.0/_primaryVertexZ._measurementDirection.Mag();
+  detectorgeometryfile >> _primaryVertexZ._hitResolution;
+  detectorgeometryfile >> _primaryVertexZ._center[0];
+  detectorgeometryfile >> _primaryVertexZ._center[1];
+  detectorgeometryfile >> _primaryVertexZ._center[2];
+  detectorgeometryfile >> _primaryVertexZ._normal[0];
+  detectorgeometryfile >> _primaryVertexZ._normal[1];
+  detectorgeometryfile >> _primaryVertexZ._normal[2];
+  detectorgeometryfile >> _primaryVertexZ._measurementDirection[0];
+  detectorgeometryfile >> _primaryVertexZ._measurementDirection[1];
+  detectorgeometryfile >> _primaryVertexZ._measurementDirection[2];
 
-      } else {
-	throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
-      }
-    } else {
-      throw Exception("DetectorGeometry::_initDetectorGeometryFromFile: Bad format in sensorgeometry.txt");
-
-    }
+  _primaryVertexZ._normal *= 1.0/_primaryVertexZ._normal.Mag();
+  _primaryVertexZ._measurementDirection *= 1.0/_primaryVertexZ._measurementDirection.Mag();
 
 }
 
@@ -223,39 +184,36 @@ void fc::DetectorGeometry::printDetectorGeometry( void ) const {
   for (int ii_layer = 0; ii_layer < _nSensors; ++ii_layer){
     std::cout << std::endl;
     std::cout << "Sensor layer " << ii_layer << std::endl;
-    std::cout << "N strips    "  << _sensor[ii_layer]._nStrips    << std::endl;
-    std::cout << "Strip pitch "  << _sensor[ii_layer]._stripPitch << std::endl;
-    std::cout << "X position  "  << _sensor[ii_layer]._center.x()       << std::endl;
-    std::cout << "Y position  "  << _sensor[ii_layer]._center.y()       << std::endl;
-    std::cout << "Z position  "  << _sensor[ii_layer]._center.z()       << std::endl;
+    std::cout << "N strips    "  << _sensors[ii_layer]._nStrips    << std::endl;
+    std::cout << "Strip pitch "  << _sensors[ii_layer]._stripPitch << std::endl;
+    std::cout << "X position (m) "  << _sensors[ii_layer]._center.x()       << std::endl;
+    std::cout << "Y position (m) "  << _sensors[ii_layer]._center.y()       << std::endl;
+    std::cout << "Z position (m) "  << _sensors[ii_layer]._center.z()       << std::endl;
     std::cout << "Measurement direction  "  << std::endl;
-    _sensor[ii_layer]._measurementDirection.Print();
+    _sensors[ii_layer]._measurementDirection.Print();
     std::cout << "Normal  "  << std::endl;
-    _sensor[ii_layer]._normal.Print();
-    std::cout << "Intrinsic Resolution  "  << _sensor[ii_layer]._intrinsicResolution << std::endl;
-    std::cout << "Hit Resolution  "  << _sensor[ii_layer]._hitResolution << std::endl;
+    _sensors[ii_layer]._normal.Print();
+    std::cout << "Intrinsic Hit Resolution (m) "  << _sensors[ii_layer]._intrinsicHitResolution << std::endl;
+    std::cout << "Hit Resolution           (m) "  << _sensors[ii_layer]._hitResolution << std::endl;
+    std::cout << "Bad Hit Resolution       (m) "  << _sensors[ii_layer]._badHitResolution << std::endl;
+    std::cout << "Strip Threshold          (m) "  << _sensors[ii_layer]._threshold << std::endl;
+    std::cout << "Sensor dimentions        (m)X(m)  "  << _sensors[ii_layer]._stripPitch*_sensors[ii_layer]._nStrips 
+	      << " X " << _sensors[ii_layer]._perpSize  << std::endl;
   }
+  std::cout << "PV position " << std::endl;
+    std::cout << "X position    (m) "  << _primaryVertexX._center.x()       << std::endl;
+    std::cout << "Y position    (m) "  << _primaryVertexX._center.y()       << std::endl;
+    std::cout << "Z position    (m) "  << _primaryVertexX._center.z()       << std::endl;
+    std::cout << "PV Resolution (m) "  << _primaryVertexX._hitResolution    << std::endl;
+
+
+
 }
-
-void fc::DetectorGeometry::printSensorLimits( void ) const {
-
-   std::cout << "Detector Sencor Geometry limit information" << std::endl;
-   std::cout << "Custom Geometry specified sensor information may be outside of allowed limits" << std::endl;
-   std::cout << "This may be intentional in which case allowed limits in _initDetectorGeometry should be reprogramed" << std::endl;
-
-   std::cout << "N strips    min - max "  << _sensorMinLimits._nStrips    << " - " <<  _sensorMaxLimits._nStrips << std::endl;
-   std::cout << "Strip pitch min - max "  << _sensorMinLimits._stripPitch << " - " <<  _sensorMaxLimits._stripPitch << std::endl;
-   std::cout << "X position  min - max"  << _sensorMinLimits._center[0]       << " - " <<  _sensorMaxLimits._center[0]  << std::endl;
-   std::cout << "Y position  min - max"  << _sensorMinLimits._center[1]       << " - " <<  _sensorMaxLimits._center[1]  << std::endl;
-   std::cout << "Z position  min - max"  << _sensorMinLimits._center[2]       << " - " <<  _sensorMaxLimits._center[2]  << std::endl;
-   std::cout << "Resolution  min - max"  << _sensorMinLimits._intrinsicResolution << " - " <<  _sensorMaxLimits._intrinsicResolution  << std::endl;
-   std::cout << "Resolution  min - max"  << _sensorMinLimits._hitResolution << " - " <<  _sensorMaxLimits._hitResolution  << std::endl;
- }
 
 
 const fc::sensorDescriptor& fc::DetectorGeometry::getSensor(int layer) const{
 
-  if (layer >= 0 && layer < _nSensors) return _sensor[layer];
+  if (layer >= 0 && layer < _nSensors) return _sensors[layer];
   if (layer==-2) return _primaryVertexX;
   if (layer==-1) return _primaryVertexZ;
   std::cout << "layer " << layer << std::endl;

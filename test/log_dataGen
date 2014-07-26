@@ -6,7 +6,7 @@ Random number seed 1
 Root file name genHistograms.root
 Random::Random constructor. Using seed: 1
 Detector Geometry information
-Detector Geometry version: 1
+Detector Geometry version: 2
 Magnetic field, Bz 1 Tesla
 MIP charge ACD counts in silicon sensor 32
 Number sensor layers 10
@@ -14,132 +14,167 @@ Number sensor layers 10
 Sensor layer 0
 N strips    2048
 Strip pitch 5e-05
-X position  0
-Y position  0.2
-Z position  0
+X position (m) 0
+Y position (m) 0.2
+Z position (m) 0
 Measurement direction  
 TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
-Intrinsic Resolution  1.2e-05
-Hit Resolution  1.2e-05
+Intrinsic Hit Resolution (m) 1.2e-05
+Hit Resolution           (m) 1.2e-05
+Bad Hit Resolution       (m) 1.8e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
 Sensor layer 1
 N strips    2048
 Strip pitch 5e-05
-X position  0
-Y position  0.4
-Z position  0
+X position (m) 0
+Y position (m) 0.4
+Z position (m) 0
 Measurement direction  
 TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
-Intrinsic Resolution  1.2e-05
-Hit Resolution  1.2e-05
+Intrinsic Hit Resolution (m) 1.2e-05
+Hit Resolution           (m) 1.2e-05
+Bad Hit Resolution       (m) 1.8e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
 Sensor layer 2
 N strips    2048
 Strip pitch 0.0002
-X position  0
-Y position  0.6
-Z position  0
+X position (m) 0
+Y position (m) 0.6
+Z position (m) 0
 Measurement direction  
 TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
-Intrinsic Resolution  2.5e-05
-Hit Resolution  2.5e-05
+Intrinsic Hit Resolution (m) 2.5e-05
+Hit Resolution           (m) 2.5e-05
+Bad Hit Resolution       (m) 4e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 3
 N strips    2048
 Strip pitch 0.0002
-X position  0
-Y position  0.8
-Z position  0
+X position (m) 0
+Y position (m) 0.8
+Z position (m) 0
 Measurement direction  
 TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
-Intrinsic Resolution  2.5e-05
-Hit Resolution  2.5e-05
+Intrinsic Hit Resolution (m) 2.5e-05
+Hit Resolution           (m) 2.5e-05
+Bad Hit Resolution       (m) 4e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 4
 N strips    2048
 Strip pitch 0.0002
-X position  0
-Y position  1
-Z position  0
+X position (m) 0
+Y position (m) 1
+Z position (m) 0
 Measurement direction  
 TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
-Intrinsic Resolution  5e-05
-Hit Resolution  5e-05
+Intrinsic Hit Resolution (m) 5e-05
+Hit Resolution           (m) 5e-05
+Bad Hit Resolution       (m) 7e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 5
 N strips    2048
 Strip pitch 5e-05
-X position  0
-Y position  0.2002
-Z position  0
+X position (m) 0
+Y position (m) 0.2002
+Z position (m) 0
 Measurement direction  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi)=(1.000000,0.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
-Intrinsic Resolution  1.2e-05
-Hit Resolution  1.2e-05
+Intrinsic Hit Resolution (m) 1.2e-05
+Hit Resolution           (m) 1.2e-05
+Bad Hit Resolution       (m) 1.8e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
 Sensor layer 6
 N strips    2048
 Strip pitch 5e-05
-X position  0
-Y position  0.4002
-Z position  0
+X position (m) 0
+Y position (m) 0.4002
+Z position (m) 0
 Measurement direction  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi)=(1.000000,0.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
-Intrinsic Resolution  1.2e-05
-Hit Resolution  1.2e-05
+Intrinsic Hit Resolution (m) 1.2e-05
+Hit Resolution           (m) 1.2e-05
+Bad Hit Resolution       (m) 1.8e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
 Sensor layer 7
 N strips    2048
 Strip pitch 0.0002
-X position  0
-Y position  0.6002
-Z position  0
+X position (m) 0
+Y position (m) 0.6002
+Z position (m) 0
 Measurement direction  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi)=(1.000000,0.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
-Intrinsic Resolution  2.5e-05
-Hit Resolution  2.5e-05
+Intrinsic Hit Resolution (m) 2.5e-05
+Hit Resolution           (m) 2.5e-05
+Bad Hit Resolution       (m) 4e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 8
 N strips    2048
 Strip pitch 0.0002
-X position  0
-Y position  0.8002
-Z position  0
+X position (m) 0
+Y position (m) 0.8002
+Z position (m) 0
 Measurement direction  
 TVector3 A 3D physics vector (x,y,z)=(0.999848,0.000000,0.017452) (rho,theta,phi)=(1.000000,89.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
-Intrinsic Resolution  2.5e-05
-Hit Resolution  2.5e-05
+Intrinsic Hit Resolution (m) 2.5e-05
+Hit Resolution           (m) 2.5e-05
+Bad Hit Resolution       (m) 4e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 9
 N strips    2048
 Strip pitch 0.0002
-X position  0
-Y position  1.0002
-Z position  0
+X position (m) 0
+Y position (m) 1.0002
+Z position (m) 0
 Measurement direction  
 TVector3 A 3D physics vector (x,y,z)=(0.999848,0.000000,0.017452) (rho,theta,phi)=(1.000000,89.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
-Intrinsic Resolution  5e-05
-Hit Resolution  5e-05
+Intrinsic Hit Resolution (m) 5e-05
+Hit Resolution           (m) 5e-05
+Bad Hit Resolution       (m) 7e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
+PV position 
+X position    (m) 0
+Y position    (m) 0
+Z position    (m) 0
+PV Resolution (m) 0.01
 Event: 0
 GenTrackSet
 Number Gen Tracks: 1

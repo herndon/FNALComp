@@ -15,6 +15,7 @@
 //============================================================================
 #include <fstream>
 #include <iostream>
+#include <vector>
 #include "TVector3.h"
 
 namespace fc {
@@ -22,12 +23,14 @@ namespace fc {
 struct sensorDescriptor {
   int _nStrips;
   double _stripPitch;
-  double _intrinsicResolution;
+  double _intrinsicHitResolution;
   double _hitResolution;
+  double _badHitResolution;
   double _threshold;
   TVector3 _center;
   TVector3 _normal;
   TVector3 _measurementDirection;
+  double _perpSize;
 };
 
 ///
@@ -38,6 +41,7 @@ struct sensorDescriptor {
 
 class DetectorGeometry {
 
+  // !!!!! do we need any friending
   friend class StripSet;
   friend class HitSet;
   friend class HitCompareModule;
@@ -59,7 +63,6 @@ public:
   double getCurvatureC(void) const {return _curvatureC;};
 
   void printDetectorGeometry(void) const;
-  void printSensorLimits(void) const;
 
   // Numerology for declaring arrays
   static const int _nSensors=10;
@@ -75,26 +78,21 @@ private:
   // Use default geometry or intialize geometry from a run time file and version
   int _detectorGeometryVersion;
 
-
-  sensorDescriptor _sensor[_nSensors];
+  std::vector<sensorDescriptor> _sensors;
 
   // Parameters for the primary vetex if used in a fit
 
   sensorDescriptor _primaryVertexX;
   sensorDescriptor _primaryVertexZ;
 
+  int _maxNumberStrips;
 
-
-  // limits on sensor specifications
-  sensorDescriptor _sensorMinLimits;
-  sensorDescriptor _sensorMaxLimits;
-
+ 
   TVector3 _bField;
   double _MIP;
   // Useful constants
   double _curvatureC;
 
-  void initSensorLimits(void);
   void initDetectorGeometry(void);
   void initDetectorGeometryFromFile(std::ifstream&);
 
