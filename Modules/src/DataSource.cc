@@ -39,7 +39,7 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
 
 
   std::unique_ptr<HitSet> hitSet{ new HitSet };
-  std::unique_ptr<StripSet> stripSet{ new StripSet };
+  std::unique_ptr<StripSet> stripSet{ new StripSet(_detectorGeometry)};
 
   int eventNumber = 0;
   if( not (_inputeventdatafile >> eventNumber) ) {

@@ -31,7 +31,7 @@ fc::Track fc::BuildTrack(const HitSet & hitSet, const std::vector<int> & trackHi
   int middleXHit = -1;
   int outerZHit = -1;
 
-  chooseHitsForInitialization(hitSet, trackHitCandidate,outerXHit, middleXHit, outerZHit);
+  chooseHitsForInitialization(hitSet, trackHitCandidate,outerXHit, middleXHit, outerZHit,detectorGeometry);
 
 
   // Primary vertex used to help find seed tracks

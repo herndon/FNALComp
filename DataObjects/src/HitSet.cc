@@ -1,5 +1,4 @@
-#include "Geometry/include/DetectorGeometry.hh"
-#include "Services/include/Exception.hh"
+#include <iostream>
 #include "TVector3.h"
 #include "DataObjects/include/HitSet.hh"
 
@@ -7,13 +6,7 @@
 // Using default constructor
 
 void fc::HitSet::insertHit(Hit hit) {
-  if (hit.getLayer() >= 0 && hit.getLayer() < DetectorGeometry::_nSensors) {
     _hitSet.push_back(hit);
-    return;
-  } else {
-    throw Exception("HitSet::insertHit: Out of bounds layer");
-  }
-  
 }
 
 void fc::HitSet::print(void) const{

@@ -1,0 +1,23 @@
+#ifndef BuildDetectorGeometry_hh
+#define BuildDetectorGeometry_hh
+//============================================================================
+// BuildDetectorGeometry.hh
+// header with functions to build the DetectorGeometry from a file
+// For more information see <a href="doc/notes/detectorGeometry.pdf">detectorGeometry.pdf</a>
+//
+// Author Matt Herndon, University of Wisconsin,
+//                       Fermi National Accelerator Laborator
+// 2014-07-26
+//============================================================================
+#include <fstream>
+#include <iostream>
+
+namespace fc {
+
+  class DetectorGeometry;
+
+  DetectorGeometry buildDetectorGeometry(std::ifstream & detectorgeometryfile);
+
+} // end namespace fc
+
+#endif // BuildDetectorGeometry_hh

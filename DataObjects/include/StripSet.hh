@@ -12,10 +12,11 @@
 // 2014-05-02
 //============================================================================
 #include <map>
-#include <array>
-#include "Geometry/include/DetectorGeometry.hh"
+#include <vector>
 
 namespace fc {
+
+  class DetectorGeometry;
 
   // Map used to allow keying by strip number
   typedef std::map<int, int> layerStripMap; //!< Map of strip number and acd counts for one layer
@@ -30,19 +31,19 @@ namespace fc {
 class StripSet {
 private:
 
-  std::array<layerStripMap,DetectorGeometry::_nSensors> _layerStripMapArray;
+  std::vector<layerStripMap> _layerStripMapArray;
 
 public:
 
-  StripSet() {};
+  StripSet(const DetectorGeometry&);
   ~StripSet() {};
 
-  const layerStripMap& getLayerStripMap(int layer) const;
+  const layerStripMap& getLayerStripMap(unsigned int layer) const;
 
   int getStripNumber(layerStripMap::const_iterator iter) const {return iter->first;};
   int getStripAdc(layerStripMap::const_iterator iter) const {return iter->second;};
 
-  void insertStrip(int, int, int); //!< Insert strip by layer, strip number, adc count
+  void insertStrip(unsigned int, int, int); //!< Insert strip by layer, strip number, adc count
 
   void print(void) const;
 

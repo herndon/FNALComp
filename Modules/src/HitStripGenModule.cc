@@ -35,7 +35,7 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
   Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_inTracksLabel);
   
   std::unique_ptr<HitSet> genHitSet{ new HitSet };
-  std::unique_ptr<StripSet> genStripSet{ new StripSet };
+  std::unique_ptr<StripSet> genStripSet{ new StripSet(_detectorGeometry)};
 
   int trackNumber = 0;
   int hitNumber = 0;

@@ -23,7 +23,7 @@ class Hit;
 namespace fc {
 
   Helix initializeHelix(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3,  const TVector3 & z1, const DetectorGeometry & detectorGeometry);
-  void chooseHitsForInitialization(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, int& outerXHit, int& middleXHit, int& outerZHit);
+  void chooseHitsForInitialization(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, int& outerXHit, int& middleXHit, int& outerZHit,const DetectorGeometry & detectorGeometry);
   bool findZForInitialization(const HitSet & hitSet,const std::vector<int> & trackHitCandidate,TVector3 & z,const DetectorGeometry & detectorGeometry);
   bool intersectStrips(const Hit & xHit, const Hit & sasHit,TVector3 & z, const DetectorGeometry & detectorGeometry);
   

@@ -10,6 +10,7 @@
 // 2014-05-22
 //============================================================================
 #include "Geometry/include/DetectorGeometry.hh"
+#include "Geometry/include/BuildDetectorGeometry.hh"
 #include "Modules/include/TrackGenModule.hh"
 #include "Modules/include/HitStripGenModule.hh"
 #include "Modules/include/DataOutputModule.hh"
@@ -51,7 +52,7 @@ int main ()
 
   // DetectorGeometry
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
-  fc::DetectorGeometry detectorGeometry(detectorgeometryfile);  
+  fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(detectorgeometryfile));
   // files are closed by the default destructor
   if (debugLevel >= 2) detectorGeometry.printDetectorGeometry();
 

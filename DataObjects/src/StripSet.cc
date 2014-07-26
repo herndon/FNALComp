@@ -1,16 +1,19 @@
-//#include <algorithm>
-#include "DataObjects/include/StripSet.hh"
+#include <iostream>
 #include "Services/include/Exception.hh"
+#include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/StripSet.hh"
 
-// Using default constructor
+fc::StripSet::StripSet(const DetectorGeometry & detectorGeometry){
+  _layerStripMapArray.resize(detectorGeometry.getNSensors());
+}
 
-const fc::layerStripMap& fc::StripSet::getLayerStripMap(int layer) const {
-    if (layer >= 0 && layer < DetectorGeometry::_nSensors) return _layerStripMapArray[layer];
+const fc::layerStripMap& fc::StripSet::getLayerStripMap(unsigned int layer) const {
+  if (layer >= 0 && layer < _layerStripMapArray.size()) return _layerStripMapArray[layer];
      throw Exception("StripSet::getLayerStripMap: Out of bounds layer");  
 }
 
-void fc::StripSet::insertStrip(int layer, int strip, int adc) {
-  if (layer >= 0 && layer < DetectorGeometry::_nSensors){
+void fc::StripSet::insertStrip(unsigned int layer, int strip, int adc) {
+  if (layer >= 0 && layer < _layerStripMapArray.size()){
     _layerStripMapArray[layer].insert(layerStripMap::value_type(strip,adc));
     return;
   } else {
@@ -19,8 +22,8 @@ void fc::StripSet::insertStrip(int layer, int strip, int adc) {
 }
 
 // Improved insertStrip
-// void fc::StripSet::insertStrip(int layer, int strip, int adc) {
-//   if (layer >= 0 && layer < DetectorGeometry::_nSensors){
+// void fc::StripSet::insertStrip(int layer, unsigned int strip, int adc) {
+//   if (layer >= 0 && layer < _layerStripMapArray.size()){
     
 //     layerStripMap::iterator stripIter =  _layerStripMapArray[layer].find(strip);
 //     if (stripIter == _layerStripMapArray[layer].end()) {
@@ -45,7 +48,7 @@ void fc::StripSet::print(void) const{
   int strip;
   int adc;
 
-  for (int ii_layer = 0; ii_layer < DetectorGeometry::_nSensors; ++ii_layer) {
+  for (unsigned int ii_layer = 0; ii_layer < _layerStripMapArray.size(); ++ii_layer) {
  
     layerStripMap::size_type numberStrips =_layerStripMapArray[ii_layer].size();
 

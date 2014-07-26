@@ -65,15 +65,15 @@ fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TV
 
 }
 
-void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, int& outerXHit, int& middleXHit, int& outerZHit){
+void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, int& outerXHit, int& middleXHit, int& outerZHit,const DetectorGeometry& detectorGeometry){
 
   int outerXLayer = -1;
-  int outerZLayer = DetectorGeometry::_nXSensors-1;
+  int outerZLayer = detectorGeometry.getNXSensors()-1;
   int middleXLayer = -1;
 
   for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
 
-    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() > outerXLayer && hitSet.getHits()[*trackHitCandidateIter].getLayer() < DetectorGeometry::_nXSensors) {
+    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() > outerXLayer && hitSet.getHits()[*trackHitCandidateIter].getLayer() < detectorGeometry.getNXSensors()) {
       outerXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
       outerXHit = *trackHitCandidateIter;
     }

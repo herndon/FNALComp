@@ -8,6 +8,7 @@
 // 2014-06-12
 //============================================================================
 #include "Services/include/Config.hh"
+#include "Geometry/include/BuildDetectorGeometry.hh"
 #include "Geometry/include/DetectorGeometry.hh"
 #include "Framework/include/EventProcessor.hh"
 #include "Modules/include/DataSource.hh"
@@ -45,7 +46,7 @@ int main ()
 
   // DetectorGeomergy
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
-  fc::DetectorGeometry detectorGeometry(detectorgeometryfile);  
+  fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(detectorgeometryfile));  
   // files are closed by the default destructor
   if (debugLevel >= 2) detectorGeometry.printDetectorGeometry();
 

@@ -9,9 +9,13 @@ Detector Geometry information
 Detector Geometry version: 2
 Magnetic field, Bz 1 Tesla
 MIP charge ACD counts in silicon sensor 32
-Number sensor layers 10
+Number     sensor layers 10
+Number X   sensor layers 5
+Number SAS sensor layers 2
+Number Z   sensor layers 3
 
 Sensor layer 0
+Sensor type 0: X, 1, SAS, 2 Z 0
 N strips    2048
 Strip pitch 5e-05
 X position (m) 0
@@ -28,6 +32,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
 Sensor layer 1
+Sensor type 0: X, 1, SAS, 2 Z 0
 N strips    2048
 Strip pitch 5e-05
 X position (m) 0
@@ -44,6 +49,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
 Sensor layer 2
+Sensor type 0: X, 1, SAS, 2 Z 0
 N strips    2048
 Strip pitch 0.0002
 X position (m) 0
@@ -60,6 +66,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 3
+Sensor type 0: X, 1, SAS, 2 Z 0
 N strips    2048
 Strip pitch 0.0002
 X position (m) 0
@@ -76,6 +83,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 4
+Sensor type 0: X, 1, SAS, 2 Z 0
 N strips    2048
 Strip pitch 0.0002
 X position (m) 0
@@ -92,6 +100,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 5
+Sensor type 0: X, 1, SAS, 2 Z 1
 N strips    2048
 Strip pitch 5e-05
 X position (m) 0
@@ -108,6 +117,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
 Sensor layer 6
+Sensor type 0: X, 1, SAS, 2 Z 1
 N strips    2048
 Strip pitch 5e-05
 X position (m) 0
@@ -124,6 +134,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
 Sensor layer 7
+Sensor type 0: X, 1, SAS, 2 Z 2
 N strips    2048
 Strip pitch 0.0002
 X position (m) 0
@@ -140,6 +151,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 8
+Sensor type 0: X, 1, SAS, 2 Z 2
 N strips    2048
 Strip pitch 0.0002
 X position (m) 0
@@ -156,6 +168,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 9
+Sensor type 0: X, 1, SAS, 2 Z 2
 N strips    2048
 Strip pitch 0.0002
 X position (m) 0

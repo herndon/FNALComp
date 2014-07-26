@@ -44,8 +44,6 @@ private:
   // Detector information
   const DetectorGeometry & _detectorGeometry;
 
-  int _nLayers;
-
   const std::string _genHitsLabel;
   const std::string _recHitsLabel;
 
@@ -58,7 +56,7 @@ private:
 
   // Histograms
 
-  TH1F * deltaHitPositions[DetectorGeometry::_nSensors];
+    std::vector<TH1F *> deltaHitPositions;
 
 
   void initializeHistograms(void);

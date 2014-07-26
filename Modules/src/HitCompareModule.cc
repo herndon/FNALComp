@@ -1,6 +1,7 @@
 #include<iostream>
 #include<cmath>
 #include<string>
+#include<algorithm>
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "Modules/include/HitCompareModule.hh"
@@ -16,9 +17,6 @@ fc::HitCompareModule::HitCompareModule(int debugLevel,
   _genHitsLabel(inputGenHitsLabel),
   _recHitsLabel(inputRecHitsLabel){
 
-  // Intialize commonly used DetectorGeometry data
-  _nLayers = _detectorGeometry.getNSensors();
-
   initializeHistograms();
 
 
@@ -29,26 +27,12 @@ void fc::HitCompareModule::initializeHistograms(){
 
   UniqueRootDirectory tdir("HitCompare");
 
-  // Generalize to number of layers
-  //deltaHitPositions = new TH1F("deltaHitPositions", "Delta X Hit Positions","delta X (m)", "number of hits",100, -0.1, 0.1);
 
-  deltaHitPositions[0] = new TH1F("deltaHitPositions L0", "Delta X Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[1] = new TH1F("deltaHitPositions L1", "Delta X Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[2] = new TH1F("deltaHitPositions L2", "Delta X Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[3] = new TH1F("deltaHitPositions L3", "Delta X Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[4] = new TH1F("deltaHitPositions L4", "Delta X Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[5] = new TH1F("deltaHitPositions L5", "Delta Z Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[6] = new TH1F("deltaHitPositions L6", "Delta Z Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[7] = new TH1F("deltaHitPositions L7", "Delta Z Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[8] = new TH1F("deltaHitPositions L8", "Delta Z Hit Positions",100, -0.0001, 0.0001);
-  deltaHitPositions[9] = new TH1F("deltaHitPositions L9", "Delta Z Hit Positions",100, -0.0001, 0.0001);
-
-
-  for (int ii_layer = 0; ii_layer < _nLayers; ++ii_layer) {
-    deltaHitPositions[ii_layer]->GetXaxis()->SetTitle("delta (m)");
-    deltaHitPositions[ii_layer]->GetYaxis()->SetTitle("N Hits");
+  for (int ii_layer = 0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer) {
+    std::string histName = "deltaHitPositions  Layer " + std::to_string(ii_layer);
+    const char * histNameC = histName.c_str();
+    deltaHitPositions.push_back(new TH1F(histNameC, "Delta X Hit Positions;delta X (m);number of hits",100, -0.0001, 0.0001));
   }
-
 
 }
 
