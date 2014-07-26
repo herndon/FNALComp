@@ -75,29 +75,7 @@ TMatrixD fc::calcDxDHC(const Helix& helix, double phi) {
    return dxDHC;
 }
 
-
-TMatrixD fc::calcDXZDHC(const TVector3   & hitPosition,
-			       const TMatrixD &dxphiadHC) {
-  // Calculate
-  //    dXZdHC = (@measVec/@a) = (r@phi/@HC, r@z/@HC)^t
-
-  double r = hitPosition.Perp();
-
-
-  // Set dX = (@h/@a) = (@d/@a, @z/@a)^t
-  TMatrixD dXZdHC(DetectorGeometry::_mDim,Helix::_sDim);   
-
-  for (Int_t i=0; i<Helix::_sDim; i++) {
-    dXZdHC(0,i) = - (hitPosition.Y() / r) * dxphiadHC(0,i) 
-      + (hitPosition.X() / r) * dxphiadHC(1,i);
-    dXZdHC(0,i) *= r;
-    dXZdHC(1,i) =  dxphiadHC(2,i);
-  
-  }
-  return dXZdHC;
-}
-
-TMatrixD fc::calcDXDHC(const TVector3   & hitPosition,
+TMatrixD fc::calcD1DDHC(const TVector3   & hitPosition,
 			const TMatrixD &dxphiadHC,const TMatrixD& measurementDirection) {
   // Calculate
   //    dXdHC = (@measVec/@a) = (r@phi/@HC, r@z/@HC)^t

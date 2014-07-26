@@ -111,13 +111,8 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
 
  
  
-      // Find XZ vector to measurement
-      if (DetectorGeometry::_mDim == 2){
-	expectedMeasurementVector = expectedMeasurementVectorXZ(workingHelix,layer,detectorGeometry);
-      } else if (DetectorGeometry::_mDim == 1){
-	expectedMeasurementVector = expectedMeasurementVectorX(workingHelix,layer,detectorGeometry);
-
-      }
+      // Find vector to measurement in local coordinate
+     expectedMeasurementVector = expectedMeasurementVector1D(workingHelix,layer,detectorGeometry);
 
 
       if (_debugLevel >= 5){
@@ -126,13 +121,7 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
       }
 
       // Find how the measurement expectation varies with each helix coordinate
-     if (DetectorGeometry::_mDim == 2){
-       expectedMeasurementDerivative = expectedMeasurementDerivativedXZdHC(workingHelix,layer,detectorGeometry);
-     } else if (DetectorGeometry::_mDim == 1){
-       expectedMeasurementDerivative = expectedMeasurementDerivativedXdHC(workingHelix,layer,detectorGeometry);
-     }
-
-
+      expectedMeasurementDerivative = expectedMeasurementDerivatived1DdHC(workingHelix,layer,detectorGeometry);
 
       expectedMeasurementDerivativeT.Transpose(expectedMeasurementDerivative);
  
@@ -165,24 +154,17 @@ fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const 
 	std::cout.flush();
       }
 
-      // Hit position in XZ
+      // 1D Hit position in local measurement coordinate
 
-      if (DetectorGeometry::_mDim == 2){
-	measurementVector = measurementVectorXZ(hitPosition);
-      } else if (DetectorGeometry::_mDim == 1){
-	measurementVector = measurementVector1D(hitPosition,layer,detectorGeometry);
-      }
+      measurementVector = measurementVector1D(hitPosition,layer,detectorGeometry);;
 
-      // Residuals in XZ
+      // Residuals in 1D
       measurementResidualVector = measurementVector - expectedMeasurementVector; // just subtracts helix position and measurement point to get residual
       measurementResidualVectorT.Transpose(measurementResidualVector);
 
 
        if (_debugLevel >= 5){
-// 	std::cout << "measurementVector XZ " << measurementVector(0,0) << " " << measurementVector(1,0) << std::endl;
-// 	std::cout << "expectedMeasurementVector XZ " << expectedMeasurementVector(0,0) << " " << expectedMeasurementVector(1,0) << std::endl;
-// 	std::cout << "measurementResidualVector XZ " << measurementResidualVector(0,0) << " " << measurementResidualVector(1,0) << std::endl;
-	 std::cout << "measurementResidualVector XZ " << std::endl;
+	 std::cout << "measurementResidualVector 1D " << std::endl;
 	 measurementResidualVector.Print();
 
        }

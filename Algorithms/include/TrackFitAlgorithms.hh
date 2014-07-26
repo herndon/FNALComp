@@ -23,9 +23,8 @@ namespace fc {
   TVector3 calcXAt(const fc::Helix&,double phi);
   TMatrixD calcDxDHC(const fc::Helix&, double phi);
   TMatrixD calcDxDphi(const fc::Helix&, double phi);
-  TMatrixD calcDXZDHC(const TVector3& hitPosition, const TMatrixD &dxphiadHC);
 
-  TMatrixD calcDXDHC(const TVector3& hitPosition, const TMatrixD &dxphiadHC, const TMatrixD &);
+  TMatrixD calcD1DDHC(const TVector3& hitPosition, const TMatrixD &dxphiadHC, const TMatrixD &);
 
 
   //void MoveTo(const TVector & x0, TMatrixD & propMatrix, TMatrixD & covMatrix); 

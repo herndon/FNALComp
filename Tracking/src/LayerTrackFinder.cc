@@ -70,7 +70,7 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track , const Hit
 
     if (hitIter->getLayer()==_layer){
 
-      if (std::abs(expectedMeasurementVectorX(track.getHelix(),_layer,_detectorGeometry)(0,0) 
+      if (std::abs(expectedMeasurementVector1D(track.getHelix(),_layer,_detectorGeometry)(0,0) 
 		   - measurementVector1D(hitIter->getHitPosition(),_layer,_detectorGeometry)(0,0)) 
 	  < maxResidual) {
 
