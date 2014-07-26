@@ -20,11 +20,11 @@ class TVector3;
 namespace fc {
 
 
-  TVector3 calcXAt(const fc::Helix&,double phi);
-  TMatrixD calcDxDHC(const fc::Helix&, double phi);
-  TMatrixD calcDxDphi(const fc::Helix&, double phi);
+  const TVector3 calcXAt(const fc::Helix&,double phi);
+  const TMatrixD calcDxDHC(const fc::Helix&, double phi);
+  const TMatrixD calcDxDphi(const fc::Helix&, double phi);
 
-  TMatrixD calcD1DDHC(const TVector3& hitPosition, const TMatrixD &dxphiadHC, const TMatrixD &);
+  const TMatrixD calcD1DDHC(const TVector3& hitPosition, const TMatrixD &dxphiadHC, const TMatrixD &);
 
 
   //void MoveTo(const TVector & x0, TMatrixD & propMatrix, TMatrixD & covMatrix); 

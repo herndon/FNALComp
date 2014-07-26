@@ -50,13 +50,13 @@ public:
 
   // Get objects
 
-  TLorentzVector  getLorentzVector() const {return _lorentzVector;}
-  TVector3 getPosition() const {return _dr;}
+  const TLorentzVector  getLorentzVector() const {return _lorentzVector;}
+  const TVector3 getPosition() const {return _dr;}
   int getCharge() const {return _charge;}
 
   // convert to helix
-  Helix makeHelix(double alpha) const;
-  Helix makeHelix() const;
+  const Helix makeHelix(double alpha) const;
+  const Helix makeHelix() const;
 
   // Print method
 

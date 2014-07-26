@@ -5,7 +5,7 @@
 #include "DataObjects/include/HitSet.hh"
 #include "Algorithms/include/InitializeHelix.hh"
 
-fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const TVector3 & z1, const DetectorGeometry & detectorGeometry){
+const fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const TVector3 & z1, const DetectorGeometry & detectorGeometry){
 
 
   // Use three Cartesion points to determine a helix parameters in x,y

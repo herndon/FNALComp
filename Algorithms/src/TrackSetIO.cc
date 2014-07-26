@@ -18,18 +18,11 @@ fc::TrackSetIO::TrackSetIO(const DetectorGeometry & detectorGeometry):
 
 void fc::TrackSetIO::writeEvent(const TrackSet & trackSet, std::ofstream & trackdata) const{
 
-  if (_version != trackSet.getVersion()) {
-    std::string wrongStreamerVersion = "TrackSetIO::writeEvent: TrackSet expected streamer version " + std::to_string(trackSet.getVersion()) + " using streamer version " + std::to_string(_version);
-    throw Exception(wrongStreamerVersion);  
-  }
-
-
   // set precision output to precision of a doulbe + 2 digits to avoid rounding problems
   trackdata.precision(std::numeric_limits<double>::digits10 + 2);
 
   trackdata << "Tracks" << std::endl;
-  trackdata << trackSet.getVersion() << std::endl;
-  trackdata << trackSet.getGenTracks() << std::endl;
+  trackdata << _version << std::endl;
 
   trackSet::size_type numberTracks = trackSet.getTracks().size();
   trackdata << numberTracks << std::endl;
@@ -77,7 +70,6 @@ void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
 
   std::string eventDataObject;
   int version;
-  bool genTracks;
   int numberTracks;
   int trackNumber;
   int charge;
@@ -101,8 +93,6 @@ void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
     throw Exception(wrongStreamerVersion);  
   }
 
-  trackdata >> genTracks;
-  trackSet.setGenTracks(genTracks);
 
   trackdata >> numberTracks;
 

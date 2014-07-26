@@ -8,7 +8,7 @@
 
 
 
-TVector3 fc::calcXAt(const Helix& helix, double phi) {
+const TVector3 fc::calcXAt(const Helix& helix, double phi) {
   double csf0 = std::cos(helix.getPhi0());
    double snf0 = std::sin(helix.getPhi0());
    double snfd = std::sin(helix.getPhi0() + phi);
@@ -23,7 +23,7 @@ TVector3 fc::calcXAt(const Helix& helix, double phi) {
    return TVector3(x,y,z);
 }
 
-TMatrixD fc::calcDxDphi(const Helix& helix, double phi) {
+const TMatrixD fc::calcDxDphi(const Helix& helix, double phi) {
   double radiusCurvature    = helix.getAlpha()/helix.getKappa();
 
    double snfd = std::sin(helix.getPhi0() + phi);
@@ -39,7 +39,7 @@ TMatrixD fc::calcDxDphi(const Helix& helix, double phi) {
 
 
 
-TMatrixD fc::calcDxDHC(const Helix& helix, double phi) {
+const TMatrixD fc::calcDxDHC(const Helix& helix, double phi) {
   double radiusCurvature     = helix.getAlpha()/helix.getKappa();
    double rcpar = radiusCurvature/helix.getKappa();
 
@@ -75,7 +75,7 @@ TMatrixD fc::calcDxDHC(const Helix& helix, double phi) {
    return dxDHC;
 }
 
-TMatrixD fc::calcD1DDHC(const TVector3   & hitPosition,
+const TMatrixD fc::calcD1DDHC(const TVector3   & hitPosition,
 			const TMatrixD &dxphiadHC,const TMatrixD& measurementDirection) {
   // Calculate
   //    dXdHC = (@measVec/@a) = (r@phi/@HC, r@z/@HC)^t

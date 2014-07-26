@@ -8,7 +8,7 @@
 #include "Algorithms/include/TrackFitMeasurements.hh"
 
 
-TMatrixD fc::expectedMeasurementVector1D(const Helix& helix, int layer, const DetectorGeometry & detectorGeometry) {
+const TMatrixD fc::expectedMeasurementVector1D(const Helix& helix, int layer, const DetectorGeometry & detectorGeometry) {
 
   TVector3 hitPosition;
 
@@ -28,7 +28,7 @@ TMatrixD fc::expectedMeasurementVector1D(const Helix& helix, int layer, const De
 
 }
 
-TMatrixD fc::expectedMeasurementDerivatived1DdHC(const Helix& helix, int layer, const DetectorGeometry & detectorGeometry) {
+const TMatrixD fc::expectedMeasurementDerivatived1DdHC(const Helix& helix, int layer, const DetectorGeometry & detectorGeometry) {
 
   TVector3 hitPosition;
 
@@ -95,7 +95,7 @@ TMatrixD fc::expectedMeasurementDerivatived1DdHC(const Helix& helix, int layer, 
 
 }
 
-TMatrixD fc::measurementVector1D(const TVector3 & hitPosition,int layer, const DetectorGeometry & detectorGeometry) {
+const TMatrixD fc::measurementVector1D(const TVector3 & hitPosition,int layer, const DetectorGeometry & detectorGeometry) {
 
   // !!!!! not general, only works if the strip measurement direction is oriented in X
 

@@ -1,9 +1,7 @@
 #include <iostream>
 #include "DataObjects/include/TrackSet.hh"
 
-// !!!!! Do we need this one
 fc::TrackSet::TrackSet(const DetectorGeometry & detectorGeometry):
-  _version(1),
   _detectorGeometry(detectorGeometry) {
 
   // Intialize commonly used DetectorGeometry data
@@ -11,19 +9,7 @@ fc::TrackSet::TrackSet(const DetectorGeometry & detectorGeometry):
 
 }
 
-fc::TrackSet::TrackSet(int eventNumber, bool genTracks,const DetectorGeometry & detectorGeometry):
-  _version(1),
-  _genTracks(genTracks),
-  _eventNumber(eventNumber),
-  _detectorGeometry(detectorGeometry) {
-
-  // Intialize commonly used DetectorGeometry data
-  _curvatureC = _detectorGeometry.getCurvatureC();
-
-}
-
-
-void fc::TrackSet::insertTrack(Track track) {
+void fc::TrackSet::insertTrack(const Track& track) {
   _trackSet.push_back(track);
 }
 

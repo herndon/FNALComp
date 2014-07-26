@@ -12,7 +12,7 @@ fc::GenTrack::GenTrack(const TLorentzVector & lorentzVector, int charge, const T
 }
 
 
-fc::Helix fc::GenTrack::makeHelix(double alpha) const{
+const fc::Helix fc::GenTrack::makeHelix(double alpha) const{
 
   double dr = 1.0*_dr.Perp()*_dr.Y()/std::abs(_dr.Y());
 
@@ -21,7 +21,7 @@ fc::Helix fc::GenTrack::makeHelix(double alpha) const{
   return helix;
 }
 
-fc::Helix fc::GenTrack::makeHelix() const{
+const fc::Helix fc::GenTrack::makeHelix() const{
   return makeHelix(0);
 }
 

@@ -43,8 +43,6 @@ public:
   int getNumberStrips(void) const {return _numberStrips;};
   int getTrackNumber(void) const {return _trackNumber;};
 
-  void setTrackNumber(int trackNumber) { _trackNumber = trackNumber;};
-
   void print(void) const;
 
 };

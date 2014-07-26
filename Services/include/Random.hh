@@ -12,15 +12,17 @@ namespace fc {
 
 class Random {
 
-public:
-
-  Random();
-  Random(int);
-  ~Random() {};
+private:
 
   std::default_random_engine engine;
 
-  std::default_random_engine & getEngine( ){ return engine; }
+
+public:
+
+  Random(int);
+  ~Random() {};
+
+  std::default_random_engine & getEngine() { return engine; }
 
   double getUniformDouble (double, double);
 

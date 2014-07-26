@@ -37,7 +37,6 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
 
   std::unique_ptr<GenTrackSet> genTrackSet{ new GenTrackSet };
 
-
   std::unique_ptr<HitSet> hitSet{ new HitSet };
   std::unique_ptr<StripSet> stripSet{ new StripSet(_detectorGeometry)};
 

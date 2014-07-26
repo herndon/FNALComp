@@ -31,9 +31,6 @@ private:
 
 
   trackSet _trackSet;
-  int _version;
-  bool _genTracks;
-  int _eventNumber;
 
   // Detector information
   const DetectorGeometry & _detectorGeometry;
@@ -43,18 +40,11 @@ private:
 public:
 
   TrackSet(const DetectorGeometry & detectorGeometry);
-  TrackSet(int,bool,const DetectorGeometry & detectorGeometry);
   ~TrackSet() {};
 
   const trackSet & getTracks(void) const { return _trackSet;};
 
-  void insertTrack(Track);
-
-  int getVersion() const {return _version;}
-  int getGenTracks() const {return _genTracks;}
-  int getEventNumber()const {return _eventNumber;}
- 
-  void setGenTracks(bool genTracks) {_genTracks = genTracks;}
+  void insertTrack(const Track &);
 
   void print(void) const;
 

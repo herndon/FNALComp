@@ -34,10 +34,10 @@ public:
   ~HitSet() {};
 
 
-  const std::vector<Hit> & getHits(void) const {return _hitSet;};
+  const hitSet & getHits(void) const {return _hitSet;};
 
 
-  void insertHit(Hit);
+  void insertHit(const Hit&);
 
   void print(void) const;
 

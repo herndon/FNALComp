@@ -34,7 +34,7 @@ fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector
 
 
 
-TLorentzVector fc::Track::getLorentzVector(void) const{
+const TLorentzVector fc::Track::getLorentzVector(void) const{
   TLorentzVector lorentzVector;
   double pT = std::abs(1.0/getHelix().getKappa());
   double pZ = getHelix().getTanL()*pT;
@@ -44,19 +44,6 @@ TLorentzVector fc::Track::getLorentzVector(void) const{
 
 // !!!!! revisit whether the copy constructor and assigment op are necessary.  The assignment op is to support delting in the TrackSet
 
-// Copy constructor
-fc::Track::Track(const Track & track):
-  _helix(track._helix),
-  _covMatrix(track._covMatrix),
-  _chi2(track._chi2),
-  _nDof(track._nDof){
-
-  trackHitSet inputHits = track.getHits();
-
-  for (trackHitSet::const_iterator hitIter = inputHits.begin(); hitIter != inputHits.end(); ++hitIter){    insertHit(*hitIter);
-  }
-
-}
 
 fc::Track & fc::Track:: operator=(Track track){
 

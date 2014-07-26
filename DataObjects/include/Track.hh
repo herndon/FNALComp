@@ -74,7 +74,6 @@ public:
   Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign, const DetectorGeometry & detectorGeometry);
   Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate);
 
-  Track(const Track&);
   Track& operator=(Track track);
   
   // Destructor
@@ -83,7 +82,7 @@ public:
   // Get objects
 
   const Helix & getHelix() const {return _helix;};
-  TLorentzVector  getLorentzVector(void) const;
+  const TLorentzVector  getLorentzVector(void) const;
 
   int getCharge(void) const {return -getHelix().getKappa()/std::abs(getHelix().getKappa());};
 

@@ -22,9 +22,9 @@ class DetectorGeometry;
 
 namespace fc {
 
-  TMatrixD expectedMeasurementVector1D(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry);
-  TMatrixD expectedMeasurementDerivatived1DdHC(const fc::Helix& helix,int layer, const fc::DetectorGeometry & detectorGeometry);
-  TMatrixD measurementVector1D(const TVector3 & hitPosition,int layer, const fc::DetectorGeometry & detectorGeometry);
+  const TMatrixD expectedMeasurementVector1D(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry);
+  const TMatrixD expectedMeasurementDerivatived1DdHC(const fc::Helix& helix,int layer, const fc::DetectorGeometry & detectorGeometry);
+  const TMatrixD measurementVector1D(const TVector3 & hitPosition,int layer, const fc::DetectorGeometry & detectorGeometry);
 
   double expectedMeasurementUncertianty1D(const fc::Helix & helix, const TMatrixD& covMatrix, int layer,const fc::DetectorGeometry & detectorGeometry);  
 
