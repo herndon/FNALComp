@@ -240,35 +240,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1139  ADC 25
-Strip: 1140  ADC 6
+Strip: 1138  ADC 9
+Strip: 1139  ADC 22
 Layer: 1 number Strips: 2
-Strip: 1418  ADC 27
-Strip: 1419  ADC 4
+Strip: 1417  ADC 11
+Strip: 1418  ADC 20
 Layer: 2 number Strips: 2
-Strip: 1189  ADC 5
-Strip: 1190  ADC 26
+Strip: 1189  ADC 21
+Strip: 1190  ADC 10
 Layer: 3 number Strips: 2
-Strip: 1254  ADC 30
-Strip: 1255  ADC 1
+Strip: 1253  ADC 14
+Strip: 1254  ADC 17
 Layer: 4 number Strips: 2
-Strip: 1315  ADC 12
-Strip: 1316  ADC 19
+Strip: 1315  ADC 28
+Strip: 1316  ADC 3
 Layer: 5 number Strips: 2
-Strip: 888  ADC 17
-Strip: 889  ADC 14
+Strip: 887  ADC 1
+Strip: 888  ADC 30
 Layer: 6 number Strips: 2
-Strip: 744  ADC 1
-Strip: 745  ADC 30
+Strip: 744  ADC 17
+Strip: 745  ADC 14
 Layer: 7 number Strips: 2
-Strip: 918  ADC 20
-Strip: 919  ADC 11
+Strip: 917  ADC 4
+Strip: 918  ADC 27
 Layer: 8 number Strips: 2
-Strip: 1251  ADC 24
-Strip: 1252  ADC 7
+Strip: 1250  ADC 8
+Strip: 1251  ADC 23
 Layer: 9 number Strips: 2
-Strip: 1312  ADC 20
-Strip: 1313  ADC 11
+Strip: 1311  ADC 4
+Strip: 1312  ADC 27
 Event: 1
 GenTrackSet
 Number Gen Tracks: 1
@@ -321,35 +321,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 764  ADC 18
-Strip: 765  ADC 13
+Strip: 763  ADC 2
+Strip: 764  ADC 29
 Layer: 1 number Strips: 2
-Strip: 312  ADC 12
-Strip: 313  ADC 19
+Strip: 312  ADC 28
+Strip: 313  ADC 3
 Layer: 2 number Strips: 2
-Strip: 730  ADC 26
-Strip: 731  ADC 5
+Strip: 729  ADC 10
+Strip: 730  ADC 21
 Layer: 3 number Strips: 2
-Strip: 611  ADC 11
-Strip: 612  ADC 20
+Strip: 611  ADC 27
+Strip: 612  ADC 4
 Layer: 4 number Strips: 2
-Strip: 489  ADC 4
-Strip: 490  ADC 27
+Strip: 489  ADC 20
+Strip: 490  ADC 11
 Layer: 5 number Strips: 2
-Strip: 1160  ADC 23
-Strip: 1161  ADC 8
+Strip: 1159  ADC 7
+Strip: 1160  ADC 24
 Layer: 6 number Strips: 2
-Strip: 1189  ADC 28
-Strip: 1190  ADC 3
+Strip: 1188  ADC 12
+Strip: 1189  ADC 19
 Layer: 7 number Strips: 2
-Strip: 1072  ADC 10
-Strip: 1073  ADC 21
+Strip: 1072  ADC 26
+Strip: 1073  ADC 5
 Layer: 8 number Strips: 2
-Strip: 612  ADC 20
-Strip: 613  ADC 11
+Strip: 611  ADC 4
+Strip: 612  ADC 27
 Layer: 9 number Strips: 2
-Strip: 490  ADC 5
-Strip: 491  ADC 26
+Strip: 490  ADC 21
+Strip: 491  ADC 10
 Event: 2
 GenTrackSet
 Number Gen Tracks: 1
@@ -402,35 +402,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1139  ADC 28
-Strip: 1140  ADC 3
+Strip: 1138  ADC 12
+Strip: 1139  ADC 19
 Layer: 1 number Strips: 2
-Strip: 1320  ADC 28
-Strip: 1321  ADC 3
+Strip: 1319  ADC 12
+Strip: 1320  ADC 19
 Layer: 2 number Strips: 2
-Strip: 1141  ADC 18
-Strip: 1142  ADC 13
+Strip: 1140  ADC 2
+Strip: 1141  ADC 29
 Layer: 3 number Strips: 2
-Strip: 1183  ADC 30
-Strip: 1184  ADC 1
+Strip: 1182  ADC 14
+Strip: 1183  ADC 17
 Layer: 4 number Strips: 2
-Strip: 1223  ADC 26
-Strip: 1224  ADC 5
+Strip: 1222  ADC 10
+Strip: 1223  ADC 21
 Layer: 5 number Strips: 2
-Strip: 856  ADC 1
-Strip: 857  ADC 30
+Strip: 856  ADC 17
+Strip: 857  ADC 14
 Layer: 6 number Strips: 2
-Strip: 735  ADC 8
-Strip: 736  ADC 23
+Strip: 735  ADC 24
+Strip: 736  ADC 7
 Layer: 7 number Strips: 2
-Strip: 921  ADC 19
-Strip: 922  ADC 12
+Strip: 920  ADC 3
+Strip: 921  ADC 28
 Layer: 8 number Strips: 2
-Strip: 1180  ADC 10
-Strip: 1181  ADC 21
+Strip: 1180  ADC 26
+Strip: 1181  ADC 5
 Layer: 9 number Strips: 2
-Strip: 1220  ADC 24
-Strip: 1221  ADC 7
+Strip: 1219  ADC 8
+Strip: 1220  ADC 23
 Event: 3
 GenTrackSet
 Number Gen Tracks: 1
@@ -483,35 +483,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 522  ADC 10
-Strip: 523  ADC 21
+Strip: 522  ADC 26
+Strip: 523  ADC 5
 Layer: 1 number Strips: 2
-Strip: 158  ADC 17
-Strip: 159  ADC 14
+Strip: 157  ADC 1
+Strip: 158  ADC 30
 Layer: 2 number Strips: 2
-Strip: 719  ADC 28
-Strip: 720  ADC 3
+Strip: 718  ADC 12
+Strip: 719  ADC 19
 Layer: 3 number Strips: 2
-Strip: 633  ADC 24
-Strip: 634  ADC 7
+Strip: 632  ADC 8
+Strip: 633  ADC 23
 Layer: 4 number Strips: 2
-Strip: 549  ADC 5
-Strip: 550  ADC 26
+Strip: 549  ADC 21
+Strip: 550  ADC 10
 Layer: 5 number Strips: 2
-Strip: 1003  ADC 2
-Strip: 1004  ADC 29
+Strip: 1003  ADC 18
+Strip: 1004  ADC 13
 Layer: 6 number Strips: 2
-Strip: 999  ADC 6
-Strip: 1000  ADC 25
+Strip: 999  ADC 22
+Strip: 1000  ADC 9
 Layer: 7 number Strips: 2
-Strip: 1016  ADC 8
-Strip: 1017  ADC 23
+Strip: 1016  ADC 24
+Strip: 1017  ADC 7
 Layer: 8 number Strips: 2
-Strip: 633  ADC 29
-Strip: 634  ADC 2
+Strip: 632  ADC 13
+Strip: 633  ADC 18
 Layer: 9 number Strips: 2
-Strip: 549  ADC 23
-Strip: 550  ADC 8
+Strip: 548  ADC 7
+Strip: 549  ADC 24
 Event: 4
 GenTrackSet
 Number Gen Tracks: 1
@@ -564,35 +564,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 709  ADC 23
-Strip: 710  ADC 8
+Strip: 708  ADC 7
+Strip: 709  ADC 24
 Layer: 1 number Strips: 2
-Strip: 460  ADC 27
-Strip: 461  ADC 4
+Strip: 459  ADC 11
+Strip: 460  ADC 20
 Layer: 2 number Strips: 2
-Strip: 818  ADC 11
-Strip: 819  ADC 20
+Strip: 818  ADC 27
+Strip: 819  ADC 4
 Layer: 3 number Strips: 2
-Strip: 752  ADC 14
-Strip: 753  ADC 17
+Strip: 752  ADC 30
+Strip: 753  ADC 1
 Layer: 4 number Strips: 2
-Strip: 684  ADC 14
-Strip: 685  ADC 17
+Strip: 684  ADC 30
+Strip: 685  ADC 1
 Layer: 5 number Strips: 2
-Strip: 1224  ADC 14
-Strip: 1225  ADC 17
+Strip: 1224  ADC 30
+Strip: 1225  ADC 1
 Layer: 6 number Strips: 2
-Strip: 1290  ADC 16
-Strip: 1291  ADC 15
+Strip: 1289  ADC 0
+Strip: 1290  ADC 31
 Layer: 7 number Strips: 2
-Strip: 1107  ADC 22
-Strip: 1108  ADC 9
+Strip: 1106  ADC 6
+Strip: 1107  ADC 25
 Layer: 8 number Strips: 2
-Strip: 754  ADC 18
-Strip: 755  ADC 13
+Strip: 753  ADC 2
+Strip: 754  ADC 29
 Layer: 9 number Strips: 2
-Strip: 686  ADC 24
-Strip: 687  ADC 7
+Strip: 685  ADC 8
+Strip: 686  ADC 23
 Event: 5
 GenTrackSet
 Number Gen Tracks: 1
@@ -645,35 +645,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1072  ADC 28
-Strip: 1073  ADC 3
+Strip: 1071  ADC 12
+Strip: 1072  ADC 19
 Layer: 1 number Strips: 2
-Strip: 997  ADC 28
-Strip: 998  ADC 3
+Strip: 996  ADC 12
+Strip: 997  ADC 19
 Layer: 2 number Strips: 2
-Strip: 1000  ADC 14
-Strip: 1001  ADC 17
+Strip: 1000  ADC 30
+Strip: 1001  ADC 1
 Layer: 3 number Strips: 2
-Strip: 986  ADC 3
-Strip: 987  ADC 28
+Strip: 986  ADC 19
+Strip: 987  ADC 12
 Layer: 4 number Strips: 2
-Strip: 976  ADC 27
-Strip: 977  ADC 4
+Strip: 975  ADC 11
+Strip: 976  ADC 20
 Layer: 5 number Strips: 2
-Strip: 1005  ADC 2
-Strip: 1006  ADC 29
+Strip: 1005  ADC 18
+Strip: 1006  ADC 13
 Layer: 6 number Strips: 2
-Strip: 843  ADC 9
-Strip: 844  ADC 22
+Strip: 843  ADC 25
+Strip: 844  ADC 6
 Layer: 7 number Strips: 2
-Strip: 938  ADC 29
-Strip: 939  ADC 2
+Strip: 937  ADC 13
+Strip: 938  ADC 18
 Layer: 8 number Strips: 2
-Strip: 984  ADC 0
-Strip: 985  ADC 31
+Strip: 984  ADC 16
+Strip: 985  ADC 15
 Layer: 9 number Strips: 2
-Strip: 973  ADC 24
-Strip: 974  ADC 7
+Strip: 972  ADC 8
+Strip: 973  ADC 23
 Event: 6
 GenTrackSet
 Number Gen Tracks: 1
@@ -726,35 +726,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1018  ADC 31
-Strip: 1019  ADC 0
+Strip: 1017  ADC 15
+Strip: 1018  ADC 16
 Layer: 1 number Strips: 2
-Strip: 1101  ADC 3
-Strip: 1102  ADC 28
+Strip: 1101  ADC 19
+Strip: 1102  ADC 12
 Layer: 2 number Strips: 2
-Strip: 1067  ADC 25
-Strip: 1068  ADC 6
+Strip: 1066  ADC 9
+Strip: 1067  ADC 22
 Layer: 3 number Strips: 2
-Strip: 1094  ADC 17
-Strip: 1095  ADC 14
+Strip: 1093  ADC 1
+Strip: 1094  ADC 30
 Layer: 4 number Strips: 2
-Strip: 1123  ADC 4
-Strip: 1124  ADC 27
+Strip: 1123  ADC 20
+Strip: 1124  ADC 11
 Layer: 5 number Strips: 2
-Strip: 923  ADC 4
-Strip: 924  ADC 27
+Strip: 923  ADC 20
+Strip: 924  ADC 11
 Layer: 6 number Strips: 2
-Strip: 722  ADC 16
-Strip: 723  ADC 15
+Strip: 721  ADC 0
+Strip: 722  ADC 31
 Layer: 7 number Strips: 2
-Strip: 898  ADC 13
-Strip: 899  ADC 18
+Strip: 898  ADC 29
+Strip: 899  ADC 2
 Layer: 8 number Strips: 2
-Strip: 1091  ADC 24
-Strip: 1092  ADC 7
+Strip: 1090  ADC 8
+Strip: 1091  ADC 23
 Layer: 9 number Strips: 2
-Strip: 1119  ADC 10
-Strip: 1120  ADC 21
+Strip: 1119  ADC 26
+Strip: 1120  ADC 5
 Event: 7
 GenTrackSet
 Number Gen Tracks: 1
@@ -807,35 +807,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1419  ADC 1
-Strip: 1420  ADC 30
+Strip: 1419  ADC 17
+Strip: 1420  ADC 14
 Layer: 1 number Strips: 2
-Strip: 1905  ADC 3
-Strip: 1906  ADC 28
+Strip: 1905  ADC 19
+Strip: 1906  ADC 12
 Layer: 2 number Strips: 2
-Strip: 1364  ADC 17
-Strip: 1365  ADC 14
+Strip: 1363  ADC 1
+Strip: 1364  ADC 30
 Layer: 3 number Strips: 2
-Strip: 1482  ADC 0
-Strip: 1483  ADC 31
+Strip: 1482  ADC 16
+Strip: 1483  ADC 15
 Layer: 4 number Strips: 2
-Strip: 1600  ADC 20
-Strip: 1601  ADC 11
+Strip: 1599  ADC 4
+Strip: 1600  ADC 27
 Layer: 5 number Strips: 2
-Strip: 1046  ADC 3
-Strip: 1047  ADC 28
+Strip: 1046  ADC 19
+Strip: 1047  ADC 12
 Layer: 6 number Strips: 2
-Strip: 1055  ADC 28
-Strip: 1056  ADC 3
+Strip: 1054  ADC 12
+Strip: 1055  ADC 19
 Layer: 7 number Strips: 2
-Strip: 1033  ADC 0
-Strip: 1034  ADC 31
+Strip: 1033  ADC 16
+Strip: 1034  ADC 15
 Layer: 8 number Strips: 2
-Strip: 1483  ADC 27
-Strip: 1484  ADC 4
+Strip: 1482  ADC 11
+Strip: 1483  ADC 20
 Layer: 9 number Strips: 2
-Strip: 1600  ADC 21
-Strip: 1601  ADC 10
+Strip: 1599  ADC 5
+Strip: 1600  ADC 26
 Event: 8
 GenTrackSet
 Number Gen Tracks: 1
@@ -888,35 +888,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1363  ADC 4
-Strip: 1364  ADC 27
+Strip: 1363  ADC 20
+Strip: 1364  ADC 11
 Layer: 1 number Strips: 2
-Strip: 1645  ADC 24
-Strip: 1646  ADC 7
+Strip: 1644  ADC 8
+Strip: 1645  ADC 23
 Layer: 2 number Strips: 2
-Strip: 1247  ADC 7
-Strip: 1248  ADC 24
+Strip: 1247  ADC 23
+Strip: 1248  ADC 8
 Layer: 3 number Strips: 2
-Strip: 1314  ADC 16
-Strip: 1315  ADC 15
-Layer: 4 number Strips: 2
-Strip: 1379  ADC 24
-Strip: 1380  ADC 7
-Layer: 5 number Strips: 2
-Strip: 794  ADC 11
-Strip: 795  ADC 20
-Layer: 6 number Strips: 2
-Strip: 672  ADC 20
-Strip: 673  ADC 11
-Layer: 7 number Strips: 2
-Strip: 905  ADC 12
-Strip: 906  ADC 19
-Layer: 8 number Strips: 2
-Strip: 1312  ADC 31
 Strip: 1313  ADC 0
+Strip: 1314  ADC 31
+Layer: 4 number Strips: 2
+Strip: 1378  ADC 8
+Strip: 1379  ADC 23
+Layer: 5 number Strips: 2
+Strip: 794  ADC 27
+Strip: 795  ADC 4
+Layer: 6 number Strips: 2
+Strip: 671  ADC 4
+Strip: 672  ADC 27
+Layer: 7 number Strips: 2
+Strip: 905  ADC 28
+Strip: 906  ADC 3
+Layer: 8 number Strips: 2
+Strip: 1311  ADC 15
+Strip: 1312  ADC 16
 Layer: 9 number Strips: 2
-Strip: 1376  ADC 24
-Strip: 1377  ADC 7
+Strip: 1375  ADC 8
+Strip: 1376  ADC 23
 Event: 9
 GenTrackSet
 Number Gen Tracks: 1
@@ -969,35 +969,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1215  ADC 13
-Strip: 1216  ADC 18
+Strip: 1215  ADC 29
+Strip: 1216  ADC 2
 Layer: 1 number Strips: 2
-Strip: 1285  ADC 30
-Strip: 1286  ADC 1
+Strip: 1284  ADC 14
+Strip: 1285  ADC 17
 Layer: 2 number Strips: 2
-Strip: 1104  ADC 14
-Strip: 1105  ADC 17
+Strip: 1104  ADC 30
+Strip: 1105  ADC 1
 Layer: 3 number Strips: 2
-Strip: 1117  ADC 6
-Strip: 1118  ADC 25
+Strip: 1117  ADC 22
+Strip: 1118  ADC 9
 Layer: 4 number Strips: 2
-Strip: 1129  ADC 13
-Strip: 1130  ADC 18
+Strip: 1129  ADC 29
+Strip: 1130  ADC 2
 Layer: 5 number Strips: 2
-Strip: 1203  ADC 8
-Strip: 1204  ADC 23
+Strip: 1203  ADC 24
+Strip: 1204  ADC 7
 Layer: 6 number Strips: 2
-Strip: 1371  ADC 22
-Strip: 1372  ADC 9
+Strip: 1370  ADC 6
+Strip: 1371  ADC 25
 Layer: 7 number Strips: 2
-Strip: 1153  ADC 31
-Strip: 1154  ADC 0
+Strip: 1152  ADC 15
+Strip: 1153  ADC 16
 Layer: 8 number Strips: 2
-Strip: 1120  ADC 3
-Strip: 1121  ADC 28
+Strip: 1120  ADC 19
+Strip: 1121  ADC 12
 Layer: 9 number Strips: 2
-Strip: 1132  ADC 2
-Strip: 1133  ADC 29
+Strip: 1132  ADC 18
+Strip: 1133  ADC 13
 Event: 10
 GenTrackSet
 Number Gen Tracks: 1
@@ -1050,33 +1050,33 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1582  ADC 12
-Strip: 1583  ADC 19
+Strip: 1582  ADC 28
+Strip: 1583  ADC 3
 Layer: 1 number Strips: 0
 Layer: 2 number Strips: 2
-Strip: 1403  ADC 2
-Strip: 1404  ADC 29
+Strip: 1403  ADC 18
+Strip: 1404  ADC 13
 Layer: 3 number Strips: 2
-Strip: 1521  ADC 12
-Strip: 1522  ADC 19
+Strip: 1521  ADC 28
+Strip: 1522  ADC 3
 Layer: 4 number Strips: 2
-Strip: 1638  ADC 23
-Strip: 1639  ADC 8
+Strip: 1637  ADC 7
+Strip: 1638  ADC 24
 Layer: 5 number Strips: 2
-Strip: 964  ADC 18
-Strip: 965  ADC 13
+Strip: 963  ADC 2
+Strip: 964  ADC 29
 Layer: 6 number Strips: 2
-Strip: 890  ADC 10
-Strip: 891  ADC 21
+Strip: 890  ADC 26
+Strip: 891  ADC 5
 Layer: 7 number Strips: 2
-Strip: 972  ADC 25
-Strip: 973  ADC 6
+Strip: 971  ADC 9
+Strip: 972  ADC 22
 Layer: 8 number Strips: 2
-Strip: 1520  ADC 15
-Strip: 1521  ADC 16
+Strip: 1520  ADC 31
+Strip: 1521  ADC 0
 Layer: 9 number Strips: 2
-Strip: 1636  ADC 19
-Strip: 1637  ADC 12
+Strip: 1635  ADC 3
+Strip: 1636  ADC 28
 Event: 11
 GenTrackSet
 Number Gen Tracks: 1
@@ -1129,35 +1129,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 977  ADC 18
-Strip: 978  ADC 13
+Strip: 976  ADC 2
+Strip: 977  ADC 29
 Layer: 1 number Strips: 2
-Strip: 967  ADC 30
-Strip: 968  ADC 1
+Strip: 966  ADC 14
+Strip: 967  ADC 17
 Layer: 2 number Strips: 2
-Strip: 1008  ADC 7
-Strip: 1009  ADC 24
+Strip: 1008  ADC 23
+Strip: 1009  ADC 8
 Layer: 3 number Strips: 2
-Strip: 1009  ADC 18
-Strip: 1010  ADC 13
+Strip: 1008  ADC 2
+Strip: 1009  ADC 29
 Layer: 4 number Strips: 2
-Strip: 1012  ADC 23
-Strip: 1013  ADC 8
+Strip: 1011  ADC 7
+Strip: 1012  ADC 24
 Layer: 5 number Strips: 2
-Strip: 1307  ADC 9
-Strip: 1308  ADC 22
+Strip: 1307  ADC 25
+Strip: 1308  ADC 6
 Layer: 6 number Strips: 2
-Strip: 1578  ADC 14
-Strip: 1579  ADC 17
+Strip: 1578  ADC 30
+Strip: 1579  ADC 1
 Layer: 7 number Strips: 2
-Strip: 1230  ADC 24
-Strip: 1231  ADC 7
+Strip: 1229  ADC 8
+Strip: 1230  ADC 23
 Layer: 8 number Strips: 2
-Strip: 1014  ADC 24
-Strip: 1015  ADC 7
+Strip: 1013  ADC 8
+Strip: 1014  ADC 23
 Layer: 9 number Strips: 2
-Strip: 1017  ADC 5
-Strip: 1018  ADC 26
+Strip: 1017  ADC 21
+Strip: 1018  ADC 10
 Event: 12
 GenTrackSet
 Number Gen Tracks: 1
@@ -1210,35 +1210,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1249  ADC 19
-Strip: 1250  ADC 12
+Strip: 1248  ADC 3
+Strip: 1249  ADC 28
 Layer: 1 number Strips: 2
-Strip: 1541  ADC 0
-Strip: 1542  ADC 31
+Strip: 1541  ADC 16
+Strip: 1542  ADC 15
 Layer: 2 number Strips: 2
-Strip: 1228  ADC 26
-Strip: 1229  ADC 5
+Strip: 1227  ADC 10
+Strip: 1228  ADC 21
 Layer: 3 number Strips: 2
-Strip: 1304  ADC 15
-Strip: 1305  ADC 16
+Strip: 1304  ADC 31
+Strip: 1305  ADC 0
 Layer: 4 number Strips: 2
-Strip: 1382  ADC 29
-Strip: 1383  ADC 2
+Strip: 1381  ADC 13
+Strip: 1382  ADC 18
 Layer: 5 number Strips: 2
-Strip: 877  ADC 10
-Strip: 878  ADC 21
+Strip: 877  ADC 26
+Strip: 878  ADC 5
 Layer: 6 number Strips: 2
-Strip: 557  ADC 20
-Strip: 558  ADC 11
+Strip: 556  ADC 4
+Strip: 557  ADC 27
 Layer: 7 number Strips: 2
-Strip: 827  ADC 31
-Strip: 828  ADC 0
+Strip: 826  ADC 15
+Strip: 827  ADC 16
 Layer: 8 number Strips: 2
-Strip: 1299  ADC 10
-Strip: 1300  ADC 21
+Strip: 1299  ADC 26
+Strip: 1300  ADC 5
 Layer: 9 number Strips: 2
-Strip: 1375  ADC 1
-Strip: 1376  ADC 30
+Strip: 1375  ADC 17
+Strip: 1376  ADC 14
 Event: 13
 GenTrackSet
 Number Gen Tracks: 1
@@ -1291,35 +1291,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 639  ADC 5
-Strip: 640  ADC 26
+Strip: 639  ADC 21
+Strip: 640  ADC 10
 Layer: 1 number Strips: 2
-Strip: 400  ADC 18
-Strip: 401  ADC 13
+Strip: 399  ADC 2
+Strip: 400  ADC 29
 Layer: 2 number Strips: 2
-Strip: 806  ADC 10
-Strip: 807  ADC 21
+Strip: 806  ADC 26
+Strip: 807  ADC 5
 Layer: 3 number Strips: 2
-Strip: 743  ADC 3
-Strip: 744  ADC 28
+Strip: 743  ADC 19
+Strip: 744  ADC 12
 Layer: 4 number Strips: 2
-Strip: 679  ADC 29
-Strip: 680  ADC 2
+Strip: 678  ADC 13
+Strip: 679  ADC 18
 Layer: 5 number Strips: 2
-Strip: 1203  ADC 30
-Strip: 1204  ADC 1
+Strip: 1202  ADC 14
+Strip: 1203  ADC 17
 Layer: 6 number Strips: 2
-Strip: 1545  ADC 12
-Strip: 1546  ADC 19
+Strip: 1545  ADC 28
+Strip: 1546  ADC 3
 Layer: 7 number Strips: 2
-Strip: 1239  ADC 0
-Strip: 1240  ADC 31
+Strip: 1239  ADC 16
+Strip: 1240  ADC 15
 Layer: 8 number Strips: 2
-Strip: 748  ADC 0
-Strip: 749  ADC 31
+Strip: 748  ADC 16
+Strip: 749  ADC 15
 Layer: 9 number Strips: 2
-Strip: 685  ADC 19
-Strip: 686  ADC 12
+Strip: 684  ADC 3
+Strip: 685  ADC 28
 Event: 14
 GenTrackSet
 Number Gen Tracks: 1
@@ -1372,33 +1372,33 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 370  ADC 30
-Strip: 371  ADC 1
+Strip: 369  ADC 14
+Strip: 370  ADC 17
 Layer: 1 number Strips: 0
 Layer: 2 number Strips: 2
-Strip: 591  ADC 9
-Strip: 592  ADC 22
+Strip: 591  ADC 25
+Strip: 592  ADC 6
 Layer: 3 number Strips: 2
-Strip: 454  ADC 16
-Strip: 455  ADC 15
+Strip: 453  ADC 0
+Strip: 454  ADC 31
 Layer: 4 number Strips: 2
-Strip: 315  ADC 8
-Strip: 316  ADC 23
-Layer: 5 number Strips: 2
-Strip: 1052  ADC 26
-Strip: 1053  ADC 5
-Layer: 6 number Strips: 2
-Strip: 1131  ADC 26
-Strip: 1132  ADC 5
-Layer: 7 number Strips: 2
-Strip: 1070  ADC 24
-Strip: 1071  ADC 7
-Layer: 8 number Strips: 2
-Strip: 455  ADC 3
-Strip: 456  ADC 28
-Layer: 9 number Strips: 2
+Strip: 315  ADC 24
 Strip: 316  ADC 7
-Strip: 317  ADC 24
+Layer: 5 number Strips: 2
+Strip: 1051  ADC 10
+Strip: 1052  ADC 21
+Layer: 6 number Strips: 2
+Strip: 1130  ADC 10
+Strip: 1131  ADC 21
+Layer: 7 number Strips: 2
+Strip: 1069  ADC 8
+Strip: 1070  ADC 23
+Layer: 8 number Strips: 2
+Strip: 455  ADC 19
+Strip: 456  ADC 12
+Layer: 9 number Strips: 2
+Strip: 316  ADC 23
+Strip: 317  ADC 8
 Event: 15
 GenTrackSet
 Number Gen Tracks: 1
@@ -1451,35 +1451,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1126  ADC 17
-Strip: 1127  ADC 14
+Strip: 1125  ADC 1
+Strip: 1126  ADC 30
 Layer: 1 number Strips: 2
-Strip: 1248  ADC 11
-Strip: 1249  ADC 20
+Strip: 1248  ADC 27
+Strip: 1249  ADC 4
 Layer: 2 number Strips: 2
-Strip: 1109  ADC 27
-Strip: 1110  ADC 4
+Strip: 1108  ADC 11
+Strip: 1109  ADC 20
 Layer: 3 number Strips: 2
-Strip: 1136  ADC 29
-Strip: 1137  ADC 2
+Strip: 1135  ADC 13
+Strip: 1136  ADC 18
 Layer: 4 number Strips: 2
-Strip: 1161  ADC 13
-Strip: 1162  ADC 18
+Strip: 1161  ADC 29
+Strip: 1162  ADC 2
 Layer: 5 number Strips: 2
-Strip: 1334  ADC 10
-Strip: 1335  ADC 21
+Strip: 1334  ADC 26
+Strip: 1335  ADC 5
 Layer: 6 number Strips: 2
-Strip: 1674  ADC 0
-Strip: 1675  ADC 31
+Strip: 1674  ADC 16
+Strip: 1675  ADC 15
 Layer: 7 number Strips: 2
-Strip: 1271  ADC 2
-Strip: 1272  ADC 29
+Strip: 1271  ADC 18
+Strip: 1272  ADC 13
 Layer: 8 number Strips: 2
-Strip: 1141  ADC 1
-Strip: 1142  ADC 30
+Strip: 1141  ADC 17
+Strip: 1142  ADC 14
 Layer: 9 number Strips: 2
-Strip: 1168  ADC 21
-Strip: 1169  ADC 10
+Strip: 1167  ADC 5
+Strip: 1168  ADC 26
 Event: 16
 GenTrackSet
 Number Gen Tracks: 1
@@ -1532,35 +1532,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 751  ADC 25
-Strip: 752  ADC 6
+Strip: 750  ADC 9
+Strip: 751  ADC 22
 Layer: 1 number Strips: 2
-Strip: 637  ADC 25
-Strip: 638  ADC 6
+Strip: 636  ADC 9
+Strip: 637  ADC 22
 Layer: 2 number Strips: 2
-Strip: 901  ADC 24
-Strip: 902  ADC 7
+Strip: 900  ADC 8
+Strip: 901  ADC 23
 Layer: 3 number Strips: 2
-Strip: 877  ADC 4
-Strip: 878  ADC 27
+Strip: 877  ADC 20
+Strip: 878  ADC 11
 Layer: 4 number Strips: 2
-Strip: 857  ADC 31
-Strip: 858  ADC 0
+Strip: 856  ADC 15
+Strip: 857  ADC 16
 Layer: 5 number Strips: 2
-Strip: 732  ADC 24
-Strip: 733  ADC 7
+Strip: 731  ADC 8
+Strip: 732  ADC 23
 Layer: 6 number Strips: 2
-Strip: 594  ADC 1
-Strip: 595  ADC 30
+Strip: 594  ADC 17
+Strip: 595  ADC 14
 Layer: 7 number Strips: 2
-Strip: 882  ADC 15
-Strip: 883  ADC 16
+Strip: 882  ADC 31
+Strip: 883  ADC 0
 Layer: 8 number Strips: 2
-Strip: 874  ADC 4
-Strip: 875  ADC 27
+Strip: 874  ADC 20
+Strip: 875  ADC 11
 Layer: 9 number Strips: 2
-Strip: 853  ADC 25
-Strip: 854  ADC 6
+Strip: 852  ADC 9
+Strip: 853  ADC 22
 Event: 17
 GenTrackSet
 Number Gen Tracks: 1
@@ -1613,35 +1613,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 956  ADC 10
-Strip: 957  ADC 21
+Strip: 956  ADC 26
+Strip: 957  ADC 5
 Layer: 1 number Strips: 2
-Strip: 967  ADC 31
-Strip: 968  ADC 0
+Strip: 966  ADC 15
+Strip: 967  ADC 16
 Layer: 2 number Strips: 2
-Strip: 1015  ADC 26
-Strip: 1016  ADC 5
+Strip: 1014  ADC 10
+Strip: 1015  ADC 21
 Layer: 3 number Strips: 2
-Strip: 1023  ADC 31
-Strip: 1024  ADC 0
+Strip: 1022  ADC 15
+Strip: 1023  ADC 16
 Layer: 4 number Strips: 2
-Strip: 1033  ADC 4
-Strip: 1034  ADC 27
+Strip: 1033  ADC 20
+Strip: 1034  ADC 11
 Layer: 5 number Strips: 2
-Strip: 1284  ADC 13
-Strip: 1285  ADC 18
+Strip: 1284  ADC 29
+Strip: 1285  ADC 2
 Layer: 6 number Strips: 2
-Strip: 1589  ADC 19
-Strip: 1590  ADC 12
+Strip: 1588  ADC 3
+Strip: 1589  ADC 28
 Layer: 7 number Strips: 2
-Strip: 1241  ADC 11
-Strip: 1242  ADC 20
+Strip: 1241  ADC 27
+Strip: 1242  ADC 4
 Layer: 8 number Strips: 2
-Strip: 1028  ADC 27
-Strip: 1029  ADC 4
+Strip: 1027  ADC 11
+Strip: 1028  ADC 20
 Layer: 9 number Strips: 2
-Strip: 1040  ADC 28
-Strip: 1041  ADC 3
+Strip: 1039  ADC 12
+Strip: 1040  ADC 19
 Event: 18
 GenTrackSet
 Number Gen Tracks: 1
@@ -1694,35 +1694,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1099  ADC 25
-Strip: 1100  ADC 6
+Strip: 1098  ADC 9
+Strip: 1099  ADC 22
 Layer: 1 number Strips: 2
-Strip: 1213  ADC 7
-Strip: 1214  ADC 24
+Strip: 1213  ADC 23
+Strip: 1214  ADC 8
 Layer: 2 number Strips: 2
-Strip: 1098  ADC 10
-Strip: 1099  ADC 21
+Strip: 1098  ADC 26
+Strip: 1099  ADC 5
 Layer: 3 number Strips: 2
-Strip: 1124  ADC 27
-Strip: 1125  ADC 4
+Strip: 1123  ADC 11
+Strip: 1124  ADC 20
 Layer: 4 number Strips: 2
-Strip: 1147  ADC 1
-Strip: 1148  ADC 30
+Strip: 1147  ADC 17
+Strip: 1148  ADC 14
 Layer: 5 number Strips: 2
-Strip: 623  ADC 18
-Strip: 624  ADC 13
+Strip: 622  ADC 2
+Strip: 623  ADC 29
 Layer: 6 number Strips: 2
-Strip: 279  ADC 3
-Strip: 280  ADC 28
+Strip: 279  ADC 19
+Strip: 280  ADC 12
 Layer: 7 number Strips: 2
-Strip: 752  ADC 19
-Strip: 753  ADC 12
+Strip: 751  ADC 3
+Strip: 752  ADC 28
 Layer: 8 number Strips: 2
-Strip: 1117  ADC 5
-Strip: 1118  ADC 26
+Strip: 1117  ADC 21
+Strip: 1118  ADC 10
 Layer: 9 number Strips: 2
-Strip: 1139  ADC 6
-Strip: 1140  ADC 25
+Strip: 1139  ADC 22
+Strip: 1140  ADC 9
 Event: 19
 GenTrackSet
 Number Gen Tracks: 1
@@ -1775,35 +1775,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 862  ADC 24
-Strip: 863  ADC 7
+Strip: 861  ADC 8
+Strip: 862  ADC 23
 Layer: 1 number Strips: 2
-Strip: 583  ADC 16
-Strip: 584  ADC 15
+Strip: 582  ADC 0
+Strip: 583  ADC 31
 Layer: 2 number Strips: 2
-Strip: 841  ADC 11
-Strip: 842  ADC 20
+Strip: 841  ADC 27
+Strip: 842  ADC 4
 Layer: 3 number Strips: 2
-Strip: 766  ADC 15
-Strip: 767  ADC 16
+Strip: 766  ADC 31
+Strip: 767  ADC 0
 Layer: 4 number Strips: 2
-Strip: 688  ADC 3
-Strip: 689  ADC 28
+Strip: 688  ADC 19
+Strip: 689  ADC 12
 Layer: 5 number Strips: 2
-Strip: 1130  ADC 13
-Strip: 1131  ADC 18
+Strip: 1130  ADC 29
+Strip: 1131  ADC 2
 Layer: 6 number Strips: 2
-Strip: 1163  ADC 6
-Strip: 1164  ADC 25
+Strip: 1163  ADC 22
+Strip: 1164  ADC 9
 Layer: 7 number Strips: 2
-Strip: 1066  ADC 0
-Strip: 1067  ADC 31
+Strip: 1066  ADC 16
+Strip: 1067  ADC 15
 Layer: 8 number Strips: 2
-Strip: 767  ADC 17
-Strip: 768  ADC 14
+Strip: 766  ADC 1
+Strip: 767  ADC 30
 Layer: 9 number Strips: 2
-Strip: 689  ADC 5
-Strip: 690  ADC 26
+Strip: 689  ADC 21
+Strip: 690  ADC 10
 Event: 20
 GenTrackSet
 Number Gen Tracks: 1
@@ -1856,35 +1856,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 553  ADC 6
-Strip: 554  ADC 25
+Strip: 553  ADC 22
+Strip: 554  ADC 9
 Layer: 1 number Strips: 2
-Strip: 73  ADC 3
-Strip: 74  ADC 28
+Strip: 73  ADC 19
+Strip: 74  ADC 12
 Layer: 2 number Strips: 2
-Strip: 668  ADC 18
-Strip: 669  ADC 13
+Strip: 667  ADC 2
+Strip: 668  ADC 29
 Layer: 3 number Strips: 2
-Strip: 552  ADC 1
-Strip: 553  ADC 30
+Strip: 552  ADC 17
+Strip: 553  ADC 14
 Layer: 4 number Strips: 2
-Strip: 440  ADC 29
-Strip: 441  ADC 2
+Strip: 439  ADC 13
+Strip: 440  ADC 18
 Layer: 5 number Strips: 2
-Strip: 860  ADC 2
-Strip: 861  ADC 29
+Strip: 860  ADC 18
+Strip: 861  ADC 13
 Layer: 6 number Strips: 2
-Strip: 621  ADC 22
-Strip: 622  ADC 9
+Strip: 620  ADC 6
+Strip: 621  ADC 25
 Layer: 7 number Strips: 2
-Strip: 863  ADC 24
-Strip: 864  ADC 7
+Strip: 862  ADC 8
+Strip: 863  ADC 23
 Layer: 8 number Strips: 2
-Strip: 548  ADC 1
-Strip: 549  ADC 30
+Strip: 548  ADC 17
+Strip: 549  ADC 14
 Layer: 9 number Strips: 2
-Strip: 435  ADC 13
-Strip: 436  ADC 18
+Strip: 435  ADC 29
+Strip: 436  ADC 2
 Event: 21
 GenTrackSet
 Number Gen Tracks: 1
@@ -1937,35 +1937,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 924  ADC 14
-Strip: 925  ADC 17
+Strip: 924  ADC 30
+Strip: 925  ADC 1
 Layer: 1 number Strips: 2
-Strip: 889  ADC 11
-Strip: 890  ADC 20
+Strip: 889  ADC 27
+Strip: 890  ADC 4
 Layer: 2 number Strips: 2
-Strip: 980  ADC 27
-Strip: 981  ADC 4
+Strip: 979  ADC 11
+Strip: 980  ADC 20
 Layer: 3 number Strips: 2
-Strip: 967  ADC 4
-Strip: 968  ADC 27
+Strip: 967  ADC 20
+Strip: 968  ADC 11
 Layer: 4 number Strips: 2
-Strip: 954  ADC 29
-Strip: 955  ADC 2
+Strip: 953  ADC 13
+Strip: 954  ADC 18
 Layer: 5 number Strips: 2
-Strip: 1104  ADC 22
-Strip: 1105  ADC 9
+Strip: 1103  ADC 6
+Strip: 1104  ADC 25
 Layer: 6 number Strips: 2
-Strip: 1047  ADC 27
-Strip: 1048  ADC 4
+Strip: 1046  ADC 11
+Strip: 1047  ADC 20
 Layer: 7 number Strips: 2
-Strip: 1015  ADC 14
-Strip: 1016  ADC 17
+Strip: 1015  ADC 30
+Strip: 1016  ADC 1
 Layer: 8 number Strips: 2
-Strip: 967  ADC 19
-Strip: 968  ADC 12
+Strip: 966  ADC 3
+Strip: 967  ADC 28
 Layer: 9 number Strips: 2
-Strip: 953  ADC 14
-Strip: 954  ADC 17
+Strip: 953  ADC 30
+Strip: 954  ADC 1
 Event: 22
 GenTrackSet
 Number Gen Tracks: 1
@@ -2018,35 +2018,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 559  ADC 26
-Strip: 560  ADC 5
+Strip: 558  ADC 10
+Strip: 559  ADC 21
 Layer: 1 number Strips: 2
-Strip: 103  ADC 19
-Strip: 104  ADC 12
+Strip: 102  ADC 3
+Strip: 103  ADC 28
 Layer: 2 number Strips: 2
-Strip: 677  ADC 24
-Strip: 678  ADC 7
+Strip: 676  ADC 8
+Strip: 677  ADC 23
 Layer: 3 number Strips: 2
-Strip: 557  ADC 9
-Strip: 558  ADC 22
+Strip: 557  ADC 25
+Strip: 558  ADC 6
 Layer: 4 number Strips: 2
-Strip: 435  ADC 0
-Strip: 436  ADC 31
+Strip: 435  ADC 16
+Strip: 436  ADC 15
 Layer: 5 number Strips: 2
-Strip: 873  ADC 22
-Strip: 874  ADC 9
+Strip: 872  ADC 6
+Strip: 873  ADC 25
 Layer: 6 number Strips: 2
-Strip: 584  ADC 0
-Strip: 585  ADC 31
+Strip: 584  ADC 16
+Strip: 585  ADC 15
 Layer: 7 number Strips: 2
-Strip: 841  ADC 10
-Strip: 842  ADC 21
+Strip: 841  ADC 26
+Strip: 842  ADC 5
 Layer: 8 number Strips: 2
-Strip: 553  ADC 19
-Strip: 554  ADC 12
+Strip: 552  ADC 3
+Strip: 553  ADC 28
 Layer: 9 number Strips: 2
-Strip: 430  ADC 22
-Strip: 431  ADC 9
+Strip: 429  ADC 6
+Strip: 430  ADC 25
 Event: 23
 GenTrackSet
 Number Gen Tracks: 1
@@ -2099,35 +2099,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1532  ADC 29
-Strip: 1533  ADC 2
+Strip: 1531  ADC 13
+Strip: 1532  ADC 18
 Layer: 1 number Strips: 2
-Strip: 1927  ADC 5
-Strip: 1928  ADC 26
+Strip: 1927  ADC 21
+Strip: 1928  ADC 10
 Layer: 2 number Strips: 2
-Strip: 1346  ADC 16
-Strip: 1347  ADC 15
+Strip: 1345  ADC 0
+Strip: 1346  ADC 31
 Layer: 3 number Strips: 2
-Strip: 1440  ADC 29
-Strip: 1441  ADC 2
+Strip: 1439  ADC 13
+Strip: 1440  ADC 18
 Layer: 4 number Strips: 2
-Strip: 1531  ADC 19
-Strip: 1532  ADC 12
+Strip: 1530  ADC 3
+Strip: 1531  ADC 28
 Layer: 5 number Strips: 2
-Strip: 786  ADC 6
-Strip: 787  ADC 25
+Strip: 786  ADC 22
+Strip: 787  ADC 9
 Layer: 6 number Strips: 2
-Strip: 737  ADC 21
-Strip: 738  ADC 10
+Strip: 736  ADC 5
+Strip: 737  ADC 26
 Layer: 7 number Strips: 2
-Strip: 940  ADC 31
-Strip: 941  ADC 0
+Strip: 939  ADC 15
+Strip: 940  ADC 16
 Layer: 8 number Strips: 2
-Strip: 1438  ADC 13
-Strip: 1439  ADC 18
+Strip: 1438  ADC 29
+Strip: 1439  ADC 2
 Layer: 9 number Strips: 2
-Strip: 1529  ADC 14
-Strip: 1530  ADC 17
+Strip: 1529  ADC 30
+Strip: 1530  ADC 1
 Event: 24
 GenTrackSet
 Number Gen Tracks: 1
@@ -2180,35 +2180,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1435  ADC 26
-Strip: 1436  ADC 5
+Strip: 1434  ADC 10
+Strip: 1435  ADC 21
 Layer: 1 number Strips: 2
-Strip: 1768  ADC 27
-Strip: 1769  ADC 4
+Strip: 1767  ADC 11
+Strip: 1768  ADC 20
 Layer: 2 number Strips: 2
-Strip: 1290  ADC 5
-Strip: 1291  ADC 26
+Strip: 1290  ADC 21
+Strip: 1291  ADC 10
 Layer: 3 number Strips: 2
-Strip: 1369  ADC 22
-Strip: 1370  ADC 9
+Strip: 1368  ADC 6
+Strip: 1369  ADC 25
 Layer: 4 number Strips: 2
-Strip: 1444  ADC 1
-Strip: 1445  ADC 30
+Strip: 1444  ADC 17
+Strip: 1445  ADC 14
 Layer: 5 number Strips: 2
-Strip: 575  ADC 21
-Strip: 576  ADC 10
+Strip: 574  ADC 5
+Strip: 575  ADC 26
 Layer: 6 number Strips: 2
-Strip: 185  ADC 17
-Strip: 186  ADC 14
+Strip: 184  ADC 1
+Strip: 185  ADC 30
 Layer: 7 number Strips: 2
-Strip: 716  ADC 3
-Strip: 717  ADC 28
+Strip: 716  ADC 19
+Strip: 717  ADC 12
 Layer: 8 number Strips: 2
-Strip: 1362  ADC 26
-Strip: 1363  ADC 5
+Strip: 1361  ADC 10
+Strip: 1362  ADC 21
 Layer: 9 number Strips: 2
-Strip: 1435  ADC 0
-Strip: 1436  ADC 31
+Strip: 1435  ADC 16
+Strip: 1436  ADC 15
 Event: 25
 GenTrackSet
 Number Gen Tracks: 1
@@ -2261,35 +2261,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 893  ADC 4
-Strip: 894  ADC 27
+Strip: 893  ADC 20
+Strip: 894  ADC 11
 Layer: 1 number Strips: 2
-Strip: 857  ADC 22
-Strip: 858  ADC 9
+Strip: 856  ADC 6
+Strip: 857  ADC 25
 Layer: 2 number Strips: 2
-Strip: 975  ADC 14
-Strip: 976  ADC 17
+Strip: 975  ADC 30
+Strip: 976  ADC 1
 Layer: 3 number Strips: 2
-Strip: 971  ADC 18
-Strip: 972  ADC 13
+Strip: 970  ADC 2
+Strip: 971  ADC 29
 Layer: 4 number Strips: 2
-Strip: 969  ADC 5
-Strip: 970  ADC 26
+Strip: 969  ADC 21
+Strip: 970  ADC 10
 Layer: 5 number Strips: 2
-Strip: 955  ADC 21
-Strip: 956  ADC 10
+Strip: 954  ADC 5
+Strip: 955  ADC 26
 Layer: 6 number Strips: 2
-Strip: 733  ADC 6
-Strip: 734  ADC 25
+Strip: 733  ADC 22
+Strip: 734  ADC 9
 Layer: 7 number Strips: 2
-Strip: 896  ADC 25
-Strip: 897  ADC 6
+Strip: 895  ADC 9
+Strip: 896  ADC 22
 Layer: 8 number Strips: 2
-Strip: 968  ADC 17
-Strip: 969  ADC 14
+Strip: 967  ADC 1
+Strip: 968  ADC 30
 Layer: 9 number Strips: 2
-Strip: 965  ADC 15
-Strip: 966  ADC 16
+Strip: 965  ADC 31
+Strip: 966  ADC 0
 Event: 26
 GenTrackSet
 Number Gen Tracks: 1
@@ -2342,35 +2342,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1079  ADC 3
-Strip: 1080  ADC 28
+Strip: 1079  ADC 19
+Strip: 1080  ADC 12
 Layer: 1 number Strips: 2
-Strip: 1325  ADC 30
-Strip: 1326  ADC 1
+Strip: 1324  ADC 14
+Strip: 1325  ADC 17
 Layer: 2 number Strips: 2
-Strip: 1162  ADC 29
-Strip: 1163  ADC 2
+Strip: 1161  ADC 13
+Strip: 1162  ADC 18
 Layer: 3 number Strips: 2
-Strip: 1227  ADC 22
-Strip: 1228  ADC 9
+Strip: 1226  ADC 6
+Strip: 1227  ADC 25
 Layer: 4 number Strips: 2
-Strip: 1293  ADC 24
-Strip: 1294  ADC 7
+Strip: 1292  ADC 8
+Strip: 1293  ADC 23
 Layer: 5 number Strips: 2
-Strip: 1343  ADC 4
-Strip: 1344  ADC 27
+Strip: 1343  ADC 20
+Strip: 1344  ADC 11
 Layer: 6 number Strips: 2
-Strip: 1503  ADC 31
-Strip: 1504  ADC 0
+Strip: 1502  ADC 15
+Strip: 1503  ADC 16
 Layer: 7 number Strips: 2
-Strip: 1183  ADC 16
-Strip: 1184  ADC 15
+Strip: 1182  ADC 0
+Strip: 1183  ADC 31
 Layer: 8 number Strips: 2
-Strip: 1230  ADC 19
-Strip: 1231  ADC 12
+Strip: 1229  ADC 3
+Strip: 1230  ADC 28
 Layer: 9 number Strips: 2
-Strip: 1298  ADC 30
-Strip: 1299  ADC 1
+Strip: 1297  ADC 14
+Strip: 1298  ADC 17
 Event: 27
 GenTrackSet
 Number Gen Tracks: 1
@@ -2423,35 +2423,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 947  ADC 4
-Strip: 948  ADC 27
+Strip: 947  ADC 20
+Strip: 948  ADC 11
 Layer: 1 number Strips: 2
-Strip: 880  ADC 29
-Strip: 881  ADC 2
+Strip: 879  ADC 13
+Strip: 880  ADC 18
 Layer: 2 number Strips: 2
-Strip: 973  ADC 28
-Strip: 974  ADC 3
+Strip: 972  ADC 12
+Strip: 973  ADC 19
 Layer: 3 number Strips: 2
-Strip: 960  ADC 14
-Strip: 961  ADC 17
+Strip: 960  ADC 30
+Strip: 961  ADC 1
 Layer: 4 number Strips: 2
-Strip: 949  ADC 16
-Strip: 950  ADC 15
+Strip: 948  ADC 0
+Strip: 949  ADC 31
 Layer: 5 number Strips: 2
-Strip: 1142  ADC 5
-Strip: 1143  ADC 26
+Strip: 1142  ADC 21
+Strip: 1143  ADC 10
 Layer: 6 number Strips: 2
-Strip: 1428  ADC 15
-Strip: 1429  ADC 16
+Strip: 1428  ADC 31
+Strip: 1429  ADC 0
 Layer: 7 number Strips: 2
-Strip: 1196  ADC 20
-Strip: 1197  ADC 11
+Strip: 1195  ADC 4
+Strip: 1196  ADC 27
 Layer: 8 number Strips: 2
-Strip: 964  ADC 9
-Strip: 965  ADC 22
+Strip: 964  ADC 25
+Strip: 965  ADC 6
 Layer: 9 number Strips: 2
-Strip: 955  ADC 28
-Strip: 956  ADC 3
+Strip: 954  ADC 12
+Strip: 955  ADC 19
 Event: 28
 GenTrackSet
 Number Gen Tracks: 1
@@ -2504,35 +2504,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1452  ADC 16
-Strip: 1453  ADC 15
+Strip: 1451  ADC 0
+Strip: 1452  ADC 31
 Layer: 1 number Strips: 2
-Strip: 1898  ADC 29
-Strip: 1899  ADC 2
+Strip: 1897  ADC 13
+Strip: 1898  ADC 18
 Layer: 2 number Strips: 2
-Strip: 1356  ADC 23
-Strip: 1357  ADC 8
+Strip: 1355  ADC 7
+Strip: 1356  ADC 24
 Layer: 3 number Strips: 2
-Strip: 1472  ADC 6
-Strip: 1473  ADC 25
+Strip: 1472  ADC 22
+Strip: 1473  ADC 9
 Layer: 4 number Strips: 2
-Strip: 1591  ADC 6
-Strip: 1592  ADC 25
+Strip: 1591  ADC 22
+Strip: 1592  ADC 9
 Layer: 5 number Strips: 2
-Strip: 1374  ADC 21
-Strip: 1375  ADC 10
+Strip: 1373  ADC 5
+Strip: 1374  ADC 26
 Layer: 6 number Strips: 2
-Strip: 1579  ADC 29
-Strip: 1580  ADC 2
+Strip: 1578  ADC 13
+Strip: 1579  ADC 18
 Layer: 7 number Strips: 2
-Strip: 1213  ADC 6
-Strip: 1214  ADC 25
+Strip: 1213  ADC 22
+Strip: 1214  ADC 9
 Layer: 8 number Strips: 2
-Strip: 1476  ADC 0
-Strip: 1477  ADC 31
+Strip: 1476  ADC 16
+Strip: 1477  ADC 15
 Layer: 9 number Strips: 2
-Strip: 1596  ADC 3
-Strip: 1597  ADC 28
+Strip: 1596  ADC 19
+Strip: 1597  ADC 12
 Event: 29
 GenTrackSet
 Number Gen Tracks: 1
@@ -2585,35 +2585,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 501  ADC 2
-Strip: 502  ADC 29
+Strip: 501  ADC 18
+Strip: 502  ADC 13
 Layer: 1 number Strips: 2
-Strip: 46  ADC 15
-Strip: 47  ADC 16
+Strip: 46  ADC 31
+Strip: 47  ADC 0
 Layer: 2 number Strips: 2
-Strip: 664  ADC 25
-Strip: 665  ADC 6
+Strip: 663  ADC 9
+Strip: 664  ADC 22
 Layer: 3 number Strips: 2
-Strip: 546  ADC 17
-Strip: 547  ADC 14
+Strip: 545  ADC 1
+Strip: 546  ADC 30
 Layer: 4 number Strips: 2
-Strip: 427  ADC 13
-Strip: 428  ADC 18
+Strip: 427  ADC 29
+Strip: 428  ADC 2
 Layer: 5 number Strips: 2
-Strip: 1215  ADC 26
-Strip: 1216  ADC 5
+Strip: 1214  ADC 10
+Strip: 1215  ADC 21
 Layer: 6 number Strips: 2
-Strip: 1415  ADC 6
-Strip: 1416  ADC 25
+Strip: 1415  ADC 22
+Strip: 1416  ADC 9
 Layer: 7 number Strips: 2
-Strip: 1172  ADC 30
-Strip: 1173  ADC 1
+Strip: 1171  ADC 14
+Strip: 1172  ADC 17
 Layer: 8 number Strips: 2
-Strip: 549  ADC 7
-Strip: 550  ADC 24
+Strip: 549  ADC 23
+Strip: 550  ADC 8
 Layer: 9 number Strips: 2
-Strip: 431  ADC 3
-Strip: 432  ADC 28
+Strip: 431  ADC 19
+Strip: 432  ADC 12
 Event: 30
 GenTrackSet
 Number Gen Tracks: 1
@@ -2666,35 +2666,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 743  ADC 19
-Strip: 744  ADC 12
+Strip: 742  ADC 3
+Strip: 743  ADC 28
 Layer: 1 number Strips: 2
-Strip: 498  ADC 19
-Strip: 499  ADC 12
+Strip: 497  ADC 3
+Strip: 498  ADC 28
 Layer: 2 number Strips: 2
-Strip: 829  ADC 7
-Strip: 830  ADC 24
+Strip: 829  ADC 23
+Strip: 830  ADC 8
 Layer: 3 number Strips: 2
-Strip: 765  ADC 12
-Strip: 766  ADC 19
+Strip: 765  ADC 28
+Strip: 766  ADC 3
 Layer: 4 number Strips: 2
-Strip: 699  ADC 6
-Strip: 700  ADC 25
+Strip: 699  ADC 22
+Strip: 700  ADC 9
 Layer: 5 number Strips: 2
-Strip: 1286  ADC 1
-Strip: 1287  ADC 30
+Strip: 1286  ADC 17
+Strip: 1287  ADC 14
 Layer: 6 number Strips: 2
-Strip: 1355  ADC 23
-Strip: 1356  ADC 8
+Strip: 1354  ADC 7
+Strip: 1355  ADC 24
 Layer: 7 number Strips: 2
-Strip: 1124  ADC 31
-Strip: 1125  ADC 0
+Strip: 1123  ADC 15
+Strip: 1124  ADC 16
 Layer: 8 number Strips: 2
-Strip: 767  ADC 18
-Strip: 768  ADC 13
+Strip: 766  ADC 2
+Strip: 767  ADC 29
 Layer: 9 number Strips: 2
-Strip: 701  ADC 13
-Strip: 702  ADC 18
+Strip: 701  ADC 29
+Strip: 702  ADC 2
 Event: 31
 GenTrackSet
 Number Gen Tracks: 1
@@ -2747,35 +2747,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1482  ADC 22
-Strip: 1483  ADC 9
+Strip: 1481  ADC 6
+Strip: 1482  ADC 25
 Layer: 1 number Strips: 2
-Strip: 1936  ADC 14
-Strip: 1937  ADC 17
+Strip: 1936  ADC 30
+Strip: 1937  ADC 1
 Layer: 2 number Strips: 2
-Strip: 1367  ADC 16
-Strip: 1368  ADC 15
+Strip: 1366  ADC 0
+Strip: 1367  ADC 31
 Layer: 3 number Strips: 2
-Strip: 1484  ADC 13
-Strip: 1485  ADC 18
+Strip: 1484  ADC 29
+Strip: 1485  ADC 2
 Layer: 4 number Strips: 2
-Strip: 1603  ADC 0
-Strip: 1604  ADC 31
+Strip: 1603  ADC 16
+Strip: 1604  ADC 15
 Layer: 5 number Strips: 2
-Strip: 1322  ADC 1
-Strip: 1323  ADC 30
+Strip: 1322  ADC 17
+Strip: 1323  ADC 14
 Layer: 6 number Strips: 2
-Strip: 1687  ADC 29
-Strip: 1688  ADC 2
+Strip: 1686  ADC 13
+Strip: 1687  ADC 18
 Layer: 7 number Strips: 2
-Strip: 1280  ADC 3
-Strip: 1281  ADC 28
+Strip: 1280  ADC 19
+Strip: 1281  ADC 12
 Layer: 8 number Strips: 2
-Strip: 1490  ADC 4
-Strip: 1491  ADC 27
+Strip: 1490  ADC 20
+Strip: 1491  ADC 11
 Layer: 9 number Strips: 2
-Strip: 1611  ADC 19
-Strip: 1612  ADC 12
+Strip: 1610  ADC 3
+Strip: 1611  ADC 28
 Event: 32
 GenTrackSet
 Number Gen Tracks: 1
@@ -2828,35 +2828,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1555  ADC 1
-Strip: 1556  ADC 30
+Strip: 1555  ADC 17
+Strip: 1556  ADC 14
 Layer: 1 number Strips: 2
-Strip: 2000  ADC 17
-Strip: 2001  ADC 14
+Strip: 1999  ADC 1
+Strip: 2000  ADC 30
 Layer: 2 number Strips: 2
-Strip: 1376  ADC 13
-Strip: 1377  ADC 18
+Strip: 1376  ADC 29
+Strip: 1377  ADC 2
 Layer: 3 number Strips: 2
-Strip: 1483  ADC 16
-Strip: 1484  ADC 15
+Strip: 1482  ADC 0
+Strip: 1483  ADC 31
 Layer: 4 number Strips: 2
-Strip: 1587  ADC 14
-Strip: 1588  ADC 17
+Strip: 1587  ADC 30
+Strip: 1588  ADC 1
 Layer: 5 number Strips: 2
-Strip: 992  ADC 1
-Strip: 993  ADC 30
+Strip: 992  ADC 17
+Strip: 993  ADC 14
 Layer: 6 number Strips: 2
-Strip: 774  ADC 21
-Strip: 775  ADC 10
+Strip: 773  ADC 5
+Strip: 774  ADC 26
 Layer: 7 number Strips: 2
-Strip: 907  ADC 30
-Strip: 908  ADC 1
+Strip: 906  ADC 14
+Strip: 907  ADC 17
 Layer: 8 number Strips: 2
-Strip: 1480  ADC 18
-Strip: 1481  ADC 13
+Strip: 1479  ADC 2
+Strip: 1480  ADC 29
 Layer: 9 number Strips: 2
-Strip: 1583  ADC 18
-Strip: 1584  ADC 13
+Strip: 1582  ADC 2
+Strip: 1583  ADC 29
 Event: 33
 GenTrackSet
 Number Gen Tracks: 1
@@ -2909,35 +2909,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 973  ADC 14
-Strip: 974  ADC 17
+Strip: 973  ADC 30
+Strip: 974  ADC 1
 Layer: 1 number Strips: 2
-Strip: 764  ADC 10
-Strip: 765  ADC 21
+Strip: 764  ADC 26
+Strip: 765  ADC 5
 Layer: 2 number Strips: 2
-Strip: 905  ADC 28
-Strip: 906  ADC 3
+Strip: 904  ADC 12
+Strip: 905  ADC 19
 Layer: 3 number Strips: 2
-Strip: 848  ADC 0
-Strip: 849  ADC 31
+Strip: 848  ADC 16
+Strip: 849  ADC 15
 Layer: 4 number Strips: 2
-Strip: 791  ADC 10
-Strip: 792  ADC 21
+Strip: 791  ADC 26
+Strip: 792  ADC 5
 Layer: 5 number Strips: 2
-Strip: 1255  ADC 19
-Strip: 1256  ADC 12
+Strip: 1254  ADC 3
+Strip: 1255  ADC 28
 Layer: 6 number Strips: 2
-Strip: 1362  ADC 22
-Strip: 1363  ADC 9
+Strip: 1361  ADC 6
+Strip: 1362  ADC 25
 Layer: 7 number Strips: 2
-Strip: 1135  ADC 20
-Strip: 1136  ADC 11
+Strip: 1134  ADC 4
+Strip: 1135  ADC 27
 Layer: 8 number Strips: 2
-Strip: 851  ADC 11
-Strip: 852  ADC 20
+Strip: 851  ADC 27
+Strip: 852  ADC 4
 Layer: 9 number Strips: 2
-Strip: 794  ADC 28
-Strip: 795  ADC 3
+Strip: 793  ADC 12
+Strip: 794  ADC 19
 Event: 34
 GenTrackSet
 Number Gen Tracks: 1
@@ -2990,33 +2990,33 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1611  ADC 10
-Strip: 1612  ADC 21
+Strip: 1611  ADC 26
+Strip: 1612  ADC 5
 Layer: 1 number Strips: 0
 Layer: 2 number Strips: 2
-Strip: 1432  ADC 30
-Strip: 1433  ADC 1
+Strip: 1431  ADC 14
+Strip: 1432  ADC 17
 Layer: 3 number Strips: 2
-Strip: 1565  ADC 26
-Strip: 1566  ADC 5
+Strip: 1564  ADC 10
+Strip: 1565  ADC 21
 Layer: 4 number Strips: 2
-Strip: 1699  ADC 8
-Strip: 1700  ADC 23
+Strip: 1699  ADC 24
+Strip: 1700  ADC 7
 Layer: 5 number Strips: 2
-Strip: 849  ADC 25
-Strip: 850  ADC 6
+Strip: 848  ADC 9
+Strip: 849  ADC 22
 Layer: 6 number Strips: 2
-Strip: 747  ADC 27
-Strip: 748  ADC 4
+Strip: 746  ADC 11
+Strip: 747  ADC 20
 Layer: 7 number Strips: 2
-Strip: 929  ADC 25
-Strip: 930  ADC 6
+Strip: 928  ADC 9
+Strip: 929  ADC 22
 Layer: 8 number Strips: 2
-Strip: 1562  ADC 2
-Strip: 1563  ADC 29
+Strip: 1562  ADC 18
+Strip: 1563  ADC 13
 Layer: 9 number Strips: 2
-Strip: 1697  ADC 25
-Strip: 1698  ADC 6
+Strip: 1696  ADC 9
+Strip: 1697  ADC 22
 Event: 35
 GenTrackSet
 Number Gen Tracks: 1
@@ -3069,35 +3069,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 743  ADC 2
-Strip: 744  ADC 29
+Strip: 743  ADC 18
+Strip: 744  ADC 13
 Layer: 1 number Strips: 2
-Strip: 587  ADC 6
-Strip: 588  ADC 25
+Strip: 587  ADC 22
+Strip: 588  ADC 9
 Layer: 2 number Strips: 2
-Strip: 878  ADC 27
-Strip: 879  ADC 4
+Strip: 877  ADC 11
+Strip: 878  ADC 20
 Layer: 3 number Strips: 2
-Strip: 843  ADC 7
-Strip: 844  ADC 24
+Strip: 843  ADC 23
+Strip: 844  ADC 8
 Layer: 4 number Strips: 2
-Strip: 811  ADC 27
-Strip: 812  ADC 4
+Strip: 810  ADC 11
+Strip: 811  ADC 20
 Layer: 5 number Strips: 2
-Strip: 740  ADC 24
-Strip: 741  ADC 7
+Strip: 739  ADC 8
+Strip: 740  ADC 23
 Layer: 6 number Strips: 2
-Strip: 397  ADC 23
-Strip: 398  ADC 8
+Strip: 396  ADC 7
+Strip: 397  ADC 24
 Layer: 7 number Strips: 2
-Strip: 781  ADC 26
-Strip: 782  ADC 5
+Strip: 780  ADC 10
+Strip: 781  ADC 21
 Layer: 8 number Strips: 2
-Strip: 837  ADC 5
-Strip: 838  ADC 26
+Strip: 837  ADC 21
+Strip: 838  ADC 10
 Layer: 9 number Strips: 2
-Strip: 804  ADC 20
-Strip: 805  ADC 11
+Strip: 803  ADC 4
+Strip: 804  ADC 27
 Event: 36
 GenTrackSet
 Number Gen Tracks: 1
@@ -3150,35 +3150,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1328  ADC 3
-Strip: 1329  ADC 28
+Strip: 1328  ADC 19
+Strip: 1329  ADC 12
 Layer: 1 number Strips: 2
-Strip: 1503  ADC 7
-Strip: 1504  ADC 24
+Strip: 1503  ADC 23
+Strip: 1504  ADC 8
 Layer: 2 number Strips: 2
-Strip: 1186  ADC 27
-Strip: 1187  ADC 4
+Strip: 1185  ADC 11
+Strip: 1186  ADC 20
 Layer: 3 number Strips: 2
-Strip: 1226  ADC 7
-Strip: 1227  ADC 24
+Strip: 1226  ADC 23
+Strip: 1227  ADC 8
 Layer: 4 number Strips: 2
-Strip: 1265  ADC 11
-Strip: 1266  ADC 20
+Strip: 1265  ADC 27
+Strip: 1266  ADC 4
 Layer: 5 number Strips: 2
-Strip: 1384  ADC 18
-Strip: 1385  ADC 13
+Strip: 1383  ADC 2
+Strip: 1384  ADC 29
 Layer: 6 number Strips: 2
-Strip: 1736  ADC 3
-Strip: 1737  ADC 28
+Strip: 1736  ADC 19
+Strip: 1737  ADC 12
 Layer: 7 number Strips: 2
-Strip: 1290  ADC 15
-Strip: 1291  ADC 16
+Strip: 1290  ADC 31
+Strip: 1291  ADC 0
 Layer: 8 number Strips: 2
-Strip: 1233  ADC 24
-Strip: 1234  ADC 7
+Strip: 1232  ADC 8
+Strip: 1233  ADC 23
 Layer: 9 number Strips: 2
-Strip: 1273  ADC 28
-Strip: 1274  ADC 3
+Strip: 1272  ADC 12
+Strip: 1273  ADC 19
 Event: 37
 GenTrackSet
 Number Gen Tracks: 1
@@ -3231,35 +3231,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1485  ADC 31
-Strip: 1486  ADC 0
+Strip: 1484  ADC 15
+Strip: 1485  ADC 16
 Layer: 1 number Strips: 2
-Strip: 1891  ADC 24
-Strip: 1892  ADC 7
+Strip: 1890  ADC 8
+Strip: 1891  ADC 23
 Layer: 2 number Strips: 2
-Strip: 1340  ADC 2
-Strip: 1341  ADC 29
+Strip: 1340  ADC 18
+Strip: 1341  ADC 13
 Layer: 3 number Strips: 2
-Strip: 1439  ADC 24
-Strip: 1440  ADC 7
+Strip: 1438  ADC 8
+Strip: 1439  ADC 23
 Layer: 4 number Strips: 2
-Strip: 1536  ADC 28
-Strip: 1537  ADC 3
+Strip: 1535  ADC 12
+Strip: 1536  ADC 19
 Layer: 5 number Strips: 2
-Strip: 642  ADC 9
-Strip: 643  ADC 22
+Strip: 642  ADC 25
+Strip: 643  ADC 6
 Layer: 6 number Strips: 2
-Strip: 406  ADC 23
-Strip: 407  ADC 8
+Strip: 405  ADC 7
+Strip: 406  ADC 24
 Layer: 7 number Strips: 2
-Strip: 810  ADC 20
-Strip: 811  ADC 11
+Strip: 809  ADC 4
+Strip: 810  ADC 27
 Layer: 8 number Strips: 2
-Strip: 1434  ADC 14
-Strip: 1435  ADC 17
+Strip: 1434  ADC 30
+Strip: 1435  ADC 1
 Layer: 9 number Strips: 2
-Strip: 1530  ADC 8
-Strip: 1531  ADC 23
+Strip: 1530  ADC 24
+Strip: 1531  ADC 7
 Event: 38
 GenTrackSet
 Number Gen Tracks: 1
@@ -3312,35 +3312,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 580  ADC 12
-Strip: 581  ADC 19
+Strip: 580  ADC 28
+Strip: 581  ADC 3
 Layer: 1 number Strips: 2
-Strip: 256  ADC 9
-Strip: 257  ADC 22
+Strip: 256  ADC 25
+Strip: 257  ADC 6
 Layer: 2 number Strips: 2
-Strip: 749  ADC 19
-Strip: 750  ADC 12
+Strip: 748  ADC 3
+Strip: 749  ADC 28
 Layer: 3 number Strips: 2
-Strip: 665  ADC 25
-Strip: 666  ADC 6
+Strip: 664  ADC 9
+Strip: 665  ADC 22
 Layer: 4 number Strips: 2
-Strip: 579  ADC 29
-Strip: 580  ADC 2
+Strip: 578  ADC 13
+Strip: 579  ADC 18
 Layer: 5 number Strips: 2
-Strip: 960  ADC 4
-Strip: 961  ADC 27
+Strip: 960  ADC 20
+Strip: 961  ADC 11
 Layer: 6 number Strips: 2
-Strip: 890  ADC 1
-Strip: 891  ADC 30
+Strip: 890  ADC 17
+Strip: 891  ADC 14
 Layer: 7 number Strips: 2
-Strip: 973  ADC 22
-Strip: 974  ADC 9
+Strip: 972  ADC 6
+Strip: 973  ADC 25
 Layer: 8 number Strips: 2
-Strip: 664  ADC 30
-Strip: 665  ADC 1
+Strip: 663  ADC 14
+Strip: 664  ADC 17
 Layer: 9 number Strips: 2
-Strip: 577  ADC 1
-Strip: 578  ADC 30
+Strip: 577  ADC 17
+Strip: 578  ADC 14
 Event: 39
 GenTrackSet
 Number Gen Tracks: 1
@@ -3393,35 +3393,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 858  ADC 22
-Strip: 859  ADC 9
+Strip: 857  ADC 6
+Strip: 858  ADC 25
 Layer: 1 number Strips: 2
-Strip: 597  ADC 25
-Strip: 598  ADC 6
+Strip: 596  ADC 9
+Strip: 597  ADC 22
 Layer: 2 number Strips: 2
-Strip: 854  ADC 19
-Strip: 855  ADC 12
+Strip: 853  ADC 3
+Strip: 854  ADC 28
 Layer: 3 number Strips: 2
-Strip: 794  ADC 31
-Strip: 795  ADC 0
+Strip: 793  ADC 15
+Strip: 794  ADC 16
 Layer: 4 number Strips: 2
-Strip: 736  ADC 13
-Strip: 737  ADC 18
+Strip: 736  ADC 29
+Strip: 737  ADC 2
 Layer: 5 number Strips: 2
-Strip: 1287  ADC 4
-Strip: 1288  ADC 27
+Strip: 1287  ADC 20
+Strip: 1288  ADC 11
 Layer: 6 number Strips: 2
-Strip: 1678  ADC 15
-Strip: 1679  ADC 16
+Strip: 1678  ADC 31
+Strip: 1679  ADC 0
 Layer: 7 number Strips: 2
-Strip: 1285  ADC 31
-Strip: 1286  ADC 0
+Strip: 1284  ADC 15
+Strip: 1285  ADC 16
 Layer: 8 number Strips: 2
-Strip: 800  ADC 25
-Strip: 801  ADC 6
+Strip: 799  ADC 9
+Strip: 800  ADC 22
 Layer: 9 number Strips: 2
-Strip: 744  ADC 24
-Strip: 745  ADC 7
+Strip: 743  ADC 8
+Strip: 744  ADC 23
 Event: 40
 GenTrackSet
 Number Gen Tracks: 1
@@ -3474,35 +3474,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 963  ADC 12
-Strip: 964  ADC 19
+Strip: 963  ADC 28
+Strip: 964  ADC 3
 Layer: 1 number Strips: 2
-Strip: 719  ADC 26
-Strip: 720  ADC 5
+Strip: 718  ADC 10
+Strip: 719  ADC 21
 Layer: 2 number Strips: 2
-Strip: 884  ADC 16
-Strip: 885  ADC 15
+Strip: 883  ADC 0
+Strip: 884  ADC 31
 Layer: 3 number Strips: 2
-Strip: 818  ADC 4
-Strip: 819  ADC 27
+Strip: 818  ADC 20
+Strip: 819  ADC 11
 Layer: 4 number Strips: 2
-Strip: 750  ADC 16
-Strip: 751  ADC 15
+Strip: 749  ADC 0
+Strip: 750  ADC 31
 Layer: 5 number Strips: 2
-Strip: 898  ADC 11
-Strip: 899  ADC 20
+Strip: 898  ADC 27
+Strip: 899  ADC 4
 Layer: 6 number Strips: 2
-Strip: 695  ADC 13
-Strip: 696  ADC 18
+Strip: 695  ADC 29
+Strip: 696  ADC 2
 Layer: 7 number Strips: 2
-Strip: 891  ADC 11
-Strip: 892  ADC 20
+Strip: 891  ADC 27
+Strip: 892  ADC 4
 Layer: 8 number Strips: 2
-Strip: 815  ADC 19
-Strip: 816  ADC 12
+Strip: 814  ADC 3
+Strip: 815  ADC 28
 Layer: 9 number Strips: 2
-Strip: 746  ADC 3
-Strip: 747  ADC 28
+Strip: 746  ADC 19
+Strip: 747  ADC 12
 Event: 41
 GenTrackSet
 Number Gen Tracks: 1
@@ -3555,35 +3555,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 994  ADC 15
-Strip: 995  ADC 16
+Strip: 994  ADC 31
+Strip: 995  ADC 0
 Layer: 1 number Strips: 2
-Strip: 987  ADC 6
-Strip: 988  ADC 25
+Strip: 987  ADC 22
+Strip: 988  ADC 9
 Layer: 2 number Strips: 2
-Strip: 1014  ADC 5
-Strip: 1015  ADC 26
+Strip: 1014  ADC 21
+Strip: 1015  ADC 10
 Layer: 3 number Strips: 2
-Strip: 1016  ADC 1
-Strip: 1017  ADC 30
+Strip: 1016  ADC 17
+Strip: 1017  ADC 14
 Layer: 4 number Strips: 2
-Strip: 1020  ADC 13
-Strip: 1021  ADC 18
+Strip: 1020  ADC 29
+Strip: 1021  ADC 2
 Layer: 5 number Strips: 2
-Strip: 944  ADC 22
-Strip: 945  ADC 9
+Strip: 943  ADC 6
+Strip: 944  ADC 25
 Layer: 6 number Strips: 2
-Strip: 1046  ADC 10
-Strip: 1047  ADC 21
+Strip: 1046  ADC 26
+Strip: 1047  ADC 5
 Layer: 7 number Strips: 2
-Strip: 1055  ADC 25
-Strip: 1056  ADC 6
+Strip: 1054  ADC 9
+Strip: 1055  ADC 22
 Layer: 8 number Strips: 2
-Strip: 1017  ADC 1
-Strip: 1018  ADC 30
+Strip: 1017  ADC 17
+Strip: 1018  ADC 14
 Layer: 9 number Strips: 2
-Strip: 1021  ADC 13
-Strip: 1022  ADC 18
+Strip: 1021  ADC 29
+Strip: 1022  ADC 2
 Event: 42
 GenTrackSet
 Number Gen Tracks: 1
@@ -3636,35 +3636,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1206  ADC 15
-Strip: 1207  ADC 16
+Strip: 1206  ADC 31
+Strip: 1207  ADC 0
 Layer: 1 number Strips: 2
-Strip: 1441  ADC 18
-Strip: 1442  ADC 13
+Strip: 1440  ADC 2
+Strip: 1441  ADC 29
 Layer: 2 number Strips: 2
-Strip: 1185  ADC 22
-Strip: 1186  ADC 9
+Strip: 1184  ADC 6
+Strip: 1185  ADC 25
 Layer: 3 number Strips: 2
-Strip: 1240  ADC 9
-Strip: 1241  ADC 22
+Strip: 1240  ADC 25
+Strip: 1241  ADC 6
 Layer: 4 number Strips: 2
-Strip: 1294  ADC 30
-Strip: 1295  ADC 1
+Strip: 1293  ADC 14
+Strip: 1294  ADC 17
 Layer: 5 number Strips: 2
-Strip: 1296  ADC 1
-Strip: 1297  ADC 30
+Strip: 1296  ADC 17
+Strip: 1297  ADC 14
 Layer: 6 number Strips: 2
-Strip: 1535  ADC 11
-Strip: 1536  ADC 20
+Strip: 1535  ADC 27
+Strip: 1536  ADC 4
 Layer: 7 number Strips: 2
-Strip: 1211  ADC 8
-Strip: 1212  ADC 23
+Strip: 1211  ADC 24
+Strip: 1212  ADC 7
 Layer: 8 number Strips: 2
-Strip: 1244  ADC 1
-Strip: 1245  ADC 30
+Strip: 1244  ADC 17
+Strip: 1245  ADC 14
 Layer: 9 number Strips: 2
-Strip: 1299  ADC 5
-Strip: 1300  ADC 26
+Strip: 1299  ADC 21
+Strip: 1300  ADC 10
 Event: 43
 GenTrackSet
 Number Gen Tracks: 1
@@ -3717,35 +3717,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 798  ADC 30
-Strip: 799  ADC 1
+Strip: 797  ADC 14
+Strip: 798  ADC 17
 Layer: 1 number Strips: 2
-Strip: 434  ADC 6
-Strip: 435  ADC 25
+Strip: 434  ADC 22
+Strip: 435  ADC 9
 Layer: 2 number Strips: 2
-Strip: 787  ADC 13
-Strip: 788  ADC 18
+Strip: 787  ADC 29
+Strip: 788  ADC 2
 Layer: 3 number Strips: 2
-Strip: 700  ADC 24
-Strip: 701  ADC 7
+Strip: 699  ADC 8
+Strip: 700  ADC 23
 Layer: 4 number Strips: 2
-Strip: 614  ADC 11
-Strip: 615  ADC 20
+Strip: 614  ADC 27
+Strip: 615  ADC 4
 Layer: 5 number Strips: 2
-Strip: 1367  ADC 31
-Strip: 1368  ADC 0
+Strip: 1366  ADC 15
+Strip: 1367  ADC 16
 Layer: 6 number Strips: 2
-Strip: 1658  ADC 10
-Strip: 1659  ADC 21
+Strip: 1658  ADC 26
+Strip: 1659  ADC 5
 Layer: 7 number Strips: 2
-Strip: 1255  ADC 4
-Strip: 1256  ADC 27
+Strip: 1255  ADC 20
+Strip: 1256  ADC 11
 Layer: 8 number Strips: 2
-Strip: 705  ADC 13
-Strip: 706  ADC 18
+Strip: 705  ADC 29
+Strip: 706  ADC 2
 Layer: 9 number Strips: 2
-Strip: 620  ADC 12
-Strip: 621  ADC 19
+Strip: 620  ADC 28
+Strip: 621  ADC 3
 Event: 44
 GenTrackSet
 Number Gen Tracks: 1
@@ -3798,35 +3798,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1045  ADC 30
-Strip: 1046  ADC 1
+Strip: 1044  ADC 14
+Strip: 1045  ADC 17
 Layer: 1 number Strips: 2
-Strip: 1034  ADC 13
-Strip: 1035  ADC 18
+Strip: 1034  ADC 29
+Strip: 1035  ADC 2
 Layer: 2 number Strips: 2
-Strip: 1021  ADC 11
-Strip: 1022  ADC 20
+Strip: 1021  ADC 27
+Strip: 1022  ADC 4
 Layer: 3 number Strips: 2
-Strip: 1014  ADC 5
-Strip: 1015  ADC 26
+Strip: 1014  ADC 21
+Strip: 1015  ADC 10
 Layer: 4 number Strips: 2
-Strip: 1004  ADC 2
-Strip: 1005  ADC 29
+Strip: 1004  ADC 18
+Strip: 1005  ADC 13
 Layer: 5 number Strips: 2
-Strip: 585  ADC 21
-Strip: 586  ADC 10
+Strip: 584  ADC 5
+Strip: 585  ADC 26
 Layer: 6 number Strips: 2
-Strip: 239  ADC 26
-Strip: 240  ADC 5
+Strip: 238  ADC 10
+Strip: 239  ADC 21
 Layer: 7 number Strips: 2
-Strip: 741  ADC 28
-Strip: 742  ADC 3
+Strip: 740  ADC 12
+Strip: 741  ADC 19
 Layer: 8 number Strips: 2
-Strip: 1008  ADC 27
-Strip: 1009  ADC 4
+Strip: 1007  ADC 11
+Strip: 1008  ADC 20
 Layer: 9 number Strips: 2
-Strip: 996  ADC 4
-Strip: 997  ADC 27
+Strip: 996  ADC 20
+Strip: 997  ADC 11
 Event: 45
 GenTrackSet
 Number Gen Tracks: 1
@@ -3879,35 +3879,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1304  ADC 27
-Strip: 1305  ADC 4
+Strip: 1303  ADC 11
+Strip: 1304  ADC 20
 Layer: 1 number Strips: 2
-Strip: 1722  ADC 1
-Strip: 1723  ADC 30
+Strip: 1722  ADC 17
+Strip: 1723  ADC 14
 Layer: 2 number Strips: 2
-Strip: 1301  ADC 14
-Strip: 1302  ADC 17
+Strip: 1301  ADC 30
+Strip: 1302  ADC 1
 Layer: 3 number Strips: 2
-Strip: 1402  ADC 16
-Strip: 1403  ADC 15
+Strip: 1401  ADC 0
+Strip: 1402  ADC 31
 Layer: 4 number Strips: 2
-Strip: 1501  ADC 15
-Strip: 1502  ADC 16
+Strip: 1501  ADC 31
+Strip: 1502  ADC 0
 Layer: 5 number Strips: 2
-Strip: 1495  ADC 22
-Strip: 1496  ADC 9
+Strip: 1494  ADC 6
+Strip: 1495  ADC 25
 Layer: 6 number Strips: 2
-Strip: 1890  ADC 5
-Strip: 1891  ADC 26
+Strip: 1890  ADC 21
+Strip: 1891  ADC 10
 Layer: 7 number Strips: 2
-Strip: 1339  ADC 15
-Strip: 1340  ADC 16
+Strip: 1339  ADC 31
+Strip: 1340  ADC 0
 Layer: 8 number Strips: 2
-Strip: 1409  ADC 11
-Strip: 1410  ADC 20
+Strip: 1409  ADC 27
+Strip: 1410  ADC 4
 Layer: 9 number Strips: 2
-Strip: 1510  ADC 24
-Strip: 1511  ADC 7
+Strip: 1509  ADC 8
+Strip: 1510  ADC 23
 Event: 46
 GenTrackSet
 Number Gen Tracks: 1
@@ -3960,35 +3960,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1135  ADC 24
-Strip: 1136  ADC 7
+Strip: 1134  ADC 8
+Strip: 1135  ADC 23
 Layer: 1 number Strips: 2
-Strip: 1227  ADC 6
-Strip: 1228  ADC 25
+Strip: 1227  ADC 22
+Strip: 1228  ADC 9
 Layer: 2 number Strips: 2
-Strip: 1100  ADC 31
-Strip: 1101  ADC 0
+Strip: 1099  ADC 15
+Strip: 1100  ADC 16
 Layer: 3 number Strips: 2
-Strip: 1126  ADC 14
-Strip: 1127  ADC 17
+Strip: 1126  ADC 30
+Strip: 1127  ADC 1
 Layer: 4 number Strips: 2
-Strip: 1154  ADC 2
-Strip: 1155  ADC 29
+Strip: 1154  ADC 18
+Strip: 1155  ADC 13
 Layer: 5 number Strips: 2
-Strip: 1012  ADC 26
-Strip: 1013  ADC 5
+Strip: 1011  ADC 10
+Strip: 1012  ADC 21
 Layer: 6 number Strips: 2
-Strip: 959  ADC 30
-Strip: 960  ADC 1
+Strip: 958  ADC 14
+Strip: 959  ADC 17
 Layer: 7 number Strips: 2
-Strip: 994  ADC 15
-Strip: 995  ADC 16
+Strip: 994  ADC 31
+Strip: 995  ADC 0
 Layer: 8 number Strips: 2
-Strip: 1125  ADC 6
-Strip: 1126  ADC 25
+Strip: 1125  ADC 22
+Strip: 1126  ADC 9
 Layer: 9 number Strips: 2
-Strip: 1154  ADC 27
-Strip: 1155  ADC 4
+Strip: 1153  ADC 11
+Strip: 1154  ADC 20
 Event: 47
 GenTrackSet
 Number Gen Tracks: 1
@@ -4041,35 +4041,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 648  ADC 9
-Strip: 649  ADC 22
+Strip: 648  ADC 25
+Strip: 649  ADC 6
 Layer: 1 number Strips: 2
-Strip: 424  ADC 15
-Strip: 425  ADC 16
+Strip: 424  ADC 31
+Strip: 425  ADC 0
 Layer: 2 number Strips: 2
-Strip: 815  ADC 29
-Strip: 816  ADC 2
+Strip: 814  ADC 13
+Strip: 815  ADC 18
 Layer: 3 number Strips: 2
-Strip: 753  ADC 3
-Strip: 754  ADC 28
+Strip: 753  ADC 19
+Strip: 754  ADC 12
 Layer: 4 number Strips: 2
-Strip: 690  ADC 16
-Strip: 691  ADC 15
+Strip: 689  ADC 0
+Strip: 690  ADC 31
 Layer: 5 number Strips: 2
-Strip: 966  ADC 8
-Strip: 967  ADC 23
+Strip: 966  ADC 24
+Strip: 967  ADC 7
 Layer: 6 number Strips: 2
-Strip: 1039  ADC 13
-Strip: 1040  ADC 18
+Strip: 1039  ADC 29
+Strip: 1040  ADC 2
 Layer: 7 number Strips: 2
-Strip: 1046  ADC 21
-Strip: 1047  ADC 10
+Strip: 1045  ADC 5
+Strip: 1046  ADC 26
 Layer: 8 number Strips: 2
-Strip: 754  ADC 4
-Strip: 755  ADC 27
+Strip: 754  ADC 20
+Strip: 755  ADC 11
 Layer: 9 number Strips: 2
-Strip: 690  ADC 1
-Strip: 691  ADC 30
+Strip: 690  ADC 17
+Strip: 691  ADC 14
 Event: 48
 GenTrackSet
 Number Gen Tracks: 1
@@ -4122,35 +4122,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 600  ADC 21
-Strip: 601  ADC 10
+Strip: 599  ADC 5
+Strip: 600  ADC 26
 Layer: 1 number Strips: 2
-Strip: 369  ADC 14
-Strip: 370  ADC 17
+Strip: 369  ADC 30
+Strip: 370  ADC 1
 Layer: 2 number Strips: 2
-Strip: 804  ADC 22
-Strip: 805  ADC 9
+Strip: 803  ADC 6
+Strip: 804  ADC 25
 Layer: 3 number Strips: 2
-Strip: 749  ADC 1
-Strip: 750  ADC 30
+Strip: 749  ADC 17
+Strip: 750  ADC 14
 Layer: 4 number Strips: 2
-Strip: 697  ADC 10
-Strip: 698  ADC 21
+Strip: 697  ADC 26
+Strip: 698  ADC 5
 Layer: 5 number Strips: 2
-Strip: 1193  ADC 28
-Strip: 1194  ADC 3
+Strip: 1192  ADC 12
+Strip: 1193  ADC 19
 Layer: 6 number Strips: 2
-Strip: 1325  ADC 17
-Strip: 1326  ADC 14
+Strip: 1324  ADC 1
+Strip: 1325  ADC 30
 Layer: 7 number Strips: 2
-Strip: 1132  ADC 15
-Strip: 1133  ADC 16
+Strip: 1132  ADC 31
+Strip: 1133  ADC 0
 Layer: 8 number Strips: 2
-Strip: 752  ADC 16
-Strip: 753  ADC 15
+Strip: 751  ADC 0
+Strip: 752  ADC 31
 Layer: 9 number Strips: 2
-Strip: 700  ADC 21
-Strip: 701  ADC 10
+Strip: 699  ADC 5
+Strip: 700  ADC 26
 Event: 49
 GenTrackSet
 Number Gen Tracks: 1
@@ -4203,35 +4203,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 621  ADC 12
-Strip: 622  ADC 19
+Strip: 621  ADC 28
+Strip: 622  ADC 3
 Layer: 1 number Strips: 2
-Strip: 153  ADC 18
-Strip: 154  ADC 13
+Strip: 152  ADC 2
+Strip: 153  ADC 29
 Layer: 2 number Strips: 2
-Strip: 686  ADC 20
-Strip: 687  ADC 11
+Strip: 685  ADC 4
+Strip: 686  ADC 27
 Layer: 3 number Strips: 2
-Strip: 563  ADC 16
-Strip: 564  ADC 15
+Strip: 562  ADC 0
+Strip: 563  ADC 31
 Layer: 4 number Strips: 2
-Strip: 437  ADC 2
-Strip: 438  ADC 29
+Strip: 437  ADC 18
+Strip: 438  ADC 13
 Layer: 5 number Strips: 2
-Strip: 1130  ADC 21
-Strip: 1131  ADC 10
+Strip: 1129  ADC 5
+Strip: 1130  ADC 26
 Layer: 6 number Strips: 2
-Strip: 1134  ADC 6
-Strip: 1135  ADC 25
+Strip: 1134  ADC 22
+Strip: 1135  ADC 9
 Layer: 7 number Strips: 2
-Strip: 1052  ADC 9
-Strip: 1053  ADC 22
+Strip: 1052  ADC 25
+Strip: 1053  ADC 6
 Layer: 8 number Strips: 2
-Strip: 563  ADC 2
-Strip: 564  ADC 29
+Strip: 563  ADC 18
+Strip: 564  ADC 13
 Layer: 9 number Strips: 2
-Strip: 438  ADC 23
-Strip: 439  ADC 8
+Strip: 437  ADC 7
+Strip: 438  ADC 24
 Event: 50
 GenTrackSet
 Number Gen Tracks: 1
@@ -4284,35 +4284,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1488  ADC 6
-Strip: 1489  ADC 25
+Strip: 1488  ADC 22
+Strip: 1489  ADC 9
 Layer: 1 number Strips: 2
-Strip: 1900  ADC 16
-Strip: 1901  ADC 15
+Strip: 1899  ADC 0
+Strip: 1900  ADC 31
 Layer: 2 number Strips: 2
-Strip: 1343  ADC 9
-Strip: 1344  ADC 22
+Strip: 1343  ADC 25
+Strip: 1344  ADC 6
 Layer: 3 number Strips: 2
-Strip: 1441  ADC 0
-Strip: 1442  ADC 31
+Strip: 1441  ADC 16
+Strip: 1442  ADC 15
 Layer: 4 number Strips: 2
-Strip: 1538  ADC 28
-Strip: 1539  ADC 3
+Strip: 1537  ADC 12
+Strip: 1538  ADC 19
 Layer: 5 number Strips: 2
-Strip: 701  ADC 26
-Strip: 702  ADC 5
+Strip: 700  ADC 10
+Strip: 701  ADC 21
 Layer: 6 number Strips: 2
-Strip: 335  ADC 16
-Strip: 336  ADC 15
+Strip: 334  ADC 0
+Strip: 335  ADC 31
 Layer: 7 number Strips: 2
-Strip: 760  ADC 17
-Strip: 761  ADC 14
+Strip: 759  ADC 1
+Strip: 760  ADC 30
 Layer: 8 number Strips: 2
-Strip: 1435  ADC 3
-Strip: 1436  ADC 28
+Strip: 1435  ADC 19
+Strip: 1436  ADC 12
 Layer: 9 number Strips: 2
-Strip: 1530  ADC 5
-Strip: 1531  ADC 26
+Strip: 1530  ADC 21
+Strip: 1531  ADC 10
 Event: 51
 GenTrackSet
 Number Gen Tracks: 1
@@ -4365,35 +4365,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1476  ADC 8
-Strip: 1477  ADC 23
+Strip: 1476  ADC 24
+Strip: 1477  ADC 7
 Layer: 1 number Strips: 2
-Strip: 1837  ADC 30
-Strip: 1838  ADC 1
+Strip: 1836  ADC 14
+Strip: 1837  ADC 17
 Layer: 2 number Strips: 2
-Strip: 1315  ADC 28
-Strip: 1316  ADC 3
+Strip: 1314  ADC 12
+Strip: 1315  ADC 19
 Layer: 3 number Strips: 2
-Strip: 1400  ADC 13
-Strip: 1401  ADC 18
+Strip: 1400  ADC 29
+Strip: 1401  ADC 2
 Layer: 4 number Strips: 2
-Strip: 1482  ADC 2
-Strip: 1483  ADC 29
+Strip: 1482  ADC 18
+Strip: 1483  ADC 13
 Layer: 5 number Strips: 2
-Strip: 1217  ADC 8
-Strip: 1218  ADC 23
+Strip: 1217  ADC 24
+Strip: 1218  ADC 7
 Layer: 6 number Strips: 2
-Strip: 1224  ADC 25
-Strip: 1225  ADC 6
+Strip: 1223  ADC 9
+Strip: 1224  ADC 22
 Layer: 7 number Strips: 2
-Strip: 1075  ADC 4
-Strip: 1076  ADC 27
+Strip: 1075  ADC 20
+Strip: 1076  ADC 11
 Layer: 8 number Strips: 2
-Strip: 1401  ADC 25
-Strip: 1402  ADC 6
+Strip: 1400  ADC 9
+Strip: 1401  ADC 22
 Layer: 9 number Strips: 2
-Strip: 1484  ADC 30
-Strip: 1485  ADC 1
+Strip: 1483  ADC 14
+Strip: 1484  ADC 17
 Event: 52
 GenTrackSet
 Number Gen Tracks: 1
@@ -4446,35 +4446,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1448  ADC 1
-Strip: 1449  ADC 30
+Strip: 1448  ADC 17
+Strip: 1449  ADC 14
 Layer: 1 number Strips: 2
-Strip: 1910  ADC 7
-Strip: 1911  ADC 24
+Strip: 1910  ADC 23
+Strip: 1911  ADC 8
 Layer: 2 number Strips: 2
-Strip: 1358  ADC 10
-Strip: 1359  ADC 21
+Strip: 1358  ADC 26
+Strip: 1359  ADC 5
 Layer: 3 number Strips: 2
-Strip: 1469  ADC 10
-Strip: 1470  ADC 21
+Strip: 1469  ADC 26
+Strip: 1470  ADC 5
 Layer: 4 number Strips: 2
-Strip: 1578  ADC 2
-Strip: 1579  ADC 29
+Strip: 1578  ADC 18
+Strip: 1579  ADC 13
 Layer: 5 number Strips: 2
-Strip: 1075  ADC 10
-Strip: 1076  ADC 21
+Strip: 1075  ADC 26
+Strip: 1076  ADC 5
 Layer: 6 number Strips: 2
-Strip: 1155  ADC 4
-Strip: 1156  ADC 27
+Strip: 1155  ADC 20
+Strip: 1156  ADC 11
 Layer: 7 number Strips: 2
-Strip: 1076  ADC 0
-Strip: 1077  ADC 31
+Strip: 1076  ADC 16
+Strip: 1077  ADC 15
 Layer: 8 number Strips: 2
-Strip: 1471  ADC 26
-Strip: 1472  ADC 5
+Strip: 1470  ADC 10
+Strip: 1471  ADC 21
 Layer: 9 number Strips: 2
-Strip: 1580  ADC 12
-Strip: 1581  ADC 19
+Strip: 1580  ADC 28
+Strip: 1581  ADC 3
 Event: 53
 GenTrackSet
 Number Gen Tracks: 1
@@ -4527,35 +4527,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1322  ADC 30
-Strip: 1323  ADC 1
+Strip: 1321  ADC 14
+Strip: 1322  ADC 17
 Layer: 1 number Strips: 2
-Strip: 1723  ADC 3
-Strip: 1724  ADC 28
+Strip: 1723  ADC 19
+Strip: 1724  ADC 12
 Layer: 2 number Strips: 2
-Strip: 1296  ADC 2
-Strip: 1297  ADC 29
+Strip: 1296  ADC 18
+Strip: 1297  ADC 13
 Layer: 3 number Strips: 2
-Strip: 1392  ADC 24
-Strip: 1393  ADC 7
+Strip: 1391  ADC 8
+Strip: 1392  ADC 23
 Layer: 4 number Strips: 2
-Strip: 1485  ADC 27
-Strip: 1486  ADC 4
+Strip: 1484  ADC 11
+Strip: 1485  ADC 20
 Layer: 5 number Strips: 2
-Strip: 1182  ADC 21
-Strip: 1183  ADC 10
+Strip: 1181  ADC 5
+Strip: 1182  ADC 26
 Layer: 6 number Strips: 2
-Strip: 1231  ADC 22
-Strip: 1232  ADC 9
+Strip: 1230  ADC 6
+Strip: 1231  ADC 25
 Layer: 7 number Strips: 2
-Strip: 1087  ADC 2
-Strip: 1088  ADC 29
+Strip: 1087  ADC 18
+Strip: 1088  ADC 13
 Layer: 8 number Strips: 2
-Strip: 1393  ADC 5
-Strip: 1394  ADC 26
+Strip: 1393  ADC 21
+Strip: 1394  ADC 10
 Layer: 9 number Strips: 2
-Strip: 1486  ADC 5
-Strip: 1487  ADC 26
+Strip: 1486  ADC 21
+Strip: 1487  ADC 10
 Event: 54
 GenTrackSet
 Number Gen Tracks: 1
@@ -4608,35 +4608,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 669  ADC 28
-Strip: 670  ADC 3
+Strip: 668  ADC 12
+Strip: 669  ADC 19
 Layer: 1 number Strips: 2
-Strip: 237  ADC 3
-Strip: 238  ADC 28
+Strip: 237  ADC 19
+Strip: 238  ADC 12
 Layer: 2 number Strips: 2
-Strip: 717  ADC 5
-Strip: 718  ADC 26
+Strip: 717  ADC 21
+Strip: 718  ADC 10
 Layer: 3 number Strips: 2
-Strip: 606  ADC 4
-Strip: 607  ADC 27
+Strip: 606  ADC 20
+Strip: 607  ADC 11
 Layer: 4 number Strips: 2
-Strip: 494  ADC 26
-Strip: 495  ADC 5
+Strip: 493  ADC 10
+Strip: 494  ADC 21
 Layer: 5 number Strips: 2
-Strip: 1166  ADC 14
-Strip: 1167  ADC 17
+Strip: 1166  ADC 30
+Strip: 1167  ADC 1
 Layer: 6 number Strips: 2
-Strip: 1323  ADC 31
-Strip: 1324  ADC 0
+Strip: 1322  ADC 15
+Strip: 1323  ADC 16
 Layer: 7 number Strips: 2
-Strip: 1137  ADC 10
-Strip: 1138  ADC 21
+Strip: 1137  ADC 26
+Strip: 1138  ADC 5
 Layer: 8 number Strips: 2
-Strip: 609  ADC 24
-Strip: 610  ADC 7
+Strip: 608  ADC 8
+Strip: 609  ADC 23
 Layer: 9 number Strips: 2
-Strip: 497  ADC 6
-Strip: 498  ADC 25
+Strip: 497  ADC 22
+Strip: 498  ADC 9
 Event: 55
 GenTrackSet
 Number Gen Tracks: 1
@@ -4689,33 +4689,33 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1643  ADC 28
-Strip: 1644  ADC 3
+Strip: 1642  ADC 12
+Strip: 1643  ADC 19
 Layer: 1 number Strips: 0
 Layer: 2 number Strips: 2
-Strip: 1410  ADC 30
-Strip: 1411  ADC 1
+Strip: 1409  ADC 14
+Strip: 1410  ADC 17
 Layer: 3 number Strips: 2
-Strip: 1523  ADC 10
-Strip: 1524  ADC 21
+Strip: 1523  ADC 26
+Strip: 1524  ADC 5
 Layer: 4 number Strips: 2
-Strip: 1634  ADC 2
-Strip: 1635  ADC 29
+Strip: 1634  ADC 18
+Strip: 1635  ADC 13
 Layer: 5 number Strips: 2
-Strip: 966  ADC 20
-Strip: 967  ADC 11
+Strip: 965  ADC 4
+Strip: 966  ADC 27
 Layer: 6 number Strips: 2
-Strip: 794  ADC 15
-Strip: 795  ADC 16
+Strip: 794  ADC 31
+Strip: 795  ADC 0
 Layer: 7 number Strips: 2
-Strip: 923  ADC 22
-Strip: 924  ADC 9
+Strip: 922  ADC 6
+Strip: 923  ADC 25
 Layer: 8 number Strips: 2
-Strip: 1521  ADC 26
-Strip: 1522  ADC 5
+Strip: 1520  ADC 10
+Strip: 1521  ADC 21
 Layer: 9 number Strips: 2
-Strip: 1632  ADC 22
-Strip: 1633  ADC 9
+Strip: 1631  ADC 6
+Strip: 1632  ADC 25
 Event: 56
 GenTrackSet
 Number Gen Tracks: 1
@@ -4768,35 +4768,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 733  ADC 18
-Strip: 734  ADC 13
+Strip: 732  ADC 2
+Strip: 733  ADC 29
 Layer: 1 number Strips: 2
-Strip: 471  ADC 3
-Strip: 472  ADC 28
+Strip: 471  ADC 19
+Strip: 472  ADC 12
 Layer: 2 number Strips: 2
-Strip: 818  ADC 9
-Strip: 819  ADC 22
+Strip: 818  ADC 25
+Strip: 819  ADC 6
 Layer: 3 number Strips: 2
-Strip: 749  ADC 2
-Strip: 750  ADC 29
+Strip: 749  ADC 18
+Strip: 750  ADC 13
 Layer: 4 number Strips: 2
-Strip: 679  ADC 1
-Strip: 680  ADC 30
+Strip: 679  ADC 17
+Strip: 680  ADC 14
 Layer: 5 number Strips: 2
-Strip: 1397  ADC 31
-Strip: 1398  ADC 0
+Strip: 1396  ADC 15
+Strip: 1397  ADC 16
 Layer: 6 number Strips: 2
-Strip: 1622  ADC 22
-Strip: 1623  ADC 9
+Strip: 1621  ADC 6
+Strip: 1622  ADC 25
 Layer: 7 number Strips: 2
-Strip: 1229  ADC 2
-Strip: 1230  ADC 29
+Strip: 1229  ADC 18
+Strip: 1230  ADC 13
 Layer: 8 number Strips: 2
-Strip: 754  ADC 8
-Strip: 755  ADC 23
+Strip: 754  ADC 24
+Strip: 755  ADC 7
 Layer: 9 number Strips: 2
-Strip: 685  ADC 14
-Strip: 686  ADC 17
+Strip: 685  ADC 30
+Strip: 686  ADC 1
 Event: 57
 GenTrackSet
 Number Gen Tracks: 1
@@ -4849,35 +4849,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 551  ADC 9
-Strip: 552  ADC 22
+Strip: 551  ADC 25
+Strip: 552  ADC 6
 Layer: 1 number Strips: 2
-Strip: 82  ADC 20
-Strip: 83  ADC 11
+Strip: 81  ADC 4
+Strip: 82  ADC 27
 Layer: 2 number Strips: 2
-Strip: 668  ADC 4
-Strip: 669  ADC 27
+Strip: 668  ADC 20
+Strip: 669  ADC 11
 Layer: 3 number Strips: 2
-Strip: 547  ADC 27
-Strip: 548  ADC 4
+Strip: 546  ADC 11
+Strip: 547  ADC 20
 Layer: 4 number Strips: 2
-Strip: 422  ADC 2
-Strip: 423  ADC 29
+Strip: 422  ADC 18
+Strip: 423  ADC 13
 Layer: 5 number Strips: 2
-Strip: 1438  ADC 11
-Strip: 1439  ADC 20
+Strip: 1438  ADC 27
+Strip: 1439  ADC 4
 Layer: 6 number Strips: 2
-Strip: 1813  ADC 27
-Strip: 1814  ADC 4
+Strip: 1812  ADC 11
+Strip: 1813  ADC 20
 Layer: 7 number Strips: 2
-Strip: 1314  ADC 2
-Strip: 1315  ADC 29
+Strip: 1314  ADC 18
+Strip: 1315  ADC 13
 Layer: 8 number Strips: 2
-Strip: 553  ADC 2
-Strip: 554  ADC 29
+Strip: 553  ADC 18
+Strip: 554  ADC 13
 Layer: 9 number Strips: 2
-Strip: 431  ADC 30
-Strip: 432  ADC 1
+Strip: 430  ADC 14
+Strip: 431  ADC 17
 Event: 58
 GenTrackSet
 Number Gen Tracks: 1
@@ -4930,35 +4930,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 965  ADC 9
-Strip: 966  ADC 22
+Strip: 965  ADC 25
+Strip: 966  ADC 6
 Layer: 1 number Strips: 2
-Strip: 868  ADC 0
-Strip: 869  ADC 31
+Strip: 868  ADC 16
+Strip: 869  ADC 15
 Layer: 2 number Strips: 2
-Strip: 962  ADC 3
-Strip: 963  ADC 28
+Strip: 962  ADC 19
+Strip: 963  ADC 12
 Layer: 3 number Strips: 2
-Strip: 942  ADC 20
-Strip: 943  ADC 11
+Strip: 941  ADC 4
+Strip: 942  ADC 27
 Layer: 4 number Strips: 2
-Strip: 923  ADC 19
-Strip: 924  ADC 12
+Strip: 922  ADC 3
+Strip: 923  ADC 28
 Layer: 5 number Strips: 2
-Strip: 1203  ADC 8
-Strip: 1204  ADC 23
+Strip: 1203  ADC 24
+Strip: 1204  ADC 7
 Layer: 6 number Strips: 2
-Strip: 1496  ADC 21
-Strip: 1497  ADC 10
+Strip: 1495  ADC 5
+Strip: 1496  ADC 26
 Layer: 7 number Strips: 2
-Strip: 1215  ADC 19
-Strip: 1216  ADC 12
+Strip: 1214  ADC 3
+Strip: 1215  ADC 28
 Layer: 8 number Strips: 2
-Strip: 946  ADC 10
-Strip: 947  ADC 21
+Strip: 946  ADC 26
+Strip: 947  ADC 5
 Layer: 9 number Strips: 2
-Strip: 929  ADC 22
-Strip: 930  ADC 9
+Strip: 928  ADC 6
+Strip: 929  ADC 25
 Event: 59
 GenTrackSet
 Number Gen Tracks: 1
@@ -5011,35 +5011,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1347  ADC 12
-Strip: 1348  ADC 19
+Strip: 1347  ADC 28
+Strip: 1348  ADC 3
 Layer: 1 number Strips: 2
-Strip: 1668  ADC 26
-Strip: 1669  ADC 5
+Strip: 1667  ADC 10
+Strip: 1668  ADC 21
 Layer: 2 number Strips: 2
-Strip: 1262  ADC 21
-Strip: 1263  ADC 10
+Strip: 1261  ADC 5
+Strip: 1262  ADC 26
 Layer: 3 number Strips: 2
-Strip: 1336  ADC 11
-Strip: 1337  ADC 20
+Strip: 1336  ADC 27
+Strip: 1337  ADC 4
 Layer: 4 number Strips: 2
-Strip: 1408  ADC 27
-Strip: 1409  ADC 4
+Strip: 1407  ADC 11
+Strip: 1408  ADC 20
 Layer: 5 number Strips: 2
-Strip: 1000  ADC 9
-Strip: 1001  ADC 22
+Strip: 1000  ADC 25
+Strip: 1001  ADC 6
 Layer: 6 number Strips: 2
-Strip: 910  ADC 17
-Strip: 911  ADC 14
+Strip: 909  ADC 1
+Strip: 910  ADC 30
 Layer: 7 number Strips: 2
-Strip: 972  ADC 4
-Strip: 973  ADC 27
+Strip: 972  ADC 20
+Strip: 973  ADC 11
 Layer: 8 number Strips: 2
-Strip: 1335  ADC 10
-Strip: 1336  ADC 21
+Strip: 1335  ADC 26
+Strip: 1336  ADC 5
 Layer: 9 number Strips: 2
-Strip: 1406  ADC 10
-Strip: 1407  ADC 21
+Strip: 1406  ADC 26
+Strip: 1407  ADC 5
 Event: 60
 GenTrackSet
 Number Gen Tracks: 1
@@ -5092,35 +5092,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 837  ADC 13
-Strip: 838  ADC 18
+Strip: 837  ADC 29
+Strip: 838  ADC 2
 Layer: 1 number Strips: 2
-Strip: 599  ADC 22
-Strip: 600  ADC 9
+Strip: 598  ADC 6
+Strip: 599  ADC 25
 Layer: 2 number Strips: 2
-Strip: 859  ADC 10
-Strip: 860  ADC 21
+Strip: 859  ADC 26
+Strip: 860  ADC 5
 Layer: 3 number Strips: 2
-Strip: 803  ADC 15
-Strip: 804  ADC 16
+Strip: 803  ADC 31
+Strip: 804  ADC 0
 Layer: 4 number Strips: 2
-Strip: 748  ADC 5
-Strip: 749  ADC 26
+Strip: 748  ADC 21
+Strip: 749  ADC 10
 Layer: 5 number Strips: 2
-Strip: 1012  ADC 12
-Strip: 1013  ADC 19
+Strip: 1012  ADC 28
+Strip: 1013  ADC 3
 Layer: 6 number Strips: 2
-Strip: 1192  ADC 8
-Strip: 1193  ADC 23
+Strip: 1192  ADC 24
+Strip: 1193  ADC 7
 Layer: 7 number Strips: 2
-Strip: 1111  ADC 31
-Strip: 1112  ADC 0
+Strip: 1110  ADC 15
+Strip: 1111  ADC 16
 Layer: 8 number Strips: 2
-Strip: 805  ADC 8
-Strip: 806  ADC 23
+Strip: 805  ADC 24
+Strip: 806  ADC 7
 Layer: 9 number Strips: 2
-Strip: 751  ADC 0
-Strip: 752  ADC 31
+Strip: 751  ADC 16
+Strip: 752  ADC 15
 Event: 61
 GenTrackSet
 Number Gen Tracks: 1
@@ -5173,35 +5173,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 591  ADC 10
-Strip: 592  ADC 21
+Strip: 591  ADC 26
+Strip: 592  ADC 5
 Layer: 1 number Strips: 2
-Strip: 137  ADC 16
-Strip: 138  ADC 15
+Strip: 136  ADC 0
+Strip: 137  ADC 31
 Layer: 2 number Strips: 2
-Strip: 691  ADC 12
-Strip: 692  ADC 19
+Strip: 691  ADC 28
+Strip: 692  ADC 3
 Layer: 3 number Strips: 2
-Strip: 583  ADC 6
-Strip: 584  ADC 25
+Strip: 583  ADC 22
+Strip: 584  ADC 9
 Layer: 4 number Strips: 2
-Strip: 478  ADC 0
-Strip: 479  ADC 31
+Strip: 478  ADC 16
+Strip: 479  ADC 15
 Layer: 5 number Strips: 2
-Strip: 1092  ADC 6
-Strip: 1093  ADC 25
+Strip: 1092  ADC 22
+Strip: 1093  ADC 9
 Layer: 6 number Strips: 2
-Strip: 1190  ADC 29
-Strip: 1191  ADC 2
+Strip: 1189  ADC 13
+Strip: 1190  ADC 18
 Layer: 7 number Strips: 2
-Strip: 1089  ADC 6
-Strip: 1090  ADC 25
+Strip: 1089  ADC 22
+Strip: 1090  ADC 9
 Layer: 8 number Strips: 2
-Strip: 585  ADC 20
-Strip: 586  ADC 11
+Strip: 584  ADC 4
+Strip: 585  ADC 27
 Layer: 9 number Strips: 2
-Strip: 480  ADC 13
-Strip: 481  ADC 18
+Strip: 480  ADC 29
+Strip: 481  ADC 2
 Event: 62
 GenTrackSet
 Number Gen Tracks: 1
@@ -5254,35 +5254,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1390  ADC 17
-Strip: 1391  ADC 14
+Strip: 1389  ADC 1
+Strip: 1390  ADC 30
 Layer: 1 number Strips: 2
-Strip: 1667  ADC 8
-Strip: 1668  ADC 23
+Strip: 1667  ADC 24
+Strip: 1668  ADC 7
 Layer: 2 number Strips: 2
-Strip: 1256  ADC 27
-Strip: 1257  ADC 4
+Strip: 1255  ADC 11
+Strip: 1256  ADC 20
 Layer: 3 number Strips: 2
-Strip: 1329  ADC 3
-Strip: 1330  ADC 28
+Strip: 1329  ADC 19
+Strip: 1330  ADC 12
 Layer: 4 number Strips: 2
-Strip: 1405  ADC 22
-Strip: 1406  ADC 9
+Strip: 1404  ADC 6
+Strip: 1405  ADC 25
 Layer: 5 number Strips: 2
-Strip: 1022  ADC 16
-Strip: 1023  ADC 15
+Strip: 1021  ADC 0
+Strip: 1022  ADC 31
 Layer: 6 number Strips: 2
-Strip: 967  ADC 18
-Strip: 968  ADC 13
+Strip: 966  ADC 2
+Strip: 967  ADC 29
 Layer: 7 number Strips: 2
-Strip: 996  ADC 21
-Strip: 997  ADC 10
+Strip: 995  ADC 5
+Strip: 996  ADC 26
 Layer: 8 number Strips: 2
-Strip: 1329  ADC 29
-Strip: 1330  ADC 2
+Strip: 1328  ADC 13
+Strip: 1329  ADC 18
 Layer: 9 number Strips: 2
-Strip: 1404  ADC 7
-Strip: 1405  ADC 24
+Strip: 1404  ADC 23
+Strip: 1405  ADC 8
 Event: 63
 GenTrackSet
 Number Gen Tracks: 1
@@ -5335,35 +5335,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1394  ADC 4
-Strip: 1395  ADC 27
+Strip: 1394  ADC 20
+Strip: 1395  ADC 11
 Layer: 1 number Strips: 2
-Strip: 1625  ADC 5
-Strip: 1626  ADC 26
+Strip: 1625  ADC 21
+Strip: 1626  ADC 10
 Layer: 2 number Strips: 2
-Strip: 1230  ADC 22
-Strip: 1231  ADC 9
+Strip: 1229  ADC 6
+Strip: 1230  ADC 25
 Layer: 3 number Strips: 2
-Strip: 1284  ADC 30
-Strip: 1285  ADC 1
+Strip: 1283  ADC 14
+Strip: 1284  ADC 17
 Layer: 4 number Strips: 2
-Strip: 1335  ADC 14
-Strip: 1336  ADC 17
+Strip: 1335  ADC 30
+Strip: 1336  ADC 1
 Layer: 5 number Strips: 2
-Strip: 828  ADC 2
-Strip: 829  ADC 29
+Strip: 828  ADC 18
+Strip: 829  ADC 13
 Layer: 6 number Strips: 2
-Strip: 543  ADC 25
-Strip: 544  ADC 6
+Strip: 542  ADC 9
+Strip: 543  ADC 22
 Layer: 7 number Strips: 2
-Strip: 832  ADC 22
-Strip: 833  ADC 9
+Strip: 831  ADC 6
+Strip: 832  ADC 25
 Layer: 8 number Strips: 2
-Strip: 1279  ADC 22
-Strip: 1280  ADC 9
+Strip: 1278  ADC 6
+Strip: 1279  ADC 25
 Layer: 9 number Strips: 2
-Strip: 1329  ADC 12
-Strip: 1330  ADC 19
+Strip: 1329  ADC 28
+Strip: 1330  ADC 3
 Event: 64
 GenTrackSet
 Number Gen Tracks: 1
@@ -5416,35 +5416,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 695  ADC 6
-Strip: 696  ADC 25
+Strip: 695  ADC 22
+Strip: 696  ADC 9
 Layer: 1 number Strips: 2
-Strip: 467  ADC 16
-Strip: 468  ADC 15
+Strip: 466  ADC 0
+Strip: 467  ADC 31
 Layer: 2 number Strips: 2
-Strip: 825  ADC 25
-Strip: 826  ADC 6
+Strip: 824  ADC 9
+Strip: 825  ADC 22
 Layer: 3 number Strips: 2
-Strip: 763  ADC 28
-Strip: 764  ADC 3
+Strip: 762  ADC 12
+Strip: 763  ADC 19
 Layer: 4 number Strips: 2
-Strip: 698  ADC 8
-Strip: 699  ADC 23
+Strip: 698  ADC 24
+Strip: 699  ADC 7
 Layer: 5 number Strips: 2
-Strip: 1385  ADC 23
-Strip: 1386  ADC 8
+Strip: 1384  ADC 7
+Strip: 1385  ADC 24
 Layer: 6 number Strips: 2
-Strip: 1646  ADC 22
-Strip: 1647  ADC 9
+Strip: 1645  ADC 6
+Strip: 1646  ADC 25
 Layer: 7 number Strips: 2
-Strip: 1245  ADC 26
-Strip: 1246  ADC 5
+Strip: 1244  ADC 10
+Strip: 1245  ADC 21
 Layer: 8 number Strips: 2
-Strip: 768  ADC 23
-Strip: 769  ADC 8
+Strip: 767  ADC 7
+Strip: 768  ADC 24
 Layer: 9 number Strips: 2
-Strip: 704  ADC 8
-Strip: 705  ADC 23
+Strip: 704  ADC 24
+Strip: 705  ADC 7
 Event: 65
 GenTrackSet
 Number Gen Tracks: 1
@@ -5497,35 +5497,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 903  ADC 2
-Strip: 904  ADC 29
+Strip: 903  ADC 18
+Strip: 904  ADC 13
 Layer: 1 number Strips: 2
-Strip: 887  ADC 5
-Strip: 888  ADC 26
+Strip: 887  ADC 21
+Strip: 888  ADC 10
 Layer: 2 number Strips: 2
-Strip: 983  ADC 31
-Strip: 984  ADC 0
+Strip: 982  ADC 15
+Strip: 983  ADC 16
 Layer: 3 number Strips: 2
-Strip: 973  ADC 22
-Strip: 974  ADC 9
+Strip: 972  ADC 6
+Strip: 973  ADC 25
 Layer: 4 number Strips: 2
-Strip: 960  ADC 8
-Strip: 961  ADC 23
+Strip: 960  ADC 24
+Strip: 961  ADC 7
 Layer: 5 number Strips: 2
-Strip: 503  ADC 27
-Strip: 504  ADC 4
+Strip: 502  ADC 11
+Strip: 503  ADC 20
 Layer: 6 number Strips: 2
-Strip: 154  ADC 7
-Strip: 155  ADC 24
+Strip: 154  ADC 23
+Strip: 155  ADC 8
 Layer: 7 number Strips: 2
-Strip: 719  ADC 16
-Strip: 720  ADC 15
+Strip: 718  ADC 0
+Strip: 719  ADC 31
 Layer: 8 number Strips: 2
-Strip: 966  ADC 8
-Strip: 967  ADC 23
+Strip: 966  ADC 24
+Strip: 967  ADC 7
 Layer: 9 number Strips: 2
-Strip: 951  ADC 5
-Strip: 952  ADC 26
+Strip: 951  ADC 21
+Strip: 952  ADC 10
 Event: 66
 GenTrackSet
 Number Gen Tracks: 1
@@ -5578,35 +5578,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 968  ADC 13
-Strip: 969  ADC 18
+Strip: 968  ADC 29
+Strip: 969  ADC 2
 Layer: 1 number Strips: 2
-Strip: 1043  ADC 22
-Strip: 1044  ADC 9
+Strip: 1042  ADC 6
+Strip: 1043  ADC 25
 Layer: 2 number Strips: 2
-Strip: 1045  ADC 26
-Strip: 1046  ADC 5
+Strip: 1044  ADC 10
+Strip: 1045  ADC 21
 Layer: 3 number Strips: 2
-Strip: 1059  ADC 15
-Strip: 1060  ADC 16
+Strip: 1059  ADC 31
+Strip: 1060  ADC 0
 Layer: 4 number Strips: 2
-Strip: 1071  ADC 11
-Strip: 1072  ADC 20
+Strip: 1071  ADC 27
+Strip: 1072  ADC 4
 Layer: 5 number Strips: 2
-Strip: 905  ADC 2
-Strip: 906  ADC 29
+Strip: 905  ADC 18
+Strip: 906  ADC 13
 Layer: 6 number Strips: 2
-Strip: 739  ADC 27
-Strip: 740  ADC 4
+Strip: 738  ADC 11
+Strip: 739  ADC 20
 Layer: 7 number Strips: 2
-Strip: 910  ADC 4
-Strip: 911  ADC 27
+Strip: 910  ADC 20
+Strip: 911  ADC 11
 Layer: 8 number Strips: 2
-Strip: 1057  ADC 26
-Strip: 1058  ADC 5
+Strip: 1056  ADC 10
+Strip: 1057  ADC 21
 Layer: 9 number Strips: 2
-Strip: 1067  ADC 0
-Strip: 1068  ADC 31
+Strip: 1067  ADC 16
+Strip: 1068  ADC 15
 Event: 67
 GenTrackSet
 Number Gen Tracks: 1
@@ -5659,35 +5659,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1161  ADC 20
-Strip: 1162  ADC 11
+Strip: 1160  ADC 4
+Strip: 1161  ADC 27
 Layer: 1 number Strips: 2
-Strip: 1144  ADC 21
-Strip: 1145  ADC 10
+Strip: 1143  ADC 5
+Strip: 1144  ADC 26
 Layer: 2 number Strips: 2
-Strip: 1051  ADC 15
-Strip: 1052  ADC 16
+Strip: 1051  ADC 31
+Strip: 1052  ADC 0
 Layer: 3 number Strips: 2
-Strip: 1050  ADC 20
-Strip: 1051  ADC 11
+Strip: 1049  ADC 4
+Strip: 1050  ADC 27
 Layer: 4 number Strips: 2
-Strip: 1050  ADC 8
-Strip: 1051  ADC 23
+Strip: 1050  ADC 24
+Strip: 1051  ADC 7
 Layer: 5 number Strips: 2
-Strip: 681  ADC 13
-Strip: 682  ADC 18
+Strip: 681  ADC 29
+Strip: 682  ADC 2
 Layer: 6 number Strips: 2
-Strip: 455  ADC 17
-Strip: 456  ADC 14
+Strip: 454  ADC 1
+Strip: 455  ADC 30
 Layer: 7 number Strips: 2
-Strip: 825  ADC 16
-Strip: 826  ADC 15
+Strip: 824  ADC 0
+Strip: 825  ADC 31
 Layer: 8 number Strips: 2
-Strip: 1045  ADC 10
-Strip: 1046  ADC 21
+Strip: 1045  ADC 26
+Strip: 1046  ADC 5
 Layer: 9 number Strips: 2
-Strip: 1045  ADC 20
-Strip: 1046  ADC 11
+Strip: 1044  ADC 4
+Strip: 1045  ADC 27
 Event: 68
 GenTrackSet
 Number Gen Tracks: 1
@@ -5740,35 +5740,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 743  ADC 13
-Strip: 744  ADC 18
+Strip: 743  ADC 29
+Strip: 744  ADC 2
 Layer: 1 number Strips: 2
-Strip: 412  ADC 25
-Strip: 413  ADC 6
+Strip: 411  ADC 9
+Strip: 412  ADC 22
 Layer: 2 number Strips: 2
-Strip: 786  ADC 24
-Strip: 787  ADC 7
+Strip: 785  ADC 8
+Strip: 786  ADC 23
 Layer: 3 number Strips: 2
-Strip: 699  ADC 16
-Strip: 700  ADC 15
+Strip: 698  ADC 0
+Strip: 699  ADC 31
 Layer: 4 number Strips: 2
-Strip: 611  ADC 30
-Strip: 612  ADC 1
+Strip: 610  ADC 14
+Strip: 611  ADC 17
 Layer: 5 number Strips: 2
-Strip: 752  ADC 12
-Strip: 753  ADC 19
+Strip: 752  ADC 28
+Strip: 753  ADC 3
 Layer: 6 number Strips: 2
-Strip: 533  ADC 10
-Strip: 534  ADC 21
+Strip: 533  ADC 26
+Strip: 534  ADC 5
 Layer: 7 number Strips: 2
-Strip: 846  ADC 0
-Strip: 847  ADC 31
+Strip: 846  ADC 16
+Strip: 847  ADC 15
 Layer: 8 number Strips: 2
-Strip: 695  ADC 7
-Strip: 696  ADC 24
+Strip: 695  ADC 23
+Strip: 696  ADC 8
 Layer: 9 number Strips: 2
-Strip: 606  ADC 13
-Strip: 607  ADC 18
+Strip: 606  ADC 29
+Strip: 607  ADC 2
 Event: 69
 GenTrackSet
 Number Gen Tracks: 1
@@ -5821,35 +5821,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 675  ADC 9
-Strip: 676  ADC 22
+Strip: 675  ADC 25
+Strip: 676  ADC 6
 Layer: 1 number Strips: 2
-Strip: 398  ADC 18
-Strip: 399  ADC 13
+Strip: 397  ADC 2
+Strip: 398  ADC 29
 Layer: 2 number Strips: 2
-Strip: 795  ADC 18
-Strip: 796  ADC 13
+Strip: 794  ADC 2
+Strip: 795  ADC 29
 Layer: 3 number Strips: 2
-Strip: 720  ADC 30
-Strip: 721  ADC 1
+Strip: 719  ADC 14
+Strip: 720  ADC 17
 Layer: 4 number Strips: 2
-Strip: 641  ADC 13
-Strip: 642  ADC 18
+Strip: 641  ADC 29
+Strip: 642  ADC 2
 Layer: 5 number Strips: 2
-Strip: 822  ADC 16
-Strip: 823  ADC 15
+Strip: 821  ADC 0
+Strip: 822  ADC 31
 Layer: 6 number Strips: 2
-Strip: 624  ADC 5
-Strip: 625  ADC 26
+Strip: 624  ADC 21
+Strip: 625  ADC 10
 Layer: 7 number Strips: 2
-Strip: 874  ADC 5
-Strip: 875  ADC 26
+Strip: 874  ADC 21
+Strip: 875  ADC 10
 Layer: 8 number Strips: 2
-Strip: 716  ADC 20
-Strip: 717  ADC 11
+Strip: 715  ADC 4
+Strip: 716  ADC 27
 Layer: 9 number Strips: 2
-Strip: 637  ADC 4
-Strip: 638  ADC 27
+Strip: 637  ADC 20
+Strip: 638  ADC 11
 Event: 70
 GenTrackSet
 Number Gen Tracks: 1
@@ -5902,35 +5902,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1043  ADC 23
-Strip: 1044  ADC 8
+Strip: 1042  ADC 7
+Strip: 1043  ADC 24
 Layer: 1 number Strips: 2
-Strip: 1143  ADC 6
-Strip: 1144  ADC 25
+Strip: 1143  ADC 22
+Strip: 1144  ADC 9
 Layer: 2 number Strips: 2
-Strip: 1077  ADC 15
-Strip: 1078  ADC 16
+Strip: 1077  ADC 31
+Strip: 1078  ADC 0
 Layer: 3 number Strips: 2
-Strip: 1098  ADC 5
-Strip: 1099  ADC 26
+Strip: 1098  ADC 21
+Strip: 1099  ADC 10
 Layer: 4 number Strips: 2
-Strip: 1117  ADC 8
-Strip: 1118  ADC 23
+Strip: 1117  ADC 24
+Strip: 1118  ADC 7
 Layer: 5 number Strips: 2
-Strip: 1097  ADC 15
-Strip: 1098  ADC 16
+Strip: 1097  ADC 31
+Strip: 1098  ADC 0
 Layer: 6 number Strips: 2
-Strip: 1329  ADC 9
-Strip: 1330  ADC 22
+Strip: 1329  ADC 25
+Strip: 1330  ADC 6
 Layer: 7 number Strips: 2
-Strip: 1158  ADC 15
-Strip: 1159  ADC 16
+Strip: 1158  ADC 31
+Strip: 1159  ADC 0
 Layer: 8 number Strips: 2
-Strip: 1101  ADC 2
-Strip: 1102  ADC 29
+Strip: 1101  ADC 18
+Strip: 1102  ADC 13
 Layer: 9 number Strips: 2
-Strip: 1122  ADC 26
-Strip: 1123  ADC 5
+Strip: 1121  ADC 10
+Strip: 1122  ADC 21
 Event: 71
 GenTrackSet
 Number Gen Tracks: 1
@@ -5983,35 +5983,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 693  ADC 26
-Strip: 694  ADC 5
+Strip: 692  ADC 10
+Strip: 693  ADC 21
 Layer: 1 number Strips: 2
-Strip: 307  ADC 21
-Strip: 308  ADC 10
+Strip: 306  ADC 5
+Strip: 307  ADC 26
 Layer: 2 number Strips: 2
-Strip: 746  ADC 22
-Strip: 747  ADC 9
+Strip: 745  ADC 6
+Strip: 746  ADC 25
 Layer: 3 number Strips: 2
-Strip: 644  ADC 5
-Strip: 645  ADC 26
+Strip: 644  ADC 21
+Strip: 645  ADC 10
 Layer: 4 number Strips: 2
-Strip: 541  ADC 14
-Strip: 542  ADC 17
+Strip: 541  ADC 30
+Strip: 542  ADC 1
 Layer: 5 number Strips: 2
-Strip: 983  ADC 23
-Strip: 984  ADC 8
+Strip: 982  ADC 7
+Strip: 983  ADC 24
 Layer: 6 number Strips: 2
-Strip: 925  ADC 14
-Strip: 926  ADC 17
+Strip: 925  ADC 30
+Strip: 926  ADC 1
 Layer: 7 number Strips: 2
-Strip: 984  ADC 6
-Strip: 985  ADC 25
+Strip: 984  ADC 22
+Strip: 985  ADC 9
 Layer: 8 number Strips: 2
-Strip: 644  ADC 25
-Strip: 645  ADC 6
+Strip: 643  ADC 9
+Strip: 644  ADC 22
 Layer: 9 number Strips: 2
-Strip: 540  ADC 23
-Strip: 541  ADC 8
+Strip: 539  ADC 7
+Strip: 540  ADC 24
 Event: 72
 GenTrackSet
 Number Gen Tracks: 1
@@ -6064,35 +6064,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 512  ADC 14
-Strip: 513  ADC 17
+Strip: 512  ADC 30
+Strip: 513  ADC 1
 Layer: 1 number Strips: 2
-Strip: 137  ADC 19
-Strip: 138  ADC 12
+Strip: 136  ADC 3
+Strip: 137  ADC 28
 Layer: 2 number Strips: 2
-Strip: 706  ADC 2
-Strip: 707  ADC 29
+Strip: 706  ADC 18
+Strip: 707  ADC 13
 Layer: 3 number Strips: 2
-Strip: 610  ADC 27
-Strip: 611  ADC 4
+Strip: 609  ADC 11
+Strip: 610  ADC 20
 Layer: 4 number Strips: 2
-Strip: 511  ADC 20
-Strip: 512  ADC 11
+Strip: 510  ADC 4
+Strip: 511  ADC 27
 Layer: 5 number Strips: 2
-Strip: 655  ADC 21
-Strip: 656  ADC 10
+Strip: 654  ADC 5
+Strip: 655  ADC 26
 Layer: 6 number Strips: 2
-Strip: 464  ADC 30
-Strip: 465  ADC 1
+Strip: 463  ADC 14
+Strip: 464  ADC 17
 Layer: 7 number Strips: 2
-Strip: 836  ADC 26
-Strip: 837  ADC 5
+Strip: 835  ADC 10
+Strip: 836  ADC 21
 Layer: 8 number Strips: 2
-Strip: 606  ADC 27
-Strip: 607  ADC 4
+Strip: 605  ADC 11
+Strip: 606  ADC 20
 Layer: 9 number Strips: 2
-Strip: 506  ADC 9
-Strip: 507  ADC 22
+Strip: 506  ADC 25
+Strip: 507  ADC 6
 Event: 73
 GenTrackSet
 Number Gen Tracks: 1
@@ -6145,35 +6145,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 746  ADC 4
-Strip: 747  ADC 27
+Strip: 746  ADC 20
+Strip: 747  ADC 11
 Layer: 1 number Strips: 2
-Strip: 343  ADC 23
-Strip: 344  ADC 8
+Strip: 342  ADC 7
+Strip: 343  ADC 24
 Layer: 2 number Strips: 2
-Strip: 750  ADC 0
-Strip: 751  ADC 31
+Strip: 750  ADC 16
+Strip: 751  ADC 15
 Layer: 3 number Strips: 2
-Strip: 646  ADC 14
-Strip: 647  ADC 17
+Strip: 646  ADC 30
+Strip: 647  ADC 1
 Layer: 4 number Strips: 2
-Strip: 539  ADC 9
-Strip: 540  ADC 22
+Strip: 539  ADC 25
+Strip: 540  ADC 6
 Layer: 5 number Strips: 2
-Strip: 1240  ADC 13
-Strip: 1241  ADC 18
+Strip: 1240  ADC 29
+Strip: 1241  ADC 2
 Layer: 6 number Strips: 2
-Strip: 1394  ADC 14
-Strip: 1395  ADC 17
+Strip: 1394  ADC 30
+Strip: 1395  ADC 1
 Layer: 7 number Strips: 2
-Strip: 1155  ADC 21
-Strip: 1156  ADC 10
+Strip: 1154  ADC 5
+Strip: 1155  ADC 26
 Layer: 8 number Strips: 2
-Strip: 649  ADC 21
-Strip: 650  ADC 10
+Strip: 648  ADC 5
+Strip: 649  ADC 26
 Layer: 9 number Strips: 2
-Strip: 543  ADC 29
-Strip: 544  ADC 2
+Strip: 542  ADC 13
+Strip: 543  ADC 18
 Event: 74
 GenTrackSet
 Number Gen Tracks: 1
@@ -6226,35 +6226,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 962  ADC 1
-Strip: 963  ADC 30
+Strip: 962  ADC 17
+Strip: 963  ADC 14
 Layer: 1 number Strips: 2
-Strip: 777  ADC 13
-Strip: 778  ADC 18
+Strip: 777  ADC 29
+Strip: 778  ADC 2
 Layer: 2 number Strips: 2
-Strip: 914  ADC 14
-Strip: 915  ADC 17
+Strip: 914  ADC 30
+Strip: 915  ADC 1
 Layer: 3 number Strips: 2
-Strip: 865  ADC 29
-Strip: 866  ADC 2
+Strip: 864  ADC 13
+Strip: 865  ADC 18
 Layer: 4 number Strips: 2
-Strip: 814  ADC 28
-Strip: 815  ADC 3
+Strip: 813  ADC 12
+Strip: 814  ADC 19
 Layer: 5 number Strips: 2
-Strip: 1152  ADC 23
-Strip: 1153  ADC 8
+Strip: 1151  ADC 7
+Strip: 1152  ADC 24
 Layer: 6 number Strips: 2
-Strip: 1092  ADC 11
-Strip: 1093  ADC 20
+Strip: 1092  ADC 27
+Strip: 1093  ADC 4
 Layer: 7 number Strips: 2
-Strip: 1026  ADC 12
-Strip: 1027  ADC 19
+Strip: 1026  ADC 28
+Strip: 1027  ADC 3
 Layer: 8 number Strips: 2
-Strip: 864  ADC 0
-Strip: 865  ADC 31
+Strip: 864  ADC 16
+Strip: 865  ADC 15
 Layer: 9 number Strips: 2
-Strip: 813  ADC 5
-Strip: 814  ADC 26
+Strip: 813  ADC 21
+Strip: 814  ADC 10
 Event: 75
 GenTrackSet
 Number Gen Tracks: 1
@@ -6307,35 +6307,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 945  ADC 5
-Strip: 946  ADC 26
-Layer: 1 number Strips: 2
-Strip: 944  ADC 10
 Strip: 945  ADC 21
+Strip: 946  ADC 10
+Layer: 1 number Strips: 2
+Strip: 944  ADC 26
+Strip: 945  ADC 5
 Layer: 2 number Strips: 2
-Strip: 1002  ADC 13
-Strip: 1003  ADC 18
+Strip: 1002  ADC 29
+Strip: 1003  ADC 2
 Layer: 3 number Strips: 2
-Strip: 999  ADC 24
-Strip: 1000  ADC 7
+Strip: 998  ADC 8
+Strip: 999  ADC 23
 Layer: 4 number Strips: 2
-Strip: 994  ADC 29
-Strip: 995  ADC 2
+Strip: 993  ADC 13
+Strip: 994  ADC 18
 Layer: 5 number Strips: 2
-Strip: 725  ADC 18
-Strip: 726  ADC 13
+Strip: 724  ADC 2
+Strip: 725  ADC 29
 Layer: 6 number Strips: 2
-Strip: 421  ADC 1
-Strip: 422  ADC 30
+Strip: 421  ADC 17
+Strip: 422  ADC 14
 Layer: 7 number Strips: 2
-Strip: 797  ADC 4
-Strip: 798  ADC 27
+Strip: 797  ADC 20
+Strip: 798  ADC 11
 Layer: 8 number Strips: 2
-Strip: 993  ADC 2
-Strip: 994  ADC 29
+Strip: 993  ADC 18
+Strip: 994  ADC 13
 Layer: 9 number Strips: 2
-Strip: 987  ADC 21
-Strip: 988  ADC 10
+Strip: 986  ADC 5
+Strip: 987  ADC 26
 Event: 76
 GenTrackSet
 Number Gen Tracks: 1
@@ -6388,35 +6388,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 693  ADC 27
-Strip: 694  ADC 4
+Strip: 692  ADC 11
+Strip: 693  ADC 20
 Layer: 1 number Strips: 2
-Strip: 347  ADC 5
-Strip: 348  ADC 26
+Strip: 347  ADC 21
+Strip: 348  ADC 10
 Layer: 2 number Strips: 2
-Strip: 766  ADC 18
-Strip: 767  ADC 13
+Strip: 765  ADC 2
+Strip: 766  ADC 29
 Layer: 3 number Strips: 2
-Strip: 675  ADC 18
-Strip: 676  ADC 13
+Strip: 674  ADC 2
+Strip: 675  ADC 29
 Layer: 4 number Strips: 2
-Strip: 581  ADC 6
-Strip: 582  ADC 25
+Strip: 581  ADC 22
+Strip: 582  ADC 9
 Layer: 5 number Strips: 2
-Strip: 755  ADC 10
-Strip: 756  ADC 21
+Strip: 755  ADC 26
+Strip: 756  ADC 5
 Layer: 6 number Strips: 2
-Strip: 391  ADC 15
-Strip: 392  ADC 16
+Strip: 391  ADC 31
+Strip: 392  ADC 0
 Layer: 7 number Strips: 2
-Strip: 775  ADC 25
-Strip: 776  ADC 6
+Strip: 774  ADC 9
+Strip: 775  ADC 22
 Layer: 8 number Strips: 2
-Strip: 669  ADC 16
-Strip: 670  ADC 15
+Strip: 668  ADC 0
+Strip: 669  ADC 31
 Layer: 9 number Strips: 2
-Strip: 574  ADC 24
-Strip: 575  ADC 7
+Strip: 573  ADC 8
+Strip: 574  ADC 23
 Event: 77
 GenTrackSet
 Number Gen Tracks: 1
@@ -6469,35 +6469,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1388  ADC 11
-Strip: 1389  ADC 20
+Strip: 1388  ADC 27
+Strip: 1389  ADC 4
 Layer: 1 number Strips: 2
-Strip: 1843  ADC 23
-Strip: 1844  ADC 8
+Strip: 1842  ADC 7
+Strip: 1843  ADC 24
 Layer: 2 number Strips: 2
-Strip: 1344  ADC 0
-Strip: 1345  ADC 31
+Strip: 1344  ADC 16
+Strip: 1345  ADC 15
 Layer: 3 number Strips: 2
-Strip: 1463  ADC 26
-Strip: 1464  ADC 5
+Strip: 1462  ADC 10
+Strip: 1463  ADC 21
 Layer: 4 number Strips: 2
-Strip: 1584  ADC 27
-Strip: 1585  ADC 4
+Strip: 1583  ADC 11
+Strip: 1584  ADC 20
 Layer: 5 number Strips: 2
-Strip: 1033  ADC 23
-Strip: 1034  ADC 8
+Strip: 1032  ADC 7
+Strip: 1033  ADC 24
 Layer: 6 number Strips: 2
-Strip: 891  ADC 20
-Strip: 892  ADC 11
+Strip: 890  ADC 4
+Strip: 891  ADC 27
 Layer: 7 number Strips: 2
-Strip: 955  ADC 23
-Strip: 956  ADC 8
+Strip: 954  ADC 7
+Strip: 955  ADC 24
 Layer: 8 number Strips: 2
-Strip: 1461  ADC 12
-Strip: 1462  ADC 19
+Strip: 1461  ADC 28
+Strip: 1462  ADC 3
 Layer: 9 number Strips: 2
-Strip: 1582  ADC 29
-Strip: 1583  ADC 2
+Strip: 1581  ADC 13
+Strip: 1582  ADC 18
 Event: 78
 GenTrackSet
 Number Gen Tracks: 1
@@ -6550,35 +6550,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1488  ADC 1
-Strip: 1489  ADC 30
+Strip: 1488  ADC 17
+Strip: 1489  ADC 14
 Layer: 1 number Strips: 2
-Strip: 1803  ADC 17
-Strip: 1804  ADC 14
+Strip: 1802  ADC 1
+Strip: 1803  ADC 30
 Layer: 2 number Strips: 2
-Strip: 1296  ADC 26
-Strip: 1297  ADC 5
+Strip: 1295  ADC 10
+Strip: 1296  ADC 21
 Layer: 3 number Strips: 2
-Strip: 1371  ADC 6
-Strip: 1372  ADC 25
+Strip: 1371  ADC 22
+Strip: 1372  ADC 9
 Layer: 4 number Strips: 2
-Strip: 1445  ADC 6
-Strip: 1446  ADC 25
+Strip: 1445  ADC 22
+Strip: 1446  ADC 9
 Layer: 5 number Strips: 2
-Strip: 1360  ADC 2
-Strip: 1361  ADC 29
+Strip: 1360  ADC 18
+Strip: 1361  ADC 13
 Layer: 6 number Strips: 2
-Strip: 1587  ADC 15
-Strip: 1588  ADC 16
+Strip: 1587  ADC 31
+Strip: 1588  ADC 0
 Layer: 7 number Strips: 2
-Strip: 1221  ADC 13
-Strip: 1222  ADC 18
+Strip: 1221  ADC 29
+Strip: 1222  ADC 2
 Layer: 8 number Strips: 2
-Strip: 1376  ADC 26
-Strip: 1377  ADC 5
+Strip: 1375  ADC 10
+Strip: 1376  ADC 21
 Layer: 9 number Strips: 2
-Strip: 1451  ADC 30
-Strip: 1452  ADC 1
+Strip: 1450  ADC 14
+Strip: 1451  ADC 17
 Event: 79
 GenTrackSet
 Number Gen Tracks: 1
@@ -6631,35 +6631,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1194  ADC 14
-Strip: 1195  ADC 17
+Strip: 1194  ADC 30
+Strip: 1195  ADC 1
 Layer: 1 number Strips: 2
-Strip: 1432  ADC 22
-Strip: 1433  ADC 9
+Strip: 1431  ADC 6
+Strip: 1432  ADC 25
 Layer: 2 number Strips: 2
-Strip: 1187  ADC 11
-Strip: 1188  ADC 20
+Strip: 1187  ADC 27
+Strip: 1188  ADC 4
 Layer: 3 number Strips: 2
-Strip: 1251  ADC 29
-Strip: 1252  ADC 2
+Strip: 1250  ADC 13
+Strip: 1251  ADC 18
 Layer: 4 number Strips: 2
-Strip: 1316  ADC 11
-Strip: 1317  ADC 20
+Strip: 1316  ADC 27
+Strip: 1317  ADC 4
 Layer: 5 number Strips: 2
-Strip: 887  ADC 22
-Strip: 888  ADC 9
+Strip: 886  ADC 6
+Strip: 887  ADC 25
 Layer: 6 number Strips: 2
-Strip: 779  ADC 6
-Strip: 780  ADC 25
+Strip: 779  ADC 22
+Strip: 780  ADC 9
 Layer: 7 number Strips: 2
-Strip: 936  ADC 28
-Strip: 937  ADC 3
+Strip: 935  ADC 12
+Strip: 936  ADC 19
 Layer: 8 number Strips: 2
-Strip: 1248  ADC 0
-Strip: 1249  ADC 31
+Strip: 1248  ADC 16
+Strip: 1249  ADC 15
 Layer: 9 number Strips: 2
-Strip: 1313  ADC 5
-Strip: 1314  ADC 26
+Strip: 1313  ADC 21
+Strip: 1314  ADC 10
 Event: 80
 GenTrackSet
 Number Gen Tracks: 1
@@ -6712,35 +6712,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1109  ADC 25
-Strip: 1110  ADC 6
+Strip: 1108  ADC 9
+Strip: 1109  ADC 22
 Layer: 1 number Strips: 2
-Strip: 1190  ADC 17
-Strip: 1191  ADC 14
+Strip: 1189  ADC 1
+Strip: 1190  ADC 30
 Layer: 2 number Strips: 2
-Strip: 1088  ADC 18
-Strip: 1089  ADC 13
+Strip: 1087  ADC 2
+Strip: 1088  ADC 29
 Layer: 3 number Strips: 2
-Strip: 1113  ADC 22
-Strip: 1114  ADC 9
+Strip: 1112  ADC 6
+Strip: 1113  ADC 25
 Layer: 4 number Strips: 2
-Strip: 1140  ADC 12
-Strip: 1141  ADC 19
+Strip: 1140  ADC 28
+Strip: 1141  ADC 3
 Layer: 5 number Strips: 2
-Strip: 1105  ADC 30
-Strip: 1106  ADC 1
+Strip: 1104  ADC 14
+Strip: 1105  ADC 17
 Layer: 6 number Strips: 2
-Strip: 1185  ADC 0
-Strip: 1186  ADC 31
+Strip: 1185  ADC 16
+Strip: 1186  ADC 15
 Layer: 7 number Strips: 2
-Strip: 1084  ADC 3
-Strip: 1085  ADC 28
+Strip: 1084  ADC 19
+Strip: 1085  ADC 12
 Layer: 8 number Strips: 2
-Strip: 1114  ADC 7
-Strip: 1115  ADC 24
+Strip: 1114  ADC 23
+Strip: 1115  ADC 8
 Layer: 9 number Strips: 2
-Strip: 1142  ADC 29
-Strip: 1143  ADC 2
+Strip: 1141  ADC 13
+Strip: 1142  ADC 18
 Event: 81
 GenTrackSet
 Number Gen Tracks: 1
@@ -6793,35 +6793,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 822  ADC 13
-Strip: 823  ADC 18
+Strip: 822  ADC 29
+Strip: 823  ADC 2
 Layer: 1 number Strips: 2
-Strip: 465  ADC 8
-Strip: 466  ADC 23
+Strip: 465  ADC 24
+Strip: 466  ADC 7
 Layer: 2 number Strips: 2
-Strip: 797  ADC 13
-Strip: 798  ADC 18
+Strip: 797  ADC 29
+Strip: 798  ADC 2
 Layer: 3 number Strips: 2
-Strip: 713  ADC 17
-Strip: 714  ADC 14
+Strip: 712  ADC 1
+Strip: 713  ADC 30
 Layer: 4 number Strips: 2
-Strip: 631  ADC 22
-Strip: 632  ADC 9
+Strip: 630  ADC 6
+Strip: 631  ADC 25
 Layer: 5 number Strips: 2
-Strip: 645  ADC 11
-Strip: 646  ADC 20
+Strip: 645  ADC 27
+Strip: 646  ADC 4
 Layer: 6 number Strips: 2
-Strip: 438  ADC 31
-Strip: 439  ADC 0
+Strip: 437  ADC 15
+Strip: 438  ADC 16
 Layer: 7 number Strips: 2
-Strip: 825  ADC 6
-Strip: 826  ADC 25
+Strip: 825  ADC 22
+Strip: 826  ADC 9
 Layer: 8 number Strips: 2
-Strip: 708  ADC 2
-Strip: 709  ADC 29
+Strip: 708  ADC 18
+Strip: 709  ADC 13
 Layer: 9 number Strips: 2
-Strip: 626  ADC 8
-Strip: 627  ADC 23
+Strip: 626  ADC 24
+Strip: 627  ADC 7
 Event: 82
 GenTrackSet
 Number Gen Tracks: 1
@@ -6874,35 +6874,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1272  ADC 7
-Strip: 1273  ADC 24
+Strip: 1272  ADC 23
+Strip: 1273  ADC 8
 Layer: 1 number Strips: 2
-Strip: 1476  ADC 31
-Strip: 1477  ADC 0
+Strip: 1475  ADC 15
+Strip: 1476  ADC 16
 Layer: 2 number Strips: 2
-Strip: 1185  ADC 13
-Strip: 1186  ADC 18
+Strip: 1185  ADC 29
+Strip: 1186  ADC 2
 Layer: 3 number Strips: 2
-Strip: 1231  ADC 13
-Strip: 1232  ADC 18
+Strip: 1231  ADC 29
+Strip: 1232  ADC 2
 Layer: 4 number Strips: 2
-Strip: 1275  ADC 25
-Strip: 1276  ADC 6
+Strip: 1274  ADC 9
+Strip: 1275  ADC 22
 Layer: 5 number Strips: 2
-Strip: 1386  ADC 25
-Strip: 1387  ADC 6
+Strip: 1385  ADC 9
+Strip: 1386  ADC 22
 Layer: 6 number Strips: 2
-Strip: 1752  ADC 7
-Strip: 1753  ADC 24
+Strip: 1752  ADC 23
+Strip: 1753  ADC 8
 Layer: 7 number Strips: 2
-Strip: 1297  ADC 7
-Strip: 1298  ADC 24
+Strip: 1297  ADC 23
+Strip: 1298  ADC 8
 Layer: 8 number Strips: 2
-Strip: 1238  ADC 26
-Strip: 1239  ADC 5
+Strip: 1237  ADC 10
+Strip: 1238  ADC 21
 Layer: 9 number Strips: 2
-Strip: 1283  ADC 17
-Strip: 1284  ADC 14
+Strip: 1282  ADC 1
+Strip: 1283  ADC 30
 Event: 83
 GenTrackSet
 Number Gen Tracks: 1
@@ -6955,35 +6955,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1345  ADC 5
-Strip: 1346  ADC 26
+Strip: 1345  ADC 21
+Strip: 1346  ADC 10
 Layer: 1 number Strips: 2
-Strip: 1855  ADC 23
-Strip: 1856  ADC 8
+Strip: 1854  ADC 7
+Strip: 1855  ADC 24
 Layer: 2 number Strips: 2
-Strip: 1356  ADC 4
-Strip: 1357  ADC 27
+Strip: 1356  ADC 20
+Strip: 1357  ADC 11
 Layer: 3 number Strips: 2
-Strip: 1479  ADC 2
-Strip: 1480  ADC 29
+Strip: 1479  ADC 18
+Strip: 1480  ADC 13
 Layer: 4 number Strips: 2
-Strip: 1600  ADC 13
-Strip: 1601  ADC 18
+Strip: 1600  ADC 29
+Strip: 1601  ADC 2
 Layer: 5 number Strips: 2
-Strip: 1391  ADC 1
-Strip: 1392  ADC 30
+Strip: 1391  ADC 17
+Strip: 1392  ADC 14
 Layer: 6 number Strips: 2
-Strip: 1659  ADC 22
-Strip: 1660  ADC 9
+Strip: 1658  ADC 6
+Strip: 1659  ADC 25
 Layer: 7 number Strips: 2
-Strip: 1249  ADC 6
-Strip: 1250  ADC 25
+Strip: 1249  ADC 22
+Strip: 1250  ADC 9
 Layer: 8 number Strips: 2
-Strip: 1485  ADC 27
-Strip: 1486  ADC 4
+Strip: 1484  ADC 11
+Strip: 1485  ADC 20
 Layer: 9 number Strips: 2
-Strip: 1606  ADC 0
-Strip: 1607  ADC 31
+Strip: 1606  ADC 16
+Strip: 1607  ADC 15
 Event: 84
 GenTrackSet
 Number Gen Tracks: 1
@@ -7036,33 +7036,33 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 369  ADC 30
-Strip: 370  ADC 1
+Strip: 368  ADC 14
+Strip: 369  ADC 17
 Layer: 1 number Strips: 0
 Layer: 2 number Strips: 2
-Strip: 612  ADC 25
-Strip: 613  ADC 6
+Strip: 611  ADC 9
+Strip: 612  ADC 22
 Layer: 3 number Strips: 2
-Strip: 492  ADC 22
-Strip: 493  ADC 9
+Strip: 491  ADC 6
+Strip: 492  ADC 25
 Layer: 4 number Strips: 2
-Strip: 375  ADC 23
-Strip: 376  ADC 8
+Strip: 374  ADC 7
+Strip: 375  ADC 24
 Layer: 5 number Strips: 2
-Strip: 1244  ADC 15
-Strip: 1245  ADC 16
+Strip: 1244  ADC 31
+Strip: 1245  ADC 0
 Layer: 6 number Strips: 2
-Strip: 1510  ADC 2
-Strip: 1511  ADC 29
+Strip: 1510  ADC 18
+Strip: 1511  ADC 13
 Layer: 7 number Strips: 2
-Strip: 1212  ADC 14
-Strip: 1213  ADC 17
+Strip: 1212  ADC 30
+Strip: 1213  ADC 1
 Layer: 8 number Strips: 2
-Strip: 496  ADC 9
-Strip: 497  ADC 22
+Strip: 496  ADC 25
+Strip: 497  ADC 6
 Layer: 9 number Strips: 2
-Strip: 380  ADC 3
-Strip: 381  ADC 28
+Strip: 380  ADC 19
+Strip: 381  ADC 12
 Event: 85
 GenTrackSet
 Number Gen Tracks: 1
@@ -7115,35 +7115,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 675  ADC 2
-Strip: 676  ADC 29
+Strip: 675  ADC 18
+Strip: 676  ADC 13
 Layer: 1 number Strips: 2
-Strip: 354  ADC 23
-Strip: 355  ADC 8
+Strip: 353  ADC 7
+Strip: 354  ADC 24
 Layer: 2 number Strips: 2
-Strip: 779  ADC 25
-Strip: 780  ADC 6
+Strip: 778  ADC 9
+Strip: 779  ADC 22
 Layer: 3 number Strips: 2
-Strip: 704  ADC 11
-Strip: 705  ADC 20
+Strip: 704  ADC 27
+Strip: 705  ADC 4
 Layer: 4 number Strips: 2
-Strip: 632  ADC 5
-Strip: 633  ADC 26
+Strip: 632  ADC 21
+Strip: 633  ADC 10
 Layer: 5 number Strips: 2
-Strip: 675  ADC 20
-Strip: 676  ADC 11
+Strip: 674  ADC 4
+Strip: 675  ADC 27
 Layer: 6 number Strips: 2
-Strip: 495  ADC 5
-Strip: 496  ADC 26
+Strip: 495  ADC 21
+Strip: 496  ADC 10
 Layer: 7 number Strips: 2
-Strip: 847  ADC 27
-Strip: 848  ADC 4
+Strip: 846  ADC 11
+Strip: 847  ADC 20
 Layer: 8 number Strips: 2
-Strip: 700  ADC 6
-Strip: 701  ADC 25
+Strip: 700  ADC 22
+Strip: 701  ADC 9
 Layer: 9 number Strips: 2
-Strip: 628  ADC 28
-Strip: 629  ADC 3
+Strip: 627  ADC 12
+Strip: 628  ADC 19
 Event: 86
 GenTrackSet
 Number Gen Tracks: 1
@@ -7196,35 +7196,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 756  ADC 13
-Strip: 757  ADC 18
+Strip: 756  ADC 29
+Strip: 757  ADC 2
 Layer: 1 number Strips: 2
-Strip: 415  ADC 1
-Strip: 416  ADC 30
+Strip: 415  ADC 17
+Strip: 416  ADC 14
 Layer: 2 number Strips: 2
-Strip: 784  ADC 5
-Strip: 785  ADC 26
+Strip: 784  ADC 21
+Strip: 785  ADC 10
 Layer: 3 number Strips: 2
-Strip: 696  ADC 30
-Strip: 697  ADC 1
+Strip: 695  ADC 14
+Strip: 696  ADC 17
 Layer: 4 number Strips: 2
-Strip: 605  ADC 4
-Strip: 606  ADC 27
+Strip: 605  ADC 20
+Strip: 606  ADC 11
 Layer: 5 number Strips: 2
-Strip: 734  ADC 17
-Strip: 735  ADC 14
+Strip: 733  ADC 1
+Strip: 734  ADC 30
 Layer: 6 number Strips: 2
-Strip: 404  ADC 22
-Strip: 405  ADC 9
+Strip: 403  ADC 6
+Strip: 404  ADC 25
 Layer: 7 number Strips: 2
-Strip: 786  ADC 6
-Strip: 787  ADC 25
+Strip: 786  ADC 22
+Strip: 787  ADC 9
 Layer: 8 number Strips: 2
-Strip: 690  ADC 21
-Strip: 691  ADC 10
+Strip: 689  ADC 5
+Strip: 690  ADC 26
 Layer: 9 number Strips: 2
-Strip: 598  ADC 22
-Strip: 599  ADC 9
+Strip: 597  ADC 6
+Strip: 598  ADC 25
 Event: 87
 GenTrackSet
 Number Gen Tracks: 1
@@ -7277,35 +7277,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 550  ADC 7
-Strip: 551  ADC 24
+Strip: 550  ADC 23
+Strip: 551  ADC 8
 Layer: 1 number Strips: 2
-Strip: 150  ADC 0
-Strip: 151  ADC 31
+Strip: 150  ADC 16
+Strip: 151  ADC 15
 Layer: 2 number Strips: 2
-Strip: 708  ADC 8
-Strip: 709  ADC 23
+Strip: 708  ADC 24
+Strip: 709  ADC 7
 Layer: 3 number Strips: 2
-Strip: 614  ADC 25
-Strip: 615  ADC 6
+Strip: 613  ADC 9
+Strip: 614  ADC 22
 Layer: 4 number Strips: 2
-Strip: 523  ADC 22
-Strip: 524  ADC 9
+Strip: 522  ADC 6
+Strip: 523  ADC 25
 Layer: 5 number Strips: 2
-Strip: 453  ADC 31
-Strip: 454  ADC 0
+Strip: 452  ADC 15
+Strip: 453  ADC 16
 Layer: 6 number Strips: 2
-Strip: 58  ADC 28
-Strip: 59  ADC 3
+Strip: 57  ADC 12
+Strip: 58  ADC 19
 Layer: 7 number Strips: 2
-Strip: 683  ADC 11
-Strip: 684  ADC 20
+Strip: 683  ADC 27
+Strip: 684  ADC 4
 Layer: 8 number Strips: 2
-Strip: 606  ADC 3
-Strip: 607  ADC 28
+Strip: 606  ADC 19
+Strip: 607  ADC 12
 Layer: 9 number Strips: 2
-Strip: 513  ADC 0
-Strip: 514  ADC 31
+Strip: 513  ADC 16
+Strip: 514  ADC 15
 Event: 88
 GenTrackSet
 Number Gen Tracks: 1
@@ -7358,35 +7358,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1007  ADC 19
-Strip: 1008  ADC 12
+Strip: 1006  ADC 3
+Strip: 1007  ADC 28
 Layer: 1 number Strips: 2
-Strip: 1011  ADC 20
-Strip: 1012  ADC 11
+Strip: 1010  ADC 4
+Strip: 1011  ADC 27
 Layer: 2 number Strips: 2
-Strip: 1019  ADC 27
-Strip: 1020  ADC 4
+Strip: 1018  ADC 11
+Strip: 1019  ADC 20
 Layer: 3 number Strips: 2
-Strip: 1014  ADC 15
-Strip: 1015  ADC 16
+Strip: 1014  ADC 31
+Strip: 1015  ADC 0
 Layer: 4 number Strips: 2
-Strip: 1007  ADC 8
-Strip: 1008  ADC 23
+Strip: 1007  ADC 24
+Strip: 1008  ADC 7
 Layer: 5 number Strips: 2
-Strip: 875  ADC 25
-Strip: 876  ADC 6
+Strip: 874  ADC 9
+Strip: 875  ADC 22
 Layer: 6 number Strips: 2
-Strip: 800  ADC 23
-Strip: 801  ADC 8
+Strip: 799  ADC 7
+Strip: 800  ADC 24
 Layer: 7 number Strips: 2
-Strip: 949  ADC 23
-Strip: 950  ADC 8
+Strip: 948  ADC 7
+Strip: 949  ADC 24
 Layer: 8 number Strips: 2
-Strip: 1012  ADC 3
-Strip: 1013  ADC 28
+Strip: 1012  ADC 19
+Strip: 1013  ADC 12
 Layer: 9 number Strips: 2
-Strip: 1005  ADC 16
-Strip: 1006  ADC 15
+Strip: 1004  ADC 0
+Strip: 1005  ADC 31
 Event: 89
 GenTrackSet
 Number Gen Tracks: 1
@@ -7439,33 +7439,33 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 323  ADC 28
-Strip: 324  ADC 3
+Strip: 322  ADC 12
+Strip: 323  ADC 19
 Layer: 1 number Strips: 0
 Layer: 2 number Strips: 2
-Strip: 593  ADC 24
-Strip: 594  ADC 7
+Strip: 592  ADC 8
+Strip: 593  ADC 23
 Layer: 3 number Strips: 2
-Strip: 462  ADC 4
-Strip: 463  ADC 27
+Strip: 462  ADC 20
+Strip: 463  ADC 11
 Layer: 4 number Strips: 2
-Strip: 330  ADC 29
-Strip: 331  ADC 2
+Strip: 329  ADC 13
+Strip: 330  ADC 18
 Layer: 5 number Strips: 2
-Strip: 632  ADC 22
-Strip: 633  ADC 9
+Strip: 631  ADC 6
+Strip: 632  ADC 25
 Layer: 6 number Strips: 2
-Strip: 327  ADC 22
-Strip: 328  ADC 9
+Strip: 326  ADC 6
+Strip: 327  ADC 25
 Layer: 7 number Strips: 2
-Strip: 773  ADC 31
-Strip: 774  ADC 0
+Strip: 772  ADC 15
+Strip: 773  ADC 16
 Layer: 8 number Strips: 2
-Strip: 456  ADC 3
-Strip: 457  ADC 28
+Strip: 456  ADC 19
+Strip: 457  ADC 12
 Layer: 9 number Strips: 2
-Strip: 323  ADC 25
-Strip: 324  ADC 6
+Strip: 322  ADC 9
+Strip: 323  ADC 22
 Event: 90
 GenTrackSet
 Number Gen Tracks: 1
@@ -7518,35 +7518,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 922  ADC 10
-Strip: 923  ADC 21
+Strip: 922  ADC 26
+Strip: 923  ADC 5
 Layer: 1 number Strips: 2
-Strip: 723  ADC 27
-Strip: 724  ADC 4
+Strip: 722  ADC 11
+Strip: 723  ADC 20
 Layer: 2 number Strips: 2
-Strip: 896  ADC 29
-Strip: 897  ADC 2
+Strip: 895  ADC 13
+Strip: 896  ADC 18
 Layer: 3 number Strips: 2
-Strip: 841  ADC 26
-Strip: 842  ADC 5
+Strip: 840  ADC 10
+Strip: 841  ADC 21
 Layer: 4 number Strips: 2
-Strip: 783  ADC 15
-Strip: 784  ADC 16
+Strip: 783  ADC 31
+Strip: 784  ADC 0
 Layer: 5 number Strips: 2
-Strip: 746  ADC 18
-Strip: 747  ADC 13
+Strip: 745  ADC 2
+Strip: 746  ADC 29
 Layer: 6 number Strips: 2
-Strip: 601  ADC 16
-Strip: 602  ADC 15
+Strip: 600  ADC 0
+Strip: 601  ADC 31
 Layer: 7 number Strips: 2
-Strip: 881  ADC 0
-Strip: 882  ADC 31
+Strip: 881  ADC 16
+Strip: 882  ADC 15
 Layer: 8 number Strips: 2
-Strip: 837  ADC 2
-Strip: 838  ADC 29
+Strip: 837  ADC 18
+Strip: 838  ADC 13
 Layer: 9 number Strips: 2
-Strip: 779  ADC 20
-Strip: 780  ADC 11
+Strip: 778  ADC 4
+Strip: 779  ADC 27
 Event: 91
 GenTrackSet
 Number Gen Tracks: 1
@@ -7599,35 +7599,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 446  ADC 7
-Strip: 447  ADC 24
+Strip: 446  ADC 23
+Strip: 447  ADC 8
 Layer: 1 number Strips: 2
-Strip: 45  ADC 12
-Strip: 46  ADC 19
+Strip: 45  ADC 28
+Strip: 46  ADC 3
 Layer: 2 number Strips: 2
-Strip: 676  ADC 7
-Strip: 677  ADC 24
+Strip: 676  ADC 23
+Strip: 677  ADC 8
 Layer: 3 number Strips: 2
-Strip: 571  ADC 7
-Strip: 572  ADC 24
+Strip: 571  ADC 23
+Strip: 572  ADC 8
 Layer: 4 number Strips: 2
-Strip: 465  ADC 29
-Strip: 466  ADC 2
+Strip: 464  ADC 13
+Strip: 465  ADC 18
 Layer: 5 number Strips: 2
-Strip: 1052  ADC 6
-Strip: 1053  ADC 25
+Strip: 1052  ADC 22
+Strip: 1053  ADC 9
 Layer: 6 number Strips: 2
-Strip: 911  ADC 28
-Strip: 912  ADC 3
+Strip: 910  ADC 12
+Strip: 911  ADC 19
 Layer: 7 number Strips: 2
-Strip: 960  ADC 27
-Strip: 961  ADC 4
+Strip: 959  ADC 11
+Strip: 960  ADC 20
 Layer: 8 number Strips: 2
-Strip: 569  ADC 6
-Strip: 570  ADC 25
+Strip: 569  ADC 22
+Strip: 570  ADC 9
 Layer: 9 number Strips: 2
-Strip: 462  ADC 18
-Strip: 463  ADC 13
+Strip: 461  ADC 2
+Strip: 462  ADC 29
 Event: 92
 GenTrackSet
 Number Gen Tracks: 1
@@ -7680,35 +7680,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 682  ADC 21
-Strip: 683  ADC 10
+Strip: 681  ADC 5
+Strip: 682  ADC 26
 Layer: 1 number Strips: 2
-Strip: 187  ADC 0
-Strip: 188  ADC 31
+Strip: 187  ADC 16
+Strip: 188  ADC 15
 Layer: 2 number Strips: 2
-Strip: 689  ADC 20
-Strip: 690  ADC 11
+Strip: 688  ADC 4
+Strip: 689  ADC 27
 Layer: 3 number Strips: 2
-Strip: 560  ADC 8
-Strip: 561  ADC 23
+Strip: 560  ADC 24
+Strip: 561  ADC 7
 Layer: 4 number Strips: 2
-Strip: 429  ADC 16
-Strip: 430  ADC 15
+Strip: 428  ADC 0
+Strip: 429  ADC 31
 Layer: 5 number Strips: 2
-Strip: 966  ADC 26
-Strip: 967  ADC 5
+Strip: 965  ADC 10
+Strip: 966  ADC 21
 Layer: 6 number Strips: 2
-Strip: 913  ADC 13
-Strip: 914  ADC 18
+Strip: 913  ADC 29
+Strip: 914  ADC 2
 Layer: 7 number Strips: 2
-Strip: 982  ADC 1
-Strip: 983  ADC 30
+Strip: 982  ADC 17
+Strip: 983  ADC 14
 Layer: 8 number Strips: 2
-Strip: 559  ADC 3
-Strip: 560  ADC 28
+Strip: 559  ADC 19
+Strip: 560  ADC 12
 Layer: 9 number Strips: 2
-Strip: 428  ADC 17
-Strip: 429  ADC 14
+Strip: 427  ADC 1
+Strip: 428  ADC 30
 Event: 93
 GenTrackSet
 Number Gen Tracks: 1
@@ -7761,35 +7761,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 990  ADC 8
-Strip: 991  ADC 23
+Strip: 990  ADC 24
+Strip: 991  ADC 7
 Layer: 1 number Strips: 2
-Strip: 934  ADC 13
-Strip: 935  ADC 18
+Strip: 934  ADC 29
+Strip: 935  ADC 2
 Layer: 2 number Strips: 2
-Strip: 986  ADC 27
-Strip: 987  ADC 4
+Strip: 985  ADC 11
+Strip: 986  ADC 20
 Layer: 3 number Strips: 2
-Strip: 969  ADC 27
-Strip: 970  ADC 4
+Strip: 968  ADC 11
+Strip: 969  ADC 20
 Layer: 4 number Strips: 2
-Strip: 950  ADC 21
-Strip: 951  ADC 10
+Strip: 949  ADC 5
+Strip: 950  ADC 26
 Layer: 5 number Strips: 2
-Strip: 821  ADC 7
-Strip: 822  ADC 24
+Strip: 821  ADC 23
+Strip: 822  ADC 8
 Layer: 6 number Strips: 2
-Strip: 812  ADC 7
-Strip: 813  ADC 24
+Strip: 812  ADC 23
+Strip: 813  ADC 8
 Layer: 7 number Strips: 2
-Strip: 968  ADC 6
-Strip: 969  ADC 25
+Strip: 968  ADC 22
+Strip: 969  ADC 9
 Layer: 8 number Strips: 2
-Strip: 967  ADC 1
-Strip: 968  ADC 30
+Strip: 967  ADC 17
+Strip: 968  ADC 14
 Layer: 9 number Strips: 2
-Strip: 948  ADC 1
-Strip: 949  ADC 30
+Strip: 948  ADC 17
+Strip: 949  ADC 14
 Event: 94
 GenTrackSet
 Number Gen Tracks: 1
@@ -7842,35 +7842,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1349  ADC 15
-Strip: 1350  ADC 16
+Strip: 1349  ADC 31
+Strip: 1350  ADC 0
 Layer: 1 number Strips: 2
-Strip: 1679  ADC 17
-Strip: 1680  ADC 14
+Strip: 1678  ADC 1
+Strip: 1679  ADC 30
 Layer: 2 number Strips: 2
-Strip: 1268  ADC 22
-Strip: 1269  ADC 9
+Strip: 1267  ADC 6
+Strip: 1268  ADC 25
 Layer: 3 number Strips: 2
-Strip: 1346  ADC 13
-Strip: 1347  ADC 18
+Strip: 1346  ADC 29
+Strip: 1347  ADC 2
 Layer: 4 number Strips: 2
-Strip: 1422  ADC 1
-Strip: 1423  ADC 30
+Strip: 1422  ADC 17
+Strip: 1423  ADC 14
 Layer: 5 number Strips: 2
-Strip: 1191  ADC 20
-Strip: 1192  ADC 11
+Strip: 1190  ADC 4
+Strip: 1191  ADC 27
 Layer: 6 number Strips: 2
-Strip: 1488  ADC 16
-Strip: 1489  ADC 15
+Strip: 1487  ADC 0
+Strip: 1488  ADC 31
 Layer: 7 number Strips: 2
-Strip: 1214  ADC 27
-Strip: 1215  ADC 4
+Strip: 1213  ADC 11
+Strip: 1214  ADC 20
 Layer: 8 number Strips: 2
-Strip: 1351  ADC 23
-Strip: 1352  ADC 8
+Strip: 1350  ADC 7
+Strip: 1351  ADC 24
 Layer: 9 number Strips: 2
-Strip: 1428  ADC 19
-Strip: 1429  ADC 12
+Strip: 1427  ADC 3
+Strip: 1428  ADC 28
 Event: 95
 GenTrackSet
 Number Gen Tracks: 1
@@ -7923,35 +7923,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1321  ADC 19
-Strip: 1322  ADC 12
+Strip: 1320  ADC 3
+Strip: 1321  ADC 28
 Layer: 1 number Strips: 2
-Strip: 1492  ADC 23
-Strip: 1493  ADC 8
+Strip: 1491  ADC 7
+Strip: 1492  ADC 24
 Layer: 2 number Strips: 2
-Strip: 1186  ADC 23
-Strip: 1187  ADC 8
+Strip: 1185  ADC 7
+Strip: 1186  ADC 24
 Layer: 3 number Strips: 2
-Strip: 1233  ADC 23
-Strip: 1234  ADC 8
+Strip: 1232  ADC 7
+Strip: 1233  ADC 24
 Layer: 4 number Strips: 2
-Strip: 1283  ADC 26
-Strip: 1284  ADC 5
+Strip: 1282  ADC 10
+Strip: 1283  ADC 21
 Layer: 5 number Strips: 2
-Strip: 1211  ADC 7
-Strip: 1212  ADC 24
+Strip: 1211  ADC 23
+Strip: 1212  ADC 8
 Layer: 6 number Strips: 2
-Strip: 1315  ADC 15
-Strip: 1316  ADC 16
+Strip: 1315  ADC 31
+Strip: 1316  ADC 0
 Layer: 7 number Strips: 2
-Strip: 1122  ADC 6
-Strip: 1123  ADC 25
+Strip: 1122  ADC 22
+Strip: 1123  ADC 9
 Layer: 8 number Strips: 2
-Strip: 1235  ADC 18
-Strip: 1236  ADC 13
+Strip: 1234  ADC 2
+Strip: 1235  ADC 29
 Layer: 9 number Strips: 2
-Strip: 1285  ADC 9
-Strip: 1286  ADC 22
+Strip: 1285  ADC 25
+Strip: 1286  ADC 6
 Event: 96
 GenTrackSet
 Number Gen Tracks: 1
@@ -8004,35 +8004,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1069  ADC 5
-Strip: 1070  ADC 26
+Strip: 1069  ADC 21
+Strip: 1070  ADC 10
 Layer: 1 number Strips: 2
-Strip: 1215  ADC 21
-Strip: 1216  ADC 10
+Strip: 1214  ADC 5
+Strip: 1215  ADC 26
 Layer: 2 number Strips: 2
-Strip: 1105  ADC 7
-Strip: 1106  ADC 24
+Strip: 1105  ADC 23
+Strip: 1106  ADC 8
 Layer: 3 number Strips: 2
-Strip: 1137  ADC 19
-Strip: 1138  ADC 12
+Strip: 1136  ADC 3
+Strip: 1137  ADC 28
 Layer: 4 number Strips: 2
-Strip: 1166  ADC 11
-Strip: 1167  ADC 20
+Strip: 1166  ADC 27
+Strip: 1167  ADC 4
 Layer: 5 number Strips: 2
-Strip: 1385  ADC 31
-Strip: 1386  ADC 0
+Strip: 1384  ADC 15
+Strip: 1385  ADC 16
 Layer: 6 number Strips: 2
-Strip: 1591  ADC 30
-Strip: 1592  ADC 1
+Strip: 1590  ADC 14
+Strip: 1591  ADC 17
 Layer: 7 number Strips: 2
-Strip: 1217  ADC 14
-Strip: 1218  ADC 17
+Strip: 1217  ADC 30
+Strip: 1218  ADC 1
 Layer: 8 number Strips: 2
-Strip: 1141  ADC 11
-Strip: 1142  ADC 20
+Strip: 1141  ADC 27
+Strip: 1142  ADC 4
 Layer: 9 number Strips: 2
-Strip: 1172  ADC 29
-Strip: 1173  ADC 2
+Strip: 1171  ADC 13
+Strip: 1172  ADC 18
 Event: 97
 GenTrackSet
 Number Gen Tracks: 1
@@ -8085,35 +8085,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1141  ADC 12
-Strip: 1142  ADC 19
+Strip: 1141  ADC 28
+Strip: 1142  ADC 3
 Layer: 1 number Strips: 2
-Strip: 1169  ADC 15
-Strip: 1170  ADC 16
+Strip: 1169  ADC 31
+Strip: 1170  ADC 0
 Layer: 2 number Strips: 2
-Strip: 1069  ADC 23
-Strip: 1070  ADC 8
+Strip: 1068  ADC 7
+Strip: 1069  ADC 24
 Layer: 3 number Strips: 2
-Strip: 1080  ADC 24
-Strip: 1081  ADC 7
+Strip: 1079  ADC 8
+Strip: 1080  ADC 23
 Layer: 4 number Strips: 2
-Strip: 1093  ADC 18
-Strip: 1094  ADC 13
+Strip: 1092  ADC 2
+Strip: 1093  ADC 29
 Layer: 5 number Strips: 2
-Strip: 801  ADC 14
-Strip: 802  ADC 17
+Strip: 801  ADC 30
+Strip: 802  ADC 1
 Layer: 6 number Strips: 2
-Strip: 435  ADC 14
-Strip: 436  ADC 17
+Strip: 435  ADC 30
+Strip: 436  ADC 1
 Layer: 7 number Strips: 2
-Strip: 785  ADC 29
-Strip: 786  ADC 2
+Strip: 784  ADC 13
+Strip: 785  ADC 18
 Layer: 8 number Strips: 2
-Strip: 1074  ADC 19
-Strip: 1075  ADC 12
+Strip: 1073  ADC 3
+Strip: 1074  ADC 28
 Layer: 9 number Strips: 2
-Strip: 1086  ADC 26
-Strip: 1087  ADC 5
+Strip: 1085  ADC 10
+Strip: 1086  ADC 21
 Event: 98
 GenTrackSet
 Number Gen Tracks: 1
@@ -8166,35 +8166,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1263  ADC 8
-Strip: 1264  ADC 23
+Strip: 1263  ADC 24
+Strip: 1264  ADC 7
 Layer: 1 number Strips: 2
-Strip: 1465  ADC 16
-Strip: 1466  ADC 15
+Strip: 1464  ADC 0
+Strip: 1465  ADC 31
 Layer: 2 number Strips: 2
-Strip: 1181  ADC 3
-Strip: 1182  ADC 28
+Strip: 1181  ADC 19
+Strip: 1182  ADC 12
 Layer: 3 number Strips: 2
-Strip: 1226  ADC 3
-Strip: 1227  ADC 28
+Strip: 1226  ADC 19
+Strip: 1227  ADC 12
 Layer: 4 number Strips: 2
-Strip: 1269  ADC 13
-Strip: 1270  ADC 18
+Strip: 1269  ADC 29
+Strip: 1270  ADC 2
 Layer: 5 number Strips: 2
-Strip: 1315  ADC 16
-Strip: 1316  ADC 15
+Strip: 1314  ADC 0
+Strip: 1315  ADC 31
 Layer: 6 number Strips: 2
-Strip: 1603  ADC 10
-Strip: 1604  ADC 21
+Strip: 1603  ADC 26
+Strip: 1604  ADC 5
 Layer: 7 number Strips: 2
-Strip: 1240  ADC 9
-Strip: 1241  ADC 22
+Strip: 1240  ADC 25
+Strip: 1241  ADC 6
 Layer: 8 number Strips: 2
-Strip: 1232  ADC 27
-Strip: 1233  ADC 4
+Strip: 1231  ADC 11
+Strip: 1232  ADC 20
 Layer: 9 number Strips: 2
-Strip: 1275  ADC 9
-Strip: 1276  ADC 22
+Strip: 1275  ADC 25
+Strip: 1276  ADC 6
 Event: 99
 GenTrackSet
 Number Gen Tracks: 1
@@ -8247,35 +8247,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 568  ADC 0
-Strip: 569  ADC 31
+Strip: 568  ADC 16
+Strip: 569  ADC 15
 Layer: 1 number Strips: 2
-Strip: 160  ADC 21
-Strip: 161  ADC 10
+Strip: 159  ADC 5
+Strip: 160  ADC 26
 Layer: 2 number Strips: 2
-Strip: 707  ADC 5
-Strip: 708  ADC 26
+Strip: 707  ADC 21
+Strip: 708  ADC 10
 Layer: 3 number Strips: 2
-Strip: 609  ADC 9
-Strip: 610  ADC 22
+Strip: 609  ADC 25
+Strip: 610  ADC 6
 Layer: 4 number Strips: 2
-Strip: 513  ADC 2
-Strip: 514  ADC 29
+Strip: 513  ADC 18
+Strip: 514  ADC 13
 Layer: 5 number Strips: 2
-Strip: 565  ADC 3
-Strip: 566  ADC 28
+Strip: 565  ADC 19
+Strip: 566  ADC 12
 Layer: 6 number Strips: 2
-Strip: 263  ADC 6
-Strip: 264  ADC 25
+Strip: 263  ADC 22
+Strip: 264  ADC 9
 Layer: 7 number Strips: 2
-Strip: 758  ADC 21
-Strip: 759  ADC 10
+Strip: 757  ADC 5
+Strip: 758  ADC 26
 Layer: 8 number Strips: 2
-Strip: 603  ADC 11
-Strip: 604  ADC 20
+Strip: 603  ADC 27
+Strip: 604  ADC 4
 Layer: 9 number Strips: 2
-Strip: 505  ADC 3
-Strip: 506  ADC 28
+Strip: 505  ADC 19
+Strip: 506  ADC 12
 Event: 100
 GenTrackSet
 Number Gen Tracks: 1
@@ -8328,35 +8328,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1490  ADC 31
-Strip: 1491  ADC 0
+Strip: 1489  ADC 15
+Strip: 1490  ADC 16
 Layer: 1 number Strips: 2
-Strip: 1798  ADC 24
-Strip: 1799  ADC 7
+Strip: 1797  ADC 8
+Strip: 1798  ADC 23
 Layer: 2 number Strips: 2
-Strip: 1292  ADC 1
-Strip: 1293  ADC 30
+Strip: 1292  ADC 17
+Strip: 1293  ADC 14
 Layer: 3 number Strips: 2
-Strip: 1366  ADC 16
-Strip: 1367  ADC 15
+Strip: 1365  ADC 0
+Strip: 1366  ADC 31
 Layer: 4 number Strips: 2
-Strip: 1439  ADC 31
-Strip: 1440  ADC 0
+Strip: 1438  ADC 15
+Strip: 1439  ADC 16
 Layer: 5 number Strips: 2
-Strip: 983  ADC 23
-Strip: 984  ADC 8
+Strip: 982  ADC 7
+Strip: 983  ADC 24
 Layer: 6 number Strips: 2
-Strip: 1111  ADC 26
-Strip: 1112  ADC 5
+Strip: 1110  ADC 10
+Strip: 1111  ADC 21
 Layer: 7 number Strips: 2
-Strip: 1077  ADC 23
-Strip: 1078  ADC 8
+Strip: 1076  ADC 7
+Strip: 1077  ADC 24
 Layer: 8 number Strips: 2
-Strip: 1368  ADC 25
-Strip: 1369  ADC 6
+Strip: 1367  ADC 9
+Strip: 1368  ADC 22
 Layer: 9 number Strips: 2
-Strip: 1440  ADC 10
-Strip: 1441  ADC 21
+Strip: 1440  ADC 26
+Strip: 1441  ADC 5
 Event: 101
 GenTrackSet
 Number Gen Tracks: 1
@@ -8409,33 +8409,33 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 415  ADC 0
-Strip: 416  ADC 31
+Strip: 415  ADC 16
+Strip: 416  ADC 15
 Layer: 1 number Strips: 0
 Layer: 2 number Strips: 2
-Strip: 637  ADC 24
-Strip: 638  ADC 7
+Strip: 636  ADC 8
+Strip: 637  ADC 23
 Layer: 3 number Strips: 2
-Strip: 517  ADC 19
-Strip: 518  ADC 12
+Strip: 516  ADC 3
+Strip: 517  ADC 28
 Layer: 4 number Strips: 2
-Strip: 395  ADC 6
-Strip: 396  ADC 25
+Strip: 395  ADC 22
+Strip: 396  ADC 9
 Layer: 5 number Strips: 2
-Strip: 1123  ADC 3
-Strip: 1124  ADC 28
+Strip: 1123  ADC 19
+Strip: 1124  ADC 12
 Layer: 6 number Strips: 2
-Strip: 1232  ADC 22
-Strip: 1233  ADC 9
+Strip: 1231  ADC 6
+Strip: 1232  ADC 25
 Layer: 7 number Strips: 2
-Strip: 1103  ADC 27
-Strip: 1104  ADC 4
+Strip: 1102  ADC 11
+Strip: 1103  ADC 20
 Layer: 8 number Strips: 2
-Strip: 519  ADC 25
-Strip: 520  ADC 6
+Strip: 518  ADC 9
+Strip: 519  ADC 22
 Layer: 9 number Strips: 2
-Strip: 398  ADC 27
-Strip: 399  ADC 4
+Strip: 397  ADC 11
+Strip: 398  ADC 20
 Event: 102
 GenTrackSet
 Number Gen Tracks: 1
@@ -8488,35 +8488,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1131  ADC 12
-Strip: 1132  ADC 19
+Strip: 1131  ADC 28
+Strip: 1132  ADC 3
 Layer: 1 number Strips: 2
-Strip: 1283  ADC 1
-Strip: 1284  ADC 30
+Strip: 1283  ADC 17
+Strip: 1284  ADC 14
 Layer: 2 number Strips: 2
-Strip: 1128  ADC 4
-Strip: 1129  ADC 27
+Strip: 1128  ADC 20
+Strip: 1129  ADC 11
 Layer: 3 number Strips: 2
-Strip: 1170  ADC 14
-Strip: 1171  ADC 17
+Strip: 1170  ADC 30
+Strip: 1171  ADC 1
 Layer: 4 number Strips: 2
-Strip: 1213  ADC 3
-Strip: 1214  ADC 28
+Strip: 1213  ADC 19
+Strip: 1214  ADC 12
 Layer: 5 number Strips: 2
-Strip: 1302  ADC 24
-Strip: 1303  ADC 7
+Strip: 1301  ADC 8
+Strip: 1302  ADC 23
 Layer: 6 number Strips: 2
-Strip: 1420  ADC 11
-Strip: 1421  ADC 20
+Strip: 1420  ADC 27
+Strip: 1421  ADC 4
 Layer: 7 number Strips: 2
-Strip: 1152  ADC 3
-Strip: 1153  ADC 28
+Strip: 1152  ADC 19
+Strip: 1153  ADC 12
 Layer: 8 number Strips: 2
-Strip: 1173  ADC 22
-Strip: 1174  ADC 9
+Strip: 1172  ADC 6
+Strip: 1173  ADC 25
 Layer: 9 number Strips: 2
-Strip: 1217  ADC 11
-Strip: 1218  ADC 20
+Strip: 1217  ADC 27
+Strip: 1218  ADC 4
 Event: 103
 GenTrackSet
 Number Gen Tracks: 1
@@ -8569,35 +8569,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 510  ADC 19
-Strip: 511  ADC 12
+Strip: 509  ADC 3
+Strip: 510  ADC 28
 Layer: 1 number Strips: 2
-Strip: 186  ADC 28
-Strip: 187  ADC 3
+Strip: 185  ADC 12
+Strip: 186  ADC 19
 Layer: 2 number Strips: 2
-Strip: 731  ADC 10
-Strip: 732  ADC 21
+Strip: 731  ADC 26
+Strip: 732  ADC 5
 Layer: 3 number Strips: 2
-Strip: 647  ADC 29
-Strip: 648  ADC 2
+Strip: 646  ADC 13
+Strip: 647  ADC 18
 Layer: 4 number Strips: 2
-Strip: 560  ADC 16
-Strip: 561  ADC 15
+Strip: 559  ADC 0
+Strip: 560  ADC 31
 Layer: 5 number Strips: 2
-Strip: 759  ADC 6
-Strip: 760  ADC 25
+Strip: 759  ADC 22
+Strip: 760  ADC 9
 Layer: 6 number Strips: 2
-Strip: 635  ADC 16
-Strip: 636  ADC 15
+Strip: 634  ADC 0
+Strip: 635  ADC 31
 Layer: 7 number Strips: 2
-Strip: 895  ADC 12
-Strip: 896  ADC 19
+Strip: 895  ADC 28
+Strip: 896  ADC 3
 Layer: 8 number Strips: 2
-Strip: 644  ADC 18
-Strip: 645  ADC 13
+Strip: 643  ADC 2
+Strip: 644  ADC 29
 Layer: 9 number Strips: 2
-Strip: 557  ADC 7
-Strip: 558  ADC 24
+Strip: 557  ADC 23
+Strip: 558  ADC 8
 Event: 104
 GenTrackSet
 Number Gen Tracks: 1
@@ -8650,35 +8650,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1497  ADC 26
-Strip: 1498  ADC 5
+Strip: 1496  ADC 10
+Strip: 1497  ADC 21
 Layer: 1 number Strips: 2
-Strip: 1921  ADC 2
-Strip: 1922  ADC 29
+Strip: 1921  ADC 18
+Strip: 1922  ADC 13
 Layer: 2 number Strips: 2
-Strip: 1357  ADC 20
-Strip: 1358  ADC 11
+Strip: 1356  ADC 4
+Strip: 1357  ADC 27
 Layer: 3 number Strips: 2
-Strip: 1469  ADC 7
-Strip: 1470  ADC 24
+Strip: 1469  ADC 23
+Strip: 1470  ADC 8
 Layer: 4 number Strips: 2
-Strip: 1584  ADC 4
-Strip: 1585  ADC 27
+Strip: 1584  ADC 20
+Strip: 1585  ADC 11
 Layer: 5 number Strips: 2
-Strip: 1153  ADC 13
-Strip: 1154  ADC 18
+Strip: 1153  ADC 29
+Strip: 1154  ADC 2
 Layer: 6 number Strips: 2
-Strip: 1244  ADC 30
-Strip: 1245  ADC 1
+Strip: 1243  ADC 14
+Strip: 1244  ADC 17
 Layer: 7 number Strips: 2
-Strip: 1101  ADC 22
-Strip: 1102  ADC 9
+Strip: 1100  ADC 6
+Strip: 1101  ADC 25
 Layer: 8 number Strips: 2
-Strip: 1471  ADC 15
-Strip: 1472  ADC 16
+Strip: 1471  ADC 31
+Strip: 1472  ADC 0
 Layer: 9 number Strips: 2
-Strip: 1587  ADC 31
-Strip: 1588  ADC 0
+Strip: 1586  ADC 15
+Strip: 1587  ADC 16
 Event: 105
 GenTrackSet
 Number Gen Tracks: 1
@@ -8731,35 +8731,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 417  ADC 10
-Strip: 418  ADC 21
+Strip: 417  ADC 26
+Strip: 418  ADC 5
 Layer: 1 number Strips: 2
-Strip: 19  ADC 10
-Strip: 20  ADC 21
+Strip: 19  ADC 26
+Strip: 20  ADC 5
 Layer: 2 number Strips: 2
-Strip: 676  ADC 21
-Strip: 677  ADC 10
+Strip: 675  ADC 5
+Strip: 676  ADC 26
 Layer: 3 number Strips: 2
-Strip: 582  ADC 18
-Strip: 583  ADC 13
+Strip: 581  ADC 2
+Strip: 582  ADC 29
 Layer: 4 number Strips: 2
-Strip: 491  ADC 26
-Strip: 492  ADC 5
+Strip: 490  ADC 10
+Strip: 491  ADC 21
 Layer: 5 number Strips: 2
-Strip: 1006  ADC 15
-Strip: 1007  ADC 16
+Strip: 1006  ADC 31
+Strip: 1007  ADC 0
 Layer: 6 number Strips: 2
-Strip: 936  ADC 23
-Strip: 937  ADC 8
+Strip: 935  ADC 7
+Strip: 936  ADC 24
 Layer: 7 number Strips: 2
-Strip: 984  ADC 24
-Strip: 985  ADC 7
+Strip: 983  ADC 8
+Strip: 984  ADC 23
 Layer: 8 number Strips: 2
-Strip: 581  ADC 22
-Strip: 582  ADC 9
+Strip: 580  ADC 6
+Strip: 581  ADC 25
 Layer: 9 number Strips: 2
-Strip: 489  ADC 6
-Strip: 490  ADC 25
+Strip: 489  ADC 22
+Strip: 490  ADC 9
 Event: 106
 GenTrackSet
 Number Gen Tracks: 1
@@ -8812,35 +8812,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 488  ADC 27
-Strip: 489  ADC 4
+Strip: 487  ADC 11
+Strip: 488  ADC 20
 Layer: 1 number Strips: 2
-Strip: 54  ADC 6
-Strip: 55  ADC 25
+Strip: 54  ADC 22
+Strip: 55  ADC 9
 Layer: 2 number Strips: 2
-Strip: 670  ADC 6
-Strip: 671  ADC 25
+Strip: 670  ADC 22
+Strip: 671  ADC 9
 Layer: 3 number Strips: 2
-Strip: 558  ADC 22
-Strip: 559  ADC 9
+Strip: 557  ADC 6
+Strip: 558  ADC 25
 Layer: 4 number Strips: 2
-Strip: 443  ADC 16
-Strip: 444  ADC 15
+Strip: 442  ADC 0
+Strip: 443  ADC 31
 Layer: 5 number Strips: 2
-Strip: 849  ADC 13
-Strip: 850  ADC 18
+Strip: 849  ADC 29
+Strip: 850  ADC 2
 Layer: 6 number Strips: 2
-Strip: 531  ADC 27
-Strip: 532  ADC 4
+Strip: 530  ADC 11
+Strip: 531  ADC 20
 Layer: 7 number Strips: 2
-Strip: 821  ADC 27
-Strip: 822  ADC 4
+Strip: 820  ADC 11
+Strip: 821  ADC 20
 Layer: 8 number Strips: 2
-Strip: 553  ADC 21
-Strip: 554  ADC 10
+Strip: 552  ADC 5
+Strip: 553  ADC 26
 Layer: 9 number Strips: 2
-Strip: 437  ADC 29
-Strip: 438  ADC 2
+Strip: 436  ADC 13
+Strip: 437  ADC 18
 Event: 107
 GenTrackSet
 Number Gen Tracks: 1
@@ -8893,35 +8893,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 725  ADC 14
-Strip: 726  ADC 17
+Strip: 725  ADC 30
+Strip: 726  ADC 1
 Layer: 1 number Strips: 2
-Strip: 494  ADC 2
-Strip: 495  ADC 29
+Strip: 494  ADC 18
+Strip: 495  ADC 13
 Layer: 2 number Strips: 2
-Strip: 835  ADC 18
-Strip: 836  ADC 13
+Strip: 834  ADC 2
+Strip: 835  ADC 29
 Layer: 3 number Strips: 2
-Strip: 780  ADC 0
-Strip: 781  ADC 31
+Strip: 780  ADC 16
+Strip: 781  ADC 15
 Layer: 4 number Strips: 2
-Strip: 727  ADC 10
-Strip: 728  ADC 21
+Strip: 727  ADC 26
+Strip: 728  ADC 5
 Layer: 5 number Strips: 2
-Strip: 929  ADC 0
-Strip: 930  ADC 31
+Strip: 929  ADC 16
+Strip: 930  ADC 15
 Layer: 6 number Strips: 2
-Strip: 880  ADC 19
-Strip: 881  ADC 12
+Strip: 879  ADC 3
+Strip: 880  ADC 28
 Layer: 7 number Strips: 2
-Strip: 975  ADC 13
-Strip: 976  ADC 18
+Strip: 975  ADC 29
+Strip: 976  ADC 2
 Layer: 8 number Strips: 2
-Strip: 779  ADC 4
-Strip: 780  ADC 27
+Strip: 779  ADC 20
+Strip: 780  ADC 11
 Layer: 9 number Strips: 2
-Strip: 726  ADC 19
-Strip: 727  ADC 12
+Strip: 725  ADC 3
+Strip: 726  ADC 28
 Event: 108
 GenTrackSet
 Number Gen Tracks: 1
@@ -8974,33 +8974,33 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 401  ADC 14
-Strip: 402  ADC 17
+Strip: 401  ADC 30
+Strip: 402  ADC 1
 Layer: 1 number Strips: 0
 Layer: 2 number Strips: 2
-Strip: 614  ADC 7
-Strip: 615  ADC 24
+Strip: 614  ADC 23
+Strip: 615  ADC 8
 Layer: 3 number Strips: 2
-Strip: 485  ADC 10
-Strip: 486  ADC 21
+Strip: 485  ADC 26
+Strip: 486  ADC 5
 Layer: 4 number Strips: 2
-Strip: 354  ADC 10
-Strip: 355  ADC 21
+Strip: 354  ADC 26
+Strip: 355  ADC 5
 Layer: 5 number Strips: 2
-Strip: 1054  ADC 2
-Strip: 1055  ADC 29
+Strip: 1054  ADC 18
+Strip: 1055  ADC 13
 Layer: 6 number Strips: 2
-Strip: 1038  ADC 15
-Strip: 1039  ADC 16
+Strip: 1038  ADC 31
+Strip: 1039  ADC 0
 Layer: 7 number Strips: 2
-Strip: 1023  ADC 18
-Strip: 1024  ADC 13
+Strip: 1022  ADC 2
+Strip: 1023  ADC 29
 Layer: 8 number Strips: 2
-Strip: 485  ADC 23
-Strip: 486  ADC 8
+Strip: 484  ADC 7
+Strip: 485  ADC 24
 Layer: 9 number Strips: 2
-Strip: 354  ADC 16
-Strip: 355  ADC 15
+Strip: 353  ADC 0
+Strip: 354  ADC 31
 Event: 109
 GenTrackSet
 Number Gen Tracks: 1
@@ -9053,35 +9053,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 628  ADC 14
-Strip: 629  ADC 17
+Strip: 628  ADC 30
+Strip: 629  ADC 1
 Layer: 1 number Strips: 2
-Strip: 341  ADC 3
-Strip: 342  ADC 28
+Strip: 341  ADC 19
+Strip: 342  ADC 12
 Layer: 2 number Strips: 2
-Strip: 780  ADC 27
-Strip: 781  ADC 4
+Strip: 779  ADC 11
+Strip: 780  ADC 20
 Layer: 3 number Strips: 2
-Strip: 705  ADC 25
-Strip: 706  ADC 6
+Strip: 704  ADC 9
+Strip: 705  ADC 22
 Layer: 4 number Strips: 2
-Strip: 628  ADC 6
-Strip: 629  ADC 25
+Strip: 628  ADC 22
+Strip: 629  ADC 9
 Layer: 5 number Strips: 2
-Strip: 816  ADC 4
-Strip: 817  ADC 27
+Strip: 816  ADC 20
+Strip: 817  ADC 11
 Layer: 6 number Strips: 2
-Strip: 705  ADC 10
-Strip: 706  ADC 21
+Strip: 705  ADC 26
+Strip: 706  ADC 5
 Layer: 7 number Strips: 2
-Strip: 916  ADC 13
-Strip: 917  ADC 18
+Strip: 916  ADC 29
+Strip: 917  ADC 2
 Layer: 8 number Strips: 2
-Strip: 702  ADC 0
-Strip: 703  ADC 31
+Strip: 702  ADC 16
+Strip: 703  ADC 15
 Layer: 9 number Strips: 2
-Strip: 626  ADC 29
-Strip: 627  ADC 2
+Strip: 625  ADC 13
+Strip: 626  ADC 18
 Event: 110
 GenTrackSet
 Number Gen Tracks: 1
@@ -9134,35 +9134,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1279  ADC 14
-Strip: 1280  ADC 17
+Strip: 1279  ADC 30
+Strip: 1280  ADC 1
 Layer: 1 number Strips: 2
-Strip: 1471  ADC 9
-Strip: 1472  ADC 22
+Strip: 1471  ADC 25
+Strip: 1472  ADC 6
 Layer: 2 number Strips: 2
-Strip: 1186  ADC 13
-Strip: 1187  ADC 18
+Strip: 1186  ADC 29
+Strip: 1187  ADC 2
 Layer: 3 number Strips: 2
-Strip: 1239  ADC 16
-Strip: 1240  ADC 15
+Strip: 1238  ADC 0
+Strip: 1239  ADC 31
 Layer: 4 number Strips: 2
-Strip: 1295  ADC 31
-Strip: 1296  ADC 0
+Strip: 1294  ADC 15
+Strip: 1295  ADC 16
 Layer: 5 number Strips: 2
-Strip: 1245  ADC 10
-Strip: 1246  ADC 21
+Strip: 1245  ADC 26
+Strip: 1246  ADC 5
 Layer: 6 number Strips: 2
-Strip: 1572  ADC 10
-Strip: 1573  ADC 21
+Strip: 1572  ADC 26
+Strip: 1573  ADC 5
 Layer: 7 number Strips: 2
-Strip: 1242  ADC 10
-Strip: 1243  ADC 21
+Strip: 1242  ADC 26
+Strip: 1243  ADC 5
 Layer: 8 number Strips: 2
-Strip: 1244  ADC 3
-Strip: 1245  ADC 28
+Strip: 1244  ADC 19
+Strip: 1245  ADC 12
 Layer: 9 number Strips: 2
-Strip: 1301  ADC 16
-Strip: 1302  ADC 15
+Strip: 1300  ADC 0
+Strip: 1301  ADC 31
 Event: 111
 GenTrackSet
 Number Gen Tracks: 1
@@ -9215,35 +9215,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1272  ADC 20
-Strip: 1273  ADC 11
+Strip: 1271  ADC 4
+Strip: 1272  ADC 27
 Layer: 1 number Strips: 2
-Strip: 1353  ADC 7
-Strip: 1354  ADC 24
+Strip: 1353  ADC 23
+Strip: 1354  ADC 8
 Layer: 2 number Strips: 2
-Strip: 1128  ADC 12
-Strip: 1129  ADC 19
+Strip: 1128  ADC 28
+Strip: 1129  ADC 3
 Layer: 3 number Strips: 2
-Strip: 1152  ADC 9
-Strip: 1153  ADC 22
+Strip: 1152  ADC 25
+Strip: 1153  ADC 6
 Layer: 4 number Strips: 2
-Strip: 1178  ADC 3
-Strip: 1179  ADC 28
+Strip: 1178  ADC 19
+Strip: 1179  ADC 12
 Layer: 5 number Strips: 2
-Strip: 1476  ADC 13
-Strip: 1477  ADC 18
+Strip: 1476  ADC 29
+Strip: 1477  ADC 2
 Layer: 6 number Strips: 2
-Strip: 1825  ADC 1
-Strip: 1826  ADC 30
+Strip: 1825  ADC 17
+Strip: 1826  ADC 14
 Layer: 7 number Strips: 2
-Strip: 1311  ADC 7
-Strip: 1312  ADC 24
+Strip: 1311  ADC 23
+Strip: 1312  ADC 8
 Layer: 8 number Strips: 2
-Strip: 1159  ADC 23
-Strip: 1160  ADC 8
+Strip: 1158  ADC 7
+Strip: 1159  ADC 24
 Layer: 9 number Strips: 2
-Strip: 1186  ADC 4
-Strip: 1187  ADC 27
+Strip: 1186  ADC 20
+Strip: 1187  ADC 11
 Event: 112
 GenTrackSet
 Number Gen Tracks: 1
@@ -9296,35 +9296,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1356  ADC 16
-Strip: 1357  ADC 15
+Strip: 1355  ADC 0
+Strip: 1356  ADC 31
 Layer: 1 number Strips: 2
-Strip: 1689  ADC 4
-Strip: 1690  ADC 27
+Strip: 1689  ADC 20
+Strip: 1690  ADC 11
 Layer: 2 number Strips: 2
-Strip: 1275  ADC 13
-Strip: 1276  ADC 18
+Strip: 1275  ADC 29
+Strip: 1276  ADC 2
 Layer: 3 number Strips: 2
-Strip: 1362  ADC 9
-Strip: 1363  ADC 22
+Strip: 1362  ADC 25
+Strip: 1363  ADC 6
 Layer: 4 number Strips: 2
-Strip: 1452  ADC 29
-Strip: 1453  ADC 2
+Strip: 1451  ADC 13
+Strip: 1452  ADC 18
 Layer: 5 number Strips: 2
-Strip: 1574  ADC 8
-Strip: 1575  ADC 23
+Strip: 1574  ADC 24
+Strip: 1575  ADC 7
 Layer: 6 number Strips: 2
-Strip: 1934  ADC 5
-Strip: 1935  ADC 26
+Strip: 1934  ADC 21
+Strip: 1935  ADC 10
 Layer: 7 number Strips: 2
-Strip: 1341  ADC 14
-Strip: 1342  ADC 17
+Strip: 1341  ADC 30
+Strip: 1342  ADC 1
 Layer: 8 number Strips: 2
-Strip: 1370  ADC 30
-Strip: 1371  ADC 1
+Strip: 1369  ADC 14
+Strip: 1370  ADC 17
 Layer: 9 number Strips: 2
-Strip: 1460  ADC 22
-Strip: 1461  ADC 9
+Strip: 1459  ADC 6
+Strip: 1460  ADC 25
 Event: 113
 GenTrackSet
 Number Gen Tracks: 1
@@ -9377,35 +9377,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 791  ADC 23
-Strip: 792  ADC 8
+Strip: 790  ADC 7
+Strip: 791  ADC 24
 Layer: 1 number Strips: 2
-Strip: 384  ADC 20
-Strip: 385  ADC 11
+Strip: 383  ADC 4
+Strip: 384  ADC 27
 Layer: 2 number Strips: 2
-Strip: 759  ADC 11
-Strip: 760  ADC 20
+Strip: 759  ADC 27
+Strip: 760  ADC 4
 Layer: 3 number Strips: 2
-Strip: 652  ADC 5
-Strip: 653  ADC 26
+Strip: 652  ADC 21
+Strip: 653  ADC 10
 Layer: 4 number Strips: 2
-Strip: 542  ADC 17
-Strip: 543  ADC 14
+Strip: 541  ADC 1
+Strip: 542  ADC 30
 Layer: 5 number Strips: 2
-Strip: 778  ADC 13
-Strip: 779  ADC 18
+Strip: 778  ADC 29
+Strip: 779  ADC 2
 Layer: 6 number Strips: 2
-Strip: 688  ADC 29
-Strip: 689  ADC 2
+Strip: 687  ADC 13
+Strip: 688  ADC 18
 Layer: 7 number Strips: 2
-Strip: 917  ADC 14
-Strip: 918  ADC 17
+Strip: 917  ADC 30
+Strip: 918  ADC 1
 Layer: 8 number Strips: 2
-Strip: 650  ADC 15
-Strip: 651  ADC 16
+Strip: 650  ADC 31
+Strip: 651  ADC 0
 Layer: 9 number Strips: 2
-Strip: 540  ADC 31
-Strip: 541  ADC 0
+Strip: 539  ADC 15
+Strip: 540  ADC 16
 Event: 114
 GenTrackSet
 Number Gen Tracks: 1
@@ -9458,35 +9458,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1372  ADC 29
-Strip: 1373  ADC 2
+Strip: 1371  ADC 13
+Strip: 1372  ADC 18
 Layer: 1 number Strips: 2
-Strip: 1675  ADC 9
-Strip: 1676  ADC 22
+Strip: 1675  ADC 25
+Strip: 1676  ADC 6
 Layer: 2 number Strips: 2
-Strip: 1264  ADC 30
-Strip: 1265  ADC 1
+Strip: 1263  ADC 14
+Strip: 1264  ADC 17
 Layer: 3 number Strips: 2
-Strip: 1343  ADC 22
-Strip: 1344  ADC 9
+Strip: 1342  ADC 6
+Strip: 1343  ADC 25
 Layer: 4 number Strips: 2
-Strip: 1423  ADC 9
-Strip: 1424  ADC 22
+Strip: 1423  ADC 25
+Strip: 1424  ADC 6
 Layer: 5 number Strips: 2
-Strip: 1123  ADC 27
-Strip: 1124  ADC 4
+Strip: 1122  ADC 11
+Strip: 1123  ADC 20
 Layer: 6 number Strips: 2
-Strip: 1040  ADC 30
-Strip: 1041  ADC 1
+Strip: 1039  ADC 14
+Strip: 1040  ADC 17
 Layer: 7 number Strips: 2
-Strip: 1007  ADC 17
-Strip: 1008  ADC 14
+Strip: 1006  ADC 1
+Strip: 1007  ADC 30
 Layer: 8 number Strips: 2
-Strip: 1342  ADC 12
-Strip: 1343  ADC 19
+Strip: 1342  ADC 28
+Strip: 1343  ADC 3
 Layer: 9 number Strips: 2
-Strip: 1422  ADC 20
-Strip: 1423  ADC 11
+Strip: 1421  ADC 4
+Strip: 1422  ADC 27
 Event: 115
 GenTrackSet
 Number Gen Tracks: 1
@@ -9539,35 +9539,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 780  ADC 28
-Strip: 781  ADC 3
+Strip: 779  ADC 12
+Strip: 780  ADC 19
 Layer: 1 number Strips: 2
-Strip: 689  ADC 25
-Strip: 690  ADC 6
+Strip: 688  ADC 9
+Strip: 689  ADC 22
 Layer: 2 number Strips: 2
-Strip: 919  ADC 18
-Strip: 920  ADC 13
+Strip: 918  ADC 2
+Strip: 919  ADC 29
 Layer: 3 number Strips: 2
-Strip: 900  ADC 0
-Strip: 901  ADC 31
+Strip: 900  ADC 16
+Strip: 901  ADC 15
 Layer: 4 number Strips: 2
-Strip: 884  ADC 15
-Strip: 885  ADC 16
+Strip: 884  ADC 31
+Strip: 885  ADC 0
 Layer: 5 number Strips: 2
-Strip: 1463  ADC 24
-Strip: 1464  ADC 7
+Strip: 1462  ADC 8
+Strip: 1463  ADC 23
 Layer: 6 number Strips: 2
-Strip: 1720  ADC 10
-Strip: 1721  ADC 21
+Strip: 1720  ADC 26
+Strip: 1721  ADC 5
 Layer: 7 number Strips: 2
-Strip: 1262  ADC 19
-Strip: 1263  ADC 12
+Strip: 1261  ADC 3
+Strip: 1262  ADC 28
 Layer: 8 number Strips: 2
-Strip: 906  ADC 18
-Strip: 907  ADC 13
+Strip: 905  ADC 2
+Strip: 906  ADC 29
 Layer: 9 number Strips: 2
-Strip: 891  ADC 29
-Strip: 892  ADC 2
+Strip: 890  ADC 13
+Strip: 891  ADC 18
 Event: 116
 GenTrackSet
 Number Gen Tracks: 1
@@ -9620,35 +9620,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 951  ADC 14
-Strip: 952  ADC 17
+Strip: 951  ADC 30
+Strip: 952  ADC 1
 Layer: 1 number Strips: 2
-Strip: 737  ADC 9
-Strip: 738  ADC 22
+Strip: 737  ADC 25
+Strip: 738  ADC 6
 Layer: 2 number Strips: 2
-Strip: 895  ADC 1
-Strip: 896  ADC 30
+Strip: 895  ADC 17
+Strip: 896  ADC 14
 Layer: 3 number Strips: 2
-Strip: 836  ADC 17
-Strip: 837  ADC 14
+Strip: 835  ADC 1
+Strip: 836  ADC 30
 Layer: 4 number Strips: 2
-Strip: 774  ADC 22
-Strip: 775  ADC 9
+Strip: 773  ADC 6
+Strip: 774  ADC 25
 Layer: 5 number Strips: 2
-Strip: 638  ADC 0
-Strip: 639  ADC 31
+Strip: 638  ADC 16
+Strip: 639  ADC 15
 Layer: 6 number Strips: 2
-Strip: 384  ADC 15
-Strip: 385  ADC 16
+Strip: 384  ADC 31
+Strip: 385  ADC 0
 Layer: 7 number Strips: 2
-Strip: 800  ADC 10
-Strip: 801  ADC 21
+Strip: 800  ADC 26
+Strip: 801  ADC 5
 Layer: 8 number Strips: 2
-Strip: 831  ADC 18
-Strip: 832  ADC 13
+Strip: 830  ADC 2
+Strip: 831  ADC 29
 Layer: 9 number Strips: 2
-Strip: 768  ADC 27
-Strip: 769  ADC 4
+Strip: 767  ADC 11
+Strip: 768  ADC 20
 Event: 117
 GenTrackSet
 Number Gen Tracks: 1
@@ -9701,35 +9701,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1584  ADC 0
-Strip: 1585  ADC 31
+Strip: 1584  ADC 16
+Strip: 1585  ADC 15
 Layer: 1 number Strips: 2
-Strip: 1953  ADC 14
-Strip: 1954  ADC 17
+Strip: 1953  ADC 30
+Strip: 1954  ADC 1
 Layer: 2 number Strips: 2
-Strip: 1350  ADC 16
-Strip: 1351  ADC 15
+Strip: 1349  ADC 0
+Strip: 1350  ADC 31
 Layer: 3 number Strips: 2
-Strip: 1446  ADC 21
-Strip: 1447  ADC 10
+Strip: 1445  ADC 5
+Strip: 1446  ADC 26
 Layer: 4 number Strips: 2
-Strip: 1543  ADC 8
-Strip: 1544  ADC 23
+Strip: 1543  ADC 24
+Strip: 1544  ADC 7
 Layer: 5 number Strips: 2
-Strip: 1414  ADC 4
-Strip: 1415  ADC 27
+Strip: 1414  ADC 20
+Strip: 1415  ADC 11
 Layer: 6 number Strips: 2
-Strip: 1625  ADC 15
-Strip: 1626  ADC 16
+Strip: 1625  ADC 31
+Strip: 1626  ADC 0
 Layer: 7 number Strips: 2
-Strip: 1226  ADC 4
-Strip: 1227  ADC 27
+Strip: 1226  ADC 20
+Strip: 1227  ADC 11
 Layer: 8 number Strips: 2
-Strip: 1450  ADC 5
-Strip: 1451  ADC 26
+Strip: 1450  ADC 21
+Strip: 1451  ADC 10
 Layer: 9 number Strips: 2
-Strip: 1549  ADC 26
-Strip: 1550  ADC 5
+Strip: 1548  ADC 10
+Strip: 1549  ADC 21
 Event: 118
 GenTrackSet
 Number Gen Tracks: 1
@@ -9782,35 +9782,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 642  ADC 29
-Strip: 643  ADC 2
+Strip: 641  ADC 13
+Strip: 642  ADC 18
 Layer: 1 number Strips: 2
-Strip: 433  ADC 30
-Strip: 434  ADC 1
+Strip: 432  ADC 14
+Strip: 433  ADC 17
 Layer: 2 number Strips: 2
-Strip: 825  ADC 6
-Strip: 826  ADC 25
+Strip: 825  ADC 22
+Strip: 826  ADC 9
 Layer: 3 number Strips: 2
-Strip: 777  ADC 31
-Strip: 778  ADC 0
+Strip: 776  ADC 15
+Strip: 777  ADC 16
 Layer: 4 number Strips: 2
-Strip: 730  ADC 5
-Strip: 731  ADC 26
+Strip: 730  ADC 21
+Strip: 731  ADC 10
 Layer: 5 number Strips: 2
-Strip: 822  ADC 2
-Strip: 823  ADC 29
+Strip: 822  ADC 18
+Strip: 823  ADC 13
 Layer: 6 number Strips: 2
-Strip: 708  ADC 26
-Strip: 709  ADC 5
+Strip: 707  ADC 10
+Strip: 708  ADC 21
 Layer: 7 number Strips: 2
-Strip: 916  ADC 16
-Strip: 917  ADC 15
+Strip: 915  ADC 0
+Strip: 916  ADC 31
 Layer: 8 number Strips: 2
-Strip: 774  ADC 9
-Strip: 775  ADC 22
+Strip: 774  ADC 25
+Strip: 775  ADC 6
 Layer: 9 number Strips: 2
-Strip: 727  ADC 12
-Strip: 728  ADC 19
+Strip: 727  ADC 28
+Strip: 728  ADC 3
 Event: 119
 GenTrackSet
 Number Gen Tracks: 1
@@ -9863,35 +9863,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 644  ADC 23
-Strip: 645  ADC 8
+Strip: 643  ADC 7
+Strip: 644  ADC 24
 Layer: 1 number Strips: 2
-Strip: 329  ADC 5
-Strip: 330  ADC 26
+Strip: 329  ADC 21
+Strip: 330  ADC 10
 Layer: 2 number Strips: 2
-Strip: 770  ADC 27
-Strip: 771  ADC 4
+Strip: 769  ADC 11
+Strip: 770  ADC 20
 Layer: 3 number Strips: 2
-Strip: 688  ADC 24
-Strip: 689  ADC 7
+Strip: 687  ADC 8
+Strip: 688  ADC 23
 Layer: 4 number Strips: 2
-Strip: 604  ADC 12
-Strip: 605  ADC 19
+Strip: 604  ADC 28
+Strip: 605  ADC 3
 Layer: 5 number Strips: 2
-Strip: 1066  ADC 4
-Strip: 1067  ADC 27
+Strip: 1066  ADC 20
+Strip: 1067  ADC 11
 Layer: 6 number Strips: 2
-Strip: 918  ADC 13
-Strip: 919  ADC 18
+Strip: 918  ADC 29
+Strip: 919  ADC 2
 Layer: 7 number Strips: 2
-Strip: 960  ADC 15
-Strip: 961  ADC 16
+Strip: 960  ADC 31
+Strip: 961  ADC 0
 Layer: 8 number Strips: 2
-Strip: 686  ADC 18
-Strip: 687  ADC 13
+Strip: 685  ADC 2
+Strip: 686  ADC 29
 Layer: 9 number Strips: 2
-Strip: 602  ADC 22
-Strip: 603  ADC 9
+Strip: 601  ADC 6
+Strip: 602  ADC 25
 Event: 120
 GenTrackSet
 Number Gen Tracks: 1
@@ -9944,35 +9944,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1337  ADC 19
-Strip: 1338  ADC 12
+Strip: 1336  ADC 3
+Strip: 1337  ADC 28
 Layer: 1 number Strips: 2
-Strip: 1589  ADC 22
-Strip: 1590  ADC 9
+Strip: 1588  ADC 6
+Strip: 1589  ADC 25
 Layer: 2 number Strips: 2
-Strip: 1229  ADC 9
-Strip: 1230  ADC 22
+Strip: 1229  ADC 25
+Strip: 1230  ADC 6
 Layer: 3 number Strips: 2
-Strip: 1295  ADC 5
-Strip: 1296  ADC 26
+Strip: 1295  ADC 21
+Strip: 1296  ADC 10
 Layer: 4 number Strips: 2
-Strip: 1363  ADC 5
-Strip: 1364  ADC 26
+Strip: 1363  ADC 21
+Strip: 1364  ADC 10
 Layer: 5 number Strips: 2
-Strip: 587  ADC 22
-Strip: 588  ADC 9
+Strip: 586  ADC 6
+Strip: 587  ADC 25
 Layer: 6 number Strips: 2
-Strip: 198  ADC 17
-Strip: 199  ADC 14
+Strip: 197  ADC 1
+Strip: 198  ADC 30
 Layer: 7 number Strips: 2
-Strip: 720  ADC 10
-Strip: 721  ADC 21
+Strip: 720  ADC 26
+Strip: 721  ADC 5
 Layer: 8 number Strips: 2
-Strip: 1288  ADC 3
-Strip: 1289  ADC 28
+Strip: 1288  ADC 19
+Strip: 1289  ADC 12
 Layer: 9 number Strips: 2
-Strip: 1355  ADC 31
-Strip: 1356  ADC 0
+Strip: 1354  ADC 15
+Strip: 1355  ADC 16
 Event: 121
 GenTrackSet
 Number Gen Tracks: 1
@@ -10025,35 +10025,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 619  ADC 5
-Strip: 620  ADC 26
+Strip: 619  ADC 21
+Strip: 620  ADC 10
 Layer: 1 number Strips: 2
-Strip: 178  ADC 5
-Strip: 179  ADC 26
+Strip: 178  ADC 21
+Strip: 179  ADC 10
 Layer: 2 number Strips: 2
-Strip: 701  ADC 31
-Strip: 702  ADC 0
+Strip: 700  ADC 15
+Strip: 701  ADC 16
 Layer: 3 number Strips: 2
-Strip: 587  ADC 27
-Strip: 588  ADC 4
+Strip: 586  ADC 11
+Strip: 587  ADC 20
 Layer: 4 number Strips: 2
-Strip: 471  ADC 12
-Strip: 472  ADC 19
+Strip: 471  ADC 28
+Strip: 472  ADC 3
 Layer: 5 number Strips: 2
-Strip: 1111  ADC 7
-Strip: 1112  ADC 24
+Strip: 1111  ADC 23
+Strip: 1112  ADC 8
 Layer: 6 number Strips: 2
-Strip: 1092  ADC 30
-Strip: 1093  ADC 1
+Strip: 1091  ADC 14
+Strip: 1092  ADC 17
 Layer: 7 number Strips: 2
-Strip: 1036  ADC 25
-Strip: 1037  ADC 6
+Strip: 1035  ADC 9
+Strip: 1036  ADC 22
 Layer: 8 number Strips: 2
-Strip: 587  ADC 23
-Strip: 588  ADC 8
+Strip: 586  ADC 7
+Strip: 587  ADC 24
 Layer: 9 number Strips: 2
-Strip: 471  ADC 23
-Strip: 472  ADC 8
+Strip: 470  ADC 7
+Strip: 471  ADC 24
 Event: 122
 GenTrackSet
 Number Gen Tracks: 1
@@ -10106,35 +10106,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 645  ADC 20
-Strip: 646  ADC 11
+Strip: 644  ADC 4
+Strip: 645  ADC 27
 Layer: 1 number Strips: 2
-Strip: 319  ADC 22
-Strip: 320  ADC 9
+Strip: 318  ADC 6
+Strip: 319  ADC 25
 Layer: 2 number Strips: 2
-Strip: 764  ADC 3
-Strip: 765  ADC 28
+Strip: 764  ADC 19
+Strip: 765  ADC 12
 Layer: 3 number Strips: 2
-Strip: 679  ADC 4
-Strip: 680  ADC 27
+Strip: 679  ADC 20
+Strip: 680  ADC 11
 Layer: 4 number Strips: 2
-Strip: 593  ADC 12
-Strip: 594  ADC 19
+Strip: 593  ADC 28
+Strip: 594  ADC 3
 Layer: 5 number Strips: 2
-Strip: 604  ADC 19
-Strip: 605  ADC 12
+Strip: 603  ADC 3
+Strip: 604  ADC 28
 Layer: 6 number Strips: 2
-Strip: 325  ADC 5
-Strip: 326  ADC 26
+Strip: 325  ADC 21
+Strip: 326  ADC 10
 Layer: 7 number Strips: 2
-Strip: 779  ADC 3
-Strip: 780  ADC 28
+Strip: 779  ADC 19
+Strip: 780  ADC 12
 Layer: 8 number Strips: 2
-Strip: 674  ADC 10
-Strip: 675  ADC 21
+Strip: 674  ADC 26
+Strip: 675  ADC 5
 Layer: 9 number Strips: 2
-Strip: 586  ADC 0
-Strip: 587  ADC 31
+Strip: 586  ADC 16
+Strip: 587  ADC 15
 Event: 123
 GenTrackSet
 Number Gen Tracks: 1
@@ -10187,33 +10187,33 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1620  ADC 2
-Strip: 1621  ADC 29
+Strip: 1620  ADC 18
+Strip: 1621  ADC 13
 Layer: 1 number Strips: 0
 Layer: 2 number Strips: 2
-Strip: 1411  ADC 1
-Strip: 1412  ADC 30
+Strip: 1411  ADC 17
+Strip: 1412  ADC 14
 Layer: 3 number Strips: 2
-Strip: 1534  ADC 9
-Strip: 1535  ADC 22
+Strip: 1534  ADC 25
+Strip: 1535  ADC 6
 Layer: 4 number Strips: 2
-Strip: 1659  ADC 1
-Strip: 1660  ADC 30
+Strip: 1659  ADC 17
+Strip: 1660  ADC 14
 Layer: 5 number Strips: 2
-Strip: 943  ADC 1
-Strip: 944  ADC 30
+Strip: 943  ADC 17
+Strip: 944  ADC 14
 Layer: 6 number Strips: 2
-Strip: 990  ADC 0
-Strip: 991  ADC 31
+Strip: 990  ADC 16
+Strip: 991  ADC 15
 Layer: 7 number Strips: 2
-Strip: 1027  ADC 9
-Strip: 1028  ADC 22
+Strip: 1027  ADC 25
+Strip: 1028  ADC 6
 Layer: 8 number Strips: 2
-Strip: 1535  ADC 29
-Strip: 1536  ADC 2
+Strip: 1534  ADC 13
+Strip: 1535  ADC 18
 Layer: 9 number Strips: 2
-Strip: 1661  ADC 31
-Strip: 1662  ADC 0
+Strip: 1660  ADC 15
+Strip: 1661  ADC 16
 Event: 124
 GenTrackSet
 Number Gen Tracks: 1
@@ -10266,35 +10266,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1445  ADC 14
-Strip: 1446  ADC 17
+Strip: 1445  ADC 30
+Strip: 1446  ADC 1
 Layer: 1 number Strips: 2
-Strip: 1681  ADC 4
-Strip: 1682  ADC 27
+Strip: 1681  ADC 20
+Strip: 1682  ADC 11
 Layer: 2 number Strips: 2
-Strip: 1249  ADC 1
-Strip: 1250  ADC 30
+Strip: 1249  ADC 17
+Strip: 1250  ADC 14
 Layer: 3 number Strips: 2
-Strip: 1313  ADC 19
-Strip: 1314  ADC 12
+Strip: 1312  ADC 3
+Strip: 1313  ADC 28
 Layer: 4 number Strips: 2
-Strip: 1379  ADC 27
-Strip: 1380  ADC 4
+Strip: 1378  ADC 11
+Strip: 1379  ADC 20
 Layer: 5 number Strips: 2
-Strip: 890  ADC 12
-Strip: 891  ADC 19
+Strip: 890  ADC 28
+Strip: 891  ADC 3
 Layer: 6 number Strips: 2
-Strip: 732  ADC 28
-Strip: 733  ADC 3
+Strip: 731  ADC 12
+Strip: 732  ADC 19
 Layer: 7 number Strips: 2
-Strip: 911  ADC 16
-Strip: 912  ADC 15
+Strip: 910  ADC 0
+Strip: 911  ADC 31
 Layer: 8 number Strips: 2
-Strip: 1310  ADC 7
-Strip: 1311  ADC 24
+Strip: 1310  ADC 23
+Strip: 1311  ADC 8
 Layer: 9 number Strips: 2
-Strip: 1375  ADC 12
-Strip: 1376  ADC 19
+Strip: 1375  ADC 28
+Strip: 1376  ADC 3
 Event: 125
 GenTrackSet
 Number Gen Tracks: 1
@@ -10347,35 +10347,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 961  ADC 0
-Strip: 962  ADC 31
+Strip: 961  ADC 16
+Strip: 962  ADC 15
 Layer: 1 number Strips: 2
-Strip: 1047  ADC 28
-Strip: 1048  ADC 3
+Strip: 1046  ADC 12
+Strip: 1047  ADC 19
 Layer: 2 number Strips: 2
-Strip: 1049  ADC 25
-Strip: 1050  ADC 6
+Strip: 1048  ADC 9
+Strip: 1049  ADC 22
 Layer: 3 number Strips: 2
-Strip: 1067  ADC 11
-Strip: 1068  ADC 20
+Strip: 1067  ADC 27
+Strip: 1068  ADC 4
 Layer: 4 number Strips: 2
-Strip: 1083  ADC 26
-Strip: 1084  ADC 5
+Strip: 1082  ADC 10
+Strip: 1083  ADC 21
 Layer: 5 number Strips: 2
-Strip: 1166  ADC 28
-Strip: 1167  ADC 3
+Strip: 1165  ADC 12
+Strip: 1166  ADC 19
 Layer: 6 number Strips: 2
-Strip: 1128  ADC 15
-Strip: 1129  ADC 16
+Strip: 1128  ADC 31
+Strip: 1129  ADC 0
 Layer: 7 number Strips: 2
-Strip: 1040  ADC 5
-Strip: 1041  ADC 26
+Strip: 1040  ADC 21
+Strip: 1041  ADC 10
 Layer: 8 number Strips: 2
-Strip: 1067  ADC 6
-Strip: 1068  ADC 25
+Strip: 1067  ADC 22
+Strip: 1068  ADC 9
 Layer: 9 number Strips: 2
-Strip: 1084  ADC 28
-Strip: 1085  ADC 3
+Strip: 1083  ADC 12
+Strip: 1084  ADC 19
 Event: 126
 GenTrackSet
 Number Gen Tracks: 1
@@ -10428,35 +10428,35 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 1010  ADC 20
-Strip: 1011  ADC 11
+Strip: 1009  ADC 4
+Strip: 1010  ADC 27
 Layer: 1 number Strips: 2
-Strip: 1124  ADC 3
-Strip: 1125  ADC 28
+Strip: 1124  ADC 19
+Strip: 1125  ADC 12
 Layer: 2 number Strips: 2
-Strip: 1079  ADC 12
-Strip: 1080  ADC 19
+Strip: 1079  ADC 28
+Strip: 1080  ADC 3
 Layer: 3 number Strips: 2
-Strip: 1111  ADC 2
-Strip: 1112  ADC 29
+Strip: 1111  ADC 18
+Strip: 1112  ADC 13
 Layer: 4 number Strips: 2
-Strip: 1146  ADC 19
-Strip: 1147  ADC 12
+Strip: 1145  ADC 3
+Strip: 1146  ADC 28
 Layer: 5 number Strips: 2
-Strip: 802  ADC 18
-Strip: 803  ADC 13
+Strip: 801  ADC 2
+Strip: 802  ADC 29
 Layer: 6 number Strips: 2
-Strip: 483  ADC 31
-Strip: 484  ADC 0
+Strip: 482  ADC 15
+Strip: 483  ADC 16
 Layer: 7 number Strips: 2
-Strip: 808  ADC 0
-Strip: 809  ADC 31
+Strip: 808  ADC 16
+Strip: 809  ADC 15
 Layer: 8 number Strips: 2
-Strip: 1106  ADC 3
-Strip: 1107  ADC 28
+Strip: 1106  ADC 19
+Strip: 1107  ADC 12
 Layer: 9 number Strips: 2
-Strip: 1139  ADC 8
-Strip: 1140  ADC 23
+Strip: 1139  ADC 24
+Strip: 1140  ADC 7
 Event: 127
 GenTrackSet
 Number Gen Tracks: 1
@@ -10509,32 +10509,32 @@ Number strips: -1
 Track number 0
 StripSet
 Layer: 0 number Strips: 2
-Strip: 894  ADC 2
-Strip: 895  ADC 29
+Strip: 894  ADC 18
+Strip: 895  ADC 13
 Layer: 1 number Strips: 2
-Strip: 965  ADC 5
-Strip: 966  ADC 26
+Strip: 965  ADC 21
+Strip: 966  ADC 10
 Layer: 2 number Strips: 2
-Strip: 1029  ADC 27
-Strip: 1030  ADC 4
+Strip: 1028  ADC 11
+Strip: 1029  ADC 20
 Layer: 3 number Strips: 2
-Strip: 1051  ADC 22
-Strip: 1052  ADC 9
+Strip: 1050  ADC 6
+Strip: 1051  ADC 25
 Layer: 4 number Strips: 2
-Strip: 1075  ADC 10
-Strip: 1076  ADC 21
+Strip: 1075  ADC 26
+Strip: 1076  ADC 5
 Layer: 5 number Strips: 2
-Strip: 772  ADC 29
-Strip: 773  ADC 2
+Strip: 771  ADC 13
+Strip: 772  ADC 18
 Layer: 6 number Strips: 2
-Strip: 389  ADC 28
-Strip: 390  ADC 3
+Strip: 388  ADC 12
+Strip: 389  ADC 19
 Layer: 7 number Strips: 2
-Strip: 769  ADC 21
-Strip: 770  ADC 10
+Strip: 768  ADC 5
+Strip: 769  ADC 26
 Layer: 8 number Strips: 2
-Strip: 1045  ADC 19
-Strip: 1046  ADC 12
+Strip: 1044  ADC 3
+Strip: 1045  ADC 28
 Layer: 9 number Strips: 2
-Strip: 1067  ADC 16
-Strip: 1068  ADC 15
+Strip: 1066  ADC 0
+Strip: 1067  ADC 31

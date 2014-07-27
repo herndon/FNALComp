@@ -52,10 +52,7 @@ private:
 
   void findCluster(int &,int, std::vector<int> &,layerStripMap::const_iterator &,layerStripMap::const_iterator &,const StripSet &);
 
-  double calculateStripHitPosition(int, const std::vector<int> &);
-
-  TVector3 calculateHitPosition(int, double);
-
+  double calculateStripHitPositionFromCluster(int, const std::vector<int> &);
 
 };
 } // end namespace fc

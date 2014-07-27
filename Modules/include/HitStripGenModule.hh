@@ -71,8 +71,7 @@ private:
 
   void storeStripInfo(StripSet &,const TVector3 &,int);
 
-  double calculateStripHitPosition(const TVector3 &, int) const;
-  void generateCluster(double, int &, std::vector<int> &);
+  void generateClusterFromStripHitPosition(double, int &, std::vector<int> &);
   void storeCluster(StripSet &, int, int, const std::vector<int> &);
 
 

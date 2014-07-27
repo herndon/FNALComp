@@ -1,4 +1,5 @@
 #include<iostream>
+#include "Geometry/include/StripHitFunctions.hh"
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "DataObjects/include/StripSet.hh"
@@ -52,7 +53,6 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
   int initialStrip;
   std::vector<int>::size_type numberStrips;
   double stripHitPosition;
-  TVector3 hitPosition;
 
   const layerStripMap layerStripMap = stripSet.getLayerStripMap(layer);
   layerStripMap::const_iterator  layerStripMapIter = layerStripMap.begin();
@@ -62,9 +62,10 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
 
     findCluster(initialStrip,layer,stripAdcs,layerStripMapIter,layerStripMapIterEnd,stripSet);
 
-    stripHitPosition = calculateStripHitPosition(initialStrip,stripAdcs);
+    stripHitPosition = calculateStripHitPositionFromCluster(initialStrip,stripAdcs);
 
-    hitPosition = calculateHitPosition(layer,stripHitPosition);
+    double localHitPosition = fcf::calculateLoalFromStripPosition(stripHitPosition,layer,_detectorGeometry);
+    TVector3 hitPosition = fcf::calculateGlobalFromLocalPosition(localHitPosition,layer,_detectorGeometry);
   
     numberStrips = stripAdcs.size();
 
@@ -120,7 +121,7 @@ void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
 }
 
 
-double fc::HitRecoModule::calculateStripHitPosition(int initialStrip,const std::vector<int> & stripAdcVector){
+double fc::HitRecoModule::calculateStripHitPositionFromCluster(int initialStrip,const std::vector<int> & stripAdcVector){
 
   double stripHitPosition = 0.0;
   double stripPosition = 0.0;
@@ -142,16 +143,3 @@ double fc::HitRecoModule::calculateStripHitPosition(int initialStrip,const std::
 
 }
 
-TVector3  fc::HitRecoModule::calculateHitPosition(int layer, double stripHitPosition){
-
-  TVector3 hitPosition;
-
-  double localPosition = (stripHitPosition - (_detectorGeometry.getSensor(layer)._nStrips/2.0)) * _detectorGeometry.getSensor(layer)._stripPitch;
-
-
-
-  return hitPosition = _detectorGeometry.getSensor(layer)._measurementDirection*localPosition + _detectorGeometry.getSensor(layer)._center;
- 
-
-
-}

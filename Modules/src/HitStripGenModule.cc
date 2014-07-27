@@ -10,6 +10,7 @@
 #include "DataObjects/include/HitSet.hh"
 #include "DataObjects/include/StripSet.hh"
 #include "Geometry/include/DetectorGeometry.hh"
+#include "Geometry/include/StripHitFunctions.hh"
 #include "Modules/include/HitStripGenModule.hh"
 
 fc::HitStripGenModule::HitStripGenModule(int debugLevel, 
@@ -107,11 +108,12 @@ void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,int trackNumber,int & h
 
 void fc::HitStripGenModule::storeStripInfo(StripSet & stripSet,const TVector3 & hitPosition,int layer){
 
-  double stripHitPosition = calculateStripHitPosition(hitPosition,layer);
+  double localHitPosition = fcf::calclateLocalFromGlobalPostion(hitPosition, layer,_detectorGeometry);
+  double stripHitPosition = fcf::calculateStripFromLocalPosition(localHitPosition,layer,_detectorGeometry);
 
   int initialStrip;
   std::vector <int>stripAdcVector;
-  generateCluster(stripHitPosition,initialStrip,stripAdcVector);
+  generateClusterFromStripHitPosition(stripHitPosition,initialStrip,stripAdcVector);
 
   storeCluster(stripSet,layer,initialStrip,stripAdcVector);
 
@@ -120,14 +122,8 @@ void fc::HitStripGenModule::storeStripInfo(StripSet & stripSet,const TVector3 & 
 
 
 
-double fc::HitStripGenModule::calculateStripHitPosition(const TVector3 & hitPosition, int layer) const{
 
-  return (hitPosition-_detectorGeometry.getSensor(layer)._center)*_detectorGeometry.getSensor(layer)._measurementDirection/
-_detectorGeometry.getSensor(layer)._stripPitch + _detectorGeometry.getSensor(layer)._nStrips/2;
-  
-}
-
-void fc::HitStripGenModule::generateCluster(double stripHitPosition, int & initialStrip, std::vector<int> & stripAdcVector){
+void fc::HitStripGenModule::generateClusterFromStripHitPosition(double stripHitPosition, int & initialStrip, std::vector<int> & stripAdcVector){
 
   int strip = stripHitPosition;
   double remainder = stripHitPosition - strip;
