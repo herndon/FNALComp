@@ -32,9 +32,9 @@ void fc::DataOutputModule::processEvent(Event& event) {
   auto stripSet = event.get<fc::StripSet>("strips");
 
   if (_debugLevel >=2) std::cout << "Event: " << event.eventNumber() << std::endl;
-  if (_debugLevel >=2) genTrackSet->print();
-  if (_debugLevel >=2) hitSet->print();
-  if (_debugLevel >=2) stripSet->print();
+  if (_debugLevel >=2) genTrackSet->print(std::cout);
+  if (_debugLevel >=2) hitSet->print(std::cout);
+  if (_debugLevel >=2) stripSet->print(std::cout);
 
   _outputeventdatafile << event.eventNumber() << std::endl;
 

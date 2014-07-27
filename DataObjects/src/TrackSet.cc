@@ -7,20 +7,20 @@ void fc::TrackSet::insertTrack(const Track& track) {
   _trackSet.push_back(track);
 }
 
-void fc::TrackSet::print() const{
+void fc::TrackSet::print(ostream& out) const{
 
-  std::cout << "TrackSet " << std::endl;
+  out << "TrackSet " << std::endl;
 
   trackSet::size_type numberTracks =_trackSet.size();
 
-  std::cout << "Number Tracks: " << numberTracks << std::endl; 
+  out << "Number Tracks: " << numberTracks << std::endl; 
 
   int trackNumber = 0;
 
   for (trackSet::const_iterator trackIter =  _trackSet.begin(); trackIter != _trackSet.end(); ++trackIter,++trackNumber){
  
-    std::cout << "Track number: " << trackNumber << std::endl;
-    trackIter->print(); 
+    out << "Track number: " << trackNumber << std::endl;
+    trackIter->print(out); 
 
   } // end track loop
 

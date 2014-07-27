@@ -60,7 +60,7 @@ public:
 
   // Print method
 
-  void print() const;
+  void print(ostream& out) const;
 
 };
 } // end namescape fc

@@ -66,9 +66,9 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
   std::unique_ptr<fc::Event> event( new fc::Event{static_cast<unsigned int>(eventNumber)} );
 
   if (_debugLevel >=2) std::cout << "Event: " << event->eventNumber() << std::endl;
-  if (_debugLevel >=2) genTrackSet->print();
-  if (_debugLevel >=2) hitSet->print();
-  if (_debugLevel >=2) stripSet->print();
+  if (_debugLevel >=2) genTrackSet->print(std::cout);
+  if (_debugLevel >=2) hitSet->print(std::cout);
+  if (_debugLevel >=2) stripSet->print(std::cout);
 
   event->put("genData", std::unique_ptr<bool>( new bool{_genData} ) );
   event->put(_outTracksLabel, std::move(genTrackSet) );

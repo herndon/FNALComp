@@ -41,9 +41,9 @@ void fc::StripSet::insertStrip(unsigned int layer, int strip, int adc) {
 
 
 
-void fc::StripSet::print() const{
+void fc::StripSet::print(ostream& out) const{
 
-  std::cout << "StripSet" << std::endl;
+  out << "StripSet" << std::endl;
 
   int strip;
   int adc;
@@ -52,13 +52,13 @@ void fc::StripSet::print() const{
  
     layerStripMap::size_type numberStrips =_layerStripMapArray[ii_layer].size();
 
-    std::cout << "Layer: " << ii_layer << " number Strips: " << numberStrips << std::endl; 
+    out << "Layer: " << ii_layer << " number Strips: " << numberStrips << std::endl; 
 
     for (layerStripMap::const_iterator layerStripMapIter =  _layerStripMapArray[ii_layer].begin(); layerStripMapIter != _layerStripMapArray[ii_layer].end(); ++layerStripMapIter){
       strip = getStripNumber(layerStripMapIter);
       adc = getStripAdc(layerStripMapIter); 
  
-      std::cout << "Strip: " << strip << " " << " ADC " << adc << std::endl; 
+      out << "Strip: " << strip << " " << " ADC " << adc << std::endl; 
     } // end strip loop
 
   } // end layer loop

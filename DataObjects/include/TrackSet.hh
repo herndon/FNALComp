@@ -41,7 +41,7 @@ public:
 
   void insertTrack(const Track &);
 
-  void print() const;
+  void print(ostream& out) const;
 
 
 };

@@ -42,7 +42,7 @@ public:
   int getNumberStrips() const {return _numberStrips;};
   int getTrackNumber() const {return _trackNumber;};
 
-  void print() const;
+  void print(ostream& out) const;
 
 };
 } // end namespace fc

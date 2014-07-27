@@ -15,12 +15,12 @@ fc::Hit::Hit(const TVector3 & hitPosition, int layer, int numberStrips):
   _trackNumber(-1){
 }
 
-void fc::Hit::print() const{
+void fc::Hit::print(ostream& out) const{
 
-  std::cout << "Hit position: " << _hitPosition.x() << " " <<  _hitPosition.y() << " " <<_hitPosition.z() << std::endl;
-  std::cout << "Layer" << _layer << std::endl;
-  std::cout << "Number strips: " << _numberStrips << std::endl;
-  std::cout << "Track number " << _trackNumber << std::endl;
+  out << "Hit position: " << _hitPosition.x() << " " <<  _hitPosition.y() << " " <<_hitPosition.z() << std::endl;
+  out << "Layer" << _layer << std::endl;
+  out << "Number strips: " << _numberStrips << std::endl;
+  out << "Track number " << _trackNumber << std::endl;
 
 }
 

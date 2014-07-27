@@ -21,7 +21,7 @@ void fc::HitRecoModule::processEvent(fc::Event& event)
 
   recoHits(*recoHitSet, *genStripSet);
 
-  if (_debugLevel >= 2) recoHitSet->print();
+  if (_debugLevel >= 2) recoHitSet->print(std::cout);
 
   event.put(_outHitsLabel, std::move(recoHitSet));
 }

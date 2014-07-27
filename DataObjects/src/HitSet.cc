@@ -9,21 +9,21 @@ void fc::HitSet::insertHit(const Hit& hit) {
     _hitSet.push_back(hit);
 }
 
-void fc::HitSet::print() const{
+void fc::HitSet::print(ostream& out) const{
 
-  std::cout << "HitSet" << std::endl;
+  out << "HitSet" << std::endl;
  
  
   hitSet::size_type numberHits =_hitSet.size();
 
   int hitNumber = 0;
 
-  std::cout << "Number Hits: " << numberHits << std::endl; 
+  out << "Number Hits: " << numberHits << std::endl; 
 
   for (hitSet::const_iterator hitIter =  _hitSet.begin(); hitIter != _hitSet.end(); ++hitIter,++hitNumber){
  
-    std::cout << "Hit: " << hitNumber << " associated with track " << hitIter->getTrackNumber() << std::endl; 
-    hitIter->print();
+    out << "Hit: " << hitNumber << " associated with track " << hitIter->getTrackNumber() << std::endl; 
+    hitIter->print(out);
   } // end hit loop
 
 

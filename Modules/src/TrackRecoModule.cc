@@ -51,7 +51,7 @@ void fc::TrackRecoModule::recoTracks(TrackSet & recoTrackSet, const HitSet& reco
 
   if (_debugLevel>=2){
     std::cout << "Reconstructed track set" << std::endl;
-    recoTrackSet.print();
+    recoTrackSet.print(std::cout);
   }
 
 }

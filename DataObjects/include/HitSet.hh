@@ -40,7 +40,7 @@ public:
 
   void insertHit(const Hit&);
 
-  void print() const;
+  void print(ostream& out) const;
 
 };
 } // end namespace fc

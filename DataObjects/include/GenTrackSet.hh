@@ -39,7 +39,7 @@ public:
  
   void insertTrack(const GenTrack&);
 
-  void print() const;
+  void print(ostream& out) const;
 
 
 };

@@ -55,32 +55,32 @@ void fc::Track::insertHit(int hitNumber){
   _trackHitSet.push_back(hitNumber);
 }
 
-void fc::Track::print() const{
+void fc::Track::print(ostream& out) const{
 
   TLorentzVector lorentzVector = getLorentzVector();
 
-  std::cout << "Charge " << getCharge() << std::endl;
-  std::cout << "4 momentum " << lorentzVector.Px() << " " <<  lorentzVector.Py() << " " <<  lorentzVector.Pz() << " " <<  lorentzVector.E() << " " << std::endl;
-  std::cout << "Track parameters:  pT " <<  lorentzVector.Pt() << " cot(theta) " << 1/getHelix().getTanL() << " phi0 " << getHelix().getPhi0()-M_PI/2.0 << " d0 " << getHelix().getDr() << " z0 " << getHelix().getDz() << std::endl;
-  std::cout << "Helix paramters: kappa " << getHelix().getKappa() << " tan(Lambda) " << getHelix().getTanL() << " phi0 to d0 " << getHelix().getPhi0() << std::endl;  
-  std::cout << "Reference Point " << 0.0 << " " << 0.0 << " " << 0.0 << std::endl;
+  out << "Charge " << getCharge() << std::endl;
+  out << "4 momentum " << lorentzVector.Px() << " " <<  lorentzVector.Py() << " " <<  lorentzVector.Pz() << " " <<  lorentzVector.E() << " " << std::endl;
+  out << "Track parameters:  pT " <<  lorentzVector.Pt() << " cot(theta) " << 1/getHelix().getTanL() << " phi0 " << getHelix().getPhi0()-M_PI/2.0 << " d0 " << getHelix().getDr() << " z0 " << getHelix().getDz() << std::endl;
+  out << "Helix paramters: kappa " << getHelix().getKappa() << " tan(Lambda) " << getHelix().getTanL() << " phi0 to d0 " << getHelix().getPhi0() << std::endl;  
+  out << "Reference Point " << 0.0 << " " << 0.0 << " " << 0.0 << std::endl;
 
   if (_nDof > 0){
 
-    std::cout << "chi2 " << _chi2 << " ndof " << _nDof << std::endl;
+    out << "chi2 " << _chi2 << " ndof " << _nDof << std::endl;
     _covMatrix.Print();
 
     }
 
   trackHitSet::size_type numberHits =_trackHitSet.size();
 
-  std::cout << "Number of hits " << numberHits << std::endl;
+  out << "Number of hits " << numberHits << std::endl;
   
-  std::cout << "Hit numbers: ";
+  out << "Hit numbers: ";
   for (trackHitSet::const_iterator hitIter = _trackHitSet.begin(); hitIter != _trackHitSet.end(); ++hitIter){
-    std::cout << *hitIter << " ";
+    out << *hitIter << " ";
   }
-  std::cout << std::endl;
+  out << std::endl;
 
 
 

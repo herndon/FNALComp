@@ -26,11 +26,11 @@ const fc::Helix fc::GenTrack::makeHelix() const{
 }
 
 
-void fc::GenTrack::print() const{
+void fc::GenTrack::print(ostream& out) const{
 
-  std::cout << "Charge " << _charge << std::endl;
-  std::cout << "4 momentum " << _lorentzVector.Px() << " " <<  _lorentzVector.Py() << " " <<  _lorentzVector.Pz() << " " <<  _lorentzVector.E() << " " << std::endl;
-  std::cout << "Track parameters:  pT " <<  _lorentzVector.Pt() << " cot(theta) " << _lorentzVector.Pt()/_lorentzVector.Pz()  << " phi0 " << std::atan2(_lorentzVector.Py(),_lorentzVector.Px()) << " d0 " << makeHelix().getDr() << " z0 " << makeHelix().getDz() << std::endl;
-  std::cout << "Helix paramters: kappa " << makeHelix().getKappa() << " tan(Lambda) " << makeHelix().getTanL() << " phi0 to d0 " << makeHelix().getPhi0() << std::endl;  
+  out << "Charge " << _charge << std::endl;
+  out << "4 momentum " << _lorentzVector.Px() << " " <<  _lorentzVector.Py() << " " <<  _lorentzVector.Pz() << " " <<  _lorentzVector.E() << " " << std::endl;
+  out << "Track parameters:  pT " <<  _lorentzVector.Pt() << " cot(theta) " << _lorentzVector.Pt()/_lorentzVector.Pz()  << " phi0 " << std::atan2(_lorentzVector.Py(),_lorentzVector.Px()) << " d0 " << makeHelix().getDr() << " z0 " << makeHelix().getDz() << std::endl;
+  out << "Helix paramters: kappa " << makeHelix().getKappa() << " tan(Lambda) " << makeHelix().getTanL() << " phi0 to d0 " << makeHelix().getPhi0() << std::endl;  
 
 }

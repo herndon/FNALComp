@@ -29,7 +29,7 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
   recoTracks(*perfectRecoTrackSet,*recoHitSet,*genHitSet);
 
   std::cout << "Perfect reconstructed tracks" << std::endl;
-  perfectRecoTrackSet->print();
+  perfectRecoTrackSet->print(std::cout);
 
   event.put(_outTracksLabel,std::move(perfectRecoTrackSet) );
 }
@@ -113,7 +113,7 @@ void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCan
 
     if (_debugLevel ==2) {
       std::cout << "Track after fit" << std::endl;
-      trackCandidate.print();
+      trackCandidate.print(std::cout);
     }
 
    trackCandidateSet.insertTrack(trackCandidate);
