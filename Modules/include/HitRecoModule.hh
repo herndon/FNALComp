@@ -46,15 +46,13 @@ private:
   // Detector information
   const DetectorGeometry & _detectorGeometry;
 
-  int _nLayers;
+  void recoHits(HitSet &, const StripSet &) const;
 
-  void recoHits(HitSet &, const StripSet &);
+  void recoHitsLayer(HitSet &, const StripSet &, int, int &) const;
 
-  void recoHitsLayer(HitSet &, const StripSet &, int, int &);
+  void findCluster(int &,int, std::vector<int> &,layerStripMap::const_iterator &,layerStripMap::const_iterator &,const StripSet &) const;
 
-  void findCluster(int &,int, std::vector<int> &,layerStripMap::const_iterator &,layerStripMap::const_iterator &,const StripSet &);
-
-  double calculateStripHitPositionFromCluster(int, const std::vector<int> &);
+  double calculateStripHitPositionFromCluster(int, const std::vector<int> &) const;
 
 };
 } // end namespace fc

@@ -63,16 +63,14 @@ private:
   // Random numbers
   Random &  _random;
 
-  int _nLayers;
+  void makeHitsStrips(HitSet &, StripSet &, const GenTrack &, int, int &) const;
 
-  void makeHitsStrips(HitSet &, StripSet &, const GenTrack &, int, int &);
+  void storeHitInfo(HitSet &,int,int &,TVector3 &,int) const;
 
-  void storeHitInfo(HitSet &,int,int &,TVector3 &,int);
+  void storeStripInfo(StripSet &,const TVector3 &,int) const;
 
-  void storeStripInfo(StripSet &,const TVector3 &,int);
-
-  void generateClusterFromStripHitPosition(double, int &, std::vector<int> &);
-  void storeCluster(StripSet &, int, int, const std::vector<int> &);
+  void generateClusterFromStripHitPosition(double, int &, std::vector<int> &) const;
+  void storeCluster(StripSet &, int, int, const std::vector<int> &) const;
 
 
 };

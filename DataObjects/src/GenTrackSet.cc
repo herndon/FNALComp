@@ -1,7 +1,7 @@
 #include "iostream"
 #include "DataObjects/include/GenTrackSet.hh"
 
-// Uses default constructro
+// Uses default constructor
 
 void fc::GenTrackSet::insertTrack(const GenTrack& genTrack) {
   _genTrackSet.push_back(genTrack);

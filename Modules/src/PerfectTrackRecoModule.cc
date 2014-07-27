@@ -16,10 +16,6 @@ fc::PerfectTrackRecoModule::PerfectTrackRecoModule(int debugLevel,
   _inGenHitsLabel(inputGenHitsLabel),
   _outTracksLabel(outputTracksLabel),
   _detectorGeometry(detectorGeometry) {
-
-  // Intialize commonly used DetectorGeometry data
-  _nLayers = _detectorGeometry.getNSensors();
-
 }
 
 void fc::PerfectTrackRecoModule::processEvent(Event& event)
@@ -38,8 +34,7 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
   event.put(_outTracksLabel,std::move(perfectRecoTrackSet) );
 }
 
-void fc::PerfectTrackRecoModule::recoTracks(TrackSet & perfectRecoTrackSet, const HitSet& recoHitSet, const HitSet& genHitSet)
-{
+void fc::PerfectTrackRecoModule::recoTracks(TrackSet & perfectRecoTrackSet, const HitSet& recoHitSet, const HitSet& genHitSet) const {
   // !!!!! This will eventually pass a track hit candidates strategy 
   // !!!!! Do I want to make a special object for the track hit candidates?
   std::vector<std::vector<int>> trackHitCandidates;
@@ -53,7 +48,7 @@ void fc::PerfectTrackRecoModule::recoTracks(TrackSet & perfectRecoTrackSet, cons
 
 
 
-void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & recoHitSet,const HitSet & genHitSet){
+void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & recoHitSet,const HitSet & genHitSet) const{
 
   int recoHitNumber = 0;
   int bestRecoHitNumber = 0;
@@ -101,8 +96,7 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vec
 
 
 // !!!!! move to utility function
-double fc::PerfectTrackRecoModule::compareHitPositions(const Hit & genHit, const Hit& recoHit)
-{
+double fc::PerfectTrackRecoModule::compareHitPositions(const Hit & genHit, const Hit& recoHit) const{
 
   return recoHit.getHitPosition()*_detectorGeometry.getSensor(recoHit.getLayer())._measurementDirection
     - genHit.getHitPosition()*_detectorGeometry.getSensor(genHit.getLayer())._measurementDirection;
@@ -110,7 +104,7 @@ double fc::PerfectTrackRecoModule::compareHitPositions(const Hit & genHit, const
 }
 
 
-void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
+void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet) const{
 
   for (std::vector<std::vector<int>>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
     std::vector<int> trackHitCandidate = *trackHitCandidateIter;

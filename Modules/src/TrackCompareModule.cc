@@ -20,9 +20,6 @@ fc::TrackCompareModule::TrackCompareModule(int debugLevel,
   _recTracksLabel(inputRecTracksLabel){
 
   initializeHistograms();
-
-
-
 }
 
 void fc::TrackCompareModule::initializeHistograms(){
@@ -57,8 +54,7 @@ void fc::TrackCompareModule::processEvent(Event& event)
 
 }
 
-void fc::TrackCompareModule::compareTracks(const GenTrackSet & genTrackSet, const TrackSet& recoTrackSet)
-{
+void fc::TrackCompareModule::compareTracks(const GenTrackSet & genTrackSet, const TrackSet& recoTrackSet) const{
 
   
   if (recoTrackSet.getTracks().begin() == recoTrackSet.getTracks().end()) return;
@@ -74,7 +70,7 @@ void fc::TrackCompareModule::compareTracks(const GenTrackSet & genTrackSet, cons
 }
 
 
-const fc::Track & fc::TrackCompareModule::matchTrack(const GenTrack & genTrack, const TrackSet& recoTrackSet){
+const fc::Track & fc::TrackCompareModule::matchTrack(const GenTrack & genTrack, const TrackSet& recoTrackSet) const{
 
   double bestDeltaTracks = 1000.0;
   double tmpDeltaTracks;
@@ -95,21 +91,21 @@ const fc::Track & fc::TrackCompareModule::matchTrack(const GenTrack & genTrack, 
 
 }
 
-double fc::TrackCompareModule::deltaTracks(const GenTrack & genTrack, const Track& recoTrack){
+double fc::TrackCompareModule::deltaTracks(const GenTrack & genTrack, const Track& recoTrack) const{
 
   return std::sqrt((genTrack.makeHelix().getKappa()-recoTrack.getHelix().getKappa())*(genTrack.makeHelix().getKappa()-recoTrack.getHelix().getKappa())+
 		   (genTrack.makeHelix().getPhi0()-recoTrack.getHelix().getPhi0())*(genTrack.makeHelix().getPhi0()-recoTrack.getHelix().getPhi0()));
 
 }
 
-TVectorD fc::TrackCompareModule::deltaHP(const GenTrack & genTrack, const Track& recoTrack){
+TVectorD fc::TrackCompareModule::deltaHP(const GenTrack & genTrack, const Track& recoTrack) const{
 
 
   return recoTrack.getHelix().getHelix() - genTrack.makeHelix().getHelix();
 
 }
 
-void fc::TrackCompareModule::fillHistograms(const TVectorD & deltaHP, const Track& recoTrack){
+void fc::TrackCompareModule::fillHistograms(const TVectorD & deltaHP, const Track& recoTrack) const{
 
   deltaD0->Fill(deltaHP(0));
   deltaPhi0->Fill(deltaHP(1));

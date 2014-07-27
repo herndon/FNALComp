@@ -50,16 +50,13 @@ private:
   // Detector information
   const DetectorGeometry & _detectorGeometry;
 
-  int _nLayers;
-
   // Tracking parameters
 
   // !!!!! initialize through configuration
   double _candidatePTThreshold;
 
 
-  void recoTracks(TrackSet & trackSet, const HitSet& hitSet);
-  void findTrack3X2SASHitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet);
+  void recoTracks(TrackSet & trackSet, const HitSet& hitSet) const;
 
 };
 } // end namespace fc

@@ -19,8 +19,7 @@ fc::TrackRecoModule::TrackRecoModule(int debugLevel,
   _inHitsLabel(inputHitsLabel),
   _outTracksLabel(outputTracksLabel),
   _config(config),
-  _detectorGeometry(detectorGeometry),
-  _nLayers(_detectorGeometry.getNSensors()){
+  _detectorGeometry(detectorGeometry){
 }
 
 void fc::TrackRecoModule::processEvent(Event& event)
@@ -32,12 +31,10 @@ void fc::TrackRecoModule::processEvent(Event& event)
 
   recoTracks(*recoTrackSet,*recoHitSet);
 
-
   event.put(_outTracksLabel,std::move(recoTrackSet) );
 }
 
-void fc::TrackRecoModule::recoTracks(TrackSet & recoTrackSet, const HitSet& recoHitSet)
-{
+void fc::TrackRecoModule::recoTracks(TrackSet & recoTrackSet, const HitSet& recoHitSet) const {
 
 
   TrackCandidateStrategy1X2SAS candStrategy(_debugLevel,_detectorGeometry,_config.getMinCandPTCut());
@@ -52,62 +49,9 @@ void fc::TrackRecoModule::recoTracks(TrackSet & recoTrackSet, const HitSet& reco
     recoTrackSet.insertTrack(*trackIter);
   }
 
-
-
-
   if (_debugLevel>=2){
     std::cout << "Reconstructed track set" << std::endl;
     recoTrackSet.print();
   }
 
 }
-
-
-void fc::TrackRecoModule::findTrack3X2SASHitCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet){
-
-  int hitNumberO = 0;
-
-
-  // Form 4-3-2 hit candidates
-  for (hitSet::const_iterator hitIterO = hitSet.getHits().begin(); hitIterO != hitSet.getHits().end(); ++hitIterO,++hitNumberO) {
-
-    int hitNumberI = 0;
-
-    //!!!!! change to outer layer at some point
-    if (hitIterO->getLayer() == _nLayers-1) {
-
-      for (hitSet::const_iterator hitIterI = hitSet.getHits().begin(); hitIterI != hitSet.getHits().end(); ++hitIterI,++hitNumberI) {
-
-	int hitNumberII = 0;
-
-	if (hitIterI->getLayer() == _nLayers-2) {
-
-	  for (hitSet::const_iterator hitIterII = hitSet.getHits().begin(); hitIterII != hitSet.getHits().end(); ++hitIterII,++hitNumberII) {
-
-	    if (hitIterII->getLayer() == _nLayers-3) {
-
-
-
-
-
-	      std::vector<int> trackHitCandidate;
-	      trackHitCandidate.push_back(hitNumberO);
-	      trackHitCandidate.push_back(hitNumberI);
-	      trackHitCandidate.push_back(hitNumberII);
-
-	      trackHitCandidates.push_back(trackHitCandidate);
-
-	    }
-
-	  }
-
-	}
-
-      }
-
-    }
-
-  }
-
-}
-

@@ -22,7 +22,6 @@ fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std
   _hPt(nullptr)
 {
 
-
   UniqueRootDirectory tDir( "TrackGen" );
   _hPt = new TH1D( "Pt", "Pt of Generated Track; GeV; N", 100, 0., 100.);
 
@@ -44,7 +43,7 @@ void fc::TrackGenModule::processEvent(fc::Event& event)
 
 
 
-fc::GenTrack fc::TrackGenModule::generateTrack(){
+fc::GenTrack fc::TrackGenModule::generateTrack() const{
 
   // Generate track data
     

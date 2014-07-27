@@ -51,17 +51,16 @@ private:
 
   // Comparison of hits
 
-  void compareHits(const HitSet &, const HitSet &);
+  void compareHits(const HitSet &, const HitSet &) const;
 
-
-  double compareHitPositions(const Hit &, const Hit &);
+  double compareHitPositions(const Hit &, const Hit &) const;
 
   // Histograms
 
     std::vector<TH1F *> deltaHitPositions;
 
 
-  void initializeHistograms(void);
+  void initializeHistograms();
 
 
 };

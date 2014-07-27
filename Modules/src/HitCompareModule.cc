@@ -37,8 +37,7 @@ void fc::HitCompareModule::initializeHistograms(){
 }
 
 
-void fc::HitCompareModule::processEvent(Event& event)
-{
+void fc::HitCompareModule::processEvent(Event& event) {
  Handle<HitSet> genHitSet = event.get<HitSet>(_genHitsLabel);
  Handle<HitSet> recoHitSet = event.get<HitSet>(_recHitsLabel);
 
@@ -48,8 +47,7 @@ void fc::HitCompareModule::processEvent(Event& event)
 
 }
 
-void fc::HitCompareModule::compareHits(const HitSet & genHitSet, const HitSet& recoHitSet)
-{
+void fc::HitCompareModule::compareHits(const HitSet & genHitSet, const HitSet& recoHitSet) const{
 
 
  
@@ -79,8 +77,7 @@ void fc::HitCompareModule::compareHits(const HitSet & genHitSet, const HitSet& r
 }
 
 
-double fc::HitCompareModule::compareHitPositions(const Hit & genHit, const Hit& recoHit)
-{
+double fc::HitCompareModule::compareHitPositions(const Hit & genHit, const Hit& recoHit) const{
 
   return recoHit.getHitPosition()*_detectorGeometry.getSensor(recoHit.getLayer())._measurementDirection
     - genHit.getHitPosition()*_detectorGeometry.getSensor(genHit.getLayer())._measurementDirection;

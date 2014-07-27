@@ -34,8 +34,7 @@ private:
 public:
 
   Hit(const TVector3&, int, int, int); //!< TVector3 hitPosition, int layer, int numberStrips, int trackNumber
-  Hit(const TVector3&, int, int);      //!< TVector3 hitPosition, int layer, int numberStrips, int trackNumber
-  Hit(const Hit&);
+  Hit(const TVector3&, int, int);      //!< TVector3 hitPosition, int layer, int numberStrips 
   ~Hit() {};
 
   const TVector3 & getHitPosition(void) const {return _hitPosition; };

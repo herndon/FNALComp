@@ -57,7 +57,7 @@ private:
 
   TH1D* _hPt;
 
-  GenTrack generateTrack();
+  GenTrack generateTrack() const;
 
 };
 

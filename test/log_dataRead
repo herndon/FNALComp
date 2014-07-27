@@ -196,42 +196,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00575908 0.2 -0.00676206
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0197017 0.4 -0.013934
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0331107 0.6 -0.0211047
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0459864 0.8 -0.0282741
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0583291 1 -0.0354423
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00577329 0.2002 -0.00676923
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0197154 0.4002 -0.0139412
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0331239 0.6002 -0.0211118
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.045999 0.8002 -0.0282812
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0583411 1.0002 -0.0354494
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -277,42 +287,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0129827 0.2 0.0068279
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0355857 0.4 0.00825912
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.058758 0.6 0.00969081
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0825004 0.8 0.011123
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.106813 1 0.0125556
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.013005 0.2002 0.00682933
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0356086 0.4002 0.00826056
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0587815 0.6002 0.00969224
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0825244 0.8002 0.0111244
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.106838 1.0002 0.012557
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -358,42 +378,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0057542 0.2 -0.00832926
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0147877 0.4 -0.0144178
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0234694 0.6 -0.0205059
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0317996 0.8 -0.0265935
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0397782 1 -0.0326807
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00576341 0.2002 -0.00833535
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0147965 0.4002 -0.0144239
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0234779 0.6002 -0.020512
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0318077 0.8002 -0.0265996
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.039786 1.0002 -0.0326868
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -439,42 +469,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0250792 0.2 -0.000995091
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.043279 0.4 -0.00123431
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0609795 0.6 -0.00147348
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.078181 0.8 -0.00171259
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0948837 1 -0.00195166
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0250977 0.2002 -0.000995331
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.043297 0.4002 -0.00123455
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.060997 0.6002 -0.00147372
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0781979 0.8002 -0.00171283
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0949001 1.0002 -0.0019519
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -520,42 +560,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0157218 0.2 0.010029
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0281991 0.4 0.0133265
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0410495 0.6 0.0166243
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0542733 0.8 0.0199225
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0678705 1 0.0232212
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0157341 0.2002 0.0100323
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0282117 0.4002 0.0133298
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0410625 0.6002 0.0166276
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0542867 0.8002 0.0199258
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0678842 1.0002 0.0232245
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -601,42 +651,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0024282 0.2 -0.000910647
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00137473 0.4 -0.00903169
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.00464084 0.6 -0.0171524
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.00737019 0.8 -0.0252727
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.00956286 1 -0.0333928
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00242413 0.2002 -0.000918769
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00137826 0.4002 -0.00903981
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.00464384 0.6002 -0.0171605
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.00737266 0.8002 -0.0252808
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.00956478 1.0002 -0.0334009
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -682,42 +742,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.000302954 0.2 -0.00498953
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.00389518 0.4 -0.0150602
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.00868039 0.6 -0.0251314
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0140528 0.8 -0.0352035
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0200125 1 -0.0452764
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.000299049 0.2002 -0.0049996
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.00389967 0.4002 -0.0150702
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.00868547 0.6002 -0.0251415
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0140585 0.8002 -0.0352136
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0200188 1.0002 -0.0452864
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -763,42 +833,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0197992 0.2 0.00114117
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0441056 0.4 0.00155814
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0681036 0.6 0.00197504
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0917933 0.8 0.00239187
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.115175 1 0.00280862
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0198237 0.2002 0.00114158
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0441297 0.4002 0.00155856
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0681274 0.6002 0.00197546
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0918168 0.8002 0.00239229
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.115198 1.0002 0.00280904
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -844,42 +924,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0169968 0.2 -0.0114526
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0310569 0.4 -0.0175726
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0447578 0.6 -0.0236918
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0580997 0.8 -0.0298102
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0710828 1 -0.0359279
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0170111 0.2002 -0.0114587
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0310708 0.4002 -0.0175787
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0447713 0.6002 -0.0236979
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0581129 0.8002 -0.0298163
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0710956 1.0002 -0.035934
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -925,42 +1015,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00957379 0.2 0.00896462
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0130618 0.4 0.0173752
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0161376 0.6 0.0257856
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0188012 0.8 0.0341957
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0210527 1 0.0426055
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00957748 0.2002 0.00897303
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0130651 0.4002 0.0173837
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0161405 0.6002 0.025794
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0188037 0.8002 0.0342041
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0210547 1.0002 0.042614
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1006,34 +1106,42 @@ HitSet
 Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: 0.0279255 0.2 -0.00296802
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0759782 0.6 -0.0103478
+Layer2
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.09954 0.8 -0.0140366
+Layer3
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.122792 1 -0.0177248
+Layer4
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0279498 0.2002 -0.00297171
+Layer5
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0760019 0.6002 -0.0103515
+Layer7
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0995634 0.8002 -0.0140403
+Layer8
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.122815 1.0002 -0.0177285
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1075,42 +1183,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00233597 0.2 0.0141724
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00285729 0.4 0.0277157
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0030512 0.6 0.0412589
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.00291768 0.8 0.0548021
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.00245675 1 0.0683454
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00233666 0.2002 0.0141859
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00285765 0.4002 0.0277292
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.00305123 0.6002 0.0412724
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.00291739 0.8002 0.0548157
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.00245613 1.0002 0.0683589
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1156,42 +1274,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0112657 0.2 -0.00728582
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0258839 0.4 -0.0233093
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.040817 0.6 -0.0393346
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0560649 0.8 -0.0553618
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0716279 1 -0.071391
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0112801 0.2002 -0.00730184
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0258987 0.4002 -0.0233253
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.040832 0.6002 -0.0393507
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0560803 0.8002 -0.0553779
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0716436 1.0002 -0.071407
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1237,42 +1365,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0192297 0.2 0.00894835
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0311862 0.4 0.0260641
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0434633 0.6 0.0431815
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.056061 0.8 0.0603006
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0689795 1 0.0774214
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0192415 0.2002 0.00896547
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0311984 0.4002 0.0260812
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0434758 0.6002 0.0431986
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0560738 0.8002 0.0603177
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0689926 1.0002 0.0774386
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1318,34 +1456,42 @@ HitSet
 Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: -0.032724 0.2 0.00142505
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0864368 0.6 0.0092757
+Layer2
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.113871 0.8 0.0132025
+Layer3
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.14169 1 0.0171304
+Layer4
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0327505 0.2002 0.00142897
+Layer5
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.086464 0.6002 0.00927962
+Layer7
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.113898 0.8002 0.0132065
+Layer8
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.141718 1.0002 0.0171343
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1387,42 +1533,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00513436 0.2 0.0155022
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0112438 0.4 0.0325561
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.017004 0.6 0.0496092
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0224151 0.8 0.0666614
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.027477 1 0.0837129
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00514064 0.2002 0.0155192
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0112497 0.4002 0.0325732
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0170096 0.6002 0.0496262
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0224203 0.8002 0.0666785
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0274819 1.0002 0.0837299
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1468,42 +1624,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0136332 0.2 -0.0145653
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0193348 0.4 -0.021434
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0245347 0.6 -0.0283023
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0292329 0.8 -0.0351701
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0334294 1 -0.0420376
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0136391 0.2002 -0.0145722
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0193403 0.4002 -0.0214409
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0245397 0.6002 -0.0283092
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0292373 0.8002 -0.035177
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0334334 1.0002 -0.0420444
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1549,42 +1715,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00337744 0.2 0.0129986
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00284573 0.4 0.0282628
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.00178295 0.6 0.0435271
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.00018908 0.8 0.0587917
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.00193592 1 0.0740567
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00337717 0.2002 0.0130139
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00284493 0.4002 0.028278
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.00178162 0.6002 0.0435424
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.00018722 0.8002 0.058807
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.00193831 1.0002 0.0740719
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1630,42 +1806,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00375262 0.2 -0.0200161
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.00950276 0.4 -0.0371643
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0149181 0.6 -0.0543117
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0199986 0.8 -0.0714583
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0247443 1 -0.0886043
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00375854 0.2002 -0.0200333
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.00950834 0.4002 -0.0371814
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0149233 0.6002 -0.0543288
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0200035 0.8002 -0.0714755
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0247489 1.0002 -0.0886214
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1711,42 +1897,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00808374 0.2 0.00532319
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0220182 0.4 0.00697063
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0364857 0.6 0.00861837
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0514866 0.8 0.0102664
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0670211 1 0.0119148
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00809741 0.2002 0.00532484
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0220324 0.4002 0.00697228
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0365004 0.6002 0.00862002
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0515018 0.8002 0.0102681
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0670369 1.0002 0.0119165
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1792,42 +1988,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0234809 0.2 -0.00811798
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0475234 0.4 -0.0201187
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0710946 0.6 -0.032116
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0941948 0.8 -0.0441101
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.116825 1 -0.056101
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0235051 0.2002 -0.00812998
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0475472 0.4002 -0.0201307
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0711179 0.6002 -0.032128
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0942177 0.8002 -0.0441221
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.116847 1.0002 -0.056113
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1873,42 +2079,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00498637 0.2 0.00402734
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00673191 0.4 0.00116216
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.00881088 0.6 -0.00170308
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0112233 0.8 -0.00456836
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0139692 1 -0.00743371
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00498795 0.2002 0.00402448
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00673382 0.4002 0.00115929
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.00881312 0.6002 -0.00170594
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0112259 0.8002 -0.00457123
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0139721 1.0002 -0.00743658
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -1954,42 +2170,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0232361 0.2 -0.00751013
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0460223 0.4 -0.0219434
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0693511 0.6 -0.036381
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0932229 0.8 -0.0508233
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.117638 1 -0.0652702
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0232586 0.2002 -0.00752457
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0460454 0.4002 -0.0219578
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0693747 0.6002 -0.0363955
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.093247 0.8002 -0.0508377
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.117663 1.0002 -0.0652846
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2035,42 +2261,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0254028 0.2 -0.0118635
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0451831 0.4 -0.0143207
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0644583 0.6 -0.0167774
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0832287 0.8 -0.0192334
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.101495 1 -0.0216889
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0254228 0.2002 -0.0118659
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0452027 0.4002 -0.0143232
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0644774 0.6002 -0.0167798
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0832472 0.8002 -0.0192359
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.101513 1.0002 -0.0216914
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2116,42 +2352,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0205448 0.2 -0.0224306
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.037227 0.4 -0.0419153
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0533881 0.6 -0.0613959
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0690285 0.8 -0.0808724
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0841486 1 -0.100345
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0205617 0.2002 -0.0224501
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0372434 0.4002 -0.0419348
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.053404 0.6002 -0.0614153
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0690439 0.8002 -0.0808919
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0841635 1.0002 -0.100365
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2197,42 +2443,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0065077 0.2 -0.00341182
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00834447 0.4 -0.0144917
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.00967867 0.6 -0.0255713
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0105103 0.8 -0.0366507
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0108394 1 -0.0477301
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00650978 0.2002 -0.0034229
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00834605 0.4002 -0.0145027
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.00967975 0.6002 -0.0255823
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0105109 0.8002 -0.0366618
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0108395 1.0002 -0.0477412
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2278,42 +2534,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00279609 0.2 0.0159805
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0150477 0.4 0.0239368
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0276537 0.6 0.0318941
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.040614 0.8 0.0398522
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0539288 1 0.0478113
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00280816 0.2002 0.0159884
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0150602 0.4002 0.0239448
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0276665 0.6002 0.031902
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0406271 0.8002 0.0398602
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0539423 1.0002 0.0478192
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2359,42 +2625,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00380156 0.2 0.00592476
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00718959 0.4 0.020197
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0101608 0.6 0.0344688
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0127153 0.8 0.0487402
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0148531 1 0.0630113
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00380516 0.2002 0.00593903
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00719277 0.4002 0.0202113
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0101636 0.6002 0.0344831
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0127177 0.8002 0.0487545
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0148551 1.0002 0.0630256
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2440,42 +2716,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0214222 0.2 0.0175367
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0436976 0.4 0.0277182
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0664833 0.6 0.0379027
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0897797 0.8 0.0480901
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.113587 1 0.0582805
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0214442 0.2002 0.0175469
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0437202 0.4002 0.0277284
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0665064 0.6002 0.0379129
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0898033 0.8002 0.0481002
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.113611 1.0002 0.0582907
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2521,42 +2807,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0261198 0.2 0.00953512
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0488902 0.4 0.0195734
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0720125 0.6 0.0296136
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0954868 0.8 0.0396559
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.119313 1 0.0497002
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0261424 0.2002 0.00954516
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0489132 0.4002 0.0195834
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0720358 0.6002 0.0296237
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0955104 0.8002 0.0396659
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.119337 1.0002 0.0497103
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2602,42 +2898,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.014017 0.2 0.0131527
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0262698 0.4 0.0165551
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0388295 0.6 0.0199577
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.051696 0.8 0.0233607
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0648694 1 0.0267641
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0140291 0.2002 0.0131561
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0262822 0.4002 0.0165585
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0388422 0.6002 0.0199611
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.051709 0.8002 0.0233641
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0648827 1.0002 0.0267675
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2683,42 +2989,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0229206 0.2 0.0149566
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0456186 0.4 0.033142
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0686913 0.6 0.0513313
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0921389 0.8 0.0695244
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.115962 1 0.0877216
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0229431 0.2002 0.0149748
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0456415 0.4002 0.0331602
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0687146 0.6002 0.0513495
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0921626 0.8002 0.0695426
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.115986 1.0002 0.0877398
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2764,42 +3080,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0266074 0.2 -0.00157222
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0488002 0.4 -0.0124624
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0705469 0.6 -0.02335
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0918479 0.8 -0.034235
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.112704 1 -0.0451174
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0266298 0.2002 -0.00158311
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0488222 0.4002 -0.0124733
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0705685 0.6002 -0.0233609
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.091869 0.8002 -0.0342458
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.112724 1.0002 -0.0451283
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2845,42 +3171,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00254385 0.2 0.0115807
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0129885 0.4 0.0169072
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0237994 0.6 0.0222342
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0349766 0.8 0.0275617
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0465202 1 0.0328897
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00255411 0.2002 0.0115861
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0129992 0.4002 0.0169125
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0238104 0.6002 0.0222395
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0349879 0.8002 0.027567
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0465319 1.0002 0.0328951
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2926,34 +3262,42 @@ HitSet
 Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: 0.029377 0.2 -0.00871403
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0815848 0.6 -0.018946
+Layer2
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.108207 0.8 -0.0240637
+Layer3
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.135174 1 -0.0291826
+Layer4
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0294028 0.2002 -0.00871915
+Layer5
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0816112 0.6002 -0.0189511
+Layer7
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.108233 0.8002 -0.0240688
+Layer8
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.135201 1.0002 -0.0291877
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -2995,42 +3339,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0139978 0.2 -0.0141668
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0218094 0.4 -0.031336
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0291647 0.6 -0.0485037
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0360639 0.8 -0.06567
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0425071 1 -0.082835
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0140059 0.2002 -0.014184
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.021817 0.4002 -0.0313532
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0291719 0.6002 -0.0485209
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0360706 0.8002 -0.0656872
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0425133 1.0002 -0.0828522
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3076,42 +3430,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0152177 0.2 0.0179934
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0239938 0.4 0.0356431
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0324351 0.6 0.0532915
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0405414 0.8 0.0709386
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0483129 1 0.0885846
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0152266 0.2002 0.0180111
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0240025 0.4002 0.0356607
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0324433 0.6002 0.0533091
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0405493 0.8002 0.0709563
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0483205 1.0002 0.0886022
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3157,42 +3521,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0230429 0.2 -0.01905
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0433645 0.4 -0.0308801
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0633761 0.6 -0.0427085
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0830777 0.8 -0.054535
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.102469 1 -0.0663598
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0230633 0.2002 -0.0190618
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0433847 0.4002 -0.030892
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.063396 0.6002 -0.0427203
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0830972 0.8002 -0.0545468
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.102489 1.0002 -0.0663716
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3238,42 +3612,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0221557 0.2 -0.00316085
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0383687 0.4 -0.00664244
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0548952 0.6 -0.0101245
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0717355 0.8 -0.013607
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0888895 1 -0.0170899
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0221717 0.2002 -0.00316433
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.038385 0.4002 -0.00664592
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0549119 0.6002 -0.010128
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0717525 0.8002 -0.0136104
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0889068 1.0002 -0.0170934
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3319,42 +3703,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00827421 0.2 0.0131678
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0213465 0.4 0.0326836
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0339166 0.6 0.0521964
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0459845 0.8 0.0717061
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0575507 1 0.091213
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00828753 0.2002 0.0131873
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0213593 0.4002 0.0327032
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0339289 0.6002 0.0522159
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0459964 0.8002 0.0717256
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.057562 1.0002 0.0912325
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3400,42 +3794,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00301947 0.2 -0.00625883
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0152254 0.4 -0.0163665
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0278943 0.6 -0.0264757
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0410263 0.8 -0.0365864
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0546216 1 -0.0466986
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00303145 0.2002 -0.00626893
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0152379 0.4002 -0.0163767
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0279072 0.6002 -0.0264858
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0410397 0.8002 -0.0365965
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0546355 1.0002 -0.0467087
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3481,42 +3885,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00147707 0.2 -0.00398878
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.001823 0.4 0.00113484
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.00180763 0.6 0.00625845
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.00143095 0.8 0.0113821
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.000692975 1 0.0165057
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00147759 0.2002 -0.00398366
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00182316 0.4002 0.00113996
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.00180743 0.6002 0.00626357
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0014304 0.8002 0.0113872
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.000692056 1.0002 0.0165108
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3562,42 +3976,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00914233 0.2 0.0136541
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0208719 0.4 0.0255818
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0322674 0.6 0.0375084
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0433289 0.8 0.0494338
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0540565 1 0.0613581
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00915422 0.2002 0.0136661
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0208835 0.4002 0.0255937
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0322787 0.6002 0.0375203
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0433398 0.8002 0.0494457
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0540671 1.0002 0.0613701
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3643,42 +4067,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0113019 0.2 0.0171185
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0294333 0.4 0.0317289
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0472407 0.6 0.0463372
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.064724 0.8 0.0609435
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0818835 1 0.0755477
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0113202 0.2002 0.0171331
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0294513 0.4002 0.0317435
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0472583 0.6002 0.0463518
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0647413 0.8002 0.0609581
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0819005 1.0002 0.0755623
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3724,42 +4158,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00104802 0.2 -0.0219082
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.00054176 0.4 -0.0392232
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.000434165 0.6 -0.0565384
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.00187977 0.8 -0.0738538
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.00379509 1 -0.0911696
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00104775 0.2002 -0.0219255
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.000541019 0.4002 -0.0392405
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.000435376 0.6002 -0.0565557
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.00188145 0.8002 -0.0738712
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.00379724 1.0002 -0.0911869
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3805,42 +4249,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0140181 0.2 0.0235431
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.034945 0.4 0.0433344
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0555032 0.6 0.0631219
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0756931 0.8 0.0829057
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0955147 1 0.102686
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0140393 0.2002 0.0235629
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0349657 0.4002 0.0433542
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0555236 0.6002 0.0631416
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0757131 0.8002 0.0829254
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0955344 1.0002 0.102706
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3886,42 +4340,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0055808 0.2 -0.000587643
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0101853 0.4 -0.00323622
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0151575 0.6 -0.00588491
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0204972 0.8 -0.00853372
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0262046 1 -0.0111827
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00558522 0.2002 -0.000590292
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0101901 0.4002 -0.00323887
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0151626 0.6002 -0.00588756
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0205027 0.8002 -0.00853637
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0262105 1.0002 -0.0111853
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -3967,42 +4431,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0187656 0.2 -0.00285287
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0300105 0.4 0.000790046
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0417577 0.6 0.00443349
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0540075 0.8 0.00807747
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.06676 1 0.011722
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0187766 0.2002 -0.00284923
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.030022 0.4002 0.00079369
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0417697 0.6002 0.00443713
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.05402 0.8002 0.00808112
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.066773 1.0002 0.0117257
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4048,42 +4522,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0211845 0.2 0.00847419
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0327216 0.4 0.0150894
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0439298 0.6 0.021704
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0548091 0.8 0.028318
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0653595 1 0.0349314
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0211962 0.2002 0.00848081
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.032733 0.4002 0.015096
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0439408 0.6002 0.0217106
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0548198 0.8002 0.0283246
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0653699 1.0002 0.034938
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4129,42 +4613,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0201124 0.2 0.00531987
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0435502 0.4 0.0055317
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.06755 0.6 0.0057436
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0921124 0.8 0.00595557
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.117238 1 0.00616761
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0201355 0.2002 0.00532008
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0435739 0.4002 0.00553191
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0675743 0.6002 0.00574381
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0921373 0.8002 0.00595578
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.117263 1.0002 0.00616782
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4210,42 +4704,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0232422 0.2 -0.0161031
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0438093 0.4 -0.0344004
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0639327 0.6 -0.0526937
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0836126 0.8 -0.070983
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.102849 1 -0.0892684
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.023263 0.2002 -0.0161214
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0438297 0.4002 -0.0344187
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0639526 0.6002 -0.052712
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0836321 0.8002 -0.0710013
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.102868 1.0002 -0.0892867
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4291,42 +4795,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0226172 0.2 0.00969182
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.040644 0.4 0.010023
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0581881 0.6 0.0103541
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0752499 0.8 0.0106852
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0918296 1 0.0110162
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0226355 0.2002 0.00969215
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0406618 0.4002 0.0100233
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0582054 0.6002 0.0103545
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0752667 0.8002 0.0106855
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0918459 1.0002 0.0110165
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4372,42 +4886,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0212588 0.2 0.00257916
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0443064 0.4 0.00659423
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0669416 0.6 0.0106084
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0891646 0.8 0.0146216
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.110976 1 0.0186339
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.021282 0.2002 0.00258317
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0443293 0.4002 0.00659825
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.066964 0.6002 0.0106124
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0891867 0.8002 0.0146256
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.110997 1.0002 0.0186379
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4453,42 +4977,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0149121 0.2 0.00791603
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0349877 0.4 0.0103428
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0545651 0.6 0.012769
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0736445 0.8 0.0151946
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0922263 1 0.0176197
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0149324 0.2002 0.00791846
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0350076 0.4002 0.0103452
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0545844 0.6002 0.0127714
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0736633 0.8002 0.015197
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0922446 1.0002 0.0176221
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4534,42 +5068,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0177471 0.2 0.00710294
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0393137 0.4 0.0149156
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0612147 0.6 0.0227297
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0834503 0.8 0.0305453
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.106021 1 0.0383622
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0177685 0.2002 0.00711075
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0393354 0.4002 0.0149235
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0612368 0.6002 0.0227376
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0834727 0.8002 0.0305531
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.106043 1.0002 0.0383701
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4615,34 +5159,42 @@ HitSet
 Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: 0.0309734 0.2 -0.00287647
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0772493 0.6 -0.0200775
+Layer2
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0999169 0.8 -0.0286757
+Layer3
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.122271 1 -0.0372724
+Layer4
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0309969 0.2002 -0.00288508
+Layer5
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0772722 0.6002 -0.0200861
+Layer7
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0999394 0.8002 -0.0286843
+Layer8
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.122293 1.0002 -0.037281
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4684,42 +5236,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.014523 0.2 0.0186345
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0276084 0.4 0.0299066
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0410233 0.6 0.04118
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0547678 0.8 0.0524546
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0688421 1 0.0637305
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0145359 0.2002 0.0186457
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0276216 0.4002 0.0299179
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0410368 0.6002 0.0411912
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0547817 0.8002 0.0524658
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0688564 1.0002 0.0637417
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4765,42 +5327,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.023644 0.2 0.0207062
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0470789 0.4 0.0394335
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0709876 0.6 0.0581659
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0953705 0.8 0.0769037
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.120228 1 0.0956469
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0236672 0.2002 0.0207249
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0471026 0.4002 0.0394522
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0710117 0.6002 0.0581847
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0953951 0.8002 0.0769224
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.120253 1.0002 0.0956656
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4846,42 +5418,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00291778 0.2 0.00897154
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00774765 0.4 0.0236126
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0122242 0.6 0.038253
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0163475 0.8 0.0528928
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0201175 1 0.0675322
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00292278 0.2002 0.00898618
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00775231 0.4002 0.0236272
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0122285 0.6002 0.0382676
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0163514 0.8002 0.0529075
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0201211 1.0002 0.0675468
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -4927,42 +5509,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0161592 0.2 -0.00116577
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0322005 0.4 -0.00569289
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0476625 0.6 -0.010219
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0625455 0.8 -0.0147441
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0768498 1 -0.0192683
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0161755 0.2002 -0.0011703
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0322163 0.4002 -0.00569742
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0476777 0.6002 -0.0102235
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0625601 0.8002 -0.0147486
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0768638 1.0002 -0.0192728
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5008,42 +5600,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00929703 0.2 -0.000572966
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0212478 0.4 0.00840796
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0328541 0.6 0.017388
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0441158 0.8 0.0263671
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0550332 1 0.0353454
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00930915 0.2002 -0.000563985
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0212596 0.4002 0.00841694
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0328655 0.6002 0.017397
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0441269 0.8002 0.0263761
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0550439 1.0002 0.0353544
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5089,42 +5691,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0216158 0.2 0.00343754
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0443283 0.4 0.00831518
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0664779 0.6 0.0131913
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0880651 0.8 0.0180659
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.10909 1 0.0229391
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0216388 0.2002 0.00344242
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0443508 0.4002 0.00832006
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0664998 0.6002 0.0131962
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0880864 0.8002 0.0180708
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.109111 1.0002 0.022944
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5170,42 +5782,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0183375 0.2 -8.16363e-05
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0321797 0.4 -0.00281611
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.046456 0.6 -0.005551
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0611666 0.8 -0.00828631
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0763117 1 -0.0110221
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0183511 0.2002 -8.43706e-05
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0321938 0.4002 -0.00281884
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0464705 0.6002 -0.00555373
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0611816 0.8002 -0.00828905
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0763271 1.0002 -0.0110248
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5251,42 +5873,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0185366 0.2 -0.00971934
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0300954 0.4 -0.0240221
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0412485 0.6 -0.0383231
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0519962 0.8 -0.0526226
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0623384 1 -0.0669206
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0185484 0.2002 -0.00973364
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0301068 0.4002 -0.0240364
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0412595 0.6002 -0.0383374
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0520067 0.8002 -0.0526369
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0623486 1.0002 -0.0669349
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5332,42 +5964,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0163924 0.2 0.0180395
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0278098 0.4 0.0311214
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0397318 0.6 0.0442052
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0521585 0.8 0.0572909
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0650902 1 0.0703788
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0164035 0.2002 0.0180526
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0278215 0.4002 0.0311345
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.039744 0.6002 0.0442182
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0521712 0.8002 0.057304
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0651034 1.0002 0.0703919
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5413,42 +6055,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00601158 0.2 -0.0260262
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00679496 0.4 -0.0434478
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.00816679 0.6 -0.0608697
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0101271 0.8 -0.078292
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.012676 1 -0.0957149
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00601207 0.2002 -0.0260436
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00679603 0.4002 -0.0434652
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.00816845 0.6002 -0.0608871
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0101294 0.8002 -0.0783094
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0126788 1.0002 -0.0957323
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5494,42 +6146,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00274814 0.2 -0.00589693
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.000965541 0.4 -0.0142431
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.00424936 0.6 -0.0225889
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.00710337 0.8 -0.0309345
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.00952759 1 -0.0392798
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00274422 0.2002 -0.00590527
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.00096904 0.4002 -0.0142514
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.00425243 0.6002 -0.0225973
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.00710601 0.8002 -0.0309428
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0095298 1.0002 -0.0392882
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5575,42 +6237,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00687645 0.2 -0.0171151
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.00602174 0.4 -0.028411
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.00548592 0.6 -0.0397068
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.00526898 0.8 -0.0510026
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.00537092 1 -0.0622984
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00687544 0.2002 -0.0171264
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.00602105 0.4002 -0.0284223
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.00548554 0.6002 -0.0397181
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.00526892 0.8002 -0.0510139
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.00537118 1.0002 -0.0623097
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5656,42 +6328,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.014029 0.2 -0.0135666
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.030591 0.4 -0.024496
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0475322 0.6 -0.0354272
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0648527 0.8 -0.0463601
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0825528 1 -0.0572949
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0140454 0.2002 -0.0135775
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0306078 0.4002 -0.0245069
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0475493 0.6002 -0.0354381
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0648702 0.8002 -0.0463711
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0825707 1.0002 -0.0573058
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5737,42 +6419,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0173816 0.2 -0.0100682
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0312718 0.4 -0.0199406
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0457456 0.6 -0.029815
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0608034 0.8 -0.0396915
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0764457 1 -0.0495703
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0173952 0.2002 -0.0100781
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0312859 0.4002 -0.0199505
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0457603 0.6002 -0.0298249
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0608187 0.8002 -0.0397014
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0764616 1.0002 -0.0495802
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5818,42 +6510,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.000968125 0.2 0.00365271
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.00599192 0.4 0.0152639
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0106435 0.6 0.0268745
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.014923 0.8 0.0384847
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0188304 1 0.0500944
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.000973334 0.2002 0.00366432
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.00599676 0.4002 0.0152755
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.010648 0.6002 0.0268861
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0149271 0.8002 0.0384963
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0188341 1.0002 0.050106
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5899,42 +6601,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0165388 0.2 -0.00203145
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0358299 0.4 -0.00493456
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0555765 0.6 -0.0078383
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0757787 0.8 -0.0107427
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.096437 1 -0.0136478
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0165579 0.2002 -0.00203435
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0358495 0.4002 -0.00493746
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0555964 0.6002 -0.00784121
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0757992 0.8002 -0.0107456
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0964579 1.0002 -0.0136507
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -5980,42 +6692,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0255826 0.2 -0.0184429
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0443174 0.4 -0.0279966
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0633771 0.6 -0.0375518
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0827618 0.8 -0.0471085
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.102472 1 -0.0566666
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0256012 0.2002 -0.0184525
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0443363 0.4002 -0.0280062
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0633963 0.6002 -0.0375614
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0827813 0.8002 -0.047118
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.102492 1.0002 -0.0566762
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6061,42 +6783,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0138677 0.2 0.0107996
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0340302 0.4 0.0185211
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.054583 0.6 0.0262441
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0755264 0.8 0.0339686
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0968606 1 0.0416947
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0138876 0.2002 0.0108074
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0340505 0.4002 0.0185288
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0546038 0.6002 0.0262518
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0755475 0.8002 0.0339763
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0968821 1.0002 0.0417025
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6142,42 +6874,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00305092 0.2 0.00639151
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0123181 0.4 0.00344235
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0218896 0.6 0.000492974
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0317654 0.8 -0.00245662
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0419457 1 -0.00540643
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00306003 0.2002 0.00638856
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0123275 0.4002 0.0034394
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0218993 0.6002 0.000490025
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0317754 0.8002 -0.00245957
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.041956 1.0002 -0.00540938
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6223,42 +6965,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00391484 0.2 -0.0149091
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00396933 0.4 -0.0300695
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.00432964 0.6 -0.0452298
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.00499577 0.8 -0.0603903
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.00596773 1 -0.0755508
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00391474 0.2002 -0.0149243
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00396954 0.4002 -0.0300846
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.00433016 0.6002 -0.045245
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.00499659 0.8002 -0.0604054
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.00596886 1.0002 -0.075566
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6304,42 +7056,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0165683 0.2 -0.0134118
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0338034 0.4 -0.0315914
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0515214 0.6 -0.0497748
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0697227 0.8 -0.0679621
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0884075 1 -0.0861534
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0165853 0.2002 -0.01343
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0338209 0.4002 -0.0316096
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0515394 0.6002 -0.049793
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0697411 0.8002 -0.0679803
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0884265 1.0002 -0.0861716
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6385,42 +7147,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0182257 0.2 0.000476315
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0409736 0.4 -0.00663249
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0641882 0.6 -0.0137432
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0878701 0.8 -0.0208558
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.112019 1 -0.0279704
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0182483 0.2002 0.000469207
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0409966 0.4002 -0.0066396
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0642117 0.6002 -0.0137503
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.087894 0.8002 -0.0208629
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.112044 1.0002 -0.0279775
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6466,42 +7238,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0232561 0.2 0.0168537
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0389888 0.4 0.0281791
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0544149 0.6 0.0395032
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0695347 0.8 0.0508259
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0843482 1 0.0621474
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.023272 0.2002 0.016865
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0390043 0.4002 0.0281904
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0544302 0.6002 0.0395145
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0695496 0.8002 0.0508372
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0843628 1.0002 0.0621587
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6547,42 +7329,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00852284 0.2 -0.00682231
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0204212 0.4 -0.0121873
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0327107 0.6 -0.017553
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0453915 0.8 -0.0229192
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0584636 1 -0.0282862
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00853454 0.2002 -0.00682767
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0204333 0.4002 -0.0121927
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0327232 0.6002 -0.0175583
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0454043 0.8002 -0.0229246
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0584768 1.0002 -0.0282916
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6628,42 +7420,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0042643 0.2 0.00403453
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.00833699 0.4 0.00810511
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0128669 0.6 0.0121759
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0178539 0.8 0.0162469
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0232984 1 0.0203181
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00426814 0.2002 0.0040386
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0083413 0.4002 0.00810918
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0128716 0.6002 0.01218
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0178592 0.8002 0.016251
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.023304 1.0002 0.0203222
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6709,42 +7511,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0100601 0.2 -0.0189099
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0279207 0.4 -0.0292789
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0452749 0.6 -0.0396456
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.062123 0.8 -0.05001
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0784654 1 -0.0603723
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0100782 0.2002 -0.0189203
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0279383 0.4002 -0.0292892
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.045292 0.6002 -0.0396559
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0621396 0.8002 -0.0500204
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0784814 1.0002 -0.0603827
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6790,42 +7602,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0124354 0.2 0.018087
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0226111 0.4 0.0364221
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0323056 0.6 0.054755
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0415189 0.8 0.0730858
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0502513 1 0.0914146
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0124458 0.2002 0.0181053
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.022621 0.4002 0.0364404
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.032315 0.6002 0.0547733
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0415279 0.8002 0.0731041
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0502598 1.0002 0.091433
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6871,42 +7693,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0160996 0.2 0.0183778
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0415521 0.4 0.0317577
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0665741 0.6 0.0451341
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.091166 0.8 0.0585069
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.115328 1 0.0718764
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0161252 0.2002 0.0183912
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0415773 0.4002 0.0317711
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0665989 0.6002 0.0451475
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0911903 0.8002 0.0585203
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.115352 1.0002 0.0718897
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -6952,34 +7784,42 @@ HitSet
 Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: -0.0327376 0.2 0.0110034
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0823888 0.6 0.0376834
+Layer2
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.106359 0.8 0.0510165
+Layer3
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.12976 1 0.0643451
+Layer4
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.032763 0.2002 0.0110168
+Layer5
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.082413 0.6002 0.0376967
+Layer7
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.106383 0.8002 0.0510298
+Layer8
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.129784 1.0002 0.0643584
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7021,42 +7861,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0174147 0.2 -0.0174015
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0334812 0.4 -0.0263894
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0489759 0.6 -0.0353752
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0638991 0.8 -0.0443591
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0782512 1 -0.0533411
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.017431 0.2002 -0.0174105
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.033497 0.4002 -0.0263983
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0489911 0.6002 -0.0353842
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0639137 0.8002 -0.0443681
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0782653 1.0002 -0.0533501
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7102,42 +7952,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.01336 0.2 -0.0144516
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0304099 0.4 -0.0309699
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0478234 0.6 -0.0474908
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0656006 0.8 -0.0640143
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0837418 1 -0.0805405
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0133769 0.2002 -0.0144681
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0304271 0.4002 -0.0309864
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.047841 0.6002 -0.0475073
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0656186 0.8002 -0.0640308
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0837601 1.0002 -0.080557
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7183,42 +8043,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0236532 0.2 -0.0285366
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.043663 0.4 -0.0482767
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0630744 0.6 -0.0680111
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0818878 0.8 -0.08774
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.100104 1 -0.107463
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0236735 0.2002 -0.0285563
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0436827 0.4002 -0.0482965
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0630935 0.6002 -0.0680309
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0819063 0.8002 -0.0877597
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.100122 1.0002 -0.107483
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7264,42 +8134,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.000825312 0.2 -0.00742519
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.000629074 0.4 -0.0111846
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.000984429 0.6 -0.0149441
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.00189138 0.8 -0.0187036
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.00334996 1 -0.0224631
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00082484 0.2002 -0.00742895
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.000629154 0.4002 -0.0111884
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.00098506 0.6002 -0.0149479
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.00189257 0.8002 -0.0187074
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.00335169 1.0002 -0.0224669
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7345,34 +8225,42 @@ HitSet
 Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: -0.0350098 0.2 -0.0195526
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0861634 0.6 -0.0501267
+Layer2
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.112274 0.8 -0.0654189
+Layer3
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.13874 1 -0.0807146
+Layer4
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.035035 0.2002 -0.0195679
+Layer5
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0861894 0.6002 -0.0501419
+Layer7
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.1123 0.8002 -0.0654341
+Layer8
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.138767 1.0002 -0.0807299
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7414,42 +8302,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00505671 0.2 -0.01387
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0150468 0.4 -0.0211344
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0255538 0.6 -0.0283999
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0365779 0.8 -0.0356663
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0481193 1 -0.0429337
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00506645 0.2002 -0.0138773
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0150571 0.4002 -0.0211417
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0255646 0.6002 -0.0284071
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0365892 0.8002 -0.0356735
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0481311 1.0002 -0.042941
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7495,42 +8393,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0288465 0.2 0.00144259
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0489286 0.4 -0.00564257
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0694654 0.6 -0.0127293
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0904571 0.8 -0.0198178
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.111904 1 -0.0269079
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0288663 0.2002 0.00143551
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0489489 0.4002 -0.00564965
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0694862 0.6002 -0.0127364
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0904783 0.8002 -0.0198249
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.111926 1.0002 -0.026915
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7576,42 +8484,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.01709 0.2 -0.00286939
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.041771 0.4 -0.00551823
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0669529 0.6 -0.00816789
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0926362 0.8 -0.0108184
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.118821 1 -0.0134697
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0171145 0.2002 -0.00287204
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0417959 0.4002 -0.00552088
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0669783 0.6002 -0.00817054
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0926622 0.8002 -0.010821
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.118848 1.0002 -0.0134724
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7657,42 +8575,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00166799 0.2 -0.0100948
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00447167 0.4 -0.0105576
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0075844 0.6 -0.0110204
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0110062 0.8 -0.0114833
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0147371 1 -0.0119461
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00167064 0.2002 -0.0100953
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00447463 0.4002 -0.0105581
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.00758767 0.6002 -0.0110209
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0110098 0.8002 -0.0114837
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.014741 1.0002 -0.0119466
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7738,42 +8666,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.016277 0.2 0.00834172
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0327828 0.4 0.0231914
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0488672 0.6 0.0380385
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0645303 0.8 0.0528831
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0797724 1 0.0677253
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0162937 0.2002 0.00835657
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0327991 0.4002 0.0232062
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0488831 0.6002 0.0380533
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0645458 0.8002 0.0528979
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0797875 1.0002 0.0677402
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7819,42 +8757,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0148624 0.2 0.00939106
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0234113 0.4 0.0145902
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0324129 0.6 0.0197898
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0418675 0.8 0.0249899
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0517751 1 0.0301906
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0148707 0.2002 0.00939626
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.02342 0.4002 0.0145954
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0324222 0.6002 0.019795
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0418772 0.8002 0.0249951
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0517853 1.0002 0.0301958
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7900,42 +8848,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00226967 0.2 0.0180458
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.00955727 0.4 0.02836
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0163575 0.6 0.0386733
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0226705 0.8 0.0489858
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0284964 1 0.0592975
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0022772 0.2002 0.0180561
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.00956432 0.4002 0.0283703
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0163641 0.6002 0.0386836
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0226766 0.8002 0.0489961
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.028502 1.0002 0.0593078
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -7981,42 +8939,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00587823 0.2 -0.0111102
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.00727499 0.4 -0.0294138
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.00906701 0.6 -0.0477178
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0112543 0.8 -0.0660222
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0138369 1 -0.0843269
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00587943 0.2002 -0.0111285
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.00727658 0.4002 -0.0294321
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.009069 0.6002 -0.0477361
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0112567 0.8002 -0.0660405
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0138397 1.0002 -0.0843452
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8062,42 +9030,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0119844 0.2 0.0145822
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0220732 0.4 0.0289596
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0316153 0.6 0.043335
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0406107 0.8 0.0577086
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0490598 1 0.0720805
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0119948 0.2002 0.0145966
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0220831 0.4002 0.0289739
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0316245 0.6002 0.0433493
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0406194 0.8002 0.0577229
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.049068 1.0002 0.0720948
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8143,42 +9121,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0227591 0.2 -0.0228898
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0431927 0.4 -0.038006
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0632195 0.6 -0.0531192
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0828398 0.8 -0.0682293
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.102054 1 -0.0833364
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0227797 0.2002 -0.0229049
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0432129 0.4002 -0.0380211
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0632394 0.6002 -0.0531343
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0828592 0.8002 -0.0682444
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.102073 1.0002 -0.0833515
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8224,42 +9212,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.023283 0.2 -0.00202985
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0387029 0.4 0.00432531
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0537899 0.6 0.0106797
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.068544 0.8 0.0170332
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0829655 1 0.023386
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0232986 0.2002 -0.00202349
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0387182 0.4002 0.00433167
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0538048 0.6002 0.010686
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0685586 0.8002 0.0170396
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0829797 1.0002 0.0233924
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8305,34 +9303,42 @@ HitSet
 Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: -0.0303794 0.2 0.00499271
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0773429 0.6 0.0158247
+Layer2
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.10132 0.8 0.0212422
+Layer3
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.125627 1 0.0266608
+Layer4
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0304026 0.2002 0.00499813
+Layer5
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0773667 0.6002 0.0158301
+Layer7
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.101344 0.8002 0.0212476
+Layer8
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.125651 1.0002 0.0266662
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8374,42 +9380,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.00537851 0.2 0.0139143
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0129943 0.4 0.0198293
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0209735 0.6 0.0257447
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0293163 0.8 0.0316605
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0380226 1 0.0375768
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.00538594 0.2002 0.0139203
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0130021 0.4002 0.0198352
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0209817 0.6002 0.0257506
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0293248 0.8002 0.0316664
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0380315 1.0002 0.0375827
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8455,42 +9471,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0256734 0.2 -0.0132083
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0419115 0.4 -0.0194251
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0584843 0.6 -0.0256428
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0753919 0.8 -0.0318613
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0926344 1 -0.0380808
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0256894 0.2002 -0.0132145
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0419279 0.4002 -0.0194314
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.058501 0.6002 -0.025649
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.075409 0.8002 -0.0318676
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0926518 1.0002 -0.038087
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8536,42 +9562,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0236521 0.2 0.00649505
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0448953 0.4 0.0109996
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0667225 0.6 0.0155056
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0891344 0.8 0.020013
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.112132 1 0.0245219
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.023673 0.2002 0.00649956
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0449168 0.4002 0.0110041
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0667446 0.6002 0.0155101
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0891571 0.8002 0.0200175
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.112155 1.0002 0.0245265
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8617,42 +9653,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0303071 0.2 -0.000855236
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0502164 0.4 -0.00437325
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0695628 0.6 -0.00789029
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0883468 0.8 -0.0114064
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.106569 1 -0.0149216
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0303273 0.2002 -0.000858755
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.050236 0.4002 -0.00437676
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0695818 0.6002 -0.00789381
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0883653 0.8002 -0.0114099
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.106587 1.0002 -0.0149251
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8698,42 +9744,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0267756 0.2 -0.00870301
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0484691 0.4 -0.0246323
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0705799 0.6 -0.0405652
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0931085 0.8 -0.0565018
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.116055 1 -0.0724421
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0267971 0.2002 -0.00871894
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.048491 0.4002 -0.0246482
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0706023 0.6002 -0.0405811
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0931312 0.8002 -0.0565177
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.116078 1.0002 -0.072458
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8779,42 +9835,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0149342 0.2 -0.00469326
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0264667 0.4 -0.00718989
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0376867 0.6 -0.0096863
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0485942 0.8 -0.0121825
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0591894 1 -0.0146785
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0149459 0.2002 -0.00469576
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0264781 0.4002 -0.00719239
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0376978 0.6002 -0.00968879
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.048605 0.8002 -0.012185
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0591998 1.0002 -0.014681
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8860,34 +9926,42 @@ HitSet
 Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: -0.0311243 0.2 0.0015366
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0818344 0.6 -9.52995e-05
+Layer2
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.107678 0.8 -0.0009115
+Layer3
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.133847 1 -0.00172787
+Layer4
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0311494 0.2002 0.00153578
+Layer5
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0818601 0.6002 -9.61156e-05
+Layer7
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.107704 0.8002 -0.000912316
+Layer8
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.133873 1.0002 -0.00172869
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -8929,42 +10003,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0197758 0.2 -0.0103574
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0340993 0.4 -0.015914
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0487471 0.6 -0.0214712
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0637192 0.8 -0.0270291
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0790157 1 -0.0325876
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.01979 0.2002 -0.010363
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0341138 0.4002 -0.0159195
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0487619 0.6002 -0.0214767
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0637343 0.8002 -0.0270346
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0790311 1.0002 -0.0325932
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9010,42 +10094,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.012776 0.2 0.0110819
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.022389 0.4 0.0274207
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0324943 0.6 0.0437615
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0430919 0.8 0.0601044
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0541821 1 0.0764494
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0127854 0.2002 0.0110983
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0223989 0.4002 0.0274371
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0325046 0.6002 0.0437779
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0431027 0.8002 0.0601207
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0541934 1.0002 0.0764657
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9091,42 +10185,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0124376 0.2 0.0226237
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0164863 0.4 0.0400881
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0209155 0.6 0.0575531
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0257254 0.8 0.0750189
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0309161 1 0.0924856
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0124415 0.2002 0.0226412
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0164905 0.4002 0.0401055
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0209201 0.6002 0.0575706
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0257304 0.8002 0.0750364
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0309215 1.0002 0.092503
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9172,42 +10276,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0166125 0.2 0.0275217
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0332747 0.4 0.045518
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.050325 0.6 0.0635173
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0677637 0.8 0.0815195
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0855909 1 0.0995248
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.016629 0.2002 0.0275397
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0332916 0.4002 0.045536
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0503423 0.6002 0.0635353
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0677814 0.8002 0.0815375
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.085609 1.0002 0.0995428
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9253,42 +10367,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0116373 0.2 -0.0122592
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0319751 0.4 -0.016783
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0528519 0.6 -0.0213079
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.074268 0.8 -0.0258342
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0962239 1 -0.0303618
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0116573 0.2002 -0.0122638
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0319957 0.4002 -0.0167875
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.052873 0.6002 -0.0213125
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0742897 0.8002 -0.0258387
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0962462 1.0002 -0.0303663
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9334,42 +10458,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0174084 0.2 0.00497593
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0325703 0.4 0.000819343
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0480575 0.6 -0.00333776
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.06387 0.8 -0.00749539
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.080008 1 -0.0116536
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0174234 0.2002 0.00497178
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0325856 0.4002 0.000815186
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0480731 0.6002 -0.00334192
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.063886 0.8002 -0.00749955
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0800243 1.0002 -0.0116577
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9415,42 +10549,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0122205 0.2 0.021958
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0167709 0.4 0.034803
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0208984 0.6 0.0476473
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.024603 0.8 0.0604911
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0278849 1 0.0733345
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0122253 0.2002 0.0219709
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0167752 0.4002 0.0348158
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0209023 0.6002 0.0476602
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0246065 0.8002 0.060504
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.027888 1.0002 0.0733473
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9496,42 +10640,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00361027 0.2 -0.0192315
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0143214 0.4 -0.031953
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0256146 0.6 -0.0446765
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0374901 0.8 -0.0574022
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0499483 1 -0.0701301
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00362069 0.2002 -0.0192442
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0143324 0.4002 -0.0319657
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0256262 0.6002 -0.0446892
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0375023 0.8002 -0.0574149
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0499611 1.0002 -0.0701428
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9577,42 +10731,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0280461 0.2 0.0195501
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.046487 0.4 0.0300535
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0652849 0.6 0.0405585
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0844399 0.8 0.0510653
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.103952 1 0.0615739
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0280644 0.2002 0.0195606
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0465057 0.4002 0.030064
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0653039 0.6002 0.040569
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0844592 0.8002 0.0510758
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.103972 1.0002 0.0615845
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9658,42 +10822,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0190814 0.2 -0.0100424
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.029544 0.4 -0.0157703
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0396407 0.6 -0.0214978
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0493716 0.8 -0.0272247
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0587368 1 -0.0329511
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.019092 0.2002 -0.0100481
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0295542 0.4002 -0.0157761
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0396506 0.6002 -0.0215035
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0493811 0.8002 -0.0272304
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.058746 1.0002 -0.0329568
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9739,42 +10913,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0189735 0.2 0.00215056
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0346964 0.4 -0.00526276
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0507458 0.6 -0.012677
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.067122 0.8 -0.0200923
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0838249 1 -0.0275085
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0189891 0.2002 0.00214314
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0347122 0.4002 -0.00527018
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.050762 0.6002 -0.0126845
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0671385 0.8002 -0.0200997
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0838418 1.0002 -0.027516
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9820,42 +11004,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.015684 0.2 -0.0218296
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0282767 0.4 -0.0412492
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0411807 0.6 -0.0606707
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.054396 0.8 -0.0800942
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0679228 1 -0.0995197
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0156964 0.2002 -0.021849
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0282894 0.4002 -0.0412686
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0411938 0.6002 -0.0606901
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0544094 0.8002 -0.0801136
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0679365 1.0002 -0.0995391
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9901,42 +11095,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0202137 0.2 0.00438459
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0422564 0.4 0.00340332
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0646447 0.6 0.00242187
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0873788 0.8 0.00144023
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.110459 1 0.000458395
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.0202356 0.2002 0.00438361
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0422786 0.4002 0.00340234
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0646673 0.6002 0.00242089
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.0874017 0.8002 0.00143925
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.110482 1.0002 0.000457413
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -9982,42 +11186,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.0189419 0.2 -0.0209676
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.0352295 0.4 -0.0349022
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: -0.0518398 0.6 -0.0488386
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: -0.0687729 0.8 -0.0627769
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: -0.0860291 1 -0.0767171
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.018958 0.2002 -0.0209815
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.0352459 0.4002 -0.0349161
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: -0.0518565 0.6002 -0.0488525
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: -0.06879 0.8002 -0.0627908
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: -0.0860465 1.0002 -0.076731
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -10063,34 +11277,42 @@ HitSet
 Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: 0.0298522 0.2 -0.00402319
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0775676 0.6 0.000735085
+Layer2
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.102139 0.8 0.00311523
+Layer3
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.127187 1 0.00549607
+Layer4
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0298755 0.2002 -0.00402081
+Layer5
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0775919 0.6002 0.000737465
+Layer7
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.102164 0.8002 0.00311761
+Layer8
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.127212 1.0002 0.00549845
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -10132,42 +11354,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: 0.0210906 0.2 -0.00666057
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.0329176 0.4 -0.0145711
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.0451861 0.6 -0.0224827
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0578963 0.8 -0.0303954
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0710484 1 -0.0383092
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: 0.0211022 0.2002 -0.00666848
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.0329296 0.4002 -0.014579
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0451986 0.6002 -0.0224906
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0579093 0.8002 -0.0304033
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0710618 1.0002 -0.0383171
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -10213,42 +11445,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00311871 0.2 0.0071082
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.00115033 0.4 0.00523815
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.00509362 0.6 0.00336817
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.00871119 0.8 0.00149824
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0120031 1 -0.000371636
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00311428 0.2002 0.00710633
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.00115443 0.4002 0.00523628
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0050974 0.6002 0.0033663
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.00871464 0.8002 0.00149637
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0120062 1.0002 -0.000373506
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -10294,42 +11536,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.000674073 0.2 -0.0110485
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: 0.00505122 0.4 -0.0270194
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.011145 0.6 -0.0429912
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.0176074 0.8 -0.0589639
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0244385 1 -0.0749376
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.000668531 0.2002 -0.0110644
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: 0.00505713 0.4002 -0.0270354
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.0111513 0.6002 -0.0430072
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.0176141 0.8002 -0.0589799
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0244455 1.0002 -0.0749536
+Layer9
 Number strips: -1
 Track number 0
 StripSet
@@ -10375,42 +11627,52 @@ HitSet
 Number Hits: 10
 Hit: 0 associated with track 0
 Hit position: -0.00646188 0.2 -0.0125914
+Layer0
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
 Hit position: -0.00290988 0.4 -0.0317421
+Layer1
 Number strips: -1
 Track number 0
 Hit: 2 associated with track 0
 Hit position: 0.00106912 0.6 -0.0508935
+Layer2
 Number strips: -1
 Track number 0
 Hit: 3 associated with track 0
 Hit position: 0.00547516 0.8 -0.0700458
+Layer3
 Number strips: -1
 Track number 0
 Hit: 4 associated with track 0
 Hit position: 0.0103083 1 -0.0891991
+Layer4
 Number strips: -1
 Track number 0
 Hit: 5 associated with track 0
 Hit position: -0.00645854 0.2002 -0.0126106
+Layer5
 Number strips: -1
 Track number 0
 Hit: 6 associated with track 0
 Hit position: -0.00290611 0.4002 -0.0317612
+Layer6
 Number strips: -1
 Track number 0
 Hit: 7 associated with track 0
 Hit position: 0.00107331 0.6002 -0.0509127
+Layer7
 Number strips: -1
 Track number 0
 Hit: 8 associated with track 0
 Hit position: 0.00547978 0.8002 -0.070065
+Layer8
 Number strips: -1
 Track number 0
 Hit: 9 associated with track 0
 Hit position: 0.0103134 1.0002 -0.0892182
+Layer9
 Number strips: -1
 Track number 0
 StripSet
