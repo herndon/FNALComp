@@ -1423,44 +1423,36 @@ Charge -1
 Track parameters:  pT 39.5448 cot(theta) 54.5922 phi0 1.44818 d0 -0.00340842 z0 0.000730565
 Helix paramters: kappa 0.0252878 tan(Lambda) 0.0183176 phi0 to d0 3.01898
 HitSet
-Number Hits: 10
+Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: 0.0279255 0.2 -0.00296802
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
-Hit position: 0.0521068 0.4 -0.00665823
-Number strips: -1
-Track number 0
-Hit: 2 associated with track 0
 Hit position: 0.0759782 0.6 -0.0103478
 Number strips: -1
 Track number 0
-Hit: 3 associated with track 0
+Hit: 2 associated with track 0
 Hit position: 0.09954 0.8 -0.0140366
 Number strips: -1
 Track number 0
-Hit: 4 associated with track 0
+Hit: 3 associated with track 0
 Hit position: 0.122792 1 -0.0177248
 Number strips: -1
 Track number 0
-Hit: 5 associated with track 0
+Hit: 4 associated with track 0
 Hit position: 0.0279498 0.2002 -0.00297171
 Number strips: -1
 Track number 0
-Hit: 6 associated with track 0
-Hit position: 0.0521308 0.4002 -0.00666192
-Number strips: -1
-Track number 0
-Hit: 7 associated with track 0
+Hit: 5 associated with track 0
 Hit position: 0.0760019 0.6002 -0.0103515
 Number strips: -1
 Track number 0
-Hit: 8 associated with track 0
+Hit: 6 associated with track 0
 Hit position: 0.0995634 0.8002 -0.0140403
 Number strips: -1
 Track number 0
-Hit: 9 associated with track 0
+Hit: 7 associated with track 0
 Hit position: 0.122815 1.0002 -0.0177285
 Number strips: -1
 Track number 0
@@ -1903,44 +1895,36 @@ Charge -1
 Track parameters:  pT 32.0027 cot(theta) -51.4085 phi0 1.70049 d0 0.00639054 z0 -0.00251501
 Helix paramters: kappa 0.0312474 tan(Lambda) -0.019452 phi0 to d0 3.27129
 HitSet
-Number Hits: 10
+Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: -0.032724 0.2 0.00142505
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
-Hit position: -0.0593879 0.4 0.00534987
-Number strips: -1
-Track number 0
-Hit: 2 associated with track 0
 Hit position: -0.0864368 0.6 0.0092757
 Number strips: -1
 Track number 0
-Hit: 3 associated with track 0
+Hit: 2 associated with track 0
 Hit position: -0.113871 0.8 0.0132025
 Number strips: -1
 Track number 0
-Hit: 4 associated with track 0
+Hit: 3 associated with track 0
 Hit position: -0.14169 1 0.0171304
 Number strips: -1
 Track number 0
-Hit: 5 associated with track 0
+Hit: 4 associated with track 0
 Hit position: -0.0327505 0.2002 0.00142897
 Number strips: -1
 Track number 0
-Hit: 6 associated with track 0
-Hit position: -0.0594148 0.4002 0.0053538
-Number strips: -1
-Track number 0
-Hit: 7 associated with track 0
+Hit: 5 associated with track 0
 Hit position: -0.086464 0.6002 0.00927962
 Number strips: -1
 Track number 0
-Hit: 8 associated with track 0
+Hit: 6 associated with track 0
 Hit position: -0.113898 0.8002 0.0132065
 Number strips: -1
 Track number 0
-Hit: 9 associated with track 0
+Hit: 7 associated with track 0
 Hit position: -0.141718 1.0002 0.0171343
 Number strips: -1
 Track number 0
@@ -4351,44 +4335,36 @@ Charge 1
 Track parameters:  pT 35.6435 cot(theta) 39.4247 phi0 1.44441 d0 -0.00376025 z0 -0.00358761
 Helix paramters: kappa -0.0280556 tan(Lambda) 0.0253648 phi0 to d0 3.0152
 HitSet
-Number Hits: 10
+Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: 0.029377 0.2 -0.00871403
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
-Hit position: 0.0553084 0.4 -0.0138294
-Number strips: -1
-Track number 0
-Hit: 2 associated with track 0
 Hit position: 0.0815848 0.6 -0.018946
 Number strips: -1
 Track number 0
-Hit: 3 associated with track 0
+Hit: 2 associated with track 0
 Hit position: 0.108207 0.8 -0.0240637
 Number strips: -1
 Track number 0
-Hit: 4 associated with track 0
+Hit: 3 associated with track 0
 Hit position: 0.135174 1 -0.0291826
 Number strips: -1
 Track number 0
-Hit: 5 associated with track 0
+Hit: 4 associated with track 0
 Hit position: 0.0294028 0.2002 -0.00871915
 Number strips: -1
 Track number 0
-Hit: 6 associated with track 0
-Hit position: 0.0553345 0.4002 -0.0138346
-Number strips: -1
-Track number 0
-Hit: 7 associated with track 0
+Hit: 5 associated with track 0
 Hit position: 0.0816112 0.6002 -0.0189511
 Number strips: -1
 Track number 0
-Hit: 8 associated with track 0
+Hit: 6 associated with track 0
 Hit position: 0.108233 0.8002 -0.0240688
 Number strips: -1
 Track number 0
-Hit: 9 associated with track 0
+Hit: 7 associated with track 0
 Hit position: 0.135201 1.0002 -0.0291877
 Number strips: -1
 Track number 0
@@ -6922,44 +6898,36 @@ Charge -1
 Track parameters:  pT 38.995 cot(theta) 23.4096 phi0 1.45252 d0 -0.00731331 z0 0.00576349
 Helix paramters: kappa 0.0256443 tan(Lambda) 0.0427176 phi0 to d0 3.02331
 HitSet
-Number Hits: 10
+Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: 0.0309734 0.2 -0.00287647
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
-Hit position: 0.0542683 0.4 -0.0114777
-Number strips: -1
-Track number 0
-Hit: 2 associated with track 0
 Hit position: 0.0772493 0.6 -0.0200775
 Number strips: -1
 Track number 0
-Hit: 3 associated with track 0
+Hit: 2 associated with track 0
 Hit position: 0.0999169 0.8 -0.0286757
 Number strips: -1
 Track number 0
-Hit: 4 associated with track 0
+Hit: 3 associated with track 0
 Hit position: 0.122271 1 -0.0372724
 Number strips: -1
 Track number 0
-Hit: 5 associated with track 0
+Hit: 4 associated with track 0
 Hit position: 0.0309969 0.2002 -0.00288508
 Number strips: -1
 Track number 0
-Hit: 6 associated with track 0
-Hit position: 0.0542914 0.4002 -0.0114863
-Number strips: -1
-Track number 0
-Hit: 7 associated with track 0
+Hit: 5 associated with track 0
 Hit position: 0.0772722 0.6002 -0.0200861
 Number strips: -1
 Track number 0
-Hit: 8 associated with track 0
+Hit: 6 associated with track 0
 Hit position: 0.0999394 0.8002 -0.0286843
 Number strips: -1
 Track number 0
-Hit: 9 associated with track 0
+Hit: 7 associated with track 0
 Hit position: 0.122293 1.0002 -0.037281
 Number strips: -1
 Track number 0
@@ -10477,44 +10445,36 @@ Charge 1
 Track parameters:  pT 21.5094 cot(theta) -15.1076 phi0 1.69992 d0 0.00699706 z0 -0.00240374
 Helix paramters: kappa -0.0464912 tan(Lambda) -0.0661917 phi0 to d0 3.27072
 HitSet
-Number Hits: 10
+Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: -0.0327376 0.2 0.0110034
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
-Hit position: -0.0578484 0.4 0.0243457
-Number strips: -1
-Track number 0
-Hit: 2 associated with track 0
 Hit position: -0.0823888 0.6 0.0376834
 Number strips: -1
 Track number 0
-Hit: 3 associated with track 0
+Hit: 2 associated with track 0
 Hit position: -0.106359 0.8 0.0510165
 Number strips: -1
 Track number 0
-Hit: 4 associated with track 0
+Hit: 3 associated with track 0
 Hit position: -0.12976 1 0.0643451
 Number strips: -1
 Track number 0
-Hit: 5 associated with track 0
+Hit: 4 associated with track 0
 Hit position: -0.032763 0.2002 0.0110168
 Number strips: -1
 Track number 0
-Hit: 6 associated with track 0
-Hit position: -0.0578733 0.4002 0.0243591
-Number strips: -1
-Track number 0
-Hit: 7 associated with track 0
+Hit: 5 associated with track 0
 Hit position: -0.082413 0.6002 0.0376967
 Number strips: -1
 Track number 0
-Hit: 8 associated with track 0
+Hit: 6 associated with track 0
 Hit position: -0.106383 0.8002 0.0510298
 Number strips: -1
 Track number 0
-Hit: 9 associated with track 0
+Hit: 7 associated with track 0
 Hit position: -0.129784 1.0002 0.0643584
 Number strips: -1
 Track number 0
@@ -11080,44 +11040,36 @@ Charge -1
 Track parameters:  pT 34.5575 cot(theta) 13.1895 phi0 1.69448 d0 0.00988996 z0 -0.00417745
 Helix paramters: kappa 0.0289373 tan(Lambda) 0.0758176 phi0 to d0 3.26528
 HitSet
-Number Hits: 10
+Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: -0.0350098 0.2 -0.0195526
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
-Hit position: -0.0604088 0.4 -0.0348379
-Number strips: -1
-Track number 0
-Hit: 2 associated with track 0
 Hit position: -0.0861634 0.6 -0.0501267
 Number strips: -1
 Track number 0
-Hit: 3 associated with track 0
+Hit: 2 associated with track 0
 Hit position: -0.112274 0.8 -0.0654189
 Number strips: -1
 Track number 0
-Hit: 4 associated with track 0
+Hit: 3 associated with track 0
 Hit position: -0.13874 1 -0.0807146
 Number strips: -1
 Track number 0
-Hit: 5 associated with track 0
+Hit: 4 associated with track 0
 Hit position: -0.035035 0.2002 -0.0195679
 Number strips: -1
 Track number 0
-Hit: 6 associated with track 0
-Hit position: -0.0604344 0.4002 -0.0348532
-Number strips: -1
-Track number 0
-Hit: 7 associated with track 0
+Hit: 5 associated with track 0
 Hit position: -0.0861894 0.6002 -0.0501419
 Number strips: -1
 Track number 0
-Hit: 8 associated with track 0
+Hit: 6 associated with track 0
 Hit position: -0.1123 0.8002 -0.0654341
 Number strips: -1
 Track number 0
-Hit: 9 associated with track 0
+Hit: 7 associated with track 0
 Hit position: -0.138767 1.0002 -0.0807299
 Number strips: -1
 Track number 0
@@ -12544,44 +12496,36 @@ Charge -1
 Track parameters:  pT 37.1046 cot(theta) -37.1814 phi0 1.68441 d0 0.00734465 z0 -0.000444271
 Helix paramters: kappa 0.0269508 tan(Lambda) -0.0268951 phi0 to d0 3.25521
 HitSet
-Number Hits: 10
+Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: -0.0303794 0.2 0.00499271
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
-Hit position: -0.0536962 0.4 0.0104082
-Number strips: -1
-Track number 0
-Hit: 2 associated with track 0
 Hit position: -0.0773429 0.6 0.0158247
 Number strips: -1
 Track number 0
-Hit: 3 associated with track 0
+Hit: 2 associated with track 0
 Hit position: -0.10132 0.8 0.0212422
 Number strips: -1
 Track number 0
-Hit: 4 associated with track 0
+Hit: 3 associated with track 0
 Hit position: -0.125627 1 0.0266608
 Number strips: -1
 Track number 0
-Hit: 5 associated with track 0
+Hit: 4 associated with track 0
 Hit position: -0.0304026 0.2002 0.00499813
 Number strips: -1
 Track number 0
-Hit: 6 associated with track 0
-Hit position: -0.0537197 0.4002 0.0104136
-Number strips: -1
-Track number 0
-Hit: 7 associated with track 0
+Hit: 5 associated with track 0
 Hit position: -0.0773667 0.6002 0.0158301
 Number strips: -1
 Track number 0
-Hit: 8 associated with track 0
+Hit: 6 associated with track 0
 Hit position: -0.101344 0.8002 0.0212476
 Number strips: -1
 Track number 0
-Hit: 9 associated with track 0
+Hit: 7 associated with track 0
 Hit position: -0.125651 1.0002 0.0266662
 Number strips: -1
 Track number 0
@@ -13393,44 +13337,36 @@ Charge -1
 Track parameters:  pT 37.7376 cot(theta) 247.075 phi0 1.69369 d0 0.0062101 z0 0.00235541
 Helix paramters: kappa 0.0264988 tan(Lambda) 0.00404735 phi0 to d0 3.26449
 HitSet
-Number Hits: 10
+Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: -0.0311243 0.2 0.0015366
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
-Hit position: -0.0563166 0.4 0.000720733
-Number strips: -1
-Track number 0
-Hit: 2 associated with track 0
 Hit position: -0.0818344 0.6 -9.52995e-05
 Number strips: -1
 Track number 0
-Hit: 3 associated with track 0
+Hit: 2 associated with track 0
 Hit position: -0.107678 0.8 -0.0009115
 Number strips: -1
 Track number 0
-Hit: 4 associated with track 0
+Hit: 3 associated with track 0
 Hit position: -0.133847 1 -0.00172787
 Number strips: -1
 Track number 0
-Hit: 5 associated with track 0
+Hit: 4 associated with track 0
 Hit position: -0.0311494 0.2002 0.00153578
 Number strips: -1
 Track number 0
-Hit: 6 associated with track 0
-Hit position: -0.056342 0.4002 0.000719917
-Number strips: -1
-Track number 0
-Hit: 7 associated with track 0
+Hit: 5 associated with track 0
 Hit position: -0.0818601 0.6002 -9.61156e-05
 Number strips: -1
 Track number 0
-Hit: 8 associated with track 0
+Hit: 6 associated with track 0
 Hit position: -0.107704 0.8002 -0.000912316
 Number strips: -1
 Track number 0
-Hit: 9 associated with track 0
+Hit: 7 associated with track 0
 Hit position: -0.133873 1.0002 -0.00172869
 Number strips: -1
 Track number 0
@@ -15226,44 +15162,36 @@ Charge 1
 Track parameters:  pT 25.7581 cot(theta) -84.6602 phi0 1.45677 d0 -0.00666377 z0 -0.00641035
 Helix paramters: kappa -0.0388228 tan(Lambda) -0.0118119 phi0 to d0 3.02756
 HitSet
-Number Hits: 10
+Number Hits: 8
 Hit: 0 associated with track 0
 Hit position: 0.0298522 0.2 -0.00402319
 Number strips: -1
 Track number 0
 Hit: 1 associated with track 0
-Hit position: 0.0534721 0.4 -0.00164438
-Number strips: -1
-Track number 0
-Hit: 2 associated with track 0
 Hit position: 0.0775676 0.6 0.000735085
 Number strips: -1
 Track number 0
-Hit: 3 associated with track 0
+Hit: 2 associated with track 0
 Hit position: 0.102139 0.8 0.00311523
 Number strips: -1
 Track number 0
-Hit: 4 associated with track 0
+Hit: 3 associated with track 0
 Hit position: 0.127187 1 0.00549607
 Number strips: -1
 Track number 0
-Hit: 5 associated with track 0
+Hit: 4 associated with track 0
 Hit position: 0.0298755 0.2002 -0.00402081
 Number strips: -1
 Track number 0
-Hit: 6 associated with track 0
-Hit position: 0.053496 0.4002 -0.001642
-Number strips: -1
-Track number 0
-Hit: 7 associated with track 0
+Hit: 5 associated with track 0
 Hit position: 0.0775919 0.6002 0.000737465
 Number strips: -1
 Track number 0
-Hit: 8 associated with track 0
+Hit: 6 associated with track 0
 Hit position: 0.102164 0.8002 0.00311761
 Number strips: -1
 Track number 0
-Hit: 9 associated with track 0
+Hit: 7 associated with track 0
 Hit position: 0.127212 1.0002 0.00549845
 Number strips: -1
 Track number 0

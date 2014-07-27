@@ -60,24 +60,22 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, 
 
   for (int ii_layer = 0; ii_layer < _nLayers; ++ii_layer) {
 
-    calculateTrackSensorIntersection(genTrack,ii_layer, hitPosition);
+    bool intersectedLayer = intersectWithLayer(genTrack.makeHelix(_detectorGeometry.getCurvatureCInField(_detectorGeometry.getBField())),
+					       hitPosition,ii_layer,_detectorGeometry);
 
+    if (intersectedLayer){
     storeHitInfo(hitSet,trackNumber,hitNumber,hitPosition,ii_layer);
 
     storeStripInfo(stripSet,hitPosition,ii_layer);
-   
+    } else {
+      std::cout << "missed intersection" << std::endl;
+    }
 
   } // end layer loop
 
 
 }
 
-void fc::HitStripGenModule::calculateTrackSensorIntersection(const GenTrack & genTrack,int layer, TVector3 & hitPosition){
-
-  //TrackFit trackFit(track.getHelix(),_detectorGeometry);
-  intersectWithLayer(genTrack.makeHelix(_detectorGeometry.getCurvatureCInField(_detectorGeometry.getBField())),hitPosition,layer,_detectorGeometry);
-
-}
 
 // !!!!! remove Gen track from here
 void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,int trackNumber,int & hitNumber,TVector3 & hitPosition,int layer){
@@ -90,11 +88,15 @@ void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,int trackNumber,int & h
   // Pure gen hit, numberStrip = -1
   Hit hit(hitPosition,layer,-1,trackNumber);
 
-  hitSet.insertHit(hit);
+  bool isValidHit = fcf::isValidHit(layer,hitPosition,_detectorGeometry);
 
+  if (isValidHit) {
 
-  ++hitNumber;
+    hitSet.insertHit(hit);
 
+    ++hitNumber;
+
+  }
   
 
   hitPosition = hitPosition + _random.getNormalDouble(0.0,_detectorGeometry.getSensor(layer)._hitResolution)*_detectorGeometry.getSensor(layer)._measurementDirection;

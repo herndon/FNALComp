@@ -65,8 +65,6 @@ private:
 
   void makeHitsStrips(HitSet &, StripSet &, const GenTrack &, int, int &);
 
-  void calculateTrackSensorIntersection(const GenTrack &, int, TVector3 &);
-
   void storeHitInfo(HitSet &,int,int &,TVector3 &,int);
 
   void storeStripInfo(StripSet &,const TVector3 &,int);

@@ -49,7 +49,7 @@ bool fc::intersectWithPlane(const Helix& helix, TVector3 & hitPosition, const TV
 // 		  << hitPosition.Z() << std::endl 
 // 		  << "   s      : " << s      << std::endl
 // 		  << "   lambda : " << lambda << std::endl;
-         return 0;
+         return false;
       }
 	 // put in debug
 // 	 std::cerr << "TVSurface::CalcXingPointWith:"
@@ -85,7 +85,7 @@ bool fc::intersectWithPlane(const Helix& helix, TVector3 & hitPosition, const TV
       phi -= s / denom;
       hitPosition   = calcXAt(helix,phi);
    }
-   return (hitPosition - center) * normal == 0. ? 1 : 0; 
+   return true; 
 
 }
 
