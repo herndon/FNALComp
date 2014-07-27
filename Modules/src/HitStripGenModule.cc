@@ -108,17 +108,21 @@ void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,int trackNumber,int & h
 
 void fc::HitStripGenModule::storeStripInfo(StripSet & stripSet,const TVector3 & hitPosition,int layer){
 
-  double localHitPosition = fcf::calclateLocalFromGlobalPostion(hitPosition, layer,_detectorGeometry);
-  double stripHitPosition = fcf::calculateStripFromLocalPosition(localHitPosition,layer,_detectorGeometry);
+  bool isValidHit = fcf::isValidHit(layer,hitPosition,_detectorGeometry);
 
-  int initialStrip;
-  std::vector <int>stripAdcVector;
-  generateClusterFromStripHitPosition(stripHitPosition,initialStrip,stripAdcVector);
+  if (isValidHit) {
 
-  storeCluster(stripSet,layer,initialStrip,stripAdcVector);
+    double localHitPosition = fcf::calclateLocalFromGlobalPostion(hitPosition, layer,_detectorGeometry);
+    double stripHitPosition = fcf::calculateStripFromLocalPosition(localHitPosition,layer,_detectorGeometry);
 
+    int initialStrip;
+    std::vector <int>stripAdcVector;
+    generateClusterFromStripHitPosition(stripHitPosition,initialStrip,stripAdcVector);
+
+    storeCluster(stripSet,layer,initialStrip,stripAdcVector);
+
+  }
 }
-
 
 
 
@@ -155,7 +159,7 @@ void fc::HitStripGenModule::storeCluster(StripSet & stripSet, int layer, int ini
 
   int ii_strip = initialStrip;
   for (std::vector<int>::const_iterator stripAdcIter = stripAdcVector.begin(); stripAdcIter != stripAdcVector.end(); ++stripAdcIter){
-    if (ii_strip >=0 && ii_strip < _detectorGeometry.getSensor(layer)._nStrips) stripSet.insertStrip(layer,ii_strip,*stripAdcIter);
+    if (fcf::isValidStrip(layer,ii_strip,_detectorGeometry)) stripSet.insertStrip(layer,ii_strip,*stripAdcIter);
     ++ii_strip;
   }
 

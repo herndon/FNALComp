@@ -20,3 +20,19 @@ const TVector3 fcf::calculateGlobalFromLocalPosition(double localHitPosition, in
   TVector3 hitPosition = detectorGeometry.getSensor(layer)._measurementDirection*localHitPosition + detectorGeometry.getSensor(layer)._center;
   return hitPosition;
 }
+
+
+bool fcf::isValidStrip(int layer, int strip, const fc::DetectorGeometry& detectorGeometry){
+
+  return (strip >=0 && strip<detectorGeometry.getSensor(layer)._nStrips); 
+
+}
+
+bool fcf::isValidHit(int layer, const TVector3& hitPosition, const fc::DetectorGeometry& detectorGeometry){
+
+  TVector3 perpDir = detectorGeometry.getSensor(layer)._normal.Cross((detectorGeometry.getSensor(layer)._measurementDirection));
+  return ((std::abs((hitPosition-detectorGeometry.getSensor(layer)._center)*detectorGeometry.getSensor(layer)._measurementDirection) <
+	   detectorGeometry.getSensor(layer)._nStrips*detectorGeometry.getSensor(layer)._stripPitch/2.0) &&
+	  (std::abs((hitPosition-detectorGeometry.getSensor(layer)._center)*perpDir)<detectorGeometry.getSensor(layer)._perpSize/2.0));
+
+}

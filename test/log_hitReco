@@ -96,7 +96,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 5
-Sensor type 0: X, 1, SAS, 2 Z 1
+Sensor type 0: X, 1, SAS, 2 Z 2
 N strips    2048
 Strip pitch 5e-05
 X position (m) 0
@@ -113,7 +113,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
 Sensor layer 6
-Sensor type 0: X, 1, SAS, 2 Z 1
+Sensor type 0: X, 1, SAS, 2 Z 2
 N strips    2048
 Strip pitch 5e-05
 X position (m) 0
@@ -147,7 +147,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 8
-Sensor type 0: X, 1, SAS, 2 Z 2
+Sensor type 0: X, 1, SAS, 2 Z 1
 N strips    2048
 Strip pitch 0.0002
 X position (m) 0
@@ -164,7 +164,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 9
-Sensor type 0: X, 1, SAS, 2 Z 2
+Sensor type 0: X, 1, SAS, 2 Z 1
 N strips    2048
 Strip pitch 0.0002
 X position (m) 0
@@ -1481,9 +1481,7 @@ Strip: 1638  ADC 24
 Layer: 5 number Strips: 2
 Strip: 963  ADC 2
 Strip: 964  ADC 29
-Layer: 6 number Strips: 2
-Strip: 890  ADC 26
-Strip: 891  ADC 5
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 971  ADC 9
 Strip: 972  ADC 22
@@ -1494,7 +1492,7 @@ Layer: 9 number Strips: 2
 Strip: 1635  ADC 3
 Strip: 1636  ADC 28
 HitSet
-Number Hits: 9
+Number Hits: 8
 Hit: 0 associated with track -1
 Hit position: 0.0279298 0.2 0
 Number strips: 2
@@ -1516,18 +1514,14 @@ Hit position: 0 0.2002 -0.00297823
 Number strips: 2
 Track number -1
 Hit: 5 associated with track -1
-Hit position: 0 0.4002 -0.00666694
-Number strips: 2
-Track number -1
-Hit: 6 associated with track -1
 Hit position: 0 0.6002 -0.0103581
 Number strips: 2
 Track number -1
-Hit: 7 associated with track -1
+Hit: 6 associated with track -1
 Hit position: 0.0992849 0.8002 0.00173302
 Number strips: 2
 Track number -1
-Hit: 8 associated with track -1
+Hit: 7 associated with track -1
 Hit position: 0.122462 1.0002 0.00213758
 Number strips: 2
 Track number -1
@@ -1967,9 +1961,7 @@ Strip: 316  ADC 7
 Layer: 5 number Strips: 2
 Strip: 1051  ADC 10
 Strip: 1052  ADC 21
-Layer: 6 number Strips: 2
-Strip: 1130  ADC 10
-Strip: 1131  ADC 21
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 1069  ADC 8
 Strip: 1070  ADC 23
@@ -1980,7 +1972,7 @@ Layer: 9 number Strips: 2
 Strip: 316  ADC 23
 Strip: 317  ADC 8
 HitSet
-Number Hits: 9
+Number Hits: 8
 Hit: 0 associated with track -1
 Hit position: -0.0326976 0.2 0
 Number strips: 2
@@ -2002,18 +1994,14 @@ Hit position: 0 0.2002 0.00140887
 Number strips: 2
 Track number -1
 Hit: 5 associated with track -1
-Hit position: 0 0.4002 0.00535887
-Number strips: 2
-Track number -1
-Hit: 6 associated with track -1
 Hit position: 0 0.6002 0.00924839
 Number strips: 2
 Track number -1
-Hit: 7 associated with track -1
+Hit: 6 associated with track -1
 Hit position: -0.113605 0.8002 -0.00198299
 Number strips: 2
 Track number -1
-Hit: 8 associated with track -1
+Hit: 7 associated with track -1
 Hit position: -0.141427 1.0002 -0.00246861
 Number strips: 2
 Track number -1
@@ -4421,9 +4409,7 @@ Strip: 1700  ADC 7
 Layer: 5 number Strips: 2
 Strip: 848  ADC 9
 Strip: 849  ADC 22
-Layer: 6 number Strips: 2
-Strip: 746  ADC 11
-Strip: 747  ADC 20
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 928  ADC 9
 Strip: 929  ADC 22
@@ -4434,7 +4420,7 @@ Layer: 9 number Strips: 2
 Strip: 1696  ADC 9
 Strip: 1697  ADC 22
 HitSet
-Number Hits: 9
+Number Hits: 8
 Hit: 0 associated with track -1
 Hit position: 0.0293831 0.2 0
 Number strips: 2
@@ -4456,18 +4442,14 @@ Hit position: 0 0.2002 -0.00873952
 Number strips: 2
 Track number -1
 Hit: 5 associated with track -1
-Hit position: 0 0.4002 -0.0138427
-Number strips: 2
-Track number -1
-Hit: 6 associated with track -1
 Hit position: 0 0.6002 -0.0189581
 Number strips: 2
 Track number -1
-Hit: 7 associated with track -1
+Hit: 6 associated with track -1
 Hit position: 0.107767 0.8002 0.00188109
 Number strips: 2
 Track number -1
-Hit: 8 associated with track -1
+Hit: 7 associated with track -1
 Hit position: 0.134621 1.0002 0.00234983
 Number strips: 2
 Track number -1
@@ -6998,9 +6980,7 @@ Strip: 1635  ADC 13
 Layer: 5 number Strips: 2
 Strip: 965  ADC 4
 Strip: 966  ADC 27
-Layer: 6 number Strips: 2
-Strip: 794  ADC 31
-Strip: 795  ADC 0
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 922  ADC 6
 Strip: 923  ADC 25
@@ -7011,7 +6991,7 @@ Layer: 9 number Strips: 2
 Strip: 1631  ADC 6
 Strip: 1632  ADC 25
 HitSet
-Number Hits: 9
+Number Hits: 8
 Hit: 0 associated with track -1
 Hit position: 0.0309556 0.2 0
 Number strips: 2
@@ -7033,18 +7013,14 @@ Hit position: 0 0.2002 -0.00288145
 Number strips: 2
 Track number -1
 Hit: 5 associated with track -1
-Hit position: 0 0.4002 -0.011475
-Number strips: 2
-Track number -1
-Hit: 6 associated with track -1
 Hit position: 0 0.6002 -0.0201387
 Number strips: 2
 Track number -1
-Hit: 7 associated with track -1
+Hit: 6 associated with track -1
 Hit position: 0.0994203 0.8002 0.00173539
 Number strips: 2
 Track number -1
-Hit: 8 associated with track -1
+Hit: 7 associated with track -1
 Hit position: 0.121643 1.0002 0.00212328
 Number strips: 2
 Track number -1
@@ -10559,9 +10535,7 @@ Strip: 375  ADC 24
 Layer: 5 number Strips: 2
 Strip: 1244  ADC 31
 Strip: 1245  ADC 0
-Layer: 6 number Strips: 2
-Strip: 1510  ADC 18
-Strip: 1511  ADC 13
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 1212  ADC 30
 Strip: 1213  ADC 1
@@ -10572,7 +10546,7 @@ Layer: 9 number Strips: 2
 Strip: 380  ADC 19
 Strip: 381  ADC 12
 HitSet
-Number Hits: 9
+Number Hits: 8
 Hit: 0 associated with track -1
 Hit position: -0.0327476 0.2 0
 Number strips: 2
@@ -10594,18 +10568,14 @@ Hit position: 0 0.2002 0.011025
 Number strips: 2
 Track number -1
 Hit: 5 associated with track -1
-Hit position: 0 0.4002 0.024346
-Number strips: 2
-Track number -1
-Hit: 6 associated with track -1
 Hit position: 0 0.6002 0.0377065
 Number strips: 2
 Track number -1
-Hit: 7 associated with track -1
+Hit: 6 associated with track -1
 Hit position: -0.105445 0.8002 -0.00184055
 Number strips: 2
 Track number -1
-Hit: 8 associated with track -1
+Hit: 7 associated with track -1
 Hit position: -0.128603 1.0002 -0.00224477
 Number strips: 2
 Track number -1
@@ -11168,9 +11138,7 @@ Strip: 330  ADC 18
 Layer: 5 number Strips: 2
 Strip: 631  ADC 6
 Strip: 632  ADC 25
-Layer: 6 number Strips: 2
-Strip: 326  ADC 6
-Strip: 327  ADC 25
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 772  ADC 15
 Strip: 773  ADC 16
@@ -11181,7 +11149,7 @@ Layer: 9 number Strips: 2
 Strip: 322  ADC 9
 Strip: 323  ADC 22
 HitSet
-Number Hits: 9
+Number Hits: 8
 Hit: 0 associated with track -1
 Hit position: -0.0350444 0.2 0
 Number strips: 2
@@ -11203,18 +11171,14 @@ Hit position: 0 0.2002 -0.0195847
 Number strips: 2
 Track number -1
 Hit: 5 associated with track -1
-Hit position: 0 0.4002 -0.0348347
-Number strips: 2
-Track number -1
-Hit: 6 associated with track -1
 Hit position: 0 0.6002 -0.0501968
 Number strips: 2
 Track number -1
-Hit: 7 associated with track -1
+Hit: 6 associated with track -1
 Hit position: -0.113405 0.8002 -0.0019795
 Number strips: 2
 Track number -1
-Hit: 8 associated with track -1
+Hit: 7 associated with track -1
 Hit position: -0.140137 1.0002 -0.0024461
 Number strips: 2
 Track number -1
@@ -12638,9 +12602,7 @@ Strip: 396  ADC 9
 Layer: 5 number Strips: 2
 Strip: 1123  ADC 19
 Strip: 1124  ADC 12
-Layer: 6 number Strips: 2
-Strip: 1231  ADC 6
-Strip: 1232  ADC 25
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 1102  ADC 11
 Strip: 1103  ADC 20
@@ -12651,7 +12613,7 @@ Layer: 9 number Strips: 2
 Strip: 397  ADC 11
 Strip: 398  ADC 20
 HitSet
-Number Hits: 9
+Number Hits: 8
 Hit: 0 associated with track -1
 Hit position: -0.0304008 0.2 0
 Number strips: 2
@@ -12673,18 +12635,14 @@ Hit position: 0 0.2002 0.00499435
 Number strips: 2
 Track number -1
 Hit: 5 associated with track -1
-Hit position: 0 0.4002 0.0104153
-Number strips: 2
-Track number -1
-Hit: 6 associated with track -1
 Hit position: 0 0.6002 0.015829
 Number strips: 2
 Track number -1
-Hit: 7 associated with track -1
+Hit: 6 associated with track -1
 Hit position: -0.100943 0.8002 -0.00176196
 Number strips: 2
 Track number -1
-Hit: 8 associated with track -1
+Hit: 7 associated with track -1
 Hit position: -0.125152 1.0002 -0.00218453
 Number strips: 2
 Track number -1
@@ -13493,9 +13451,7 @@ Strip: 355  ADC 5
 Layer: 5 number Strips: 2
 Strip: 1054  ADC 18
 Strip: 1055  ADC 13
-Layer: 6 number Strips: 2
-Strip: 1038  ADC 31
-Strip: 1039  ADC 0
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 1022  ADC 2
 Strip: 1023  ADC 29
@@ -13506,7 +13462,7 @@ Layer: 9 number Strips: 2
 Strip: 353  ADC 0
 Strip: 354  ADC 31
 HitSet
-Number Hits: 9
+Number Hits: 8
 Hit: 0 associated with track -1
 Hit position: -0.0311234 0.2 0
 Number strips: 2
@@ -13528,18 +13484,14 @@ Hit position: 0 0.2002 0.00154597
 Number strips: 2
 Track number -1
 Hit: 5 associated with track -1
-Hit position: 0 0.4002 0.000725
-Number strips: 2
-Track number -1
-Hit: 6 associated with track -1
 Hit position: 0 0.6002 -0.000112903
 Number strips: 2
 Track number -1
-Hit: 7 associated with track -1
+Hit: 6 associated with track -1
 Hit position: -0.107729 0.8002 -0.00188041
 Number strips: 2
 Track number -1
-Hit: 8 associated with track -1
+Hit: 7 associated with track -1
 Hit position: -0.13388 1.0002 -0.00233688
 Number strips: 2
 Track number -1
@@ -15332,9 +15284,7 @@ Strip: 1660  ADC 14
 Layer: 5 number Strips: 2
 Strip: 943  ADC 17
 Strip: 944  ADC 14
-Layer: 6 number Strips: 2
-Strip: 990  ADC 16
-Strip: 991  ADC 15
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 1027  ADC 25
 Strip: 1028  ADC 6
@@ -15345,7 +15295,7 @@ Layer: 9 number Strips: 2
 Strip: 1660  ADC 15
 Strip: 1661  ADC 16
 HitSet
-Number Hits: 9
+Number Hits: 8
 Hit: 0 associated with track -1
 Hit position: 0.029846 0.2 0
 Number strips: 2
@@ -15367,18 +15317,14 @@ Hit position: 0 0.2002 -0.00400242
 Number strips: 2
 Track number -1
 Hit: 5 associated with track -1
-Hit position: 0 0.4002 -0.00165081
-Number strips: 2
-Track number -1
-Hit: 6 associated with track -1
 Hit position: 0 0.6002 0.00073871
 Number strips: 2
 Track number -1
-Hit: 7 associated with track -1
+Hit: 6 associated with track -1
 Hit position: 0.102201 0.8002 0.00178392
 Number strips: 2
 Track number -1
-Hit: 8 associated with track -1
+Hit: 7 associated with track -1
 Hit position: 0.127384 1.0002 0.00222349
 Number strips: 2
 Track number -1

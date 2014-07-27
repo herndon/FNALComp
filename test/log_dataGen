@@ -100,7 +100,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 5
-Sensor type 0: X, 1, SAS, 2 Z 1
+Sensor type 0: X, 1, SAS, 2 Z 2
 N strips    2048
 Strip pitch 5e-05
 X position (m) 0
@@ -117,7 +117,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
 Sensor layer 6
-Sensor type 0: X, 1, SAS, 2 Z 1
+Sensor type 0: X, 1, SAS, 2 Z 2
 N strips    2048
 Strip pitch 5e-05
 X position (m) 0
@@ -151,7 +151,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 8
-Sensor type 0: X, 1, SAS, 2 Z 2
+Sensor type 0: X, 1, SAS, 2 Z 1
 N strips    2048
 Strip pitch 0.0002
 X position (m) 0
@@ -168,7 +168,7 @@ Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
 Sensor layer 9
-Sensor type 0: X, 1, SAS, 2 Z 2
+Sensor type 0: X, 1, SAS, 2 Z 1
 N strips    2048
 Strip pitch 0.0002
 X position (m) 0
@@ -1065,9 +1065,7 @@ Strip: 1638  ADC 24
 Layer: 5 number Strips: 2
 Strip: 963  ADC 2
 Strip: 964  ADC 29
-Layer: 6 number Strips: 2
-Strip: 890  ADC 26
-Strip: 891  ADC 5
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 971  ADC 9
 Strip: 972  ADC 22
@@ -1387,9 +1385,7 @@ Strip: 316  ADC 7
 Layer: 5 number Strips: 2
 Strip: 1051  ADC 10
 Strip: 1052  ADC 21
-Layer: 6 number Strips: 2
-Strip: 1130  ADC 10
-Strip: 1131  ADC 21
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 1069  ADC 8
 Strip: 1070  ADC 23
@@ -3005,9 +3001,7 @@ Strip: 1700  ADC 7
 Layer: 5 number Strips: 2
 Strip: 848  ADC 9
 Strip: 849  ADC 22
-Layer: 6 number Strips: 2
-Strip: 746  ADC 11
-Strip: 747  ADC 20
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 928  ADC 9
 Strip: 929  ADC 22
@@ -4704,9 +4698,7 @@ Strip: 1635  ADC 13
 Layer: 5 number Strips: 2
 Strip: 965  ADC 4
 Strip: 966  ADC 27
-Layer: 6 number Strips: 2
-Strip: 794  ADC 31
-Strip: 795  ADC 0
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 922  ADC 6
 Strip: 923  ADC 25
@@ -7051,9 +7043,7 @@ Strip: 375  ADC 24
 Layer: 5 number Strips: 2
 Strip: 1244  ADC 31
 Strip: 1245  ADC 0
-Layer: 6 number Strips: 2
-Strip: 1510  ADC 18
-Strip: 1511  ADC 13
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 1212  ADC 30
 Strip: 1213  ADC 1
@@ -7454,9 +7444,7 @@ Strip: 330  ADC 18
 Layer: 5 number Strips: 2
 Strip: 631  ADC 6
 Strip: 632  ADC 25
-Layer: 6 number Strips: 2
-Strip: 326  ADC 6
-Strip: 327  ADC 25
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 772  ADC 15
 Strip: 773  ADC 16
@@ -8424,9 +8412,7 @@ Strip: 396  ADC 9
 Layer: 5 number Strips: 2
 Strip: 1123  ADC 19
 Strip: 1124  ADC 12
-Layer: 6 number Strips: 2
-Strip: 1231  ADC 6
-Strip: 1232  ADC 25
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 1102  ADC 11
 Strip: 1103  ADC 20
@@ -8989,9 +8975,7 @@ Strip: 355  ADC 5
 Layer: 5 number Strips: 2
 Strip: 1054  ADC 18
 Strip: 1055  ADC 13
-Layer: 6 number Strips: 2
-Strip: 1038  ADC 31
-Strip: 1039  ADC 0
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 1022  ADC 2
 Strip: 1023  ADC 29
@@ -10202,9 +10186,7 @@ Strip: 1660  ADC 14
 Layer: 5 number Strips: 2
 Strip: 943  ADC 17
 Strip: 944  ADC 14
-Layer: 6 number Strips: 2
-Strip: 990  ADC 16
-Strip: 991  ADC 15
+Layer: 6 number Strips: 0
 Layer: 7 number Strips: 2
 Strip: 1027  ADC 25
 Strip: 1028  ADC 6

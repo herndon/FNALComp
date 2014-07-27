@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include "Services/include/Exception.hh"
 #include "Geometry/include/DetectorGeometry.hh"
 
@@ -59,7 +60,6 @@ void fc::DetectorGeometry::printDetectorGeometry( void ) const {
 
 
 }
-
 
 const fc::sensorDescriptor& fc::DetectorGeometry::getSensor(int layer) const{
 

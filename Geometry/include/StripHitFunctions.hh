@@ -26,6 +26,10 @@ namespace fcf {
   double calculateLoalFromStripPosition(double, int, const fc::DetectorGeometry &);
   const TVector3 calculateGlobalFromLocalPosition(double, int, const fc::DetectorGeometry &);
 
+  // Find if hits and strips are in a valid location on a sensor
+  bool isValidStrip(int layer, int strip, const fc::DetectorGeometry &);
+  bool isValidHit(int layer, const TVector3& HitPosition, const fc::DetectorGeometry &);
+
 
   
 } // end namescape fcf

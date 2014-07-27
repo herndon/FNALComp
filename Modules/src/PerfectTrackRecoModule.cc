@@ -32,6 +32,9 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
 
   recoTracks(*perfectRecoTrackSet,*recoHitSet,*genHitSet);
 
+  std::cout << "Perfect reconstructed tracks" << std::endl;
+  perfectRecoTrackSet->print();
+
   event.put(_outTracksLabel,std::move(perfectRecoTrackSet) );
 }
 
@@ -67,6 +70,7 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vec
 
     deltaPosition = 999.0;
     recoHitNumber = 0;
+    bestRecoHitNumber = -1;
 
     for (hitSet::const_iterator recoHitIter = recoHitSet.getHits().begin(); recoHitIter != recoHitSet.getHits().end(); ++recoHitIter,++recoHitNumber) {
 
@@ -79,11 +83,11 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vec
       }
 
     } // end reco Hit loop
-    if (genHitIter->getTrackNumber() == trackNumber) {
+    if (genHitIter->getTrackNumber() == trackNumber && bestRecoHitNumber>-1) {
 
       trackHitCandidate.push_back(bestRecoHitNumber);
 
-    } else {
+    } else if (genHitIter->getTrackNumber() != trackNumber){
       trackHitCandidates.push_back(trackHitCandidate);
       trackHitCandidate.clear();
       trackHitCandidate.push_back(bestRecoHitNumber);
