@@ -42,7 +42,7 @@ public:
   void writeEvent(const TrackSet &, std::ofstream&) const; //!< Write all track information in the event to std::ofstream file
   void readEvent(TrackSet &, std::ifstream&);  //!< Read all track information for on event from std::ifstream file
 
-  void print(void) const;
+  void print() const;
 
 
 };

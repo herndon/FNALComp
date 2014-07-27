@@ -80,9 +80,9 @@ public:
   // Get objects
 
   const Helix & getHelix() const {return _helix;};
-  const TLorentzVector  getLorentzVector(void) const;
+  const TLorentzVector  getLorentzVector() const;
 
-  int getCharge(void) const {return -getHelix().getKappa()/std::abs(getHelix().getKappa());};
+  int getCharge() const {return -getHelix().getKappa()/std::abs(getHelix().getKappa());};
 
   const TMatrixD & getCovMatrix() const {return _covMatrix;}
   double getSigmaD0() const {return std::sqrt(_covMatrix(0,0));}
@@ -96,13 +96,13 @@ public:
 
   // Hit/measurement point information
 
-  const trackHitSet& getHits(void) const {return _trackHitSet;};
+  const trackHitSet& getHits() const {return _trackHitSet;};
   int numberHits() const {return _trackHitSet.size();}
 
 
   void insertHit(int);
 
-  void print(void) const;
+  void print() const;
 
 };
 } // end namescape fc

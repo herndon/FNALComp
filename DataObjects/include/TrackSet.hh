@@ -37,11 +37,11 @@ public:
   TrackSet(){};
   ~TrackSet() {};
 
-  const trackSet & getTracks(void) const { return _trackSet;};
+  const trackSet & getTracks() const { return _trackSet;};
 
   void insertTrack(const Track &);
 
-  void print(void) const;
+  void print() const;
 
 
 };

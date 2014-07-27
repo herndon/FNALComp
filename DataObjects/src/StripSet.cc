@@ -41,7 +41,7 @@ void fc::StripSet::insertStrip(unsigned int layer, int strip, int adc) {
 
 
 
-void fc::StripSet::print(void) const{
+void fc::StripSet::print() const{
 
   std::cout << "StripSet" << std::endl;
 

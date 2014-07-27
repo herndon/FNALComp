@@ -20,7 +20,7 @@ fc::DetectorGeometry::DetectorGeometry(int detectorGeometryVersion,int nXSensors
   _primaryVertexZ(primaryVertexZ){
 }
 
-void fc::DetectorGeometry::printDetectorGeometry( void ) const {
+void fc::DetectorGeometry::printDetectorGeometry() const {
 
   std::cout << "Detector Geometry information" << std::endl;
   std::cout << "Detector Geometry version: " << _detectorGeometryVersion << std::endl;

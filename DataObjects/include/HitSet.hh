@@ -35,12 +35,12 @@ public:
   ~HitSet() {};
 
 
-  const hitSet & getHits(void) const {return _hitSet;};
+  const hitSet & getHits() const {return _hitSet;};
 
 
   void insertHit(const Hit&);
 
-  void print(void) const;
+  void print() const;
 
 };
 } // end namespace fc

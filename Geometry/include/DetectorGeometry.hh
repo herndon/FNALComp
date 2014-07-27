@@ -52,18 +52,18 @@ public:
  ~DetectorGeometry() {};
 
   const sensorDescriptor& getSensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
-  int getDetectorGeometryVersion(void) const {return _detectorGeometryVersion;}
-  int getNSensors(void) const {return _sensors.size();}
-  int getNXSensors(void) const {return _nXSensors;}
-  int getNSASSensors(void) const {return _nSASSensors;}
-  int getNZSensors(void) const {return _nZSensors;}
-  double getZBField(void) const {return _bField.Z();}
-  const TVector3 & getBField(void) const {return _bField;}
-  double getMIP(void) const {return _MIP;}
+  int getDetectorGeometryVersion() const {return _detectorGeometryVersion;}
+  int getNSensors() const {return _sensors.size();}
+  int getNXSensors() const {return _nXSensors;}
+  int getNSASSensors() const {return _nSASSensors;}
+  int getNZSensors() const {return _nZSensors;}
+  double getZBField() const {return _bField.Z();}
+  const TVector3 & getBField() const {return _bField;}
+  double getMIP() const {return _MIP;}
   double getCurvatureCInField(TVector3 _bField) const {return _curvatureC*_bField.Z();}
 
 
-  void printDetectorGeometry(void) const;
+  void printDetectorGeometry() const;
 
 
 

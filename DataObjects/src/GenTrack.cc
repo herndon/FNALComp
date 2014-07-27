@@ -26,7 +26,7 @@ const fc::Helix fc::GenTrack::makeHelix() const{
 }
 
 
-void fc::GenTrack::print(void) const{
+void fc::GenTrack::print() const{
 
   std::cout << "Charge " << _charge << std::endl;
   std::cout << "4 momentum " << _lorentzVector.Px() << " " <<  _lorentzVector.Py() << " " <<  _lorentzVector.Pz() << " " <<  _lorentzVector.E() << " " << std::endl;

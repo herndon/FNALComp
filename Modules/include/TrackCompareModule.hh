@@ -38,7 +38,7 @@ public:
 
   void processEvent(fc::Event&) override;
 
-  void endJob(void) override;
+  void endJob() override;
 
 
 private:
@@ -73,7 +73,7 @@ private:
   TH1F * deltaZ0Pull;
   TH1F * deltaTanLPull;
 
-  void initializeHistograms(void);
+  void initializeHistograms();
 
 };
 } // end namespace fc

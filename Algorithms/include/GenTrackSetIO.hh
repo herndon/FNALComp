@@ -40,7 +40,7 @@ public:
  
   void readEvent(GenTrackSet &, std::ifstream&);  //!< Read all track information for on event from std::ifstream file
 
-  void print(void) const;
+  void print() const;
 
 
 };

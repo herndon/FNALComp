@@ -30,7 +30,7 @@ fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector
 }
 
 
-const TLorentzVector fc::Track::getLorentzVector(void) const{
+const TLorentzVector fc::Track::getLorentzVector() const{
   TLorentzVector lorentzVector;
   double pT = std::abs(1.0/getHelix().getKappa());
   double pZ = getHelix().getTanL()*pT;
@@ -55,7 +55,7 @@ void fc::Track::insertHit(int hitNumber){
   _trackHitSet.push_back(hitNumber);
 }
 
-void fc::Track::print(void) const{
+void fc::Track::print() const{
 
   TLorentzVector lorentzVector = getLorentzVector();
 

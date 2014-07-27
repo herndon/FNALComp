@@ -40,7 +40,7 @@ public:
   double getMinPTCut() const {return _minPTCut;}
   double getMaxChi2NDofCut() const {return _maxChi2NDofCut;}
 
-  void printConfig(void) const;
+  void printConfig() const;
 
 
 private:

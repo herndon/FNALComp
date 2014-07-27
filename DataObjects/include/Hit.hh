@@ -37,12 +37,12 @@ public:
   Hit(const TVector3&, int, int);      //!< TVector3 hitPosition, int layer, int numberStrips 
   ~Hit() {};
 
-  const TVector3 & getHitPosition(void) const {return _hitPosition; };
-  int getLayer(void) const {return _layer;};
-  int getNumberStrips(void) const {return _numberStrips;};
-  int getTrackNumber(void) const {return _trackNumber;};
+  const TVector3 & getHitPosition() const {return _hitPosition; };
+  int getLayer() const {return _layer;};
+  int getNumberStrips() const {return _numberStrips;};
+  int getTrackNumber() const {return _trackNumber;};
 
-  void print(void) const;
+  void print() const;
 
 };
 } // end namespace fc

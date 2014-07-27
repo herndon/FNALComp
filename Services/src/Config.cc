@@ -61,7 +61,7 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
 
 
  
-void fc::Config::printConfig( void ) const {
+void fc::Config::printConfig() const {
 
   std::cout << "Program configuration information" << std::endl;
 

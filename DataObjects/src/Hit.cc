@@ -15,7 +15,7 @@ fc::Hit::Hit(const TVector3 & hitPosition, int layer, int numberStrips):
   _trackNumber(-1){
 }
 
-void fc::Hit::print(void) const{
+void fc::Hit::print() const{
 
   std::cout << "Hit position: " << _hitPosition.x() << " " <<  _hitPosition.y() << " " <<_hitPosition.z() << std::endl;
   std::cout << "Layer" << _layer << std::endl;

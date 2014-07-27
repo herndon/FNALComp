@@ -45,7 +45,7 @@ public:
 
   void insertStrip(unsigned int, int, int); //!< Insert strip by layer, strip number, adc count
 
-  void print(void) const;
+  void print() const;
 
 };
 } // end namespace

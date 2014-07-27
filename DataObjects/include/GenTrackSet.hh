@@ -35,11 +35,11 @@ public:
   GenTrackSet() {};
   ~GenTrackSet() {};
 
-  const genTrackSet & getGenTracks(void) const { return _genTrackSet;};
+  const genTrackSet & getGenTracks() const { return _genTrackSet;};
  
   void insertTrack(const GenTrack&);
 
-  void print(void) const;
+  void print() const;
 
 
 };

@@ -7,7 +7,7 @@ void fc::TrackSet::insertTrack(const Track& track) {
   _trackSet.push_back(track);
 }
 
-void fc::TrackSet::print(void) const{
+void fc::TrackSet::print() const{
 
   std::cout << "TrackSet " << std::endl;
 

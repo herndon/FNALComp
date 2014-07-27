@@ -36,7 +36,7 @@ public:
 
   void processEvent(fc::Event&) override;
 
-  void endJob(void) override;
+  void endJob() override;
 
 
 private:
