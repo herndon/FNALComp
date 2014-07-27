@@ -3,6 +3,7 @@
 #include<cmath>
 #include <iostream>
 #include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/Helix.hh"
 #include "Algorithms/include/TrackFitAlgorithms.hh"
 #include "Algorithms/include/HelixIntersections.hh"
 #include "Algorithms/include/TrackFitMeasurements.hh"

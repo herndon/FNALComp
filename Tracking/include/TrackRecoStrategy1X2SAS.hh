@@ -13,6 +13,7 @@
 
 namespace fc {
 
+class DetectorGeometry;
 class HitSet;
 
   class TrackRecoStrategy1X2SAS : public TrackRecoStrategy{

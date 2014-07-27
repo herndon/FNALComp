@@ -40,8 +40,6 @@ class DetectorGeometry;
 
 namespace fc {
 
-  class HitSet;
-
 typedef std::vector<int> trackHitSet; //!< Vector of hit indicies
 
 ///

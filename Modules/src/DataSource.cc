@@ -1,3 +1,5 @@
+#include "Geometry/include/DetectorGeometry.hh"
+#include "Framework/include/Event.hh"
 #include "DataObjects/include/GenTrackSet.hh"
 #include "Algorithms/include/GenTrackSetIO.hh"
 #include "DataObjects/include/HitSet.hh"

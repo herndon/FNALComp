@@ -15,14 +15,11 @@
 #include "DataObjects/include/Track.hh"
 #include <map>
 
-class DetectorGeometry;
-class HitSet;
-class Helix;
-
-
 namespace fc {
 
-
+  class DetectorGeometry;
+  class HitSet;
+  class Helix;
 
   const fc::Helix FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet & trackHitSet, const DetectorGeometry& detectorGeometry, TMatrixD &, double&, int&, int _debugLevel);
   const fc::Helix FitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSet, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel);

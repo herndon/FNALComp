@@ -1,6 +1,7 @@
 #include <string>
 #include <algorithm>
 #include "Services/include/Exception.hh"
+#include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/StripSet.hh"
 #include "Algorithms/include/StripSetIO.hh"
 

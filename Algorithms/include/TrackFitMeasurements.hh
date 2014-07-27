@@ -14,13 +14,12 @@
 
 #include "TMatrixD.h"
 
-#include "DataObjects/include/Helix.hh"
-
 class TVector3;
-class Helix;
-class DetectorGeometry;
 
 namespace fc {
+
+  class Helix;
+  class DetectorGeometry;
 
   const TMatrixD expectedMeasurementVector1D(const fc::Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry);
   const TMatrixD expectedMeasurementDerivatived1DdHC(const fc::Helix& helix,int layer, const fc::DetectorGeometry & detectorGeometry);

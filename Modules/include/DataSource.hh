@@ -15,17 +15,15 @@
 
 #include <fstream>
 #include <iostream>
-#include "Geometry/include/DetectorGeometry.hh"
-#include "Framework/include/Event.hh"
 #include "Framework/include/Source.hh"
 
+namespace fc {
 
 class TrackSet;
 class HitSet;
 class StripSet;
 class Event;
-
-namespace fc {
+class DetectorGeometry;
 
 ///
 /// Class DataSource

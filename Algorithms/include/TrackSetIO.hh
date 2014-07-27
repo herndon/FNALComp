@@ -13,12 +13,12 @@
 //============================================================================
 #include <fstream>
 #include <iostream>
-#include "Geometry/include/DetectorGeometry.hh"
 
-class TrackSet;
 
 namespace fc {
 
+class DetectorGeometry;
+class TrackSet;
 
 ///
 /// Class TrackSetIO: 

@@ -15,10 +15,12 @@
 #include <vector>
 #include <string>
 
+
+namespace fc {
+
 class DetectorGeometry;
 class HitSet;
 
-namespace fc {
 
 ///
 /// Class HitRecoModule  Module for reconstructing hits from strip infomation

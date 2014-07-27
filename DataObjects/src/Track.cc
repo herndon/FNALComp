@@ -4,11 +4,8 @@
 #include <iostream>
 #include "DataObjects/include/HitSet.hh"
 #include "Geometry/include/DetectorGeometry.hh"
-#include "DataObjects/include/Track.hh"
 #include "DataObjects/include/Helix.hh"
-#include "Algorithms/include/TrackFit.hh"
-#include "Algorithms/include/InitializeHelix.hh"
-
+#include "DataObjects/include/Track.hh"
 
 // Full parameter initialization
 fc::Track::Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate):
@@ -33,8 +30,6 @@ fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector
 }
 
 
-
-
 const TLorentzVector fc::Track::getLorentzVector(void) const{
   TLorentzVector lorentzVector;
   double pT = std::abs(1.0/getHelix().getKappa());
@@ -42,8 +37,6 @@ const TLorentzVector fc::Track::getLorentzVector(void) const{
   lorentzVector.SetPxPyPzE(pT*std::cos(getHelix().getPhi0()-M_PI/2.0),pT*std::sin(getHelix().getPhi0()-M_PI/2.0),pZ,std::sqrt(pT*pT+pZ*pZ));
   return lorentzVector;
 }
-
-// !!!!! revisit whether the copy constructor and assigment op are necessary.  The assignment op is to support delting in the TrackSet
 
 
 fc::Track & fc::Track:: operator=(Track track){
@@ -58,19 +51,9 @@ fc::Track & fc::Track:: operator=(Track track){
 
 }
 
-
-
 void fc::Track::insertHit(int hitNumber){
   _trackHitSet.push_back(hitNumber);
 }
-
-
-
-
-
-
-
-
 
 void fc::Track::print(void) const{
 

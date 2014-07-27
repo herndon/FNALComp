@@ -15,18 +15,20 @@
 
 #include <vector>
 #include <string>
-#include "Services/include/Random.hh"
 #include "Framework/include/Module.hh"
 
+
+class TVector3;
+
+namespace fc {
 
 class DetectorGeometry;
 class GenTrackSet;
 class GenTrack;
 class HitSet;
 class StripSet;
-class TVector3;
+class Random;
 
-namespace fc {
 
 ///
 /// Class HitStripGenModule Module for generating associated hit and strip data from tracks

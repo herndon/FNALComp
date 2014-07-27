@@ -15,11 +15,8 @@
 #include <iostream>
 #include <string>
 #include <memory>
-#include "Services/include/Random.hh"
 #include "Framework/include/Module.hh"
 
-class GenTrack;
-class GenTrackSet;
 class TH1D;
 
 ///
@@ -28,6 +25,10 @@ class TH1D;
 ///
 
 namespace fc {
+
+class GenTrack;
+class GenTrackSet;
+class Random;
 
 class TrackGenModule : public Module {
 

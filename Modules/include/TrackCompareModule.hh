@@ -12,15 +12,16 @@
 #include "Framework/include/Module.hh"
 #include "TVectorD.h"
 
+class TH1F;
+
+
+namespace fc {
+
 class DetectorGeometry;
 class GenTrack;
 class GenTrackSet;
 class Track;
 class TrackSet;
-class TH1F;
-
-
-namespace fc {
 
 ///
 /// Class TrackCompareModule  Module for comparing reconstructed track parameters to generated track parameters

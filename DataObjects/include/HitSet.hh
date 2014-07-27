@@ -11,11 +11,12 @@
 // 2014-06-08
 //============================================================================
 #include <vector>
-#include "DataObjects/include/Hit.hh"
+#include "DataObjects/include/Hit.hh" 
 
 namespace fc {
 
   typedef std::vector<Hit> hitSet;
+
 
 ///
 /// Class HitSet: 

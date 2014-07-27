@@ -12,12 +12,13 @@
 //============================================================================
 #include <fstream>
 #include <iostream>
-#include "Geometry/include/DetectorGeometry.hh"
 
 class StripSet;
 
 namespace fc {
 
+class DetectorGeometry;
+class StripSet;
 
 ///
 /// Class StripSetIO: 
@@ -33,7 +34,7 @@ private:
   static const int adcBitmask = 0x001F;
   static const int stripBitmask = 0xFFE0;
 
-  const DetectorGeometry _detectorGeometry;
+  const DetectorGeometry& _detectorGeometry;
 
   int _version;
 

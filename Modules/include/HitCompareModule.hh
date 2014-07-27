@@ -9,15 +9,17 @@
 // 2014-06-12
 //============================================================================
 
-#include "Geometry/include/DetectorGeometry.hh"
 #include "Framework/include/Module.hh"
 
-class Hit;
-class HitSet;
 class TH1F;
 
 
 namespace fc {
+
+class Hit;
+class HitSet;
+class DetectorGeometry;
+
 
 ///
 /// Class HitCompareModule  Module for comparing reconstructing hit position to generator hit positions

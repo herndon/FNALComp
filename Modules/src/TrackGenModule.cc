@@ -2,6 +2,7 @@
 #include <string>
 #include<stdlib.h>
 #include<cmath>
+#include "Services/include/Random.hh"
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/GenTrack.hh"
 #include "DataObjects/include/GenTrackSet.hh"

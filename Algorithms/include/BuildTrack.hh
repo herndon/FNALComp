@@ -11,12 +11,13 @@
 // 2014-07-08
 //============================================================================
 
-#include "DataObjects/include/Track.hh"
 
-class DetectorGeometry;
-class HitSet;
 
 namespace fc {
+
+  class DetectorGeometry;
+  class HitSet;
+  class Track;
 
   const Track BuildTrack(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel);
 

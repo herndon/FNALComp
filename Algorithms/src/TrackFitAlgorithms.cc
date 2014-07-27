@@ -4,6 +4,7 @@
 #include <iostream>
 #include "TVector3.h"
 #include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/Helix.hh"
 #include "Algorithms/include/TrackFitAlgorithms.hh"
 
 

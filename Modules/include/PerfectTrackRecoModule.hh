@@ -11,10 +11,11 @@
 
 #include "Framework/include/Module.hh"
 
-class DetectorGeometry;
-class HitSet;
 
 namespace fc {
+
+class DetectorGeometry;
+class HitSet;
 
 ///
 /// Class PerfectTrackRecoModule  Module for reconstructing track using correct Hits

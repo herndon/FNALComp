@@ -11,12 +11,12 @@
 
 #include<vector>
 #include "DataObjects/include/TrackSet.hh"
-#include "DataObjects/include/Track.hh"
 
 namespace fc {
 
   class DetectorGeometry;
   class HitSet;
+  class Track;
 
   class TrackRecoStrategy {
 

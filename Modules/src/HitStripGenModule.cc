@@ -3,8 +3,10 @@
 #include<stdlib.h>
 #include<iostream>
 #include<cmath>
+#include "Services/include/Random.hh"
 #include "DataObjects/include/GenTrack.hh"
 #include "DataObjects/include/GenTrackSet.hh"
+#include "DataObjects/include/Helix.hh"
 #include "Algorithms/include/HelixIntersections.hh"
 #include "Algorithms/include/InitializeHelix.hh"
 #include "DataObjects/include/HitSet.hh"

@@ -12,18 +12,14 @@
 //============================================================================
 
 #include "TVector3.h"
-#include "Geometry/include/DetectorGeometry.hh"
-#include "DataObjects/include/Helix.hh"
-
-class TVector3;
-class DetectorGeometry;
-class Helix;
 
 namespace fc {
 
+class DetectorGeometry;
+class Helix;
 
-  bool intersectWithLayer(const fc::Helix& helix, TVector3 & hitPosition, int layer, const fc::DetectorGeometry & detectorGeometry);
-  bool intersectWithPlane(const fc::Helix& helix, TVector3 & hitPosition, const TVector3 & center, const TVector3 & normal,double & phi);
+  bool intersectWithLayer(const Helix& helix, TVector3 & hitPosition, int layer, const fc::DetectorGeometry & detectorGeometry);
+  bool intersectWithPlane(const Helix& helix, TVector3 & hitPosition, const TVector3 & center, const TVector3 & normal,double & phi);
 
 } // end namescape fc
 

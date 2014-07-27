@@ -13,12 +13,12 @@
 
 
 #include "TMatrixD.h"
-#include "DataObjects/include/Helix.hh"
 
 class TVector3;
 
 namespace fc {
 
+  class Helix;
 
   const TVector3 calcXAt(const fc::Helix&,double phi);
   const TMatrixD calcDxDHC(const fc::Helix&, double phi);
