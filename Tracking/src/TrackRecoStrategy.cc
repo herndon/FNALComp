@@ -33,7 +33,7 @@ void fc::TrackRecoStrategy::finalTrackFilter(fc::trackSet & trackCandidateSet) c
   for (trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter != trackCandidateSet.end(); ++trackIter){
  
     trackSet::iterator trackIter2 = trackIter;
-    trackIter2++;
+    ++trackIter2;
 
     for ( ; trackIter2 != trackCandidateSet.end(); ++trackIter2){
 

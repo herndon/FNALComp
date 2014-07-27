@@ -86,7 +86,7 @@ const TMatrixD fc::calcD1DDHC(const TVector3   & hitPosition,
   // Set dX = (@h/@a) = (@d/@a, @z/@a)^t
   TMatrixD dXZdHC(DetectorGeometry::_mDim,Helix::_sDim);   
 
-  for (Int_t i=0; i<Helix::_sDim; i++) {
+  for (Int_t i=0; i<Helix::_sDim; ++i) {
     //    dXZdHC(0,i) = - (hitPosition.Y() / r) * dxphiadHC(0,i) 
     //      + (hitPosition.X() / r) * dxphiadHC(1,i);
     //    dXZdHC(0,i) *= r;

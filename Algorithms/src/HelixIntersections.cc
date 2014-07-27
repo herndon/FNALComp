@@ -60,7 +60,7 @@ bool fc::intersectWithPlane(const Helix& helix, TVector3 & hitPosition, const TV
 // 		   << "   s      : " << lasts      << std::endl
 // 		   << "   lambda : " << lambda << std::endl;
 // 	 print();
-      count++;
+      ++count;
       s  = (hitPosition-center)*normal;
       if (std::abs(s) < eps) break;
       if (std::abs(s) < std::abs(lasts)) {

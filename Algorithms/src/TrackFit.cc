@@ -86,7 +86,7 @@ const fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
       chi2  = chi2Best;
       break;
     }
-    nloops++;
+    ++nloops;
 
     d2chi2dHCdHC.Zero();
     dchi2dHC.Zero();
@@ -212,7 +212,7 @@ const fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
 
     // Add delta to 2nd derivative and use to modify the helix
 
-    for (int i=0; i<Helix::_sDim; i++) {
+    for (int i=0; i<Helix::_sDim; ++i) {
       d2chi2dHCdHC(i, i) *= (1 + delta);
     }
       
