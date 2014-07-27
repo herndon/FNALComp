@@ -1,6 +1,5 @@
-#include<iostream>
+#include <iostream>
 #include<vector>
-#include "Services/include/Config.hh"
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "DataObjects/include/Track.hh"
@@ -10,6 +9,7 @@
 #include "Tracking/include/TrackRecoStrategy1X2SAS.hh"
 #include "Algorithms/include/TrackFitMeasurements.hh"
 #include "Algorithms/include/InitializeHelix.hh"
+#include "Services/include/Config.hh"
 
 
 fc::TrackRecoModule::TrackRecoModule(int debugLevel, 

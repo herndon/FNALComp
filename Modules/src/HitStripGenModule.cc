@@ -65,10 +65,7 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, 
     storeHitInfo(hitSet,trackNumber,hitNumber,hitPosition,ii_layer);
 
     storeStripInfo(stripSet,hitPosition,ii_layer);
-    } else {
-      std::cout << "missed intersection" << std::endl;
-    }
-
+    } 
   } // end layer loop
 
 

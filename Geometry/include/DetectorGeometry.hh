@@ -63,7 +63,7 @@ public:
   double getCurvatureCInField(TVector3 _bField) const {return _curvatureC*_bField.Z();}
 
 
-  void printDetectorGeometry() const;
+  void printDetectorGeometry(ostream& out) const;
 
 
 

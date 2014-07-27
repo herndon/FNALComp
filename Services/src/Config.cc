@@ -1,5 +1,3 @@
-#include <fstream>
-#include <iostream>
 #include <string>
 #include "Services/include/Exception.hh"
 #include "Services/include/Config.hh"
@@ -11,7 +9,7 @@ fc::Config::Config(std::ifstream & configfile,int genData):
   _seed(1) {
 
   _initConfig(configfile);
-  printConfig();
+  printConfig(std::cout);
 
 }
 
@@ -61,19 +59,19 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
 
 
  
-void fc::Config::printConfig() const {
+void fc::Config::printConfig(std::ostream& out) const {
 
-  std::cout << "Program configuration information" << std::endl;
+  out << "Program configuration information" << std::endl;
 
   if (_genData) {
-    std::cout << "gen Data configuration" << std::endl;
-    std::cout << "Number Events: " << _numberEvents << std::endl;
-    std::cout << "Number Tracks " << _numberTracks << std::endl;
-    std::cout << "Random number seed " << _seed << std::endl;
-    std::cout << "Root file name " << _rootFileName << std::endl;
+    out << "gen Data configuration" << std::endl;
+    out << "Number Events: " << _numberEvents << std::endl;
+    out << "Number Tracks " << _numberTracks << std::endl;
+    out << "Random number seed " << _seed << std::endl;
+    out << "Root file name " << _rootFileName << std::endl;
   } else {
-    std::cout << "reco Data configuration" << std::endl;
-    std::cout << "Root file name " << _rootFileName << std::endl;
+    out << "reco Data configuration" << std::endl;
+    out << "Root file name " << _rootFileName << std::endl;
   }
 
 }

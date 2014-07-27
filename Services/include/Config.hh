@@ -1,5 +1,7 @@
 #ifndef Config_hh
 #define Config_hh
+#include <fstream>
+#include <iostream>
 //============================================================================
 // Config.hh
 // header for Config class
@@ -40,7 +42,7 @@ public:
   double getMinPTCut() const {return _minPTCut;}
   double getMaxChi2NDofCut() const {return _maxChi2NDofCut;}
 
-  void printConfig() const;
+  void printConfig(std::ostream& out) const;
 
 
 private:

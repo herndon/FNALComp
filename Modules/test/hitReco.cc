@@ -48,7 +48,7 @@ int main ()
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
   fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(detectorgeometryfile));  
   // files are closed by the default destructor
-  if (debugLevel >= 2) detectorGeometry.printDetectorGeometry();
+  if (debugLevel >= 2) detectorGeometry.printDetectorGeometry(std::cout);
 
   // Input and output files
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
