@@ -25,11 +25,9 @@ void fc::TrackCandidateStrategy::findTrackCandidates(trackSet& trackCandidateSet
 
 void fc::TrackCandidateStrategy::buildTrackCandidates(trackSet& trackCandidateSet,std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet) const {
 
-  for (std::vector<trackHitSet>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
-    Track trackCandidate(BuildTrack(hitSet,*trackHitCandidateIter,_detectorGeometry,_debugLevel));
-    trackCandidateSet.push_back(trackCandidate);
+  for (auto const& trackHitCandidate: trackHitCandidates) {
+    trackCandidateSet.push_back(buildTrack(hitSet,trackHitCandidate,_detectorGeometry,_debugLevel));
   }
-
 }
 
 bool fc::TrackCandidateStrategy::goodCandidate(const Helix & helix) const {

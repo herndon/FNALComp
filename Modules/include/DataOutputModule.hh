@@ -1,5 +1,5 @@
-#ifndef DataOutputModule_hh
-#define DataOutputModule_hh
+#ifndef Modules_DataOutputModule_hh
+#define Modules_DataOutputModule_hh
 //============================================================================
 // DataOutputModule.hh
 // Module for writing raw detector data and reconstructed objet from the
@@ -37,7 +37,6 @@ public:
 		   const std::string& iInputHitsLabel,
 		   const std::string& iInputStripsLabel,
 		   const DetectorGeometry&);
-  ~DataOutputModule() {};
 
   void processEvent(Event&) override;
 
@@ -59,4 +58,4 @@ private:
 } // end namespace fc
 
 
-#endif // DataOutputModule_hh
+#endif // Modules_DataOutputModule_hh

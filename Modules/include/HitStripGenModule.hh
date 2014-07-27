@@ -1,5 +1,5 @@
-#ifndef HitStripGenModule_hh
-#define HitStripGenModule_hh
+#ifndef Modules_HitStripGenModule_hh
+#define Modules_HitStripGenModule_hh
 //============================================================================
 // HitStripGenModule.hh
 // Module for generating associated hit and strip data from tracks on the 
@@ -44,7 +44,6 @@ public:
 		    const std::string& iOutputHitsLabel,
 		    const std::string& iOutputStripsLabel,
 		    const DetectorGeometry &, Random &);
-  ~HitStripGenModule() {};
 
   void processEvent(Event&) override;
 
@@ -76,4 +75,4 @@ private:
 };
 } // end namespace fc
 
-#endif // HitStripGenModule_hh
+#endif // Modules_HitStripGenModule_hh

@@ -1,14 +1,10 @@
-#ifndef CountEventsSource_hh
-#define CountEventsSource_hh
+#ifndef Modules_CountEventsSource_hh
+#define Modules_CountEventsSource_hh
 
 #include "Framework/include/Source.hh"
 
 namespace fc {
   class CountEventsSource : public Source {
-    const unsigned int _numberOfEventsToProcess;
-    unsigned int _numberOfEventsProcessed = 0;
-    bool _genData;
-
   public:
     CountEventsSource(unsigned int iNumberOfEventsToProcess, bool genData):
       _numberOfEventsToProcess{iNumberOfEventsToProcess},
@@ -17,7 +13,12 @@ namespace fc {
 
     std::unique_ptr<Event> getNextEvent() override;
 
+  private:
+    const unsigned int _numberOfEventsToProcess;
+    unsigned int _numberOfEventsProcessed = 0;
+    bool _genData;
+
   };
 }
 
-#endif //CountEventsSource_hh
+#endif //Modules_CountEventsSource_hh

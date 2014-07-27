@@ -1,5 +1,5 @@
-#ifndef TrackCandidateStrategy1X2SAS_hh
-#define TrackCandidateStrategy1X2SAS_hh
+#ifndef Tracking_TrackCandidateStrategy1X2SAS_hh
+#define Tracking_TrackCandidateStrategy1X2SAS_hh
 //============================================================================
 // TrackCandidateStategy1X2SAS.hh
 // header with function definitions of the TrackCandidateStategy1X2SAS 
@@ -34,5 +34,5 @@ class DetectorGeometry;
 
 } // end namescape fc
 
-#endif // TrackCandidateStrategy1X2SAS_hh
+#endif // Tracking_TrackCandidateStrategy1X2SAS_hh
 

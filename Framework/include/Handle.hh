@@ -1,5 +1,5 @@
-#ifndef Handle_hh
-#define Handle_hh
+#ifndef Framework_Handle_hh
+#define Framework_Handle_hh
 
 namespace fc {
   class Event;
@@ -29,4 +29,4 @@ namespace fc {
   };
 }
 
-#endif //Handle_hh
+#endif //Framework_Handle_hh

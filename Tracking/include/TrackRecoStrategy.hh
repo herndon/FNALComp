@@ -1,5 +1,5 @@
-#ifndef TrackRecoStrategy_hh
-#define TrackRecoStrategy_hh
+#ifndef Tracking_TrackRecoStrategy_hh
+#define Tracking_TrackRecoStrategy_hh
 //============================================================================
 // TrackRecoStrategy.hh
 // header with function definitions of the TrackRecoStrategy base class for tracking stratgies
@@ -20,6 +20,11 @@ namespace fc {
 
   class TrackRecoStrategy {
 
+  public: 
+   TrackRecoStrategy( const TrackRecoStrategy&) = delete;
+
+    void recoTracks(trackSet & trackCandidateSet, const HitSet& hitSet) const;
+
   protected:
 
     int _debugLevel;
@@ -27,18 +32,8 @@ namespace fc {
     // Detector information
     const DetectorGeometry & _detectorGeometry;
 
- 
-
-  protected:
     TrackRecoStrategy(int debugLevel,const DetectorGeometry & detectorGeometry);
 
-  public: 
-   TrackRecoStrategy( const TrackRecoStrategy&) = delete;
-    ~TrackRecoStrategy() = default;
-
-    void recoTracks(trackSet & trackCandidateSet, const HitSet& hitSet) const;
-
-  protected:
     // Iterative track reconstruction
     virtual void findTracks(trackSet& trackCandidateSet,const HitSet & recoHitSet) const = 0;
 
@@ -60,5 +55,5 @@ namespace fc {
 
 } // end namescape fc
 
-#endif // TrackRecoStrategy_hh
+#endif // Tracking_TrackRecoStrategy_hh
 

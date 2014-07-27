@@ -1,5 +1,5 @@
-#ifndef InitializeHelix_hh
-#define InitializeHelix_hh
+#ifndef Algorithms_InitializeHelix_hh
+#define Algorithms_InitializeHelix_hh
 //============================================================================
 // InitializeHelix.hh
 // header with class definition of the InitializeHelix from 3 points
@@ -32,5 +32,5 @@ class Hit;
   
 } // end namescape fc
 
-#endif // InitializeHelix_hh
+#endif // Algorithms_InitializeHelix_hh
 

@@ -1,5 +1,5 @@
-#ifndef Source_hh
-#define Source_hh
+#ifndef Framework_Source_hh
+#define Framework_Source_hh
 #include <memory>
 
 namespace fc {
@@ -17,4 +17,4 @@ namespace fc {
   };
 }
 
-#endif //Source_hh
+#endif //Framework_Source_hh

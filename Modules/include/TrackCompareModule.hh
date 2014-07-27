@@ -1,5 +1,5 @@
-#ifndef TrackCompareModule_hh
-#define TrackCompareModule_hh
+#ifndef Modules_TrackCompareModule_hh
+#define Modules_TrackCompareModule_hh
 //============================================================================
 // TrackCompareModule.hh
 // Module for comparing reconstructed track parameters to generated track parameters
@@ -34,7 +34,6 @@ public:
 
   TrackCompareModule(int, const std::string& iInputGenTracksLabel, const std::string& iInputRecTracksLabel,
 		     const DetectorGeometry & );
-  ~TrackCompareModule() {};
 
   void processEvent(fc::Event&) override;
 
@@ -78,4 +77,4 @@ private:
 };
 } // end namespace fc
 
-#endif // TrackCompareModule_hh
+#endif // Modules_TrackCompareModule_hh

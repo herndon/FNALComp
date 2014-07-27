@@ -1,5 +1,5 @@
-#ifndef ProductID_hh
-#define ProductID_hh
+#ifndef Framework_ProductID_hh
+#define Framework_ProductID_hh
 
 #include <string>
 
@@ -38,4 +38,4 @@ namespace fc {
   };
 }
 
-#endif //ProductID_hh
+#endif //Framework_ProductID_hh

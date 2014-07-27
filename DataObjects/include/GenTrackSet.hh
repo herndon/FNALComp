@@ -1,5 +1,5 @@
-#ifndef GenTrackSet_hh
-#define GenTrackSet_hh
+#ifndef DataObjects_GenTrackSet_hh
+#define DataObjects_GenTrackSet_hh
 //============================================================================
 // GenTrackSet.hh
 // header with class definition of the GenTrackSet
@@ -25,15 +25,7 @@ namespace fc {
 ///
 
 class GenTrackSet {
-private:
-
-
-  genTrackSet _genTrackSet;
- 
 public:
-
-  GenTrackSet() {};
-  ~GenTrackSet() {};
 
   const genTrackSet & getGenTracks() const { return _genTrackSet;};
  
@@ -41,9 +33,11 @@ public:
 
   void print(ostream& out) const;
 
+private:
 
+  genTrackSet _genTrackSet;
 };
 } // end namespace fc
 
-#endif // GenTrackSet_hh
+#endif // DataObjects_GenTrackSet_hh
 

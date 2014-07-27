@@ -1,5 +1,5 @@
-#ifndef Hit_hh
-#define Hit_hh
+#ifndef DataObjects_Hit_hh
+#define DataObjects_Hit_hh
 //============================================================================
 // Hit.hh
 // header with class definition of the Hit
@@ -24,18 +24,10 @@ namespace fc {
 ///
 
 class Hit {
-private:
-
-  TVector3 _hitPosition;
-  int _layer;
-  int _numberStrips;
-  int _trackNumber;  
-
 public:
 
   Hit(const TVector3&, int, int, int); //!< TVector3 hitPosition, int layer, int numberStrips, int trackNumber
   Hit(const TVector3&, int, int);      //!< TVector3 hitPosition, int layer, int numberStrips 
-  ~Hit() {};
 
   const TVector3 & getHitPosition() const {return _hitPosition; };
   int getLayer() const {return _layer;};
@@ -44,6 +36,12 @@ public:
 
   void print(ostream& out) const;
 
+private:
+
+  TVector3 _hitPosition;
+  int _layer;
+  int _numberStrips;
+  int _trackNumber;  
 };
 } // end namespace fc
-#endif // Hit_hh
+#endif // DataObjects_Hit_hh

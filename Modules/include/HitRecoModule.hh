@@ -1,5 +1,5 @@
-#ifndef HitRecoModule_hh
-#define HitRecoModule_hh
+#ifndef Modules_HitRecoModule_hh
+#define Modules_HitRecoModule_hh
 //============================================================================
 // HitRecoModule.hh
 // Module for reconstructing hits from strip infomation
@@ -32,7 +32,6 @@ class HitRecoModule : public Module {
 public:
 
   HitRecoModule(int, const std::string& iInputStripsLabel, const std::string& iOutputHitsLabel, const DetectorGeometry &);
-  ~HitRecoModule() {};
 
   void processEvent(Event& ) override;
 
@@ -57,4 +56,4 @@ private:
 };
 } // end namespace fc
 
-#endif // HitRecoModule_hh
+#endif // Modules_HitRecoModule_hh

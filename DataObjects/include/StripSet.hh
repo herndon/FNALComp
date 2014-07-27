@@ -1,5 +1,5 @@
-#ifndef StripSet_hh
-#define StripSet_hh
+#ifndef DataObjects_StripSet_hh
+#define DataObjects_StripSet_hh
 //============================================================================
 // StripSet.hh
 // header with class definition of the StripSet
@@ -29,14 +29,9 @@ namespace fc {
 ///
 
 class StripSet {
-private:
-
-  std::vector<layerStripMap> _layerStripMapArray;
-
 public:
 
-  StripSet(const DetectorGeometry&);
-  ~StripSet() {};
+  explicit StripSet(const DetectorGeometry&);
 
   const layerStripMap& getLayerStripMap(unsigned int layer) const;
 
@@ -47,8 +42,11 @@ public:
 
   void print(ostream& out) const;
 
+private:
+
+  std::vector<layerStripMap> _layerStripMapArray;
 };
 } // end namespace
 
-#endif // StripSet_hh
+#endif // DataObjects_StripSet_hh
 

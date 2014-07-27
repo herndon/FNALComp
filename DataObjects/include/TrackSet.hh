@@ -1,5 +1,5 @@
-#ifndef TrackSet_hh
-#define TrackSet_hh
+#ifndef DataObjects_TrackSet_hh
+#define DataObjects_TrackSet_hh
 //============================================================================
 // TrackSet.hh
 // header with class definition of the TrackSet
@@ -26,16 +26,7 @@ namespace fc {
 ///
 
 class TrackSet {
-private:
-
-
-  trackSet _trackSet;
-
-
 public:
-
-  TrackSet(){};
-  ~TrackSet() {};
 
   const trackSet & getTracks() const { return _trackSet;};
 
@@ -43,9 +34,11 @@ public:
 
   void print(ostream& out) const;
 
+private:
 
+  trackSet _trackSet;
 };
 } // end namespace fc
 
-#endif // TrackSet_hh
+#endif // DataObjects_TrackSet_hh
 

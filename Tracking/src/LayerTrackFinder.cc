@@ -138,11 +138,11 @@ std::vector<int> fc::LayerTrackFinder::bestTrackCandidates(const trackSet & trac
 fc::trackSet fc::LayerTrackFinder::buildTrackCandidates(const Track & track, const std::vector<int> & hits, const HitSet & recoHitSet) const{
 
   trackSet newTracks;
-  for (std::vector<int>::const_iterator hitNumberIter = hits.begin();hitNumberIter!=hits.end();++hitNumberIter){
+  for (auto hitNumber : hits) {
     trackHitSet trackHitCandidate = track.getHits();
-    trackHitCandidate.push_back(*hitNumberIter);
+    trackHitCandidate.push_back(hitNumber);
 
-    Track newTrack(BuildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,_debugLevel));
+    Track newTrack(buildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,_debugLevel));
 
     if (goodTrack(newTrack)) newTracks.push_back(newTrack);
   }

@@ -1,5 +1,5 @@
-#ifndef DataSource_hh
-#define DataSource_hh
+#ifndef Modules_DataSource_hh
+#define Modules_DataSource_hh
 //============================================================================
 // DataSource.hh
 // Module for reading raw detector data from the
@@ -40,8 +40,6 @@ public:
 	       const std::string& iOutputStripsLabel,
 	       const DetectorGeometry&);
  
-  ~DataSource() {};
-
   std::unique_ptr<Event> getNextEvent() override;
 
 
@@ -61,4 +59,4 @@ private:
 };
 } // end namespace fc
 
-#endif // DataSource_hh
+#endif // Modules_DataSource_hh

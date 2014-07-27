@@ -39,18 +39,6 @@ const TLorentzVector fc::Track::getLorentzVector() const{
 }
 
 
-fc::Track & fc::Track:: operator=(Track track){
-
-  std::swap(_helix,track._helix);
-  std::swap(_covMatrix,track._covMatrix);
-  std::swap(_chi2,track._chi2);
-  std::swap(_nDof,track._nDof);
-  std::swap(_trackHitSet,track._trackHitSet);
-
-  return *this;
-
-}
-
 void fc::Track::insertHit(int hitNumber){
   _trackHitSet.push_back(hitNumber);
 }

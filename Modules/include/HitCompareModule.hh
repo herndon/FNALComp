@@ -1,5 +1,5 @@
-#ifndef HitCompareModule_hh
-#define HitCompareModule_hh
+#ifndef Modules_HitCompareModule_hh
+#define Modules_HitCompareModule_hh
 //============================================================================
 // HitCompareModule.hh
 // Module for comparing reconstructing hit position to generator hit positions
@@ -32,7 +32,6 @@ public:
 
   HitCompareModule(int, const std::string& iInputGenHitsLabel, const std::string& iInputRecHitsLabel,
 		   const DetectorGeometry & );
-  ~HitCompareModule() {};
 
   void processEvent(fc::Event&) override;
 
@@ -66,4 +65,4 @@ private:
 };
 } // end namespace fc
 
-#endif // HitCompareModule_hh
+#endif // Modules_HitCompareModule_hh

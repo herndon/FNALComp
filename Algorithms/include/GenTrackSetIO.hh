@@ -1,5 +1,5 @@
-#ifndef GenTrackSetIO_hh
-#define GenTrackSetIO_hh
+#ifndef Algorithms_GenTrackSetIO_hh
+#define Algorithms_GenTrackSetIO_hh
 //============================================================================
 // GenTrackSetIO.hh
 // header with class definition of the GenTrackSetIO
@@ -33,7 +33,6 @@ private:
 public:
 
   GenTrackSetIO();
-  ~GenTrackSetIO() {};
  
   void writeEvent(const GenTrackSet&, std::ofstream&) const; 
   //!< Write all track information in the event to std::ofstream file
@@ -46,5 +45,5 @@ public:
 };
 } // end namespace fc
 
-#endif // GenTrackSetIO_hh
+#endif // Algorithms_GenTrackSetIO_hh
 
