@@ -28,7 +28,7 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
   Handle<HitSet> recoHitSet = event.get<HitSet>(_inHitsLabel);
   Handle<HitSet> genHitSet = event.get<HitSet>(_inGenHitsLabel);
   
-  std::unique_ptr<TrackSet> perfectRecoTrackSet{ new TrackSet(_detectorGeometry) };
+  std::unique_ptr<TrackSet> perfectRecoTrackSet{ new TrackSet };
 
   recoTracks(*perfectRecoTrackSet,*recoHitSet,*genHitSet);
 

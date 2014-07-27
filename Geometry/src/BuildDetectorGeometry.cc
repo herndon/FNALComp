@@ -47,7 +47,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
   // q = Q1.6x10-19 where Q = 1, -1...
   //divide by 109 pc (in GeV) = BQR3x108/(1x10^9)
   // Also defines units  in meters
-  double curvatureC = bField.Z()*2.99792458e8/1.0e9; // ~ 0.3;  
+  double curvatureC = 2.99792458e8/1.0e9; // ~ 0.3;  
 
 
   // MIP charge

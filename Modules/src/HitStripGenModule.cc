@@ -74,7 +74,7 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, 
 void fc::HitStripGenModule::calculateTrackSensorIntersection(const GenTrack & genTrack,int layer, TVector3 & hitPosition){
 
   //TrackFit trackFit(track.getHelix(),_detectorGeometry);
-  intersectWithLayer(genTrack.makeHelix(1/_detectorGeometry.getCurvatureC()),hitPosition,layer,_detectorGeometry);
+  intersectWithLayer(genTrack.makeHelix(_detectorGeometry.getCurvatureCInField(_detectorGeometry.getBField())),hitPosition,layer,_detectorGeometry);
 
 }
 

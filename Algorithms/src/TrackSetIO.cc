@@ -10,9 +10,6 @@ fc::TrackSetIO::TrackSetIO(const DetectorGeometry & detectorGeometry):
   _version(1),
   _detectorGeometry(detectorGeometry) {
 
-  // Intialize commonly used DetectorGeometry data
-  _curvatureC = _detectorGeometry.getCurvatureC();
-
 }
 
 

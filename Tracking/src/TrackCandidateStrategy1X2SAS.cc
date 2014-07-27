@@ -8,14 +8,14 @@
 #include "Tracking/include/TrackCandidateStrategy1X2SAS.hh"
 
 
-fc::TrackCandidateStrategy1X2SAS::TrackCandidateStrategy1X2SAS(int debugLevel,double minCandPTCut):
-  TrackCandidateStrategy(debugLevel,minCandPTCut) {
+fc::TrackCandidateStrategy1X2SAS::TrackCandidateStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minCandPTCut):
+  TrackCandidateStrategy(debugLevel,detectorGeometry,minCandPTCut) {
 }
 
 
 // !!!!! Could improve to use more than outer layers
 // !!!!! control seed layers from config
-void fc::TrackCandidateStrategy1X2SAS::findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry & detectorGeometry) const{
+void fc::TrackCandidateStrategy1X2SAS::findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) const{
  
   int hitNumberO = 0;
 
@@ -37,11 +37,11 @@ void fc::TrackCandidateStrategy1X2SAS::findHitCadidates(std::vector<fc::trackHit
 	    if (hitIterOSAS->getLayer() == 9) {
 
 	      TVector3 zIntersection;
-	      bool goodIntersection = intersectStrips(*hitIterO,*hitIterOSAS,zIntersection,detectorGeometry);
+	      bool goodIntersection = intersectStrips(*hitIterO,*hitIterOSAS,zIntersection,_detectorGeometry);
 	      if (goodIntersection) {
 
                 TVector3 primaryVertex(0.0,0.0,0.0);
-		Helix helix = initializeHelix(primaryVertex,hitIterO->getHitPosition(),hitIterI->getHitPosition(),zIntersection,detectorGeometry);
+		Helix helix = initializeHelix(primaryVertex,hitIterO->getHitPosition(),hitIterI->getHitPosition(),zIntersection,_detectorGeometry);
 		if (goodCandidate(helix)) {
 		  std::vector<int> trackHitCandidate;
 

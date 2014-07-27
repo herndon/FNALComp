@@ -34,8 +34,6 @@ private:
   // Detector information
   const DetectorGeometry & _detectorGeometry;
 
-  double _curvatureC;
-
 public:
 
   TrackSetIO(const DetectorGeometry & detectorGeometry);

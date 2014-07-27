@@ -21,11 +21,9 @@ fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std
   _hPt(nullptr)
 {
 
-  // Intialize commonly used DetectorGeometry data
-  _curvatureC = _detectorGeometry.getCurvatureC();
 
   UniqueRootDirectory tDir( "TrackGen" );
-  _hPt = new TH1D ( "Pt", "Pt of Generated Track; GeV; N", 100, 0., 100.);
+  _hPt = new TH1D( "Pt", "Pt of Generated Track; GeV; N", 100, 0., 100.);
 
 }
 
@@ -58,21 +56,11 @@ fc::GenTrack fc::TrackGenModule::generateTrack(){
   double trackD0 = _random.getUniformDouble(-0.01,0.01); 
   double trackZ0 = _random.getUniformDouble(-0.01,0.01); 
 
-  // Details of curvature calculation
-  //using p = BqR, 
-  //multiply by c to get energy in J  pc = BqRc, 
-  //divide by e to get energy in eV pc = BqR3x108/1.6x10-19
-  // q = Q1.6x10-19 where Q = 1, -1...
-  //divide by 109 pc (in GeV) = BQR3x108/(1x10^9)
-
-  double trackCurvature = _curvatureC/trackPT;
-
 
   if (_debugLevel >=5 ) {
     std::cout << "Track pT " << trackPT << std::endl;
     std::cout << "Track Charge " << trackCharge << std::endl;
     std::cout << "Track phi0 " << trackPhi0 << std::endl;
-    std::cout << "Track radius curvature " << 1/trackCurvature << std::endl;
   }
  
   double phi0ToD0 = 0.0;

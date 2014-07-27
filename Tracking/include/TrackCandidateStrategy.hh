@@ -22,35 +22,39 @@ class DetectorGeometry;
 
   class TrackCandidateStrategy {
 
-  private:
+  protected:
 
    int _debugLevel;
 
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
+
+  
     // candidate track parameters
 
     double _minCandPTCut;
 
 
   protected:
-    TrackCandidateStrategy(int, double);
+    TrackCandidateStrategy(int, const DetectorGeometry&,double);
  
   public:
     TrackCandidateStrategy( const TrackCandidateStrategy&) = delete;
     ~TrackCandidateStrategy() = default;
 
 
-    void findTrackCandidates(trackSet& trackCandidateSet, const HitSet& hitSet,const DetectorGeometry &) const;
+    void findTrackCandidates(trackSet& trackCandidateSet, const HitSet& hitSet) const;
 
   protected:
 
-    virtual void findHitCadidates(std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &) const = 0;
+    virtual void findHitCadidates(std::vector<trackHitSet>& trackHitCandidates,const HitSet& hitSet) const = 0;
     virtual void filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet) const = 0;
 
     // helper functions
     bool goodCandidate(const Helix & helix) const;
 
   private: 
-   void buildTrackCandidates(trackSet& trackCandidateSet,std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &) const;
+   void buildTrackCandidates(trackSet& trackCandidateSet,std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) const;
 
 
   };

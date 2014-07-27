@@ -56,8 +56,8 @@ const fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, co
 
 
   Helix helix(0.0, std::atan2(radiusCurvature * (centerCurvature.Y() - x1.Y()), 
-	      radiusCurvature * (centerCurvature.X() - x1.X())), -1.0 /(radiusCurvature*detectorGeometry.getCurvatureC()),
-	      0.0,tanL,1.0/detectorGeometry.getCurvatureC());
+	      radiusCurvature * (centerCurvature.X() - x1.X())), -1.0 /(radiusCurvature*detectorGeometry.getCurvatureCInField(detectorGeometry.getBField())),
+	      0.0,tanL,detectorGeometry.getCurvatureCInField(detectorGeometry.getBField()));
   // Note that phi23 has to be scaled up to the phi between z1 and x1
 
  

@@ -60,7 +60,7 @@ public:
   double getZBField(void) const {return _bField.Z();}
   const TVector3 & getBField(void) const {return _bField;}
   double getMIP(void) const {return _MIP;}
-  double getCurvatureC(void) const {return _curvatureC;}
+  double getCurvatureCInField(TVector3 _bField) const {return _curvatureC*_bField.Z();}
 
   void printDetectorGeometry(void) const;
 

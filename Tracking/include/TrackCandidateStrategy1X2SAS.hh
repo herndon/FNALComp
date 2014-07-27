@@ -16,16 +16,17 @@
 namespace fc {
 
 class HitSet;
+class DetectorGeometry;
 
   class TrackCandidateStrategy1X2SAS : public TrackCandidateStrategy{
 
   public:
 
-    TrackCandidateStrategy1X2SAS(int,double);
+    TrackCandidateStrategy1X2SAS(int,const DetectorGeometry&,double);
 
   private:
 
-    void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet,const DetectorGeometry &) const override;
+    void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) const override;
     void filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet) const override;
 
   };

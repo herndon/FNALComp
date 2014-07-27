@@ -14,6 +14,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <memory>
 #include "Services/include/Random.hh"
 #include "Framework/include/Module.hh"
 
@@ -52,8 +53,6 @@ private:
 
   // Random numbers
   Random &  _random;
-
-  double _curvatureC;
 
   TH1D* _hPt;
 

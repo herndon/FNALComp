@@ -20,7 +20,7 @@ namespace fc {
 
   class TrackRecoStrategy {
 
-  private:
+  protected:
 
     int _debugLevel;
 

@@ -18,7 +18,7 @@
 // Such that phi0 is the angle to the point of closest approach to the reference point 0, 0, 0
 //       and the radius of curvature rho = alpha/kappa
 //
-// Standard track parameter diffinition6
+// Standard track parameter diffinition
 //          pT = 1/abs(kappa)
 //          cot(theata) = 1/tan(lambda)
 // standard phi0 = helix phi0 + PI/2
@@ -76,13 +76,13 @@ public:
 
   double getAlpha() const {return _alpha;}
 
+  double getRadiusOfCurvature() const {return _alpha/_helix(2);}
 
-  double getPT() const {return std::abs(1.0/_helix(2));}
+  double getPT(const TVector3& bField) const {return std::abs(1.0/_helix(2));}
   double getPZ() const {return _helix(4)*std::abs(1.0/_helix(2));}
 
   // Set helix
   void setHelix(const TVectorD& helix) {_helix = helix;}
-  void setAlpha(double alpha) {_alpha = alpha;}
 
 
 };

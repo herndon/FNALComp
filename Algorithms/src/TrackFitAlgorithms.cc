@@ -13,7 +13,7 @@ const TVector3 fc::calcXAt(const Helix& helix, double phi) {
    double snf0 = std::sin(helix.getPhi0());
    double snfd = std::sin(helix.getPhi0() + phi);
    double csfd = std::cos(helix.getPhi0() + phi);
-   double rho  = helix.getAlpha()/helix.getKappa();
+   double rho  = helix.getRadiusOfCurvature();
 
 
    double x    = helix.getDr() * csf0 + rho * (csf0 - csfd);
@@ -24,7 +24,7 @@ const TVector3 fc::calcXAt(const Helix& helix, double phi) {
 }
 
 const TMatrixD fc::calcDxDphi(const Helix& helix, double phi) {
-  double radiusCurvature    = helix.getAlpha()/helix.getKappa();
+  double radiusCurvature    = helix.getRadiusOfCurvature();
 
    double snfd = std::sin(helix.getPhi0() + phi);
    double csfd = std::cos(helix.getPhi0() + phi);
@@ -40,7 +40,7 @@ const TMatrixD fc::calcDxDphi(const Helix& helix, double phi) {
 
 
 const TMatrixD fc::calcDxDHC(const Helix& helix, double phi) {
-  double radiusCurvature     = helix.getAlpha()/helix.getKappa();
+  double radiusCurvature     = helix.getRadiusOfCurvature();
    double rcpar = radiusCurvature/helix.getKappa();
 
    double snf0 = std::sin(helix.getPhi0());

@@ -35,7 +35,6 @@ const fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
   helix = initialHelix.getHelix();
 
   Helix workingHelix(initialHelix); 
-  workingHelix.setAlpha(initialHelix.getAlpha());
 
   TVectorD helixBest(helix);
   TVectorD helixSave(helix);

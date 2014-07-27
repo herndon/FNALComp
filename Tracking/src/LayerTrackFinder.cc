@@ -167,7 +167,7 @@ void fc::LayerTrackFinder::layerTrackFilter(fc::trackSet & trackCandidateSet,uns
 
 bool fc::LayerTrackFinder::goodTrack(const Track& track) const{
 
-  return  track.getHelix().getPT() > _minPTCut && 
+  return  track.getHelix().getPT(_detectorGeometry.getBField()) > _minPTCut && 
     (track.getNDof()<=0 || track.getChi2()/track.getNDof()< _maxChi2NDofCut) && 
     std::abs(track.getHelix().getDr()) < _detectorGeometry.getSensor(_detectorGeometry.getNSensors()-1)._perpSize && 
     std::abs(track.getHelix().getDz()) < _detectorGeometry.getSensor(_detectorGeometry.getNSensors()-1)._nStrips*_detectorGeometry.getSensor(_detectorGeometry.getNSensors()-1)._stripPitch/2.0;

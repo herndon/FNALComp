@@ -32,14 +32,10 @@ private:
 
   trackSet _trackSet;
 
-  // Detector information
-  const DetectorGeometry & _detectorGeometry;
-
-  double _curvatureC;
 
 public:
 
-  TrackSet(const DetectorGeometry & detectorGeometry);
+  TrackSet(){};
   ~TrackSet() {};
 
   const trackSet & getTracks(void) const { return _trackSet;};

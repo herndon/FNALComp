@@ -1,20 +1,11 @@
 #include <iostream>
 #include "DataObjects/include/TrackSet.hh"
 
-fc::TrackSet::TrackSet(const DetectorGeometry & detectorGeometry):
-  _detectorGeometry(detectorGeometry) {
-
-  // Intialize commonly used DetectorGeometry data
-  _curvatureC = _detectorGeometry.getCurvatureC();
-
-}
+// Using Default constructor
 
 void fc::TrackSet::insertTrack(const Track& track) {
   _trackSet.push_back(track);
 }
-
-
-
 
 void fc::TrackSet::print(void) const{
 
