@@ -31,6 +31,7 @@ public:
   const trackSet & getTracks() const { return _trackSet;};
 
   void insertTrack(const Track &);
+  void insertTrack(Track &&);
 
   void print(ostream& out) const;
 

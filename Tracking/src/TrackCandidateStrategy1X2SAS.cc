@@ -43,14 +43,8 @@ void fc::TrackCandidateStrategy1X2SAS::findHitCadidates(std::vector<fc::trackHit
                 TVector3 primaryVertex(0.0,0.0,0.0);
 		Helix helix = initializeHelix(primaryVertex,hitIterO->getHitPosition(),hitIterI->getHitPosition(),zIntersection,_detectorGeometry);
 		if (goodCandidate(helix)) {
-		  std::vector<int> trackHitCandidate;
-
-		  trackHitCandidate.push_back(hitNumberO);
-		  trackHitCandidate.push_back(hitNumberI);
-		  trackHitCandidate.push_back(hitNumberOSAS);
-
-		  trackHitCandidates.push_back(trackHitCandidate);
-
+		  //avoids a copy
+		  trackHitCandidates.push_back( std::vector<int>{hitNumberO,hitNumberI,hitNumberOSAS} );
 		}
 	      }
 

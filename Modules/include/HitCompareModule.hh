@@ -35,9 +35,6 @@ public:
 
   void processEvent(fc::Event&) override;
 
-  void endJob() override;
-
-
 private:
 
   int _debugLevel;

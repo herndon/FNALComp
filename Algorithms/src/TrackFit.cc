@@ -283,9 +283,9 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
 const fc::Helix fc::fitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSetNoPV, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel){
 
   trackHitSet trackHitSetWithPV;
+  trackHitSetWithPV.reserve(trackHitSetNoPV.size()+1);
 
-  for (trackHitSet::const_iterator hitIter = trackHitSetNoPV.begin(); hitIter != trackHitSetNoPV.end(); ++hitIter){
-    int hitNumber = *hitIter;
+  for (auto hitNumber: trackHitSetNoPV) {
     trackHitSetWithPV.push_back(hitNumber);
   }
 

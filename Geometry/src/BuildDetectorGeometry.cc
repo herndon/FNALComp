@@ -78,7 +78,8 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
   detectorgeometryfile.precision(std::numeric_limits<double>::digits10 + 2);
 
   // Read numberSensors sensors
-  std::vector<sensorDescriptor> sensors;
+  std::vector<SensorDescriptor> sensors;
+  sensors.reserve(numberSensors);
 
   for (int ii_layer = 0; ii_layer < numberSensors; ++ii_layer){
     detectorgeometryfile >> detectorGeometryString;
@@ -86,7 +87,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
 
     detectorgeometryfile >> sensorNumber;
 
-    sensorDescriptor sensor;
+    SensorDescriptor sensor;
 
     detectorgeometryfile >> detectorGeometryString;
     if (detectorGeometryString != "X" && detectorGeometryString != "SAS" && detectorGeometryString != "Z")
@@ -127,11 +128,11 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
     if ( sensor._nStrips > maxNumberStrips)  
       throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Out of bounds sensor number specifications in sensorgeometry.txt, maximum number of strips is 2048");   
 
-    sensors.push_back(sensor);
+    sensors.push_back(std::move(sensor));
 
   }
 
-  sensorDescriptor primaryVertexX;
+  SensorDescriptor primaryVertexX;
 
   detectorgeometryfile >> detectorGeometryString;
   if (detectorGeometryString != "PVX") 
@@ -152,7 +153,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
 
   detectorgeometryfile >> detectorGeometryString;
 
-  sensorDescriptor primaryVertexZ;
+  SensorDescriptor primaryVertexZ;
 
   if (detectorGeometryString != "PVZ")
     throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Bad format in sensorgeometry.txt, PVY");

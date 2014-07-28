@@ -22,14 +22,15 @@ void fc::LayerTrackFinder::findCandidateTracks(trackSet& trackCandidateSet, cons
 
   trackSet allNewTracks;
 
-  for (trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter != trackCandidateSet.end(); ++trackIter){
+  for (auto& track :  trackCandidateSet) {
 
-    findSingleCandidateTracks(*trackIter,allNewTracks,recoHitSet);  
+    findSingleCandidateTracks(track,allNewTracks,recoHitSet);  
 
   }
 
-  for (trackSet::iterator trackIter = allNewTracks.begin(); trackIter!= allNewTracks.end(); ++trackIter){
-    trackCandidateSet.push_back(*trackIter);
+  trackCandidateSet.reserve(trackCandidateSet.size()+allNewTracks.size());
+  for (auto& track: allNewTracks) {
+    trackCandidateSet.push_back(std::move(track));
   }
 
 
@@ -47,8 +48,8 @@ void fc::LayerTrackFinder::findSingleCandidateTracks(const Track& track , trackS
   //We may want to decide whether to remove the seed track
   //removeSeedTrack(trackCandidateSet,trackSet);
 
-  for (std::vector<int>::const_iterator trackNumberIter = bestTracks.begin(); trackNumberIter < bestTracks.end();++trackNumberIter){
-    allNewTracks.push_back(newTracks[*trackNumberIter]);
+  for (auto trackNumber: bestTracks){
+    allNewTracks.push_back(newTracks[trackNumber]);
   }
 
 }
@@ -58,8 +59,8 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track , const Hit
   std::vector<int> hits;
 
   bool hasLayerHit = false;
-  for (trackHitSet::const_iterator hitIter = track.getHits().begin(); hitIter!=track.getHits().end(); ++hitIter){
-    if (recoHitSet.getHits()[*hitIter].getLayer() == _layer){
+  for (auto hitIndex : track.getHits()) {
+    if (recoHitSet.getHits()[hitIndex].getLayer() == _layer){
       hasLayerHit = true;
     }
   }
@@ -68,7 +69,7 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track , const Hit
   double maxResidual = 5.0*expectedMeasurementUncertianty1D(track.getHelix(), track.getCovMatrix(), _layer, _detectorGeometry);
   int hitNumber = 0;
 
-  for (hitSet::const_iterator hitIter = recoHitSet.getHits().begin(); hitIter != recoHitSet.getHits().end(); ++hitIter,++hitNumber){
+  for (auto hitIter = recoHitSet.getHits().begin(); hitIter != recoHitSet.getHits().end(); ++hitIter,++hitNumber){
 
     if (hitIter->getLayer()==_layer){
 
@@ -144,7 +145,7 @@ fc::trackSet fc::LayerTrackFinder::buildTrackCandidates(const Track & track, con
 
     Track newTrack(buildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,_debugLevel));
 
-    if (goodTrack(newTrack)) newTracks.push_back(newTrack);
+    if (goodTrack(newTrack)) newTracks.push_back(std::move(newTrack));
   }
   return newTracks;
 

@@ -9,6 +9,10 @@ void fc::HitSet::insertHit(const Hit& hit) {
     _hitSet.push_back(hit);
 }
 
+void fc::HitSet::insertHit(Hit&& hit) {
+    _hitSet.push_back(std::move(hit));
+}
+
 void fc::HitSet::print(ostream& out) const{
 
   out << "HitSet" << std::endl;

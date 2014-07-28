@@ -31,6 +31,7 @@ public:
 
 
   void insertHit(const Hit&);
+  void insertHit(Hit&&);
 
   void print(ostream& out) const;
 
