@@ -12,12 +12,8 @@ namespace fc {
   class Module;
 
   class EventProcessor {
-    std::vector<std::unique_ptr<Module>> _modules;
-    std::unique_ptr<Source> _source;
-    TFile* _rootFile;
-    void endRoot();
   public:
-    explicit EventProcessor(Source*iSource, TFile*rootFile):
+    EventProcessor(Source*iSource, std::shared_ptr<TFile> rootFile):
       _source(iSource),
       _rootFile(rootFile)
     {}
@@ -28,8 +24,13 @@ namespace fc {
 
     void processEvents();
     void endJob();
-  };
 
+  private:
+    void endRoot();
+    std::vector<std::unique_ptr<Module>> _modules;
+    std::unique_ptr<Source> _source;
+    std::shared_ptr<TFile> _rootFile;
+  };
 }
 
 #endif //Framework_EventProcessor_hh
