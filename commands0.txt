@@ -1,21 +1,16 @@
 git commands
 
 # Checking out an existing repository to directory FNALComp
-git clone ssh://git@github.com/herndon/FNALComp.git FNALComp
-# then moving to a specific tag
-git checkout v0.6
-
-# or directory checking out to the tag
-git clone --branch v0.4 ssh://git@github.com/herndon/FNALComp.git FNALComp_v0.4
+git clone --branch production ssh://git@github.com/herndon/FNALComp.git FNALComp
 
 # check status of project for modifictions
 git status -s
 git diff
 
 
-# update local master branch to remote master
+# update local production branch to remote production
 git fetch
-git rebase origin/master
+git rebase origin/production
 
 #compile and link the code
 make
