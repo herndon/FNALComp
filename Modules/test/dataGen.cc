@@ -48,7 +48,7 @@ int main ()
   fc::Random random(config.getSeed());
 
   // Open a root file to hold output histograms.
-  TFile* rootFile = new TFile( config.getRootFileName().c_str(), "RECREATE");
+  auto rootFile = std::make_shared<TFile>( config.getRootFileName().c_str(), "RECREATE");
 
   // DetectorGeometry
   std::ifstream detectorgeometryfile("sensorgeometry.txt");

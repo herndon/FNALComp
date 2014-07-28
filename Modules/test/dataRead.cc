@@ -38,7 +38,7 @@ int main ()
   fc::Config config(configfile,genData);
 
   // Open a root file to hold output histograms.
-  TFile* rootFile = new TFile( config.getRootFileName().c_str(), "RECREATE");
+  auto rootFile = std::make_shared<TFile>( config.getRootFileName().c_str(), "RECREATE");
 
   // Intialize Objects and Modules that are persistant
 

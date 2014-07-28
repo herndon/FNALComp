@@ -54,16 +54,16 @@ int main ()
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
   // Open a root file to hold output histograms.
-  TFile* rootFile = new TFile( config.getRootFileName().c_str(), "RECREATE");
+  auto rootFile = std::make_shared<TFile>( config.getRootFileName().c_str(), "RECREATE");
 
 
  // Instantiate the class which handles the details of processing the events
   fc::EventProcessor processor( new fc::DataSource(debugLevel,inputeventdatafile, genData,
-                                               "genTracks", //get these tracks from file
-                                                "genHits", //get these hits from file
-                                                "genStrips", //get these strips
+                                                   "genTracks", //get these tracks from file
+                                                   "genHits", //get these hits from file
+                                                   "genStrips", //get these strips
 						   detectorGeometry),
-				                   rootFile
+				rootFile
 				);
 
   // Instantiate and initialize Module classes

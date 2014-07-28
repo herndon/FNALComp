@@ -40,7 +40,7 @@ int main ()
   fc::Config config(configfile,genData);
 
   // Open a root file to hold output histograms.
-  TFile* rootFile = new TFile( config.getRootFileName().c_str(), "RECREATE");
+  auto rootFile = std::make_shared<TFile>( config.getRootFileName().c_str(), "RECREATE");
 
   // Intialize Objects and Modules that are persistant
 
@@ -53,7 +53,7 @@ int main ()
   // Input and output files
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
- // Instantiate the class which handles the details of processing the events
+  // Instantiate the class which handles the details of processing the events
   fc::EventProcessor processor( new fc::DataSource(debugLevel,inputeventdatafile, genData,
                                                "genTracks", //get these tracks from file
                                                 "genHits", //get these hits from file
