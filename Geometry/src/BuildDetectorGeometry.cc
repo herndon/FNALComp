@@ -78,7 +78,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
   detectorgeometryfile.precision(std::numeric_limits<double>::digits10 + 2);
 
   // Read numberSensors sensors
-  std::vector<sensorDescriptor> sensors;
+  std::vector<SensorDescriptor> sensors;
 
   for (int ii_layer = 0; ii_layer < numberSensors; ++ii_layer){
     detectorgeometryfile >> detectorGeometryString;
@@ -86,7 +86,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
 
     detectorgeometryfile >> sensorNumber;
 
-    sensorDescriptor sensor;
+    SensorDescriptor sensor;
 
     detectorgeometryfile >> detectorGeometryString;
     if (detectorGeometryString != "X" && detectorGeometryString != "SAS" && detectorGeometryString != "Z")
@@ -131,7 +131,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
 
   }
 
-  sensorDescriptor primaryVertexX;
+  SensorDescriptor primaryVertexX;
 
   detectorgeometryfile >> detectorGeometryString;
   if (detectorGeometryString != "PVX") 
@@ -152,7 +152,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
 
   detectorgeometryfile >> detectorGeometryString;
 
-  sensorDescriptor primaryVertexZ;
+  SensorDescriptor primaryVertexZ;
 
   if (detectorGeometryString != "PVZ")
     throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Bad format in sensorgeometry.txt, PVY");

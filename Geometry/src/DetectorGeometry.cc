@@ -5,8 +5,8 @@
 
 fc::DetectorGeometry::DetectorGeometry(int detectorGeometryVersion,int nXSensors, int nSASSensors, int nZSensors,
 				       const TVector3& bField,double MIP,double curvatureC,int maxNumberStrips,
-				       const std::vector<sensorDescriptor>& sensors,
-				       const sensorDescriptor& primaryVertexX,const sensorDescriptor& primaryVertexZ):
+				       const std::vector<SensorDescriptor>& sensors,
+				       const SensorDescriptor& primaryVertexX,const SensorDescriptor& primaryVertexZ):
   _detectorGeometryVersion(detectorGeometryVersion),
   _nXSensors(nXSensors),
   _nSASSensors(nSASSensors),
@@ -61,7 +61,7 @@ void fc::DetectorGeometry::printDetectorGeometry(ostream& out) const {
 
 }
 
-const fc::sensorDescriptor& fc::DetectorGeometry::getSensor(int layer) const{
+const fc::SensorDescriptor& fc::DetectorGeometry::getSensor(int layer) const{
 
   if (layer >= 0 && layer < getNSensors()) return _sensors[layer];
   if (layer==-2) return _primaryVertexX;

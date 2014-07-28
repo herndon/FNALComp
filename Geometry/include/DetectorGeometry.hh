@@ -4,7 +4,7 @@
 // DetectorGeometry.hh
 // header with class definition of a N layer planor silicon detector
 // Includes global detector information 
-// and detailed sensor information sensorDescriptor structs
+// and detailed sensor information SensorDescriptor structs
 // For more information see <a href="doc/notes/detectorGeometry.pdf">detectorGeometry.pdf</a>
 //
 // Units: calculations are set up so that distance m, Energy GeV, magnetic field Teslaq
@@ -18,7 +18,7 @@
 
 namespace fc {
 
-struct sensorDescriptor {
+struct SensorDescriptor {
   int _type;// types 0: X, 1, SAS, 2, Z
   int _nStrips;
   double _stripPitch;
@@ -46,10 +46,10 @@ public:
 
   DetectorGeometry(int detectorGeometryVersion,int nXSensors, int nSASSensors, int nZSensors, 
 		   const TVector3& bField,double MIP,double curvatureC,int maxNumberStrips,
-		   const std::vector<sensorDescriptor>& sensors,
-		   const sensorDescriptor& primaryVertexX,const sensorDescriptor& primaryVertexZ);
+		   const std::vector<SensorDescriptor>& sensors,
+		   const SensorDescriptor& primaryVertexX,const SensorDescriptor& primaryVertexZ);
 
-  const sensorDescriptor& getSensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
+  const SensorDescriptor& getSensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
   int getDetectorGeometryVersion() const {return _detectorGeometryVersion;}
   int getNSensors() const {return _sensors.size();}
   int getNXSensors() const {return _nXSensors;}
@@ -87,12 +87,12 @@ private:
   int _maxNumberStrips;
 
 
-  std::vector<sensorDescriptor> _sensors;
+  std::vector<SensorDescriptor> _sensors;
 
   // Parameters for the primary vetex if used in a fit
 
-  sensorDescriptor _primaryVertexX;
-  sensorDescriptor _primaryVertexZ;
+  SensorDescriptor _primaryVertexX;
+  SensorDescriptor _primaryVertexZ;
 
 };
 } // end namespace fc
