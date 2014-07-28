@@ -54,6 +54,7 @@ private:
   // Random numbers
   Random &  _random;
 
+  //ROOT will delete this when the TFile to which it is attached is deleted
   TH1D* _hPt;
 
   GenTrack generateTrack() const;
