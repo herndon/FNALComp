@@ -55,9 +55,9 @@ private:
   double compareHitPositions(const Hit &, const Hit &) const;
 
   // Histograms
-
-    std::vector<TH1F *> deltaHitPositions;
-
+  // ROOT will delete these when the TFile to which the are attached is deleted
+  std::vector<TH1F *> deltaHitPositions;
+    
 
   void initializeHistograms();
 

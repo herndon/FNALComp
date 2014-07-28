@@ -32,8 +32,10 @@ class TrackCompareModule : public Module {
 
 public:
 
-  TrackCompareModule(int, const std::string& iInputGenTracksLabel, const std::string& iInputRecTracksLabel,
-		     const DetectorGeometry & );
+  TrackCompareModule(int debugLevel, 
+                     const std::string& inputGenTracksLabel, 
+                     const std::string& inputRecTracksLabel,
+                     const DetectorGeometry & detectorGeometry );
 
   void processEvent(fc::Event&) override;
 
@@ -59,6 +61,7 @@ private:
   void fillHistograms(const TVectorD &,const Track&) const;
 
   // Histograms
+  // ROOT will delete these when the TFile to which they are attached is deleted
 
   TH1F * deltaD0;
   TH1F * deltaPhi0;
