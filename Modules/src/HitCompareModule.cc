@@ -54,15 +54,15 @@ void fc::HitCompareModule::compareHits(const HitSet & genHitSet, const HitSet& r
   double deltaPosition;
   double tempDeltaPosition;
 
-  for (hitSet::const_iterator genHitIter =  genHitSet.getHits().begin(); genHitIter !=  genHitSet.getHits().end(); ++genHitIter){
+  for (auto const& genHit :   genHitSet.getHits()) {
 
     deltaPosition = 999.0;
 
-    for (hitSet::const_iterator recoHitIter = recoHitSet.getHits().begin(); recoHitIter != recoHitSet.getHits().end(); ++recoHitIter){
+    for (auto const& recoHit : recoHitSet.getHits()) {
 
 
-      if (genHitIter->getLayer()==recoHitIter->getLayer()) {
-	  tempDeltaPosition = compareHitPositions(*genHitIter,*recoHitIter);
+      if (genHit.getLayer()==recoHit.getLayer()) {
+	  tempDeltaPosition = compareHitPositions(genHit,recoHit);
 	  if (std::abs(tempDeltaPosition) < std::abs(deltaPosition)) deltaPosition = tempDeltaPosition;
     }
 
@@ -70,7 +70,7 @@ void fc::HitCompareModule::compareHits(const HitSet & genHitSet, const HitSet& r
 
     }
 
-    deltaHitPositions[genHitIter->getLayer()]->Fill(deltaPosition);
+    deltaHitPositions[genHit.getLayer()]->Fill(deltaPosition);
 
 
   }
@@ -82,8 +82,4 @@ double fc::HitCompareModule::compareHitPositions(const Hit & genHit, const Hit& 
   return recoHit.getHitPosition()*_detectorGeometry.getSensor(recoHit.getLayer())._measurementDirection
     - genHit.getHitPosition()*_detectorGeometry.getSensor(genHit.getLayer())._measurementDirection;
 
-}
-
-
-void fc::HitCompareModule::endJob(){
 }

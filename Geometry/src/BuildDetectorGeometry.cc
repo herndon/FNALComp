@@ -79,6 +79,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
 
   // Read numberSensors sensors
   std::vector<SensorDescriptor> sensors;
+  sensors.reserve(numberSensors);
 
   for (int ii_layer = 0; ii_layer < numberSensors; ++ii_layer){
     detectorgeometryfile >> detectorGeometryString;
@@ -127,7 +128,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
     if ( sensor._nStrips > maxNumberStrips)  
       throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Out of bounds sensor number specifications in sensorgeometry.txt, maximum number of strips is 2048");   
 
-    sensors.push_back(sensor);
+    sensors.push_back(std::move(sensor));
 
   }
 

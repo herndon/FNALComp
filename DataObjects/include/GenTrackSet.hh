@@ -30,6 +30,7 @@ public:
   const genTrackSet & getGenTracks() const { return _genTrackSet;};
  
   void insertTrack(const GenTrack&);
+  void insertTrack(GenTrack&&);
 
   void print(ostream& out) const;
 

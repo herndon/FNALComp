@@ -7,6 +7,10 @@ void fc::GenTrackSet::insertTrack(const GenTrack& genTrack) {
   _genTrackSet.push_back(genTrack);
 }
 
+void fc::GenTrackSet::insertTrack(GenTrack&& genTrack) {
+  _genTrackSet.push_back(std::move(genTrack));
+}
+
 
 void fc::GenTrackSet::print(ostream& out) const{
 

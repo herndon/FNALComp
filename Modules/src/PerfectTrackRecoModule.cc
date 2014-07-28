@@ -50,27 +50,22 @@ void fc::PerfectTrackRecoModule::recoTracks(TrackSet & perfectRecoTrackSet, cons
 
 void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & recoHitSet,const HitSet & genHitSet) const{
 
-  int recoHitNumber = 0;
-  int bestRecoHitNumber = 0;
-  int trackNumber = genHitSet.getHits().begin()->getTrackNumber();
-
-  double deltaPosition;
-  double tempDeltaPosition;
+  int trackNumber = (genHitSet.getHits().empty() ? 0 : genHitSet.getHits().front().getTrackNumber());
 
   std::vector<int> trackHitCandidate;
 
   // Form all hit candidates
 
-  for (hitSet::const_iterator genHitIter =  genHitSet.getHits().begin(); genHitIter !=  genHitSet.getHits().end(); ++genHitIter){
+  for (auto genHit : genHitSet.getHits()) {
 
-    deltaPosition = 999.0;
-    recoHitNumber = 0;
-    bestRecoHitNumber = -1;
+    double deltaPosition = 999.0;
+    int recoHitNumber = 0;
+    int bestRecoHitNumber = -1;
 
     for (hitSet::const_iterator recoHitIter = recoHitSet.getHits().begin(); recoHitIter != recoHitSet.getHits().end(); ++recoHitIter,++recoHitNumber) {
 
-      if (genHitIter->getLayer()==recoHitIter->getLayer()) {
-	tempDeltaPosition = compareHitPositions(*genHitIter,*recoHitIter);
+      if (genHit.getLayer()==recoHitIter->getLayer()) {
+	double tempDeltaPosition = compareHitPositions(genHit,*recoHitIter);
 	if (std::abs(tempDeltaPosition) < std::abs(deltaPosition)) {
 	  deltaPosition = tempDeltaPosition;
 	  bestRecoHitNumber = recoHitNumber;
@@ -78,18 +73,18 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vec
       }
 
     } // end reco Hit loop
-    if (genHitIter->getTrackNumber() == trackNumber && bestRecoHitNumber>-1) {
+    if (genHit.getTrackNumber() == trackNumber && bestRecoHitNumber>-1) {
 
       trackHitCandidate.push_back(bestRecoHitNumber);
 
-    } else if (genHitIter->getTrackNumber() != trackNumber){
+    } else if (genHit.getTrackNumber() != trackNumber){
       trackHitCandidates.push_back(trackHitCandidate);
       trackHitCandidate.clear();
       trackHitCandidate.push_back(bestRecoHitNumber);
-      trackNumber = genHitIter->getTrackNumber();
+      trackNumber = genHit.getTrackNumber();
     }
   } // end gen Hit loop
-  trackHitCandidates.push_back(trackHitCandidate);
+  trackHitCandidates.push_back(std::move(trackHitCandidate));
 
 
 }
@@ -106,9 +101,7 @@ double fc::PerfectTrackRecoModule::compareHitPositions(const Hit & genHit, const
 
 void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet) const{
 
-  for (std::vector<std::vector<int>>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
-    std::vector<int> trackHitCandidate = *trackHitCandidateIter;
-
+  for (auto const& trackHitCandidate : trackHitCandidates) {
     Track trackCandidate(buildTrack(hitSet,trackHitCandidate,_detectorGeometry,_debugLevel));
 
     if (_debugLevel ==2) {
@@ -116,7 +109,7 @@ void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCan
       trackCandidate.print(std::cout);
     }
 
-   trackCandidateSet.insertTrack(trackCandidate);
+    trackCandidateSet.insertTrack(std::move(trackCandidate));
 
   }
 
