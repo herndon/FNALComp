@@ -27,7 +27,7 @@
 
 \title{  
 \vspace{0.5cm}
-Planar Silicon Detector Geometry Description
+Planar Strip Detector Geometry Description
 }
 
 \author {Matthew Herndon}
@@ -39,8 +39,8 @@ Planar Silicon Detector Geometry Description
 \begin{abstract}
 \vskip 0.5cm
 \noindent
-This document describes the geometry class used to describe a planer silicon strip
-detector that measures charged particle trajectories two dimensions immersed in a magnetic field.  
+This document describes the geometry class used to describe a planer strip
+detector immersed in a magnetic field used to measures charged particle helical trajectories three dimensions.  
 \end{abstract}
 \maketitle
 
@@ -52,17 +52,34 @@ detector that measures charged particle trajectories two dimensions immersed in 
 \vspace{0.3cm}
 
 \section{Introduction}
-The detector consists of a five layer silicon detector immersed in a 1
-Tesla magnetic field oriented perpendicular to the measurement
-directions of the silicon sensors.  The interaction vertex is at 0,0,0 though
-the program is general enough to support different vertex position.  Particles
-generally move in the positive y direction.  The sensors are planes in x,z with
-the normal along the y axis, though an arbitrary normal is supported.  Measurements,
-are made in 2D as the y position of the sensor and the x position of the strips which
-run parallel to the z axis.  The magnetic field is oriented in the z direction to give
-bending in the x,y plane.  The detectorGeometry initialization only supports a magnetic 
-field along z and sensors normal to the y axis though this could be easily expanded.
-The sensors closest to the iteration region are smaller in x and have finer segmentation.
+The detector consists of a ten layer strip detector immersed in a 1
+Tesla magnetic field.  The sensors are planes in the x,z place with
+the normals vectors along the y axis, though an arbitrary orientation is supported.
+The sensors are grouped in 5 pairs with each pair closely spaced in y.  One sensor of each pair
+measures in the x  direction (X sensors) while the other sensor measures in either the z direction (Z sensors) 
+or at a 1 degree angle small angle (small angle sensors SAS)relative to the x direction.  The SAS allow matching
+between Hits in the X view and the Z view.  The sensors closest to the iteration region are smaller in x and z and
+have finer segmentation.  The magnetic field is oriented in the z direction to give
+bending in the x,y plane. 
+\\
+
+The interaction vertex is at located 0,0,0 and particles generally move in the positive y direction.  
+\\
+
+The sensors are described by:
+\begin{itemize}
+\item   int \_type;// types 0: X, 1, SAS, 2, Z
+\item  int \_nStrips;
+\item   double \_stripPitch; \_nStrips times \_stripPitch gives the measurementDirSize
+\item   double \_intrinsicHitResolution;
+\item   double \_hitResolution;
+\item   double \_badHitResolution;
+\item  double \_threshold;
+\item  TVector3 \_center;
+\item  TVector3 \_normal;
+\item  TVector3 \_measurementDirection;
+\item  double \_perpSize;
+\end{itemize}
 
 This detector could represent a set of rectangular planes used in a fix target experiment
 or a single wedge in phi of the cylindrical collider experiment, where additional identical
@@ -73,62 +90,82 @@ wedges could populate the cylinder to complete the cylindrical design.
 
 
 \section{Detector layout and performance}
-The silicon strip sensors are oriented perpendicular to the y axis in
-the x-z plane in 2 cm intervals.  Strips in the sensors run in the z
-direction.  The two inner, lowest y,  sensors have strips spaced 25 micron
-intervals in x. While the 3 outer sensors have strips spaced in 50 micron
+In the default configuration the X strip sensors are oriented perpendicular to the y axis in
+the x-z plane in 20 cm intervals.  Strips in the X sensors run in the z
+direction.  The two inner, lowest y,  sensors have strips spaced 50 micron
+intervals in x. While the 3 outer sensors have strips spaced in 200 micron
 intervals in x.  Each sensor has 2048 strips symmetrically positioned
 around x = 0.  The magnetic filed is oriented in the z direction such
 that each sensor makes measurements of the x-y position allowing
-the curvature in the magnetic field to be measured.
+the curvature or pT to be measured in the magnetic field.
+
+In the default configuration the Z strip sensors are oriented perpendicular to the y axis in
+the x-z plane in 20 cm intervals.  Strips in the Z sensors run in the x
+direction.  The two inner, lowest y,  sensors have strips spaced 50 micron
+intervals in x. While the 1 outer sensor has strips spaced in 200 micron
+intervals in x.  Each sensor has 2048 strips symmetrically positioned
+around z = 0.  each sensor makes measurements of the x-z position allowing
+the z component of the momentum to be measured.
+
+In the default configuration the SAS strip sensors are oriented perpendicular to the y axis in
+the x-z plane in 20 cm intervals.  Strips in the SAS sensors run 1 degree in angle from the x
+direction.  The sensors at higher y than the Z sensors.  The  sensors have strips spaced 200 micron
+intervals in x. While the 1 outer sensor has strips spaced in 200 micron
+interval.  Each sensor has 2048 strips.  The sensors are placed 200 microns from the associated X sensor to allow measurement in X
+and SAS to be used to find an intersections which determines the z coordinate and match the information from the X sensors with the 
+information from the Z sensors .  Without rotated sensors the X an Z views would be independent making it impossible to match X and Z
+views.
+
 
 The sensors digitize approximately 32 ADC counts of charge per charged
 particle hit and have a hit resolution given in microns which is due to
-digitization and intrinsic resolution uncertainties.
+digitization and intrinsic resolution uncertainties.  The combined resolution
+can be measured using the simulation by comparing true generated and reconstructed
+hit positions.  In addition when only one strip is hit or when two hits from
+different tracks overlap resolution can be degraded.  However, these cases can
+be identified by the number of strips or the amount of charge in a hit and separate
+resolutions for ``bad'' hits assigned.
+\\
 
-The sensors are described by yposition, stripPtich, number of strips
-and resolution as give in table~\ref{tab:detectorTable}
-
-
+A subset of the sensor characteristics is given in table~\ref{tab:detectorTable}
+\\
 
 \begin{table}
 \caption{\label{tab:detectorTable} Sensor properties.}
-\begin{tabular}{|l|l|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|l|}
 \hline 
-Layer & Number Strips & Strip Pitch (um) & Y Pos (cm) & Res (um)\\
+Layer & type & Number Strips & Strip Pitch (um) & Y Pos (m) & Res (um)\\
 \hline
-0 & 2048 & 25	& 2.0 & 7	 \\
-2 & 2048 & 25	& 4.0 & 7	 \\
-3 & 2048 & 50	& 6.0 & 12	 \\
-4 & 2048 & 50	& 8.0 & 12	 \\
-5 & 2048 & 50	& 10.0 & 12	 \\
+0 & X & 2048 & 50	& 0.2 & 12	 \\
+2 & X & 2048 & 50	& 0.4 & 12	 \\
+3 & X & 2048 & 200	& 0.6 & 25	 \\
+4 & X & 2048 & 200	& 0.8 & 25	 \\
+5 & X & 2048 & 200	& 1.0 & 50	 \\
+0 & Z & 2048 & 50	& 0.2002 & 12	 \\
+2 & Z & 2048 & 50	& 0.4002 & 12	 \\
+3 & Z & 2048 & 200	& 0.6002 & 25	 \\
+4 & SAS & 2048 & 200	& 0.8002 & 25	 \\
+5 & SAS & 2048 & 200	& 1.0002 & 50	 \\
 \hline
 \end{tabular}
 \end{table}
 
-\section{Class Description}
-The detector geometry is available through the detectorGeometry class
-described in the detectorGeometry.cc and detectorGeomergy.hh classes.
 
 Class variables:
 \begin{itemize}
-\item int nSensors: number for sensors in y
-\item double bField: magnetic field strength, oriented along z-axis
-\item sensorDecriptor structs: describing silicon sensors
+\item int, \_nXSensors, Z, SAS 
+\item int \_MIP: 
+\item TVector3 \_bField: magnetic field strength, oriented along z-axis
+\item \_curvatureC: allows conversion between pT and curvature
+\item \_sensors, vector of sensorDecriptor structs: describing the sensors
 \end{itemize}
 
+In addition the primaryVertex is also described as a 0.01(m) resolution sensor in X and Z to allow
+for performing a primaryVertex constraint to determine a track trajectory from 2X and one Z or SAS
+hit.  With the primary vertex and 2 hits a circle can be determined in the XY plane and the primary
+vertex and one Z or SAS hit can be used to determine the trajectory in z.
 
 
-
-sensorDecriptor struct:\\
-Instances sensor0, sensor1, sensor2, sensor3, sensor4.\\
-Variables:\\
-\begin{itemize}
-\item int nStrips
-\item double stripPitch
-\item double yPos
-\item double resolution
-\end{itemize}
 
 
 

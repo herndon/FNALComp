@@ -40,11 +40,11 @@ Description of the Fermilab software school data objects
 \begin{abstract}
 \vskip 0.5cm
 \noindent
-This document describes the data objects use in the Fermilab software school.
+This document describes the data objects used in the Fermilab software school.
 The objects include a StripSet with raw digitized data for the strip sensors
-of the top simulated detector and Hits, Tracks (and Helix), GenTracks and associated
-HitSets, TracksSets and GenTrackSets.  In addition the format used to store the
-data objects to file is described.
+of the toy simulated detector as well as Hits, Tracks, GenTracks and associated
+HitSets, TracksSets and GenTrackSets.  In addition, the formats used to store the
+data objects to file are described.
 \end{abstract}
 \maketitle
 
@@ -56,261 +56,319 @@ data objects to file is described.
 \vspace{0.3cm}
 
 \section{Introduction}
-Each objects is described below including the objects class and the methods and
+Each objects is described below including the object's class and the methods and
 format used to write the objects.  Sets are described with the associated data
 object.
+\\
 
 The detector geometry of the strip sensors is defined in ~\cite{detectorGeometry}.
 
 
 \section{The StripSet}
-\subsection(StripSet class)
+\subsection{StripSet class}
 Implemented in the StripSet.hh and StripSet.cc files in the DataObjects directories.
+\\
 
-The stripSet is a std::vector of typedef layerStripMaps with one map per layers of the detector.
-The detector is dynamically defined from a geometry files and the vector is initialized
-at run time.  Each layerStripMap is a map of key<int> stripNumber and adc value.  This allows
-the strip data to be stored in a sparse and ordered way.
+The StripSet contains a std::vector of typedef layerStripMaps with one map per layer of the detector.
+The detector is dynamically defined from a geometry file and the vector and size are initialized
+at run time.  Each layerStripMap is a map of key int stripNumber and adc value.  This allows
+the strip data to be stored in a sparse and ordered format.
+\\
 
-The strip data can be accessed using the generic getStrips() method which gives you the entire
-vector. The underlying vector container could be changed several different container types without
-effecting the user interface.  The strip data can also be accessed using the getLayerStripMap(int layer)
-method for direct access to layer map.  The method indicates that a Map is retrieved since Maps have
-access methods methods that are not common to containers.
+Access methods:
+\begin{itemize}
+\item getStrips(): const reference access to the vector using a generic method. The underlying vector container could be 
+changed to several different container types without effecting the user interface.
+\item getLayerStripMap(int layer): const reference access to a the strip data from a single layer. The method explicitly 
+indicates that a map is retrieved since maps have access methods methods that are not common to all containers.
+\item insertStrip(unsigned int layer, int stripNumber, int acd):  To insert data into the set.
+\item print(ostream\&): To print to an a user specified ostream.
+\end{itemize}
 
-An insertStrip(unsigned int layer, int stripNumber, int acd) method is provided to insert data into
-the set.
-
-The StripSet includes print(ostream&) to print to an a user specified ostream.
-
-\subsection{StripSet IO)
+\subsection{StripSet IO}
 Implemented in the StripSetIO.hh and StripSetIO.cc files in the Algorithms directories.
+\\
 
 Input and output to disk in controlled by the StripSetIO helper class.  Reading and writing
 are performed by the readEvent and writeEvent functions.
+\\
 
-The data is stored, or ``streamed'' to disk in bit packed format to illustrate a typical way date is stored in compact
-format in many experiments.  The =data is stored in individual bytes or pairs of bytes for information
+The data is stored, or ``streamed'', to disk in bit packed format to illustrate a typical way date is stored in compact
+format in many experiments.  The data is stored in individual bytes or pairs of bytes for information
 that does not fit in one byte.  The data structure is as follows.
-
 \begin{itemize}
-\item Strips: in clean test to identify the Set
-\item  1 byte: version The version is checked on input to make sure the correct streamer code is being used.
-\item - 1 byte: layer number, current 0-9 (repeated once per layer )
-\item -- 1 byte: number of strips, max 256
-\item --- 2 bytes: strip number, 11 bytes max 2048, and acd 5 bytes, max 32
-  (repeated number of strips times)
+\item Strips: In clear test to identify the Set
+\item  1 byte, version: The version is checked on input to make sure the correct streamer code is being used.
+\item - 1 byte, layer number: 0-9 (repeated once per layer)
+\item - 1 byte, number of strips: max 256
+\item -- 2 bytes. strip number and adc: strip number 11 bytes, max 2048, and acd 5 bytes, max 32. (repeated number of strips times)
 \end{itemize}
 
 Note event numbers and layer numbers are not necessary to the
-structure but included to facilitate synchronization with write and read operation..
+structure but are included to facilitate synchronization with write and read operation..
+\\
 
-A number of helper functions exist in the StripHitFunctions file in Geometry directories.  This functions
+A number of helper functions exist in the StripHitFunctions file in Geometry directories.  These functions
 can convert from strip number and layer to local and global positions and identify whether a strip number is valid
 on a given layer.
 
 \subsection{binary input and output}
 Data input and output is controlled via standard C++ library binary input and
-output functions. std::ofstream, ifstream.  Byte writing is performed
-write and read function as:
+output functions. std::ofstream, ifstream.  Byte writing is performed for write and read functions as:
 
-stripdata.write (reinterpret\_cast<const char *>(\&myInt), 1);\\
-stripdata.read (myCharByte, 1);\\
+\begin{itemize}
+\item stripdata.write reinterpret\_cast const char *(\&myInt), 1);
+\item stripdata.read (myCharByte, 1);
+\end{itemize}
+\
 
 \section{The Hit and HitSet}
-\subsection{Hit class)
+\subsection{Hit class}
 Implemented in the Hit.hh and Hit.cc files in the DataObjects directories.
+\\
 
 The Hit class contains:\\
-TVector3 _hitPosition\\
-int _layer
-int _numberStrips\\
-Int _trackNumber (only for generator level hits)\\
+
+\begin{itemize}
+\item TVector3 \_hitPosition
+\item int \_layer
+\item int \_numberStrips
+\item Int \_trackNumber (only for generator level hits)
+\end{itemize}
+
 
 The class servers for both generator Hits and reconstructed Hits.   Associated information such as Hit resolutions
-are stored in the DetectorGeometry.  Also note that a hit can be though of as ``bad'' if it has a large ADC
+are stored in the DetectorGeometry.  Also note that a hit can be classified of as ``bad'' if it has a large ADC
 value or more than two associated strips indicating that it is actually due to several overlapping hits from
 different tracks.
+\\
 
-Each characteristic of the Hit can be accessed by a got function of the same name: getHitPosition().
+Constructors:
 
-Hits are constructed by hitPosition,layer,numberStrips,trackNumber.
+\begin{itemize}
+\item Hit(hitPosition,layer,numberStrips,trackNumber)
+\item Hit(hitPosition,layer,numberStrips
+\end{itemize}
 
-includes print(ostream&) to print to an a user specified ostream.
+Access methods:
+\begin{itemize}
+\item getHitPosition():... names correspond to the data members
+\item print(ostream\&): To print to an a user specified ostream.
+\end{itemize}
 
 
-
-\subsection(HitSet class)
+\subsection{HitSet class}
 Implemented in the HitSet.hh and HitSet.cc files in the DataObjects directories.
+\\
 
 The HitSet is a typedef hitSet of type std::vector of Hits.
+\\
 
-The hit data can be accessed using the generic getHits() method which gives you the entire
-vector. The vector index indexes the Hit number to allow direct access to a hit of a known number.
+Access methods:
 
+\begin{itemize}
+\item getHits(): const reference access to the vector using a generic method.
+The vector index indexes the Hit number to allow direct access to a hit of a known number.
 
-An insertHit(Hit) method is provided to insert data into the set.
+\item insertHit(Hit): Provided to insert data into the set.
 
-
-The HitSet includes print(ostream&) to print to an a user specified ostream that iterates over
+\item print(ostream\&): To print to an a user specified ostream that iterates over
 the Hits calling the print method of each Hit..
+\end{itemize}
+
 
 A number of helper functions exist in the StripHitFunctions file in Geometry directories.  These functions
 can convert from hit position to local and strip number position  identify whether a hit position at a sensor
 plane is within the active area of the sensor.
 
-
-
-\subsection{HitSet IO)
+\subsection{HitSet IO}
 Implemented in the HitSetIO.hh and HitSetIO.cc files in the Algorithms directories.
+\\
 
 Input and output to disk in controlled by the HitSetIO helper class.  Reading and writing
 are performed by the readEvent and writeEvent functions.
+\\
 
 The data is stored in text format for simplicity.
-
 
 \begin{itemize}
 \item  Hits: to identify the set
 \item version: The version is checked on input to make sure the correct streamer code is being used.
 \item number of hits
 \item hit number (repeated number of hits times)
-\item x position
-\item y position
-\item z position
-\item layer number
-\item number of strips
-\item track number, -1 if none 
+\item - x position
+\item - y position
+\item - z position
+\item - layer number
+\item - number of strips
+\item - track number, -1 if none 
 \end{itemize}
 
 \section{The GenTrack and GenTrackSet}
-\subsection{GenTrack class)
+\subsection{GenTrack class}
 Implemented in the GenTrack.hh and GenTrack.cc files in the DataObjects directories.
+\\
 
-The GenTrack class contains:\\
-TLorentzVector _lorentzVector\\
-int _charge
-int _dr, point of closest approach to the reference point, 0,0,0\\
+The GenTrack class contains:
+\begin{itemize}
+\item TLorentzVector \_lorentzVector
+\item int \_charge
+\item int \_dr, point of closest approach to the reference point, 0,0,0
+\end{itemize}
 
-Each characteristic of the Hit can be accessed by a got function of the same name: getPosition() for _dr.
-There is also a makeHelix(alpha) function which takes the curvature constant in the magnetic field and returns
+Constructor:
+
+\begin{itemize}
+\item GenTrack(TLorentzVector,int charge, TVector3 position of closest approach)
+\item{itemize}
+\end{itemize}
+
+
+Access:
+\begin{itemize}
+\item getLorentzVector():... names correspond to the data members
+\item getPosition(): \_dr
+
+\item makeHelix(curvatureC): function which takes the curvature constant in the magnetic field and returns
 a Helix which can be used for operations like finding intersections with layers.  Note the magnetic field
 value is needed since it may not be uniform and the helix parameters would be different at different points.
 
-Gentracks are constructed by TLorentzVector,int charge, and TVector3 position of closest approach.
+\item print(ostream\&) to print to an a user specified ostream.
+\end{itemize}
 
-Gentrack includes print(ostream&) to print to an a user specified ostream.
 
-
-\subsection(GenTrackSet class)
+\subsection{GenTrackSet class}
 Implemented in the GenTrackSet.hh and GenTrackSet.cc files in the DataObjects directories.
+\\
 
-The GenTrackSet is a typedef genTrackSet of type std::vector of GenTracks.
+The GenTrackSet contains a typedef genTrackSet of type std::vector of GenTracks.
+\\
+Access:
 
-The GenTrack data can be accessed using the generic getGenTracks() method which gives you the entire
-vector. The vector index indexes the GenTrackNumber number to allow direct access to a GenTrack of a known number.
+\begin{itemize}
+\item getGenTracks(): const reference access to the vector using a generic method.
+The vector index indexes the GenTrack number to allow direct access to a hit of a known number.
 
+\item insertTrack(GenTrack): Provided to insert data into the set.
 
-An insertTrack(GenTrack) method is provided to insert data into the set.
-
-
-The GenTrackSet includes print(ostream&) to print to an a user specified ostream that iterates over
+\item print(ostream\&): to print to an a user specified ostream that iterates over
 the GenTracks calling the print method of each GenTrack..
+\end{itemize}
 
-\subsection{GenTrackSet IO)
+
+\subsection{GenTrackSet IO}
 Implemented in the GenTrackSetIO.hh and GenTrackSetIO.cc files in the Algorithms directories.
+\\
 
 Input and output to disk in controlled by the GenTrackSetIO helper class.  Reading and writing
 are performed by the readEvent and writeEvent functions.
+\\
 
 The data is stored in text format for simplicity.
-
 
 \begin{itemize}
 \item  GenTracks: to identify the set
 \item version: The version is checked on input to make sure the correct streamer code is being used.
 \item number of GenTracks
-\item GenTrack number (repeated number of GenTrackNumber times)
-\item charge
-\item px
-\item py
-\item pz
-\item E
-\item x position
-\item y position
-\item z position
+\item - GenTrack number (repeated number of GenTrackNumber times)
+\item - charge
+\item - px
+\item - py
+\item - pz
+\item - E
+\item - x position
+\item - y position
+\item - z position
 \end{itemize}
 
-\section{The GenTrack and GenTrackSet}
-\subsection{Track class)
+\section{The Track and TrackSet}
+\subsection{Track class}
 Implemented in the Track.hh and Track.cc files in the DataObjects directories.
+\\
+
+The Track class contains:
+\begin{itemize}
+\item Helix \_helix, 5 track parameter helix
+\item int \_covMatrix, 5x5 parameter covarinace matrix
+\item double \_chi2
+\item int \_nDof
+\item \_trackHitSet, a typedef of type vector of ints with hit index numbers.
+\end{itemize}
 
 
-The Track class contains:\\
-Helix _helix, 5 track parameter helix\\
-int _covMatrix, 5x5 parameter covarinace matrix\\
-double _chi2\\
-int _nDof\\
-_trackHitSet a typedef vector type of ints that are hit index numbers.
-
-The Track and Helix objects are described in more detail in the Track.pdf document.
-
-Tracks are constructed by the full set of parameters above.  These parameters
+Construcor:
+\begin{itemize}
+\item Tracks are constructed by the full set of parameters above.  These parameters
 are generated by the BuildTrack helper function in the Algorithms directories.
 That class fits a track based on a number of hits.
+\end{itemize}
 
-Track includes print(ostream&) to print to an a user specified ostream.
+
+Access:
+\begin{itemize}
+\item getHelix():... names correspond to the data members\\
+The Track and Helix objects are described in more detail in the Track.pdf~\cite{track} document.
+
+\item print(ostream\&): to print to an a user specified ostream.
+
+\end{itemize}
 
 
-\subsection(TrackSet class)
+\subsection{TrackSet class}
 Implemented in the TrackSet.hh and TrackSet.cc files in the DataObjects directories.
+\\
 
 The TrackSet is a typedef trackSet of type std::vector of GenTracks.
+\\
 
-The Track data can be accessed using the generic getTracks() method which gives you the entire
-vector. The vector index indexes the TrackNumber number to allow direct access to a Track of a known number.
+Access:
+\begin{itemize}
+\item getTracks(): const reference access to the vector using a generic method.
+The vector index indexes the Track number to allow direct access to a hit of a known number.
 
-An insertTrack(Track) method is provided to insert data into the set.
+\item insertTrack(Track): provided to insert data into the set.
 
 
-The TrackSet includes print(ostream&) to print to an a user specified ostream that iterates over
+\item print(ostream\&): to print to an a user specified ostream that iterates over
 the Tracks calling the print method of each Track..
+\end{itemize}
 
-\subsection{TrackSet IO)
+
+\subsection{TrackSet IO}
 Implemented in the TrackSetIO.hh and TrackSetIO.cc files in the Algorithms directories.
+\\
 
 Input and output to disk in controlled by the TrackSetIO helper class.  Reading and writing
 are performed by the readEvent and writeEvent functions.
+\\
 
 The data is stored in text format for simplicity.
 
-
 \begin{itemize}
-\item  GenTracks: to identify the set
+\item Tracks: to identify the set
 \item version: The version is checked on input to make sure the correct streamer code is being used.
 \item number of GenTracks
-\item GenTrack number (repeated number of GenTrackNumber times)
-\item charge
-\item px
-\item py
-\item pz
-\item E
-\item x position
-\item y position
-\item z position
-\item number of Hits
-\item Hit index numbers (repeated number of Hits times)
+\item - Track number (repeated number of GenTrackNumber times)
+\item - charge
+\item - px
+\item - py
+\item - pz
+\item - E
+\item - x position
+\item - y position
+\item - z position
+\item - number of Hits
+\item -- Hit index numbers (repeated number of Hits times)
 \end{itemize}
 
-The hit list could be used alone to restore the track.  Currently TrackSetIO is not used.
-
+The hit list could be used alone to restore the track using BuildTrack.  Currently TrackSetIO is not used.
 
 \begin{thebibliography}{99}
 
 \bibitem{detectorGeometry}
 detectorGeometry.pdf note, M. Herndon (2014)
 
-\bibitem{detectorGeometry}
+\bibitem{track}
 track.pdf note, M. Herndon (2014)
 
 \end{thebibliography}

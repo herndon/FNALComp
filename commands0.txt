@@ -1,78 +1,24 @@
-Compiling and linking
-
-Currently need to set up cms software, issues are c++11, root objects
-source /uscmst1/prod/sw/cms/cshrc prod
-and cmsenv in release
-
-Source code compilation
-g++ -std=c++11 -Wall -c -g `root-config --cflags` DetectorGeometry.cc
-
-Source code linking
-g++ -std=c++11 -Wall -g `root-config --glibs`
-/uscmst1/prod/sw/cms/slc5_amd64_gcc481/lcg/root/5.34.10-cms/lib/libGeom.so
-Random.o DetectorGeometry.o StripSet.o DataGenModule.o dataGen.o -o dataGen
-
 git commands
-
-# making a new repository 
-# make a directory for the repository and initialize it
-mkdir FNALComp
-cd FNALComp
-git init
-# modify README if you want
-git add README
-git commit -m 'initial project version'
-# set repository
-git remote set-url origin ssh://git@github.com/herndon/FNALComp.git
-git remote -v
-
-# commit, push to repository
-git push origin master
-
-
 
 # Checking out an existing repository to directory FNALComp
 git clone ssh://git@github.com/herndon/FNALComp.git FNALComp
 # then moving to a specific tag
-git checkout v0.4
+git checkout v0.6
 
 # or directory checking out to the tag
 git clone --branch v0.4 ssh://git@github.com/herndon/FNALComp.git FNALComp_v0.4
-
 
 # check status of project for modifictions
 git status -s
 git diff
 
-# committing new files.
-# add all
-git add .
-#add by name
-git add filenames
 
-#prep for commit
-git commit -m 'commit text'
-
-
-# committing changes files
-git commit -am 'commit text'
-
-
-# set repository if necessary
-git remote set-url origin ssh://git@github.com/herndon/FNALComp.git
-git remote -v
-
-# commit, push to repository
-git push origin master
-
-# tag current code
-git tag -a v0.4 -m 'Version 0.4, day 0-1 code'
-git show v0.4
-git push origin v0.4
-
-# update local master branch to remove master
+# update local master branch to remote master
 git fetch
 git rebase origin/master
 
+#compile and link the code
+make
 
-r
+#run automated testing.  Compares debug output for each program to test files.
+make test
