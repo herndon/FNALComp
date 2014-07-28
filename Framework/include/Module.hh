@@ -1,5 +1,5 @@
-#ifndef Module_hh
-#define Module_hh
+#ifndef Framework_Module_hh
+#define Framework_Module_hh
 
 #include "Framework/include/Event.hh"
 
@@ -16,4 +16,4 @@ namespace fc {
   };
 }
 
-#endif //Module_hh
+#endif //Framework_Module_hh

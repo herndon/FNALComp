@@ -1,5 +1,5 @@
-#ifndef StripHitFunctions_hh
-#define StripHitFunctions_hh
+#ifndef Geometry_StripHitFunctions_hh
+#define Geometry_StripHitFunctions_hh
 //============================================================================
 // StripHitFunctions.hh
 // header with function definitions for converting between, global, local coordinates, and strip positions
@@ -34,5 +34,5 @@ namespace fcf {
   
 } // end namescape fcf
 
-#endif // StripHitFunctions_hh
+#endif // Geometry_StripHitFunctions_hh
 

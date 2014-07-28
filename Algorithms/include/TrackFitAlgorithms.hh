@@ -1,5 +1,5 @@
-#ifndef TrackFitAlgorithms_hh
-#define TrackFitAlgorithms_hh
+#ifndef Algorithms_TrackFitAlgorithms_hh
+#define Algorithms_TrackFitAlgorithms_hh
 //============================================================================
 // TrackFitAlgorithms.hh
 // header with function definitions of the TrackFitAlgorithms for TrackFits
@@ -31,5 +31,5 @@ namespace fc {
 
 } // end namescape fc
 
-#endif // TrackFitAlgorithms_hh
+#endif // Algorithms_TrackFitAlgorithms_hh
 

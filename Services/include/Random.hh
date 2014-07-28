@@ -1,5 +1,5 @@
-#ifndef Random_hh
-#define Random_hh
+#ifndef Services_Random_hh
+#define Services_Random_hh
 #include<random>
 
 namespace fc {
@@ -19,8 +19,7 @@ private:
 
 public:
 
-  Random(int);
-  ~Random() {};
+  explicit Random(int);
 
   std::default_random_engine & getEngine() { return engine; }
 
@@ -31,4 +30,4 @@ public:
 };
 }// end namespace fc
 
-#endif // Random_hh
+#endif // Services_Random_hh

@@ -1,5 +1,5 @@
-#ifndef GenTrack_hh
-#define GenTrack_hh
+#ifndef DataObjects_GenTrack_hh
+#define DataObjects_GenTrack_hh
 //============================================================================
 // GenTrack.hh
 // header with class definition of the GenTrack
@@ -32,26 +32,16 @@ class Helix;
 ///
 
 class GenTrack {
-private:
-
-  TLorentzVector _lorentzVector;
-  int _charge;
-  TVector3 _dr; // point of clossest approach to 0,0,0cp 
-
 public:
 
 // Constructors
 
   GenTrack(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr);
 
-  
-  // Destructor
-  ~GenTrack() {};
-
   // Get objects
 
-  const TLorentzVector  getLorentzVector() const {return _lorentzVector;}
-  const TVector3 getPosition() const {return _dr;}
+  const TLorentzVector&  getLorentzVector() const {return _lorentzVector;}
+  const TVector3& getPosition() const {return _dr;}
   int getCharge() const {return _charge;}
 
   // convert to helix
@@ -62,8 +52,13 @@ public:
 
   void print(ostream& out) const;
 
+private:
+
+  TLorentzVector _lorentzVector;
+  int _charge;
+  TVector3 _dr; // point of clossest approach to 0,0,0cp 
 };
 } // end namescape fc
 
-#endif // GenTrack_hh
+#endif // DataObjects_GenTrack_hh
 

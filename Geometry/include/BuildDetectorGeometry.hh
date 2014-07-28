@@ -1,5 +1,5 @@
-#ifndef BuildDetectorGeometry_hh
-#define BuildDetectorGeometry_hh
+#ifndef Geometry_BuildDetectorGeometry_hh
+#define Geometry_BuildDetectorGeometry_hh
 //============================================================================
 // BuildDetectorGeometry.hh
 // header with functions to build the DetectorGeometry from a file
@@ -20,4 +20,4 @@ namespace fc {
 
 } // end namespace fc
 
-#endif // BuildDetectorGeometry_hh
+#endif // Geometry_BuildDetectorGeometry_hh

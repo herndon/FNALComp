@@ -1,5 +1,5 @@
-#ifndef Event_hh
-#define Event_hh
+#ifndef Framework_Event_hh
+#define Framework_Event_hh
 
 #include <memory>
 #include <map>
@@ -45,4 +45,4 @@ namespace fc {
     return Handle<T>(reinterpret_cast<const T*>(found->second.get()));
   }
 }
-#endif //Event_hh
+#endif //Framework_Event_hh

@@ -1,5 +1,5 @@
-#ifndef PerfectTrackRecoModule_hh
-#define PerfectTrackRecoModule_hh
+#ifndef Modules_PerfectTrackRecoModule_hh
+#define Modules_PerfectTrackRecoModule_hh
 //============================================================================
 // PerfectTrackRecoModule.hh
 // Module for reconstructing hits from strip infomation
@@ -28,7 +28,6 @@ public:
 
   PerfectTrackRecoModule(int, const std::string& inputHitsLabel, const std::string& inputGenHitsLabel, const std::string& outputTracksLabel, 
 		  const DetectorGeometry &);
-  ~PerfectTrackRecoModule() {};
 
   void processEvent(Event&) override;
 
@@ -57,4 +56,4 @@ private:
 };
 } // end namespace fc
 
-#endif // PerfectTrackRecoModule_hh
+#endif // Modules_PerfectTrackRecoModule_hh

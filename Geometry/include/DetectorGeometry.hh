@@ -1,5 +1,5 @@
-#ifndef DetectorGeometry_hh
-#define DetectorGeometry_hh
+#ifndef Geometry_DetectorGeometry_hh
+#define Geometry_DetectorGeometry_hh
 //============================================================================
 // DetectorGeometry.hh
 // header with class definition of a N layer planor silicon detector
@@ -49,8 +49,6 @@ public:
 		   const std::vector<sensorDescriptor>& sensors,
 		   const sensorDescriptor& primaryVertexX,const sensorDescriptor& primaryVertexZ);
 
- ~DetectorGeometry() {};
-
   const sensorDescriptor& getSensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
   int getDetectorGeometryVersion() const {return _detectorGeometryVersion;}
   int getNSensors() const {return _sensors.size();}
@@ -99,4 +97,4 @@ private:
 };
 } // end namespace fc
 
-#endif // DetectorGeometry_hh
+#endif // Geometry_DetectorGeometry_hh

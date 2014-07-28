@@ -1,5 +1,5 @@
-#ifndef Helix_hh
-#define Helix_hh
+#ifndef DataObjects_Helix_hh
+#define DataObjects_Helix_hh
 //============================================================================
 // Helix.hh
 // header with class definition of the Helix
@@ -43,16 +43,8 @@ namespace fc {
 class Helix {
 
 public:
-  // Static members, matrix dimentions
-  static const int _sDim = 5;     //!< helix dimention
-
-
-private:
-
-  TVectorD _helix;
-  double _alpha;
-
-public:
+  // Static members, matrix dimensions
+  static const int _sDim = 5;     //!< helix dimension
 
 // Constructors
 
@@ -60,10 +52,6 @@ public:
   Helix();
   Helix(double kappa, double dr, double dz, double phi0, double tanl, double alpha);
   
-  // Destructor
-  ~Helix(){};
- 
-
   // Get track parameters
 
   const TVectorD& getHelix() const {return _helix;}
@@ -85,9 +73,12 @@ public:
   // Set helix
   void setHelix(const TVectorD& helix) {_helix = helix;}
 
+private:
 
+  TVectorD _helix;
+  double _alpha;
 };
 } // end namescape fc
 
-#endif // Helix_hh
+#endif // DataObjects_Helix_hh
 

@@ -1,5 +1,5 @@
-#ifndef StripSetIO_hh
-#define StripSetIO_hh
+#ifndef Algorithms_StripSetIO_hh
+#define Algorithms_StripSetIO_hh
 //============================================================================
 // StripSetIO.hh
 // header with class definition of the StripSetIO
@@ -27,6 +27,15 @@ class StripSet;
 ///
 
 class StripSetIO {
+public:
+
+  explicit StripSetIO(const DetectorGeometry &);
+
+  void writeEvent(const StripSet &, std::ofstream&) const; //!< Write all strip information for all sensors std::ofstream file for event _event
+  void readEvent(StripSet &, std::ifstream&);  //!< Read all strip information for all sensors std::ifstream file for event _event
+
+  void printRawData(std::ifstream&) const;
+
 private:
 
   static const int bitmask1 = 0x00FF;
@@ -38,18 +47,8 @@ private:
 
   int _version;
 
-public:
-
-  StripSetIO(const DetectorGeometry &);
-  ~StripSetIO() {};
-
-  void writeEvent(const StripSet &, std::ofstream&) const; //!< Write all strip information for all sensors std::ofstream file for event _event
-  void readEvent(StripSet &, std::ifstream&);  //!< Read all strip information for all sensors std::ifstream file for event _event
-
-  void printRawData(std::ifstream&) const;
-
 };
 } // end namespace
 
-#endif // StripSetIO_hh
+#endif // Algorithms_StripSetIO_hh
 

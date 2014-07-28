@@ -1,5 +1,5 @@
-#ifndef TrackFitMeasurements_hh
-#define TrackFitMeasurements_hh
+#ifndef Algorithms_TrackFitMeasurements_hh
+#define Algorithms_TrackFitMeasurements_hh
 //============================================================================
 // TrackFitMeasurements.hh
 // header with funciton definitions for Measurements and Measurement derivatives
@@ -30,5 +30,5 @@ namespace fc {
 
 } // end namescape fc
 
-#endif // TrackFitMeasurements_hh
+#endif // Algorithms_TrackFitMeasurements_hh
 

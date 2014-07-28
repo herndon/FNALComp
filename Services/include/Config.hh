@@ -1,5 +1,5 @@
-#ifndef Config_hh
-#define Config_hh
+#ifndef Services_Config_hh
+#define Services_Config_hh
 #include <fstream>
 #include <iostream>
 //============================================================================
@@ -29,7 +29,6 @@ class Config {
 public:
 
   Config(std::ifstream&,int);
- ~Config() {};
 
   int getSeed() const {return _seed;}; //!< Returns random number seed
   int getNumberEvents() const {return _numberEvents;}; //!< Returns number of events to generate
@@ -61,4 +60,4 @@ private:
 };
 } // end namespace fc
 
-#endif // Config_hh
+#endif // Services_Config_hh

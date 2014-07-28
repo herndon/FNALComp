@@ -11,7 +11,7 @@
 
 
 
-const fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSet, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int _debugLevel){
+const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSet, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int _debugLevel){
 
 
   // Define static constants...
@@ -280,7 +280,7 @@ const fc::Helix fc::FitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
 
 }
 
-const fc::Helix fc::FitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSetNoPV, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel){
+const fc::Helix fc::fitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSetNoPV, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel){
 
   trackHitSet trackHitSetWithPV;
 
@@ -293,5 +293,5 @@ const fc::Helix fc::FitToHelixWithPV(const Helix& initialHelix, const HitSet& hi
   if (fitType ==1 || fitType ==3) trackHitSetWithPV.push_back(-2);
   // insert a local Z PV measurement point
   if (fitType ==2 || fitType ==3) trackHitSetWithPV.push_back(-1);
-  return FitToHelix(initialHelix, hitSet, trackHitSetWithPV, detectorGeometry, finalCovMatrix, finalChi2, finalNDof, _debugLevel);
+  return fitToHelix(initialHelix, hitSet, trackHitSetWithPV, detectorGeometry, finalCovMatrix, finalChi2, finalNDof, _debugLevel);
 }

@@ -1,5 +1,5 @@
-#ifndef BuildTrack_hh
-#define BuildTrack_hh
+#ifndef Algorithms_BuildTrack_hh
+#define Algorithms_BuildTrack_hh
 //============================================================================
 // BuildTrack.hh
 // header with class definition of the BuildTrack building a track from hits
@@ -19,9 +19,9 @@ namespace fc {
   class HitSet;
   class Track;
 
-  const Track BuildTrack(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel);
+  const Track buildTrack(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel);
 
 } // end namescape fc
 
-#endif // BuildTrack_hh
+#endif // Algorithms_BuildTrack_hh
 

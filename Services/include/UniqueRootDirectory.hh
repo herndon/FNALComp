@@ -1,5 +1,5 @@
-#ifndef UniqueRootDirectory_hh
-#define UniqueRootDirectory_hh
+#ifndef Services_UniqueRootDirectory_hh
+#define Services_UniqueRootDirectory_hh
 //============================================================================
 // UniqueRootDirectory.hh
 // header for UniqueRootDirectory class
@@ -50,4 +50,4 @@ private:
 };
 } // end namespace fc
 
-#endif // UniqueRootDirectory_hh
+#endif // Services_UniqueRootDirectory_hh

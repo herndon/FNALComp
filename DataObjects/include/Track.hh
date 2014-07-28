@@ -1,5 +1,5 @@
-#ifndef Track_hh
-#define Track_hh
+#ifndef DataObjects_Track_hh
+#define DataObjects_Track_hh
 //============================================================================
 // Track.hh
 // header with class definition of the Track
@@ -49,33 +49,12 @@ typedef std::vector<int> trackHitSet; //!< Vector of hit indicies
 ///
 
 class Track {
-private:
-
-  Helix _helix;
-
-  TMatrixD _covMatrix;
-
-  double _chi2;
-  int _nDof;
-
-
-  trackHitSet _trackHitSet;
-  
-  //const DetectorGeometry & _detectorGeometry;
-
-
 public:
 
 // Constructors
 
-  Track();
   Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign, const DetectorGeometry & detectorGeometry);
   Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate);
-
-  Track& operator=(Track track);
-  
-  // Destructor
-  ~Track() {};
 
   // Get objects
 
@@ -104,8 +83,19 @@ public:
 
   void print(ostream& out) const;
 
+private:
+
+  Helix _helix;
+
+  TMatrixD _covMatrix;
+
+  double _chi2;
+  int _nDof;
+
+
+  trackHitSet _trackHitSet;
 };
 } // end namescape fc
 
-#endif // Track_hh
+#endif // DataObjects_Track_hh
 

@@ -1,5 +1,5 @@
-#ifndef TrackFit_hh
-#define TrackFit_hh
+#ifndef Algorithms_TrackFit_hh
+#define Algorithms_TrackFit_hh
 //============================================================================
 // TrackFit.hh
 // header with class definition of the TrackFit for reconstructed tracks
@@ -21,10 +21,10 @@ namespace fc {
   class HitSet;
   class Helix;
 
-  const fc::Helix FitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet & trackHitSet, const DetectorGeometry& detectorGeometry, TMatrixD &, double&, int&, int _debugLevel);
-  const fc::Helix FitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSet, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel);
+  const fc::Helix fitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet & trackHitSet, const DetectorGeometry& detectorGeometry, TMatrixD &, double&, int&, int _debugLevel);
+  const fc::Helix fitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSet, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel);
 
 } // end namescape fc
 
-#endif // TrackFit_hh
+#endif // Algorithms_TrackFit_hh
 

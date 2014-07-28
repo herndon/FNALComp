@@ -1,5 +1,5 @@
-#ifndef Exception_hh
-#define Exception_hh
+#ifndef Services_Exception_hh
+#define Services_Exception_hh
 #include<stdexcept>
 
 namespace fc {
@@ -10,13 +10,14 @@ namespace fc {
 /// Wrapper for std library exception functions
 ///
 
-struct Exception : public std::exception
+class Exception : public std::exception
 {
-   std::string s;
-   Exception(std::string ss) : s(ss) {}
-   ~Exception() throw () {} // Updated
-   const char* what() const throw() { return s.c_str(); }
+public:
+   explicit Exception(const std::string& message) : _what(message) {}
+   const char* what() const noexcept override { return _what.c_str(); }
+private:
+   std::string _what;
 };
 } // end namespace fc
 
-#endif // Exception_hh
+#endif // Services_Exception_hh

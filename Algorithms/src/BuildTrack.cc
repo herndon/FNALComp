@@ -11,7 +11,7 @@
 
 
 
-const fc::Track fc::BuildTrack(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel){
+const fc::Track fc::buildTrack(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel){
 
   int numberXHits = 0;
   int numberSASHits = 0;
@@ -55,10 +55,10 @@ const fc::Track fc::BuildTrack(const HitSet & hitSet, const std::vector<int> & t
   if ((numberSASHits+numberZHits)<2) fitType += 2;
 
   if (fitType >0){
-    Helix helix = FitToHelixWithPV(initialHelix,hitSet,trackHitCandidate,detectorGeometry,covMatrix,chi2,nDof,fitType,2);
+    Helix helix = fitToHelixWithPV(initialHelix,hitSet,trackHitCandidate,detectorGeometry,covMatrix,chi2,nDof,fitType,2);
     return Track(helix,covMatrix,chi2,nDof,trackHitCandidate);
   } else {
-    Helix helix = FitToHelix(initialHelix,hitSet,trackHitCandidate,detectorGeometry,covMatrix,chi2,nDof,2);
+    Helix helix = fitToHelix(initialHelix,hitSet,trackHitCandidate,detectorGeometry,covMatrix,chi2,nDof,2);
     return Track(helix,covMatrix,chi2,nDof,trackHitCandidate);
   }
 

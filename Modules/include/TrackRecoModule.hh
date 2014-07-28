@@ -1,5 +1,5 @@
-#ifndef TrackRecoModule_hh
-#define TrackRecoModule_hh
+#ifndef Modules_TrackRecoModule_hh
+#define Modules_TrackRecoModule_hh
 //============================================================================
 // TrackRecoModule.hh
 // Module for reconstructing hits from strip infomation
@@ -32,7 +32,6 @@ public:
 
   TrackRecoModule(int, const std::string& inputHitsLabel, const std::string& outputTracksLabel, 
 		  const Config&, const DetectorGeometry &);
-  ~TrackRecoModule() {};
 
   void processEvent(Event&) override;
 
@@ -61,4 +60,4 @@ private:
 };
 } // end namespace fc
 
-#endif // TrackRecoModule_hh
+#endif // Modules_TrackRecoModule_hh

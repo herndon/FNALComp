@@ -1,5 +1,5 @@
-#ifndef TrackRecoStrategy1X2SAS_hh
-#define TrackRecoStrategy1X2SAS_hh
+#ifndef Tracking_TrackRecoStrategy1X2SAS_hh
+#define Tracking_TrackRecoStrategy1X2SAS_hh
 //============================================================================
 // TrackRecoStategy1X2SAS.hh
 // header with function definitions of the TrackRecoStategy1X2SAS tracking stratgy
@@ -37,5 +37,5 @@ class HitSet;
 
 } // end namescape fc
 
-#endif // TrackRecoStrategy1X2SAS_hh
+#endif // Tracking_TrackRecoStrategy1X2SAS_hh
 

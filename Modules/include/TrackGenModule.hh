@@ -1,5 +1,5 @@
-#ifndef TrackGenModule_hh
-#define TrackGenModule_hh
+#ifndef Modules_TrackGenModule_hh
+#define Modules_TrackGenModule_hh
 //============================================================================
 // TrackGenModule.hh
 // Module for generating tracks 
@@ -37,7 +37,6 @@ public:
   TrackGenModule(int debugLevel, int numberOfTracks,
 		 const std::string& iTracksLabel, //label used for the generated tracks
 		 const DetectorGeometry &,Random &);
-  ~TrackGenModule() {};
 
   void processEvent(Event& ) override;
 
@@ -63,4 +62,4 @@ private:
 
 } // end namespace fc
 
-#endif // TrackGenModule_hh
+#endif // Modules_TrackGenModule_hh

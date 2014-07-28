@@ -109,7 +109,7 @@ void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCan
   for (std::vector<std::vector<int>>::const_iterator trackHitCandidateIter = trackHitCandidates.begin(); trackHitCandidateIter != trackHitCandidates.end(); ++trackHitCandidateIter){
     std::vector<int> trackHitCandidate = *trackHitCandidateIter;
 
-    Track trackCandidate(BuildTrack(hitSet,trackHitCandidate,_detectorGeometry,_debugLevel));
+    Track trackCandidate(buildTrack(hitSet,trackHitCandidate,_detectorGeometry,_debugLevel));
 
     if (_debugLevel ==2) {
       std::cout << "Track after fit" << std::endl;

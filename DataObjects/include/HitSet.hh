@@ -1,5 +1,5 @@
-#ifndef HitSet_hh
-#define HitSet_hh
+#ifndef DataObjects_HitSet_hh
+#define DataObjects_HitSet_hh
 //============================================================================
 // HitSet.hh
 // header with class definition of the HitSet
@@ -25,15 +25,7 @@ namespace fc {
 ///
 
 class HitSet {
-private:
-
-  hitSet _hitSet;
-
 public:
-
-  HitSet() {};
-  ~HitSet() {};
-
 
   const hitSet & getHits() const {return _hitSet;};
 
@@ -42,7 +34,10 @@ public:
 
   void print(ostream& out) const;
 
+private:
+
+  hitSet _hitSet;
 };
 } // end namespace fc
-#endif // HitSet_hh
+#endif // DataObjects_HitSet_hh
 

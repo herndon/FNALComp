@@ -1,5 +1,5 @@
-#ifndef EventProcessor_hh
-#define EventProcessor_hh
+#ifndef Framework_EventProcessor_hh
+#define Framework_EventProcessor_hh
 
 #include <memory>
 #include <vector>
@@ -32,4 +32,4 @@ namespace fc {
 
 }
 
-#endif //EventProcessor_hh
+#endif //Framework_EventProcessor_hh

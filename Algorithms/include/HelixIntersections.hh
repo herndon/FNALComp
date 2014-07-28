@@ -1,5 +1,5 @@
-#ifndef HelixIntersections_hh
-#define HelixIntersections_hh
+#ifndef Algorithms_HelixIntersections_hh
+#define Algorithms_HelixIntersections_hh
 //============================================================================
 // HelixIntersections.hh
 // header with function definitions for HelixIntersections
@@ -23,5 +23,5 @@ class Helix;
 
 } // end namescape fc
 
-#endif // HelixIntersections_hh
+#endif // Algorithms_HelixIntersections_hh
 

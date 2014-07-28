@@ -1,5 +1,5 @@
-#ifndef HitSetIO_hh
-#define HitSetIO_hh
+#ifndef Algorithms_HitSetIO_hh
+#define Algorithms_HitSetIO_hh
 //============================================================================
 // HitSetIO.hh
 // header with class definition of the HitSetIO
@@ -25,21 +25,17 @@ namespace fc {
 ///
 
 class HitSetIO {
-private:
-
-  int _version;
 
 public:
-
   HitSetIO();
-  ~HitSetIO() {};
-
 
   void writeEvent(const HitSet &, std::ofstream&) const; //!< Write all hit information for all sensors std::ofstream file for event _event
   void readEvent(HitSet &, std::ifstream&);  //!< Read all hit information for all sensors std::ifstream file for event _event
 
+private:
 
+  int _version;
 };
 } // end namespace fc
-#endif // HitSetIO_hh
+#endif // Algorithms_HitSetIO_hh
 
