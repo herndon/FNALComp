@@ -1,21 +1,35 @@
-git commands
+commands for setting up gcc and root software
+
+CMS users:
+Modern gcc and root version are setup when setting up a CMS release 7.0.0 or greater under SL5
+log into the lpc sl5 machines, type:
+ssh -X cmslpc-sl5.fnal.gov
+type:
+source /uscmst1/prod/sw/cms/cshrc prod
+scram p CMSSW CMSSW_7_0_0
+cd CMSSW_7_0_0
+cmsenv
+cd ..
+git clone --branch production ssh://git@github.com/herndon/FNALComp.git FNALComp
+make
+
+Note that at each new login you have to run the "source /uscmst1/prod/sw/cms/cshrc prod" command
+and cd to the CMSSW release and run "cmsenv" before cding to your git release to work.
+
+
+more on git commands
 
 # Checking out an existing repository to directory FNALComp
-git clone ssh://git@github.com/herndon/FNALComp.git FNALComp
-# then moving to a specific tag
-git checkout v0.6
-
-# or directory checking out to the tag
-git clone --branch v0.4 ssh://git@github.com/herndon/FNALComp.git FNALComp_v0.4
+git clone --branch production ssh://git@github.com/herndon/FNALComp.git FNALComp
 
 # check status of project for modifictions
 git status -s
 git diff
 
 
-# update local master branch to remote master
+# update local production branch to remote production
 git fetch
-git rebase origin/master
+git rebase origin/production
 
 #compile and link the code
 make
