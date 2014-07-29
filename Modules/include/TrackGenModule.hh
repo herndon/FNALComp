@@ -17,8 +17,6 @@
 #include <memory>
 #include "Framework/include/Module.hh"
 
-class TH1D;
-
 ///
 /// Class TrackGenModule: Module for generating tracks
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-04-17
@@ -53,9 +51,6 @@ private:
 
   // Random numbers
   Random &  _random;
-
-  //ROOT will delete this when the TFile to which it is attached is deleted
-  TH1D* _hPt;
 
   GenTrack generateTrack() const;
 
