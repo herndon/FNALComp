@@ -10,7 +10,7 @@ scram p CMSSW CMSSW_7_0_0
 cd CMSSW_7_0_0
 cmsenv
 cd ..
-git clone --branch production ssh://git@github.com/herndon/FNALComp.git FNALComp
+git clone --branch production https://github.com/herndon/FNALComp.git FNALComp
 make
 
 Note that at each new login you have to run the "source /uscmst1/prod/sw/cms/cshrc prod" command
