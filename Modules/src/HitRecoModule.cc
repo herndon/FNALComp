@@ -1,142 +1,54 @@
-#include<iostream>
-#include "Geometry/include/StripHitFunctions.hh"
-#include "Geometry/include/DetectorGeometry.hh"
-#include "DataObjects/include/HitSet.hh"
+#ifndef Modules_HitRecoModule_hh
+#define Modules_HitRecoModule_hh
+//============================================================================
+// HitRecoModule.hh
+// Module for reconstructing hits from strip infomation
+// 
+// Author Matt Herndon, University of Wisconsin,
+//                       Fermi National Accelerator Laborator
+// 2014-06-11
+//============================================================================
+
+#include "Framework/include/Module.hh"
 #include "DataObjects/include/StripSet.hh"
-#include "Modules/include/HitRecoModule.hh"
+#include "TVector3.h"
+#include <vector>
+#include <string>
 
-fc::HitRecoModule::HitRecoModule(int debugLevel,
-				 const std::string& iInputStripsLabel, const std::string& iOutputHitsLabel,
-				 const DetectorGeometry & detectorGeometry):
-  _debugLevel(debugLevel),
-  _inStripsLabel(iInputStripsLabel),
-  _outHitsLabel(iOutputHitsLabel),
-  _detectorGeometry(detectorGeometry) {
-}
 
-void fc::HitRecoModule::processEvent(fc::Event& event)
-{
-  Handle<StripSet> genStripSet = event.get<StripSet>(_inStripsLabel);
-  std::unique_ptr<HitSet> recoHitSet( new HitSet );
+namespace fc {
 
-  recoHits(*recoHitSet, *genStripSet);
+class DetectorGeometry;
+class HitSet;
 
-  if (_debugLevel >= 2) recoHitSet->print(std::cout);
 
-  event.put(_outHitsLabel, std::move(recoHitSet));
-}
+///
+/// Class HitRecoModule  Module for reconstructing hits from strip infomation
+/// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-11
+///
 
-void fc::HitRecoModule::recoHits(HitSet & hitSet, const StripSet& stripSet) const{
+class HitRecoModule : public Module {
 
-  int hitNumber = 0;
+public:
 
-  for (int ii_layer =  0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer){
+  HitRecoModule(int, const std::string& iInputStripsLabel, const std::string& iOutputHitsLabel, const DetectorGeometry &);
+
+  void processEvent(Event& ) override;
+
+
+private:
+
+  int _debugLevel;
+  const std::string _inStripsLabel;
+  const std::string _outHitsLabel;
+
+  // Detector information
+  const DetectorGeometry & _detectorGeometry;
+
+  //void recoHits(HitSet &, const StripSet &) const;
+
  
-    if (_debugLevel >= 5) std::cout << "HitReco layer: " << ii_layer << std::endl;
-    recoHitsLayer(hitSet, stripSet,ii_layer,hitNumber);
+};
+} // end namespace fc
 
-  } // end layer loop
-
-
-}
-
-
-void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet, int layer, int & hitNumber) const{
-
-
-  std::vector<int> stripAdcs;
-  int initialStrip;
-  std::vector<int>::size_type numberStrips;
-  double stripHitPosition;
-
-  const layerStripMap layerStripMap = stripSet.getLayerStripMap(layer);
-  layerStripMap::const_iterator  layerStripMapIter = layerStripMap.begin();
-  layerStripMap::const_iterator  layerStripMapIterEnd = layerStripMap.end();
-
-  while (layerStripMapIter != layerStripMapIterEnd) {
-
-    findCluster(initialStrip,layer,stripAdcs,layerStripMapIter,layerStripMapIterEnd,stripSet);
-
-    stripHitPosition = calculateStripHitPositionFromCluster(initialStrip,stripAdcs);
-
-    double localHitPosition = fcf::calculateLoalFromStripPosition(stripHitPosition,layer,_detectorGeometry);
-    TVector3 hitPosition = fcf::calculateGlobalFromLocalPosition(localHitPosition,layer,_detectorGeometry);
-  
-    numberStrips = stripAdcs.size();
-
-    Hit hit(hitPosition,layer,numberStrips);
-
-    hitSet.insertHit(hit);
-
-    // calculate hit postition function using vector of strips?
-    // create cluster?
-    // save number of strips. save gen track on strips?
-
-    ++hitNumber;
-    stripAdcs.clear();
-
-  }
-
-}
-
-
-void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<int> & stripAdcVector,
-				    layerStripMap::const_iterator & layerStripMapIter,
-				    layerStripMap::const_iterator & layerStripMapIterEnd,const StripSet & stripSet) const{
-
-
-  if (_debugLevel >= 5) std::cout << "findCluster " << std::endl;
-
-  while (layerStripMapIter != layerStripMapIterEnd && stripSet.getStripAdc(layerStripMapIter) < _detectorGeometry.getSensor(layer)._threshold){
-    ++layerStripMapIter;
-  }
-
-  if (layerStripMapIter == layerStripMapIterEnd) return;
-
-  initialStrip = stripSet.getStripNumber(layerStripMapIter);
-
-  if (_debugLevel >= 5) std::cout << "Initial strip: " << initialStrip << std::endl;
-
-  int intermediateStrip = initialStrip;
-
-  stripAdcVector.push_back(stripSet.getStripAdc(layerStripMapIter));
-
-  ++layerStripMapIter;
-
-
-  while ( layerStripMapIter != layerStripMapIterEnd && 
-	  (stripSet.getStripNumber(layerStripMapIter) == (intermediateStrip + 1)) && 
-	  (stripSet.getStripAdc(layerStripMapIter) >= _detectorGeometry.getSensor(layer)._threshold  )) {
-
-    intermediateStrip = stripSet.getStripNumber(layerStripMapIter);
-    stripAdcVector.push_back(stripSet.getStripAdc(layerStripMapIter));
-    ++layerStripMapIter;
-    if (_debugLevel >= 5) std::cout << "Intermediate strip: " << intermediateStrip  << std::endl;
-    
-  }
-
-}
-
-
-double fc::HitRecoModule::calculateStripHitPositionFromCluster(int initialStrip,const std::vector<int> & stripAdcVector) const{
-
-  double stripHitPosition = 0.0;
-  double stripPosition = 0.0;
-  double adcSum = 0.0;
-
-  for (std::vector<int>::const_iterator stripAdcIter = stripAdcVector.begin(); stripAdcIter != stripAdcVector.end(); ++stripAdcIter){
-
-    stripHitPosition = stripHitPosition + stripPosition*(*stripAdcIter);
-    adcSum = adcSum + (*stripAdcIter);
-    stripPosition =  stripPosition + 1.0;
-    
-  } // end strip loop
-
-  stripHitPosition = stripHitPosition/adcSum;
-
-  stripHitPosition = initialStrip + stripHitPosition;
-
-  return stripHitPosition;
-
-}
-
+#endif // Modules_HitRecoModule_hh

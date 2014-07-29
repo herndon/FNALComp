@@ -40,7 +40,7 @@ public:
 
   void insertStrip(unsigned int, int, int); //!< Insert strip by layer, strip number, adc count
 
-  void print(ostream& out) const;
+  void print(std::ostream& out) const;
 
 private:
 
