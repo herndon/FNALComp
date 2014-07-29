@@ -14,14 +14,14 @@ DEBUG = -g -O0
 CFLAGS = -std=c++11 -Wall $(DEBUG) `root-config --cflags`
 LFLAGS = -std=c++11 -Wall $(DEBUG) `root-config --glibs`
 
+.SECONDARY:
+
 all: $(MAINEXES)
 
 %: $(MLIB_PATH)%.o $(OBJS)
 	$(CC) $(LFLAGS) $(OBJS) $< -o $@
 
 -include  $(LIB_PATH)*.d
-
-.PRECIOUS: $(LIB_PATH)/%.o $(MLIB_PATH)/%.o
 
 $(LIB_PATH)%.o: %.cc
 	$(CC) $(CFLAGS) -MMD -c $(INCDIRS) $< -o $@
