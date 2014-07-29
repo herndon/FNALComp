@@ -20,7 +20,7 @@ and cd to the CMSSW release and run "cmsenv" before cding to your git release to
 more on git commands
 
 # Checking out an existing repository to directory FNALComp
-git clone --branch production ssh://git@github.com/herndon/FNALComp.git FNALComp
+git clone --branch production https://github.com/herndon/FNALComp.git FNALComp
 
 # check status of project for modifictions
 git status -s
