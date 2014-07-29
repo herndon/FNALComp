@@ -7,10 +7,8 @@
 #include "DataObjects/include/GenTrack.hh"
 #include "DataObjects/include/GenTrackSet.hh"
 #include "Modules/include/TrackGenModule.hh"
-#include "TH1D.h"
 #include "TVector3.h"
 #include "TLorentzVector.h"
-#include "Services/include/UniqueRootDirectory.hh"
 
 
 fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std::string& iTracksLabel, const DetectorGeometry & detectorGeometry, Random & random):
@@ -18,13 +16,8 @@ fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std
   _numberOfTracks(numberOfTracks),
   _tracksLabel(iTracksLabel),
   _detectorGeometry(detectorGeometry),
-  _random(random),
-  _hPt(nullptr)
+  _random(random)
 {
-
-  UniqueRootDirectory tDir( "TrackGen" );
-  _hPt = new TH1D( "Pt", "Pt of Generated Track; GeV; N", 100, 0., 100.);
-
 }
 
 void fc::TrackGenModule::processEvent(fc::Event& event)
@@ -49,7 +42,6 @@ fc::GenTrack fc::TrackGenModule::generateTrack() const{
     
   // Track pT, phi0 and charge
   double trackPT = _random.getUniformDouble(20.0,40.0);
-  _hPt->Fill(trackPT);
   int trackCharge = (_random.getUniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
   double trackPhi0 = _random.getUniformDouble(-M_PI/24.0,M_PI/24.0) + M_PI/2.0;
   double trackTanL = _random.getUniformDouble(-0.1,0.1); 
