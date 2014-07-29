@@ -1,24 +1,16 @@
-git commands
+# Checking out the production brach of the software and building
 
-# Checking out an existing repository to directory FNALComp
-git clone ssh://git@github.com/herndon/FNALComp.git FNALComp
-# then moving to a specific tag
-git checkout v0.6
+git clone --branch production https://github.com/herndon/FNALComp.git FNALComp
+cd FNALComp
+make
 
-# or directory checking out to the tag
-git clone --branch v0.4 ssh://git@github.com/herndon/FNALComp.git FNALComp_v0.4
+
+# Other useful git commands
 
 # check status of project for modifictions
 git status -s
 git diff
 
-
-# update local master branch to remote master
+# update local production branch to remote production
 git fetch
-git rebase origin/master
-
-#compile and link the code
-make
-
-#run automated testing.  Compares debug output for each program to test files.
-make test
+git rebase origin/production
