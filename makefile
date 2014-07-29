@@ -14,7 +14,7 @@ DEBUG = -g -O0
 CFLAGS = -std=c++11 -Wall $(DEBUG) `root-config --cflags`
 LFLAGS = -std=c++11 -Wall $(DEBUG) `root-config --glibs`
 
-.SECONDARY:
+.PRECIOUS:$(LIB_PATH)%.o
 
 all: $(MAINEXES)
 
