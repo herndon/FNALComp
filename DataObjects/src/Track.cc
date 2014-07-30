@@ -2,6 +2,7 @@
 #include <limits>
 #include<cmath>
 #include <iostream>
+#include "TMath.h"
 #include "DataObjects/include/HitSet.hh"
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/Helix.hh"
@@ -36,6 +37,13 @@ const TLorentzVector fc::Track::getLorentzVector() const{
   double pZ = getHelix().getTanL()*pT;
   lorentzVector.SetPxPyPzE(pT*std::cos(getHelix().getPhi0()-M_PI/2.0),pT*std::sin(getHelix().getPhi0()-M_PI/2.0),pZ,std::sqrt(pT*pT+pZ*pZ));
   return lorentzVector;
+}
+
+double fc::Track::getChi2Prob() const{
+
+  // Root TMatch handles cases where chi2 or ndof = 0
+  return TMath::Prob(_chi2,_nDof);
+
 }
 
 

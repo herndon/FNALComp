@@ -64,14 +64,15 @@ public:
   int getCharge() const {return -getHelix().getKappa()/std::abs(getHelix().getKappa());};
 
   const TMatrixD & getCovMatrix() const {return _covMatrix;}
-  double getSigmaD0() const {return std::sqrt(_covMatrix(0,0));}
+  double getSigmaDr() const {return std::sqrt(_covMatrix(0,0));}
   double getSigmaPhi0() const {return std::sqrt(_covMatrix(1,1));}
   double getSigmaKappa() const {return std::sqrt(_covMatrix(2,2));}
-  double getSigmaZ0() const {return std::sqrt(_covMatrix(3,3));}
+  double getSigmaDz() const {return std::sqrt(_covMatrix(3,3));}
   double getSigmaTanL() const {return std::sqrt(_covMatrix(4,4));}
 
   double getChi2() const {return _chi2;}
   int getNDof() const {return _nDof;}
+  double getChi2Prob() const;
 
   // Hit/measurement point information
 

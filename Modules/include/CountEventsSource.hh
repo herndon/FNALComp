@@ -6,7 +6,8 @@
 namespace fc {
   class CountEventsSource : public Source {
   public:
-    CountEventsSource(unsigned int iNumberOfEventsToProcess, bool genData):
+    CountEventsSource(int debugLevel, unsigned int iNumberOfEventsToProcess, bool genData):
+      _debugLevel(debugLevel),
       _numberOfEventsToProcess{iNumberOfEventsToProcess},
       _genData{genData}
     {}
@@ -14,6 +15,7 @@ namespace fc {
     std::unique_ptr<Event> getNextEvent() override;
 
   private:
+    int _debugLevel;
     const unsigned int _numberOfEventsToProcess;
     unsigned int _numberOfEventsProcessed = 0;
     bool _genData;

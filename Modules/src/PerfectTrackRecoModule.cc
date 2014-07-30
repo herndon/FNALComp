@@ -28,8 +28,10 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
 
   recoTracks(*perfectRecoTrackSet,*recoHitSet,*genHitSet);
 
-  std::cout << "Perfect reconstructed tracks" << std::endl;
-  perfectRecoTrackSet->print(std::cout);
+  if (_debugLevel>=2){
+    std::cout << "Perfect reconstructed tracks" << std::endl;
+    perfectRecoTrackSet->print(std::cout);
+  }
 
   event.put(_outTracksLabel,std::move(perfectRecoTrackSet) );
 }

@@ -43,9 +43,13 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
   std::unique_ptr<StripSet> stripSet{ new StripSet(_detectorGeometry)};
 
   int eventNumber = 0;
+
   if( not (_inputeventdatafile >> eventNumber) ) {
     return std::unique_ptr<Event>{};
   }
+
+  if ((_debugLevel >=2) || (_debugLevel>=1 && (eventNumber % 1000) == 0)) std::cout << "Event Number: " << eventNumber << std::endl;
+
 
   GenTrackSetIO genTrackSetIO;
   genTrackSetIO.readEvent(*genTrackSet,_inputeventdatafile);

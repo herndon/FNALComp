@@ -30,6 +30,7 @@ public:
 
   Config(std::ifstream&,int);
 
+  int getDebugLevel() const {return _debugLevel;} //!< Returns debug level: 0 nothing, 1 progress infrmation; 2 data object printout; 3-5 basic-detailed debug
   int getSeed() const {return _seed;}; //!< Returns random number seed
   int getNumberEvents() const {return _numberEvents;}; //!< Returns number of events to generate
   int getNumberTracks() const {return _numberTracks;}; //!< Returns number of tracks to generate per event
@@ -46,6 +47,7 @@ public:
 
 private:
 
+  int _debugLevel;
   bool _genData;
   int _numberEvents;
   int _numberTracks;
