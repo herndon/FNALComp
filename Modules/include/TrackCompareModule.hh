@@ -63,16 +63,34 @@ private:
   // Histograms
   // ROOT will delete these when the TFile to which they are attached is deleted
 
-  TH1F * deltaD0;
+  TH1F * dR;
+  TH1F * phi0;
+  TH1F * kappa;
+  TH1F * dZ;
+  TH1F * tanL;
+
+  TH1F * sigmaDr;
+  TH1F * sigmaPhi0;
+  TH1F * sigmaKappa;
+  TH1F * sigmaDz;
+  TH1F * sigmaTanL;
+
+
+  TH1F * pT;
+  TH1F * chi2;
+  TH1F * nDof;
+  TH1F * prob;
+
+  TH1F * deltaDr;
   TH1F * deltaPhi0;
   TH1F * deltaKappa;
-  TH1F * deltaZ0;
+  TH1F * deltaDz;
   TH1F * deltaTanL;
 
-  TH1F * deltaD0Pull;
+  TH1F * deltaDrPull;
   TH1F * deltaPhi0Pull;
   TH1F * deltaKappaPull;
-  TH1F * deltaZ0Pull;
+  TH1F * deltaDzPull;
   TH1F * deltaTanLPull;
 
   void initializeHistograms();

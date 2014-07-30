@@ -31,7 +31,7 @@ int main ()
   int debugLevel = 2;
   // six levels of degug
   // 5 most verbose with all printouts
-  // Data object printout
+  // 2 Data object printout
   // 1 basic information on progress
   // 0 none
 
