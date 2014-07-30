@@ -1,5 +1,6 @@
 Program configuration information
 gen Data configuration
+Debug Level: 2
 Number Events: 128
 Number Tracks 1
 Random number seed 1
@@ -188,6 +189,7 @@ X position    (m) 0
 Y position    (m) 0
 Z position    (m) 0
 PV Resolution (m) 0.01
+Event Number: 0
 Event: 0
 GenTrackSet
 Number Gen Tracks: 1
@@ -279,6 +281,7 @@ Strip: 1251  ADC 23
 Layer: 9 number Strips: 2
 Strip: 1311  ADC 4
 Strip: 1312  ADC 27
+Event Number: 1
 Event: 1
 GenTrackSet
 Number Gen Tracks: 1
@@ -370,6 +373,7 @@ Strip: 612  ADC 27
 Layer: 9 number Strips: 2
 Strip: 490  ADC 21
 Strip: 491  ADC 10
+Event Number: 2
 Event: 2
 GenTrackSet
 Number Gen Tracks: 1
@@ -461,6 +465,7 @@ Strip: 1181  ADC 5
 Layer: 9 number Strips: 2
 Strip: 1219  ADC 8
 Strip: 1220  ADC 23
+Event Number: 3
 Event: 3
 GenTrackSet
 Number Gen Tracks: 1
@@ -552,6 +557,7 @@ Strip: 633  ADC 18
 Layer: 9 number Strips: 2
 Strip: 548  ADC 7
 Strip: 549  ADC 24
+Event Number: 4
 Event: 4
 GenTrackSet
 Number Gen Tracks: 1
@@ -643,6 +649,7 @@ Strip: 754  ADC 29
 Layer: 9 number Strips: 2
 Strip: 685  ADC 8
 Strip: 686  ADC 23
+Event Number: 5
 Event: 5
 GenTrackSet
 Number Gen Tracks: 1
@@ -734,6 +741,7 @@ Strip: 985  ADC 15
 Layer: 9 number Strips: 2
 Strip: 972  ADC 8
 Strip: 973  ADC 23
+Event Number: 6
 Event: 6
 GenTrackSet
 Number Gen Tracks: 1
@@ -825,6 +833,7 @@ Strip: 1091  ADC 23
 Layer: 9 number Strips: 2
 Strip: 1119  ADC 26
 Strip: 1120  ADC 5
+Event Number: 7
 Event: 7
 GenTrackSet
 Number Gen Tracks: 1
@@ -916,6 +925,7 @@ Strip: 1483  ADC 20
 Layer: 9 number Strips: 2
 Strip: 1599  ADC 5
 Strip: 1600  ADC 26
+Event Number: 8
 Event: 8
 GenTrackSet
 Number Gen Tracks: 1
@@ -1007,6 +1017,7 @@ Strip: 1312  ADC 16
 Layer: 9 number Strips: 2
 Strip: 1375  ADC 8
 Strip: 1376  ADC 23
+Event Number: 9
 Event: 9
 GenTrackSet
 Number Gen Tracks: 1
@@ -1098,6 +1109,7 @@ Strip: 1121  ADC 12
 Layer: 9 number Strips: 2
 Strip: 1132  ADC 18
 Strip: 1133  ADC 13
+Event Number: 10
 Event: 10
 GenTrackSet
 Number Gen Tracks: 1
@@ -1175,6 +1187,7 @@ Strip: 1521  ADC 0
 Layer: 9 number Strips: 2
 Strip: 1635  ADC 3
 Strip: 1636  ADC 28
+Event Number: 11
 Event: 11
 GenTrackSet
 Number Gen Tracks: 1
@@ -1266,6 +1279,7 @@ Strip: 1014  ADC 23
 Layer: 9 number Strips: 2
 Strip: 1017  ADC 21
 Strip: 1018  ADC 10
+Event Number: 12
 Event: 12
 GenTrackSet
 Number Gen Tracks: 1
@@ -1357,6 +1371,7 @@ Strip: 1300  ADC 5
 Layer: 9 number Strips: 2
 Strip: 1375  ADC 17
 Strip: 1376  ADC 14
+Event Number: 13
 Event: 13
 GenTrackSet
 Number Gen Tracks: 1
@@ -1448,6 +1463,7 @@ Strip: 749  ADC 15
 Layer: 9 number Strips: 2
 Strip: 684  ADC 3
 Strip: 685  ADC 28
+Event Number: 14
 Event: 14
 GenTrackSet
 Number Gen Tracks: 1
@@ -1525,6 +1541,7 @@ Strip: 456  ADC 12
 Layer: 9 number Strips: 2
 Strip: 316  ADC 23
 Strip: 317  ADC 8
+Event Number: 15
 Event: 15
 GenTrackSet
 Number Gen Tracks: 1
@@ -1616,6 +1633,7 @@ Strip: 1142  ADC 14
 Layer: 9 number Strips: 2
 Strip: 1167  ADC 5
 Strip: 1168  ADC 26
+Event Number: 16
 Event: 16
 GenTrackSet
 Number Gen Tracks: 1
@@ -1707,6 +1725,7 @@ Strip: 875  ADC 11
 Layer: 9 number Strips: 2
 Strip: 852  ADC 9
 Strip: 853  ADC 22
+Event Number: 17
 Event: 17
 GenTrackSet
 Number Gen Tracks: 1
@@ -1798,6 +1817,7 @@ Strip: 1028  ADC 20
 Layer: 9 number Strips: 2
 Strip: 1039  ADC 12
 Strip: 1040  ADC 19
+Event Number: 18
 Event: 18
 GenTrackSet
 Number Gen Tracks: 1
@@ -1889,6 +1909,7 @@ Strip: 1118  ADC 10
 Layer: 9 number Strips: 2
 Strip: 1139  ADC 22
 Strip: 1140  ADC 9
+Event Number: 19
 Event: 19
 GenTrackSet
 Number Gen Tracks: 1
@@ -1980,6 +2001,7 @@ Strip: 767  ADC 30
 Layer: 9 number Strips: 2
 Strip: 689  ADC 21
 Strip: 690  ADC 10
+Event Number: 20
 Event: 20
 GenTrackSet
 Number Gen Tracks: 1
@@ -2071,6 +2093,7 @@ Strip: 549  ADC 14
 Layer: 9 number Strips: 2
 Strip: 435  ADC 29
 Strip: 436  ADC 2
+Event Number: 21
 Event: 21
 GenTrackSet
 Number Gen Tracks: 1
@@ -2162,6 +2185,7 @@ Strip: 967  ADC 28
 Layer: 9 number Strips: 2
 Strip: 953  ADC 30
 Strip: 954  ADC 1
+Event Number: 22
 Event: 22
 GenTrackSet
 Number Gen Tracks: 1
@@ -2253,6 +2277,7 @@ Strip: 553  ADC 28
 Layer: 9 number Strips: 2
 Strip: 429  ADC 6
 Strip: 430  ADC 25
+Event Number: 23
 Event: 23
 GenTrackSet
 Number Gen Tracks: 1
@@ -2344,6 +2369,7 @@ Strip: 1439  ADC 2
 Layer: 9 number Strips: 2
 Strip: 1529  ADC 30
 Strip: 1530  ADC 1
+Event Number: 24
 Event: 24
 GenTrackSet
 Number Gen Tracks: 1
@@ -2435,6 +2461,7 @@ Strip: 1362  ADC 21
 Layer: 9 number Strips: 2
 Strip: 1435  ADC 16
 Strip: 1436  ADC 15
+Event Number: 25
 Event: 25
 GenTrackSet
 Number Gen Tracks: 1
@@ -2526,6 +2553,7 @@ Strip: 968  ADC 30
 Layer: 9 number Strips: 2
 Strip: 965  ADC 31
 Strip: 966  ADC 0
+Event Number: 26
 Event: 26
 GenTrackSet
 Number Gen Tracks: 1
@@ -2617,6 +2645,7 @@ Strip: 1230  ADC 28
 Layer: 9 number Strips: 2
 Strip: 1297  ADC 14
 Strip: 1298  ADC 17
+Event Number: 27
 Event: 27
 GenTrackSet
 Number Gen Tracks: 1
@@ -2708,6 +2737,7 @@ Strip: 965  ADC 6
 Layer: 9 number Strips: 2
 Strip: 954  ADC 12
 Strip: 955  ADC 19
+Event Number: 28
 Event: 28
 GenTrackSet
 Number Gen Tracks: 1
@@ -2799,6 +2829,7 @@ Strip: 1477  ADC 15
 Layer: 9 number Strips: 2
 Strip: 1596  ADC 19
 Strip: 1597  ADC 12
+Event Number: 29
 Event: 29
 GenTrackSet
 Number Gen Tracks: 1
@@ -2890,6 +2921,7 @@ Strip: 550  ADC 8
 Layer: 9 number Strips: 2
 Strip: 431  ADC 19
 Strip: 432  ADC 12
+Event Number: 30
 Event: 30
 GenTrackSet
 Number Gen Tracks: 1
@@ -2981,6 +3013,7 @@ Strip: 767  ADC 29
 Layer: 9 number Strips: 2
 Strip: 701  ADC 29
 Strip: 702  ADC 2
+Event Number: 31
 Event: 31
 GenTrackSet
 Number Gen Tracks: 1
@@ -3072,6 +3105,7 @@ Strip: 1491  ADC 11
 Layer: 9 number Strips: 2
 Strip: 1610  ADC 3
 Strip: 1611  ADC 28
+Event Number: 32
 Event: 32
 GenTrackSet
 Number Gen Tracks: 1
@@ -3163,6 +3197,7 @@ Strip: 1480  ADC 29
 Layer: 9 number Strips: 2
 Strip: 1582  ADC 2
 Strip: 1583  ADC 29
+Event Number: 33
 Event: 33
 GenTrackSet
 Number Gen Tracks: 1
@@ -3254,6 +3289,7 @@ Strip: 852  ADC 4
 Layer: 9 number Strips: 2
 Strip: 793  ADC 12
 Strip: 794  ADC 19
+Event Number: 34
 Event: 34
 GenTrackSet
 Number Gen Tracks: 1
@@ -3331,6 +3367,7 @@ Strip: 1563  ADC 13
 Layer: 9 number Strips: 2
 Strip: 1696  ADC 9
 Strip: 1697  ADC 22
+Event Number: 35
 Event: 35
 GenTrackSet
 Number Gen Tracks: 1
@@ -3422,6 +3459,7 @@ Strip: 838  ADC 10
 Layer: 9 number Strips: 2
 Strip: 803  ADC 4
 Strip: 804  ADC 27
+Event Number: 36
 Event: 36
 GenTrackSet
 Number Gen Tracks: 1
@@ -3513,6 +3551,7 @@ Strip: 1233  ADC 23
 Layer: 9 number Strips: 2
 Strip: 1272  ADC 12
 Strip: 1273  ADC 19
+Event Number: 37
 Event: 37
 GenTrackSet
 Number Gen Tracks: 1
@@ -3604,6 +3643,7 @@ Strip: 1435  ADC 1
 Layer: 9 number Strips: 2
 Strip: 1530  ADC 24
 Strip: 1531  ADC 7
+Event Number: 38
 Event: 38
 GenTrackSet
 Number Gen Tracks: 1
@@ -3695,6 +3735,7 @@ Strip: 664  ADC 17
 Layer: 9 number Strips: 2
 Strip: 577  ADC 17
 Strip: 578  ADC 14
+Event Number: 39
 Event: 39
 GenTrackSet
 Number Gen Tracks: 1
@@ -3786,6 +3827,7 @@ Strip: 800  ADC 22
 Layer: 9 number Strips: 2
 Strip: 743  ADC 8
 Strip: 744  ADC 23
+Event Number: 40
 Event: 40
 GenTrackSet
 Number Gen Tracks: 1
@@ -3877,6 +3919,7 @@ Strip: 815  ADC 28
 Layer: 9 number Strips: 2
 Strip: 746  ADC 19
 Strip: 747  ADC 12
+Event Number: 41
 Event: 41
 GenTrackSet
 Number Gen Tracks: 1
@@ -3968,6 +4011,7 @@ Strip: 1018  ADC 14
 Layer: 9 number Strips: 2
 Strip: 1021  ADC 29
 Strip: 1022  ADC 2
+Event Number: 42
 Event: 42
 GenTrackSet
 Number Gen Tracks: 1
@@ -4059,6 +4103,7 @@ Strip: 1245  ADC 14
 Layer: 9 number Strips: 2
 Strip: 1299  ADC 21
 Strip: 1300  ADC 10
+Event Number: 43
 Event: 43
 GenTrackSet
 Number Gen Tracks: 1
@@ -4150,6 +4195,7 @@ Strip: 706  ADC 2
 Layer: 9 number Strips: 2
 Strip: 620  ADC 28
 Strip: 621  ADC 3
+Event Number: 44
 Event: 44
 GenTrackSet
 Number Gen Tracks: 1
@@ -4241,6 +4287,7 @@ Strip: 1008  ADC 20
 Layer: 9 number Strips: 2
 Strip: 996  ADC 20
 Strip: 997  ADC 11
+Event Number: 45
 Event: 45
 GenTrackSet
 Number Gen Tracks: 1
@@ -4332,6 +4379,7 @@ Strip: 1410  ADC 4
 Layer: 9 number Strips: 2
 Strip: 1509  ADC 8
 Strip: 1510  ADC 23
+Event Number: 46
 Event: 46
 GenTrackSet
 Number Gen Tracks: 1
@@ -4423,6 +4471,7 @@ Strip: 1126  ADC 9
 Layer: 9 number Strips: 2
 Strip: 1153  ADC 11
 Strip: 1154  ADC 20
+Event Number: 47
 Event: 47
 GenTrackSet
 Number Gen Tracks: 1
@@ -4514,6 +4563,7 @@ Strip: 755  ADC 11
 Layer: 9 number Strips: 2
 Strip: 690  ADC 17
 Strip: 691  ADC 14
+Event Number: 48
 Event: 48
 GenTrackSet
 Number Gen Tracks: 1
@@ -4605,6 +4655,7 @@ Strip: 752  ADC 31
 Layer: 9 number Strips: 2
 Strip: 699  ADC 5
 Strip: 700  ADC 26
+Event Number: 49
 Event: 49
 GenTrackSet
 Number Gen Tracks: 1
@@ -4696,6 +4747,7 @@ Strip: 564  ADC 13
 Layer: 9 number Strips: 2
 Strip: 437  ADC 7
 Strip: 438  ADC 24
+Event Number: 50
 Event: 50
 GenTrackSet
 Number Gen Tracks: 1
@@ -4787,6 +4839,7 @@ Strip: 1436  ADC 12
 Layer: 9 number Strips: 2
 Strip: 1530  ADC 21
 Strip: 1531  ADC 10
+Event Number: 51
 Event: 51
 GenTrackSet
 Number Gen Tracks: 1
@@ -4878,6 +4931,7 @@ Strip: 1401  ADC 22
 Layer: 9 number Strips: 2
 Strip: 1483  ADC 14
 Strip: 1484  ADC 17
+Event Number: 52
 Event: 52
 GenTrackSet
 Number Gen Tracks: 1
@@ -4969,6 +5023,7 @@ Strip: 1471  ADC 21
 Layer: 9 number Strips: 2
 Strip: 1580  ADC 28
 Strip: 1581  ADC 3
+Event Number: 53
 Event: 53
 GenTrackSet
 Number Gen Tracks: 1
@@ -5060,6 +5115,7 @@ Strip: 1394  ADC 10
 Layer: 9 number Strips: 2
 Strip: 1486  ADC 21
 Strip: 1487  ADC 10
+Event Number: 54
 Event: 54
 GenTrackSet
 Number Gen Tracks: 1
@@ -5151,6 +5207,7 @@ Strip: 609  ADC 23
 Layer: 9 number Strips: 2
 Strip: 497  ADC 22
 Strip: 498  ADC 9
+Event Number: 55
 Event: 55
 GenTrackSet
 Number Gen Tracks: 1
@@ -5228,6 +5285,7 @@ Strip: 1521  ADC 21
 Layer: 9 number Strips: 2
 Strip: 1631  ADC 6
 Strip: 1632  ADC 25
+Event Number: 56
 Event: 56
 GenTrackSet
 Number Gen Tracks: 1
@@ -5319,6 +5377,7 @@ Strip: 755  ADC 7
 Layer: 9 number Strips: 2
 Strip: 685  ADC 30
 Strip: 686  ADC 1
+Event Number: 57
 Event: 57
 GenTrackSet
 Number Gen Tracks: 1
@@ -5410,6 +5469,7 @@ Strip: 554  ADC 13
 Layer: 9 number Strips: 2
 Strip: 430  ADC 14
 Strip: 431  ADC 17
+Event Number: 58
 Event: 58
 GenTrackSet
 Number Gen Tracks: 1
@@ -5501,6 +5561,7 @@ Strip: 947  ADC 5
 Layer: 9 number Strips: 2
 Strip: 928  ADC 6
 Strip: 929  ADC 25
+Event Number: 59
 Event: 59
 GenTrackSet
 Number Gen Tracks: 1
@@ -5592,6 +5653,7 @@ Strip: 1336  ADC 5
 Layer: 9 number Strips: 2
 Strip: 1406  ADC 26
 Strip: 1407  ADC 5
+Event Number: 60
 Event: 60
 GenTrackSet
 Number Gen Tracks: 1
@@ -5683,6 +5745,7 @@ Strip: 806  ADC 7
 Layer: 9 number Strips: 2
 Strip: 751  ADC 16
 Strip: 752  ADC 15
+Event Number: 61
 Event: 61
 GenTrackSet
 Number Gen Tracks: 1
@@ -5774,6 +5837,7 @@ Strip: 585  ADC 27
 Layer: 9 number Strips: 2
 Strip: 480  ADC 29
 Strip: 481  ADC 2
+Event Number: 62
 Event: 62
 GenTrackSet
 Number Gen Tracks: 1
@@ -5865,6 +5929,7 @@ Strip: 1329  ADC 18
 Layer: 9 number Strips: 2
 Strip: 1404  ADC 23
 Strip: 1405  ADC 8
+Event Number: 63
 Event: 63
 GenTrackSet
 Number Gen Tracks: 1
@@ -5956,6 +6021,7 @@ Strip: 1279  ADC 25
 Layer: 9 number Strips: 2
 Strip: 1329  ADC 28
 Strip: 1330  ADC 3
+Event Number: 64
 Event: 64
 GenTrackSet
 Number Gen Tracks: 1
@@ -6047,6 +6113,7 @@ Strip: 768  ADC 24
 Layer: 9 number Strips: 2
 Strip: 704  ADC 24
 Strip: 705  ADC 7
+Event Number: 65
 Event: 65
 GenTrackSet
 Number Gen Tracks: 1
@@ -6138,6 +6205,7 @@ Strip: 967  ADC 7
 Layer: 9 number Strips: 2
 Strip: 951  ADC 21
 Strip: 952  ADC 10
+Event Number: 66
 Event: 66
 GenTrackSet
 Number Gen Tracks: 1
@@ -6229,6 +6297,7 @@ Strip: 1057  ADC 21
 Layer: 9 number Strips: 2
 Strip: 1067  ADC 16
 Strip: 1068  ADC 15
+Event Number: 67
 Event: 67
 GenTrackSet
 Number Gen Tracks: 1
@@ -6320,6 +6389,7 @@ Strip: 1046  ADC 5
 Layer: 9 number Strips: 2
 Strip: 1044  ADC 4
 Strip: 1045  ADC 27
+Event Number: 68
 Event: 68
 GenTrackSet
 Number Gen Tracks: 1
@@ -6411,6 +6481,7 @@ Strip: 696  ADC 8
 Layer: 9 number Strips: 2
 Strip: 606  ADC 29
 Strip: 607  ADC 2
+Event Number: 69
 Event: 69
 GenTrackSet
 Number Gen Tracks: 1
@@ -6502,6 +6573,7 @@ Strip: 716  ADC 27
 Layer: 9 number Strips: 2
 Strip: 637  ADC 20
 Strip: 638  ADC 11
+Event Number: 70
 Event: 70
 GenTrackSet
 Number Gen Tracks: 1
@@ -6593,6 +6665,7 @@ Strip: 1102  ADC 13
 Layer: 9 number Strips: 2
 Strip: 1121  ADC 10
 Strip: 1122  ADC 21
+Event Number: 71
 Event: 71
 GenTrackSet
 Number Gen Tracks: 1
@@ -6684,6 +6757,7 @@ Strip: 644  ADC 22
 Layer: 9 number Strips: 2
 Strip: 539  ADC 7
 Strip: 540  ADC 24
+Event Number: 72
 Event: 72
 GenTrackSet
 Number Gen Tracks: 1
@@ -6775,6 +6849,7 @@ Strip: 606  ADC 20
 Layer: 9 number Strips: 2
 Strip: 506  ADC 25
 Strip: 507  ADC 6
+Event Number: 73
 Event: 73
 GenTrackSet
 Number Gen Tracks: 1
@@ -6866,6 +6941,7 @@ Strip: 649  ADC 26
 Layer: 9 number Strips: 2
 Strip: 542  ADC 13
 Strip: 543  ADC 18
+Event Number: 74
 Event: 74
 GenTrackSet
 Number Gen Tracks: 1
@@ -6957,6 +7033,7 @@ Strip: 865  ADC 15
 Layer: 9 number Strips: 2
 Strip: 813  ADC 21
 Strip: 814  ADC 10
+Event Number: 75
 Event: 75
 GenTrackSet
 Number Gen Tracks: 1
@@ -7048,6 +7125,7 @@ Strip: 994  ADC 13
 Layer: 9 number Strips: 2
 Strip: 986  ADC 5
 Strip: 987  ADC 26
+Event Number: 76
 Event: 76
 GenTrackSet
 Number Gen Tracks: 1
@@ -7139,6 +7217,7 @@ Strip: 669  ADC 31
 Layer: 9 number Strips: 2
 Strip: 573  ADC 8
 Strip: 574  ADC 23
+Event Number: 77
 Event: 77
 GenTrackSet
 Number Gen Tracks: 1
@@ -7230,6 +7309,7 @@ Strip: 1462  ADC 3
 Layer: 9 number Strips: 2
 Strip: 1581  ADC 13
 Strip: 1582  ADC 18
+Event Number: 78
 Event: 78
 GenTrackSet
 Number Gen Tracks: 1
@@ -7321,6 +7401,7 @@ Strip: 1376  ADC 21
 Layer: 9 number Strips: 2
 Strip: 1450  ADC 14
 Strip: 1451  ADC 17
+Event Number: 79
 Event: 79
 GenTrackSet
 Number Gen Tracks: 1
@@ -7412,6 +7493,7 @@ Strip: 1249  ADC 15
 Layer: 9 number Strips: 2
 Strip: 1313  ADC 21
 Strip: 1314  ADC 10
+Event Number: 80
 Event: 80
 GenTrackSet
 Number Gen Tracks: 1
@@ -7503,6 +7585,7 @@ Strip: 1115  ADC 8
 Layer: 9 number Strips: 2
 Strip: 1141  ADC 13
 Strip: 1142  ADC 18
+Event Number: 81
 Event: 81
 GenTrackSet
 Number Gen Tracks: 1
@@ -7594,6 +7677,7 @@ Strip: 709  ADC 13
 Layer: 9 number Strips: 2
 Strip: 626  ADC 24
 Strip: 627  ADC 7
+Event Number: 82
 Event: 82
 GenTrackSet
 Number Gen Tracks: 1
@@ -7685,6 +7769,7 @@ Strip: 1238  ADC 21
 Layer: 9 number Strips: 2
 Strip: 1282  ADC 1
 Strip: 1283  ADC 30
+Event Number: 83
 Event: 83
 GenTrackSet
 Number Gen Tracks: 1
@@ -7776,6 +7861,7 @@ Strip: 1485  ADC 20
 Layer: 9 number Strips: 2
 Strip: 1606  ADC 16
 Strip: 1607  ADC 15
+Event Number: 84
 Event: 84
 GenTrackSet
 Number Gen Tracks: 1
@@ -7853,6 +7939,7 @@ Strip: 497  ADC 6
 Layer: 9 number Strips: 2
 Strip: 380  ADC 19
 Strip: 381  ADC 12
+Event Number: 85
 Event: 85
 GenTrackSet
 Number Gen Tracks: 1
@@ -7944,6 +8031,7 @@ Strip: 701  ADC 9
 Layer: 9 number Strips: 2
 Strip: 627  ADC 12
 Strip: 628  ADC 19
+Event Number: 86
 Event: 86
 GenTrackSet
 Number Gen Tracks: 1
@@ -8035,6 +8123,7 @@ Strip: 690  ADC 26
 Layer: 9 number Strips: 2
 Strip: 597  ADC 6
 Strip: 598  ADC 25
+Event Number: 87
 Event: 87
 GenTrackSet
 Number Gen Tracks: 1
@@ -8126,6 +8215,7 @@ Strip: 607  ADC 12
 Layer: 9 number Strips: 2
 Strip: 513  ADC 16
 Strip: 514  ADC 15
+Event Number: 88
 Event: 88
 GenTrackSet
 Number Gen Tracks: 1
@@ -8217,6 +8307,7 @@ Strip: 1013  ADC 12
 Layer: 9 number Strips: 2
 Strip: 1004  ADC 0
 Strip: 1005  ADC 31
+Event Number: 89
 Event: 89
 GenTrackSet
 Number Gen Tracks: 1
@@ -8294,6 +8385,7 @@ Strip: 457  ADC 12
 Layer: 9 number Strips: 2
 Strip: 322  ADC 9
 Strip: 323  ADC 22
+Event Number: 90
 Event: 90
 GenTrackSet
 Number Gen Tracks: 1
@@ -8385,6 +8477,7 @@ Strip: 838  ADC 13
 Layer: 9 number Strips: 2
 Strip: 778  ADC 4
 Strip: 779  ADC 27
+Event Number: 91
 Event: 91
 GenTrackSet
 Number Gen Tracks: 1
@@ -8476,6 +8569,7 @@ Strip: 570  ADC 9
 Layer: 9 number Strips: 2
 Strip: 461  ADC 2
 Strip: 462  ADC 29
+Event Number: 92
 Event: 92
 GenTrackSet
 Number Gen Tracks: 1
@@ -8567,6 +8661,7 @@ Strip: 560  ADC 12
 Layer: 9 number Strips: 2
 Strip: 427  ADC 1
 Strip: 428  ADC 30
+Event Number: 93
 Event: 93
 GenTrackSet
 Number Gen Tracks: 1
@@ -8658,6 +8753,7 @@ Strip: 968  ADC 14
 Layer: 9 number Strips: 2
 Strip: 948  ADC 17
 Strip: 949  ADC 14
+Event Number: 94
 Event: 94
 GenTrackSet
 Number Gen Tracks: 1
@@ -8749,6 +8845,7 @@ Strip: 1351  ADC 24
 Layer: 9 number Strips: 2
 Strip: 1427  ADC 3
 Strip: 1428  ADC 28
+Event Number: 95
 Event: 95
 GenTrackSet
 Number Gen Tracks: 1
@@ -8840,6 +8937,7 @@ Strip: 1235  ADC 29
 Layer: 9 number Strips: 2
 Strip: 1285  ADC 25
 Strip: 1286  ADC 6
+Event Number: 96
 Event: 96
 GenTrackSet
 Number Gen Tracks: 1
@@ -8931,6 +9029,7 @@ Strip: 1142  ADC 4
 Layer: 9 number Strips: 2
 Strip: 1171  ADC 13
 Strip: 1172  ADC 18
+Event Number: 97
 Event: 97
 GenTrackSet
 Number Gen Tracks: 1
@@ -9022,6 +9121,7 @@ Strip: 1074  ADC 28
 Layer: 9 number Strips: 2
 Strip: 1085  ADC 10
 Strip: 1086  ADC 21
+Event Number: 98
 Event: 98
 GenTrackSet
 Number Gen Tracks: 1
@@ -9113,6 +9213,7 @@ Strip: 1232  ADC 20
 Layer: 9 number Strips: 2
 Strip: 1275  ADC 25
 Strip: 1276  ADC 6
+Event Number: 99
 Event: 99
 GenTrackSet
 Number Gen Tracks: 1
@@ -9204,6 +9305,7 @@ Strip: 604  ADC 4
 Layer: 9 number Strips: 2
 Strip: 505  ADC 19
 Strip: 506  ADC 12
+Event Number: 100
 Event: 100
 GenTrackSet
 Number Gen Tracks: 1
@@ -9295,6 +9397,7 @@ Strip: 1368  ADC 22
 Layer: 9 number Strips: 2
 Strip: 1440  ADC 26
 Strip: 1441  ADC 5
+Event Number: 101
 Event: 101
 GenTrackSet
 Number Gen Tracks: 1
@@ -9372,6 +9475,7 @@ Strip: 519  ADC 22
 Layer: 9 number Strips: 2
 Strip: 397  ADC 11
 Strip: 398  ADC 20
+Event Number: 102
 Event: 102
 GenTrackSet
 Number Gen Tracks: 1
@@ -9463,6 +9567,7 @@ Strip: 1173  ADC 25
 Layer: 9 number Strips: 2
 Strip: 1217  ADC 27
 Strip: 1218  ADC 4
+Event Number: 103
 Event: 103
 GenTrackSet
 Number Gen Tracks: 1
@@ -9554,6 +9659,7 @@ Strip: 644  ADC 29
 Layer: 9 number Strips: 2
 Strip: 557  ADC 23
 Strip: 558  ADC 8
+Event Number: 104
 Event: 104
 GenTrackSet
 Number Gen Tracks: 1
@@ -9645,6 +9751,7 @@ Strip: 1472  ADC 0
 Layer: 9 number Strips: 2
 Strip: 1586  ADC 15
 Strip: 1587  ADC 16
+Event Number: 105
 Event: 105
 GenTrackSet
 Number Gen Tracks: 1
@@ -9736,6 +9843,7 @@ Strip: 581  ADC 25
 Layer: 9 number Strips: 2
 Strip: 489  ADC 22
 Strip: 490  ADC 9
+Event Number: 106
 Event: 106
 GenTrackSet
 Number Gen Tracks: 1
@@ -9827,6 +9935,7 @@ Strip: 553  ADC 26
 Layer: 9 number Strips: 2
 Strip: 436  ADC 13
 Strip: 437  ADC 18
+Event Number: 107
 Event: 107
 GenTrackSet
 Number Gen Tracks: 1
@@ -9918,6 +10027,7 @@ Strip: 780  ADC 11
 Layer: 9 number Strips: 2
 Strip: 725  ADC 3
 Strip: 726  ADC 28
+Event Number: 108
 Event: 108
 GenTrackSet
 Number Gen Tracks: 1
@@ -9995,6 +10105,7 @@ Strip: 485  ADC 24
 Layer: 9 number Strips: 2
 Strip: 353  ADC 0
 Strip: 354  ADC 31
+Event Number: 109
 Event: 109
 GenTrackSet
 Number Gen Tracks: 1
@@ -10086,6 +10197,7 @@ Strip: 703  ADC 15
 Layer: 9 number Strips: 2
 Strip: 625  ADC 13
 Strip: 626  ADC 18
+Event Number: 110
 Event: 110
 GenTrackSet
 Number Gen Tracks: 1
@@ -10177,6 +10289,7 @@ Strip: 1245  ADC 12
 Layer: 9 number Strips: 2
 Strip: 1300  ADC 0
 Strip: 1301  ADC 31
+Event Number: 111
 Event: 111
 GenTrackSet
 Number Gen Tracks: 1
@@ -10268,6 +10381,7 @@ Strip: 1159  ADC 24
 Layer: 9 number Strips: 2
 Strip: 1186  ADC 20
 Strip: 1187  ADC 11
+Event Number: 112
 Event: 112
 GenTrackSet
 Number Gen Tracks: 1
@@ -10359,6 +10473,7 @@ Strip: 1370  ADC 17
 Layer: 9 number Strips: 2
 Strip: 1459  ADC 6
 Strip: 1460  ADC 25
+Event Number: 113
 Event: 113
 GenTrackSet
 Number Gen Tracks: 1
@@ -10450,6 +10565,7 @@ Strip: 651  ADC 0
 Layer: 9 number Strips: 2
 Strip: 539  ADC 15
 Strip: 540  ADC 16
+Event Number: 114
 Event: 114
 GenTrackSet
 Number Gen Tracks: 1
@@ -10541,6 +10657,7 @@ Strip: 1343  ADC 3
 Layer: 9 number Strips: 2
 Strip: 1421  ADC 4
 Strip: 1422  ADC 27
+Event Number: 115
 Event: 115
 GenTrackSet
 Number Gen Tracks: 1
@@ -10632,6 +10749,7 @@ Strip: 906  ADC 29
 Layer: 9 number Strips: 2
 Strip: 890  ADC 13
 Strip: 891  ADC 18
+Event Number: 116
 Event: 116
 GenTrackSet
 Number Gen Tracks: 1
@@ -10723,6 +10841,7 @@ Strip: 831  ADC 29
 Layer: 9 number Strips: 2
 Strip: 767  ADC 11
 Strip: 768  ADC 20
+Event Number: 117
 Event: 117
 GenTrackSet
 Number Gen Tracks: 1
@@ -10814,6 +10933,7 @@ Strip: 1451  ADC 10
 Layer: 9 number Strips: 2
 Strip: 1548  ADC 10
 Strip: 1549  ADC 21
+Event Number: 118
 Event: 118
 GenTrackSet
 Number Gen Tracks: 1
@@ -10905,6 +11025,7 @@ Strip: 775  ADC 6
 Layer: 9 number Strips: 2
 Strip: 727  ADC 28
 Strip: 728  ADC 3
+Event Number: 119
 Event: 119
 GenTrackSet
 Number Gen Tracks: 1
@@ -10996,6 +11117,7 @@ Strip: 686  ADC 29
 Layer: 9 number Strips: 2
 Strip: 601  ADC 6
 Strip: 602  ADC 25
+Event Number: 120
 Event: 120
 GenTrackSet
 Number Gen Tracks: 1
@@ -11087,6 +11209,7 @@ Strip: 1289  ADC 12
 Layer: 9 number Strips: 2
 Strip: 1354  ADC 15
 Strip: 1355  ADC 16
+Event Number: 121
 Event: 121
 GenTrackSet
 Number Gen Tracks: 1
@@ -11178,6 +11301,7 @@ Strip: 587  ADC 24
 Layer: 9 number Strips: 2
 Strip: 470  ADC 7
 Strip: 471  ADC 24
+Event Number: 122
 Event: 122
 GenTrackSet
 Number Gen Tracks: 1
@@ -11269,6 +11393,7 @@ Strip: 675  ADC 5
 Layer: 9 number Strips: 2
 Strip: 586  ADC 16
 Strip: 587  ADC 15
+Event Number: 123
 Event: 123
 GenTrackSet
 Number Gen Tracks: 1
@@ -11346,6 +11471,7 @@ Strip: 1535  ADC 18
 Layer: 9 number Strips: 2
 Strip: 1660  ADC 15
 Strip: 1661  ADC 16
+Event Number: 124
 Event: 124
 GenTrackSet
 Number Gen Tracks: 1
@@ -11437,6 +11563,7 @@ Strip: 1311  ADC 8
 Layer: 9 number Strips: 2
 Strip: 1375  ADC 28
 Strip: 1376  ADC 3
+Event Number: 125
 Event: 125
 GenTrackSet
 Number Gen Tracks: 1
@@ -11528,6 +11655,7 @@ Strip: 1068  ADC 9
 Layer: 9 number Strips: 2
 Strip: 1083  ADC 12
 Strip: 1084  ADC 19
+Event Number: 126
 Event: 126
 GenTrackSet
 Number Gen Tracks: 1
@@ -11619,6 +11747,7 @@ Strip: 1107  ADC 12
 Layer: 9 number Strips: 2
 Strip: 1139  ADC 24
 Strip: 1140  ADC 7
+Event Number: 127
 Event: 127
 GenTrackSet
 Number Gen Tracks: 1

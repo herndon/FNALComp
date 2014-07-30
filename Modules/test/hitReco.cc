@@ -25,12 +25,6 @@ int main ()
 
 
   // Debugging
-  int debugLevel = 2;
-  // six levels of degug
-  // 5 most verbose with all printouts
-  // Data object printout
-  // 1 basic information on progress
-  // 0 none
 
   // data objects created in this module are reconstruted, not generated
   bool genData = false;
@@ -48,13 +42,13 @@ int main ()
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
   fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(detectorgeometryfile));  
   // files are closed by the default destructor
-  if (debugLevel >= 2) detectorGeometry.printDetectorGeometry(std::cout);
+  if (config.getDebugLevel() >= 2) detectorGeometry.printDetectorGeometry(std::cout);
 
   // Input and output files
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
   // Instantiate the class which handles the details of processing the events
-  fc::EventProcessor processor( new fc::DataSource(debugLevel,inputeventdatafile, genData,
+  fc::EventProcessor processor( new fc::DataSource(config.getDebugLevel(),inputeventdatafile, genData,
                                                "genTracks", //get these tracks from file
                                                 "genHits", //get these hits from file
                                                 "genStrips", //get these strips
@@ -62,8 +56,8 @@ int main ()
 				                  rootFile );
 
   // Instantiate and initialize Module classes
-  processor.addModule( new fc::HitRecoModule(debugLevel,"genStrips", "recoHits", detectorGeometry) );
-  processor.addModule( new fc::HitCompareModule(debugLevel,"genHits", "recoHits", detectorGeometry) );
+  processor.addModule( new fc::HitRecoModule(config.getDebugLevel(),"genStrips", "recoHits", detectorGeometry) );
+  processor.addModule( new fc::HitCompareModule(config.getDebugLevel(),"genHits", "recoHits", detectorGeometry) );
 
 
   // Event loop over module classes

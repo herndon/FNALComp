@@ -26,13 +26,6 @@
 int main ()
 {
 
-   // Debugging
-  int debugLevel = 2;
-  // six levels of degug
-  // 5 most verbose with all printouts
-  // Data object printout
-  // 1 basic information on progress
-  // 0 none
 
 
   // Generator data
@@ -54,27 +47,27 @@ int main ()
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
   fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(detectorgeometryfile));
   // files are closed by the default destructor
-  if (debugLevel >= 2) detectorGeometry.printDetectorGeometry(std::cout);
+  if (config.getDebugLevel() >= 2) detectorGeometry.printDetectorGeometry(std::cout);
 
   // Input and output files and modules
   std::ofstream genoutputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
 
   // Instantiate the class which handles the details of processing the events
-  fc::EventProcessor processor(new fc::CountEventsSource(config.getNumberEvents(),genData),rootFile);
+  fc::EventProcessor processor(new fc::CountEventsSource(config.getDebugLevel(),config.getNumberEvents(),genData),rootFile);
  
   // Instantiate and initialize Module classes
   //  the order the modules are passed to the EventProcessor
   //  is th eorder the modules will run
-  processor.addModule( new fc::TrackGenModule(debugLevel,config.getNumberTracks(),
+  processor.addModule( new fc::TrackGenModule(config.getDebugLevel(),config.getNumberTracks(),
 					      "genTracks", //label used for tracks put into the event
 					      detectorGeometry,random));
-  processor.addModule( new fc::HitStripGenModule(debugLevel,
+  processor.addModule( new fc::HitStripGenModule(config.getDebugLevel(),
 						 "genTracks",//get these tracks
 						 "hits", //create these hits
 						 "strips", //create these strips
 						 detectorGeometry,random) );
-  processor.addModule( new fc::DataOutputModule(debugLevel,genoutputeventdatafile,
+  processor.addModule( new fc::DataOutputModule(config.getDebugLevel(),genoutputeventdatafile,
 						"genTracks", //get these tracks
 						"hits", //get these hits
 						"strips", //get these strips

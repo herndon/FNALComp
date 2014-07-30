@@ -21,15 +21,6 @@ int main ()
 {
  
 
-
-  // Debugging
-  int debugLevel = 2;
-  // six levels of degug
-  // 5 most verbose with all printouts
-  // 2 Data object printout
-  // 1 basic information on progress
-  // 0 none
-
   // Generator data
   bool genData = false;
 
@@ -46,13 +37,13 @@ int main ()
   std::ifstream detectorgeometryfile("sensorgeometry.txt");
   fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(detectorgeometryfile));  
   // files are closed by the default destructor
-  if (debugLevel >= 2) detectorGeometry.printDetectorGeometry(std::cout);
+  if (config.getDebugLevel() >= 2) detectorGeometry.printDetectorGeometry(std::cout);
 
   // Input and output files
   std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
  // Instantiate the class which handles the details of processing the events
-  fc::EventProcessor processor( new fc::DataSource(debugLevel,inputeventdatafile, genData,
+  fc::EventProcessor processor( new fc::DataSource(config.getDebugLevel(),inputeventdatafile, genData,
                                                "genTracks", //get these tracks from file
                                                 "hits", //get these hits from file
                                                 "strips", //get these strips

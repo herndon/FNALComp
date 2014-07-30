@@ -1,3 +1,4 @@
+DebugLevel 2 
 RootFileName recoHistograms.root
 minCandPTCut 1.0
 minPTCut 1.0

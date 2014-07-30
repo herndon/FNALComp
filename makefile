@@ -34,7 +34,6 @@ test: $(TESTTARGETS)
 %.test: 
 	./$* > testlog_$*
 	diff $(TEST_PATH)log_$* testlog_$*
-	diff genoutputeventdatafile.bin test/genoutputeventdatafile.bin
 
 clean:
 	\rm *~ */*~ */*/*~ $(LIB_PATH)/*.o $(LIB_PATH)/*.d $(MLIB_PATH)/*.o $(MLIB_PATH)/*.d dataGen dataRead hitReco trackReco testlog*

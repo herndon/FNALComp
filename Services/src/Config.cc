@@ -3,13 +3,17 @@
 #include "Services/include/Config.hh"
 
 fc::Config::Config(std::ifstream & configfile,int genData):
+  _debugLevel(1),
   _genData(genData),
   _numberEvents(128),
-  _numberTracks(10),
-  _seed(1) {
+  _numberTracks(1),
+  _seed(1),
+  _minCandPTCut(1.0),
+  _minPTCut(1.0),
+  _maxChi2NDofCut(10.0) {
 
   _initConfig(configfile);
-  printConfig(std::cout);
+  if (_debugLevel >=1 )printConfig(std::cout);
 
 }
 
@@ -27,7 +31,9 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
     configfile >> configString; 
 
     if (_genData){
-      if (configString == "NumberEvents") {
+      if (configString == "DebugLevel") {
+	configfile >> _debugLevel;
+      } else if (configString == "NumberEvents") {
 	configfile >> _numberEvents;
       } else if (configString == "NumberTracks") { 
 	configfile >> _numberTracks;
@@ -39,7 +45,9 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
 	throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
       }
     } else {
-      if (configString == "RootFileName") {
+      if (configString == "DebugLevel") {
+	configfile >> _debugLevel;
+      } else if (configString == "RootFileName") {
 	configfile >> _rootFileName;
       } else if (configString == "minCandPTCut") {
 	configfile >> _minCandPTCut;
@@ -65,12 +73,14 @@ void fc::Config::printConfig(std::ostream& out) const {
 
   if (_genData) {
     out << "gen Data configuration" << std::endl;
+    out << "Debug Level: " << _debugLevel << std::endl;
     out << "Number Events: " << _numberEvents << std::endl;
     out << "Number Tracks " << _numberTracks << std::endl;
     out << "Random number seed " << _seed << std::endl;
     out << "Root file name " << _rootFileName << std::endl;
   } else {
     out << "reco Data configuration" << std::endl;
+    out << "Debug Level: " << _debugLevel << std::endl;
     out << "Root file name " << _rootFileName << std::endl;
   }
 
