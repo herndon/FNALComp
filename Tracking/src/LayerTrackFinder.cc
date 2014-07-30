@@ -7,13 +7,16 @@
 #include "DataObjects/include/Track.hh"
 #include "Algorithms/include/TrackFitMeasurements.hh"
 #include "Algorithms/include/BuildTrack.hh"
+#include "Tracking/include/TrackingSelectors.hh"
+#include "Tracking/include/TrackingFilters.hh"
 #include "Tracking/include/LayerTrackFinder.hh"
 
 
-fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer,double minPTCut, double maxChi2NDofCut):
+fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer,int nExpHits,double minPTCut, double maxChi2NDofCut):
   _debugLevel(debugLevel),
   _detectorGeometry(detectorGeometry),
   _layer(layer),
+  _nExpHits(nExpHits),
   _minPTCut(minPTCut),
   _maxChi2NDofCut(maxChi2NDofCut){
 }
@@ -33,8 +36,11 @@ void fc::LayerTrackFinder::findCandidateTracks(trackSet& trackCandidateSet, cons
     trackCandidateSet.push_back(std::move(track));
   }
 
+  fcf::TrackingSelector trackSelector;
+  trackSelector._nHitCut = _nExpHits;
 
-  layerTrackFilter(trackCandidateSet,expNHit);
+  fcf::simpleTrackSetFilter(trackCandidateSet,_detectorGeometry,trackSelector);
+  //layerTrackFilter(trackCandidateSet,expNHit);
 
 }
 
@@ -138,6 +144,14 @@ std::vector<int> fc::LayerTrackFinder::bestTrackCandidates(const trackSet & trac
 
 fc::trackSet fc::LayerTrackFinder::buildTrackCandidates(const Track & track, const std::vector<int> & hits, const HitSet & recoHitSet) const{
 
+  fcf::TrackingSelector trackSelector;
+  trackSelector._minPTCut = _minPTCut;
+  trackSelector._maxChi2NDofCut = _maxChi2NDofCut;
+  trackSelector._nHitCut = _nExpHits;
+  trackSelector._useFiducialDRCut = true;
+  trackSelector._useFiducialDZCut = true;
+
+
   trackSet newTracks;
   for (auto hitNumber : hits) {
     trackHitSet trackHitCandidate = track.getHits();
@@ -145,7 +159,7 @@ fc::trackSet fc::LayerTrackFinder::buildTrackCandidates(const Track & track, con
 
     Track newTrack(buildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,_debugLevel));
 
-    if (goodTrack(newTrack)) newTracks.push_back(std::move(newTrack));
+    if (fcf::goodCandidateTrack(newTrack,_detectorGeometry,trackSelector)) newTracks.push_back(std::move(newTrack));
   }
   return newTracks;
 
@@ -153,23 +167,3 @@ fc::trackSet fc::LayerTrackFinder::buildTrackCandidates(const Track & track, con
 
 
 
-void fc::LayerTrackFinder::layerTrackFilter(fc::trackSet & trackCandidateSet,unsigned int expNHit) const{
-
-  // Right now just checks the number of expected hits
-
-  for (trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter != trackCandidateSet.end(); ++trackIter){
-
-    if (trackIter->getHits().size() < expNHit-1) {
-      trackCandidateSet.erase(trackIter);
-      trackIter--;
-    }
-  }
-}
-
-bool fc::LayerTrackFinder::goodTrack(const Track& track) const{
-
-  return  track.getHelix().getPT(_detectorGeometry.getBField()) > _minPTCut && 
-    (track.getNDof()<=0 || track.getChi2()/track.getNDof()< _maxChi2NDofCut) && 
-    std::abs(track.getHelix().getDr()) < _detectorGeometry.getSensor(_detectorGeometry.getNSensors()-1)._perpSize && 
-    std::abs(track.getHelix().getDz()) < _detectorGeometry.getSensor(_detectorGeometry.getNSensors()-1)._nStrips*_detectorGeometry.getSensor(_detectorGeometry.getNSensors()-1)._stripPitch/2.0;
-}

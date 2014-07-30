@@ -21,7 +21,7 @@ namespace fc {
   class LayerTrackFinder {
 
   public:
-    LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer,double minPTCut,double maxChi2NDofCut);
+    LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer,int nExpHits, double minPTCut,double maxChi2NDofCut);
 
     void findCandidateTracks(trackSet & trackCandidateSet,const HitSet & recoHitSet,unsigned int expNHit) const;
 
@@ -31,10 +31,6 @@ namespace fc {
     trackSet buildTrackCandidates(const Track &, const std::vector<int> &, const HitSet & recoHitSet) const;     
     std::vector<int> bestTrackCandidates(const trackSet &) const;
     void removeSeedTrack(trackSet&, const trackSet&) const;
-    void layerTrackFilter(trackSet &,unsigned int expNHit) const;
-
-    // Helper functions
-    bool goodTrack(const Track&) const;
 
     int _debugLevel;
 
@@ -46,6 +42,7 @@ namespace fc {
  
  
     // intermediate tracking parameters
+    int _nExpHits;
     double _minPTCut;
     double _maxChi2NDofCut;
   };

@@ -10,7 +10,7 @@
 // 2014-07-23
 //============================================================================
 
-#include "Tracking/include/TrackCandidateStrategy.hh"
+#include "DataObjects/include/TrackSet.hh"
 
 
 namespace fc {
@@ -18,16 +18,30 @@ namespace fc {
 class HitSet;
 class DetectorGeometry;
 
-  class TrackCandidateStrategy1X2SAS : public TrackCandidateStrategy{
+  class TrackCandidateStrategy1X2SAS {
 
   public:
 
     TrackCandidateStrategy1X2SAS(int,const DetectorGeometry&,double);
 
-  private:
+    void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) const;
 
-    void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) const override;
-    void filterTrackCandidates(trackSet& trackCandidateSet,const HitSet& hitSet) const override;
+    void findTrackCandidates(trackSet& trackCandidateSet, const HitSet& hitSet) const;
+
+
+
+  private:
+ 
+   int _debugLevel;
+
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
+  
+    // candidate track parameters
+    double _minCandPTCut;
+
+
+
 
   };
 
