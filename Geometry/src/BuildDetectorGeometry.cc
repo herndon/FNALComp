@@ -111,6 +111,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
     detectorgeometryfile >> sensor._badHitResolution;
     // !!!!! This is a good place for a test case using valgrind
     detectorgeometryfile >> sensor._threshold;
+    detectorgeometryfile >> sensor._hitEfficiency;
     detectorgeometryfile >> sensor._center[0];
     detectorgeometryfile >> sensor._center[1];
     detectorgeometryfile >> sensor._center[2];

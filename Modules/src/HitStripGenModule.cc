@@ -58,6 +58,8 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, 
 
   for (int ii_layer = 0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer) {
 
+    // 98% efficiency factor
+    if (_random.getUniformDouble(0.0,1.0) > _detectorGeometry.getSensor(ii_layer)._hitEfficiency) continue;
     bool intersectedLayer = intersectWithLayer(genTrack.makeHelix(_detectorGeometry.getCurvatureCInField(_detectorGeometry.getBField())),
 					       hitPosition,ii_layer,_detectorGeometry);
 

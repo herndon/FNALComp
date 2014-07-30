@@ -25,6 +25,7 @@ struct SensorDescriptor {
   double _intrinsicHitResolution;
   double _hitResolution;
   double _badHitResolution;
+  double _hitEfficiency;
   double _threshold;
   TVector3 _center;
   TVector3 _normal;
