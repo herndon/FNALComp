@@ -1,12 +1,12 @@
-#ifndef Modules_TrackRecoModule_hh
-#define Modules_TrackRecoModule_hh
+#ifndef Modules_TrackCandidateModule_hh
+#define Modules_TrackCandidateModule_hh
 //============================================================================
-// TrackRecoModule.hh
-// Module for reconstructing hits from strip infomation
+// TrackCandidateModule.hh
+// Module for finding candidate track to pursue in reconstruction
 // 
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
-// 2014-06-11
+// 2014-07-30
 //============================================================================
 
 #include "Framework/include/Module.hh"
@@ -22,16 +22,15 @@ namespace fc {
 
 
 ///
-/// Class TrackRecoModule  Module for reconstructing hits from strip infomation
+/// Class TrackCandidateModule  Module for reconstructing hits from strip infomation
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-11
 ///
 
-class TrackRecoModule : public Module {
+class TrackCandidateModule : public Module {
 
 public:
 
-  TrackRecoModule(int, const std::string& inputHitsLabel, 
-		  const std::string& inputTracksLabel,const std::string& outputTracksLabel, 
+  TrackCandidateModule(int, const std::string& inputHitsLabel, const std::string& outputTracksLabel, 
 		  const Config&, const DetectorGeometry &);
 
   void processEvent(Event&) override;
@@ -42,7 +41,6 @@ private:
   int _debugLevel;
 
   const std::string _inHitsLabel;
-  const std::string _inTracksLabel;
   const std::string _outTracksLabel;
 
   // Configuration object for tracking parameters
@@ -53,13 +51,11 @@ private:
 
   // Tracking parameters
 
-  // !!!!! initialize through configuration
-  double _candidatePTThreshold;
 
 
-  void recoTracks(TrackSet & trackSet, const TrackSet& inputCandidateSet, const HitSet& hitSet) const;
+  void findTrackCandidates(TrackSet & trackSet, const HitSet& hitSet) const;
 
 };
 } // end namespace fc
 
-#endif // Modules_TrackRecoModule_hh
+#endif // Modules_TrackCandidateModule_hh

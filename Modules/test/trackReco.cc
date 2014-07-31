@@ -16,6 +16,7 @@
 #include "Modules/include/HitCompareModule.hh"
 #include "Modules/include/PerfectTrackRecoModule.hh"
 #include "Modules/include/TrackRecoModule.hh"
+#include "Modules/include/TrackCandidateModule.hh"
 #include "Modules/include/TrackCompareModule.hh"
 #include <fstream>
 #include <iostream>
@@ -63,8 +64,10 @@ int main ()
   processor.addModule( new fc::HitRecoModule(config.getDebugLevel(),"genStrips", "recoHits", detectorGeometry));
   processor.addModule( new fc::HitCompareModule(config.getDebugLevel(),"genHits", "recoHits", detectorGeometry));
   processor.addModule( new fc::PerfectTrackRecoModule(config.getDebugLevel(), "recoHits", "genHits", "perfectRecoTracks", detectorGeometry) );
-  processor.addModule( new fc::TrackRecoModule(config.getDebugLevel(), "recoHits", "recoTracks",config,detectorGeometry) );
+  processor.addModule( new fc::TrackCandidateModule(config.getDebugLevel(), "recoHits", "trackCandidates",config,detectorGeometry) );
+  processor.addModule( new fc::TrackRecoModule(config.getDebugLevel(), "recoHits", "trackCandidates", "recoTracks",config,detectorGeometry) );
   processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(), "genTracks", "perfectRecoTracks", detectorGeometry) );
+  processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(), "genTracks", "trackCandidates", detectorGeometry) );
   processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(), "genTracks", "recoTracks", detectorGeometry) );
 
 

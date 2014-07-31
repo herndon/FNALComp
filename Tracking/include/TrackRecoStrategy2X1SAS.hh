@@ -9,28 +9,34 @@
 // 2014-07-22
 //============================================================================
 
-#include "Tracking/include/TrackRecoStrategy.hh"
+#include "DataObjects/include/TrackSet.hh"
 
 namespace fc {
 
 class DetectorGeometry;
 class HitSet;
 
-  class TrackRecoStrategy2X1SAS : public TrackRecoStrategy{
+  class TrackRecoStrategy2X1SAS {
 
  
   public:
 
  
     TrackRecoStrategy2X1SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minPTCut,double maxChiNDofCut);
-  
-  private:
+   
+    void recoTracks(trackSet & trackCandidateSet, const HitSet& hitSet) const;
 
-   void findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) const override;
+    void findTracks(trackSet& trackCandidateSet,const HitSet & recoHitSet) const;;
+ 
+
+  private:
+     int _debugLevel;
+
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
 
     double _minPTCut;
     double _maxChi2NDofCut;
-
 
   };
 
