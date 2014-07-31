@@ -77,7 +77,8 @@ void fc::HitSetIO::readEvent(HitSet& hitSet, std::ifstream & hitdata) {
     hitdata >> numberStrips;
     hitdata >> trackNumber;
 
-    Hit hit(hitPosition,layer,numberStrips,trackNumber);
+
+    Hit hit(hitPosition,layer,trackNumber);
 
     hitSet.insertHit(hit);
 

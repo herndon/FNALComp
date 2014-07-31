@@ -47,6 +47,9 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
   std::vector<int> stripAdcs;
   int initialStrip;
   std::vector<int>::size_type numberStrips;
+  int charge;
+  bool goodHit = true;
+  double resolution;
   double stripHitPosition;
 
   const layerStripMap layerStripMap = stripSet.getLayerStripMap(layer);
@@ -62,9 +65,27 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
     double localHitPosition = fcf::calculateLoalFromStripPosition(stripHitPosition,layer,_detectorGeometry);
     TVector3 hitPosition = fcf::calculateGlobalFromLocalPosition(localHitPosition,layer,_detectorGeometry);
   
-    numberStrips = stripAdcs.size();
 
-    Hit hit(hitPosition,layer,numberStrips);
+    numberStrips = stripAdcs.size();
+    charge = 0;
+    for (auto const& adc :   stripAdcs){
+      charge += adc;
+    }
+
+
+    if (numberStrips>2 || charge > _detectorGeometry.getMIP()) goodHit = false;
+
+    if (goodHit) {
+      resolution = _detectorGeometry.getSensor(layer)._hitResolution;
+    }else {
+     resolution = _detectorGeometry.getSensor(layer)._badHitResolution;
+    }
+ 
+
+
+    Hit hit(hitPosition,layer,numberStrips,charge,goodHit,resolution);
+
+
 
     hitSet.insertHit(hit);
 

@@ -82,8 +82,8 @@ void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,int trackNumber,int & h
     std::cout << "Layer " << layer << " Hit x " << hitPosition[1] << std::endl;
   }
 
-  // Pure gen hit, numberStrip = -1
-  Hit hit(hitPosition,layer,-1,trackNumber);
+  // Pure gen hit, numberStrip = -1, charge -1, resolution 0.0, goodHit true
+  Hit hit(hitPosition,layer,trackNumber);
 
   bool isValidHit = fcf::isValidHit(layer,hitPosition,_detectorGeometry);
 

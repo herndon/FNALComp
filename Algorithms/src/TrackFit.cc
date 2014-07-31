@@ -129,8 +129,11 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
       }
 
       // Get the inverse resolutions squared
-      invMeasurementRes2(0,0) = detectorGeometry.getSensor(layer)._hitResolution*detectorGeometry.getSensor(layer)._hitResolution;
-
+      if (layer < 0){
+	invMeasurementRes2(0,0) = detectorGeometry.getSensor(layer)._hitResolution*detectorGeometry.getSensor(layer)._hitResolution;;
+      } else {
+	invMeasurementRes2(0,0) = hitSet.getHits()[*hitIter].getResolution()*hitSet.getHits()[*hitIter].getResolution();
+      }
       invMeasurementRes2.Invert(); 
  
       if (_debugLevel >= 5){
