@@ -1,8 +1,8 @@
-#ifndef Tracking_TrackCandidateStrategy1X2SAS_hh
-#define Tracking_TrackCandidateStrategy1X2SAS_hh
+#ifndef Tracking_TrackCandidateStrategy2X1SAS_hh
+#define Tracking_TrackCandidateStrategy2X1SAS_hh
 //============================================================================
-// TrackCandidateStategy1X2SAS.hh
-// header with function definitions of the TrackCandidateStategy1X2SAS 
+// TrackCandidateStategy2X1SAS.hh
+// header with function definitions of the TrackCandidateStategy2X1SAS 
 //   track candidate finding stratgy
 //
 // Author Matt Herndon, University of Wisconsin,
@@ -18,11 +18,11 @@ namespace fc {
 class HitSet;
 class DetectorGeometry;
 
-  class TrackCandidateStrategy1X2SAS {
+  class TrackCandidateStrategy2X1SAS {
 
   public:
 
-    TrackCandidateStrategy1X2SAS(int,const DetectorGeometry&,double);
+    TrackCandidateStrategy2X1SAS(int,const DetectorGeometry&,double);
 
     void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) const;
 
@@ -48,5 +48,5 @@ class DetectorGeometry;
 
 } // end namescape fc
 
-#endif // Tracking_TrackCandidateStrategy1X2SAS_hh
+#endif // Tracking_TrackCandidateStrategy2X1SAS_hh
 

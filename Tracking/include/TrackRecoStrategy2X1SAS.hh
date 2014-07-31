@@ -1,8 +1,8 @@
-#ifndef Tracking_TrackRecoStrategy1X2SAS_hh
-#define Tracking_TrackRecoStrategy1X2SAS_hh
+#ifndef Tracking_TrackRecoStrategy2X1SAS_hh
+#define Tracking_TrackRecoStrategy2X1SAS_hh
 //============================================================================
-// TrackRecoStategy1X2SAS.hh
-// header with function definitions of the TrackRecoStategy1X2SAS tracking stratgy
+// TrackRecoStategy2X1SAS.hh
+// header with function definitions of the TrackRecoStategy2X1SAS tracking stratgy
 //
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
@@ -16,13 +16,13 @@ namespace fc {
 class DetectorGeometry;
 class HitSet;
 
-  class TrackRecoStrategy1X2SAS : public TrackRecoStrategy{
+  class TrackRecoStrategy2X1SAS : public TrackRecoStrategy{
 
  
   public:
 
  
-    TrackRecoStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minPTCut,double maxChiNDofCut);
+    TrackRecoStrategy2X1SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minPTCut,double maxChiNDofCut);
   
   private:
 
@@ -37,5 +37,5 @@ class HitSet;
 
 } // end namescape fc
 
-#endif // Tracking_TrackRecoStrategy1X2SAS_hh
+#endif // Tracking_TrackRecoStrategy2X1SAS_hh
 

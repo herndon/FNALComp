@@ -4,16 +4,16 @@
 #include <vector>
 #include "Geometry/include/DetectorGeometry.hh"
 #include "Tracking/include/LayerTrackFinder.hh"
-#include "Tracking/include/TrackRecoStrategy1X2SAS.hh"
+#include "Tracking/include/TrackRecoStrategy2X1SAS.hh"
 
-fc::TrackRecoStrategy1X2SAS::TrackRecoStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minPTCut,double maxChi2NDofCut):
+fc::TrackRecoStrategy2X1SAS::TrackRecoStrategy2X1SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minPTCut,double maxChi2NDofCut):
   TrackRecoStrategy(debugLevel,detectorGeometry),
   _minPTCut(minPTCut),
   _maxChi2NDofCut(maxChi2NDofCut) {
 }
 
 
-void fc::TrackRecoStrategy1X2SAS::findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) const{
+void fc::TrackRecoStrategy2X1SAS::findTracks(fc::trackSet& trackCandidateSet,const HitSet & recoHitSet) const{
 
   std::vector<int> layers {8,2,1,0,7,6,5};
   int expNHit = 3;

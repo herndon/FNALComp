@@ -7,17 +7,17 @@
 #include "Algorithms/include/InitializeHelix.hh"
 #include "Algorithms/include/BuildTrack.hh"
 #include "Tracking/include/TrackingSelectors.hh"
-#include "Tracking/include/TrackCandidateStrategy1X2SAS.hh"
+#include "Tracking/include/TrackCandidateStrategy2X1SAS.hh"
 
 
-fc::TrackCandidateStrategy1X2SAS::TrackCandidateStrategy1X2SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minCandPTCut):
+fc::TrackCandidateStrategy2X1SAS::TrackCandidateStrategy2X1SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minCandPTCut):
   _debugLevel(debugLevel),
   _detectorGeometry(detectorGeometry),
   _minCandPTCut(minCandPTCut) {
 }
 
 
-void fc::TrackCandidateStrategy1X2SAS::findTrackCandidates(trackSet& trackCandidateSet, const HitSet& recoHitSet) const{
+void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(trackSet& trackCandidateSet, const HitSet& recoHitSet) const{
 
   std::vector<trackHitSet> trackHitCandidates;
 
@@ -34,7 +34,7 @@ void fc::TrackCandidateStrategy1X2SAS::findTrackCandidates(trackSet& trackCandid
 
 // !!!!! Could improve to use more than outer layers
 // !!!!! control seed layers from config
-void fc::TrackCandidateStrategy1X2SAS::findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) const{
+void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) const{
  
   fcf::TrackingSelector trackSelector;
   trackSelector._minPTCut = _minCandPTCut;

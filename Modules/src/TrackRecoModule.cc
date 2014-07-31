@@ -5,8 +5,8 @@
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
 #include "Modules/include/TrackRecoModule.hh"
-#include "Tracking/include/TrackCandidateStrategy1X2SAS.hh"
-#include "Tracking/include/TrackRecoStrategy1X2SAS.hh"
+#include "Tracking/include/TrackCandidateStrategy2X1SAS.hh"
+#include "Tracking/include/TrackRecoStrategy2X1SAS.hh"
 #include "Algorithms/include/TrackFitMeasurements.hh"
 #include "Algorithms/include/InitializeHelix.hh"
 #include "Services/include/Config.hh"
@@ -37,8 +37,8 @@ void fc::TrackRecoModule::processEvent(Event& event)
 void fc::TrackRecoModule::recoTracks(TrackSet & recoTrackSet, const HitSet& recoHitSet) const {
 
 
-  TrackCandidateStrategy1X2SAS candStrategy(_debugLevel,_detectorGeometry,_config.getMinCandPTCut());
-  TrackRecoStrategy1X2SAS recoStrategy(_debugLevel,_detectorGeometry,_config.getMinPTCut(),_config.getMaxChi2NDofCut());
+  TrackCandidateStrategy2X1SAS candStrategy(_debugLevel,_detectorGeometry,_config.getMinCandPTCut());
+  TrackRecoStrategy2X1SAS recoStrategy(_debugLevel,_detectorGeometry,_config.getMinPTCut(),_config.getMaxChi2NDofCut());
 
   trackSet trackCandidateSet;
   
