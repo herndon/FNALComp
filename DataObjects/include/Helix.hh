@@ -68,7 +68,7 @@ public:
 
   double getPT(const TVector3& bField) const {return std::abs(1.0/_helix(2));}
   double getPZ() const {return _helix(4)*std::abs(1.0/_helix(2));}
-  double getCotTheta() const {return 1/_helix(4);}
+  double getCotTheta() const {return _helix(4);}
 
   // Set helix
   void setHelix(const TVectorD& helix) {_helix = helix;}
