@@ -51,17 +51,14 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
   layerStripMap::const_iterator  layerStripMapIterEnd = layerStripMap.end();
 
   while (layerStripMapIter != layerStripMapIterEnd) {
-
-    findCluster(initialStrip,layer,stripAdcs,layerStripMapIter,layerStripMapIterEnd,stripSet);
-
-    hitSet.insertHit(buildHit(layer, initialStrip,stripAdcs));
-
+    if (findCluster(initialStrip,layer,stripAdcs,layerStripMapIter,layerStripMapIterEnd,stripSet))
+      hitSet.insertHit(buildHit(layer, initialStrip,stripAdcs));
   }
 
 }
 
 
-void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<int> & stripAdcs,
+bool fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<int> & stripAdcs,
 				    layerStripMap::const_iterator & layerStripMapIter,
 				    layerStripMap::const_iterator & layerStripMapIterEnd,const StripSet & stripSet) const{
 
@@ -74,7 +71,7 @@ void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
     ++layerStripMapIter;
   }
 
-  if (layerStripMapIter == layerStripMapIterEnd) return;
+  if (layerStripMapIter == layerStripMapIterEnd) return false;
 
   initialStrip = stripSet.getStripNumber(layerStripMapIter);
 
@@ -97,6 +94,8 @@ void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
     if (_debugLevel >= 5) std::cout << "Intermediate strip: " << intermediateStrip  << std::endl;
     
   }
+
+  return (stripAdcs.size()>0);
 
 }
 
