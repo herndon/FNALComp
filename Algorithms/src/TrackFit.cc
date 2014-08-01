@@ -20,7 +20,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
   static const double chi2Tol = 1.e-8;
   static const double deltaIncr   = 10.;
   static const double deltaDecr   = 0.1;
-  static const int    loopMax = 1000;
+  static const int    loopMax = 50;
 
   double delta  = 1.0;
 
