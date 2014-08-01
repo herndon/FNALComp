@@ -33,6 +33,7 @@ public:
 
   explicit StripSet(const DetectorGeometry&);
 
+  const std::vector<layerStripMap>& getStrips() const {return _layerStripMaps;}
   const layerStripMap& getLayerStripMap(unsigned int layer) const;
 
   int getStripNumber(layerStripMap::const_iterator iter) const {return iter->first;};
@@ -44,7 +45,7 @@ public:
 
 private:
 
-  std::vector<layerStripMap> _layerStripMapArray;
+  std::vector<layerStripMap> _layerStripMaps;
 };
 } // end namespace
 
