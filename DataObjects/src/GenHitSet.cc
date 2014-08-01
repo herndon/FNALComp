@@ -5,9 +5,6 @@
 
 // Using default constructor
 
-void fc::GenHitSet::insertGenHit(const GenHit& hit) {
-    _genHitSet.push_back(hit);
-}
 
 void fc::GenHitSet::insertGenHit(GenHit&& hit) {
     _genHitSet.push_back(std::move(hit));

@@ -37,7 +37,7 @@ double fcf::calculateStripHitPositionFromCluster(int initialStrip,const std::vec
 
 
   // From strips number position to global Hit position
-double fcf::calculateLoalFromStripPosition(double stripHitPosition, int layer, const fc::DetectorGeometry& detectorGeometry){
+double fcf::calculateLocalFromStripPosition(double stripHitPosition, int layer, const fc::DetectorGeometry& detectorGeometry){
   return (stripHitPosition - ((detectorGeometry.getSensor(layer)._nStrips/2.0)-0.5)) * detectorGeometry.getSensor(layer)._stripPitch;
 }
 

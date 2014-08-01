@@ -86,7 +86,7 @@ void fc::HitSetIO::readEvent(HitSet& hitSet, std::ifstream & hitdata) {
 
       Hit hit(hitPosition,layer,numberStrips,charge,goodHit,resolution);
 
-    hitSet.insertHit(hit);
+      hitSet.insertHit(std::move(hit));
 
   } // end hit loop
 

@@ -41,7 +41,7 @@ void fc::TrackCandidateModule::findTrackCandidates(TrackSet & recoTrackCandidate
   candStrategy.findTrackCandidates(trackCandidateSet,recoHitSet);
 
   for (trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter!= trackCandidateSet.end(); ++trackIter){
-    recoTrackCandidateSet.insertTrack(*trackIter);
+    recoTrackCandidateSet.insertTrack(std::move(*trackIter));
   }
 
   if (_debugLevel>=2){

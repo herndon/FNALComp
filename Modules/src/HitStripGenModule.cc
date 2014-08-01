@@ -37,11 +37,10 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
   std::unique_ptr<StripSet> genStripSet{ new StripSet(_detectorGeometry)};
 
   int trackNumber = 0;
-  int hitNumber = 0;
 
   for (genTrackSet::const_iterator genTrackIter =  genTrackSet->getGenTracks().begin(); genTrackIter != genTrackSet->getGenTracks().end(); ++genTrackIter,++trackNumber){
  
-    makeHitsStrips(*genHitSet, *genStripSet,*genTrackIter,trackNumber,hitNumber);
+    makeHitsStrips(*genHitSet, *genStripSet,*genTrackIter,trackNumber);
 
    } // end track loop
 
@@ -50,7 +49,7 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
 }
 
 
-void fc::HitStripGenModule::makeHitsStrips(GenHitSet& genHitSet, StripSet & stripSet, const GenTrack & genTrack,int trackNumber, int & hitNumber) const{
+void fc::HitStripGenModule::makeHitsStrips(GenHitSet& genHitSet, StripSet & stripSet, const GenTrack & genTrack,int trackNumber) const{
 
 
   TVector3 hitPosition;
@@ -64,7 +63,7 @@ void fc::HitStripGenModule::makeHitsStrips(GenHitSet& genHitSet, StripSet & stri
 					       hitPosition,ii_layer,_detectorGeometry);
 
     if (intersectedLayer){
-    storeHitInfo(genHitSet,trackNumber,hitNumber,hitPosition,ii_layer);
+    storeHitInfo(genHitSet,trackNumber,hitPosition,ii_layer);
 
     storeStripInfo(stripSet,hitPosition,ii_layer);
     } 
@@ -75,7 +74,7 @@ void fc::HitStripGenModule::makeHitsStrips(GenHitSet& genHitSet, StripSet & stri
 
 
 // !!!!! remove Gen track from here
-void fc::HitStripGenModule::storeHitInfo(GenHitSet & genHitSet,int trackNumber,int & hitNumber,TVector3 & hitPosition,int layer) const{
+void fc::HitStripGenModule::storeHitInfo(GenHitSet & genHitSet,int trackNumber,TVector3 & hitPosition,int layer) const{
 
   if (_debugLevel >=5 ) {
     std::cout << "Layer " << layer << " Hit y " << hitPosition[0] << std::endl;
@@ -89,9 +88,8 @@ void fc::HitStripGenModule::storeHitInfo(GenHitSet & genHitSet,int trackNumber,i
 
   if (isValidHit) {
 
-    genHitSet.insertGenHit(hit);
+    genHitSet.insertGenHit(std::move(hit));
 
-    ++hitNumber;
 
   }
   

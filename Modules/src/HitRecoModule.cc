@@ -52,7 +52,7 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
 
   while (layerStripMapIter != layerStripMapIterEnd) {
     if (findCluster(initialStrip,layer,stripAdcs,layerStripMapIter,layerStripMapIterEnd,stripSet))
-      hitSet.insertHit(buildHit(layer, initialStrip,stripAdcs));
+      hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
   }
 
 }
@@ -102,7 +102,7 @@ bool fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
 fc::Hit fc::HitRecoModule::buildHit(int layer, int initialStrip,const std::vector<int> & stripAdcs) const{
 
   double stripHitPosition = fcf::calculateStripHitPositionFromCluster(initialStrip,stripAdcs);
-  double localHitPosition = fcf::calculateLoalFromStripPosition(stripHitPosition,layer,_detectorGeometry);
+  double localHitPosition = fcf::calculateLocalFromStripPosition(stripHitPosition,layer,_detectorGeometry);
   TVector3 hitPosition = fcf::calculateGlobalFromLocalPosition(localHitPosition,layer,_detectorGeometry);
 
   int numberStrips = stripAdcs.size();

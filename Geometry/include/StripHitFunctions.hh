@@ -28,7 +28,7 @@ namespace fcf {
 
 
   // From strips number position to global Hit position
-  double calculateLoalFromStripPosition(double, int, const fc::DetectorGeometry &);
+  double calculateLocalFromStripPosition(double, int, const fc::DetectorGeometry &);
   const TVector3 calculateGlobalFromLocalPosition(double, int, const fc::DetectorGeometry &);
 
   // Find if hits and strips are in a valid location on a sensor

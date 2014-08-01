@@ -3,9 +3,6 @@
 
 // Using Default constructor
 
-void fc::TrackSet::insertTrack(const Track& track) {
-  _trackSet.push_back(track);
-}
 
 void fc::TrackSet::insertTrack(Track&& track) {
   _trackSet.push_back(std::move(track));

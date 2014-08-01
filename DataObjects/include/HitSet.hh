@@ -30,7 +30,7 @@ public:
   const hitSet & getHits() const {return _hitSet;};
 
 
-  void insertHit(const Hit&);
+  //void insertHit(const Hit&);
   void insertHit(Hit&&);
 
   void print(ostream& out) const;

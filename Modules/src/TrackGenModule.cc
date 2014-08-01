@@ -28,7 +28,7 @@ void fc::TrackGenModule::processEvent(fc::Event& event)
   for (int ii_track = 0; ii_track < _numberOfTracks; ++ii_track) {
 
     GenTrack genTrack = generateTrack(); 
-    genTrackSet->insertTrack(genTrack);
+    genTrackSet->insertTrack(std::move(genTrack));
 
   } // end track loop
   event.put(_tracksLabel,std::move(genTrackSet));

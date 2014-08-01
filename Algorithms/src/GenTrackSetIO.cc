@@ -101,7 +101,7 @@ void fc::GenTrackSetIO::readEvent(GenTrackSet & genTrackSet, std::ifstream & gen
 
     GenTrack genTrack(p,charge,dr);
  
-    genTrackSet.insertTrack(genTrack);
+    genTrackSet.insertTrack(std::move(genTrack));
 
   } // end track loop 
 

@@ -77,7 +77,7 @@ void fc::GenHitSetIO::readEvent(GenHitSet& genHitSet, std::ifstream & hitdata) {
 
     GenHit hit(hitPosition,layer,trackNumber);
 
-    genHitSet.insertGenHit(hit);
+    genHitSet.insertGenHit(std::move(hit));
 
   } // end hit loop
 

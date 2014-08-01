@@ -5,9 +5,9 @@
 
 // Using default constructor
 
-void fc::HitSet::insertHit(const Hit& hit) {
-    _hitSet.push_back(hit);
-}
+// void fc::HitSet::insertHit(const Hit& hit) {
+//     _hitSet.push_back(hit);
+// }
 
 void fc::HitSet::insertHit(Hit&& hit) {
     _hitSet.push_back(std::move(hit));

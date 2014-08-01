@@ -48,7 +48,7 @@ void fc::TrackRecoModule::recoTracks(TrackSet & recoTrackSet, const TrackSet& in
   recoStrategy.recoTracks(trackCandidateSet,recoHitSet);
 
   for (trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter!= trackCandidateSet.end(); ++trackIter){
-    recoTrackSet.insertTrack(*trackIter);
+    recoTrackSet.insertTrack(std::move(*trackIter));
   }
 
   if (_debugLevel>=2){

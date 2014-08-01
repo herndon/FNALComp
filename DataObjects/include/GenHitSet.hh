@@ -30,7 +30,6 @@ public:
   const genHitSet & getGenHits() const {return _genHitSet;};
 
 
-  void insertGenHit(const GenHit&);
   void insertGenHit(GenHit&&);
 
   void print(ostream& out) const;
