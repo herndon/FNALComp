@@ -11,6 +11,31 @@ double fcf::calculateStripFromLocalPosition(double localHitPosition, int layer, 
   return localHitPosition/detectorGeometry.getSensor(layer)._stripPitch + ((detectorGeometry.getSensor(layer)._nStrips/2.0) - 0.5);
 }
 
+// Find strip nubmer position
+double fcf::calculateStripHitPositionFromCluster(int initialStrip,const std::vector<int> & stripAdcs){
+
+  double stripHitPosition = 0.0;
+  double stripPosition = 0.0;
+  double adcSum = 0.0;
+
+  for (std::vector<int>::const_iterator stripAdcIter = stripAdcs.begin(); stripAdcIter != stripAdcs.end(); ++stripAdcIter){
+
+    stripHitPosition = stripHitPosition + stripPosition*(*stripAdcIter);
+    adcSum = adcSum + (*stripAdcIter);
+    stripPosition =  stripPosition + 1.0;
+    
+  } // end strip loop
+
+  stripHitPosition = stripHitPosition/adcSum;
+
+  stripHitPosition = initialStrip + stripHitPosition;
+
+  return stripHitPosition;
+
+}
+
+
+
   // From strips number position to global Hit position
 double fcf::calculateLoalFromStripPosition(double stripHitPosition, int layer, const fc::DetectorGeometry& detectorGeometry){
   return (stripHitPosition - ((detectorGeometry.getSensor(layer)._nStrips/2.0)-0.5)) * detectorGeometry.getSensor(layer)._stripPitch;

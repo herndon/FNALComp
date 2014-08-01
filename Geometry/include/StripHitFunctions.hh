@@ -11,6 +11,7 @@
 // 2014-07-27
 //============================================================================
 
+#include <vector>
 #include "TVector3.h"
 #include "Geometry/include/DetectorGeometry.hh"
 
@@ -20,6 +21,10 @@ namespace fcf {
   // From Global hits position to strip number position
   double calclateLocalFromGlobalPostion(const TVector3 &, int,const fc::DetectorGeometry &);
   double calculateStripFromLocalPosition(double, int, const fc::DetectorGeometry &);
+
+
+  // Calculate strip positio from cluster
+  double calculateStripHitPositionFromCluster(int initialStrip,const std::vector<int> & stripAdcs);
 
 
   // From strips number position to global Hit position

@@ -1,6 +1,7 @@
 #include<iostream>
 #include "Geometry/include/StripHitFunctions.hh"
 #include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/Hit.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "DataObjects/include/StripSet.hh"
 #include "Modules/include/HitRecoModule.hh"
@@ -28,12 +29,10 @@ void fc::HitRecoModule::processEvent(fc::Event& event)
 
 void fc::HitRecoModule::recoHits(HitSet & hitSet, const StripSet& stripSet) const{
 
-  int hitNumber = 0;
-
   for (int ii_layer =  0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer){
  
     if (_debugLevel >= 5) std::cout << "HitReco layer: " << ii_layer << std::endl;
-    recoHitsLayer(hitSet, stripSet,ii_layer,hitNumber);
+    recoHitsLayer(hitSet, stripSet,ii_layer);
 
   } // end layer loop
 
@@ -41,16 +40,11 @@ void fc::HitRecoModule::recoHits(HitSet & hitSet, const StripSet& stripSet) cons
 }
 
 
-void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet, int layer, int & hitNumber) const{
+void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet, int layer) const{
 
 
   std::vector<int> stripAdcs;
   int initialStrip;
-  std::vector<int>::size_type numberStrips;
-  int charge;
-  bool goodHit = true;
-  double resolution;
-  double stripHitPosition;
 
   const layerStripMap layerStripMap = stripSet.getLayerStripMap(layer);
   layerStripMap::const_iterator  layerStripMapIter = layerStripMap.begin();
@@ -60,51 +54,19 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
 
     findCluster(initialStrip,layer,stripAdcs,layerStripMapIter,layerStripMapIterEnd,stripSet);
 
-    stripHitPosition = calculateStripHitPositionFromCluster(initialStrip,stripAdcs);
-
-    double localHitPosition = fcf::calculateLoalFromStripPosition(stripHitPosition,layer,_detectorGeometry);
-    TVector3 hitPosition = fcf::calculateGlobalFromLocalPosition(localHitPosition,layer,_detectorGeometry);
-  
-
-    numberStrips = stripAdcs.size();
-    charge = 0;
-    for (auto const& adc :   stripAdcs){
-      charge += adc;
-    }
-
-
-    if (numberStrips>2 || charge > _detectorGeometry.getMIP()) goodHit = false;
-
-    if (goodHit) {
-      resolution = _detectorGeometry.getSensor(layer)._hitResolution;
-    }else {
-     resolution = _detectorGeometry.getSensor(layer)._badHitResolution;
-    }
- 
-
-
-    Hit hit(hitPosition,layer,numberStrips,charge,goodHit,resolution);
-
-
-
-    hitSet.insertHit(hit);
-
-    // calculate hit postition function using vector of strips?
-    // create cluster?
-    // save number of strips. save gen track on strips?
-
-    ++hitNumber;
-    stripAdcs.clear();
+    hitSet.insertHit(buildHit(layer, initialStrip,stripAdcs));
 
   }
 
 }
 
 
-void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<int> & stripAdcVector,
+void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<int> & stripAdcs,
 				    layerStripMap::const_iterator & layerStripMapIter,
 				    layerStripMap::const_iterator & layerStripMapIterEnd,const StripSet & stripSet) const{
 
+
+  stripAdcs.clear();
 
   if (_debugLevel >= 5) std::cout << "findCluster " << std::endl;
 
@@ -120,7 +82,7 @@ void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
 
   int intermediateStrip = initialStrip;
 
-  stripAdcVector.push_back(stripSet.getStripAdc(layerStripMapIter));
+  stripAdcs.push_back(stripSet.getStripAdc(layerStripMapIter));
 
   ++layerStripMapIter;
 
@@ -130,7 +92,7 @@ void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
 	  (stripSet.getStripAdc(layerStripMapIter) >= _detectorGeometry.getSensor(layer)._threshold  )) {
 
     intermediateStrip = stripSet.getStripNumber(layerStripMapIter);
-    stripAdcVector.push_back(stripSet.getStripAdc(layerStripMapIter));
+    stripAdcs.push_back(stripSet.getStripAdc(layerStripMapIter));
     ++layerStripMapIter;
     if (_debugLevel >= 5) std::cout << "Intermediate strip: " << intermediateStrip  << std::endl;
     
@@ -138,26 +100,32 @@ void fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<in
 
 }
 
+fc::Hit fc::HitRecoModule::buildHit(int layer, int initialStrip,const std::vector<int> & stripAdcs) const{
 
-double fc::HitRecoModule::calculateStripHitPositionFromCluster(int initialStrip,const std::vector<int> & stripAdcVector) const{
+  double stripHitPosition = fcf::calculateStripHitPositionFromCluster(initialStrip,stripAdcs);
+  double localHitPosition = fcf::calculateLoalFromStripPosition(stripHitPosition,layer,_detectorGeometry);
+  TVector3 hitPosition = fcf::calculateGlobalFromLocalPosition(localHitPosition,layer,_detectorGeometry);
 
-  double stripHitPosition = 0.0;
-  double stripPosition = 0.0;
-  double adcSum = 0.0;
-
-  for (std::vector<int>::const_iterator stripAdcIter = stripAdcVector.begin(); stripAdcIter != stripAdcVector.end(); ++stripAdcIter){
-
-    stripHitPosition = stripHitPosition + stripPosition*(*stripAdcIter);
-    adcSum = adcSum + (*stripAdcIter);
-    stripPosition =  stripPosition + 1.0;
+  int numberStrips = stripAdcs.size();
+  int charge = 0;
+  for (auto const& adc :   stripAdcs){
+    charge += adc;
+  }
     
-  } // end strip loop
+  bool goodHit = true;
+  if (numberStrips>2 || charge > _detectorGeometry.getMIP()) goodHit = false;
 
-  stripHitPosition = stripHitPosition/adcSum;
+  double resolution;
+  if (goodHit) {
+    resolution = _detectorGeometry.getSensor(layer)._hitResolution;
+  }else {
+    resolution = _detectorGeometry.getSensor(layer)._badHitResolution;
+  }
+ 
 
-  stripHitPosition = initialStrip + stripHitPosition;
-
-  return stripHitPosition;
+  return Hit(hitPosition,layer,numberStrips,charge,goodHit,resolution);
 
 }
+
+
 
