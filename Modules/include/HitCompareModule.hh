@@ -17,7 +17,9 @@ class TH1F;
 namespace fc {
 
 class Hit;
+class GenHit;
 class HitSet;
+class GenHitSet;
 class DetectorGeometry;
 
 
@@ -47,9 +49,9 @@ private:
 
   // Comparison of hits
 
-  void compareHits(const HitSet &, const HitSet &) const;
+  void compareHits(const GenHitSet &, const HitSet &) const;
 
-  double compareHitPositions(const Hit &, const Hit &) const;
+  double compareHitPositions(const GenHit &, const Hit &) const;
 
   // Histograms
   // ROOT will delete these when the TFile to which the are attached is deleted

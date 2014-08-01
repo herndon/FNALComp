@@ -2,8 +2,8 @@
 #include "Framework/include/Event.hh"
 #include "DataObjects/include/GenTrackSet.hh"
 #include "Algorithms/include/GenTrackSetIO.hh"
-#include "DataObjects/include/HitSet.hh"
-#include "Algorithms/include/HitSetIO.hh"
+#include "DataObjects/include/GenHitSet.hh"
+#include "Algorithms/include/GenHitSetIO.hh"
 #include "DataObjects/include/StripSet.hh"
 #include "Algorithms/include/StripSetIO.hh"
 #include "Modules/include/DataSource.hh"
@@ -39,7 +39,7 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
 
   std::unique_ptr<GenTrackSet> genTrackSet{ new GenTrackSet };
 
-  std::unique_ptr<HitSet> hitSet{ new HitSet };
+  std::unique_ptr<GenHitSet> genHitSet{ new GenHitSet };
   std::unique_ptr<StripSet> stripSet{ new StripSet(_detectorGeometry)};
 
   int eventNumber = 0;
@@ -54,8 +54,8 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
   GenTrackSetIO genTrackSetIO;
   genTrackSetIO.readEvent(*genTrackSet,_inputeventdatafile);
 
-  HitSetIO hitSetIO;
-  hitSetIO.readEvent(*hitSet,_inputeventdatafile);
+  GenHitSetIO genHitSetIO;
+  genHitSetIO.readEvent(*genHitSet,_inputeventdatafile);
 
 
   // !!!!! chance to a construtor calling StripSetIO::readEvent and passing to an event object
@@ -71,12 +71,12 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
 
   if (_debugLevel >=2) std::cout << "Event: " << event->eventNumber() << std::endl;
   if (_debugLevel >=2) genTrackSet->print(std::cout);
-  if (_debugLevel >=2) hitSet->print(std::cout);
+  if (_debugLevel >=2) genHitSet->print(std::cout);
   if (_debugLevel >=2) stripSet->print(std::cout);
 
   event->put("genData", std::unique_ptr<bool>( new bool{_genData} ) );
   event->put(_outTracksLabel, std::move(genTrackSet) );
-  event->put(_outHitsLabel, std::move(hitSet));
+  event->put(_outHitsLabel, std::move(genHitSet));
   event->put(_outStripsLabel,std::move(stripSet));
 
   return std::move(event);

@@ -9,7 +9,7 @@
 #include "DataObjects/include/Helix.hh"
 #include "Algorithms/include/HelixIntersections.hh"
 #include "Algorithms/include/InitializeHelix.hh"
-#include "DataObjects/include/HitSet.hh"
+#include "DataObjects/include/GenHitSet.hh"
 #include "DataObjects/include/StripSet.hh"
 #include "Geometry/include/DetectorGeometry.hh"
 #include "Geometry/include/StripHitFunctions.hh"
@@ -33,7 +33,7 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
 
   Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_inTracksLabel);
   
-  std::unique_ptr<HitSet> genHitSet{ new HitSet };
+  std::unique_ptr<GenHitSet> genHitSet{ new GenHitSet };
   std::unique_ptr<StripSet> genStripSet{ new StripSet(_detectorGeometry)};
 
   int trackNumber = 0;
@@ -50,7 +50,7 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
 }
 
 
-void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, const GenTrack & genTrack,int trackNumber, int & hitNumber) const{
+void fc::HitStripGenModule::makeHitsStrips(GenHitSet& genHitSet, StripSet & stripSet, const GenTrack & genTrack,int trackNumber, int & hitNumber) const{
 
 
   TVector3 hitPosition;
@@ -64,7 +64,7 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, 
 					       hitPosition,ii_layer,_detectorGeometry);
 
     if (intersectedLayer){
-    storeHitInfo(hitSet,trackNumber,hitNumber,hitPosition,ii_layer);
+    storeHitInfo(genHitSet,trackNumber,hitNumber,hitPosition,ii_layer);
 
     storeStripInfo(stripSet,hitPosition,ii_layer);
     } 
@@ -75,7 +75,7 @@ void fc::HitStripGenModule::makeHitsStrips(HitSet& hitSet, StripSet & stripSet, 
 
 
 // !!!!! remove Gen track from here
-void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,int trackNumber,int & hitNumber,TVector3 & hitPosition,int layer) const{
+void fc::HitStripGenModule::storeHitInfo(GenHitSet & genHitSet,int trackNumber,int & hitNumber,TVector3 & hitPosition,int layer) const{
 
   if (_debugLevel >=5 ) {
     std::cout << "Layer " << layer << " Hit y " << hitPosition[0] << std::endl;
@@ -83,13 +83,13 @@ void fc::HitStripGenModule::storeHitInfo(HitSet & hitSet,int trackNumber,int & h
   }
 
   // Pure gen hit, numberStrip = -1, charge -1, resolution 0.0, goodHit true
-  Hit hit(hitPosition,layer,trackNumber);
+  GenHit hit(hitPosition,layer,trackNumber);
 
   bool isValidHit = fcf::isValidHit(layer,hitPosition,_detectorGeometry);
 
   if (isValidHit) {
 
-    hitSet.insertHit(hit);
+    genHitSet.insertGenHit(hit);
 
     ++hitNumber;
 

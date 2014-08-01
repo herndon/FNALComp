@@ -25,7 +25,7 @@ namespace fc {
 class DetectorGeometry;
 class GenTrackSet;
 class GenTrack;
-class HitSet;
+class GenHitSet;
 class StripSet;
 class Random;
 
@@ -62,9 +62,9 @@ private:
   // Random numbers
   Random &  _random;
 
-  void makeHitsStrips(HitSet &, StripSet &, const GenTrack &, int, int &) const;
+  void makeHitsStrips(GenHitSet &, StripSet &, const GenTrack &, int, int &) const;
 
-  void storeHitInfo(HitSet &,int,int &,TVector3 &,int) const;
+  void storeHitInfo(GenHitSet &,int,int &,TVector3 &,int) const;
 
   void storeStripInfo(StripSet &,const TVector3 &,int) const;
 

@@ -17,7 +17,6 @@ void fc::HitSet::print(ostream& out) const{
 
   out << "HitSet" << std::endl;
  
- 
   hitSet::size_type numberHits =_hitSet.size();
 
   int hitNumber = 0;
@@ -26,7 +25,7 @@ void fc::HitSet::print(ostream& out) const{
 
   for (hitSet::const_iterator hitIter =  _hitSet.begin(); hitIter != _hitSet.end(); ++hitIter,++hitNumber){
  
-    out << "Hit: " << hitNumber << " associated with track " << hitIter->getTrackNumber() << std::endl; 
+    out << "Hit: " << hitNumber << std::endl; 
     hitIter->print(out);
   } // end hit loop
 

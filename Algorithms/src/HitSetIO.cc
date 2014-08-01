@@ -32,7 +32,10 @@ void fc::HitSetIO::writeEvent(const HitSet & hitSet, std::ofstream & hitdata) co
     hitdata << hitIter->getHitPosition().z() << std::endl;
     hitdata << hitIter->getLayer() << std::endl;
     hitdata << hitIter->getNumberStrips() << std::endl;
-    hitdata << hitIter->getTrackNumber() << std::endl;
+    hitdata << hitIter->getCharge() << std::endl;
+    hitdata << hitIter->isGoodHit() << std::endl;
+    hitdata << hitIter->getResolution() << std::endl;
+
 
   } // end hit loop
 
@@ -48,7 +51,9 @@ void fc::HitSetIO::readEvent(HitSet& hitSet, std::ifstream & hitdata) {
   int hitNumber;
   int layer;
   int numberStrips;
-  int trackNumber;
+  int charge;
+  bool goodHit;
+  double resolution;
   TVector3 hitPosition;
 
   hitdata >> eventDataObject;
@@ -75,10 +80,11 @@ void fc::HitSetIO::readEvent(HitSet& hitSet, std::ifstream & hitdata) {
     hitdata >> hitPosition[2];
     hitdata >> layer; 
     hitdata >> numberStrips;
-    hitdata >> trackNumber;
+    hitdata >> charge;
+    hitdata >> goodHit;
+    hitdata >> resolution;
 
-
-    Hit hit(hitPosition,layer,trackNumber);
+      Hit hit(hitPosition,layer,numberStrips,charge,goodHit,resolution);
 
     hitSet.insertHit(hit);
 

@@ -15,6 +15,7 @@
 namespace fc {
 
 class DetectorGeometry;
+class GenHitSet;
 class HitSet;
 
 ///
@@ -43,10 +44,10 @@ private:
   // Detector information
   const DetectorGeometry & _detectorGeometry;
   
-  void recoTracks(TrackSet&, const HitSet&, const HitSet&) const;
+  void recoTracks(TrackSet&, const HitSet&, const GenHitSet&) const;
 
-  void findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & recoHitSet, const HitSet& genHitSet) const;
-  double compareHitPositions(const Hit & genHit, const Hit& recoHit) const;
+  void findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & recoHitSet, const GenHitSet& genHitSet) const;
+  double compareHitPositions(const GenHit & genHit, const Hit& recoHit) const;
 
   void buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet) const;
 

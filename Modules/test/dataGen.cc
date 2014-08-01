@@ -64,12 +64,12 @@ int main ()
 					      detectorGeometry,random));
   processor.addModule( new fc::HitStripGenModule(config.getDebugLevel(),
 						 "genTracks",//get these tracks
-						 "hits", //create these hits
+						 "genHits", //create these hits
 						 "strips", //create these strips
 						 detectorGeometry,random) );
   processor.addModule( new fc::DataOutputModule(config.getDebugLevel(),genoutputeventdatafile,
 						"genTracks", //get these tracks
-						"hits", //get these hits
+						"genHits", //get these hits
 						"strips", //get these strips
 						detectorGeometry));
 

@@ -4,6 +4,7 @@
 #include "DataObjects/include/Helix.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "Algorithms/include/InitializeHelix.hh"
+#include <iostream>
 
 const fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, const TVector3 & x3, const TVector3 & z1, const DetectorGeometry & detectorGeometry){
 
@@ -71,7 +72,9 @@ void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<in
   int outerZLayer = detectorGeometry.getNXSensors()-1;
   int middleXLayer = -1;
 
+
   for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
+
 
     if (hitSet.getHits()[*trackHitCandidateIter].getLayer() > outerXLayer && hitSet.getHits()[*trackHitCandidateIter].getLayer() < detectorGeometry.getNXSensors()) {
       outerXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
@@ -83,17 +86,22 @@ void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<in
       outerZHit = *trackHitCandidateIter;
     }
 
+  }
+
+  for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
+
+
     // !!!!! Figuring out a way to make this general is difficult.
-    if (  hitSet.getHits()[*trackHitCandidateIter].getLayer() == 2) {
+    if (  hitSet.getHits()[*trackHitCandidateIter].getLayer() == 2 && hitSet.getHits()[*trackHitCandidateIter].getLayer() != outerXLayer) {
       middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
       middleXHit = *trackHitCandidateIter;
-    } else if (middleXLayer !=2 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 1) {
+    } else if (middleXLayer !=2 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 1 && hitSet.getHits()[*trackHitCandidateIter].getLayer() != outerXLayer) {
       middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
       middleXHit = *trackHitCandidateIter;
-    } else if (middleXLayer !=2 && middleXLayer !=1 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 3) {
+    } else if (middleXLayer !=2 && middleXLayer !=1 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 3 && hitSet.getHits()[*trackHitCandidateIter].getLayer() != outerXLayer) {
       middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
       middleXHit = *trackHitCandidateIter;
-    } else if (middleXLayer !=2 && middleXLayer !=1 && middleXLayer !=3 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 0) {
+    } else if (middleXLayer !=2 && middleXLayer !=1 && middleXLayer !=3 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 0 && hitSet.getHits()[*trackHitCandidateIter].getLayer() != outerXLayer) {
       middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
       middleXHit = *trackHitCandidateIter;
     }

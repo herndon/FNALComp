@@ -1,6 +1,7 @@
 #include<iostream>
 #include<vector>
 #include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/GenHitSet.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
@@ -22,7 +23,7 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
 {
 
   Handle<HitSet> recoHitSet = event.get<HitSet>(_inHitsLabel);
-  Handle<HitSet> genHitSet = event.get<HitSet>(_inGenHitsLabel);
+  Handle<GenHitSet> genHitSet = event.get<GenHitSet>(_inGenHitsLabel);
   
   std::unique_ptr<TrackSet> perfectRecoTrackSet{ new TrackSet };
 
@@ -36,7 +37,7 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
   event.put(_outTracksLabel,std::move(perfectRecoTrackSet) );
 }
 
-void fc::PerfectTrackRecoModule::recoTracks(TrackSet & perfectRecoTrackSet, const HitSet& recoHitSet, const HitSet& genHitSet) const {
+void fc::PerfectTrackRecoModule::recoTracks(TrackSet & perfectRecoTrackSet, const HitSet& recoHitSet, const GenHitSet& genHitSet) const {
   // !!!!! This will eventually pass a track hit candidates strategy 
   // !!!!! Do I want to make a special object for the track hit candidates?
   std::vector<std::vector<int>> trackHitCandidates;
@@ -50,15 +51,15 @@ void fc::PerfectTrackRecoModule::recoTracks(TrackSet & perfectRecoTrackSet, cons
 
 
 
-void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & recoHitSet,const HitSet & genHitSet) const{
+void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & recoHitSet,const GenHitSet & genHitSet) const{
 
-  int trackNumber = (genHitSet.getHits().empty() ? 0 : genHitSet.getHits().front().getTrackNumber());
+  int trackNumber = (genHitSet.getGenHits().empty() ? 0 : genHitSet.getGenHits().front().getTrackNumber());
 
   std::vector<int> trackHitCandidate;
 
   // Form all hit candidates
 
-  for (auto genHit : genHitSet.getHits()) {
+  for (auto genHit : genHitSet.getGenHits()) {
 
     double deltaPosition = 999.0;
     int recoHitNumber = 0;
@@ -93,10 +94,10 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vec
 
 
 // !!!!! move to utility function
-double fc::PerfectTrackRecoModule::compareHitPositions(const Hit & genHit, const Hit& recoHit) const{
+double fc::PerfectTrackRecoModule::compareHitPositions(const GenHit & genHit, const Hit& recoHit) const{
 
   return recoHit.getHitPosition()*_detectorGeometry.getSensor(recoHit.getLayer())._measurementDirection
-    - genHit.getHitPosition()*_detectorGeometry.getSensor(genHit.getLayer())._measurementDirection;
+    - genHit.getGenHitPosition()*_detectorGeometry.getSensor(genHit.getLayer())._measurementDirection;
 
 }
 

@@ -3,6 +3,7 @@
 #include<string>
 #include<algorithm>
 #include "Geometry/include/DetectorGeometry.hh"
+#include "DataObjects/include/GenHitSet.hh"
 #include "DataObjects/include/HitSet.hh"
 #include "Modules/include/HitCompareModule.hh"
 #include "TH1F.h"
@@ -38,7 +39,7 @@ void fc::HitCompareModule::initializeHistograms(){
 
 
 void fc::HitCompareModule::processEvent(Event& event) {
- Handle<HitSet> genHitSet = event.get<HitSet>(_genHitsLabel);
+ Handle<GenHitSet> genHitSet = event.get<GenHitSet>(_genHitsLabel);
  Handle<HitSet> recoHitSet = event.get<HitSet>(_recHitsLabel);
 
  compareHits(*genHitSet,*recoHitSet);
@@ -47,14 +48,14 @@ void fc::HitCompareModule::processEvent(Event& event) {
 
 }
 
-void fc::HitCompareModule::compareHits(const HitSet & genHitSet, const HitSet& recoHitSet) const{
+void fc::HitCompareModule::compareHits(const GenHitSet & genHitSet, const HitSet& recoHitSet) const{
 
 
  
   double deltaPosition;
   double tempDeltaPosition;
 
-  for (auto const& genHit :   genHitSet.getHits()) {
+  for (auto const& genHit :   genHitSet.getGenHits()) {
 
     deltaPosition = 999.0;
 
@@ -77,9 +78,9 @@ void fc::HitCompareModule::compareHits(const HitSet & genHitSet, const HitSet& r
 }
 
 
-double fc::HitCompareModule::compareHitPositions(const Hit & genHit, const Hit& recoHit) const{
+double fc::HitCompareModule::compareHitPositions(const GenHit & genHit, const Hit& recoHit) const{
 
   return recoHit.getHitPosition()*_detectorGeometry.getSensor(recoHit.getLayer())._measurementDirection
-    - genHit.getHitPosition()*_detectorGeometry.getSensor(genHit.getLayer())._measurementDirection;
+    - genHit.getGenHitPosition()*_detectorGeometry.getSensor(genHit.getLayer())._measurementDirection;
 
 }

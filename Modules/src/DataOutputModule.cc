@@ -1,8 +1,8 @@
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/GenTrackSet.hh"
 #include "Algorithms/include/GenTrackSetIO.hh"
-#include "DataObjects/include/HitSet.hh"
-#include "Algorithms/include/HitSetIO.hh"
+#include "DataObjects/include/GenHitSet.hh"
+#include "Algorithms/include/GenHitSetIO.hh"
 #include "DataObjects/include/StripSet.hh"
 #include "Algorithms/include/StripSetIO.hh"
 #include "Modules/include/DataOutputModule.hh"
@@ -28,12 +28,12 @@ void fc::DataOutputModule::processEvent(Event& event) {
 
   //Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_inTracksLabel);
   auto genTrackSet = event.get<fc::GenTrackSet>(_inTracksLabel);
-  auto hitSet = event.get<fc::HitSet>("hits");
-  auto stripSet = event.get<fc::StripSet>("strips");
+  auto genHitSet = event.get<fc::GenHitSet>(_inHitsLabel);
+  auto stripSet = event.get<fc::StripSet>(_inStripsLabel);
 
   if (_debugLevel >=2) std::cout << "Event: " << event.eventNumber() << std::endl;
   if (_debugLevel >=2) genTrackSet->print(std::cout);
-  if (_debugLevel >=2) hitSet->print(std::cout);
+  if (_debugLevel >=2) genHitSet->print(std::cout);
   if (_debugLevel >=2) stripSet->print(std::cout);
 
   _outputeventdatafile << event.eventNumber() << std::endl;
@@ -43,8 +43,8 @@ void fc::DataOutputModule::processEvent(Event& event) {
   GenTrackSetIO genTrackSetIO;
   genTrackSetIO.writeEvent(*genTrackSet,_outputeventdatafile);
 
-  HitSetIO hitSetIO;
-  hitSetIO.writeEvent(*hitSet,_outputeventdatafile);
+  GenHitSetIO genHitSetIO;
+  genHitSetIO.writeEvent(*genHitSet,_outputeventdatafile);
 
   StripSetIO stripSetIO(_detectorGeometry);
   stripSetIO.writeEvent(*stripSet,_outputeventdatafile);
