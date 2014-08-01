@@ -41,7 +41,7 @@ void fc::Day0HistogrammingModule::processEvent(fc::Event& event)
 
   /* Use these to get the additional data items for the exercise
   fc::Handle<fc::HitSet> hitSet = event.get<fc::HitSet>(_hitSetLabel);
-  fc::Handle<fc::StripSet> stripSet = event.get<fc::StripSet>(_hitSetLabel);
+  fc::Handle<fc::StripSet> stripSet = event.get<fc::StripSet>(_stripSetLabel);
   */
 
 }
