@@ -50,7 +50,7 @@ public:
 
 
   Helix();
-  Helix(double kappa, double dr, double dz, double phi0, double tanl, double alpha);
+  Helix(double dr, double phi0, double kappa, double dz, double tanl, double alpha);
   
   // Get track parameters
 
