@@ -77,6 +77,7 @@ the strip data to be stored in a sparse and ordered format.
 
 Access methods:
 \begin{itemize}
+\item int getNumberLayers() To assist in iterating over the vector or directly over the layerMaps
 \item getStrips(): const reference access to the vector using a generic method. The underlying vector container could be 
 changed to several different container types without effecting the user interface.
 \item getLayerStripMap(int layer): const reference access to a the strip data from a single layer. The method explicitly 
@@ -289,7 +290,7 @@ Implemented in the Track.hh and Track.cc files in the DataObjects directories.
 The Track class contains:
 \begin{itemize}
 \item Helix \_helix, 5 track parameter helix
-\item int \_covMatrix, 5x5 parameter covarinace matrix
+\item int \_covMatrix, 5x5 parameter covariance matrix
 \item double \_chi2
 \item int \_nDof
 \item \_trackHitSet, a typedef of type vector of ints with hit index numbers.
@@ -306,9 +307,21 @@ That class fits a track based on a number of hits.
 
 Access:
 \begin{itemize}
-\item getHelix():... names correspond to the data members\\
-The Track and Helix objects are described in more detail in the Track.pdf~\cite{track} document.
-
+\item getHelix() get Helix object with track parameters
+\begin{itemize}
+\item Helix accessor functions called as getHelix().getDr() ...:
+\item getDr(): Impact parameter, distance in the x-y place to the reference point (0,0,0) at the point of closest
+approach. Signed positive to indicate the reference point is within the circle or negative is outside.
+\item getPhi0(): Phi angle from the reference point to the point of closest approach.
+\item getKappa(): inverse Pt signed to indicate handedness + right handed (negative charge) - left handed
+(positive charge)
+\item getDz(): z distance to reference point at point of closest approach
+\item getTanL(): pZ/pT or inverse cot(theta) where theta is the dip angle which is zero for track perpendicular
+to the z axis and 90 degrees for parallel.
+\end{itemize}
+The Helix helix parameter follow the convention of~\cite{helix} and are described in detail there.\\
+Note that helix parameters are always referenced from (0,0,0) in the parametrization used in this code.
+\item getLorentzVector() get a root TLorentzVector object based on the track parameters
 \item print(ostream\&): to print to an a user specified ostream.
 
 \end{itemize}
@@ -368,8 +381,14 @@ The hit list could be used alone to restore the track using BuildTrack.  Current
 \bibitem{detectorGeometry}
 detectorGeometry.pdf note, M. Herndon (2014)
 
-\bibitem{track}
-track.pdf note, M. Herndon (2014)
+\bibitem{helix} 
+  B.~Li, K.~Fujii and Y.~Gao,
+  %``Kalman-filter-based track fitting in non-uniform magnetic field with segment-wise helical track model,''
+  Comput.\ Phys.\ Commun.\  {\bf 185}, 754 (2014)
+  [arXiv:1305.7300 [physics.ins-det]].
+  %%CITATION = ARXIV:1305.7300;%%
+  %1 citations counted in INSPIRE as of 02 Aug 2014
+
 
 \end{thebibliography}
 % 
