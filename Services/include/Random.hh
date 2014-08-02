@@ -12,10 +12,6 @@ namespace fc {
 
 class Random {
 
-private:
-
-  std::default_random_engine engine;
-
 
 public:
 
@@ -26,6 +22,10 @@ public:
   double getUniformDouble (double, double);
 
   double getNormalDouble (double mean, double dev);
+
+private:
+
+  std::default_random_engine engine;
 
 };
 }// end namespace fc
