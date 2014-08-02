@@ -24,7 +24,7 @@ void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(TrackSetContainer& tr
   findHitCadidates(trackHitCandidates,recoHitSet);
 
   for (auto const& trackHitCandidate: trackHitCandidates) {
-    trackCandidateSet.push_back(buildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,_debugLevel));
+    trackCandidateSet.push_back(std::move(buildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,_debugLevel)));
   }
 
   // We could filter the candidates at this point
@@ -65,8 +65,8 @@ void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(std::vector<fc::trackHit
                 TVector3 primaryVertex(0.0,0.0,0.0);
 		Helix helix = initializeHelix(primaryVertex,hitO.getHitPosition(),hitI.getHitPosition(),zIntersection,_detectorGeometry);
 		if (fcf::goodCandidateHelix(helix,_detectorGeometry,trackSelector)) {
-		  //avoids a copy
-		  trackHitCandidates.push_back( std::vector<int>{hitNumberO,hitNumberI,hitNumberOSAS} );
+		  //avoids a copy twice
+		  trackHitCandidates.emplace_back(std::vector<int>{hitNumberO,hitNumberI,hitNumberOSAS});
 		}
 	      }
 

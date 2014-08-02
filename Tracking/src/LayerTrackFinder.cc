@@ -55,7 +55,7 @@ void fc::LayerTrackFinder::findSingleCandidateTracks(const Track& track , TrackS
   //removeSeedTrack(trackCandidateSet,trackSet);
 
   for (auto trackNumber: bestTracks){
-    allNewTracks.push_back(newTracks[trackNumber]);
+    allNewTracks.push_back(std::move(newTracks[trackNumber]));
   }
 
 }
