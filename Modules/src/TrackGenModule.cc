@@ -25,7 +25,7 @@ void fc::TrackGenModule::processEvent(fc::Event& event)
 
   std::unique_ptr<GenTrackSet> genTrackSet{ new GenTrackSet() };
 
-  for (int ii_track = 0; ii_track < _numberOfTracks; ++ii_track) {
+  for (int iiTrack = 0; iiTrack < _numberOfTracks; ++iiTrack) {
 
     GenTrack genTrack = generateTrack(); 
     genTrackSet->insertTrack(std::move(genTrack));

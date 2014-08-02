@@ -81,7 +81,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream & detectorgeo
   std::vector<SensorDescriptor> sensors;
   sensors.reserve(numberSensors);
 
-  for (int ii_layer = 0; ii_layer < numberSensors; ++ii_layer){
+  for (int iiLayer = 0; iiLayer < numberSensors; ++iiLayer){
     detectorgeometryfile >> detectorGeometryString;
     if (detectorGeometryString != "Sensor") throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Bad format in sensorgeometry.txt, Sensor");
 

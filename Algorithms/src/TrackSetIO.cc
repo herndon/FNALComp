@@ -96,7 +96,7 @@ void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
 
   trackdata >> numberTracks;
 
-  for (int ii_track = 0; ii_track < numberTracks; ++ii_track) {
+  for (int iiTrack = 0; iiTrack < numberTracks; ++iiTrack) {
  
     trackdata >> trackNumber;
 
@@ -122,7 +122,7 @@ void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
     trackdata >> numberHits;
  
 
-   for (int ii_hit = 0; ii_hit < numberHits; ++ii_hit) {
+   for (int iiHit = 0; iiHit < numberHits; ++iiHit) {
 
       trackdata >> hitNumber;
 

@@ -76,7 +76,7 @@ void fc::GenTrackSetIO::readEvent(GenTrackSet & genTrackSet, std::ifstream & gen
 
   gentrackdata >> numberTracks;
 
-  for (int ii_track = 0; ii_track < numberTracks; ++ii_track) {
+  for (int iiGenTrack = 0; iiGenTrack < numberTracks; ++iiGenTrack) {
  
     gentrackdata >> genTrackNumber;
 

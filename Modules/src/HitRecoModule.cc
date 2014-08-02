@@ -29,10 +29,10 @@ void fc::HitRecoModule::processEvent(fc::Event& event)
 
 void fc::HitRecoModule::recoHits(HitSet & hitSet, const StripSet& stripSet) const{
 
-  for (int ii_layer =  0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer){
+  for (int iiLayer =  0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer){
  
-    if (_debugLevel >= 5) std::cout << "HitReco layer: " << ii_layer << std::endl;
-    recoHitsLayer(hitSet, stripSet,ii_layer);
+    if (_debugLevel >= 5) std::cout << "HitReco layer: " << iiLayer << std::endl;
+    recoHitsLayer(hitSet, stripSet,iiLayer);
 
   } // end layer loop
 

@@ -29,8 +29,8 @@ void fc::HitCompareModule::initializeHistograms(){
   UniqueRootDirectory tdir("HitCompare");
 
 
-  for (int ii_layer = 0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer) {
-    std::string histName = "deltaHitPositions  Layer " + std::to_string(ii_layer);
+  for (int iiLayer = 0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
+    std::string histName = "deltaHitPositions  Layer " + std::to_string(iiLayer);
     const char * histNameC = histName.c_str();
     deltaHitPositions.push_back(new TH1F(histNameC, "Delta X Hit Positions;delta X (m);number of hits",100, -0.0001, 0.0001));
   }

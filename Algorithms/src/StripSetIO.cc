@@ -77,17 +77,17 @@ void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
   }
 
 
-  for (int ii_layer = 0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer) {
+  for (int iiLayer = 0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
  
     stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
     int layer = static_cast<int>(binaryData);
 
-    if (layer != ii_layer)    if (layer != ii_layer) throw Exception("StripSetIO::readEvent: bad strip data");
+    if (layer != iiLayer)    if (layer != iiLayer) throw Exception("StripSetIO::readEvent: bad strip data");
 
     stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
     int numberStrips = static_cast<int>(binaryData);
 
-    for (int ii_strip = 0; ii_strip < numberStrips; ++ii_strip){
+    for (int iiStrip = 0; iiStrip < numberStrips; ++iiStrip){
 
       stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
 
@@ -102,7 +102,7 @@ void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
       stripData12 = stripData12&stripBitmask;
       int strip = stripData12 >> 5;
 
-      stripSet.insertStrip(ii_layer,strip,adc);
+      stripSet.insertStrip(iiLayer,strip,adc);
 
     } // end strip loop
 

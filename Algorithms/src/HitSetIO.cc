@@ -73,7 +73,7 @@ void fc::HitSetIO::readEvent(HitSet& hitSet, std::ifstream & hitdata) {
 
   hitdata >> numberHits;
  
-  for (int ii_hit = 0; ii_hit < numberHits; ++ii_hit){
+  for (int iiHit = 0; iiHit < numberHits; ++iiHit){
 
     hitdata >> hitNumber;
     hitdata >> hitPosition[0];

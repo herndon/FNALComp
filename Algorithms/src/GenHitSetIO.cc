@@ -65,7 +65,7 @@ void fc::GenHitSetIO::readEvent(GenHitSet& genHitSet, std::ifstream & hitdata) {
 
   hitdata >> numberHits;
  
-  for (int ii_hit = 0; ii_hit < numberHits; ++ii_hit){
+  for (int iiGenHit = 0; iiGenHit < numberHits; ++iiGenHit){
 
     hitdata >> hitNumber;
     hitdata >> hitPosition[0];

@@ -56,17 +56,17 @@ void fc::HitStripGenModule::makeHitsStrips(GenHitSet& genHitSet, StripSet & stri
   TVector3 hitPosition;
 
 
-  for (int ii_layer = 0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer) {
+  for (int iiLayer = 0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
 
     // 98% efficiency factor
-    if (_random.getUniformDouble(0.0,1.0) > _detectorGeometry.getSensor(ii_layer)._hitEfficiency) continue;
+    if (_random.getUniformDouble(0.0,1.0) > _detectorGeometry.getSensor(iiLayer)._hitEfficiency) continue;
     bool intersectedLayer = intersectWithLayer(genTrack.makeHelix(_detectorGeometry.getCurvatureCInField(_detectorGeometry.getBField())),
-					       hitPosition,ii_layer,_detectorGeometry);
+					       hitPosition,iiLayer,_detectorGeometry);
 
     if (intersectedLayer){
-    storeHitInfo(genHitSet,trackNumber,hitPosition,ii_layer);
+    storeHitInfo(genHitSet,trackNumber,hitPosition,iiLayer);
 
-    storeStripInfo(stripSet,hitPosition,ii_layer);
+    storeStripInfo(stripSet,hitPosition,iiLayer);
     } 
   } // end layer loop
 
@@ -155,10 +155,10 @@ void fc::HitStripGenModule::generateClusterFromStripHitPosition(double stripHitP
 
 void fc::HitStripGenModule::storeCluster(StripSet & stripSet, int layer, int initialStrip, const std::vector<int> & stripAdcs) const{
 
-  int ii_strip = initialStrip;
+  int iiStrip = initialStrip;
   for (auto stripAdc : stripAdcs){
-    if (fcf::isValidStrip(layer,ii_strip,_detectorGeometry)) stripSet.insertStrip(layer,ii_strip,stripAdc);
-    ++ii_strip;
+    if (fcf::isValidStrip(layer,iiStrip,_detectorGeometry)) stripSet.insertStrip(layer,iiStrip,stripAdc);
+    ++iiStrip;
   }
 
 }
