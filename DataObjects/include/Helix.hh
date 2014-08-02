@@ -39,12 +39,13 @@
 
 namespace fc {
 
+  static const int _sDim = 5;     //!< helix dimension
+
 
 class Helix {
 
 public:
   // Static members, matrix dimensions
-  static const int _sDim = 5;     //!< helix dimension
 
 // Constructors
 

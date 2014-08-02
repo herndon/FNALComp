@@ -18,6 +18,9 @@
 
 namespace fc {
 
+  static const int _mDim = 1; //!< Measurement dimention of hits
+
+
 struct SensorDescriptor {
   int _type;// types 0: X, 1, SAS, 2, Z
   int _nStrips;
@@ -66,7 +69,6 @@ public:
 
 
 
-  static const int _mDim = 1; //!< Measurement dimention of hits
  
 
 private:

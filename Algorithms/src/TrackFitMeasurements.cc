@@ -17,7 +17,7 @@ const TMatrixD fc::expectedMeasurementVector1D(const Helix& helix, int layer, co
 
   intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
 
-  TMatrixD expectedMeasurementVector(DetectorGeometry::_mDim,1);
+  TMatrixD expectedMeasurementVector(_mDim,1);
 
   TVector3 measurementDirection = detectorGeometry.getSensor(layer)._measurementDirection;
 
@@ -49,19 +49,19 @@ const TMatrixD fc::expectedMeasurementDerivatived1DdHC(const Helix& helix, int l
   detectorNormal(0,2) = detectorGeometry.getSensor(layer)._normal.Z();
 
 
-  TMatrixD dxdHC(3,Helix::_sDim); 
+  TMatrixD dxdHC(3,_sDim); 
   dxdHC = calcDxDHC(helix,phi);
   TMatrixD dxdphi(3,1);
   dxdphi = calcDxDphi(helix,phi); 
 
-  TMatrixD dphidHC(1,Helix::_sDim);
+  TMatrixD dphidHC(1,_sDim);
   dphidHC = detectorNormal*dxdHC;
   TMatrix dsdphi(1,1);
   dsdphi = detectorNormal*dxdphi; 
   double denom = -dsdphi(0,0);
   dphidHC *= 1/denom;
   
-  TMatrixD dxphidHC(3,Helix::_sDim);
+  TMatrixD dxphidHC(3,_sDim);
   dxphidHC = dxdphi*dphidHC + dxdHC;
 
 //   std::cout << "dxdHC" << std::endl;
@@ -79,7 +79,7 @@ const TMatrixD fc::expectedMeasurementDerivatived1DdHC(const Helix& helix, int l
 
 
 
-  TMatrixD expectedMeasurementDerivative(DetectorGeometry::_mDim,Helix::_sDim);
+  TMatrixD expectedMeasurementDerivative(_mDim,_sDim);
 
   TMatrixD measurementDirection(1,3);
 
@@ -100,7 +100,7 @@ const TMatrixD fc::measurementVector1D(const TVector3 & hitPosition,int layer, c
 
   // !!!!! not general, only works if the strip measurement direction is oriented in X
 
-  TMatrixD measurementVector(DetectorGeometry::_mDim,1);
+  TMatrixD measurementVector(_mDim,1);
 
   TVector3 measurementDirection = detectorGeometry.getSensor(layer)._measurementDirection;
 
@@ -112,8 +112,8 @@ const TMatrixD fc::measurementVector1D(const TVector3 & hitPosition,int layer, c
 
 double fc::expectedMeasurementUncertianty1D(const Helix & helix, const TMatrixD& covMatrix, int layer,const DetectorGeometry & detectorGeometry){
 
-  TMatrixD    expectedMeasurementDerivative (DetectorGeometry::_mDim, Helix::_sDim);
-  TMatrixD    expectedMeasurementDerivativeT (Helix::_sDim, DetectorGeometry::_mDim);
+  TMatrixD    expectedMeasurementDerivative (_mDim, _sDim);
+  TMatrixD    expectedMeasurementDerivativeT (_sDim, _mDim);
 
   expectedMeasurementDerivative = expectedMeasurementDerivatived1DdHC(helix,layer,detectorGeometry);
   expectedMeasurementDerivativeT.Transpose(expectedMeasurementDerivative);

@@ -16,11 +16,11 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
 
   // Define static constants...
  
-  static const double chi2Dummy = 1.e20;
-  static const double chi2Tol = 1.e-8;
-  static const double deltaIncr   = 10.;
-  static const double deltaDecr   = 0.1;
-  static const int    loopMax = 50;
+  const double chi2Dummy = 1.e20;
+  const double chi2Tol = 1.e-8;
+  const double deltaIncr   = 10.;
+  const double deltaDecr   = 0.1;
+  const int    loopMax = 100;
 
   double delta  = 1.0;
 
@@ -30,7 +30,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
   //                          need to be set befreo FitToHelix
 
 
-  TVectorD    helix(Helix::_sDim); // original helix paramters
+  TVectorD    helix(_sDim); // original helix paramters
   helix = initialHelix.getHelix();
 
   Helix workingHelix(initialHelix); 
@@ -54,19 +54,19 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
   // positions on the helix are determined by a single paramter phi
 
 
-  TMatrixD    dchi2dHCbest(1   , Helix::_sDim); // best based on chi2 Helix::_sDim contributions to chi2?
-  TMatrixD    dchi2dHC    (1   , Helix::_sDim);
-  TMatrixD    dchi2dHCT   (Helix::_sDim , 1  );
-  TMatrixD    d2chi2dHCdHC (Helix::_sDim, Helix::_sDim);
-  TMatrixD    d2chi2dHCdHCbest (Helix::_sDim, Helix::_sDim);
-  TMatrixD    expectedMeasurementVector       (DetectorGeometry::_mDim, 1   );
-  TMatrixD    expectedMeasurementDerivative (DetectorGeometry::_mDim, Helix::_sDim);
-  TMatrixD    expectedMeasurementDerivativeT (Helix::_sDim, DetectorGeometry::_mDim);
-  TMatrixD    measurementVector(DetectorGeometry::_mDim,1);
-  TMatrixD    curHt      (Helix::_sDim, DetectorGeometry::_mDim);
-  TMatrixD    invMeasurementRes2    (DetectorGeometry::_mDim, DetectorGeometry::_mDim);
-  TMatrixD    measurementResidualVector  (DetectorGeometry::_mDim, 1   );
-  TMatrixD    measurementResidualVectorT (1, DetectorGeometry::_mDim);
+  TMatrixD    dchi2dHCbest(1   , _sDim); // best based on chi2 _sDim contributions to chi2?
+  TMatrixD    dchi2dHC    (1   , _sDim);
+  TMatrixD    dchi2dHCT   (_sDim , 1  );
+  TMatrixD    d2chi2dHCdHC (_sDim, _sDim);
+  TMatrixD    d2chi2dHCdHCbest (_sDim, _sDim);
+  TMatrixD    expectedMeasurementVector       (_mDim, 1   );
+  TMatrixD    expectedMeasurementDerivative (_mDim, _sDim);
+  TMatrixD    expectedMeasurementDerivativeT (_sDim, _mDim);
+  TMatrixD    measurementVector(_mDim,1);
+  TMatrixD    curHt      (_sDim, _mDim);
+  TMatrixD    invMeasurementRes2    (_mDim, _mDim);
+  TMatrixD    measurementResidualVector  (_mDim, 1   );
+  TMatrixD    measurementResidualVectorT (1, _mDim);
 
   // Minimization loop starts here
 
@@ -214,7 +214,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
 
     // Add delta to 2nd derivative and use to modify the helix
 
-    for (int i=0; i<Helix::_sDim; ++i) {
+    for (int i=0; i<_sDim; ++i) {
       d2chi2dHCdHC(i, i) *= (1 + delta);
     }
       
@@ -248,7 +248,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
 
  
 
-    TVectorD deltaMVector(Helix::_sDim,deltaM.GetMatrixArray());
+    TVectorD deltaMVector(_sDim,deltaM.GetMatrixArray());
     helix += (deltaMVector); // propegate the helix parameters by derivatires times residual directions sqaured and normlized by uncerainties
  
     if (_debugLevel >=5){
@@ -273,7 +273,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
 
 
   trackHitSet::size_type nHits = trackHitSet.size();
-  ndof = DetectorGeometry::_mDim*nHits - Helix::_sDim;
+  ndof = _mDim*nHits - _sDim;
   workingHelix.setHelix(helixBest);
   finalCovMatrix = d2chi2dHCdHCbest.Invert();
   finalChi2 = chi2Best;

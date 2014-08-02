@@ -19,10 +19,10 @@ bool fc::intersectWithLayer(const Helix& helix, TVector3 & hitPosition, int laye
 bool fc::intersectWithPlane(const Helix& helix, TVector3 & hitPosition, const TVector3 & center, const TVector3 & normal,double & phi){
 
 
-   static const int       maxcount   = 100;
-   static const double    initlambda = 1.e-10;
-   static const double    lambdaincr = 10.;
-   static const double    lambdadecr = 0.1;
+   const int       maxcount   = 100;
+   const double    initlambda = 1.e-10;
+   const double    lambdaincr = 10.;
+   const double    lambdadecr = 0.1;
    
    hitPosition = calcXAt(helix,phi);
 

@@ -48,7 +48,7 @@ const fc::Track fc::buildTrack(const HitSet & hitSet, const std::vector<int> & t
 
   double chi2=0.0;
   int nDof=0;
-  TMatrixD covMatrix(Helix::_sDim,Helix::_sDim); 
+  TMatrixD covMatrix(_sDim,_sDim); 
 
   int fitType = 0;
   if (numberXHits <3 ) fitType += 1;

@@ -20,6 +20,12 @@ namespace fc {
 class DetectorGeometry;
 class StripSet;
 
+  static const int bitmask1 = 0x00FF;
+  static const int bitmask2 = 0xFF00;
+  static const int adcBitmask = 0x001F;
+  static const int stripBitmask = 0xFFE0;
+
+
 ///
 /// Class StripSetIO: 
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-07-04
@@ -38,10 +44,6 @@ public:
 
 private:
 
-  static const int bitmask1 = 0x00FF;
-  static const int bitmask2 = 0xFF00;
-  static const int adcBitmask = 0x001F;
-  static const int stripBitmask = 0xFFE0;
 
   const DetectorGeometry& _detectorGeometry;
 
