@@ -24,9 +24,9 @@ class HitSet;
  
     TrackRecoStrategy2X1SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minPTCut,double maxChiNDofCut);
    
-    void recoTracks(trackSet & trackCandidateSet, const HitSet& hitSet) const;
+    void recoTracks(TrackSetContainer & trackCandidateSet, const HitSet& hitSet) const;
 
-    void findTracks(trackSet& trackCandidateSet,const HitSet & recoHitSet) const;;
+    void findTracks(TrackSetContainer& trackCandidateSet,const HitSet & recoHitSet) const;;
  
 
   private:

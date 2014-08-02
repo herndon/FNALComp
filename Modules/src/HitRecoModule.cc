@@ -46,9 +46,9 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
   std::vector<int> stripAdcs;
   int initialStrip;
 
-  const layerStripMap layerStripMap = stripSet.getLayerStripMap(layer);
-  layerStripMap::const_iterator  layerStripMapIter = layerStripMap.begin();
-  layerStripMap::const_iterator  layerStripMapIterEnd = layerStripMap.end();
+  LayerStripMap layerStripMap = stripSet.getLayerStripMap(layer);
+  LayerStripMap::const_iterator  layerStripMapIter = layerStripMap.begin();
+  LayerStripMap::const_iterator  layerStripMapIterEnd = layerStripMap.end();
 
   while (layerStripMapIter != layerStripMapIterEnd) {
     if (findCluster(initialStrip,layer,stripAdcs,layerStripMapIter,layerStripMapIterEnd,stripSet))
@@ -59,8 +59,8 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
 
 
 bool fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<int> & stripAdcs,
-				    layerStripMap::const_iterator & layerStripMapIter,
-				    layerStripMap::const_iterator & layerStripMapIterEnd,const StripSet & stripSet) const{
+				    LayerStripMap::const_iterator & layerStripMapIter,
+				    LayerStripMap::const_iterator & layerStripMapIterEnd,const StripSet & stripSet) const{
 
 
   stripAdcs.clear();

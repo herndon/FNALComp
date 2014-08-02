@@ -23,14 +23,14 @@ namespace fc {
   public:
     LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer,int nExpHits, double minPTCut,double maxChi2NDofCut);
 
-    void findCandidateTracks(trackSet & trackCandidateSet,const HitSet & recoHitSet,unsigned int expNHit) const;
+    void findCandidateTracks(TrackSetContainer & trackCandidateSet,const HitSet & recoHitSet,unsigned int expNHit) const;
 
   private:
-    void findSingleCandidateTracks(const Track &,trackSet& allnewTracks, const HitSet & recoHitSet) const;
+    void findSingleCandidateTracks(const Track &,TrackSetContainer& allnewTracks, const HitSet & recoHitSet) const;
     std::vector<int> findHits(const Track & track, const HitSet & recoHitSet) const;
-    trackSet buildTrackCandidates(const Track &, const std::vector<int> &, const HitSet & recoHitSet) const;     
-    std::vector<int> bestTrackCandidates(const trackSet &) const;
-    void removeSeedTrack(trackSet&, const trackSet&) const;
+    TrackSetContainer buildTrackCandidates(const Track &, const std::vector<int> &, const HitSet & recoHitSet) const;     
+    std::vector<int> bestTrackCandidates(const TrackSetContainer &) const;
+    void removeSeedTrack(TrackSetContainer&, const TrackSetContainer&) const;
 
     int _debugLevel;
 

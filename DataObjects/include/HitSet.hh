@@ -15,7 +15,7 @@
 
 namespace fc {
 
-  typedef std::vector<Hit> hitSet;
+  typedef std::vector<Hit> HitSetContainer;
 
 
 ///
@@ -27,7 +27,7 @@ namespace fc {
 class HitSet {
 public:
 
-  const hitSet & getHits() const {return _hitSet;};
+  const HitSetContainer & getHits() const {return _hitSet;};
 
 
   //void insertHit(const Hit&);
@@ -37,7 +37,7 @@ public:
 
 private:
 
-  hitSet _hitSet;
+  HitSetContainer _hitSet;
 };
 } // end namespace fc
 #endif // DataObjects_HitSet_hh

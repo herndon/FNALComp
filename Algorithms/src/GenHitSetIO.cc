@@ -20,18 +20,18 @@ void fc::GenHitSetIO::writeEvent(const GenHitSet & genHitSet, std::ofstream & hi
   hitdata << "GenHits" << std::endl;
   hitdata << _version << std::endl;
 
-  genHitSet::size_type numberHits = genHitSet.getGenHits().size();
+  GenHitSetContainer::size_type numberHits = genHitSet.getGenHits().size();
 
   hitdata << numberHits << std::endl;
 
-  for (genHitSet::const_iterator hitIter =   genHitSet.getGenHits().begin(); hitIter !=  genHitSet.getGenHits().end(); ++hitIter,++hitNumber){
+  for (auto const& hit : genHitSet.getGenHits()){
 
     hitdata << hitNumber << std::endl;
-    hitdata << hitIter->getGenHitPosition().x() << std::endl;;
-    hitdata << hitIter->getGenHitPosition().y() << std::endl;;
-    hitdata << hitIter->getGenHitPosition().z() << std::endl;
-    hitdata << hitIter->getLayer() << std::endl;
-    hitdata << hitIter->getTrackNumber() << std::endl;
+    hitdata << hit.getGenHitPosition().x() << std::endl;;
+    hitdata << hit.getGenHitPosition().y() << std::endl;;
+    hitdata << hit.getGenHitPosition().z() << std::endl;
+    hitdata << hit.getLayer() << std::endl;
+    hitdata << hit.getTrackNumber() << std::endl;
 
   } // end hit loop
 

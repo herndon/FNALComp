@@ -17,7 +17,7 @@
 
 namespace fc {
 
-  typedef std::vector<Track> trackSet;
+  typedef std::vector<Track> TrackSetContainer;
 
 ///
 /// Class TrackSet: 
@@ -28,7 +28,7 @@ namespace fc {
 class TrackSet {
 public:
 
-  const trackSet & getTracks() const { return _trackSet;};
+  const TrackSetContainer & getTracks() const { return _trackSet;};
 
   void insertTrack(Track &&);
 
@@ -36,7 +36,7 @@ public:
 
 private:
 
-  trackSet _trackSet;
+  TrackSetContainer _trackSet;
 };
 } // end namespace fc
 

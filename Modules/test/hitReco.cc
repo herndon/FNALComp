@@ -1,5 +1,5 @@
 //============================================================================
-// dataRead.cc
+// hitReco.cc
 // Main program for driving raw data reading modules and hit reconstruction 
 // Calls DataReadModule and HitRecoModule
 // 

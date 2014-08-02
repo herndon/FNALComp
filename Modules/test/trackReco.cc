@@ -1,6 +1,6 @@
 //============================================================================
-// dataRead.cc
-// Main program for driving raw data reading modules and hit reconstruction 
+// trackReco.cc
+// Main program for driving raw data reading modules and track reconstruction 
 // Calls DataReadModule and HitRecoModule
 // 
 // Author Matt Herndon, University of Wisconsin,

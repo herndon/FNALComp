@@ -59,22 +59,22 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vec
 
   // Form all hit candidates
 
-  for (auto genHit : genHitSet.getGenHits()) {
+  for (auto const& genHit : genHitSet.getGenHits()) {
 
     double deltaPosition = 999.0;
     int recoHitNumber = 0;
     int bestRecoHitNumber = -1;
 
-    for (hitSet::const_iterator recoHitIter = recoHitSet.getHits().begin(); recoHitIter != recoHitSet.getHits().end(); ++recoHitIter,++recoHitNumber) {
+    for (auto const& recoHit : recoHitSet.getHits()) {
 
-      if (genHit.getLayer()==recoHitIter->getLayer()) {
-	double tempDeltaPosition = compareHitPositions(genHit,*recoHitIter);
+      if (genHit.getLayer()==recoHit.getLayer()) {
+	double tempDeltaPosition = compareHitPositions(genHit,recoHit);
 	if (std::abs(tempDeltaPosition) < std::abs(deltaPosition)) {
 	  deltaPosition = tempDeltaPosition;
 	  bestRecoHitNumber = recoHitNumber;
 	}
       }
-
+      ++recoHitNumber;
     } // end reco Hit loop
     if (genHit.getTrackNumber() == trackNumber && bestRecoHitNumber>-1) {
 

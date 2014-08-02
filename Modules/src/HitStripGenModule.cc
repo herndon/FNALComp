@@ -38,9 +38,10 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
 
   int trackNumber = 0;
 
-  for (genTrackSet::const_iterator genTrackIter =  genTrackSet->getGenTracks().begin(); genTrackIter != genTrackSet->getGenTracks().end(); ++genTrackIter,++trackNumber){
+  for (auto const& genTrack :  genTrackSet->getGenTracks()){
  
-    makeHitsStrips(*genHitSet, *genStripSet,*genTrackIter,trackNumber);
+    makeHitsStrips(*genHitSet, *genStripSet,genTrack,trackNumber);
+    ++trackNumber;
 
    } // end track loop
 
@@ -152,11 +153,11 @@ void fc::HitStripGenModule::generateClusterFromStripHitPosition(double stripHitP
 }
 
 
-void fc::HitStripGenModule::storeCluster(StripSet & stripSet, int layer, int initialStrip, const std::vector<int> & stripAdcVector) const{
+void fc::HitStripGenModule::storeCluster(StripSet & stripSet, int layer, int initialStrip, const std::vector<int> & stripAdcs) const{
 
   int ii_strip = initialStrip;
-  for (std::vector<int>::const_iterator stripAdcIter = stripAdcVector.begin(); stripAdcIter != stripAdcVector.end(); ++stripAdcIter){
-    if (fcf::isValidStrip(layer,ii_strip,_detectorGeometry)) stripSet.insertStrip(layer,ii_strip,*stripAdcIter);
+  for (auto stripAdc : stripAdcs){
+    if (fcf::isValidStrip(layer,ii_strip,_detectorGeometry)) stripSet.insertStrip(layer,ii_strip,stripAdc);
     ++ii_strip;
   }
 

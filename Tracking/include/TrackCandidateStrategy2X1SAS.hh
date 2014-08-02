@@ -26,7 +26,7 @@ class DetectorGeometry;
 
     void findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) const;
 
-    void findTrackCandidates(trackSet& trackCandidateSet, const HitSet& hitSet) const;
+    void findTrackCandidates(TrackSetContainer& trackCandidateSet, const HitSet& hitSet) const;
 
 
 

@@ -17,7 +17,7 @@ fc::TrackCandidateStrategy2X1SAS::TrackCandidateStrategy2X1SAS(int debugLevel,co
 }
 
 
-void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(trackSet& trackCandidateSet, const HitSet& recoHitSet) const{
+void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(TrackSetContainer& trackCandidateSet, const HitSet& recoHitSet) const{
 
   std::vector<trackHitSet> trackHitCandidates;
 
@@ -42,28 +42,28 @@ void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(std::vector<fc::trackHit
   int hitNumberO = 0;
 
   // Form 4-3,9 hit candidates
-  for (hitSet::const_iterator hitIterO = hitSet.getHits().begin(); hitIterO != hitSet.getHits().end(); ++hitIterO,++hitNumberO) {
+  for (auto const& hitO : hitSet.getHits()) {
 
-    if (hitIterO->getLayer() == 4) {
+    if (hitO.getLayer() == 4) {
 
       int hitNumberI = 0;
  
-      for (hitSet::const_iterator hitIterI = hitSet.getHits().begin(); hitIterI != hitSet.getHits().end(); ++hitIterI,++hitNumberI) {
+      for (auto const& hitI : hitSet.getHits()) {
 
-	if (hitIterI->getLayer() == 3) {
+	if (hitI.getLayer() == 3) {
 
 	  int hitNumberOSAS = 0;
 
-	  for (hitSet::const_iterator hitIterOSAS = hitSet.getHits().begin(); hitIterOSAS != hitSet.getHits().end(); ++hitIterOSAS,++hitNumberOSAS) {
+	  for (auto const&  hitOSAS : hitSet.getHits()) {
 
-	    if (hitIterOSAS->getLayer() == 9) {
+	    if (hitOSAS.getLayer() == 9) {
 
 	      TVector3 zIntersection;
-	      bool goodIntersection = intersectStrips(*hitIterO,*hitIterOSAS,zIntersection,_detectorGeometry);
+	      bool goodIntersection = intersectStrips(hitO,hitOSAS,zIntersection,_detectorGeometry);
 	      if (goodIntersection) {
 
                 TVector3 primaryVertex(0.0,0.0,0.0);
-		Helix helix = initializeHelix(primaryVertex,hitIterO->getHitPosition(),hitIterI->getHitPosition(),zIntersection,_detectorGeometry);
+		Helix helix = initializeHelix(primaryVertex,hitO.getHitPosition(),hitI.getHitPosition(),zIntersection,_detectorGeometry);
 		if (fcf::goodCandidateHelix(helix,_detectorGeometry,trackSelector)) {
 		  //avoids a copy
 		  trackHitCandidates.push_back( std::vector<int>{hitNumberO,hitNumberI,hitNumberOSAS} );
@@ -71,15 +71,15 @@ void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(std::vector<fc::trackHit
 	      }
 
 	    }
-
+	    ++hitNumberOSAS;
 	  }
 
 	}
-
+	++hitNumberI;
       }
 
     }
-
+    ++hitNumberO;
   }
 }
 

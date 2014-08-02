@@ -20,22 +20,23 @@ void fc::HitSetIO::writeEvent(const HitSet & hitSet, std::ofstream & hitdata) co
   hitdata << "Hits" << std::endl;
   hitdata << _version << std::endl;
 
-  std::vector<Hit>::size_type numberHits = hitSet.getHits().size();
+  HitSetContainer::size_type numberHits = hitSet.getHits().size();
 
   hitdata << numberHits << std::endl;
 
-  for (hitSet::const_iterator hitIter =   hitSet.getHits().begin(); hitIter !=  hitSet.getHits().end(); ++hitIter,++hitNumber){
+  for (auto const& hit : hitSet.getHits()){
 
     hitdata << hitNumber << std::endl;
-    hitdata << hitIter->getHitPosition().x() << std::endl;;
-    hitdata << hitIter->getHitPosition().y() << std::endl;;
-    hitdata << hitIter->getHitPosition().z() << std::endl;
-    hitdata << hitIter->getLayer() << std::endl;
-    hitdata << hitIter->getNumberStrips() << std::endl;
-    hitdata << hitIter->getCharge() << std::endl;
-    hitdata << hitIter->isGoodHit() << std::endl;
-    hitdata << hitIter->getResolution() << std::endl;
+    hitdata << hit.getHitPosition().x() << std::endl;;
+    hitdata << hit.getHitPosition().y() << std::endl;;
+    hitdata << hit.getHitPosition().z() << std::endl;
+    hitdata << hit.getLayer() << std::endl;
+    hitdata << hit.getNumberStrips() << std::endl;
+    hitdata << hit.getCharge() << std::endl;
+    hitdata << hit.isGoodHit() << std::endl;
+    hitdata << hit.getResolution() << std::endl;
 
+    ++hitNumber;
 
   } // end hit loop
 

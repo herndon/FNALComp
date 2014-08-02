@@ -12,16 +12,17 @@ void fc::TrackSet::print(ostream& out) const{
 
   out << "TrackSet " << std::endl;
 
-  trackSet::size_type numberTracks =_trackSet.size();
+  TrackSetContainer::size_type numberTracks =_trackSet.size();
 
   out << "Number Tracks: " << numberTracks << std::endl; 
 
   int trackNumber = 0;
 
-  for (trackSet::const_iterator trackIter =  _trackSet.begin(); trackIter != _trackSet.end(); ++trackIter,++trackNumber){
+  for (auto const& track: getTracks()){
  
     out << "Track number: " << trackNumber << std::endl;
-    trackIter->print(out); 
+    track.print(out); 
+    ++trackNumber;
 
   } // end track loop
 

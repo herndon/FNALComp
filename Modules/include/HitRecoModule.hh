@@ -50,7 +50,7 @@ private:
 
   void recoHitsLayer(HitSet &, const StripSet &, int) const;
 
-  bool findCluster(int &,int, std::vector<int> &,layerStripMap::const_iterator &,layerStripMap::const_iterator &,const StripSet &) const;
+  bool findCluster(int &,int, std::vector<int> &,LayerStripMap::const_iterator &,LayerStripMap::const_iterator &,const StripSet &) const;
 
   Hit buildHit(int, int,const std::vector<int> &) const;
 

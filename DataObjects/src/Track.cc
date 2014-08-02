@@ -73,8 +73,8 @@ void fc::Track::print(ostream& out) const{
   out << "Number of hits " << numberHits << std::endl;
   
   out << "Hit numbers: ";
-  for (trackHitSet::const_iterator hitIter = _trackHitSet.begin(); hitIter != _trackHitSet.end(); ++hitIter){
-    out << *hitIter << " ";
+  for (auto const & hit: getHits()){
+    out <<  hit << " ";
   }
   out << std::endl;
 

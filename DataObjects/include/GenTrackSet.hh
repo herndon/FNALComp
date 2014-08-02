@@ -16,7 +16,7 @@
 
 namespace fc {
 
-  typedef std::vector<GenTrack> genTrackSet;
+  typedef std::vector<GenTrack> GenTrackSetContainer;
 
 ///
 /// Class GenTrackSet: 
@@ -27,7 +27,7 @@ namespace fc {
 class GenTrackSet {
 public:
 
-  const genTrackSet & getGenTracks() const { return _genTrackSet;};
+  const GenTrackSetContainer & getGenTracks() const { return _genTrackSet;};
  
   void insertTrack(GenTrack&&);
 
@@ -35,7 +35,7 @@ public:
 
 private:
 
-  genTrackSet _genTrackSet;
+  GenTrackSetContainer _genTrackSet;
 };
 } // end namespace fc
 

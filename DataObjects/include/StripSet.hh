@@ -13,13 +13,14 @@
 //============================================================================
 #include <map>
 #include <vector>
+#include <utility>
 
 namespace fc {
 
   class DetectorGeometry;
 
   // Map used to allow keying by strip number
-  typedef std::map<int, int> layerStripMap; //!< Map of strip number and acd counts for one layer
+  typedef std::map<int, int> LayerStripMap; //!< Map of strip number and acd counts for one layer
   
 
 ///
@@ -34,11 +35,13 @@ public:
   explicit StripSet(const DetectorGeometry&);
 
   int getNumberLayers() {return _layerStripMaps.size();}
-  const std::vector<layerStripMap>& getStrips() const {return _layerStripMaps;}
-  const layerStripMap& getLayerStripMap(unsigned int layer) const;
+  const std::vector<LayerStripMap>& getStrips() const {return _layerStripMaps;}
+  const LayerStripMap& getLayerStripMap(unsigned int layer) const;
 
-  int getStripNumber(layerStripMap::const_iterator iter) const {return iter->first;};
-  int getStripAdc(layerStripMap::const_iterator iter) const {return iter->second;};
+  int getStripNumber(LayerStripMap::const_iterator iter) const {return iter->first;};
+  int getStripAdc(LayerStripMap::const_iterator iter) const {return iter->second;};
+  int getStripNumber(const std::pair<int,int>& pair) const {return pair.first;};
+  int getStripAdc(const std::pair<int,int>& pair) const {return pair.second;};
 
   void insertStrip(unsigned int, int, int); //!< Insert strip by layer, strip number, adc count
 
@@ -46,7 +49,7 @@ public:
 
 private:
 
-  std::vector<layerStripMap> _layerStripMaps;
+  std::vector<LayerStripMap> _layerStripMaps;
 };
 } // end namespace
 

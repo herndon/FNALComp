@@ -15,7 +15,7 @@
 
 namespace fc {
 
-  typedef std::vector<GenHit> genHitSet;
+  typedef std::vector<GenHit> GenHitSetContainer;
 
 
 ///
@@ -27,7 +27,7 @@ namespace fc {
 class GenHitSet {
 public:
 
-  const genHitSet & getGenHits() const {return _genHitSet;};
+  const GenHitSetContainer & getGenHits() const {return _genHitSet;};
 
 
   void insertGenHit(GenHit&&);
@@ -36,7 +36,7 @@ public:
 
 private:
 
-  genHitSet _genHitSet;
+  GenHitSetContainer _genHitSet;
 };
 } // end namespace fc
 #endif // DataObjects_GenHitSet_hh

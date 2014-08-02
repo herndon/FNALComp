@@ -21,9 +21,9 @@ fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,const DetectorGeometry& de
   _maxChi2NDofCut(maxChi2NDofCut){
 }
 
-void fc::LayerTrackFinder::findCandidateTracks(trackSet& trackCandidateSet, const HitSet& recoHitSet,unsigned int expNHit) const{
+void fc::LayerTrackFinder::findCandidateTracks(TrackSetContainer& trackCandidateSet, const HitSet& recoHitSet,unsigned int expNHit) const{
 
-  trackSet allNewTracks;
+  TrackSetContainer allNewTracks;
 
   for (auto& track :  trackCandidateSet) {
 
@@ -44,12 +44,12 @@ void fc::LayerTrackFinder::findCandidateTracks(trackSet& trackCandidateSet, cons
 
 }
 
-void fc::LayerTrackFinder::findSingleCandidateTracks(const Track& track , trackSet& allNewTracks, const HitSet& recoHitSet)const {
+void fc::LayerTrackFinder::findSingleCandidateTracks(const Track& track , TrackSetContainer& allNewTracks, const HitSet& recoHitSet)const {
 
 
 
   std::vector<int> hits = findHits(track,recoHitSet);
-  trackSet newTracks = buildTrackCandidates(track, hits, recoHitSet);
+  TrackSetContainer newTracks = buildTrackCandidates(track, hits, recoHitSet);
   std::vector<int> bestTracks = bestTrackCandidates(newTracks);
   //We may want to decide whether to remove the seed track
   //removeSeedTrack(trackCandidateSet,trackSet);
@@ -95,7 +95,7 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track , const Hit
 
 }
 
-std::vector<int> fc::LayerTrackFinder::bestTrackCandidates(const trackSet & tracks) const{
+std::vector<int> fc::LayerTrackFinder::bestTrackCandidates(const TrackSetContainer & tracks) const{
 
   std::vector<int> trackList;
 
@@ -104,37 +104,35 @@ std::vector<int> fc::LayerTrackFinder::bestTrackCandidates(const trackSet & trac
   double secondBestChi2 = 999.0;
   int bestTrack = -1;
   int secondBestTrack = -1;
-  int trackN = 0;
+  int trackNumber = 0;
 
 
-  for (trackSet::const_iterator trackIter = tracks.begin(); trackIter != tracks.end(); ++trackIter,++trackN){
-    if (trackIter->getNDof() > 0 && trackIter->getChi2() < bestChi2) {
+  for (auto const& track : tracks){
+    if (track.getNDof() > 0 && track.getChi2() < bestChi2) {
       secondBestChi2 = bestChi2;
       secondBestTrack = bestTrack;
-      bestChi2 = trackIter->getChi2();
-      bestTrack = trackN;
-    } else if (trackIter->getNDof() > 0 && trackIter->getChi2() < secondBestChi2){
-      secondBestChi2 = trackIter->getChi2();
-      secondBestTrack = trackN;
+      bestChi2 = track.getChi2();
+      bestTrack = trackNumber;
+    } else if (track.getNDof() > 0 && track.getChi2() < secondBestChi2){
+      secondBestChi2 = track.getChi2();
+      secondBestTrack = trackNumber;
     }
-
+    ++trackNumber;
   }
 
-  trackN = 0;
+  trackNumber = 0;
 
   // Keep all if not yet constrainted since we can't compare chi2/ndof
-  for (trackSet::const_iterator trackIter = tracks.begin(); trackIter != tracks.end(); ++trackIter,++trackN){
-    if (trackIter->getNDof() <= 0) trackList.push_back(trackN);
+  for (auto const& track : tracks){
+    if (track.getNDof() <= 0) trackList.push_back(trackNumber);
+    ++trackNumber;
   }
+
+
   if (bestTrack > -1)  trackList.push_back(bestTrack);
   if (secondBestTrack > -1)  trackList.push_back(secondBestTrack);
 
-  // 	if (trackSetIter->getNDof()> 0 && secondBestTrack > -1 && secondBestChi2/foundTracks[secondBestTrack].getNDof() <  trackSetIter->getChi2()/trackSetIter->getNDof()) {
-  // 	  trackCandidateSet.getTracks().erase(trackSetIter);
-  //           trackSetIter--;
-  // 	}
-
-
+  // !!!!! could consider getting rid of the original track if the new ones are much better
 
   return trackList;
 
@@ -142,7 +140,7 @@ std::vector<int> fc::LayerTrackFinder::bestTrackCandidates(const trackSet & trac
 
 
 
-fc::trackSet fc::LayerTrackFinder::buildTrackCandidates(const Track & track, const std::vector<int> & hits, const HitSet & recoHitSet) const{
+fc::TrackSetContainer fc::LayerTrackFinder::buildTrackCandidates(const Track & track, const std::vector<int> & hits, const HitSet & recoHitSet) const{
 
   fcf::TrackingSelector trackSelector;
   trackSelector._minPTCut = _minPTCut;
@@ -152,7 +150,7 @@ fc::trackSet fc::LayerTrackFinder::buildTrackCandidates(const Track & track, con
   trackSelector._useFiducialDZCut = true;
 
 
-  trackSet newTracks;
+  TrackSetContainer newTracks;
   for (auto hitNumber : hits) {
     trackHitSet trackHitCandidate = track.getHits();
     trackHitCandidate.push_back(hitNumber);

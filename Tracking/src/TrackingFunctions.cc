@@ -5,11 +5,11 @@
 int fcf::numberMatchedHits(const fc::Track& track1, const fc::Track& track2 ){
 
   int matchedHits = 0;
-  for (fc::trackHitSet::const_iterator hitIter = track1.getHits().begin(); hitIter!=track1.getHits().end(); ++hitIter){
+  for (auto const& hit : track1.getHits()){
  
-    for (fc::trackHitSet::const_iterator hitIter2 =  track2.getHits().begin(); hitIter2!=track2.getHits().end(); ++hitIter2){
+    for (auto const& hit2 :  track2.getHits()){
  
-      if (*hitIter == *hitIter2) ++matchedHits;
+      if (hit == hit2) ++matchedHits;
     }
 
   }

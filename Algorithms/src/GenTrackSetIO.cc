@@ -18,19 +18,19 @@ void fc::GenTrackSetIO::writeEvent(const GenTrackSet& genTrackSet, std::ofstream
   gentrackdata << "GenTrackSet" << std::endl;
   gentrackdata << _version << std::endl;
 
-  genTrackSet::size_type numberGenTracks = genTrackSet.getGenTracks().size();
+  GenTrackSetContainer::size_type numberGenTracks = genTrackSet.getGenTracks().size();
   gentrackdata << numberGenTracks << std::endl;
 
   int genTrackNumber =0;
 
-  for (genTrackSet::const_iterator genTrackIter =  genTrackSet.getGenTracks().begin(); genTrackIter != genTrackSet.getGenTracks().end(); ++genTrackIter, ++genTrackNumber){
+  for (auto const& genTrack : genTrackSet.getGenTracks()){
 
     // Extract a copy of the lorentzVector since functions in it are not const
-    TLorentzVector lorentzVector = genTrackIter->getLorentzVector();
+    TLorentzVector lorentzVector = genTrack.getLorentzVector();
 
     gentrackdata << genTrackNumber << std::endl;
 
-    gentrackdata << genTrackIter->getCharge() << std::endl;
+    gentrackdata << genTrack.getCharge() << std::endl;
 
     gentrackdata << lorentzVector.Px() << std::endl;
     gentrackdata << lorentzVector.Py() << std::endl;
@@ -40,15 +40,12 @@ void fc::GenTrackSetIO::writeEvent(const GenTrackSet& genTrackSet, std::ofstream
     // Point of clossest approach to the the reference point 0 0 0 and sign
 
 
-    gentrackdata << genTrackIter->getPosition().X() <<std::endl;
-    gentrackdata << genTrackIter->getPosition().Y() <<std::endl;
-    gentrackdata << genTrackIter->getPosition().Z() <<std::endl;
+    gentrackdata << genTrack.getPosition().X() <<std::endl;
+    gentrackdata << genTrack.getPosition().Y() <<std::endl;
+    gentrackdata << genTrack.getPosition().Z() <<std::endl;
 
-    // !!!!! replace with is in opp hemispere from phi0
-    //int d0Sign;
-    //if (std::signbit(genTrackIter->getPosition.Y()) {d0Sign = -1;} else {d0Sign = 1;}
-    //gentrackdata << d0Sign << std::endl;
 
+    ++genTrackNumber;
 
   } // end track loop
 }

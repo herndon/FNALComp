@@ -19,8 +19,8 @@ const fc::Track fc::buildTrack(const HitSet & hitSet, const std::vector<int> & t
 
   // !!!!! Geometry needs to understand types of sensors for use here
   int layer;
-  for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
-    layer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
+  for (auto const&  trackHit : trackHitCandidate){
+    layer = hitSet.getHits()[trackHit].getLayer();
     if (layer >= 0 && layer <= 4) ++numberXHits;
     if (layer==9||layer==8) ++numberSASHits;
     if (layer>=5 && layer <=7) ++numberZHits;

@@ -36,12 +36,12 @@ void fc::TrackCandidateModule::findTrackCandidates(TrackSet & recoTrackCandidate
 
   TrackCandidateStrategy2X1SAS candStrategy(_debugLevel,_detectorGeometry,_config.getMinCandPTCut());
 
-  trackSet trackCandidateSet;
+  TrackSetContainer trackCandidateSet;
   
   candStrategy.findTrackCandidates(trackCandidateSet,recoHitSet);
 
-  for (trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter!= trackCandidateSet.end(); ++trackIter){
-    recoTrackCandidateSet.insertTrack(std::move(*trackIter));
+  for (auto& track : trackCandidateSet){
+    recoTrackCandidateSet.insertTrack(std::move(track));
   }
 
   if (_debugLevel>=2){

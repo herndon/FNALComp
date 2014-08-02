@@ -24,15 +24,18 @@ void fc::StripSetIO::writeEvent(const StripSet & stripSet, std::ofstream & strip
   int binaryData1;
   int binaryData2;
  
-  for (int ii_layer = 0; ii_layer < _detectorGeometry.getNSensors(); ++ii_layer){
-    layerStripMap::size_type numberStrips =stripSet.getLayerStripMap(ii_layer).size();
+  int iiLayer = 0;
 
-    stripdata.write (reinterpret_cast<const char *>(&ii_layer), 1);
+  for (auto const& stripMap: stripSet.getStrips()){
+
+    LayerStripMap::size_type numberStrips = stripMap.size();
+
+    stripdata.write (reinterpret_cast<const char *>(&iiLayer), 1);
     stripdata.write (reinterpret_cast<const char *>(&numberStrips), 1);
 
-    for (layerStripMap::const_iterator layerStripMapIter =  stripSet.getLayerStripMap(ii_layer).begin(); layerStripMapIter != stripSet.getLayerStripMap(ii_layer).end(); ++layerStripMapIter){
+    for (auto const& strip : stripMap) {
 
-      binaryData = stripSet.getStripNumber(layerStripMapIter) * 32 + stripSet.getStripAdc(layerStripMapIter);
+      binaryData = stripSet.getStripNumber(strip) * 32 + stripSet.getStripAdc(strip);
       binaryData1 = binaryData & bitmask1;
       binaryData2 = binaryData & bitmask2;
       binaryData2 = binaryData2 >> 8;
@@ -40,9 +43,12 @@ void fc::StripSetIO::writeEvent(const StripSet & stripSet, std::ofstream & strip
       stripdata.write (reinterpret_cast<const char *>(&binaryData2), 1);
       stripdata.write (reinterpret_cast<const char *>(&binaryData1), 1);
 
-
     } // end strip loop
+
+    iiLayer++;
+
   } // end layer loop
+
 }
 
 void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {

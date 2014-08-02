@@ -43,12 +43,12 @@ void fc::TrackRecoModule::recoTracks(TrackSet & recoTrackSet, const TrackSet& in
 
   TrackRecoStrategy2X1SAS recoStrategy(_debugLevel,_detectorGeometry,_config.getMinPTCut(),_config.getMaxChi2NDofCut());
 
-  trackSet trackCandidateSet(inputTrackCandidateSet.getTracks()) ;
+  TrackSetContainer trackCandidateSet(inputTrackCandidateSet.getTracks()) ;
   
   recoStrategy.recoTracks(trackCandidateSet,recoHitSet);
 
-  for (trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter!= trackCandidateSet.end(); ++trackIter){
-    recoTrackSet.insertTrack(std::move(*trackIter));
+  for (auto& track : trackCandidateSet){
+    recoTrackSet.insertTrack(std::move(track));
   }
 
   if (_debugLevel>=2){

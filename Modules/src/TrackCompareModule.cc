@@ -78,10 +78,10 @@ void fc::TrackCompareModule::compareTracks(const GenTrackSet & genTrackSet, cons
   
   if (recoTrackSet.getTracks().begin() == recoTrackSet.getTracks().end()) return;
 
-  for (genTrackSet::const_iterator genTrackIter =  genTrackSet.getGenTracks().begin(); genTrackIter !=  genTrackSet.getGenTracks().end(); ++genTrackIter){
+  for (auto const& genTrack : genTrackSet.getGenTracks()){
 
-    const Track& recoTrack = matchTrack(*genTrackIter,recoTrackSet);
-    TVectorD bestDeltaHP = deltaHP(*genTrackIter,recoTrack);
+    const Track& recoTrack = matchTrack(genTrack,recoTrackSet);
+    TVectorD bestDeltaHP = deltaHP(genTrack,recoTrack);
     fillHistograms(bestDeltaHP,recoTrack);
 
 
@@ -96,14 +96,15 @@ const fc::Track & fc::TrackCompareModule::matchTrack(const GenTrack & genTrack, 
   int trackNumber=0;
   int bestTrack=-1;
 
-  for (trackSet::const_iterator recoTrackIter =  recoTrackSet.getTracks().begin(); recoTrackIter !=  recoTrackSet.getTracks().end(); ++recoTrackIter,++trackNumber){
+  for (auto const& recoTrack : recoTrackSet.getTracks()){
 
-    tmpDeltaTracks = deltaTracks(genTrack,*recoTrackIter);
+    tmpDeltaTracks = deltaTracks(genTrack,recoTrack);
 
     if (tmpDeltaTracks < bestDeltaTracks) {
       bestDeltaTracks = tmpDeltaTracks;
       bestTrack = trackNumber;
     }
+    ++trackNumber;
   }
 
   return recoTrackSet.getTracks()[bestTrack];

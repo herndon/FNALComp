@@ -93,17 +93,17 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
  
  
 
-    for (trackHitSet::const_iterator hitIter = trackHitSet.begin(); hitIter != trackHitSet.end(); ++hitIter){
+    for (auto const& hit : trackHitSet){
 
       // Hit information
-      int hitNumber = *hitIter; 
+      int hitNumber = hit; 
       TVector3 hitPosition;
       int layer; 
       if (hitNumber>=0) {
-	layer = hitSet.getHits()[*hitIter].getLayer();
- 	hitPosition = hitSet.getHits()[*hitIter].getHitPosition();
+	layer = hitSet.getHits()[hit].getLayer();
+ 	hitPosition = hitSet.getHits()[hit].getHitPosition();
       }else {
-	layer = *hitIter;
+	layer = hit;
 	hitPosition - detectorGeometry.getSensor(layer)._center;
       }
 
@@ -132,7 +132,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
       if (layer < 0){
 	invMeasurementRes2(0,0) = detectorGeometry.getSensor(layer)._hitResolution*detectorGeometry.getSensor(layer)._hitResolution;;
       } else {
-	invMeasurementRes2(0,0) = hitSet.getHits()[*hitIter].getResolution()*hitSet.getHits()[*hitIter].getResolution();
+	invMeasurementRes2(0,0) = hitSet.getHits()[hit].getResolution()*hitSet.getHits()[hit].getResolution();
       }
       invMeasurementRes2.Invert(); 
  

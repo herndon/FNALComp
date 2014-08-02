@@ -4,26 +4,27 @@
 #include "Tracking/include/TrackingFunctions.hh"
 #include "Tracking/include/TrackingFilters.hh"
 
-void fcf::simpleTrackSetFilter(fc::trackSet & trackCandidateSet,const fc::DetectorGeometry& detectorGeometry,const TrackingSelector& trackSelector ){
+void fcf::simpleTrackSetFilter(fc::TrackSetContainer & trackCandidateSet,const fc::DetectorGeometry& detectorGeometry,const TrackingSelector& trackSelector ){
 
   // Right now just checks the number of expected hits
 
-  for (fc::trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter != trackCandidateSet.end(); ++trackIter){
+  //moves tracks we do not want to the end of the container based on the goodCandidateTrack predicate and then we erase them
+  auto newEndItr = std::remove_if( trackCandidateSet.begin(),  trackCandidateSet.end(),
+				   [detectorGeometry,trackSelector](fc::Track const& track) { return !goodCandidateTrack(track,detectorGeometry,trackSelector); } );
+  trackCandidateSet.erase(newEndItr, trackCandidateSet.end());
 
-    if (!goodCandidateTrack(*trackIter,detectorGeometry,trackSelector)) {
-      trackCandidateSet.erase(trackIter);
-      trackIter--;
-    }
-  }
+
+
 }
 
 
-void fcf::contentionTrackSetFilter(fc::trackSet & trackCandidateSet){
+void fcf::contentionTrackSetFilter(fc::TrackSetContainer & trackCandidateSet){
 
+  // !!!!! this may not be safe and needs to be revisited
 
-  for (fc::trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter != trackCandidateSet.end(); ++trackIter){
+  for (fc::TrackSetContainer::iterator trackIter = trackCandidateSet.begin(); trackIter != trackCandidateSet.end(); ++trackIter){
  
-    fc::trackSet::iterator trackIter2 = trackIter;
+    fc::TrackSetContainer::iterator trackIter2 = trackIter;
     ++trackIter2;
 
     for ( ; trackIter2 != trackCandidateSet.end(); ++trackIter2){

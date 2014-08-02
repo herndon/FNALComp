@@ -73,37 +73,37 @@ void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<in
   int middleXLayer = -1;
 
 
-  for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
+  for (auto const& hit : trackHitCandidate){
 
 
-    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() > outerXLayer && hitSet.getHits()[*trackHitCandidateIter].getLayer() < detectorGeometry.getNXSensors()) {
-      outerXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
-      outerXHit = *trackHitCandidateIter;
+    if (hitSet.getHits()[hit].getLayer() > outerXLayer && hitSet.getHits()[hit].getLayer() < detectorGeometry.getNXSensors()) {
+      outerXLayer = hitSet.getHits()[hit].getLayer();
+      outerXHit = hit;
     }
  
-    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() > outerZLayer) {
-      outerZLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
-      outerZHit = *trackHitCandidateIter;
+    if (hitSet.getHits()[hit].getLayer() > outerZLayer) {
+      outerZLayer = hitSet.getHits()[hit].getLayer();
+      outerZHit = hit;
     }
 
   }
 
-  for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
+  for (auto const& hit : trackHitCandidate){
 
 
     // !!!!! Figuring out a way to make this general is difficult.
-    if (  hitSet.getHits()[*trackHitCandidateIter].getLayer() == 2 && hitSet.getHits()[*trackHitCandidateIter].getLayer() != outerXLayer) {
-      middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
-      middleXHit = *trackHitCandidateIter;
-    } else if (middleXLayer !=2 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 1 && hitSet.getHits()[*trackHitCandidateIter].getLayer() != outerXLayer) {
-      middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
-      middleXHit = *trackHitCandidateIter;
-    } else if (middleXLayer !=2 && middleXLayer !=1 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 3 && hitSet.getHits()[*trackHitCandidateIter].getLayer() != outerXLayer) {
-      middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
-      middleXHit = *trackHitCandidateIter;
-    } else if (middleXLayer !=2 && middleXLayer !=1 && middleXLayer !=3 && hitSet.getHits()[*trackHitCandidateIter].getLayer() == 0 && hitSet.getHits()[*trackHitCandidateIter].getLayer() != outerXLayer) {
-      middleXLayer = hitSet.getHits()[*trackHitCandidateIter].getLayer();
-      middleXHit = *trackHitCandidateIter;
+    if (  hitSet.getHits()[hit].getLayer() == 2 && hitSet.getHits()[hit].getLayer() != outerXLayer) {
+      middleXLayer = hitSet.getHits()[hit].getLayer();
+      middleXHit = hit;
+    } else if (middleXLayer !=2 && hitSet.getHits()[hit].getLayer() == 1 && hitSet.getHits()[hit].getLayer() != outerXLayer) {
+      middleXLayer = hitSet.getHits()[hit].getLayer();
+      middleXHit = hit;
+    } else if (middleXLayer !=2 && middleXLayer !=1 && hitSet.getHits()[hit].getLayer() == 3 && hitSet.getHits()[hit].getLayer() != outerXLayer) {
+      middleXLayer = hitSet.getHits()[hit].getLayer();
+      middleXHit = hit;
+    } else if (middleXLayer !=2 && middleXLayer !=1 && middleXLayer !=3 && hitSet.getHits()[hit].getLayer() == 0 && hitSet.getHits()[hit].getLayer() != outerXLayer) {
+      middleXLayer = hitSet.getHits()[hit].getLayer();
+      middleXHit = hit;
     }
  
   }
@@ -119,11 +119,11 @@ bool fc::findZForInitialization(const HitSet & hitSet,const std::vector<int> & t
   
 
 
-  for (std::vector<int>::const_iterator trackHitCandidateIter = trackHitCandidate.begin(); trackHitCandidateIter != trackHitCandidate.end(); ++trackHitCandidateIter){
-    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() == 4) layer4XHit = *trackHitCandidateIter;
-    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() == 9) layer4SASHit = *trackHitCandidateIter;
-    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() == 3) layer3XHit = *trackHitCandidateIter;
-    if (hitSet.getHits()[*trackHitCandidateIter].getLayer() == 8) layer3SASHit = *trackHitCandidateIter;
+  for (auto const& hit : trackHitCandidate){
+    if (hitSet.getHits()[hit].getLayer() == 4) layer4XHit = hit;
+    if (hitSet.getHits()[hit].getLayer() == 9) layer4SASHit = hit;
+    if (hitSet.getHits()[hit].getLayer() == 3) layer3XHit = hit;
+    if (hitSet.getHits()[hit].getLayer() == 8) layer3SASHit = hit;
   }
 
 
