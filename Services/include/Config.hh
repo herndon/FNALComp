@@ -25,39 +25,55 @@ namespace fc {
 
 class Config {
 
- 
+
 public:
 
-  Config(std::ifstream&,int);
+    Config(std::ifstream&,int);
 
-  int getDebugLevel() const {return _debugLevel;} //!< Returns debug level: 0 nothing, 1 progress infrmation; 2 data object printout; 3-5 basic-detailed debug
-  int getSeed() const {return _seed;}; //!< Returns random number seed
-  int getNumberEvents() const {return _numberEvents;}; //!< Returns number of events to generate
-  int getNumberTracks() const {return _numberTracks;}; //!< Returns number of tracks to generate per event
+    int getDebugLevel() const {
+        return _debugLevel;   //!< Returns debug level: 0 nothing, 1 progress infrmation; 2 data object printout; 3-5 basic-detailed debug
+    }
+    int getSeed() const {
+        return _seed;
+    }; //!< Returns random number seed
+    int getNumberEvents() const {
+        return _numberEvents;
+    }; //!< Returns number of events to generate
+    int getNumberTracks() const {
+        return _numberTracks;
+    }; //!< Returns number of tracks to generate per event
 
-  std::string const& getRootFileName() const { return _rootFileName; } //!< Returns the name of the root file to be created.
+    std::string const& getRootFileName() const {
+        return _rootFileName;    //!< Returns the name of the root file to be created.
+    }
 
 
-  double getMinCandPTCut() const {return _minCandPTCut;}
-  double getMinPTCut() const {return _minPTCut;}
-  double getMaxChi2NDofCut() const {return _maxChi2NDofCut;}
+    double getMinCandPTCut() const {
+        return _minCandPTCut;
+    }
+    double getMinPTCut() const {
+        return _minPTCut;
+    }
+    double getMaxChi2NDofCut() const {
+        return _maxChi2NDofCut;
+    }
 
-  void printConfig(std::ostream& out) const;
+    void printConfig(std::ostream& out) const;
 
 
 private:
 
-  int _debugLevel;
-  bool _genData;
-  int _numberEvents;
-  int _numberTracks;
-  int _seed;
-  std::string _rootFileName;
-  double _minCandPTCut;
-  double _minPTCut;
-  double _maxChi2NDofCut;
-  
-  void _initConfig(std::ifstream&);
+    int _debugLevel;
+    bool _genData;
+    int _numberEvents;
+    int _numberTracks;
+    int _seed;
+    std::string _rootFileName;
+    double _minCandPTCut;
+    double _minPTCut;
+    double _maxChi2NDofCut;
+
+    void _initConfig(std::ifstream&);
 
 };
 } // end namespace fc

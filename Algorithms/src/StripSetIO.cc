@@ -7,122 +7,127 @@
 
 
 fc::StripSetIO::StripSetIO(const DetectorGeometry&  detectorGeometry):
-  _detectorGeometry(detectorGeometry),
-  _version(1){
+    _detectorGeometry(detectorGeometry),
+    _version(1) {
 }
 
 
-void fc::StripSetIO::writeEvent(const StripSet & stripSet, std::ofstream & stripdata) const{
+void fc::StripSetIO::writeEvent(const StripSet & stripSet,
+                                std::ofstream & stripdata) const {
 
 
-  stripdata << "Strips" << std::endl;
+    stripdata << "Strips" << std::endl;
 
-  stripdata.write (reinterpret_cast<const char *>(&_version), 1);
+    stripdata.write (reinterpret_cast<const char *>(&_version), 1);
 
 
-  int binaryData;
-  int binaryData1;
-  int binaryData2;
- 
-  int iiLayer = 0;
+    int binaryData;
+    int binaryData1;
+    int binaryData2;
 
-  for (auto const& stripMap: stripSet.getStrips()){
+    int iiLayer = 0;
 
-    LayerStripMap::size_type numberStrips = stripMap.size();
+    for (auto const& stripMap: stripSet.getStrips()) {
 
-    stripdata.write (reinterpret_cast<const char *>(&iiLayer), 1);
-    stripdata.write (reinterpret_cast<const char *>(&numberStrips), 1);
+        LayerStripMap::size_type numberStrips = stripMap.size();
 
-    for (auto const& strip : stripMap) {
+        stripdata.write (reinterpret_cast<const char *>(&iiLayer), 1);
+        stripdata.write (reinterpret_cast<const char *>(&numberStrips), 1);
 
-      binaryData = stripSet.getStripNumber(strip) * 32 + stripSet.getStripAdc(strip);
-      binaryData1 = binaryData & bitmask1;
-      binaryData2 = binaryData & bitmask2;
-      binaryData2 = binaryData2 >> 8;
+        for (auto const& strip : stripMap) {
 
-      stripdata.write (reinterpret_cast<const char *>(&binaryData2), 1);
-      stripdata.write (reinterpret_cast<const char *>(&binaryData1), 1);
+            binaryData = stripSet.getStripNumber(strip) * 32 + stripSet.getStripAdc(strip);
+            binaryData1 = binaryData & bitmask1;
+            binaryData2 = binaryData & bitmask2;
+            binaryData2 = binaryData2 >> 8;
 
-    } // end strip loop
+            stripdata.write (reinterpret_cast<const char *>(&binaryData2), 1);
+            stripdata.write (reinterpret_cast<const char *>(&binaryData1), 1);
 
-    iiLayer++;
+        } // end strip loop
 
-  } // end layer loop
+        iiLayer++;
+
+    } // end layer loop
 
 }
 
 void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
 
 
-  std::string eventDataString;
+    std::string eventDataString;
 
-  stripdata >> eventDataString;
+    stripdata >> eventDataString;
 
-  if (eventDataString != "Strips"){
-    std::string wrongEventDataObject = "StripSetIO::readEvent: attempted to read wrong data object" + eventDataString;
-    throw Exception(wrongEventDataObject);  
-  }
+    if (eventDataString != "Strips") {
+        std::string wrongEventDataObject =
+            "StripSetIO::readEvent: attempted to read wrong data object" + eventDataString;
+        throw Exception(wrongEventDataObject);
+    }
 
-  // Binary data in char byte format
-  // !!!!! Candidate for run time bug 
-  unsigned  char binaryData;
-
-  stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
-  stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
-  int version = static_cast<int>(binaryData);
-
-  if (version != _version) {
-    std::string wrongStreamerVersion = "StripSetIO::readEvent: attempted to read version " + std::to_string(version) + " using streamer version " + std::to_string(_version);
-    throw Exception(wrongStreamerVersion);  
-  }
-
-
-  for (int iiLayer = 0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
- 
-    stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
-    int layer = static_cast<int>(binaryData);
-
-    if (layer != iiLayer)    if (layer != iiLayer) throw Exception("StripSetIO::readEvent: bad strip data");
+    // Binary data in char byte format
+    // !!!!! Candidate for run time bug
+    unsigned  char binaryData;
 
     stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
-    int numberStrips = static_cast<int>(binaryData);
+    stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
+    int version = static_cast<int>(binaryData);
 
-    for (int iiStrip = 0; iiStrip < numberStrips; ++iiStrip){
+    if (version != _version) {
+        std::string wrongStreamerVersion =
+            "StripSetIO::readEvent: attempted to read version " + std::to_string(
+                version) + " using streamer version " + std::to_string(_version);
+        throw Exception(wrongStreamerVersion);
+    }
 
-      stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
 
-      int stripData2 =  static_cast<int>(binaryData);
-      stripData2 = stripData2 << 8;
- 
-      stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
-      int adc =  static_cast<int>(binaryData);
-      adc = adc&adcBitmask;
-      int stripData1 =  static_cast<int>(binaryData);
-      int stripData12 = stripData2 + stripData1;
-      stripData12 = stripData12&stripBitmask;
-      int strip = stripData12 >> 5;
+    for (int iiLayer = 0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
 
-      stripSet.insertStrip(iiLayer,strip,adc);
+        stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
+        int layer = static_cast<int>(binaryData);
 
-    } // end strip loop
+        if (layer != iiLayer)    if (layer != iiLayer) throw
+                Exception("StripSetIO::readEvent: bad strip data");
 
-  } // end layer loop 
+        stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
+        int numberStrips = static_cast<int>(binaryData);
+
+        for (int iiStrip = 0; iiStrip < numberStrips; ++iiStrip) {
+
+            stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
+
+            int stripData2 =  static_cast<int>(binaryData);
+            stripData2 = stripData2 << 8;
+
+            stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
+            int adc =  static_cast<int>(binaryData);
+            adc = adc&adcBitmask;
+            int stripData1 =  static_cast<int>(binaryData);
+            int stripData12 = stripData2 + stripData1;
+            stripData12 = stripData12&stripBitmask;
+            int strip = stripData12 >> 5;
+
+            stripSet.insertStrip(iiLayer,strip,adc);
+
+        } // end strip loop
+
+    } // end layer loop
 
 }
 
-void fc::StripSetIO::printRawData(std::ifstream & stripdata) const{
+void fc::StripSetIO::printRawData(std::ifstream & stripdata) const {
 
-  int ii = 0;
+    int ii = 0;
 
-  unsigned char binaryData;
+    unsigned char binaryData;
 
-  while (stripdata) {
- 
-    stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
-    if (stripdata) {
-      
-      std::cout << "Byte " << ii << " " << static_cast<int>(binaryData) << "\n";
-      ++ii;
+    while (stripdata) {
+
+        stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
+        if (stripdata) {
+
+            std::cout << "Byte " << ii << " " << static_cast<int>(binaryData) << "\n";
+            ++ii;
+        }
     }
-  }
 }

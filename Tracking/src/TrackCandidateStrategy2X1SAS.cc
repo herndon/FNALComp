@@ -10,77 +10,83 @@
 #include "Tracking/include/TrackCandidateStrategy2X1SAS.hh"
 
 
-fc::TrackCandidateStrategy2X1SAS::TrackCandidateStrategy2X1SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minCandPTCut):
-  _debugLevel(debugLevel),
-  _detectorGeometry(detectorGeometry),
-  _minCandPTCut(minCandPTCut) {
+fc::TrackCandidateStrategy2X1SAS::TrackCandidateStrategy2X1SAS(int debugLevel,
+        const DetectorGeometry& detectorGeometry,double minCandPTCut):
+    _debugLevel(debugLevel),
+    _detectorGeometry(detectorGeometry),
+    _minCandPTCut(minCandPTCut) {
 }
 
 
-void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(const HitSet& recoHitSet,TrackSetContainer& trackCandidateSet) const{
+void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(
+    const HitSet& recoHitSet,TrackSetContainer& trackCandidateSet) const {
 
-  std::vector<TrackHitContainer> trackHitCandidates;
+    std::vector<TrackHitContainer> trackHitCandidates;
 
-  findHitCadidates(recoHitSet,trackHitCandidates);
+    findHitCadidates(recoHitSet,trackHitCandidates);
 
-  for (auto const& trackHitCandidate: trackHitCandidates) {
-    trackCandidateSet.push_back(std::move(buildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,_debugLevel)));
-  }
+    for (auto const& trackHitCandidate: trackHitCandidates) {
+        trackCandidateSet.push_back(std::move(buildTrack(recoHitSet,trackHitCandidate,
+                                              _detectorGeometry,_debugLevel)));
+    }
 
-  // We could filter the candidates at this point
+    // We could filter the candidates at this point
 
 }
 
 
 // !!!!! Could improve to use more than outer layers
 // !!!!! control seed layers from config
-void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(const HitSet& hitSet,std::vector<fc::TrackHitContainer>& trackHitCandidates) const{
- 
-  fcf::TrackingSelector trackSelector;
-  trackSelector._minPTCut = _minCandPTCut;
+void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(const HitSet& hitSet,
+        std::vector<fc::TrackHitContainer>& trackHitCandidates) const {
 
-  int hitNumberO = 0;
+    fcf::TrackingSelector trackSelector;
+    trackSelector._minPTCut = _minCandPTCut;
 
-  // Form 4-3,9 hit candidates
-  for (auto const& hitO : hitSet.getHits()) {
+    int hitNumberO = 0;
 
-    if (hitO.getLayer() == 4) {
+    // Form 4-3,9 hit candidates
+    for (auto const& hitO : hitSet.getHits()) {
 
-      int hitNumberI = 0;
- 
-      for (auto const& hitI : hitSet.getHits()) {
+        if (hitO.getLayer() == 4) {
 
-	if (hitI.getLayer() == 3) {
+            int hitNumberI = 0;
 
-	  int hitNumberOSAS = 0;
+            for (auto const& hitI : hitSet.getHits()) {
 
-	  for (auto const&  hitOSAS : hitSet.getHits()) {
+                if (hitI.getLayer() == 3) {
 
-	    if (hitOSAS.getLayer() == 9) {
+                    int hitNumberOSAS = 0;
 
-	      TVector3 zIntersection;
-	      bool goodIntersection = intersectStrips(hitO,hitOSAS,_detectorGeometry,zIntersection);
-	      if (goodIntersection) {
+                    for (auto const&  hitOSAS : hitSet.getHits()) {
 
-                TVector3 primaryVertex(0.0,0.0,0.0);
-		Helix helix = initializeHelix(primaryVertex,hitO.getHitPosition(),hitI.getHitPosition(),zIntersection,_detectorGeometry);
-		if (fcf::goodCandidateHelix(helix,_detectorGeometry,trackSelector)) {
-		  //avoids a copy twice
-		  trackHitCandidates.emplace_back(std::vector<int>{hitNumberO,hitNumberI,hitNumberOSAS});
-		}
-	      }
+                        if (hitOSAS.getLayer() == 9) {
 
-	    }
-	    ++hitNumberOSAS;
-	  }
+                            TVector3 zIntersection;
+                            bool goodIntersection = intersectStrips(hitO,hitOSAS,_detectorGeometry,
+                                                                    zIntersection);
+                            if (goodIntersection) {
 
-	}
-	++hitNumberI;
-      }
+                                TVector3 primaryVertex(0.0,0.0,0.0);
+                                Helix helix = initializeHelix(primaryVertex,hitO.getHitPosition(),
+                                                              hitI.getHitPosition(),zIntersection,_detectorGeometry);
+                                if (fcf::goodCandidateHelix(helix,_detectorGeometry,trackSelector)) {
+                                    //avoids a copy twice
+                                    trackHitCandidates.emplace_back(std::vector<int> {hitNumberO,hitNumberI,hitNumberOSAS});
+                                }
+                            }
 
+                        }
+                        ++hitNumberOSAS;
+                    }
+
+                }
+                ++hitNumberI;
+            }
+
+        }
+        ++hitNumberO;
     }
-    ++hitNumberO;
-  }
 }
 
 

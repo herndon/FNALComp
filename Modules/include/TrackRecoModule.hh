@@ -3,7 +3,7 @@
 //============================================================================
 // TrackRecoModule.hh
 // Module for reconstructing hits from strip infomation
-// 
+//
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
 // 2014-06-11
@@ -15,10 +15,10 @@
 
 namespace fc {
 
-  class Config;
-  class DetectorGeometry;
-  class HitSet;
-  class TrackSet;
+class Config;
+class DetectorGeometry;
+class HitSet;
+class TrackSet;
 
 
 ///
@@ -30,34 +30,35 @@ class TrackRecoModule : public Module {
 
 public:
 
-  TrackRecoModule(int, const std::string& inputHitsLabel, 
-		  const std::string& inputTracksLabel,const std::string& outputTracksLabel, 
-		  const Config&, const DetectorGeometry &);
+    TrackRecoModule(int, const std::string& inputHitsLabel,
+                    const std::string& inputTracksLabel,const std::string& outputTracksLabel,
+                    const Config&, const DetectorGeometry &);
 
-  void processEvent(Event&) override;
+    void processEvent(Event&) override;
 
 
 private:
 
-  int _debugLevel;
+    int _debugLevel;
 
-  const std::string _inHitsLabel;
-  const std::string _inTracksLabel;
-  const std::string _outTracksLabel;
+    const std::string _inHitsLabel;
+    const std::string _inTracksLabel;
+    const std::string _outTracksLabel;
 
-  // Configuration object for tracking parameters
-  const Config& _config;
+    // Configuration object for tracking parameters
+    const Config& _config;
 
-  // Detector information
-  const DetectorGeometry & _detectorGeometry;
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
 
-  // Tracking parameters
+    // Tracking parameters
 
-  // !!!!! initialize through configuration
-  double _candidatePTThreshold;
+    // !!!!! initialize through configuration
+    double _candidatePTThreshold;
 
 
-  void recoTracks(const TrackSet& inputCandidateSet, const HitSet& hitSet,TrackSet & trackSet) const;
+    void recoTracks(const TrackSet& inputCandidateSet, const HitSet& hitSet,
+                    TrackSet & trackSet) const;
 
 };
 } // end namespace fc

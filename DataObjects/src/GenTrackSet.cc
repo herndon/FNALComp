@@ -5,25 +5,25 @@
 
 
 void fc::GenTrackSet::insertTrack(GenTrack&& genTrack) {
-  _genTrackSet.push_back(std::move(genTrack));
+    _genTrackSet.push_back(std::move(genTrack));
 }
 
 
-void fc::GenTrackSet::print(ostream& out) const{
+void fc::GenTrackSet::print(ostream& out) const {
 
-  out << "GenTrackSet" << std::endl;
+    out << "GenTrackSet" << std::endl;
 
-  GenTrackSetContainer::size_type numberGenTracks =_genTrackSet.size();
+    GenTrackSetContainer::size_type numberGenTracks =_genTrackSet.size();
 
-  out << "Number Gen Tracks: " << numberGenTracks << std::endl; 
+    out << "Number Gen Tracks: " << numberGenTracks << std::endl;
 
-  int genTrackNumber = 0;
+    int genTrackNumber = 0;
 
-  for (auto const& genTrack: getGenTracks()){
- 
-    out << "Gen Track number: " << genTrackNumber << std::endl;
-    genTrack.print(out); 
-    ++genTrackNumber;
-  } // end gen track loop
+    for (auto const& genTrack: getGenTracks()) {
+
+        out << "Gen Track number: " << genTrackNumber << std::endl;
+        genTrack.print(out);
+        ++genTrackNumber;
+    } // end gen track loop
 
 }

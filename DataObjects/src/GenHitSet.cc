@@ -10,21 +10,21 @@ void fc::GenHitSet::insertGenHit(GenHit&& hit) {
     _genHitSet.push_back(std::move(hit));
 }
 
-void fc::GenHitSet::print(ostream& out) const{
+void fc::GenHitSet::print(ostream& out) const {
 
-  out << "GenHitSet" << std::endl;
- 
-  GenHitSetContainer::size_type numberGenHits =_genHitSet.size();
+    out << "GenHitSet" << std::endl;
 
-  int hitNumber = 0;
+    GenHitSetContainer::size_type numberGenHits =_genHitSet.size();
 
-  out << "Number GenHits: " << numberGenHits << std::endl; 
+    int hitNumber = 0;
 
-  for (auto const& hit : getGenHits()){
-    out << "GenHit: " << hitNumber  << std::endl; 
-    hit.print(out);
-    ++hitNumber;
-  } // end hit loop
+    out << "Number GenHits: " << numberGenHits << std::endl;
+
+    for (auto const& hit : getGenHits()) {
+        out << "GenHit: " << hitNumber  << std::endl;
+        hit.print(out);
+        ++hitNumber;
+    } // end hit loop
 
 
 }

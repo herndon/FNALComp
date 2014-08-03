@@ -3,7 +3,7 @@
 //============================================================================
 // HitCompareModule.hh
 // Module for comparing reconstructing hit position to generator hit positions
-// 
+//
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
 // 2014-06-12
@@ -28,37 +28,38 @@ class DetectorGeometry;
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-12
 ///
 
-  class HitCompareModule : public Module {
+class HitCompareModule : public Module {
 
 public:
 
-  HitCompareModule(int, const std::string& iInputGenHitsLabel, const std::string& iInputRecHitsLabel,
-		   const DetectorGeometry & );
+    HitCompareModule(int, const std::string& iInputGenHitsLabel,
+                     const std::string& iInputRecHitsLabel,
+                     const DetectorGeometry & );
 
-  void processEvent(fc::Event&) override;
+    void processEvent(fc::Event&) override;
 
 private:
 
-  int _debugLevel;
+    int _debugLevel;
 
-  // Detector information
-  const DetectorGeometry & _detectorGeometry;
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
 
-  const std::string _genHitsLabel;
-  const std::string _recHitsLabel;
+    const std::string _genHitsLabel;
+    const std::string _recHitsLabel;
 
-  // Comparison of hits
+    // Comparison of hits
 
-  void compareHits(const GenHitSet &, const HitSet &) const;
+    void compareHits(const GenHitSet &, const HitSet &) const;
 
-  double compareHitPositions(const GenHit &, const Hit &) const;
+    double compareHitPositions(const GenHit &, const Hit &) const;
 
-  // Histograms
-  // ROOT will delete these when the TFile to which the are attached is deleted
-  std::vector<TH1F *> deltaHitPositions;
-    
+    // Histograms
+    // ROOT will delete these when the TFile to which the are attached is deleted
+    std::vector<TH1F *> deltaHitPositions;
 
-  void initializeHistograms();
+
+    void initializeHistograms();
 
 
 };

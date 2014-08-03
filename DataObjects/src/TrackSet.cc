@@ -5,25 +5,25 @@
 
 
 void fc::TrackSet::insertTrack(Track&& track) {
-  _trackSet.push_back(std::move(track));
+    _trackSet.push_back(std::move(track));
 }
 
-void fc::TrackSet::print(ostream& out) const{
+void fc::TrackSet::print(ostream& out) const {
 
-  out << "TrackSet " << std::endl;
+    out << "TrackSet " << std::endl;
 
-  TrackSetContainer::size_type numberTracks =_trackSet.size();
+    TrackSetContainer::size_type numberTracks =_trackSet.size();
 
-  out << "Number Tracks: " << numberTracks << std::endl; 
+    out << "Number Tracks: " << numberTracks << std::endl;
 
-  int trackNumber = 0;
+    int trackNumber = 0;
 
-  for (auto const& track: getTracks()){
- 
-    out << "Track number: " << trackNumber << std::endl;
-    track.print(out); 
-    ++trackNumber;
+    for (auto const& track: getTracks()) {
 
-  } // end track loop
+        out << "Track number: " << trackNumber << std::endl;
+        track.print(out);
+        ++trackNumber;
+
+    } // end track loop
 
 }

@@ -8,130 +8,141 @@
 
 // !!!!! Do we need this one
 fc::TrackSetIO::TrackSetIO(const DetectorGeometry & detectorGeometry):
-  _version(1),
-  _detectorGeometry(detectorGeometry) {
+    _version(1),
+    _detectorGeometry(detectorGeometry) {
 
 }
 
 
-void fc::TrackSetIO::writeEvent(const TrackSet & trackSet, std::ofstream & trackdata) const{
+void fc::TrackSetIO::writeEvent(const TrackSet & trackSet,
+                                std::ofstream & trackdata) const {
 
-  // set precision output to precision of a doulbe + 2 digits to avoid rounding problems
-  trackdata.precision(std::numeric_limits<double>::digits10 + 2);
+    // set precision output to precision of a doulbe + 2 digits to avoid rounding problems
+    trackdata.precision(std::numeric_limits<double>::digits10 + 2);
 
-  trackdata << "Tracks" << std::endl;
-  trackdata << _version << std::endl;
+    trackdata << "Tracks" << std::endl;
+    trackdata << _version << std::endl;
 
-  TrackSetContainer::size_type numberTracks = trackSet.getTracks().size();
-  trackdata << numberTracks << std::endl;
+    TrackSetContainer::size_type numberTracks = trackSet.getTracks().size();
+    trackdata << numberTracks << std::endl;
 
-  int trackNumber;
+    int trackNumber;
 
-  for (auto const& track : trackSet.getTracks()){
+    for (auto const& track : trackSet.getTracks()) {
 
-    // Extract a copy of the lorentzVector since functions in it are not const
-    TLorentzVector lorentzVector = track.getLorentzVector();
+        // Extract a copy of the lorentzVector since functions in it are not const
+        TLorentzVector lorentzVector = track.getLorentzVector();
 
-    trackdata << trackNumber << std::endl;
+        trackdata << trackNumber << std::endl;
 
-    trackdata << track.getCharge() << std::endl;
+        trackdata << track.getCharge() << std::endl;
 
-    trackdata << lorentzVector.Px() << std::endl;
-    trackdata << lorentzVector.Py() << std::endl;
-    trackdata << lorentzVector.Pz() << std::endl;
-    trackdata << lorentzVector.E()  << std::endl;
+        trackdata << lorentzVector.Px() << std::endl;
+        trackdata << lorentzVector.Py() << std::endl;
+        trackdata << lorentzVector.Pz() << std::endl;
+        trackdata << lorentzVector.E()  << std::endl;
 
-    // Point of clossest approach to the the reference point 0 0 0 and sign
+        // Point of clossest approach to the the reference point 0 0 0 and sign
 
-    trackdata << std::abs(track.getHelix().getDr())*std::cos(track.getHelix().getPhi0()) <<std::endl;
-    trackdata << std::abs(track.getHelix().getDr())*std::sin(track.getHelix().getPhi0()) <<std::endl;
-    trackdata << track.getHelix().getDz() <<std::endl;
+        trackdata << std::abs(track.getHelix().getDr())*std::cos(
+                      track.getHelix().getPhi0()) <<std::endl;
+        trackdata << std::abs(track.getHelix().getDr())*std::sin(
+                      track.getHelix().getPhi0()) <<std::endl;
+        trackdata << track.getHelix().getDz() <<std::endl;
 
-    int d0Sign;
-    if (std::signbit(track.getHelix().getDr())) {d0Sign = -1;} else {d0Sign = 1;}
-    trackdata << d0Sign << std::endl;
+        int d0Sign;
+        if (std::signbit(track.getHelix().getDr())) {
+            d0Sign = -1;
+        }
+        else {
+            d0Sign = 1;
+        }
+        trackdata << d0Sign << std::endl;
 
 
-    TrackHitContainer::size_type numberHits = track.getHits().size();
+        TrackHitContainer::size_type numberHits = track.getHits().size();
 
-    trackdata << numberHits << std::endl;
+        trackdata << numberHits << std::endl;
 
-    // !!!!! Nice place for that reference bug 
-    for (auto const& hit : track.getHits()){
-      trackdata << hit << std::endl;
-    } // end hit loop
+        // !!!!! Nice place for that reference bug
+        for (auto const& hit : track.getHits()) {
+            trackdata << hit << std::endl;
+        } // end hit loop
 
-    ++trackNumber;
+        ++trackNumber;
 
-  } // end track loop
+    } // end track loop
 }
 
 void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
 
-  std::string eventDataObject;
-  int version;
-  int numberTracks;
-  int trackNumber;
-  int charge;
-  std::array<double,4> p4;
-  std::array<double,3> x3;
-  int d0Sign;
-  int numberHits;
-  int hitNumber;
+    std::string eventDataObject;
+    int version;
+    int numberTracks;
+    int trackNumber;
+    int charge;
+    std::array<double,4> p4;
+    std::array<double,3> x3;
+    int d0Sign;
+    int numberHits;
+    int hitNumber;
 
-  trackdata >> eventDataObject;
+    trackdata >> eventDataObject;
 
-  if (eventDataObject != "Tracks"){
-    std::string wrongEventDataObject = "TrackSet::readEvent: attempted to read wrong data object" + eventDataObject;
-    throw Exception(wrongEventDataObject);  
-  }
+    if (eventDataObject != "Tracks") {
+        std::string wrongEventDataObject =
+            "TrackSet::readEvent: attempted to read wrong data object" + eventDataObject;
+        throw Exception(wrongEventDataObject);
+    }
 
-  trackdata >> version;
+    trackdata >> version;
 
-  if (version != _version) {
-    std::string wrongStreamerVersion = "TrackSet::readEvent: attempted to read version " + std::to_string(version) + " using streamer version " + std::to_string(_version);
-    throw Exception(wrongStreamerVersion);  
-  }
+    if (version != _version) {
+        std::string wrongStreamerVersion =
+            "TrackSet::readEvent: attempted to read version " + std::to_string(
+                version) + " using streamer version " + std::to_string(_version);
+        throw Exception(wrongStreamerVersion);
+    }
 
 
-  trackdata >> numberTracks;
+    trackdata >> numberTracks;
 
-  for (int iiTrack = 0; iiTrack < numberTracks; ++iiTrack) {
- 
-    trackdata >> trackNumber;
+    for (int iiTrack = 0; iiTrack < numberTracks; ++iiTrack) {
 
-    trackdata >> charge;
+        trackdata >> trackNumber;
 
-    trackdata >> p4[0];
-    trackdata >> p4[1];
-    trackdata >> p4[2];
-    trackdata >> p4[3];
+        trackdata >> charge;
 
-    TLorentzVector p(p4[0],p4[1],p4[2],p4[3]);
- 
-    trackdata >> x3[0];
-    trackdata >> x3[1];
-    trackdata >> x3[2];
+        trackdata >> p4[0];
+        trackdata >> p4[1];
+        trackdata >> p4[2];
+        trackdata >> p4[3];
 
-    TVector3 dr(x3[0],x3[1],x3[2]);
- 
-    trackdata >> d0Sign;
+        TLorentzVector p(p4[0],p4[1],p4[2],p4[3]);
 
-    Track track(p,charge,dr,d0Sign,_detectorGeometry);
-    
-    trackdata >> numberHits;
- 
+        trackdata >> x3[0];
+        trackdata >> x3[1];
+        trackdata >> x3[2];
 
-   for (int iiHit = 0; iiHit < numberHits; ++iiHit) {
+        TVector3 dr(x3[0],x3[1],x3[2]);
 
-      trackdata >> hitNumber;
+        trackdata >> d0Sign;
 
-      track.insertHit(hitNumber);
+        Track track(p,charge,dr,d0Sign,_detectorGeometry);
 
-    } // end hit loop
- 
-   trackSet.insertTrack(std::move(track));
+        trackdata >> numberHits;
 
-  } // end track loop 
+
+        for (int iiHit = 0; iiHit < numberHits; ++iiHit) {
+
+            trackdata >> hitNumber;
+
+            track.insertHit(hitNumber);
+
+        } // end hit loop
+
+        trackSet.insertTrack(std::move(track));
+
+    } // end track loop
 
 }

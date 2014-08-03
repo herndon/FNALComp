@@ -11,33 +11,35 @@
 // 2014-06-08
 //============================================================================
 #include <vector>
-#include "DataObjects/include/Hit.hh" 
+#include "DataObjects/include/Hit.hh"
 
 namespace fc {
 
-  typedef std::vector<Hit> HitSetContainer;
+typedef std::vector<Hit> HitSetContainer;
 
 
 ///
-/// Class HitSet: 
+/// Class HitSet:
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-06-08
-/// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a> 
+/// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a>
 ///
 
 class HitSet {
 public:
 
-  const HitSetContainer & getHits() const {return _hitSet;};
+    const HitSetContainer & getHits() const {
+        return _hitSet;
+    };
 
 
-  //void insertHit(const Hit&);
-  void insertHit(Hit&&);
+    //void insertHit(const Hit&);
+    void insertHit(Hit&&);
 
-  void print(ostream& out) const;
+    void print(ostream& out) const;
 
 private:
 
-  HitSetContainer _hitSet;
+    HitSetContainer _hitSet;
 };
 } // end namespace fc
 #endif // DataObjects_HitSet_hh

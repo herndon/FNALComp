@@ -2,10 +2,10 @@
 #define Modules_TrackGenModule_hh
 //============================================================================
 // TrackGenModule.hh
-// Module for generating tracks 
+// Module for generating tracks
 // Track data is stored in bianary format
 // See  dataFormat.pdf for data format information
-// 
+//
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
 // 2014-06-08
@@ -32,27 +32,27 @@ class TrackGenModule : public Module {
 
 public:
 
-  TrackGenModule(int debugLevel, int numberOfTracks,
-		 const std::string& iTracksLabel, //label used for the generated tracks
-		 const DetectorGeometry &,Random &);
+    TrackGenModule(int debugLevel, int numberOfTracks,
+                   const std::string& iTracksLabel, //label used for the generated tracks
+                   const DetectorGeometry &,Random &);
 
-  void processEvent(Event& ) override;
+    void processEvent(Event& ) override;
 
 
 private:
 
-  int _debugLevel;
-  int _numberOfTracks;
+    int _debugLevel;
+    int _numberOfTracks;
 
-  const std::string _tracksLabel;
+    const std::string _tracksLabel;
 
-  // Detector information
-  const DetectorGeometry & _detectorGeometry;
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
 
-  // Random numbers
-  Random &  _random;
+    // Random numbers
+    Random &  _random;
 
-  GenTrack generateTrack() const;
+    GenTrack generateTrack() const;
 
 };
 

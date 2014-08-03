@@ -4,7 +4,7 @@
 // TrackSet.hh
 // header with class definition of the TrackSet
 // A vector of Tracks
-// Map elements are int,Track pairs of track number (Key) and Track (value) information 
+// Map elements are int,Track pairs of track number (Key) and Track (value) information
 // See <A HREF="doc/notes/Track.pdf">Track.pdf</A> for more information
 //
 //
@@ -17,26 +17,28 @@
 
 namespace fc {
 
-  typedef std::vector<Track> TrackSetContainer;
+typedef std::vector<Track> TrackSetContainer;
 
 ///
-/// Class TrackSet: 
+/// Class TrackSet:
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-06-06
-/// For more information see <a href="../notes/Track.pdf">Track.pdf</a> 
+/// For more information see <a href="../notes/Track.pdf">Track.pdf</a>
 ///
 
 class TrackSet {
 public:
 
-  const TrackSetContainer & getTracks() const { return _trackSet;};
+    const TrackSetContainer & getTracks() const {
+        return _trackSet;
+    };
 
-  void insertTrack(Track &&);
+    void insertTrack(Track &&);
 
-  void print(ostream& out) const;
+    void print(ostream& out) const;
 
 private:
 
-  TrackSetContainer _trackSet;
+    TrackSetContainer _trackSet;
 };
 } // end namespace fc
 

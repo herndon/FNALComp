@@ -9,44 +9,46 @@
 #include "Services/include/Config.hh"
 
 
-fc::TrackCandidateModule::TrackCandidateModule(int debugLevel, 
-				     const std::string& inputHitsLabel, const std::string& outputTracksLabel,
-				     const Config& config, const DetectorGeometry & detectorGeometry):
-  _debugLevel(debugLevel),
-  _inHitsLabel(inputHitsLabel),
-  _outTracksLabel(outputTracksLabel),
-  _config(config),
-  _detectorGeometry(detectorGeometry){
+fc::TrackCandidateModule::TrackCandidateModule(int debugLevel,
+        const std::string& inputHitsLabel, const std::string& outputTracksLabel,
+        const Config& config, const DetectorGeometry & detectorGeometry):
+    _debugLevel(debugLevel),
+    _inHitsLabel(inputHitsLabel),
+    _outTracksLabel(outputTracksLabel),
+    _config(config),
+    _detectorGeometry(detectorGeometry) {
 }
 
 void fc::TrackCandidateModule::processEvent(Event& event)
 {
 
-  Handle<HitSet> recoHitSet = event.get<HitSet>(_inHitsLabel);
-  
-  std::unique_ptr<TrackSet> recoTrackCandidateSet{ new TrackSet };
+    Handle<HitSet> recoHitSet = event.get<HitSet>(_inHitsLabel);
 
-  findTrackCandidates(*recoHitSet,*recoTrackCandidateSet);
+    std::unique_ptr<TrackSet> recoTrackCandidateSet { new TrackSet };
 
-  event.put(_outTracksLabel,std::move(recoTrackCandidateSet) );
+    findTrackCandidates(*recoHitSet,*recoTrackCandidateSet);
+
+    event.put(_outTracksLabel,std::move(recoTrackCandidateSet) );
 }
 
-void fc::TrackCandidateModule::findTrackCandidates(const HitSet& recoHitSet,TrackSet & recoTrackCandidateSet) const {
+void fc::TrackCandidateModule::findTrackCandidates(const HitSet& recoHitSet,
+        TrackSet & recoTrackCandidateSet) const {
 
 
-  TrackCandidateStrategy2X1SAS candStrategy(_debugLevel,_detectorGeometry,_config.getMinCandPTCut());
+    TrackCandidateStrategy2X1SAS candStrategy(_debugLevel,_detectorGeometry,
+            _config.getMinCandPTCut());
 
-  TrackSetContainer trackCandidateSet;
-  
-  candStrategy.findTrackCandidates(recoHitSet,trackCandidateSet);
+    TrackSetContainer trackCandidateSet;
 
-  for (auto& track : trackCandidateSet){
-    recoTrackCandidateSet.insertTrack(std::move(track));
-  }
+    candStrategy.findTrackCandidates(recoHitSet,trackCandidateSet);
 
-  if (_debugLevel>=2){
-    //std::cout << "Reconstructed track set" << std::endl;
-    //recoTrackSet.print(std::cout);
-  }
+    for (auto& track : trackCandidateSet) {
+        recoTrackCandidateSet.insertTrack(std::move(track));
+    }
+
+    if (_debugLevel>=2) {
+        //std::cout << "Reconstructed track set" << std::endl;
+        //recoTrackSet.print(std::cout);
+    }
 
 }

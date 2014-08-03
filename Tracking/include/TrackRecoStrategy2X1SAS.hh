@@ -16,22 +16,24 @@ namespace fc {
 class DetectorGeometry;
 class HitSet;
 
-  class TrackRecoStrategy2X1SAS {
+class TrackRecoStrategy2X1SAS {
 
- 
-  public:
 
- 
+public:
+
+
     TrackRecoStrategy2X1SAS(int debugLevel,const DetectorGeometry& detectorGeometry,
-			    double minPTCut,double maxChiNDofCut);
-   
-    void recoTracks(const HitSet& recoHitSet,TrackSetContainer& trackCandidateSet) const;
+                            double minPTCut,double maxChiNDofCut);
 
-    void findTracks(const HitSet& recoHitSet,TrackSetContainer& trackCandidateSet) const;;
- 
+    void recoTracks(const HitSet& recoHitSet,
+                    TrackSetContainer& trackCandidateSet) const;
 
-  private:
-     int _debugLevel;
+    void findTracks(const HitSet& recoHitSet,
+                    TrackSetContainer& trackCandidateSet) const;;
+
+
+private:
+    int _debugLevel;
 
     // Detector information
     const DetectorGeometry & _detectorGeometry;
@@ -39,7 +41,7 @@ class HitSet;
     double _minPTCut;
     double _maxChi2NDofCut;
 
-  };
+};
 
 
 } // end namescape fc

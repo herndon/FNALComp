@@ -11,32 +11,34 @@
 // 2014-07-01
 //============================================================================
 #include <vector>
-#include "DataObjects/include/GenHit.hh" 
+#include "DataObjects/include/GenHit.hh"
 
 namespace fc {
 
-  typedef std::vector<GenHit> GenHitSetContainer;
+typedef std::vector<GenHit> GenHitSetContainer;
 
 
 ///
-/// Class GenHitSet: 
+/// Class GenHitSet:
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-07-01
-/// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a> 
+/// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a>
 ///
 
 class GenHitSet {
 public:
 
-  const GenHitSetContainer & getGenHits() const {return _genHitSet;};
+    const GenHitSetContainer & getGenHits() const {
+        return _genHitSet;
+    };
 
 
-  void insertGenHit(GenHit&&);
+    void insertGenHit(GenHit&&);
 
-  void print(ostream& out) const;
+    void print(ostream& out) const;
 
 private:
 
-  GenHitSetContainer _genHitSet;
+    GenHitSetContainer _genHitSet;
 };
 } // end namespace fc
 #endif // DataObjects_GenHitSet_hh

@@ -15,11 +15,13 @@
 
 namespace fc {
 
-  class DetectorGeometry;
-  class HitSet;
-  class Track;
+class DetectorGeometry;
+class HitSet;
+class Track;
 
-  const Track buildTrack(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, const DetectorGeometry & detectorGeometry, int debugLevel);
+const Track buildTrack(const HitSet & hitSet,
+                       const std::vector<int> & trackHitCandidate,
+                       const DetectorGeometry & detectorGeometry, int debugLevel);
 
 } // end namescape fc
 

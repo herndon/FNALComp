@@ -16,26 +16,28 @@
 
 namespace fc {
 
-  typedef std::vector<GenTrack> GenTrackSetContainer;
+typedef std::vector<GenTrack> GenTrackSetContainer;
 
 ///
-/// Class GenTrackSet: 
+/// Class GenTrackSet:
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-06-06
-/// For more information see <a href="../notes/Track.pdf">Track.pdf</a> 
+/// For more information see <a href="../notes/Track.pdf">Track.pdf</a>
 ///
 
 class GenTrackSet {
 public:
 
-  const GenTrackSetContainer & getGenTracks() const { return _genTrackSet;};
- 
-  void insertTrack(GenTrack&&);
+    const GenTrackSetContainer & getGenTracks() const {
+        return _genTrackSet;
+    };
 
-  void print(ostream& out) const;
+    void insertTrack(GenTrack&&);
+
+    void print(ostream& out) const;
 
 private:
 
-  GenTrackSetContainer _genTrackSet;
+    GenTrackSetContainer _genTrackSet;
 };
 } // end namespace fc
 

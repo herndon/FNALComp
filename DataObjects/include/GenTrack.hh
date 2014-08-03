@@ -9,7 +9,7 @@
 //
 // GenTrack Helix parameter definition
 //
-// Units are in GeV 
+// Units are in GeV
 //
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
@@ -29,7 +29,7 @@ class Helix;
 ///
 /// Class GenTrack: TLorentzVector to track momentum, and TVector3 initial position
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-07-24
-/// For more information see <a href="../notes/Track.pdf">Track.pdf</a> 
+/// For more information see <a href="../notes/Track.pdf">Track.pdf</a>
 ///
 
 class GenTrack {
@@ -37,26 +37,32 @@ public:
 
 // Constructors
 
-  GenTrack(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr);
+    GenTrack(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr);
 
-  // Get objects
+    // Get objects
 
-  const TLorentzVector&  getLorentzVector() const {return _lorentzVector;}
-  const TVector3& getPosition() const {return _dr;}
-  int getCharge() const {return _charge;}
+    const TLorentzVector&  getLorentzVector() const {
+        return _lorentzVector;
+    }
+    const TVector3& getPosition() const {
+        return _dr;
+    }
+    int getCharge() const {
+        return _charge;
+    }
 
-  // convert to helix
-  const Helix makeHelix(const TVector3& bField,double curvatureC) const;
+    // convert to helix
+    const Helix makeHelix(const TVector3& bField,double curvatureC) const;
 
-  // Print method
+    // Print method
 
-  void print(ostream& out) const;
+    void print(ostream& out) const;
 
 private:
 
-  TLorentzVector _lorentzVector;
-  int _charge;
-  TVector3 _dr; // point of clossest approach to 0,0,0cp 
+    TLorentzVector _lorentzVector;
+    int _charge;
+    TVector3 _dr; // point of clossest approach to 0,0,0cp
 
 };
 } // end namescape fc

@@ -15,17 +15,19 @@ class Random {
 
 public:
 
-  explicit Random(int);
+    explicit Random(int);
 
-  std::default_random_engine & getEngine() { return engine; }
+    std::default_random_engine & getEngine() {
+        return engine;
+    }
 
-  double getUniformDouble (double min, double max);
+    double getUniformDouble (double min, double max);
 
-  double getNormalDouble (double mean, double dev);
+    double getNormalDouble (double mean, double dev);
 
 private:
 
-  std::default_random_engine engine;
+    std::default_random_engine engine;
 
 };
 }// end namespace fc

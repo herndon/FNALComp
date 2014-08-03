@@ -24,28 +24,31 @@ namespace fc {
 
 class UniqueRootDirectory {
 
- 
+
 public:
 
-  UniqueRootDirectory(std::string const& dirName);
-  ~UniqueRootDirectory();
+    UniqueRootDirectory(std::string const& dirName);
+    ~UniqueRootDirectory();
 
-  TDirectory* directory() const { return _tdir; }
+    TDirectory* directory() const {
+        return _tdir;
+    }
 
-  // For objects such as TGraphs that are not automagically written to the output file,
-  // add this object to the list of thing to be written.
-  void addToFile ( TNamed* obj, std::string const& name, std::string const& title);
+    // For objects such as TGraphs that are not automagically written to the output file,
+    // add this object to the list of thing to be written.
+    void addToFile ( TNamed* obj, std::string const& name,
+                     std::string const& title);
 
 private:
 
-  // Save the current root directory at c'tor time.  Restore it at d'tor time.
-  TDirectory* _savedDirectory;
+    // Save the current root directory at c'tor time.  Restore it at d'tor time.
+    TDirectory* _savedDirectory;
 
-  // Name of the directory to create.
-  std::string _name;
+    // Name of the directory to create.
+    std::string _name;
 
-  // The current TDirectory after it is created.
-  TDirectory* _tdir;
+    // The current TDirectory after it is created.
+    TDirectory* _tdir;
 
 };
 } // end namespace fc

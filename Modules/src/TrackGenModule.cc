@@ -11,58 +11,63 @@
 #include "TLorentzVector.h"
 
 
-fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks, const std::string& iTracksLabel, const DetectorGeometry & detectorGeometry, Random & random):
-  _debugLevel(debugLevel),
-  _numberOfTracks(numberOfTracks),
-  _tracksLabel(iTracksLabel),
-  _detectorGeometry(detectorGeometry),
-  _random(random)
+fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks,
+                                   const std::string& iTracksLabel, const DetectorGeometry & detectorGeometry,
+                                   Random & random):
+    _debugLevel(debugLevel),
+    _numberOfTracks(numberOfTracks),
+    _tracksLabel(iTracksLabel),
+    _detectorGeometry(detectorGeometry),
+    _random(random)
 {
 }
 
 void fc::TrackGenModule::processEvent(fc::Event& event)
 {
 
-  std::unique_ptr<GenTrackSet> genTrackSet{ new GenTrackSet() };
+    std::unique_ptr<GenTrackSet> genTrackSet { new GenTrackSet() };
 
-  for (int iiTrack = 0; iiTrack < _numberOfTracks; ++iiTrack) {
+    for (int iiTrack = 0; iiTrack < _numberOfTracks; ++iiTrack) {
 
-    genTrackSet->insertTrack(std::move(generateTrack()));
+        genTrackSet->insertTrack(std::move(generateTrack()));
 
-  } // end track loop
-  event.put(_tracksLabel,std::move(genTrackSet));
+    } // end track loop
+    event.put(_tracksLabel,std::move(genTrackSet));
 }
 
 
 
-fc::GenTrack fc::TrackGenModule::generateTrack() const{
+fc::GenTrack fc::TrackGenModule::generateTrack() const {
 
-  // Generate track data
-    
-  // Track pT, phi0 and charge
-  double trackPT = _random.getUniformDouble(20.0,40.0);
-  int trackCharge = (_random.getUniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
-  double trackPhi0 = _random.getUniformDouble(-M_PI/24.0,M_PI/24.0) + M_PI/2.0;
-  double trackTanL = _random.getUniformDouble(-0.1,0.1); 
-  double trackD0 = _random.getUniformDouble(-0.01,0.01); 
-  double trackZ0 = _random.getUniformDouble(-0.01,0.01); 
+    // Generate track data
+
+    // Track pT, phi0 and charge
+    double trackPT = _random.getUniformDouble(20.0,40.0);
+    int trackCharge = (_random.getUniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
+    double trackPhi0 = _random.getUniformDouble(-M_PI/24.0,M_PI/24.0) + M_PI/2.0;
+    double trackTanL = _random.getUniformDouble(-0.1,0.1);
+    double trackD0 = _random.getUniformDouble(-0.01,0.01);
+    double trackZ0 = _random.getUniformDouble(-0.01,0.01);
 
 
-  if (_debugLevel >=5 ) {
-    std::cout << "Track pT " << trackPT << std::endl;
-    std::cout << "Track Charge " << trackCharge << std::endl;
-    std::cout << "Track phi0 " << trackPhi0 << std::endl;
-  }
- 
-  double phi0ToD0 = 0.0;
-  if ( trackPhi0>=M_PI/2.0) phi0ToD0 = trackPhi0 - M_PI/2.0;
-  if ( trackPhi0<M_PI/2.0) phi0ToD0  = trackPhi0 + M_PI/2.0;
+    if (_debugLevel >=5 ) {
+        std::cout << "Track pT " << trackPT << std::endl;
+        std::cout << "Track Charge " << trackCharge << std::endl;
+        std::cout << "Track phi0 " << trackPhi0 << std::endl;
+    }
 
-  TLorentzVector lorentzVector(trackPT*std::cos(trackPhi0),trackPT*std::sin(trackPhi0),trackTanL*trackPT,trackPT*std::sqrt(1+trackTanL*trackTanL));
-  TVector3 position(trackD0*std::cos(phi0ToD0),trackD0*std::sin(phi0ToD0),trackZ0);
-  GenTrack genTrack(lorentzVector,trackCharge,position);
+    double phi0ToD0 = 0.0;
+    if ( trackPhi0>=M_PI/2.0) phi0ToD0 = trackPhi0 - M_PI/2.0;
+    if ( trackPhi0<M_PI/2.0) phi0ToD0  = trackPhi0 + M_PI/2.0;
 
-  return genTrack;
+    TLorentzVector lorentzVector(trackPT*std::cos(trackPhi0),
+                                 trackPT*std::sin(trackPhi0),trackTanL*trackPT,
+                                 trackPT*std::sqrt(1+trackTanL*trackTanL));
+    TVector3 position(trackD0*std::cos(phi0ToD0),trackD0*std::sin(phi0ToD0),
+                      trackZ0);
+    GenTrack genTrack(lorentzVector,trackCharge,position);
+
+    return genTrack;
 
 }
 

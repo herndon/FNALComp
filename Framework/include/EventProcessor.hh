@@ -9,13 +9,13 @@
 class TFile;
 
 namespace fc {
-  class Module;
+class Module;
 
-  class EventProcessor {
-  public:
+class EventProcessor {
+public:
     EventProcessor(Source*iSource, std::shared_ptr<TFile> rootFile):
-      _source(iSource),
-      _rootFile(rootFile)
+        _source(iSource),
+        _rootFile(rootFile)
     {}
     EventProcessor( const EventProcessor& ) = delete;
 
@@ -25,12 +25,12 @@ namespace fc {
     void processEvents();
     void endJob();
 
-  private:
+private:
     void endRoot();
     std::vector<std::unique_ptr<Module>> _modules;
     std::unique_ptr<Source> _source;
     std::shared_ptr<TFile> _rootFile;
-  };
+};
 }
 
 #endif //Framework_EventProcessor_hh

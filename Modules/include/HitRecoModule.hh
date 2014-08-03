@@ -3,7 +3,7 @@
 //============================================================================
 // HitRecoModule.hh
 // Module for reconstructing hits from strip infomation
-// 
+//
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
 // 2014-06-11
@@ -32,30 +32,32 @@ class HitRecoModule : public Module {
 
 public:
 
-  HitRecoModule(int, const std::string& iInputStripsLabel, const std::string& iOutputHitsLabel, const DetectorGeometry &);
+    HitRecoModule(int, const std::string& iInputStripsLabel,
+                  const std::string& iOutputHitsLabel, const DetectorGeometry &);
 
-  void processEvent(Event& ) override;
+    void processEvent(Event& ) override;
 
 
 private:
 
-  int _debugLevel;
-  const std::string _inStripsLabel;
-  const std::string _outHitsLabel;
+    int _debugLevel;
+    const std::string _inStripsLabel;
+    const std::string _outHitsLabel;
 
-  // Detector information
-  const DetectorGeometry & _detectorGeometry;
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
 
-  void recoHits(const StripSet &,HitSet &) const;
+    void recoHits(const StripSet &,HitSet &) const;
 
-  void recoHitsLayer(const StripSet &, int layer, HitSet &) const;
+    void recoHitsLayer(const StripSet &, int layer, HitSet &) const;
 
-  bool findCluster(LayerStripMap::const_iterator& iter,LayerStripMap::const_iterator& end,
-		   const StripSet&,int layer,int& initialStrip, std::vector<int>& stripAdcs) const;
+    bool findCluster(LayerStripMap::const_iterator& iter,
+                     LayerStripMap::const_iterator& end,
+                     const StripSet&,int layer,int& initialStrip, std::vector<int>& stripAdcs) const;
 
-  Hit buildHit(int, int,const std::vector<int> &) const;
+    Hit buildHit(int, int,const std::vector<int> &) const;
 
-  //double calculateStripHitPositionFromCluster(int, const std::vector<int> &) const;
+    //double calculateStripHitPositionFromCluster(int, const std::vector<int> &) const;
 
 
 };

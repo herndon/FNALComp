@@ -18,9 +18,10 @@ class DetectorGeoemtry;
 namespace fcf {
 
 
-    // Track selection filters
-  void simpleTrackSetFilter(const fc::DetectorGeometry&,const TrackingSelector&,fc::TrackSetContainer &);
-  void contentionTrackSetFilter(fc::TrackSetContainer &);
+// Track selection filters
+void simpleTrackSetFilter(const fc::DetectorGeometry&,const TrackingSelector&,
+                          fc::TrackSetContainer &);
+void contentionTrackSetFilter(fc::TrackSetContainer &);
 
 
 

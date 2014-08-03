@@ -18,8 +18,10 @@ namespace fc {
 class DetectorGeometry;
 class Helix;
 
-  bool intersectWithLayer(const Helix& helix, int layer, const fc::DetectorGeometry & detectorGeometry,TVector3 & hitPosition);
-  bool intersectWithPlane(const Helix& helix, const TVector3 & center, const TVector3 & normal,double & phi,TVector3 & hitPosition);
+bool intersectWithLayer(const Helix& helix, int layer,
+                        const fc::DetectorGeometry & detectorGeometry,TVector3 & hitPosition);
+bool intersectWithPlane(const Helix& helix, const TVector3 & center,
+                        const TVector3 & normal,double & phi,TVector3 & hitPosition);
 
 } // end namescape fc
 
