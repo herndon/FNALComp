@@ -46,8 +46,7 @@ public:
   int getCharge() const {return _charge;}
 
   // convert to helix
-  const Helix makeHelix(double alpha) const;
-  const Helix makeHelix() const;
+  const Helix makeHelix(const TVector3& bField,double curvatureC) const;
 
   // Print method
 
@@ -58,6 +57,7 @@ private:
   TLorentzVector _lorentzVector;
   int _charge;
   TVector3 _dr; // point of clossest approach to 0,0,0cp 
+
 };
 } // end namescape fc
 

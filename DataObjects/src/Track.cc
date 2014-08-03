@@ -23,7 +23,7 @@ fc::Track::Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nD
 // Lorentz vector initialization
 fc::Track::Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign,const DetectorGeometry & detectorGeometry):
   _helix(dr.Perp()*d0sign,lorentzVector.Phi()+M_PI/2.0,-1.0*charge/lorentzVector.Pt(),dr.z(),lorentzVector.Pz()/ lorentzVector.Pt(),
-  detectorGeometry.getCurvatureCInField(detectorGeometry.getBField())),
+	 detectorGeometry.getCurvatureCInField(detectorGeometry.getBField()),detectorGeometry.getCurvatureC()),
   _covMatrix(_sDim,_sDim),
   _chi2(0.0),
   _nDof(0) {

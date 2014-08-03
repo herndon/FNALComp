@@ -113,15 +113,16 @@ const fc::Track & fc::TrackCompareModule::matchTrack(const GenTrack & genTrack, 
 
 double fc::TrackCompareModule::deltaTracks(const GenTrack & genTrack, const Track& recoTrack) const{
 
-  return std::sqrt((genTrack.makeHelix().getKappa()-recoTrack.getHelix().getKappa())*(genTrack.makeHelix().getKappa()-recoTrack.getHelix().getKappa())+
-		   (genTrack.makeHelix().getPhi0()-recoTrack.getHelix().getPhi0())*(genTrack.makeHelix().getPhi0()-recoTrack.getHelix().getPhi0()));
+  Helix helix(genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()));
+  return std::sqrt((helix.getKappa()-recoTrack.getHelix().getKappa())*(helix.getKappa()-recoTrack.getHelix().getKappa())+
+		   (helix.getPhi0()-recoTrack.getHelix().getPhi0())*(helix.getPhi0()-recoTrack.getHelix().getPhi0()));
 
 }
 
 TVectorD fc::TrackCompareModule::deltaHP(const GenTrack & genTrack, const Track& recoTrack) const{
 
 
-  return recoTrack.getHelix().getHelix() - genTrack.makeHelix().getHelix();
+  return recoTrack.getHelix().getHelix() - genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getHelix();
 
 }
 
@@ -141,7 +142,7 @@ void fc::TrackCompareModule::fillHistograms(const TVectorD & deltaHP, const Trac
   sigmaTanL->Fill(recoTrack.getSigmaTanL());
 
 
-  pT->Fill(recoTrack.getHelix().getPT(_detectorGeometry.getBField()));
+  pT->Fill(recoTrack.getHelix().getPT());
   chi2->Fill(recoTrack.getChi2());
   nDof->Fill(recoTrack.getNDof());
   prob->Fill(recoTrack.getChi2Prob());

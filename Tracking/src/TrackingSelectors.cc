@@ -5,13 +5,13 @@
 
 bool fcf::goodCandidateHelix(const fc::Helix & helix,const fc::DetectorGeometry& detectorGeometry,const TrackingSelector& trackSelector) {
 
-  return (helix.getPT(detectorGeometry.getBField()) >= trackSelector._minPTCut);
+  return (helix.getPT() >= trackSelector._minPTCut);
 
 }
 
 bool fcf::goodCandidateTrack(const fc::Track& track,const fc::DetectorGeometry& detectorGeometry,const TrackingSelector& trackSelector){
 
-  return  track.getHelix().getPT(detectorGeometry.getBField()) > trackSelector._minPTCut && 
+  return  track.getHelix().getPT() > trackSelector._minPTCut && 
     (track.getNDof()<=0 || track.getChi2()/track.getNDof()< trackSelector._maxChi2NDofCut) && 
      track.getHits().size() >= trackSelector._nHitCut &&
     (!trackSelector._useFiducialDRCut || std::abs(track.getHelix().getDr()) 

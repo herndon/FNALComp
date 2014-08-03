@@ -60,7 +60,7 @@ void fc::HitStripGenModule::makeHitsStrips(const GenTrack & genTrack,int trackNu
 
     // 98% efficiency factor
     if (_random.getUniformDouble(0.0,1.0) > _detectorGeometry.getSensor(iiLayer)._hitEfficiency) continue;
-    bool intersectedLayer = intersectWithLayer(genTrack.makeHelix(_detectorGeometry.getCurvatureCInField(_detectorGeometry.getBField())),
+    bool intersectedLayer = intersectWithLayer(genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()),
 					       iiLayer,_detectorGeometry,hitPosition);
 
     if (intersectedLayer){

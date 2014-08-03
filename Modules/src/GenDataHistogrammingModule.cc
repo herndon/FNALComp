@@ -3,6 +3,7 @@
 
 #include "TH1D.h"
 
+#include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/GenTrack.hh"
 #include "DataObjects/include/GenTrackSet.hh"
 #include "DataObjects/include/GenHitSet.hh"
@@ -12,13 +13,15 @@
 #include "Modules/include/GenDataHistogrammingModule.hh"
 
 fc::GenDataHistogrammingModule::GenDataHistogrammingModule(const std::string& inputGenTracksLabel,
-						   const std::string& inputHitSetLabel,
-						   const std::string& inputStripSetLabel):
+							   const std::string& inputHitSetLabel,
+							   const std::string& inputStripSetLabel,
+							   const DetectorGeometry & detectorGeometry):
   _tracksLabel(inputGenTracksLabel),
   _hitSetLabel(inputHitSetLabel),
   _stripSetLabel(inputStripSetLabel),
+  _detectorGeometry(detectorGeometry),
   _hDR(nullptr),_hPhi0(nullptr),_hKappa(nullptr),_hDZ(nullptr),_hTanL(nullptr),
-  _hPT(nullptr),_hPZ(nullptr),
+  _hPT(nullptr),_hPZ(nullptr),_hRC(nullptr),
   _hNHits(nullptr),_hNStripsPerLayer(nullptr){
 
   initializeHistograms();
@@ -43,6 +46,7 @@ void fc::GenDataHistogrammingModule::initializeHistograms(){
   _hTanL  = new TH1D("GenTrackTanL", "tanL of Generated Track;tanL;N",100, 0.0, 1.0);
   _hPT = new TH1D( "GenTrackpT", "pT of Generated Track;pT (GeV);N", 100, 0., 100.);
   _hPZ = new TH1D( "GenTrackpz", "pz of Generated Track;pz (GeV);N", 100, 0., 100.);
+  _hRC = new TH1D( "GenTrackRC", "Radium of Curvature (m);N", 100, 0., 100.);
 
   _hNHits = new TH1D( "GenTracNHits", "Number Hits associated with the Generated Track;Number Hits;N", 11, -0.5, 10.5);
 
@@ -64,13 +68,15 @@ void fc::GenDataHistogrammingModule::processEvent(fc::Event& event)
 
   int trackNumber = 0;
   for(auto const& track : genTracks->getGenTracks()) {
-    _hDR->Fill(track.makeHelix().getDr());
-    _hPhi0->Fill(track.makeHelix().getPhi0());
-    _hKappa->Fill(track.makeHelix().getKappa());
-    _hDZ->Fill(track.makeHelix().getDz());
-    _hTanL->Fill(track.makeHelix().getTanL());
+    Helix helix(track.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()));
+    _hDR->Fill(helix.getDr());
+    _hPhi0->Fill(helix.getPhi0());
+    _hKappa->Fill(helix.getKappa());
+    _hDZ->Fill(helix.getDz());
+    _hTanL->Fill(helix.getTanL());
     _hPT->Fill(track.getLorentzVector().Pt());
     _hPZ->Fill(track.getLorentzVector().Pz());
+    _hRC->Fill(helix.getRadiusOfCurvature(_detectorGeometry.getBField()));
 
     int numberHits = 0;
     for(auto const& hit : genHits->getGenHits()) {

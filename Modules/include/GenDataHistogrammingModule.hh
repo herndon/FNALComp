@@ -21,14 +21,16 @@ class TH1D;
 
 namespace fc {
 
+  class DetectorGeometry;
+
 class GenDataHistogrammingModule : public Module {
 
 public:
 
   GenDataHistogrammingModule(const std::string& inputGenTrackSetLabel, //label used to GenTrackSet
-			  const std::string& inputHitSetLabel, //label used to get HitSet
-			  const std::string& inputStripSetLabel //label used to get StripSet
-			  );
+			     const std::string& inputHitSetLabel, //label used to get HitSet
+			     const std::string& inputStripSetLabel, //label used to get StripSet,
+			     const DetectorGeometry&);
 
   void processEvent(Event& ) override;
 
@@ -39,6 +41,9 @@ private:
   const std::string _hitSetLabel;
   const std::string _stripSetLabel;
 
+
+  const DetectorGeometry& _detectorGeometry;
+
   //ROOT will delete this when the TFile to which it is attached is deleted
 
   TH1D * _hDR;
@@ -48,6 +53,7 @@ private:
   TH1D * _hTanL;
   TH1D * _hPT;
   TH1D * _hPZ;
+  TH1D * _hRC;
 
   TH1D* _hNHits;
 

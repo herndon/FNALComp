@@ -3,7 +3,7 @@
 //============================================================================
 // Helix.hh
 // header with class definition of the Helix
-// See <A HREF="doc/notes/Track.pdf">Track.pdf</A> for more information !!!!! not done yet
+// See <A HREF="doc/notes/Track.pdf">dataFormat.pdf</A> for more information
 //
 // Helix parameter definition
 //
@@ -51,7 +51,7 @@ public:
 
 
   Helix();
-  Helix(double dr, double phi0, double kappa, double dz, double tanl, double alpha);
+  Helix(double dr, double phi0, double kappa, double dz, double tanl, double alpha,double curvatureC);
   
   // Get track parameters
 
@@ -65,11 +65,19 @@ public:
 
   double getAlpha() const {return _alpha;}
 
-  double getRadiusOfCurvature() const {return _alpha/_helix(2);}
+  double getRadiusOfCurvatureAtOrigin() const {return _alpha/_helix(2);}
+  // alpha is 1/curvatureCInField  curvatureCInField = curvatureC*bFieldZ, 1/curvatureC*bFieldZ  
+  // scale Radius of curvature by the ration of the magentic field at the origen (1/_alpha*_curvatureC) divided by the local field bField.Mag() 
+  double getRadiusOfCurvature(const TVector3& bField) const {return _alpha*((1/(_alpha*_curvatureC))/bField.Mag())/_helix(2);}
 
-  double getPT(const TVector3& bField) const {return std::abs(1.0/_helix(2));}
+
+
+  double getPT() const {return std::abs(1.0/_helix(2));}
   double getPZ() const {return _helix(4)*std::abs(1.0/_helix(2));}
   double getCotTheta() const {return _helix(4);}
+  double getCosTheta() const {return _helix(4)/std::sqrt(_helix(4)*_helix(4)+1);}
+  double getSinTheta() const {return 1.0/std::sqrt(_helix(4)*_helix(4)+1);}
+
 
   // Set helix
   void setHelix(const TVectorD& helix) {_helix = helix;}
@@ -78,6 +86,7 @@ private:
 
   TVectorD _helix;
   double _alpha;
+  double _curvatureC;
 };
 } // end namescape fc
 

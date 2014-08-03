@@ -63,6 +63,7 @@ public:
   const TVector3 & getBField() const {return _bField;}
   double getMIP() const {return _MIP;}
   double getCurvatureCInField(TVector3 _bField) const {return _curvatureC*_bField.Z();}
+  double getCurvatureC() const {return _curvatureC;}
 
 
   void printDetectorGeometry(ostream& out) const;
