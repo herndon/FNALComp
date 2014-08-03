@@ -44,12 +44,14 @@ private:
   // Detector information
   const DetectorGeometry & _detectorGeometry;
   
-  void recoTracks(TrackSet&, const HitSet&, const GenHitSet&) const;
+  void recoTracks(const HitSet&, const GenHitSet&,TrackSet&) const;
 
-  void findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & recoHitSet, const GenHitSet& genHitSet) const;
+  void findTrackPerfectCandidates(const HitSet & recoHitSet, const GenHitSet& genHitSet,
+				  std::vector<std::vector<int>> & trackHitCandidates) const;
   double compareHitPositions(const GenHit & genHit, const Hit& recoHit) const;
 
-  void buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet) const;
+  void buildPerfectTrackCandidates(const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet,
+				   TrackSet & trackCandidateSet) const;
 
 
 

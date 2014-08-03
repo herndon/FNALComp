@@ -24,7 +24,7 @@ namespace fc {
 class GenHit {
 public:
 
-  GenHit(const TVector3&, int, int); //!< TVector3 hitPosition, int layer, int trackNumber
+  GenHit(const TVector3& hitPosition, int layer, int trackNumber);
 
   const TVector3 & getGenHitPosition() const {return _hitPosition; }
   int getLayer() const {return _layer;}

@@ -15,7 +15,7 @@ const TMatrixD fc::expectedMeasurementVector1D(const Helix& helix, int layer, co
 
   double phi = 0.0;
 
-  intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
+  intersectWithPlane(helix, detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi,hitPosition);
 
   TMatrixD expectedMeasurementVector(_mDim,1);
 
@@ -39,7 +39,7 @@ const TMatrixD fc::expectedMeasurementDerivatived1DdHC(const Helix& helix, int l
 
   // advances phi to the phi at crossing!
 
-  intersectWithPlane(helix,hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
+  intersectWithPlane(helix,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi,hitPosition);
 
   // get normal
   // !!!!! could this be simpler and probably has to be in the correct coordinates. called dsdx

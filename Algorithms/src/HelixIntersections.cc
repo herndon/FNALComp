@@ -8,15 +8,15 @@
 #include "Algorithms/include/TrackFitAlgorithms.hh"
 #include "Algorithms/include/HelixIntersections.hh"
 
-bool fc::intersectWithLayer(const Helix& helix, TVector3 & hitPosition, int layer, const DetectorGeometry & detectorGeometry){
+bool fc::intersectWithLayer(const Helix& helix, int layer, const DetectorGeometry & detectorGeometry,TVector3 & hitPosition){
 
   double phi = 0.0;
 
-  return intersectWithPlane(helix, hitPosition,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi);
+  return intersectWithPlane(helix,detectorGeometry.getSensor(layer)._center,detectorGeometry.getSensor(layer)._normal,phi,hitPosition);
 }
 
 
-bool fc::intersectWithPlane(const Helix& helix, TVector3 & hitPosition, const TVector3 & center, const TVector3 & normal,double & phi){
+bool fc::intersectWithPlane(const Helix& helix, const TVector3 & center, const TVector3 & normal,double& phi,TVector3 & hitPosition){
 
 
    const int       maxcount   = 100;

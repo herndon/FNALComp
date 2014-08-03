@@ -19,7 +19,7 @@ public:
 
   std::default_random_engine & getEngine() { return engine; }
 
-  double getUniformDouble (double, double);
+  double getUniformDouble (double min, double max);
 
   double getNormalDouble (double mean, double dev);
 

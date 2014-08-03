@@ -19,21 +19,21 @@ namespace fcf {
 
 
   // From Global hits position to strip number position
-  double calclateLocalFromGlobalPostion(const TVector3 &, int,const fc::DetectorGeometry &);
-  double calculateStripFromLocalPosition(double, int, const fc::DetectorGeometry &);
+  double calclateLocalFromGlobalPostion(const TVector3& hitPosition, int layer,const fc::DetectorGeometry &);
+  double calculateStripFromLocalPosition(double localHitPosition, int layer, const fc::DetectorGeometry &);
 
 
-  // Calculate strip positio from cluster
+  // Calculate strip position from cluster
   double calculateStripHitPositionFromCluster(int initialStrip,const std::vector<int> & stripAdcs);
 
 
   // From strips number position to global Hit position
-  double calculateLocalFromStripPosition(double, int, const fc::DetectorGeometry &);
+  double calculateLocalFromStripPosition(double stripHitPosition, int layer, const fc::DetectorGeometry &);
   const TVector3 calculateGlobalFromLocalPosition(double, int, const fc::DetectorGeometry &);
 
   // Find if hits and strips are in a valid location on a sensor
   bool isValidStrip(int layer, int strip, const fc::DetectorGeometry &);
-  bool isValidHit(int layer, const TVector3& HitPosition, const fc::DetectorGeometry &);
+  bool isValidHit(int layer, const TVector3& hitPosition, const fc::DetectorGeometry &);
 
 
   

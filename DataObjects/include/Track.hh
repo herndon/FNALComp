@@ -80,7 +80,7 @@ public:
   int numberHits() const {return _trackHitSet.size();}
 
 
-  void insertHit(int);
+  void insertHit(int hitNumber);
 
   void print(ostream& out) const;
 

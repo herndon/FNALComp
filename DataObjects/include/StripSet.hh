@@ -43,7 +43,7 @@ public:
   int getStripNumber(const std::pair<int,int>& pair) const {return pair.first;};
   int getStripAdc(const std::pair<int,int>& pair) const {return pair.second;};
 
-  void insertStrip(unsigned int, int, int); //!< Insert strip by layer, strip number, adc count
+  void insertStrip(unsigned int layer, int stripNumber, int adc);
 
   void print(std::ostream& out) const;
 

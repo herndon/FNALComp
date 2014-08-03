@@ -17,11 +17,11 @@ fc::TrackCandidateStrategy2X1SAS::TrackCandidateStrategy2X1SAS(int debugLevel,co
 }
 
 
-void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(TrackSetContainer& trackCandidateSet, const HitSet& recoHitSet) const{
+void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(const HitSet& recoHitSet,TrackSetContainer& trackCandidateSet) const{
 
   std::vector<trackHitSet> trackHitCandidates;
 
-  findHitCadidates(trackHitCandidates,recoHitSet);
+  findHitCadidates(recoHitSet,trackHitCandidates);
 
   for (auto const& trackHitCandidate: trackHitCandidates) {
     trackCandidateSet.push_back(std::move(buildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,_debugLevel)));
@@ -34,7 +34,7 @@ void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(TrackSetContainer& tr
 
 // !!!!! Could improve to use more than outer layers
 // !!!!! control seed layers from config
-void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(std::vector<fc::trackHitSet>& trackHitCandidates,const HitSet& hitSet) const{
+void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(const HitSet& hitSet,std::vector<fc::trackHitSet>& trackHitCandidates) const{
  
   fcf::TrackingSelector trackSelector;
   trackSelector._minPTCut = _minCandPTCut;
@@ -59,7 +59,7 @@ void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(std::vector<fc::trackHit
 	    if (hitOSAS.getLayer() == 9) {
 
 	      TVector3 zIntersection;
-	      bool goodIntersection = intersectStrips(hitO,hitOSAS,zIntersection,_detectorGeometry);
+	      bool goodIntersection = intersectStrips(hitO,hitOSAS,_detectorGeometry,zIntersection);
 	      if (goodIntersection) {
 
                 TVector3 primaryVertex(0.0,0.0,0.0);

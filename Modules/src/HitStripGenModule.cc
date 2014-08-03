@@ -40,7 +40,7 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
 
   for (auto const& genTrack :  genTrackSet->getGenTracks()){
  
-    makeHitsStrips(*genHitSet, *genStripSet,genTrack,trackNumber);
+    makeHitsStrips(genTrack,trackNumber,*genHitSet, *genStripSet);
     ++trackNumber;
 
    } // end track loop
@@ -50,7 +50,7 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
 }
 
 
-void fc::HitStripGenModule::makeHitsStrips(GenHitSet& genHitSet, StripSet & stripSet, const GenTrack & genTrack,int trackNumber) const{
+void fc::HitStripGenModule::makeHitsStrips(const GenTrack & genTrack,int trackNumber,GenHitSet& genHitSet, StripSet & stripSet) const{
 
 
   TVector3 hitPosition;
@@ -61,12 +61,13 @@ void fc::HitStripGenModule::makeHitsStrips(GenHitSet& genHitSet, StripSet & stri
     // 98% efficiency factor
     if (_random.getUniformDouble(0.0,1.0) > _detectorGeometry.getSensor(iiLayer)._hitEfficiency) continue;
     bool intersectedLayer = intersectWithLayer(genTrack.makeHelix(_detectorGeometry.getCurvatureCInField(_detectorGeometry.getBField())),
-					       hitPosition,iiLayer,_detectorGeometry);
+					       iiLayer,_detectorGeometry,hitPosition);
 
     if (intersectedLayer){
-    storeHitInfo(genHitSet,trackNumber,hitPosition,iiLayer);
+      storeHitInfo(trackNumber,iiLayer,hitPosition,genHitSet);
 
-    storeStripInfo(stripSet,hitPosition,iiLayer);
+      storeStripInfo(hitPosition,iiLayer,stripSet);
+
     } 
   } // end layer loop
 
@@ -75,7 +76,7 @@ void fc::HitStripGenModule::makeHitsStrips(GenHitSet& genHitSet, StripSet & stri
 
 
 // !!!!! remove Gen track from here
-void fc::HitStripGenModule::storeHitInfo(GenHitSet & genHitSet,int trackNumber,TVector3 & hitPosition,int layer) const{
+void fc::HitStripGenModule::storeHitInfo(int trackNumber,int layer,TVector3 & hitPosition,GenHitSet & genHitSet) const{
 
   if (_debugLevel >=5 ) {
     std::cout << "Layer " << layer << " Hit y " << hitPosition[0] << std::endl;
@@ -104,7 +105,7 @@ void fc::HitStripGenModule::storeHitInfo(GenHitSet & genHitSet,int trackNumber,T
 }
 
 
-void fc::HitStripGenModule::storeStripInfo(StripSet & stripSet,const TVector3 & hitPosition,int layer) const{
+void fc::HitStripGenModule::storeStripInfo(const TVector3 & hitPosition,int layer,StripSet & stripSet) const{
 
   bool isValidHit = fcf::isValidHit(layer,hitPosition,_detectorGeometry);
 
@@ -117,7 +118,7 @@ void fc::HitStripGenModule::storeStripInfo(StripSet & stripSet,const TVector3 & 
     std::vector <int>stripAdcVector;
     generateClusterFromStripHitPosition(stripHitPosition,initialStrip,stripAdcVector);
 
-    storeCluster(stripSet,layer,initialStrip,stripAdcVector);
+    storeCluster(layer,initialStrip,stripAdcVector,stripSet);
 
   }
 }
@@ -153,7 +154,7 @@ void fc::HitStripGenModule::generateClusterFromStripHitPosition(double stripHitP
 }
 
 
-void fc::HitStripGenModule::storeCluster(StripSet & stripSet, int layer, int initialStrip, const std::vector<int> & stripAdcs) const{
+void fc::HitStripGenModule::storeCluster(int layer, int initialStrip, const std::vector<int> & stripAdcs,StripSet & stripSet) const{
 
   int iiStrip = initialStrip;
   for (auto stripAdc : stripAdcs){

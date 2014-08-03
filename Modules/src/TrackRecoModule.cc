@@ -33,19 +33,19 @@ void fc::TrackRecoModule::processEvent(Event& event)
   
   std::unique_ptr<TrackSet> recoTrackSet{ new TrackSet };
 
-  recoTracks(*recoTrackSet,*inputTrackCandidateSet,*recoHitSet);
+  recoTracks(*inputTrackCandidateSet,*recoHitSet,*recoTrackSet);
 
   event.put(_outTracksLabel,std::move(recoTrackSet) );
 }
 
-void fc::TrackRecoModule::recoTracks(TrackSet & recoTrackSet, const TrackSet& inputTrackCandidateSet, const HitSet& recoHitSet) const {
+void fc::TrackRecoModule::recoTracks(const TrackSet& inputTrackCandidateSet, const HitSet& recoHitSet,TrackSet & recoTrackSet) const {
 
 
   TrackRecoStrategy2X1SAS recoStrategy(_debugLevel,_detectorGeometry,_config.getMinPTCut(),_config.getMaxChi2NDofCut());
 
   TrackSetContainer trackCandidateSet(inputTrackCandidateSet.getTracks()) ;
   
-  recoStrategy.recoTracks(trackCandidateSet,recoHitSet);
+  recoStrategy.recoTracks(recoHitSet,trackCandidateSet);
 
   for (auto& track : trackCandidateSet){
     recoTrackSet.insertTrack(std::move(track));

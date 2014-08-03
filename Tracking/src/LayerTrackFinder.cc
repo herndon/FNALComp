@@ -21,13 +21,13 @@ fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,const DetectorGeometry& de
   _maxChi2NDofCut(maxChi2NDofCut){
 }
 
-void fc::LayerTrackFinder::findCandidateTracks(TrackSetContainer& trackCandidateSet, const HitSet& recoHitSet,unsigned int expNHit) const{
+void fc::LayerTrackFinder::findCandidateTracks(const HitSet& recoHitSet,unsigned int expNHit,TrackSetContainer& trackCandidateSet) const{
 
   TrackSetContainer allNewTracks;
 
   for (auto& track :  trackCandidateSet) {
 
-    findSingleCandidateTracks(track,allNewTracks,recoHitSet);  
+    findSingleCandidateTracks(track,recoHitSet,allNewTracks);  
 
   }
 
@@ -39,12 +39,12 @@ void fc::LayerTrackFinder::findCandidateTracks(TrackSetContainer& trackCandidate
   fcf::TrackingSelector trackSelector;
   trackSelector._nHitCut = _nExpHits;
 
-  fcf::simpleTrackSetFilter(trackCandidateSet,_detectorGeometry,trackSelector);
+  fcf::simpleTrackSetFilter(_detectorGeometry,trackSelector,trackCandidateSet);
   //layerTrackFilter(trackCandidateSet,expNHit);
 
 }
 
-void fc::LayerTrackFinder::findSingleCandidateTracks(const Track& track , TrackSetContainer& allNewTracks, const HitSet& recoHitSet)const {
+void fc::LayerTrackFinder::findSingleCandidateTracks(const Track& track, const HitSet& recoHitSet, TrackSetContainer& allNewTracks) const {
 
 
 

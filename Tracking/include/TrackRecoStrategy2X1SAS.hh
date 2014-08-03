@@ -22,11 +22,12 @@ class HitSet;
   public:
 
  
-    TrackRecoStrategy2X1SAS(int debugLevel,const DetectorGeometry& detectorGeometry,double minPTCut,double maxChiNDofCut);
+    TrackRecoStrategy2X1SAS(int debugLevel,const DetectorGeometry& detectorGeometry,
+			    double minPTCut,double maxChiNDofCut);
    
-    void recoTracks(TrackSetContainer & trackCandidateSet, const HitSet& hitSet) const;
+    void recoTracks(const HitSet& recoHitSet,TrackSetContainer& trackCandidateSet) const;
 
-    void findTracks(TrackSetContainer& trackCandidateSet,const HitSet & recoHitSet) const;;
+    void findTracks(const HitSet& recoHitSet,TrackSetContainer& trackCandidateSet) const;;
  
 
   private:

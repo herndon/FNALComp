@@ -31,7 +31,7 @@ const fc::Track fc::buildTrack(const HitSet & hitSet, const std::vector<int> & t
   int middleXHit = -1;
   int outerZHit = -1;
 
-  chooseHitsForInitialization(hitSet, trackHitCandidate,outerXHit, middleXHit, outerZHit,detectorGeometry);
+  chooseHitsForInitialization(hitSet, trackHitCandidate,detectorGeometry,outerXHit, middleXHit, outerZHit);
 
 
   // Primary vertex used to help find seed tracks
@@ -40,7 +40,7 @@ const fc::Track fc::buildTrack(const HitSet & hitSet, const std::vector<int> & t
   TVector3 x3 = hitSet.getHits()[outerXHit].getHitPosition();
 
   TVector3 z1;
-  findZForInitialization(hitSet,trackHitCandidate,z1,detectorGeometry);
+  findZForInitialization(hitSet,trackHitCandidate,detectorGeometry,z1);
 
 
 

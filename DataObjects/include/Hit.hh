@@ -24,7 +24,7 @@ namespace fc {
 class Hit {
 public:
 
-  Hit(const TVector3&, int, int, int, bool, double);      //!< TVector3 hitPosition, int layer, int numberStrips, int charge, bool goodHit, double resolution 
+  Hit(const TVector3& hitPosition, int layer, int numberStrips, int charge, bool goodHit, double resolution);
 
   const TVector3 & getHitPosition() const {return _hitPosition; }
   int getLayer() const {return _layer;}

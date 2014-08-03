@@ -20,19 +20,19 @@ void fc::HitRecoModule::processEvent(fc::Event& event)
   Handle<StripSet> genStripSet = event.get<StripSet>(_inStripsLabel);
   std::unique_ptr<HitSet> recoHitSet( new HitSet );
 
-  recoHits(*recoHitSet, *genStripSet);
+  recoHits(*genStripSet,*recoHitSet);
 
   if (_debugLevel >= 2) recoHitSet->print(std::cout);
 
   event.put(_outHitsLabel, std::move(recoHitSet));
 }
 
-void fc::HitRecoModule::recoHits(HitSet & hitSet, const StripSet& stripSet) const{
+void fc::HitRecoModule::recoHits(const StripSet& stripSet,HitSet & hitSet) const{
 
   for (int iiLayer =  0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer){
  
     if (_debugLevel >= 5) std::cout << "HitReco layer: " << iiLayer << std::endl;
-    recoHitsLayer(hitSet, stripSet,iiLayer);
+    recoHitsLayer(stripSet,iiLayer,hitSet);
 
   } // end layer loop
 
@@ -40,7 +40,7 @@ void fc::HitRecoModule::recoHits(HitSet & hitSet, const StripSet& stripSet) cons
 }
 
 
-void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet, int layer) const{
+void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,HitSet& hitSet) const{
 
 
   std::vector<int> stripAdcs;
@@ -51,16 +51,16 @@ void fc::HitRecoModule::recoHitsLayer(HitSet& hitSet, const StripSet & stripSet,
   LayerStripMap::const_iterator  layerStripMapIterEnd = layerStripMap.end();
 
   while (layerStripMapIter != layerStripMapIterEnd) {
-    if (findCluster(initialStrip,layer,stripAdcs,layerStripMapIter,layerStripMapIterEnd,stripSet))
+    if (findCluster(layerStripMapIter,layerStripMapIterEnd,stripSet,layer,initialStrip,stripAdcs))
       hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
   }
 
 }
 
 
-bool fc::HitRecoModule::findCluster(int & initialStrip,int layer, std::vector<int> & stripAdcs,
-				    LayerStripMap::const_iterator & layerStripMapIter,
-				    LayerStripMap::const_iterator & layerStripMapIterEnd,const StripSet & stripSet) const{
+bool fc::HitRecoModule::findCluster(LayerStripMap::const_iterator& layerStripMapIter,
+				    LayerStripMap::const_iterator& layerStripMapIterEnd,const StripSet& stripSet,
+				    int layer, int& initialStrip, std::vector<int>& stripAdcs) const{
 
 
   stripAdcs.clear();

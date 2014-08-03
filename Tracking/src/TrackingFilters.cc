@@ -4,7 +4,7 @@
 #include "Tracking/include/TrackingFunctions.hh"
 #include "Tracking/include/TrackingFilters.hh"
 
-void fcf::simpleTrackSetFilter(fc::TrackSetContainer & trackCandidateSet,const fc::DetectorGeometry& detectorGeometry,const TrackingSelector& trackSelector ){
+void fcf::simpleTrackSetFilter(const fc::DetectorGeometry& detectorGeometry,const TrackingSelector& trackSelector,fc::TrackSetContainer & trackCandidateSet){
 
   // Right now just checks the number of expected hits
 

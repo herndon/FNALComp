@@ -26,19 +26,19 @@ void fc::TrackCandidateModule::processEvent(Event& event)
   
   std::unique_ptr<TrackSet> recoTrackCandidateSet{ new TrackSet };
 
-  findTrackCandidates(*recoTrackCandidateSet,*recoHitSet);
+  findTrackCandidates(*recoHitSet,*recoTrackCandidateSet);
 
   event.put(_outTracksLabel,std::move(recoTrackCandidateSet) );
 }
 
-void fc::TrackCandidateModule::findTrackCandidates(TrackSet & recoTrackCandidateSet, const HitSet& recoHitSet) const {
+void fc::TrackCandidateModule::findTrackCandidates(const HitSet& recoHitSet,TrackSet & recoTrackCandidateSet) const {
 
 
   TrackCandidateStrategy2X1SAS candStrategy(_debugLevel,_detectorGeometry,_config.getMinCandPTCut());
 
   TrackSetContainer trackCandidateSet;
   
-  candStrategy.findTrackCandidates(trackCandidateSet,recoHitSet);
+  candStrategy.findTrackCandidates(recoHitSet,trackCandidateSet);
 
   for (auto& track : trackCandidateSet){
     recoTrackCandidateSet.insertTrack(std::move(track));

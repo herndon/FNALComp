@@ -66,7 +66,8 @@ const fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2, co
 
 }
 
-void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<int> & trackHitCandidate, int& outerXHit, int& middleXHit, int& outerZHit,const DetectorGeometry& detectorGeometry){
+void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<int> & trackHitCandidate,
+				     const DetectorGeometry& detectorGeometry, int& outerXHit, int& middleXHit, int& outerZHit){
 
   int outerXLayer = -1;
   int outerZLayer = detectorGeometry.getNXSensors()-1;
@@ -110,7 +111,7 @@ void fc::chooseHitsForInitialization(const HitSet & hitSet, const std::vector<in
 
 }
 
-bool fc::findZForInitialization(const HitSet & hitSet,const std::vector<int> & trackHitCandidate,TVector3& z,const DetectorGeometry & detectorGeometry){
+bool fc::findZForInitialization(const HitSet & hitSet,const std::vector<int> & trackHitCandidate,const DetectorGeometry & detectorGeometry,TVector3& zPosition){
 
   int layer4XHit = -1;
   int layer4SASHit = -1;
@@ -128,17 +129,17 @@ bool fc::findZForInitialization(const HitSet & hitSet,const std::vector<int> & t
 
 
   if (layer4XHit != -1 &&  layer4SASHit != -1){
-    if (intersectStrips(hitSet.getHits()[layer4XHit],hitSet.getHits()[layer4SASHit],z,detectorGeometry)) return true;
+    if (intersectStrips(hitSet.getHits()[layer4XHit],hitSet.getHits()[layer4SASHit],detectorGeometry,zPosition)) return true;
   }
   if (layer3XHit != -1 &&  layer3SASHit != -1){
-    if (intersectStrips(hitSet.getHits()[layer3XHit],hitSet.getHits()[layer3SASHit],z,detectorGeometry)) return true;
+    if (intersectStrips(hitSet.getHits()[layer3XHit],hitSet.getHits()[layer3SASHit],detectorGeometry,zPosition)) return true;
   }
   return false;
 
 }
 
 
-bool fc::intersectStrips(const Hit & xHit, const Hit & sasHit,TVector3& z, const DetectorGeometry & detectorGeometry){
+bool fc::intersectStrips(const Hit & xHit, const Hit & sasHit, const DetectorGeometry & detectorGeometry,TVector3& z){
 
   // Note, in the SAS geometry the strips will always intersect so there is no need to check for non intersecting cases
 

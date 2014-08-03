@@ -27,7 +27,7 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
   
   std::unique_ptr<TrackSet> perfectRecoTrackSet{ new TrackSet };
 
-  recoTracks(*perfectRecoTrackSet,*recoHitSet,*genHitSet);
+  recoTracks(*recoHitSet,*genHitSet,*perfectRecoTrackSet);
 
   if (_debugLevel>=2){
     std::cout << "Perfect reconstructed tracks" << std::endl;
@@ -37,21 +37,23 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
   event.put(_outTracksLabel,std::move(perfectRecoTrackSet) );
 }
 
-void fc::PerfectTrackRecoModule::recoTracks(TrackSet & perfectRecoTrackSet, const HitSet& recoHitSet, const GenHitSet& genHitSet) const {
+void fc::PerfectTrackRecoModule::recoTracks(const HitSet& recoHitSet, const GenHitSet& genHitSet,
+					    TrackSet& perfectRecoTrackSet) const {
   // !!!!! This will eventually pass a track hit candidates strategy 
   // !!!!! Do I want to make a special object for the track hit candidates?
   std::vector<std::vector<int>> trackHitCandidates;
 
 
-  findTrackPerfectCandidates(trackHitCandidates,recoHitSet,genHitSet);
-  buildPerfectTrackCandidates(perfectRecoTrackSet,trackHitCandidates,recoHitSet);
+  findTrackPerfectCandidates(recoHitSet,genHitSet,trackHitCandidates);
+  buildPerfectTrackCandidates(trackHitCandidates,recoHitSet,perfectRecoTrackSet);
 
   
 }
 
 
 
-void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & recoHitSet,const GenHitSet & genHitSet) const{
+void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(const HitSet & recoHitSet,const GenHitSet & genHitSet,
+							    std::vector<std::vector<int>> & trackHitCandidates) const{
 
   int trackNumber = (genHitSet.getGenHits().empty() ? 0 : genHitSet.getGenHits().front().getTrackNumber());
 
@@ -102,7 +104,8 @@ double fc::PerfectTrackRecoModule::compareHitPositions(const GenHit & genHit, co
 }
 
 
-void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet) const{
+void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(const std::vector<std::vector<int>> & trackHitCandidates,
+							     const HitSet & hitSet,TrackSet & trackCandidateSet) const{
 
   for (auto const& trackHitCandidate : trackHitCandidates) {
     Track trackCandidate(buildTrack(hitSet,trackHitCandidate,_detectorGeometry,_debugLevel));

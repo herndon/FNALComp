@@ -46,11 +46,12 @@ private:
   // Detector information
   const DetectorGeometry & _detectorGeometry;
 
-  void recoHits(HitSet &, const StripSet &) const;
+  void recoHits(const StripSet &,HitSet &) const;
 
-  void recoHitsLayer(HitSet &, const StripSet &, int) const;
+  void recoHitsLayer(const StripSet &, int layer, HitSet &) const;
 
-  bool findCluster(int &,int, std::vector<int> &,LayerStripMap::const_iterator &,LayerStripMap::const_iterator &,const StripSet &) const;
+  bool findCluster(LayerStripMap::const_iterator& iter,LayerStripMap::const_iterator& end,
+		   const StripSet&,int layer,int& initialStrip, std::vector<int>& stripAdcs) const;
 
   Hit buildHit(int, int,const std::vector<int> &) const;
 

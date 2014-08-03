@@ -57,7 +57,7 @@ private:
   double _candidatePTThreshold;
 
 
-  void recoTracks(TrackSet & trackSet, const TrackSet& inputCandidateSet, const HitSet& hitSet) const;
+  void recoTracks(const TrackSet& inputCandidateSet, const HitSet& hitSet,TrackSet & trackSet) const;
 
 };
 } // end namespace fc

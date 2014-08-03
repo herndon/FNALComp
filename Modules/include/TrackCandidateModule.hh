@@ -53,7 +53,7 @@ private:
 
 
 
-  void findTrackCandidates(TrackSet & trackSet, const HitSet& hitSet) const;
+  void findTrackCandidates(const HitSet& hitSet,TrackSet & trackSet) const;
 
 };
 } // end namespace fc
