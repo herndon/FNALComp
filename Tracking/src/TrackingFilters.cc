@@ -3,6 +3,7 @@
 #include "Geometry/include/DetectorGeometry.hh"
 #include "Tracking/include/TrackingFunctions.hh"
 #include "Tracking/include/TrackingFilters.hh"
+#include <set>
 
 void fcf::simpleTrackSetFilter(const fc::DetectorGeometry& detectorGeometry,
                                const TrackingSelector& trackSelector,
@@ -27,13 +28,18 @@ void fcf::contentionTrackSetFilter(fc::TrackSetContainer & trackCandidateSet) {
 
     // !!!!! this may not be safe and needs to be revisited
 
+  std::set<int> deleteSet;
+
+  int trackNumber=0;
+  int trackNumber2=0;
     for (fc::TrackSetContainer::iterator trackIter = trackCandidateSet.begin();
-            trackIter != trackCandidateSet.end(); ++trackIter) {
+	 trackIter != trackCandidateSet.end(); ++trackIter,trackNumber++) {
 
         fc::TrackSetContainer::iterator trackIter2 = trackIter;
-        ++trackIter2;
+	trackNumber2 = trackNumber+1; 
+       ++trackIter2;
 
-        for ( ; trackIter2 != trackCandidateSet.end(); ++trackIter2) {
+        for ( ; trackIter2 != trackCandidateSet.end(); ++trackIter2,trackNumber2++) {
 
             // Find number of matching hits
             int matchedHits = fcf::numberMatchedHits(*trackIter,*trackIter2);
@@ -43,15 +49,35 @@ void fcf::contentionTrackSetFilter(fc::TrackSetContainer & trackCandidateSet) {
             if (matchedHits>4) {
 
                 if (fcf::betterOverlappingTrack(*trackIter,*trackIter2)) {
-                    trackCandidateSet.erase(trackIter);
-                    trackIter--;
+		    deleteSet.insert(trackNumber);
+                    //trackCandidateSet.erase(trackIter);
+
+		    //trackIter--;
                     break;
                 } else {
-                    trackCandidateSet.erase(trackIter2);
-                    trackIter2--;
+		  deleteSet.insert(trackNumber2);
+		  //trackCandidateSet.erase(trackIter2);
+		  //trackIter2--;
                 }
 
             }
         }
     }
+
+    fc::TrackSetContainer newTrackCandidateSet;
+
+    trackNumber = 0;
+    for (auto const& track : trackCandidateSet){
+      if (deleteSet.find(trackNumber)==deleteSet.end()) newTrackCandidateSet.push_back(std::move(track));
+      ++trackNumber;
+
+    }
+    trackCandidateSet.clear();
+    for (auto const& track : newTrackCandidateSet){
+      trackCandidateSet.push_back(std::move(track));
+    }
+
+
+
+
 }

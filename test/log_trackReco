@@ -7708,28 +7708,8 @@ Number of hits 10
 Hit numbers: 7 17 26 36 46 51 61 69 85 95 
 Reconstructed track set
 TrackSet 
-Number Tracks: 13
+Number Tracks: 11
 Track number: 0
-Charge 1
-4 momentum -9.44983 74.7721 6.55422 75.6513 
-Track parameters:  pT 75.3669 cot(theta) 11.499 phi0 1.69651 d0 -0.00887617 z0 -0.00127729
-Helix paramters: kappa -0.0132684 tan(Lambda) 0.0869642 phi0 to d0 3.26731
-Reference Point 0 0 0
-chi2 1.88735 ndof 4
-
-5x5 matrix is as follows
-
-     |      0    |      1    |      2    |      3    |      4    |
-----------------------------------------------------------------------
-   0 |  2.801e-09  -1.539e-08   8.892e-08   2.558e-11   5.803e-11 
-   1 | -1.539e-08   8.946e-08  -5.254e-07   -1.33e-10  -3.091e-10 
-   2 |  8.892e-08  -5.254e-07   3.135e-06   6.527e-10    1.32e-09 
-   3 |  2.558e-11   -1.33e-10   6.527e-10   7.367e-10   2.453e-09 
-   4 |  5.803e-11  -3.091e-10    1.32e-09   2.453e-09   9.628e-09 
-
-Number of hits 9
-Hit numbers: 39 29 88 78 21 2 69 60 50 
-Track number: 1
 Charge -1
 4 momentum 0.354967 3.37345 0.296485 3.40501 
 Track parameters:  pT 3.39208 cot(theta) 11.441 phi0 1.46596 d0 0.0339014 z0 -0.0014584
@@ -7749,27 +7729,7 @@ chi2 4.79634 ndof 4
 
 Number of hits 9
 Hit numbers: 46 36 95 85 25 3 69 60 50 
-Track number: 2
-Charge -1
-4 momentum -1.84467 16.9244 -1.06648 17.058 
-Track parameters:  pT 17.0246 cot(theta) -15.9634 phi0 1.67936 d0 -0.00259636 z0 -0.000575934
-Helix paramters: kappa 0.0587384 tan(Lambda) -0.0626431 phi0 to d0 3.25016
-Reference Point 0 0 0
-chi2 14.3859 ndof 4
-
-5x5 matrix is as follows
-
-     |      0    |      1    |      2    |      3    |      4    |
-----------------------------------------------------------------------
-   0 |   1.84e-09  -9.137e-09   5.116e-08   -1.37e-11  -4.746e-11 
-   1 | -9.137e-09   4.895e-08  -2.818e-07   7.308e-11   2.712e-10 
-   2 |  5.116e-08  -2.818e-07   1.677e-06  -4.896e-10  -1.874e-09 
-   3 |  -1.37e-11   7.308e-11  -4.896e-10   7.401e-10   2.462e-09 
-   4 | -4.746e-11   2.712e-10  -1.874e-09   2.462e-09   9.649e-09 
-
-Number of hits 9
-Hit numbers: 39 30 89 21 11 1 76 67 57 
-Track number: 3
+Track number: 1
 Charge -1
 4 momentum -4.0294 35.1448 2.72751 35.48 
 Track parameters:  pT 35.375 cot(theta) 12.9697 phi0 1.68495 d0 -0.00352958 z0 -0.00649533
@@ -7789,7 +7749,7 @@ chi2 2.47883 ndof 5
 
 Number of hits 10
 Hit numbers: 39 29 88 78 20 10 1 70 59 49 
-Track number: 4
+Track number: 2
 Charge 1
 4 momentum -2.7712 21.2235 0.348359 21.4065 
 Track parameters:  pT 21.4037 cot(theta) 61.4414 phi0 1.70063 d0 -0.00950013 z0 -0.000686037
@@ -7809,7 +7769,7 @@ chi2 8.47265 ndof 5
 
 Number of hits 10
 Hit numbers: 40 30 89 79 21 12 2 73 64 53 
-Track number: 5
+Track number: 3
 Charge -1
 4 momentum -0.399825 5.65393 0.0116082 5.66806 
 Track parameters:  pT 5.66805 cot(theta) 488.281 phi0 1.6414 d0 0.00895058 z0 0.00881588
@@ -7829,7 +7789,7 @@ chi2 15.8348 ndof 5
 
 Number of hits 10
 Hit numbers: 41 31 90 80 22 12 0 75 66 56 
-Track number: 6
+Track number: 4
 Charge -1
 4 momentum -2.28952 26.1585 -1.64865 26.3102 
 Track parameters:  pT 26.2585 cot(theta) -15.9273 phi0 1.6581 d0 0.00642978 z0 -0.000629746
@@ -7849,7 +7809,7 @@ chi2 9.74743 ndof 5
 
 Number of hits 10
 Hit numbers: 42 32 91 81 22 11 0 76 67 57 
-Track number: 7
+Track number: 5
 Charge 1
 4 momentum -0.858436 22.6819 3.41111 22.953 
 Track parameters:  pT 22.6981 cot(theta) 6.65419 phi0 1.60863 d0 0.00554328 z0 0.0495521
@@ -7869,7 +7829,7 @@ chi2 20.3361 ndof 5
 
 Number of hits 10
 Hit numbers: 43 33 92 82 23 14 4 71 63 58 
-Track number: 8
+Track number: 6
 Charge 1
 4 momentum -0.935401 28.9705 -0.155126 28.986 
 Track parameters:  pT 28.9856 cot(theta) -186.852 phi0 1.60307 d0 0.00543674 z0 -0.00471782
@@ -7889,7 +7849,7 @@ chi2 3.82152 ndof 5
 
 Number of hits 10
 Hit numbers: 44 34 93 83 24 15 5 74 65 54 
-Track number: 9
+Track number: 7
 Charge -1
 4 momentum 0.762757 21.5904 0.974579 21.6259 
 Track parameters:  pT 21.6039 cot(theta) 22.1674 phi0 1.53548 d0 0.00550764 z0 0.00730556
@@ -7909,7 +7869,7 @@ chi2 2.89704 ndof 5
 
 Number of hits 10
 Hit numbers: 45 35 94 84 25 16 6 72 63 55 
-Track number: 10
+Track number: 8
 Charge -1
 4 momentum 1.06262 30.203 4.54205 30.5611 
 Track parameters:  pT 30.2217 cot(theta) 6.65376 phi0 1.53563 d0 0.00324517 z0 0.049503
@@ -7929,7 +7889,7 @@ chi2 19.9586 ndof 5
 
 Number of hits 10
 Hit numbers: 46 36 95 85 26 17 7 71 63 58 
-Track number: 11
+Track number: 9
 Charge 1
 4 momentum 1.08055 21.0282 -1.50996 21.11 
 Track parameters:  pT 21.0559 cot(theta) -13.9447 phi0 1.51946 d0 0.00433502 z0 0.00505791
@@ -7949,7 +7909,7 @@ chi2 3.01427 ndof 5
 
 Number of hits 10
 Hit numbers: 47 37 96 86 27 18 8 77 68 58 
-Track number: 12
+Track number: 10
 Charge -1
 4 momentum 1.74883 29.7159 2.40565 29.8643 
 Track parameters:  pT 29.7673 cot(theta) 12.3739 phi0 1.51201 d0 -0.00903566 z0 0.00807036
@@ -19288,28 +19248,8 @@ Number of hits 10
 Hit numbers: 2 13 22 31 41 55 63 73 81 91 
 Reconstructed track set
 TrackSet 
-Number Tracks: 12
+Number Tracks: 10
 Track number: 0
-Charge -1
-4 momentum -1.19771 7.2161 0.0999286 7.3155 
-Track parameters:  pT 7.31482 cot(theta) 73.2005 phi0 1.73527 d0 -0.0432401 z0 -0.00287054
-Helix paramters: kappa 0.136709 tan(Lambda) 0.0136611 phi0 to d0 3.30607
-Reference Point 0 0 0
-chi2 25.7215 ndof 4
-
-5x5 matrix is as follows
-
-     |      0    |      1    |      2    |      3    |      4    |
-----------------------------------------------------------------------
-   0 |  2.536e-09  -1.413e-08   8.151e-08   9.851e-12   7.896e-12 
-   1 | -1.413e-08   8.367e-08  -4.911e-07  -5.188e-11  -2.712e-11 
-   2 |  8.151e-08  -4.911e-07    2.93e-06   2.001e-10  -2.791e-10 
-   3 |  9.851e-12  -5.188e-11   2.001e-10   7.055e-10   2.371e-09 
-   4 |  7.896e-12  -2.712e-11  -2.791e-10   2.371e-09   9.466e-09 
-
-Number of hits 9
-Hit numbers: 37 29 87 78 20 9 68 57 47 
-Track number: 1
 Charge 1
 4 momentum 1.89789 29.7288 -2.25613 29.8746 
 Track parameters:  pT 29.7893 cot(theta) -13.2037 phi0 1.50704 d0 0.00312442 z0 -0.00369718
@@ -19329,7 +19269,7 @@ chi2 2.61511 ndof 4
 
 Number of hits 9
 Hit numbers: 46 36 96 86 27 9 75 65 54 
-Track number: 2
+Track number: 1
 Charge -1
 4 momentum -2.05452 25.871 -0.853401 25.9665 
 Track parameters:  pT 25.9525 cot(theta) -30.4107 phi0 1.65004 d0 0.00884137 z0 0.0084482
@@ -19349,7 +19289,7 @@ chi2 3.79226 ndof 4
 
 Number of hits 9
 Hit numbers: 41 31 91 81 13 2 73 63 55 
-Track number: 3
+Track number: 2
 Charge -1
 4 momentum -3.08959 40.3239 1.49292 40.4696 
 Track parameters:  pT 40.442 cot(theta) 27.0892 phi0 1.64727 d0 0.00347765 z0 0.00958302
@@ -19369,7 +19309,7 @@ chi2 0.386852 ndof 4
 
 Number of hits 9
 Hit numbers: 42 32 92 23 14 5 67 58 50 
-Track number: 4
+Track number: 3
 Charge -1
 4 momentum -4.59137 35.5286 0.518834 35.8278 
 Track parameters:  pT 35.824 cot(theta) 69.0472 phi0 1.69931 d0 0.00980239 z0 0.00830306
@@ -19389,7 +19329,7 @@ chi2 3.92803 ndof 5
 
 Number of hits 10
 Hit numbers: 37 28 87 77 18 10 0 70 60 52 
-Track number: 5
+Track number: 4
 Charge -1
 4 momentum -2.74973 21.6035 0.799403 21.7924 
 Track parameters:  pT 21.7777 cot(theta) 27.2425 phi0 1.6974 d0 -0.00379976 z0 0.00955216
@@ -19409,7 +19349,7 @@ chi2 2.17772 ndof 5
 
 Number of hits 10
 Hit numbers: 38 29 88 78 19 11 3 67 58 50 
-Track number: 6
+Track number: 5
 Charge -1
 4 momentum -1.84068 20.7885 0.303596 20.872 
 Track parameters:  pT 20.8698 cot(theta) 68.7422 phi0 1.65911 d0 0.00736418 z0 0.00829447
@@ -19429,7 +19369,7 @@ chi2 5.3044 ndof 5
 
 Number of hits 10
 Hit numbers: 39 30 89 79 20 12 1 70 60 52 
-Track number: 7
+Track number: 6
 Charge -1
 4 momentum -3.74864 40.4787 -1.75281 40.6897 
 Track parameters:  pT 40.6519 cot(theta) -23.1924 phi0 1.66314 d0 0.00629167 z0 -0.00667899
@@ -19449,27 +19389,7 @@ chi2 3.66059 ndof 5
 
 Number of hits 10
 Hit numbers: 40 30 90 80 20 12 2 71 61 49 
-Track number: 8
-Charge 1
-4 momentum -3.19167 29.2167 -1.42232 29.4249 
-Track parameters:  pT 29.3905 cot(theta) -20.6637 phi0 1.67961 d0 -0.0013081 z0 -0.00727486
-Helix paramters: kappa -0.0340246 tan(Lambda) -0.0483939 phi0 to d0 3.2504
-Reference Point 0 0 0
-chi2 11.1089 ndof 5
-
-5x5 matrix is as follows
-
-     |      0    |      1    |      2    |      3    |      4    |
-----------------------------------------------------------------------
-   0 |  1.754e-09  -8.681e-09   4.931e-08  -7.836e-12  -2.615e-11 
-   1 | -8.681e-09   4.655e-08  -2.721e-07   4.324e-11   1.597e-10 
-   2 |  4.931e-08  -2.721e-07   1.641e-06  -3.468e-10  -1.349e-09 
-   3 | -7.836e-12   4.324e-11  -3.468e-10   7.414e-10   2.467e-09 
-   4 | -2.615e-11   1.597e-10  -1.349e-09   2.467e-09   9.668e-09 
-
-Number of hits 10
-Hit numbers: 40 30 90 80 21 13 4 72 62 51 
-Track number: 9
+Track number: 7
 Charge -1
 4 momentum 0.157511 20.3579 -1.97397 20.4539 
 Track parameters:  pT 20.3585 cot(theta) -10.3135 phi0 1.56306 d0 0.00607766 z0 0.0036762
@@ -19489,7 +19409,7 @@ chi2 13.0574 ndof 5
 
 Number of hits 10
 Hit numbers: 43 33 93 83 24 15 6 76 66 56 
-Track number: 10
+Track number: 8
 Charge -1
 4 momentum 2.01826 40.6372 -1.76028 40.7254 
 Track parameters:  pT 40.6873 cot(theta) -23.1141 phi0 1.52117 d0 0.00157595 z0 -0.00665255
@@ -19509,7 +19429,7 @@ chi2 6.28077 ndof 5
 
 Number of hits 10
 Hit numbers: 44 35 94 85 26 17 8 71 61 49 
-Track number: 11
+Track number: 9
 Charge 1
 4 momentum 0.915801 22.0566 -1.38444 22.1189 
 Track parameters:  pT 22.0756 cot(theta) -15.9455 phi0 1.5293 d0 0.00316109 z0 -0.00305034
