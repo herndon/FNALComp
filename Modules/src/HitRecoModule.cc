@@ -46,20 +46,20 @@ void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,HitSet
   std::vector<int> stripAdcs;
   int initialStrip;
 
-  LayerStripMap layerStripMap = stripSet.getLayerStripMap(layer);
-  LayerStripMap::const_iterator  layerStripMapIter = layerStripMap.begin();
-  LayerStripMap::const_iterator  layerStripMapEnd = layerStripMap.end();
+  LayerStripMap layerStrips = stripSet.getLayerStripMap(layer);
+  LayerStripMap::const_iterator  layerStripIter = layerStrips.begin();
+  LayerStripMap::const_iterator  layerStripsEnd = layerStrips.end();
 
-  while (layerStripMapIter != layerStripMapEnd) {
-    if (findCluster(layerStripMapIter,layerStripMapEnd,stripSet,layer,initialStrip,stripAdcs))
+  while (layerStripIter != layerStripsEnd) {
+    if (findCluster(layerStripIter,layerStripsEnd,stripSet,layer,initialStrip,stripAdcs))
       hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
   }
 
 }
 
 
-bool fc::HitRecoModule::findCluster(LayerStripMap::const_iterator& layerStripMapIter,
-				    LayerStripMap::const_iterator& layerStripMapEnd,const StripSet& stripSet,
+bool fc::HitRecoModule::findCluster(LayerStripMap::const_iterator& layerStripIter,
+				    LayerStripMap::const_iterator& layerStripsEnd,const StripSet& stripSet,
 				    int layer, int& initialStrip, std::vector<int>& stripAdcs) const{
 
 
@@ -67,30 +67,30 @@ bool fc::HitRecoModule::findCluster(LayerStripMap::const_iterator& layerStripMap
 
   if (_debugLevel >= 5) std::cout << "findCluster " << std::endl;
 
-  while (layerStripMapIter != layerStripMapEnd && stripSet.getStripAdc(layerStripMapIter) < _detectorGeometry.getSensor(layer)._threshold){
-    ++layerStripMapIter;
+  while (layerStripIter != layerStripsEnd && stripSet.getStripAdc(layerStripIter) < _detectorGeometry.getSensor(layer)._threshold){
+    ++layerStripIter;
   }
 
-  if (layerStripMapIter == layerStripMapEnd) return false;
+  if (layerStripIter == layerStripsEnd) return false;
 
-  initialStrip = stripSet.getStripNumber(layerStripMapIter);
+  initialStrip = stripSet.getStripNumber(layerStripIter);
 
   if (_debugLevel >= 5) std::cout << "Initial strip: " << initialStrip << std::endl;
 
   int intermediateStrip = initialStrip;
 
-  stripAdcs.push_back(stripSet.getStripAdc(layerStripMapIter));
+  stripAdcs.push_back(stripSet.getStripAdc(layerStripIter));
 
-  ++layerStripMapIter;
+  ++layerStripIter;
 
 
-  while ( layerStripMapIter != layerStripMapEnd && 
-	  (stripSet.getStripNumber(layerStripMapIter) == (intermediateStrip + 1)) && 
-	  (stripSet.getStripAdc(layerStripMapIter) >= _detectorGeometry.getSensor(layer)._threshold  )) {
+  while ( layerStripIter != layerStripsEnd && 
+	  (stripSet.getStripNumber(layerStripIter) == (intermediateStrip + 1)) && 
+	  (stripSet.getStripAdc(layerStripIter) >= _detectorGeometry.getSensor(layer)._threshold  )) {
 
-    intermediateStrip = stripSet.getStripNumber(layerStripMapIter);
-    stripAdcs.push_back(stripSet.getStripAdc(layerStripMapIter));
-    ++layerStripMapIter;
+    intermediateStrip = stripSet.getStripNumber(layerStripIter);
+    stripAdcs.push_back(stripSet.getStripAdc(layerStripIter));
+    ++layerStripIter;
     if (_debugLevel >= 5) std::cout << "Intermediate strip: " << intermediateStrip  << std::endl;
     
   }
