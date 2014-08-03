@@ -26,56 +26,56 @@ void fcf::simpleTrackSetFilter(const fc::DetectorGeometry& detectorGeometry,
 
 void fcf::contentionTrackSetFilter(fc::TrackSetContainer & trackCandidateSet) {
 
-    // !!!!! this may not be safe and needs to be revisited
+  // !!!!! this may not be safe and needs to be revisited
 
   std::set<int> deleteSet;
 
   int trackNumber=0;
   int trackNumber2=0;
-    for (fc::TrackSetContainer::iterator trackIter = trackCandidateSet.begin();
-	 trackIter != trackCandidateSet.end(); ++trackIter,trackNumber++) {
+  for (fc::TrackSetContainer::iterator trackIter = trackCandidateSet.begin();
+       trackIter != trackCandidateSet.end(); ++trackIter,++trackNumber) {
 
-        fc::TrackSetContainer::iterator trackIter2 = trackIter;
-	trackNumber2 = trackNumber+1; 
-       ++trackIter2;
+    fc::TrackSetContainer::iterator trackIter2 = trackIter;
+    trackNumber2 = trackNumber+1; 
+    ++trackIter2;
 
-        for ( ; trackIter2 != trackCandidateSet.end(); ++trackIter2,trackNumber2++) {
+    for ( ; trackIter2 != trackCandidateSet.end(); ++trackIter2,++trackNumber2) {
 
-            // Find number of matching hits
-            int matchedHits = fcf::numberMatchedHits(*trackIter,*trackIter2);
+      // Find number of matching hits
+      int matchedHits = fcf::numberMatchedHits(*trackIter,*trackIter2);
 
-            // Remove tracks with less hits or with a worse chi2/ndof
+      // Remove tracks with less hits or with a worse chi2/ndof
 
-            if (matchedHits>4) {
+      if (matchedHits>4) {
 
-                if (fcf::betterOverlappingTrack(*trackIter,*trackIter2)) {
-		    deleteSet.insert(trackNumber);
-                    //trackCandidateSet.erase(trackIter);
+	if (fcf::betterOverlappingTrack(*trackIter,*trackIter2)) {
+	  deleteSet.insert(trackNumber);
+	  //trackCandidateSet.erase(trackIter);
 
-		    //trackIter--;
-                    break;
-                } else {
-		  deleteSet.insert(trackNumber2);
-		  //trackCandidateSet.erase(trackIter2);
-		  //trackIter2--;
-                }
+	  //trackIter--;
+	  break;
+	} else {
+	  deleteSet.insert(trackNumber2);
+	  //trackCandidateSet.erase(trackIter2);
+	  //trackIter2--;
+	}
 
-            }
-        }
+      }
     }
+  }
 
-    fc::TrackSetContainer newTrackCandidateSet;
+  fc::TrackSetContainer newTrackCandidateSet;
 
-    trackNumber = 0;
-    for (auto const& track : trackCandidateSet){
-      if (deleteSet.find(trackNumber)==deleteSet.end()) newTrackCandidateSet.push_back(std::move(track));
-      ++trackNumber;
+  trackNumber = 0;
+  for (auto const& track : trackCandidateSet){
+    if (deleteSet.find(trackNumber)==deleteSet.end()) newTrackCandidateSet.push_back(std::move(track));
+    ++trackNumber;
 
-    }
-    trackCandidateSet.clear();
-    for (auto const& track : newTrackCandidateSet){
-      trackCandidateSet.push_back(std::move(track));
-    }
+  }
+  trackCandidateSet.clear();
+  for (auto const& track : newTrackCandidateSet){
+    trackCandidateSet.push_back(std::move(track));
+  }
 
 
 
