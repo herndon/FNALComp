@@ -137,7 +137,7 @@ void fc::TrackSetIO::readEvent(TrackSet & trackSet, std::ifstream & trackdata) {
 
             trackdata >> hitNumber;
 
-            track.insertHit(hitNumber);
+            //track.insertHit(hitNumber);
 
         } // end hit loop
 

@@ -106,7 +106,7 @@ public:
     }
 
 
-    void insertHit(int hitNumber);
+  //void insertHit(int hitNumber);
 
     void print(ostream& out) const;
 

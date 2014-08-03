@@ -52,10 +52,6 @@ double fc::Track::getChi2Prob() const {
 }
 
 
-void fc::Track::insertHit(int hitNumber) {
-    _trackHits.push_back(hitNumber);
-}
-
 void fc::Track::print(ostream& out) const {
 
     TLorentzVector lorentzVector = getLorentzVector();
