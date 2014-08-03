@@ -56,7 +56,7 @@ private:
 
     // Histograms
     // ROOT will delete these when the TFile to which the are attached is deleted
-    std::vector<TH1F *> deltaHitPositions;
+    std::vector<TH1F *> _hDeltaHitPositions;
 
 
     void initializeHistograms();

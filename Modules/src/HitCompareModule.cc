@@ -32,8 +32,8 @@ void fc::HitCompareModule::initializeHistograms() {
     for (int iiLayer = 0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
         std::string histName = "deltaHitPositions  Layer " + std::to_string(iiLayer);
         const char * histNameC = histName.c_str();
-        deltaHitPositions.push_back(new TH1F(histNameC,
-                                             "Delta X Hit Positions;delta X (m);number of hits",100, -0.0001, 0.0001));
+        _hDeltaHitPositions.push_back(new TH1F(histNameC,
+                                             "Delta X Hit Positions;delta X (m);number of hits",100, -0.0004, 0.0004));
     }
 
 }
@@ -74,7 +74,7 @@ void fc::HitCompareModule::compareHits(const GenHitSet & genHitSet,
 
         }
 
-        deltaHitPositions[genHit.getLayer()]->Fill(deltaPosition);
+        _hDeltaHitPositions[genHit.getLayer()]->Fill(deltaPosition);
 
 
     }
