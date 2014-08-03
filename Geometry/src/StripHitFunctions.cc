@@ -18,10 +18,10 @@ double fcf::calculateStripHitPositionFromCluster(int initialStrip,const std::vec
   double stripPosition = 0.0;
   double adcSum = 0.0;
 
-  for (std::vector<int>::const_iterator stripAdcIter = stripAdcs.begin(); stripAdcIter != stripAdcs.end(); ++stripAdcIter){
+  for (auto stripAdc: stripAdcs){
 
-    stripHitPosition = stripHitPosition + stripPosition*(*stripAdcIter);
-    adcSum = adcSum + (*stripAdcIter);
+    stripHitPosition = stripHitPosition + stripPosition*stripAdc;
+    adcSum = adcSum + stripAdc;
     stripPosition =  stripPosition + 1.0;
     
   } // end strip loop

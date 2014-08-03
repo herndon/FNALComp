@@ -75,12 +75,12 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track , const Hit
   double maxResidual = 5.0*expectedMeasurementUncertianty1D(track.getHelix(), track.getCovMatrix(), _layer, _detectorGeometry);
   int hitNumber = 0;
 
-  for (auto hitIter = recoHitSet.getHits().begin(); hitIter != recoHitSet.getHits().end(); ++hitIter,++hitNumber){
+  for (auto hit : recoHitSet.getHits()){
 
-    if (hitIter->getLayer()==_layer){
+    if (hit.getLayer()==_layer){
 
       if (std::abs(expectedMeasurementVector1D(track.getHelix(),_layer,_detectorGeometry)(0,0) 
-		   - measurementVector1D(hitIter->getHitPosition(),_layer,_detectorGeometry)(0,0)) 
+		   - measurementVector1D(hit.getHitPosition(),_layer,_detectorGeometry)(0,0)) 
 	  < maxResidual) {
 
 	hits.push_back(hitNumber);
@@ -89,6 +89,7 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track , const Hit
 
     }
 
+    ++hitNumber;
   } // End loop over hits
 
   return hits;

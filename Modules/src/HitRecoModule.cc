@@ -48,10 +48,10 @@ void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,HitSet
 
   LayerStripMap layerStripMap = stripSet.getLayerStripMap(layer);
   LayerStripMap::const_iterator  layerStripMapIter = layerStripMap.begin();
-  LayerStripMap::const_iterator  layerStripMapIterEnd = layerStripMap.end();
+  LayerStripMap::const_iterator  layerStripMapEnd = layerStripMap.end();
 
-  while (layerStripMapIter != layerStripMapIterEnd) {
-    if (findCluster(layerStripMapIter,layerStripMapIterEnd,stripSet,layer,initialStrip,stripAdcs))
+  while (layerStripMapIter != layerStripMapEnd) {
+    if (findCluster(layerStripMapIter,layerStripMapEnd,stripSet,layer,initialStrip,stripAdcs))
       hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
   }
 
@@ -59,7 +59,7 @@ void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,HitSet
 
 
 bool fc::HitRecoModule::findCluster(LayerStripMap::const_iterator& layerStripMapIter,
-				    LayerStripMap::const_iterator& layerStripMapIterEnd,const StripSet& stripSet,
+				    LayerStripMap::const_iterator& layerStripMapEnd,const StripSet& stripSet,
 				    int layer, int& initialStrip, std::vector<int>& stripAdcs) const{
 
 
@@ -67,11 +67,11 @@ bool fc::HitRecoModule::findCluster(LayerStripMap::const_iterator& layerStripMap
 
   if (_debugLevel >= 5) std::cout << "findCluster " << std::endl;
 
-  while (layerStripMapIter != layerStripMapIterEnd && stripSet.getStripAdc(layerStripMapIter) < _detectorGeometry.getSensor(layer)._threshold){
+  while (layerStripMapIter != layerStripMapEnd && stripSet.getStripAdc(layerStripMapIter) < _detectorGeometry.getSensor(layer)._threshold){
     ++layerStripMapIter;
   }
 
-  if (layerStripMapIter == layerStripMapIterEnd) return false;
+  if (layerStripMapIter == layerStripMapEnd) return false;
 
   initialStrip = stripSet.getStripNumber(layerStripMapIter);
 
@@ -84,7 +84,7 @@ bool fc::HitRecoModule::findCluster(LayerStripMap::const_iterator& layerStripMap
   ++layerStripMapIter;
 
 
-  while ( layerStripMapIter != layerStripMapIterEnd && 
+  while ( layerStripMapIter != layerStripMapEnd && 
 	  (stripSet.getStripNumber(layerStripMapIter) == (intermediateStrip + 1)) && 
 	  (stripSet.getStripAdc(layerStripMapIter) >= _detectorGeometry.getSensor(layer)._threshold  )) {
 
