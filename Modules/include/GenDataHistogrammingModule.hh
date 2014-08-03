@@ -35,6 +35,7 @@ public:
 
     void processEvent(Event& ) override;
 
+    void endJob() override;
 
 private:
 
@@ -44,6 +45,8 @@ private:
 
 
     const DetectorGeometry& _detectorGeometry;
+
+  int _numberEvents;
 
     //ROOT will delete this when the TFile to which it is attached is deleted
 
@@ -56,7 +59,8 @@ private:
     TH1D * _hPZ;
     TH1D * _hRC;
 
-    TH1D* _hNHits;
+    TH1D* _hNHitsLayer;
+    TH1D* _hNHitsTrack;
 
     TH1D* _hHitPositionX;
     TH1D* _hHitPositionY;

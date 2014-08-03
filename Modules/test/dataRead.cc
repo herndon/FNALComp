@@ -59,10 +59,10 @@ int main ()
     //  the order the modules are passed to the EventProcessor
     //  is the order the modules will run
     processor.addModule( new
-                         fc::GenDataHistogrammingModule("genTracks", //label used for tracks put into the event
-                                 "genHits", //get these hits from file
-                                 "strips",
-                                 detectorGeometry)); //get these strips
+                         fc::GenDataHistogrammingModule("genTracks", // tracks from file
+							"genHits", // hits from file
+							"strips", // strips from file
+							detectorGeometry)); //get these strips
 
 
 
