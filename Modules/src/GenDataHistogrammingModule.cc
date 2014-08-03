@@ -85,7 +85,6 @@ void fc::GenDataHistogrammingModule::processEvent(fc::Event& event)
     fc::Handle<fc::GenHitSet> genHits = event.get<fc::GenHitSet>(_hitSetLabel);
     fc::Handle<fc::StripSet> strips = event.get<fc::StripSet>(_stripSetLabel);
 
-    int trackNumber = 0;
     for(auto const& track : genTracks->getGenTracks()) {
         Helix helix(track.makeHelix(_detectorGeometry.getBField(),
                                     _detectorGeometry.getCurvatureC()));
@@ -98,20 +97,27 @@ void fc::GenDataHistogrammingModule::processEvent(fc::Event& event)
         _hPZ->Fill(track.getLorentzVector().Pz());
         _hRC->Fill(helix.getRadiusOfCurvature(_detectorGeometry.getBField()));
 
-        int numberHits = 0;
-        for(auto const& hit : genHits->getGenHits()) {
-
-            if (hit.getTrackNumber() == trackNumber) numberHits++;
-	    _hHitPositionX->Fill(hit.getGenHitPosition().X());
-	    _hHitPositionY->Fill(hit.getGenHitPosition().Y());
-	    _hHitPositionZ->Fill(hit.getGenHitPosition().Z());
-
-        }
-        _hNHits->Fill(numberHits);
-
-        trackNumber++;
-
+ 
     }
+
+    int trackNumber=genHits->getGenHits().begin()->getTrackNumber();;
+    int numberHits = 0;
+
+    for(auto const& hit : genHits->getGenHits()) {
+      _hHitPositionX->Fill(hit.getGenHitPosition().X());
+        _hHitPositionY->Fill(hit.getGenHitPosition().Y());
+        _hHitPositionZ->Fill(hit.getGenHitPosition().Z());
+ 
+	if (hit.getTrackNumber() == trackNumber) {
+	    numberHits++;
+	} else {
+	    _hNHits->Fill(numberHits);
+	    numberHits=1;
+	    trackNumber=hit.getTrackNumber();
+	}
+    }
+
+
 
     int layer =0;
     for (auto const& stripMap : strips->getStrips()) {
