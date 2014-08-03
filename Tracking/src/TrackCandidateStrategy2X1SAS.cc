@@ -40,8 +40,8 @@ void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(
 void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(const HitSet& hitSet,
         std::vector<fc::TrackHitContainer>& trackHitCandidates) const {
 
-    fcf::TrackingSelector trackSelector;
-    trackSelector._minPTCut = _minCandPTCut;
+  fcf::TrackingSelector trackSelector = {_minCandPTCut,0,1000000.0,false,false};
+  //trackSelector._minPTCut = _minCandPTCut;
 
     int hitNumberO = 0;
 

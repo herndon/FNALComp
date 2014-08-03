@@ -16,11 +16,11 @@ struct TrackingSelection;
 
 namespace fcf {
 struct TrackingSelector {
-    double _minPTCut {0.0};
-    double _nHitCut {0};
-    double _maxChi2NDofCut {1000000.0};
-    bool _useFiducialDRCut {false};
-    bool _useFiducialDZCut {false};
+    double _minPTCut;
+    unsigned int _nHitCut;
+    double _maxChi2NDofCut;
+    bool _useFiducialDRCut;
+    bool _useFiducialDZCut;
 };
 
 // helper functions for track selection

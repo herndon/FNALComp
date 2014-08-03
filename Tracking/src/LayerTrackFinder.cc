@@ -13,7 +13,7 @@
 
 
 fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,
-                                       const DetectorGeometry& detectorGeometry,int layer,int nExpHits,double minPTCut,
+                                       const DetectorGeometry& detectorGeometry,int layer,int unsigned nExpHits,double minPTCut,
                                        double maxChi2NDofCut):
     _debugLevel(debugLevel),
     _detectorGeometry(detectorGeometry),
@@ -39,8 +39,8 @@ void fc::LayerTrackFinder::findCandidateTracks(const HitSet& recoHitSet,
         trackCandidateSet.push_back(std::move(track));
     }
 
-    fcf::TrackingSelector trackSelector;
-    trackSelector._nHitCut = _nExpHits;
+    fcf::TrackingSelector trackSelector = {0.0,_nExpHits,1000000.0,false,false};
+
 
     fcf::simpleTrackSetFilter(_detectorGeometry,trackSelector,trackCandidateSet);
     //layerTrackFilter(trackCandidateSet,expNHit);
@@ -153,14 +153,7 @@ fc::TrackSetContainer fc::LayerTrackFinder::buildTrackCandidates(
     const Track & track, const std::vector<int> & hits,
     const HitSet & recoHitSet) const {
 
-    fcf::TrackingSelector trackSelector;
-    trackSelector._minPTCut = _minPTCut;
-    trackSelector._maxChi2NDofCut = _maxChi2NDofCut;
-    trackSelector._nHitCut = _nExpHits;
-    trackSelector._useFiducialDRCut = true;
-    trackSelector._useFiducialDZCut = true;
-
-
+    fcf::TrackingSelector trackSelector = {_minPTCut,_nExpHits,_maxChi2NDofCut,true,true};
     TrackSetContainer newTracks;
     for (auto hitNumber : hits) {
         TrackHitContainer trackHitCandidate = track.getHits();

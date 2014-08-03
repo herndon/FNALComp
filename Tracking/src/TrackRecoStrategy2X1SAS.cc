@@ -33,7 +33,7 @@ void fc::TrackRecoStrategy2X1SAS::findTracks(const HitSet & recoHitSet,
         TrackSetContainer& trackCandidateSet) const {
 
     std::vector<int> layers {8,2,1,0,7,6,5};
-    int expNHit = 3;
+    unsigned int expNHit = 3;
 
     for (auto layer : layers) {
         LayerTrackFinder layerTrackFinder(_debugLevel,_detectorGeometry,layer,expNHit,
