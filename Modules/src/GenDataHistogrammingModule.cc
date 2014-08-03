@@ -23,7 +23,9 @@ fc::GenDataHistogrammingModule::GenDataHistogrammingModule(
     _detectorGeometry(detectorGeometry),
     _hDR(nullptr),_hPhi0(nullptr),_hKappa(nullptr),_hDZ(nullptr),_hTanL(nullptr),
     _hPT(nullptr),_hPZ(nullptr),_hRC(nullptr),
-    _hNHits(nullptr),_hNStripsPerLayer(nullptr) {
+    _hNHits(nullptr),
+    _hHitPositionX(nullptr), _hHitPositionY(nullptr),_hHitPositionZ(nullptr),
+    _hNStripsPerLayer(nullptr) {
 
     initializeHistograms();
 
@@ -55,6 +57,11 @@ void fc::GenDataHistogrammingModule::initializeHistograms() {
     _hPZ = new TH1D( "GenTrackpz", "pz of Generated Track;pz (GeV);N", 100, 0.,
                      100.);
     _hRC = new TH1D( "GenTrackRC", "Radium of Curvature (m);N", 100, 0., 100.);
+
+    _hHitPositionX = new TH1D( "GenHitPositionX", "Gen Hit X;X (m);N", 100, -0.5, 0.5);
+    _hHitPositionY = new TH1D( "GenHitPositionY", "Gen Hit Y;Y (m);N", 100, 0.0, 1.0);
+    _hHitPositionZ = new TH1D( "GenHitPositionZ", "Gen Hit Z;Z (m);N", 100, -0.5, 0.5);
+
 
     _hNHits = new TH1D( "GenTracNHits",
                         "Number Hits associated with the Generated Track;Number Hits;N", 11, -0.5,
@@ -95,6 +102,9 @@ void fc::GenDataHistogrammingModule::processEvent(fc::Event& event)
         for(auto const& hit : genHits->getGenHits()) {
 
             if (hit.getTrackNumber() == trackNumber) numberHits++;
+	    _hHitPositionX->Fill(hit.getGenHitPosition().X());
+	    _hHitPositionY->Fill(hit.getGenHitPosition().Y());
+	    _hHitPositionZ->Fill(hit.getGenHitPosition().Z());
 
         }
         _hNHits->Fill(numberHits);

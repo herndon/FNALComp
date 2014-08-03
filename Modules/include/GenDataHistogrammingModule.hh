@@ -58,6 +58,11 @@ private:
 
     TH1D* _hNHits;
 
+    TH1D* _hHitPositionX;
+    TH1D* _hHitPositionY;
+    TH1D* _hHitPositionZ;
+
+
     TH1D* _hNStripsPerLayer;
 
     void initializeHistograms();
