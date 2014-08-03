@@ -9,12 +9,12 @@
 #include "DataObjects/include/Track.hh"
 
 // Full parameter initialization
-fc::Track::Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate):
+fc::Track::Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const TrackHitContainer& trackHitCandidate):
   _helix(helix),
   _covMatrix(covMatrix),
   _chi2(chi2),
   _nDof(nDof),
-  _trackHitSet(trackHitCandidate){
+  _trackHits(trackHitCandidate){
 
 }
 
@@ -48,7 +48,7 @@ double fc::Track::getChi2Prob() const{
 
 
 void fc::Track::insertHit(int hitNumber){
-  _trackHitSet.push_back(hitNumber);
+  _trackHits.push_back(hitNumber);
 }
 
 void fc::Track::print(ostream& out) const{
@@ -68,7 +68,7 @@ void fc::Track::print(ostream& out) const{
 
     }
 
-  trackHitSet::size_type numberHits =_trackHitSet.size();
+  TrackHitContainer::size_type numberHits =_trackHits.size();
 
   out << "Number of hits " << numberHits << std::endl;
   

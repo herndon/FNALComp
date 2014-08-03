@@ -19,7 +19,7 @@ fc::TrackCandidateStrategy2X1SAS::TrackCandidateStrategy2X1SAS(int debugLevel,co
 
 void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(const HitSet& recoHitSet,TrackSetContainer& trackCandidateSet) const{
 
-  std::vector<trackHitSet> trackHitCandidates;
+  std::vector<TrackHitContainer> trackHitCandidates;
 
   findHitCadidates(recoHitSet,trackHitCandidates);
 
@@ -34,7 +34,7 @@ void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(const HitSet& recoHit
 
 // !!!!! Could improve to use more than outer layers
 // !!!!! control seed layers from config
-void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(const HitSet& hitSet,std::vector<fc::trackHitSet>& trackHitCandidates) const{
+void fc::TrackCandidateStrategy2X1SAS::findHitCadidates(const HitSet& hitSet,std::vector<fc::TrackHitContainer>& trackHitCandidates) const{
  
   fcf::TrackingSelector trackSelector;
   trackSelector._minPTCut = _minCandPTCut;

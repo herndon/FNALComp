@@ -52,7 +52,7 @@ void fc::TrackSetIO::writeEvent(const TrackSet & trackSet, std::ofstream & track
     trackdata << d0Sign << std::endl;
 
 
-    trackHitSet::size_type numberHits = track.getHits().size();
+    TrackHitContainer::size_type numberHits = track.getHits().size();
 
     trackdata << numberHits << std::endl;
 

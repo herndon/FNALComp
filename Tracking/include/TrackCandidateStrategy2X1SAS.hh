@@ -24,7 +24,7 @@ class DetectorGeometry;
 
     TrackCandidateStrategy2X1SAS(int,const DetectorGeometry&,double);
 
-    void findHitCadidates(const HitSet& hitSet,std::vector<fc::trackHitSet>& trackHitCandidates) const;
+    void findHitCadidates(const HitSet& hitSet,std::vector<fc::TrackHitContainer>& trackHitCandidates) const;
 
     void findTrackCandidates(const HitSet& hitSet,TrackSetContainer& trackCandidateSet) const;
 

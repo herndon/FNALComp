@@ -153,7 +153,7 @@ fc::TrackSetContainer fc::LayerTrackFinder::buildTrackCandidates(const Track & t
 
   TrackSetContainer newTracks;
   for (auto hitNumber : hits) {
-    trackHitSet trackHitCandidate = track.getHits();
+    TrackHitContainer trackHitCandidate = track.getHits();
     trackHitCandidate.push_back(hitNumber);
 
     Track newTrack(buildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,_debugLevel));

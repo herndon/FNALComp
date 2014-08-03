@@ -11,7 +11,7 @@
 
 
 
-const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSet, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int _debugLevel){
+const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, const TrackHitContainer&  trackHits, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int _debugLevel){
 
 
   // Define static constants...
@@ -93,7 +93,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
  
  
 
-    for (auto const& hit : trackHitSet){
+    for (auto const& hit : trackHits){
 
       // Hit information
       int hitNumber = hit; 
@@ -272,7 +272,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
       
 
 
-  trackHitSet::size_type nHits = trackHitSet.size();
+  TrackHitContainer::size_type nHits = trackHits.size();
   ndof = _mDim*nHits - _sDim;
   workingHelix.setHelix(helixBest);
   finalCovMatrix = d2chi2dHCdHCbest.Invert();
@@ -283,18 +283,18 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet, 
 
 }
 
-const fc::Helix fc::fitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const trackHitSet&  trackHitSetNoPV, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel){
+const fc::Helix fc::fitToHelixWithPV(const Helix& initialHelix, const HitSet& hitSet, const TrackHitContainer&  trackHitsNoPV, const DetectorGeometry& detectorGeometry, TMatrixD& finalCovMatrix, double& finalChi2, int& finalNDof, int fitType, int _debugLevel){
 
-  trackHitSet trackHitSetWithPV;
-  trackHitSetWithPV.reserve(trackHitSetNoPV.size()+1);
+  TrackHitContainer trackHitsWithPV;
+  trackHitsWithPV.reserve(trackHitsNoPV.size()+1);
 
-  for (auto hitNumber: trackHitSetNoPV) {
-    trackHitSetWithPV.push_back(hitNumber);
+  for (auto hitNumber: trackHitsNoPV) {
+    trackHitsWithPV.push_back(hitNumber);
   }
 
   // insert an local X  PV measurement point
-  if (fitType ==1 || fitType ==3) trackHitSetWithPV.push_back(-2);
+  if (fitType ==1 || fitType ==3) trackHitsWithPV.push_back(-2);
   // insert a local Z PV measurement point
-  if (fitType ==2 || fitType ==3) trackHitSetWithPV.push_back(-1);
-  return fitToHelix(initialHelix, hitSet, trackHitSetWithPV, detectorGeometry, finalCovMatrix, finalChi2, finalNDof, _debugLevel);
+  if (fitType ==2 || fitType ==3) trackHitsWithPV.push_back(-1);
+  return fitToHelix(initialHelix, hitSet, trackHitsWithPV, detectorGeometry, finalCovMatrix, finalChi2, finalNDof, _debugLevel);
 }

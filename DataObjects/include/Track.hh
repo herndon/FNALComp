@@ -40,7 +40,7 @@ class DetectorGeometry;
 
 namespace fc {
 
-typedef std::vector<int> trackHitSet; //!< Vector of hit indicies
+typedef std::vector<int> TrackHitContainer; //!< Vector of hit indicies
 
 ///
 /// Class Track: TLorentzVector to track physics properties and THGeoHelix to track tracking and helix properties
@@ -54,7 +54,7 @@ public:
 // Constructors
 
   Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign, const DetectorGeometry & detectorGeometry);
-  Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate);
+  Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const TrackHitContainer& trackHitCandidate);
 
   // Get objects
 
@@ -76,8 +76,8 @@ public:
 
   // Hit/measurement point information
 
-  const trackHitSet& getHits() const {return _trackHitSet;};
-  int numberHits() const {return _trackHitSet.size();}
+  const TrackHitContainer& getHits() const {return _trackHits;};
+  int numberHits() const {return _trackHits.size();}
 
 
   void insertHit(int hitNumber);
@@ -94,7 +94,7 @@ private:
   int _nDof;
 
 
-  trackHitSet _trackHitSet;
+  TrackHitContainer _trackHits;
 };
 } // end namescape fc
 
