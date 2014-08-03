@@ -3,8 +3,6 @@
 //============================================================================
 // InitializeHelix.hh
 // header with class definition of the InitializeHelix from 3 points
-// See <A HREF="doc/notes/Track.pdf">TrackF.pdf</A> for more information  !!!!! not done yet
-//
 //
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator

@@ -3,7 +3,7 @@
 //============================================================================
 // Helix.hh
 // header with class definition of the Helix
-// See <A HREF="doc/notes/Track.pdf">dataFormat.pdf</A> for more information
+// See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
 //
 // Helix parameter definition
 //

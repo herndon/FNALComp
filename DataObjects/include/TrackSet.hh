@@ -5,7 +5,7 @@
 // header with class definition of the TrackSet
 // A vector of Tracks
 // Map elements are int,Track pairs of track number (Key) and Track (value) information
-// See <A HREF="doc/notes/Track.pdf">Track.pdf</A> for more information
+// See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
 //
 //
 // Author Matt Herndon, University of Wisconsin,
@@ -22,7 +22,7 @@ typedef std::vector<Track> TrackSetContainer;
 ///
 /// Class TrackSet:
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-06-06
-/// For more information see <a href="../notes/Track.pdf">Track.pdf</a>
+/// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a>
 ///
 
 class TrackSet {

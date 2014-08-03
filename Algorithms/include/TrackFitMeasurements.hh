@@ -4,8 +4,6 @@
 // TrackFitMeasurements.hh
 // header with funciton definitions for Measurements and Measurement derivatives
 // in local detector coordinates
-// See <A HREF="doc/notes/Track.pdf">TrackF.pdf</A> for more information  !!!!! not done yet
-//
 //
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator

@@ -5,7 +5,7 @@
 // header with class definition of the GenTrack
 // Used for both generator level tracks
 // New version to support track fittering
-// See <A HREF="doc/notes/Track.pdf" Track.pdf</A> for more information
+// See <A HREF="doc/notes/dataFormat.pdf" dataFormat.pdf</A> for more information
 //
 // GenTrack Helix parameter definition
 //
@@ -29,7 +29,7 @@ class Helix;
 ///
 /// Class GenTrack: TLorentzVector to track momentum, and TVector3 initial position
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-07-24
-/// For more information see <a href="../notes/Track.pdf">Track.pdf</a>
+/// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a>
 ///
 
 class GenTrack {

@@ -3,7 +3,6 @@
 //============================================================================
 // TrackFitAlgorithms.hh
 // header with function definitions of the TrackFitAlgorithms for TrackFits
-// See <A HREF="doc/notes/Track.pdf">TrackF.pdf</A> for more information  !!!!! not done yet
 //
 //
 // Author Matt Herndon, University of Wisconsin,

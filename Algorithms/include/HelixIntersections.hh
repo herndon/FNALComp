@@ -3,8 +3,6 @@
 //============================================================================
 // HelixIntersections.hh
 // header with function definitions for HelixIntersections
-// See <A HREF="doc/notes/Track.pdf">TrackF.pdf</A> for more information  !!!!! not done yet
-//
 //
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator

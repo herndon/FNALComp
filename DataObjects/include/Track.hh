@@ -5,7 +5,7 @@
 // header with class definition of the Track
 // Used for both generator level and reconstructed tracks
 // New version to support track fittering
-// See <A HREF="doc/notes/Track.pdf">Track.pdf</A> for more information
+// See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
 //
 // Track Helix parameter definition
 //
@@ -45,7 +45,7 @@ typedef std::vector<int> TrackHitContainer; //!< Vector of hit indicies
 ///
 /// Class Track: TLorentzVector to track physics properties and THGeoHelix to track tracking and helix properties
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-06-06
-/// For more information see <a href="../notes/Track.pdf">Track.pdf</a>
+/// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a>
 ///
 
 class Track {

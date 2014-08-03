@@ -3,8 +3,6 @@
 //============================================================================
 // TrackFit.hh
 // header with class definition of the TrackFit for reconstructed tracks
-// See <A HREF="doc/notes/Track.pdf">TrackF.pdf</A> for more information  !!!!! not done yet
-//
 //
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator

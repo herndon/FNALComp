@@ -4,7 +4,7 @@
 // GenTrackSet.hh
 // header with class definition of the GenTrackSet
 // A vector of GenTracks
-// See <A HREF="doc/notes/Track.pdf">Track.pdf</A> for more information
+// See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
 //
 //
 // Author Matt Herndon, University of Wisconsin,
@@ -21,7 +21,7 @@ typedef std::vector<GenTrack> GenTrackSetContainer;
 ///
 /// Class GenTrackSet:
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-06-06
-/// For more information see <a href="../notes/Track.pdf">Track.pdf</a>
+/// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a>
 ///
 
 class GenTrackSet {
