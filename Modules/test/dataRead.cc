@@ -12,7 +12,7 @@
 #include "Geometry/include/BuildDetectorGeometry.hh"
 #include "Framework/include/EventProcessor.hh"
 #include "Modules/include/DataSource.hh"
-#include "Modules/include/GenDataHistogrammingModule.hh"
+#include "Modules/include/Day0HistogrammingModule.hh"
 #include <fstream>
 #include <iostream>
 
@@ -59,7 +59,7 @@ int main ()
     //  the order the modules are passed to the EventProcessor
     //  is the order the modules will run
     processor.addModule( new
-                         fc::GenDataHistogrammingModule("genTracks", // tracks from file
+                         fc::Day0HistogrammingModule("genTracks", // tracks from file
 							"genHits", // hits from file
 							"strips", // strips from file
 							detectorGeometry)); //get these strips
