@@ -127,6 +127,7 @@ void fc::chooseHitsForInitialization(const HitSet & hitSet,
 
     }
 
+
 }
 
 bool fc::findZForInitialization(const HitSet & hitSet,
@@ -137,7 +138,8 @@ bool fc::findZForInitialization(const HitSet & hitSet,
     int layer4SASHit = -1;
     int layer3XHit = -1;
     int layer3SASHit = -1;
-
+    int layerZ = -1;
+    int layerZHit = -1;
 
 
     for (auto const& hit : trackHitCandidate) {
@@ -145,7 +147,12 @@ bool fc::findZForInitialization(const HitSet & hitSet,
         if (hitSet.getHits()[hit].getLayer() == 9) layer4SASHit = hit;
         if (hitSet.getHits()[hit].getLayer() == 3) layer3XHit = hit;
         if (hitSet.getHits()[hit].getLayer() == 8) layer3SASHit = hit;
-    }
+        if (((hitSet.getHits()[hit].getLayer() == 5)||(hitSet.getHits()[hit].getLayer() == 6)
+	     ||(hitSet.getHits()[hit].getLayer() == 8))&&hitSet.getHits()[hit].getLayer() > layerZ){
+	  layerZ = hitSet.getHits()[hit].getLayer();
+	  layerZHit = hit;
+	}
+   }
 
 
     if (layer4XHit != -1 &&  layer4SASHit != -1) {
@@ -156,6 +163,14 @@ bool fc::findZForInitialization(const HitSet & hitSet,
         if (intersectStrips(hitSet.getHits()[layer3XHit],hitSet.getHits()[layer3SASHit],
                             detectorGeometry,zPosition)) return true;
     }
+
+    if (layerZHit != -1) {
+
+      zPosition = hitSet.getHits()[layerZHit].getHitPosition();
+      return true;
+    }
+
+ 
     return false;
 
 }

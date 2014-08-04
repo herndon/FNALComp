@@ -121,6 +121,7 @@ void fc::PerfectTrackRecoModule::buildPerfectTrackCandidates(
         if (_debugLevel ==2) {
             std::cout << "Track after fit" << std::endl;
             trackCandidate.print(std::cout);
+
         }
 
         trackCandidateSet.insertTrack(std::move(trackCandidate));
