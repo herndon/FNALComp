@@ -403,14 +403,6 @@ approach. Signed positive to indicate the reference point is within the circle o
 \item getKappa(): inverse Pt signed to indicate handedness + right handed (negative charge) - left handed
 (positive charge)
 \item getDz(): z distance to reference point at point of closest approach
-<<<<<<< HEAD
-\item getTanL(): pZ/pT or inverse cot(theta) where theta is the dip angle which is zero for track perpendicular
-to the z axis and 90 degrees for parallel.
-\end{itemize}
-The Helix helix parameter follow the convention of~\cite{helix} and are described in detail there.\\
-Note that helix parameters are always referenced from (0,0,0) in the parametrization used in this code.
-\item getLorentzVector() get a root TLorentzVector object based on the track parameters
-=======
 \item getTanL(): pZ/pT or cot(theta) where theta is the dip angle which is 90 for track perpendicular
 to the z axis and 0 degrees for parallel to the position z axis.
 \item getAlpha() get inverse curvature constant in the magnetic field at the origin
@@ -433,7 +425,6 @@ Note that helix parameters are always referenced from (0,0,0) in the parametriza
 \item getLorentzVector() get a root TLorentzVector object based on the track parameters
 \item getHits() get TrackHitContainer vector of hit indices's
 \item numberHits()
->>>>>>> master
 \item print(ostream\&): to print to an a user specified ostream.
 
 \end{itemize}
