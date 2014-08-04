@@ -13,5 +13,5 @@ git diff
 
 # update local production branch to remote production
 git fetch
-git rebase origin/production
+git pull
 
