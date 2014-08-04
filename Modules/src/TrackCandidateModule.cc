@@ -28,6 +28,12 @@ void fc::TrackCandidateModule::processEvent(Event& event)
 
     findTrackCandidates(*recoHitSet,*recoTrackCandidateSet);
 
+    if (_debugLevel>=2) {
+        std::cout << "Candidate track set" << std::endl;
+        recoTrackCandidateSet->print(std::cout);
+    }
+
+
     event.put(_outTracksLabel,std::move(recoTrackCandidateSet) );
 }
 

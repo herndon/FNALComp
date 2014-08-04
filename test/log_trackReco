@@ -1937,6 +1937,177 @@ chi2 5.9988 ndof 5
 
 Number of hits 10
 Hit numbers: 2 12 22 31 41 48 58 68 80 90 
+Candidate track set
+TrackSet 
+Number Tracks: 21
+Track number: 0
+Charge -1
+4 momentum -1.03058 9.6332 0.368185 9.69516 
+Track parameters:  pT 9.68817 cot(theta) 26.3133 phi0 1.67737 d0 -8.27492e-10 z0 1.96854e-12
+Helix paramters: kappa 0.103219 tan(Lambda) 0.0380036 phi0 to d0 3.24817
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 29 88 
+Track number: 1
+Charge -1
+4 momentum -0.00595443 1.28778 0.0472844 1.28866 
+Track parameters:  pT 1.28779 cot(theta) 27.235 phi0 1.57542 d0 -8.51969e-11 z0 3.23728e-12
+Helix paramters: kappa 0.776522 tan(Lambda) 0.0367174 phi0 to d0 3.14622
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 30 88 
+Track number: 2
+Charge 1
+4 momentum -0.283454 1.35292 -0.0585243 1.38353 
+Track parameters:  pT 1.3823 cot(theta) -23.6192 phi0 1.77732 d0 2.90894e-11 z0 -2.20914e-09
+Helix paramters: kappa -0.723434 tan(Lambda) -0.0423385 phi0 to d0 3.34812
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 29 89 
+Track number: 3
+Charge 1
+4 momentum -3.14096 30.6122 -1.34215 30.8022 
+Track parameters:  pT 30.7729 cot(theta) -22.9281 phi0 1.67304 d0 -1.27803e-10 z0 1.9579e-12
+Helix paramters: kappa -0.0324961 tan(Lambda) -0.0436146 phi0 to d0 3.24384
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 89 
+Track number: 4
+Charge -1
+4 momentum -0.315119 4.77615 -0.210739 4.79117 
+Track parameters:  pT 4.78654 cot(theta) -22.7131 phi0 1.63668 d0 -1.92029e-10 z0 2.74812e-12
+Helix paramters: kappa 0.208919 tan(Lambda) -0.0440274 phi0 to d0 3.20747
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 31 89 
+Track number: 5
+Charge 1
+4 momentum -0.248767 1.06292 0.0839514 1.09486 
+Track parameters:  pT 1.09164 cot(theta) 13.0033 phi0 1.8007 d0 5.58274e-12 z0 1.21941e-10
+Helix paramters: kappa -0.916052 tan(Lambda) 0.0769038 phi0 to d0 3.3715
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 29 90 
+Track number: 6
+Charge 1
+4 momentum -0.556118 4.40991 0.33755 4.45763 
+Track parameters:  pT 4.44483 cot(theta) 13.1679 phi0 1.69624 d0 3.01289e-11 z0 3.04623e-13
+Helix paramters: kappa -0.22498 tan(Lambda) 0.0759421 phi0 to d0 3.26704
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 30 90 
+Track number: 7
+Charge -1
+4 momentum -5.04311 56.5645 4.28968 56.9507 
+Track parameters:  pT 56.7889 cot(theta) 13.2385 phi0 1.65972 d0 1.75734e-10 z0 1.1916e-12
+Helix paramters: kappa 0.0176091 tan(Lambda) 0.0755373 phi0 to d0 3.23051
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 31 90 
+Track number: 8
+Charge -1
+4 momentum -0.760622 23.4982 1.41109 23.5528 
+Track parameters:  pT 23.5105 cot(theta) 16.6613 phi0 1.60315 d0 -2.41478e-11 z0 6.49958e-13
+Helix paramters: kappa 0.0425342 tan(Lambda) 0.0600194 phi0 to d0 3.17395
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 32 91 
+Track number: 9
+Charge -1
+4 momentum 0.314023 57.103 -3.27258 57.1976 
+Track parameters:  pT 57.1039 cot(theta) -17.4492 phi0 1.5653 d0 1.82201e-10 z0 -6.87227e-11
+Helix paramters: kappa 0.0175119 tan(Lambda) -0.0573092 phi0 to d0 3.13609
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 33 92 
+Track number: 10
+Charge -1
+4 momentum 0.165791 5.52977 -0.318562 5.54142 
+Track parameters:  pT 5.53225 cot(theta) -17.3663 phi0 1.54082 d0 7.32441e-12 z0 1.35051e-09
+Helix paramters: kappa 0.180758 tan(Lambda) -0.0575826 phi0 to d0 3.11162
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 34 92 
+Track number: 11
+Charge 1
+4 momentum -0.0586021 18.0385 1.22866 18.0804 
+Track parameters:  pT 18.0386 cot(theta) 14.6815 phi0 1.57405 d0 -3.07838e-12 z0 -7.18475e-10
+Helix paramters: kappa -0.0554367 tan(Lambda) 0.0681129 phi0 to d0 3.14484
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 33 92 
+Track number: 12
+Charge 1
+4 momentum -0.0586021 18.0385 -1.47806 18.099 
+Track parameters:  pT 18.0386 cot(theta) -12.2042 phi0 1.57405 d0 -4.15865e-12 z0 -8.3705e-10
+Helix paramters: kappa -0.0554367 tan(Lambda) -0.0819391 phi0 to d0 3.14484
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 33 93 
+Track number: 13
+Charge -1
+4 momentum 0.196825 9.27134 0.629019 9.29474 
+Track parameters:  pT 9.27343 cot(theta) 14.7427 phi0 1.54957 d0 1.51758e-12 z0 7.20902e-10
+Helix paramters: kappa 0.107835 tan(Lambda) 0.0678303 phi0 to d0 3.12037
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 92 
+Track number: 14
+Charge -1
+4 momentum 0.196825 9.27134 -0.762432 9.30472 
+Track parameters:  pT 9.27343 cot(theta) -12.163 phi0 1.54957 d0 4.02131e-12 z0 5.45974e-10
+Helix paramters: kappa 0.107835 tan(Lambda) -0.0822169 phi0 to d0 3.12037
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 93 
+Track number: 15
+Charge 1
+4 momentum -0.021122 2.21367 0.0894162 2.21558 
+Track parameters:  pT 2.21377 cot(theta) 24.758 phi0 1.58034 d0 -2.00899e-09 z0 -2.1658e-12
+Helix paramters: kappa -0.451718 tan(Lambda) 0.0403909 phi0 to d0 3.15113
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 95 
+Track number: 16
+Charge 1
+4 momentum 1.97577 36.4052 1.44689 36.4875 
+Track parameters:  pT 36.4588 cot(theta) 25.198 phi0 1.51658 d0 7.4356e-11 z0 -1.19716e-12
+Helix paramters: kappa -0.0274282 tan(Lambda) 0.0396858 phi0 to d0 3.08737
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 95 
+Track number: 17
+Charge -1
+4 momentum 1.50079 11.0696 0.583904 11.1861 
+Track parameters:  pT 11.1709 cot(theta) 19.1314 phi0 1.43604 d0 -7.37501e-11 z0 -2.67059e-12
+Helix paramters: kappa 0.0895184 tan(Lambda) 0.0522701 phi0 to d0 3.00684
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 37 96 
+Track number: 18
+Charge -1
+4 momentum 0.55776 3.32939 0.175191 3.38033 
+Track parameters:  pT 3.37579 cot(theta) 19.2692 phi0 1.40481 d0 1.10258e-10 z0 -1.48229e-12
+Helix paramters: kappa 0.296227 tan(Lambda) 0.0518962 phi0 to d0 2.97561
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 38 96 
+Track number: 19
+Charge 1
+4 momentum 0.319098 3.53899 -0.330117 3.56865 
+Track parameters:  pT 3.55335 cot(theta) -10.7639 phi0 1.48087 d0 -1.06664e-10 z0 -7.83433e-13
+Helix paramters: kappa -0.281425 tan(Lambda) -0.092903 phi0 to d0 3.05167
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 37 97 
+Track number: 20
+Charge 1
+4 momentum 1.55805 12.8352 -1.20617 12.9856 
+Track parameters:  pT 12.9295 cot(theta) -10.7194 phi0 1.45 d0 3.01045e-10 z0 -7.62839e-13
+Helix paramters: kappa -0.0773427 tan(Lambda) -0.0932888 phi0 to d0 3.0208
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 38 97 
 Reconstructed track set
 TrackSet 
 Number Tracks: 9
@@ -3842,6 +4013,185 @@ chi2 2.57659 ndof 4
 
 Number of hits 9
 Hit numbers: 4 14 22 32 54 63 73 78 88 
+Candidate track set
+TrackSet 
+Number Tracks: 22
+Track number: 0
+Charge 1
+4 momentum -6.53642 45.0557 -0.948663 45.5372 
+Track parameters:  pT 45.5274 cot(theta) -47.9911 phi0 1.71487 d0 -9.17141e-11 z0 2.76774e-13
+Helix paramters: kappa -0.0219648 tan(Lambda) -0.0208372 phi0 to d0 3.28566
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 29 85 
+Track number: 1
+Charge -1
+4 momentum -0.895724 9.47809 -0.651583 9.54259 
+Track parameters:  pT 9.52032 cot(theta) -14.6111 phi0 1.66502 d0 -8.28336e-10 z0 2.66857e-12
+Helix paramters: kappa 0.105039 tan(Lambda) -0.0684413 phi0 to d0 3.23582
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 86 
+Track number: 2
+Charge 1
+4 momentum -11.8882 167.502 -3.68313 167.964 
+Track parameters:  pT 167.924 cot(theta) -45.5926 phi0 1.64165 d0 -3.99059e-10 z0 6.07865e-13
+Helix paramters: kappa -0.00595508 tan(Lambda) -0.0219334 phi0 to d0 3.21245
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 31 87 
+Track number: 3
+Charge -1
+4 momentum -0.0393631 2.71135 -0.061207 2.71232 
+Track parameters:  pT 2.71163 cot(theta) -44.3026 phi0 1.58531 d0 -1.32789e-10 z0 2.25817e-12
+Helix paramters: kappa 0.368782 tan(Lambda) -0.022572 phi0 to d0 3.15611
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 32 87 
+Track number: 4
+Charge -1
+4 momentum 0.0444802 1.51485 -0.0349448 1.51591 
+Track parameters:  pT 1.51551 cot(theta) -43.3685 phi0 1.54144 d0 -1.73513e-10 z0 2.92363e-12
+Helix paramters: kappa 0.659846 tan(Lambda) -0.0230582 phi0 to d0 3.11224
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 33 87 
+Track number: 5
+Charge 1
+4 momentum -0.211505 1.29525 -0.0269733 1.31268 
+Track parameters:  pT 1.3124 cot(theta) -48.6556 phi0 1.73266 d0 8.24648e-11 z0 -1.46034e-12
+Helix paramters: kappa -0.76196 tan(Lambda) -0.0205526 phi0 to d0 3.30346
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 31 89 
+Track number: 6
+Charge 1
+4 momentum -0.272239 2.57909 -0.0550735 2.594 
+Track parameters:  pT 2.59342 cot(theta) -47.0901 phi0 1.67596 d0 4.86386e-12 z0 -8.19417e-10
+Helix paramters: kappa -0.385592 tan(Lambda) -0.0212359 phi0 to d0 3.24676
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 32 89 
+Track number: 7
+Charge 1
+4 momentum -0.678171 11.16 -0.243247 11.1832 
+Track parameters:  pT 11.1806 cot(theta) -45.9638 phi0 1.63149 d0 5.00963e-12 z0 1.88891e-09
+Helix paramters: kappa -0.0894409 tan(Lambda) -0.0217562 phi0 to d0 3.20229
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 33 89 
+Track number: 8
+Charge -1
+4 momentum 0.0637913 1.82724 -0.0417476 1.82883 
+Track parameters:  pT 1.82836 cot(theta) -43.7955 phi0 1.5359 d0 2.80872e-10 z0 2.13301e-12
+Helix paramters: kappa 0.546939 tan(Lambda) -0.0228334 phi0 to d0 3.1067
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 34 89 
+Track number: 9
+Charge 1
+4 momentum -0.184555 1.09037 0.0993703 1.11033 
+Track parameters:  pT 1.10588 cot(theta) 11.1288 phi0 1.73847 d0 -4.06306e-11 z0 2.26629e-13
+Helix paramters: kappa -0.904261 tan(Lambda) 0.0898566 phi0 to d0 3.30926
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 32 90 
+Track number: 10
+Charge 1
+4 momentum -0.201501 1.62581 0.146619 1.6448 
+Track parameters:  pT 1.63825 cot(theta) 11.1735 phi0 1.69411 d0 -6.2763e-12 z0 -1.42332e-13
+Helix paramters: kappa -0.610409 tan(Lambda) 0.0894974 phi0 to d0 3.2649
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 33 90 
+Track number: 11
+Charge -1
+4 momentum -0.941649 34.4945 3.05466 34.6423 
+Track parameters:  pT 34.5074 cot(theta) 11.2966 phi0 1.59809 d0 2.63213e-11 z0 2.10269e-09
+Helix paramters: kappa 0.0289793 tan(Lambda) 0.0885219 phi0 to d0 3.16888
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 34 90 
+Track number: 12
+Charge 1
+4 momentum 0.0705732 19.0425 0.587928 19.0517 
+Track parameters:  pT 19.0427 cot(theta) 32.3895 phi0 1.56709 d0 -4.22262e-12 z0 -1.10548e-09
+Helix paramters: kappa -0.0525137 tan(Lambda) 0.0308742 phi0 to d0 3.13789
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 35 91 
+Track number: 13
+Charge 1
+4 momentum 0.0705732 19.0425 -1.60778 19.1104 
+Track parameters:  pT 19.0427 cot(theta) -11.8441 phi0 1.56709 d0 -7.8113e-12 z0 -1.17216e-09
+Helix paramters: kappa -0.0525137 tan(Lambda) -0.0844305 phi0 to d0 3.13789
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 35 92 
+Track number: 14
+Charge 1
+4 momentum 0.279447 37.0819 1.14329 37.1006 
+Track parameters:  pT 37.083 cot(theta) 32.4353 phi0 1.56326 d0 -3.23813e-12 z0 -8.77875e-10
+Helix paramters: kappa -0.0269665 tan(Lambda) 0.0308306 phi0 to d0 3.13406
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 36 91 
+Track number: 15
+Charge 1
+4 momentum 0.279447 37.0819 -3.13259 37.2151 
+Track parameters:  pT 37.083 cot(theta) -11.8378 phi0 1.56326 d0 -6.8633e-12 z0 -9.68457e-10
+Helix paramters: kappa -0.0269665 tan(Lambda) -0.084475 phi0 to d0 3.13406
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 36 92 
+Track number: 16
+Charge -1
+4 momentum 0.162303 1.06975 0.0314753 1.08245 
+Track parameters:  pT 1.082 cot(theta) 34.3761 phi0 1.42022 d0 -1.44547e-10 z0 2.61907e-12
+Helix paramters: kappa 0.924218 tan(Lambda) 0.02909 phi0 to d0 2.99102
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 37 91 
+Track number: 17
+Charge -1
+4 momentum 0.162303 1.06975 -0.0928838 1.08598 
+Track parameters:  pT 1.082 cot(theta) -11.6489 phi0 1.42022 d0 1.20675e-11 z0 1.60478e-13
+Helix paramters: kappa 0.924218 tan(Lambda) -0.0858449 phi0 to d0 2.99102
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 37 92 
+Track number: 18
+Charge 1
+4 momentum -0.108615 1.13091 0.0537328 1.13739 
+Track parameters:  pT 1.13612 cot(theta) 21.1438 phi0 1.66654 d0 1.41085e-10 z0 -2.30606e-12
+Helix paramters: kappa -0.880191 tan(Lambda) 0.0472951 phi0 to d0 3.23734
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 93 
+Track number: 19
+Charge 1
+4 momentum -0.107391 1.16428 0.0552558 1.17053 
+Track parameters:  pT 1.16922 cot(theta) 21.1602 phi0 1.66277 d0 1.39801e-10 z0 -2.28363e-12
+Helix paramters: kappa -0.855271 tan(Lambda) 0.0472586 phi0 to d0 3.23357
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 93 
+Track number: 20
+Charge -1
+4 momentum 0.547726 10.8403 0.496458 10.8654 
+Track parameters:  pT 10.8541 cot(theta) 21.8631 phi0 1.52031 d0 1.07652e-12 z0 -1.1951e-09
+Helix paramters: kappa 0.0921311 tan(Lambda) 0.0457392 phi0 to d0 3.09111
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 37 93 
+Track number: 21
+Charge -1
+4 momentum 5.50814 72.281 1.50916 72.5063 
+Track parameters:  pT 72.4905 cot(theta) 48.0337 phi0 1.49474 d0 2.4795e-10 z0 -3.88994e-13
+Helix paramters: kappa 0.0137949 tan(Lambda) 0.0208187 phi0 to d0 3.06554
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 38 94 
 Reconstructed track set
 TrackSet 
 Number Tracks: 9
@@ -5753,6 +6103,209 @@ chi2 1.36676 ndof 5
 
 Number of hits 10
 Hit numbers: 1 10 19 28 38 53 63 74 78 87 
+Candidate track set
+TrackSet 
+Number Tracks: 25
+Track number: 0
+Charge 1
+4 momentum -19.8062 142.901 -7.60561 144.467 
+Track parameters:  pT 144.267 cot(theta) -18.9684 phi0 1.70852 d0 -3.862e-10 z0 2.79456e-12
+Helix paramters: kappa -0.00693161 tan(Lambda) -0.0527191 phi0 to d0 3.27932
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 28 87 
+Track number: 1
+Charge -1
+4 momentum -3.18045 24.2357 -1.29068 24.4775 
+Track parameters:  pT 24.4435 cot(theta) -18.9385 phi0 1.70128 d0 -3.36724e-10 z0 3.42505e-12
+Helix paramters: kappa 0.0409107 tan(Lambda) -0.0528026 phi0 to d0 3.27208
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 29 87 
+Track number: 2
+Charge -1
+4 momentum -0.0114387 1.19369 -0.0645688 1.19548 
+Track parameters:  pT 1.19374 cot(theta) -18.4879 phi0 1.58038 d0 -5.06189e-10 z0 5.8477e-12
+Helix paramters: kappa 0.837703 tan(Lambda) -0.0540895 phi0 to d0 3.15118
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 30 87 
+Track number: 3
+Charge 1
+4 momentum -1.69914 11.4482 0.997903 11.6166 
+Track parameters:  pT 11.5736 cot(theta) 11.5979 phi0 1.71814 d0 5.09311e-10 z0 -7.19305e-13
+Helix paramters: kappa -0.0864034 tan(Lambda) 0.0862222 phi0 to d0 3.28894
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 28 87 
+Track number: 4
+Charge 1
+4 momentum -3.63386 25.7702 2.24182 26.1215 
+Track parameters:  pT 26.0252 cot(theta) 11.609 phi0 1.71088 d0 1.73177e-10 z0 -6.32831e-14
+Helix paramters: kappa -0.0384244 tan(Lambda) 0.0861404 phi0 to d0 3.28168
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 29 87 
+Track number: 5
+Charge -1
+4 momentum -0.0246188 1.31212 0.110923 1.31703 
+Track parameters:  pT 1.31235 cot(theta) 11.8312 phi0 1.58956 d0 3.47425e-11 z0 2.12928e-12
+Helix paramters: kappa 0.761992 tan(Lambda) 0.0845222 phi0 to d0 3.16035
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 30 87 
+Track number: 6
+Charge 1
+4 momentum -0.285938 1.18875 0.0147876 1.22275 
+Track parameters:  pT 1.22266 cot(theta) 82.6813 phi0 1.80685 d0 -1.60403e-12 z0 -1.11523e-10
+Helix paramters: kappa -0.81789 tan(Lambda) 0.0120946 phi0 to d0 3.37764
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 28 88 
+Track number: 7
+Charge 1
+4 momentum -0.294619 1.26568 0.0156133 1.29962 
+Track parameters:  pT 1.29952 cot(theta) 83.2315 phi0 1.7995 d0 4.02966e-12 z0 2.864e-10
+Helix paramters: kappa -0.769514 tan(Lambda) 0.0120147 phi0 to d0 3.37029
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 29 88 
+Track number: 8
+Charge -1
+4 momentum -2.06257 19.6248 0.209631 19.734 
+Track parameters:  pT 19.7329 cot(theta) 94.1315 phi0 1.67551 d0 -1.36234e-10 z0 1.85933e-12
+Helix paramters: kappa 0.0506769 tan(Lambda) 0.0106234 phi0 to d0 3.24631
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 88 
+Track number: 9
+Charge -1
+4 momentum 0.0349055 1.03601 0.00928294 1.03664 
+Track parameters:  pT 1.0366 cot(theta) 111.667 phi0 1.53712 d0 -1.89468e-10 z0 4.15642e-12
+Helix paramters: kappa 0.96469 tan(Lambda) 0.00895516 phi0 to d0 3.10791
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 31 88 
+Track number: 10
+Charge 1
+4 momentum -0.241623 1.08028 -0.0651872 1.10889 
+Track parameters:  pT 1.10697 cot(theta) -16.9815 phi0 1.79084 d0 1.84131e-10 z0 -2.50051e-12
+Helix paramters: kappa -0.903364 tan(Lambda) -0.0588878 phi0 to d0 3.36164
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 30 89 
+Track number: 11
+Charge -1
+4 momentum -2.19383 27.9366 -1.70072 28.0742 
+Track parameters:  pT 28.0226 cot(theta) -16.4769 phi0 1.64916 d0 -1.48622e-10 z0 1.96445e-12
+Helix paramters: kappa 0.0356855 tan(Lambda) -0.060691 phi0 to d0 3.21996
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 31 89 
+Track number: 12
+Charge -1
+4 momentum -0.0202377 2.03962 -0.125298 2.04356 
+Track parameters:  pT 2.03972 cot(theta) -16.2789 phi0 1.58072 d0 -2.49687e-10 z0 3.25766e-12
+Helix paramters: kappa 0.490263 tan(Lambda) -0.0614293 phi0 to d0 3.15151
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 32 89 
+Track number: 13
+Charge 1
+4 momentum -0.27643 1.87915 -0.0497046 1.90003 
+Track parameters:  pT 1.89938 cot(theta) -38.2133 phi0 1.71685 d0 2.4872e-12 z0 -1.18189e-09
+Helix paramters: kappa -0.526488 tan(Lambda) -0.0261689 phi0 to d0 3.28765
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 31 90 
+Track number: 14
+Charge 1
+4 momentum -1.14868 14.9022 -0.403356 14.9519 
+Track parameters:  pT 14.9464 cot(theta) -37.0552 phi0 1.64773 d0 -5.36511e-11 z0 1.05648e-12
+Helix paramters: kappa -0.0669057 tan(Lambda) -0.0269868 phi0 to d0 3.21852
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 32 90 
+Track number: 15
+Charge -1
+4 momentum 0.169851 11.2268 -0.881402 11.2626 
+Track parameters:  pT 11.2281 cot(theta) -12.7389 phi0 1.55567 d0 3.72682e-12 z0 5.91085e-10
+Helix paramters: kappa 0.0890624 tan(Lambda) -0.0784998 phi0 to d0 3.12646
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 33 91 
+Track number: 16
+Charge 1
+4 momentum -0.115481 0.997911 0.0680078 1.00687 
+Track parameters:  pT 1.00457 cot(theta) 14.7714 phi0 1.68601 d0 1.28968e-10 z0 -1.89394e-12
+Helix paramters: kappa -0.99545 tan(Lambda) 0.0676984 phi0 to d0 3.2568
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 33 92 
+Track number: 17
+Charge -1
+4 momentum 0.901266 21.6682 1.43422 21.7344 
+Track parameters:  pT 21.687 cot(theta) 15.1211 phi0 1.52923 d0 3.70124e-12 z0 -1.48606e-09
+Helix paramters: kappa 0.0461106 tan(Lambda) 0.0661326 phi0 to d0 3.10002
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 92 
+Track number: 18
+Charge -1
+4 momentum 3.74597 37.456 0.963665 37.6552 
+Track parameters:  pT 37.6429 cot(theta) 39.0622 phi0 1.47112 d0 2.86219e-09 z0 -7.32117e-12
+Helix paramters: kappa 0.0265654 tan(Lambda) 0.0256002 phi0 to d0 3.04191
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 93 
+Track number: 19
+Charge -1
+4 momentum 0.376068 2.34228 0.0590742 2.37302 
+Track parameters:  pT 2.37228 cot(theta) 40.1577 phi0 1.4116 d0 3.52281e-12 z0 -1.32063e-09
+Helix paramters: kappa 0.421535 tan(Lambda) 0.0249019 phi0 to d0 2.9824
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 93 
+Track number: 20
+Charge 1
+4 momentum 0.120992 2.50089 -0.197015 2.51156 
+Track parameters:  pT 2.50382 cot(theta) -12.7088 phi0 1.52245 d0 -1.95109e-11 z0 -1.56666e-12
+Helix paramters: kappa -0.39939 tan(Lambda) -0.0786859 phi0 to d0 3.09325
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 35 94 
+Track number: 21
+Charge 1
+4 momentum 11.8783 110.337 -8.81341 111.324 
+Track parameters:  pT 110.975 cot(theta) -12.5916 phi0 1.46355 d0 -3.42539e-10 z0 -2.96079e-12
+Helix paramters: kappa -0.00901104 tan(Lambda) -0.079418 phi0 to d0 3.03435
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 36 94 
+Track number: 22
+Charge -1
+4 momentum 0.300221 1.36242 -0.112326 1.39962 
+Track parameters:  pT 1.3951 cot(theta) -12.4201 phi0 1.3539 d0 -6.45909e-11 z0 4.49145e-13
+Helix paramters: kappa 0.716792 tan(Lambda) -0.0805146 phi0 to d0 2.9247
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 37 94 
+Track number: 23
+Charge 1
+4 momentum 0.0229686 1.32688 -0.021518 1.32726 
+Track parameters:  pT 1.32708 cot(theta) -61.673 phi0 1.55349 d0 1.4103e-10 z0 -3.70266e-12
+Helix paramters: kappa -0.753533 tan(Lambda) -0.0162146 phi0 to d0 3.12428
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 36 95 
+Track number: 24
+Charge 1
+4 momentum 2.69235 21.5105 -0.379696 21.6817 
+Track parameters:  pT 21.6784 cot(theta) -57.094 phi0 1.44628 d0 1.4639e-10 z0 -1.97552e-12
+Helix paramters: kappa -0.0461289 tan(Lambda) -0.017515 phi0 to d0 3.01708
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 37 95 
 Reconstructed track set
 TrackSet 
 Number Tracks: 10
@@ -7706,6 +8259,345 @@ chi2 11.3183 ndof 5
 
 Number of hits 10
 Hit numbers: 7 17 26 36 46 51 61 69 85 95 
+Candidate track set
+TrackSet 
+Number Tracks: 42
+Track number: 0
+Charge -1
+4 momentum -1.77962 16.7324 1.41392 16.8861 
+Track parameters:  pT 16.8268 cot(theta) 11.9008 phi0 1.67676 d0 -3.66209e-11 z0 6.99233e-13
+Helix paramters: kappa 0.0594291 tan(Lambda) 0.0840283 phi0 to d0 3.24755
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 29 88 
+Track number: 1
+Charge -1
+4 momentum -1.77962 16.7324 -1.19936 16.8695 
+Track parameters:  pT 16.8268 cot(theta) -14.0298 phi0 1.67676 d0 -3.6616e-10 z0 3.03089e-12
+Helix paramters: kappa 0.0594291 tan(Lambda) -0.071277 phi0 to d0 3.24755
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 29 89 
+Track number: 2
+Charge -1
+4 momentum -1.22085 11.8918 1.00398 11.9964 
+Track parameters:  pT 11.9543 cot(theta) 11.9069 phi0 1.6731 d0 -2.54708e-10 z0 9.82967e-13
+Helix paramters: kappa 0.0836517 tan(Lambda) 0.0839849 phi0 to d0 3.2439
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 30 88 
+Track number: 3
+Charge -1
+4 momentum -1.22085 11.8918 -0.852563 11.9847 
+Track parameters:  pT 11.9543 cot(theta) -14.0216 phi0 1.6731 d0 -5.90527e-10 z0 2.95031e-12
+Helix paramters: kappa 0.0836517 tan(Lambda) -0.0713183 phi0 to d0 3.2439
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 30 89 
+Track number: 4
+Charge -1
+4 momentum -0.146045 2.581 0.215616 2.5941 
+Track parameters:  pT 2.58513 cot(theta) 11.9895 phi0 1.62732 d0 3.96374e-11 z0 1.42448e-12
+Helix paramters: kappa 0.386828 tan(Lambda) 0.0834064 phi0 to d0 3.19812
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 31 88 
+Track number: 5
+Charge -1
+4 momentum -0.146045 2.581 -0.185644 2.59178 
+Track parameters:  pT 2.58513 cot(theta) -13.9252 phi0 1.62732 d0 -3.75795e-10 z0 4.35673e-12
+Helix paramters: kappa 0.386828 tan(Lambda) -0.0718124 phi0 to d0 3.19812
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 31 89 
+Track number: 6
+Charge -1
+4 momentum -0.081105 2.01843 0.168036 2.02704 
+Track parameters:  pT 2.02006 cot(theta) 12.0216 phi0 1.61096 d0 2.78055e-11 z0 1.70026e-12
+Helix paramters: kappa 0.495035 tan(Lambda) 0.0831837 phi0 to d0 3.18175
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 32 88 
+Track number: 7
+Charge -1
+4 momentum -0.081105 2.01843 -0.145401 2.02529 
+Track parameters:  pT 2.02006 cot(theta) -13.893 phi0 1.61096 d0 -4.09396e-10 z0 4.65207e-12
+Helix paramters: kappa 0.495035 tan(Lambda) -0.0719787 phi0 to d0 3.18175
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 32 89 
+Track number: 8
+Charge -1
+4 momentum -20.5498 181.938 32.619 185.978 
+Track parameters:  pT 183.095 cot(theta) 5.61314 phi0 1.68327 d0 4.11073e-10 z0 8.37747e-12
+Helix paramters: kappa 0.00546165 tan(Lambda) 0.178153 phi0 to d0 3.25407
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 29 88 
+Track number: 9
+Charge -1
+4 momentum -20.5498 181.938 4.17768 183.143 
+Track parameters:  pT 183.095 cot(theta) 43.827 phi0 1.68327 d0 4.10744e-10 z0 1.07309e-12
+Helix paramters: kappa 0.00546165 tan(Lambda) 0.022817 phi0 to d0 3.25407
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 29 89 
+Track number: 10
+Charge -1
+4 momentum -3.65303 33.4394 5.99134 34.1677 
+Track parameters:  pT 33.6383 cot(theta) 5.61449 phi0 1.67961 d0 2.38672e-10 z0 -1.46433e-12
+Helix paramters: kappa 0.029728 tan(Lambda) 0.178111 phi0 to d0 3.2504
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 88 
+Track number: 11
+Charge -1
+4 momentum -3.65303 33.4394 0.766102 33.647 
+Track parameters:  pT 33.6383 cot(theta) 43.9084 phi0 1.67961 d0 -6.24968e-11 z0 1.62313e-12
+Helix paramters: kappa 0.029728 tan(Lambda) 0.0227747 phi0 to d0 3.2504
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 89 
+Track number: 12
+Charge -1
+4 momentum -0.188578 2.99177 0.532102 3.04456 
+Track parameters:  pT 2.9977 cot(theta) 5.6337 phi0 1.63375 d0 1.44921e-10 z0 7.19215e-14
+Helix paramters: kappa 0.333589 tan(Lambda) 0.177503 phi0 to d0 3.20454
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 31 88 
+Track number: 13
+Charge -1
+4 momentum -0.188578 2.99177 0.0666468 2.99844 
+Track parameters:  pT 2.9977 cot(theta) 44.9789 phi0 1.63375 d0 -8.03979e-11 z0 2.33591e-12
+Helix paramters: kappa 0.333589 tan(Lambda) 0.0222326 phi0 to d0 3.20454
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 31 89 
+Track number: 14
+Charge -1
+4 momentum -0.105256 2.25948 0.400937 2.29719 
+Track parameters:  pT 2.26193 cot(theta) 5.64162 phi0 1.61735 d0 1.11603e-10 z0 4.13433e-13
+Helix paramters: kappa 0.4421 tan(Lambda) 0.177254 phi0 to d0 3.18814
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 32 88 
+Track number: 15
+Charge -1
+4 momentum -0.105256 2.25948 0.0498379 2.26248 
+Track parameters:  pT 2.26193 cot(theta) 45.3858 phi0 1.61735 d0 -9.18436e-11 z0 2.60627e-12
+Helix paramters: kappa 0.4421 tan(Lambda) 0.0220333 phi0 to d0 3.18814
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 32 89 
+Track number: 16
+Charge 1
+4 momentum -0.604256 4.24929 -0.0610156 4.29247 
+Track parameters:  pT 4.29204 cot(theta) -70.3433 phi0 1.71205 d0 -7.27279e-11 z0 1.28719e-12
+Helix paramters: kappa -0.23299 tan(Lambda) -0.014216 phi0 to d0 3.28285
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 29 90 
+Track number: 17
+Charge 1
+4 momentum -0.65749 4.74901 -0.0683608 4.7948 
+Track parameters:  pT 4.79431 cot(theta) -70.1324 phi0 1.70837 d0 -7.68797e-11 z0 1.36001e-12
+Helix paramters: kappa -0.208581 tan(Lambda) -0.0142587 phi0 to d0 3.27917
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 30 90 
+Track number: 18
+Charge -1
+4 momentum -0.934385 10.1945 -0.151427 10.2384 
+Track parameters:  pT 10.2373 cot(theta) -67.6052 phi0 1.6622 d0 -5.2387e-10 z0 2.17494e-12
+Helix paramters: kappa 0.0976822 tan(Lambda) -0.0147918 phi0 to d0 3.23299
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 31 90 
+Track number: 19
+Charge -1
+4 momentum -0.360774 4.80984 -0.0722605 4.82389 
+Track parameters:  pT 4.82335 cot(theta) -66.7494 phi0 1.64566 d0 -1.46103e-10 z0 2.53968e-12
+Helix paramters: kappa 0.207325 tan(Lambda) -0.0149814 phi0 to d0 3.21646
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 32 90 
+Track number: 20
+Charge 1
+4 momentum -0.365625 2.14898 -0.119824 2.18315 
+Track parameters:  pT 2.17986 cot(theta) -18.1922 phi0 1.73932 d0 -5.44748e-12 z0 3.81914e-10
+Helix paramters: kappa -0.458745 tan(Lambda) -0.0549685 phi0 to d0 3.31012
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 29 91 
+Track number: 21
+Charge 1
+4 momentum -0.377836 2.27146 -0.126682 2.30616 
+Track parameters:  pT 2.30267 cot(theta) -18.1768 phi0 1.73563 d0 -9.30403e-12 z0 6.62174e-10
+Helix paramters: kappa -0.434278 tan(Lambda) -0.0550152 phi0 to d0 3.30642
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 30 91 
+Track number: 22
+Charge 1
+4 momentum -0.932803 7.83819 -0.438734 7.90568 
+Track parameters:  pT 7.8935 cot(theta) -17.9915 phi0 1.68925 d0 9.62281e-11 z0 1.89882e-12
+Helix paramters: kappa -0.126687 tan(Lambda) -0.0555817 phi0 to d0 3.26004
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 31 91 
+Track number: 23
+Charge 1
+4 momentum -6.23496 61.0227 -3.42133 61.4358 
+Track parameters:  pT 61.3404 cot(theta) -17.9288 phi0 1.67262 d0 -2.00325e-10 z0 1.13405e-12
+Helix paramters: kappa -0.0163025 tan(Lambda) -0.0557761 phi0 to d0 3.24341
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 32 91 
+Track number: 24
+Charge 1
+4 momentum -0.546814 10.7775 1.02095 10.8395 
+Track parameters:  pT 10.7913 cot(theta) 10.5699 phi0 1.62149 d0 2.68224e-11 z0 1.57632e-09
+Helix paramters: kappa -0.092667 tan(Lambda) 0.0946081 phi0 to d0 3.19229
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 33 92 
+Track number: 25
+Charge -1
+4 momentum -0.456781 16.487 1.55608 16.5665 
+Track parameters:  pT 16.4933 cot(theta) 10.5993 phi0 1.59849 d0 -1.87332e-11 z0 6.13474e-13
+Helix paramters: kappa 0.0606307 tan(Lambda) 0.0943462 phi0 to d0 3.16929
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 34 92 
+Track number: 26
+Charge 1
+4 momentum -0.288208 4.24579 0.0044836 4.25557 
+Track parameters:  pT 4.25557 cot(theta) 949.14 phi0 1.63857 d0 -1.47793e-11 z0 -1.52805e-10
+Helix paramters: kappa -0.234986 tan(Lambda) 0.00105358 phi0 to d0 3.20937
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 33 93 
+Track number: 27
+Charge 1
+4 momentum -0.548502 12.2453 0.00968595 12.2576 
+Track parameters:  pT 12.2576 cot(theta) 1265.5 phi0 1.61556 d0 5.71025e-12 z0 1.17401e-09
+Helix paramters: kappa -0.0815821 tan(Lambda) 0.000790199 phi0 to d0 3.18636
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 93 
+Track number: 28
+Charge -1
+4 momentum 24.4714 1062.67 41.697 1063.77 
+Track parameters:  pT 1062.95 cot(theta) 25.4922 phi0 1.54777 d0 4.94282e-10 z0 -4.13394e-13
+Helix paramters: kappa 0.000940778 tan(Lambda) 0.0392277 phi0 to d0 3.11857
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 94 
+Track number: 29
+Charge -1
+4 momentum 24.4714 1062.67 -144.078 1072.67 
+Track parameters:  pT 1062.95 cot(theta) -7.37762 phi0 1.54777 d0 4.94314e-10 z0 1.4284e-12
+Helix paramters: kappa 0.000940778 tan(Lambda) -0.135545 phi0 to d0 3.11857
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 95 
+Track number: 30
+Charge -1
+4 momentum 0.308506 6.92666 0.270258 6.93879 
+Track parameters:  pT 6.93352 cot(theta) 25.6552 phi0 1.52629 d0 8.64465e-11 z0 1.10829e-08
+Helix paramters: kappa 0.144227 tan(Lambda) 0.0389785 phi0 to d0 3.09708
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 94 
+Track number: 31
+Charge -1
+4 momentum 0.308506 6.92666 -0.941438 6.99714 
+Track parameters:  pT 6.93352 cot(theta) -7.36482 phi0 1.52629 d0 -6.3601e-12 z0 -4.21563e-10
+Helix paramters: kappa 0.144227 tan(Lambda) -0.135781 phi0 to d0 3.09708
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 95 
+Track number: 32
+Charge -1
+4 momentum 0.173645 1.03422 0.039274 1.04943 
+Track parameters:  pT 1.0487 cot(theta) 26.702 phi0 1.40445 d0 -1.59617e-10 z0 2.74363e-12
+Helix paramters: kappa 0.953566 tan(Lambda) 0.0374503 phi0 to d0 2.97524
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 37 94 
+Track number: 33
+Charge -1
+4 momentum 0.173645 1.03422 -0.143381 1.05845 
+Track parameters:  pT 1.0487 cot(theta) -7.31404 phi0 1.40445 d0 1.1884e-10 z0 -1.664e-12
+Helix paramters: kappa 0.953566 tan(Lambda) -0.136723 phi0 to d0 2.97524
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 37 95 
+Track number: 34
+Charge 1
+4 momentum 0.0518544 7.49867 0.71702 7.53305 
+Track parameters:  pT 7.49884 cot(theta) 10.4583 phi0 1.56388 d0 6.39963e-11 z0 -8.62524e-13
+Helix paramters: kappa -0.133354 tan(Lambda) 0.0956175 phi0 to d0 3.13468
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 35 95 
+Track number: 35
+Charge -1
+4 momentum 2.89348 101.915 9.72428 102.418 
+Track parameters:  pT 101.956 cot(theta) 10.4846 phi0 1.54241 d0 3.23412e-10 z0 -8.4124e-13
+Helix paramters: kappa 0.00980819 tan(Lambda) 0.0953776 phi0 to d0 3.11321
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 36 95 
+Track number: 36
+Charge -1
+4 momentum 0.182419 1.20412 0.114161 1.2232 
+Track parameters:  pT 1.21786 cot(theta) 10.668 phi0 1.42044 d0 -2.00377e-10 z0 3.02561e-12
+Helix paramters: kappa 0.82111 tan(Lambda) 0.0937386 phi0 to d0 2.99124
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 37 95 
+Track number: 37
+Charge 1
+4 momentum -0.0894086 1.12433 -0.0856557 1.13113 
+Track parameters:  pT 1.12788 cot(theta) -13.1676 phi0 1.65015 d0 -2.81776e-09 z0 -5.21156e-12
+Helix paramters: kappa -0.886619 tan(Lambda) -0.0759441 phi0 to d0 3.22095
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 36 96 
+Track number: 38
+Charge 1
+4 momentum 0.489516 11.8075 -0.91675 11.8532 
+Track parameters:  pT 11.8177 cot(theta) -12.8908 phi0 1.52936 d0 3.78598e-11 z0 -8.30297e-13
+Helix paramters: kappa -0.0846192 tan(Lambda) -0.0775746 phi0 to d0 3.10016
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 37 96 
+Track number: 39
+Charge -1
+4 momentum 0.285161 2.48797 -0.19624 2.51194 
+Track parameters:  pT 2.50426 cot(theta) -12.7612 phi0 1.45668 d0 -9.60994e-11 z0 -5.27638e-10
+Helix paramters: kappa 0.399319 tan(Lambda) -0.0783624 phi0 to d0 3.02748
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 38 96 
+Track number: 40
+Charge 1
+4 momentum 0.0206064 2.72735 0.172137 2.73285 
+Track parameters:  pT 2.72742 cot(theta) 15.8445 phi0 1.56324 d0 -1.90397e-09 z0 -2.44048e-12
+Helix paramters: kappa -0.366646 tan(Lambda) 0.0631133 phi0 to d0 3.13404
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 48 37 97 
+Track number: 41
+Charge -1
+4 momentum 0.693097 8.64963 0.540672 8.69418 
+Track parameters:  pT 8.67736 cot(theta) 16.0492 phi0 1.49084 d0 2.34317e-12 z0 -2.33419e-09
+Helix paramters: kappa 0.115242 tan(Lambda) 0.0623084 phi0 to d0 3.06163
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 48 38 97 
 Reconstructed track set
 TrackSet 
 Number Tracks: 11
@@ -9625,6 +10517,217 @@ chi2 2.08545 ndof 5
 
 Number of hits 10
 Hit numbers: 7 16 26 34 44 47 57 67 80 90 
+Candidate track set
+TrackSet 
+Number Tracks: 26
+Track number: 0
+Charge -1
+4 momentum -1.25642 13.285 -0.446977 13.3518 
+Track parameters:  pT 13.3443 cot(theta) -29.8546 phi0 1.66509 d0 -3.22853e-10 z0 2.35184e-12
+Helix paramters: kappa 0.0749382 tan(Lambda) -0.0334957 phi0 to d0 3.23589
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 37 29 83 
+Track number: 1
+Charge -1
+4 momentum -1.25642 13.285 -2.50193 13.5768 
+Track parameters:  pT 13.3443 cot(theta) -5.33361 phi0 1.66509 d0 -6.41455e-10 z0 3.67367e-12
+Helix paramters: kappa 0.0749382 tan(Lambda) -0.18749 phi0 to d0 3.23589
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 37 29 84 
+Track number: 2
+Charge -1
+4 momentum 0.0405691 1.04743 -0.0366298 1.04886 
+Track parameters:  pT 1.04822 cot(theta) -28.6165 phi0 1.53208 d0 -3.18777e-10 z0 4.54126e-12
+Helix paramters: kappa 0.954001 tan(Lambda) -0.0349449 phi0 to d0 3.10288
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 37 30 83 
+Track number: 3
+Charge -1
+4 momentum 0.0405691 1.04743 -0.197493 1.06666 
+Track parameters:  pT 1.04822 cot(theta) -5.30763 phi0 1.53208 d0 -1.0544e-09 z0 5.25348e-12
+Helix paramters: kappa 0.954001 tan(Lambda) -0.188408 phi0 to d0 3.10288
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 37 30 84 
+Track number: 4
+Charge 1
+4 momentum -5.3762 50.6762 6.67601 51.396 
+Track parameters:  pT 50.9605 cot(theta) 7.63338 phi0 1.67649 d0 -1.36282e-10 z0 -1.88564e-12
+Helix paramters: kappa -0.019623 tan(Lambda) 0.131004 phi0 to d0 3.24729
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 29 83 
+Track number: 5
+Charge 1
+4 momentum -5.3762 50.6762 -1.17413 50.9741 
+Track parameters:  pT 50.9605 cot(theta) -43.4027 phi0 1.67649 d0 -1.36181e-10 z0 3.3133e-13
+Helix paramters: kappa -0.019623 tan(Lambda) -0.02304 phi0 to d0 3.24729
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 29 84 
+Track number: 6
+Charge 1
+4 momentum -5.3762 50.6762 -5.01489 51.2067 
+Track parameters:  pT 50.9605 cot(theta) -10.1618 phi0 1.67649 d0 -1.36096e-10 z0 1.4146e-12
+Helix paramters: kappa -0.019623 tan(Lambda) -0.0984074 phi0 to d0 3.24729
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 29 85 
+Track number: 7
+Charge -1
+4 momentum 0.0321744 1.15728 0.149426 1.16733 
+Track parameters:  pT 1.15772 cot(theta) 7.74779 phi0 1.543 d0 6.79547e-12 z0 1.73617e-12
+Helix paramters: kappa 0.863764 tan(Lambda) 0.129069 phi0 to d0 3.1138
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 30 83 
+Track number: 8
+Charge -1
+4 momentum 0.0321744 1.15728 -0.0284072 1.15807 
+Track parameters:  pT 1.15772 cot(theta) -40.7546 phi0 1.543 d0 -2.6571e-10 z0 4.17646e-12
+Helix paramters: kappa 0.863764 tan(Lambda) -0.0245371 phi0 to d0 3.1138
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 30 84 
+Track number: 9
+Charge -1
+4 momentum 0.0321744 1.15728 -0.115414 1.16346 
+Track parameters:  pT 1.15772 cot(theta) -10.0311 phi0 1.543 d0 -5.41182e-10 z0 4.8987e-12
+Helix paramters: kappa 0.863764 tan(Lambda) -0.0996905 phi0 to d0 3.1138
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 30 85 
+Track number: 10
+Charge 1
+4 momentum -0.989897 8.37715 1.25266 8.52794 
+Track parameters:  pT 8.43543 cot(theta) 6.73403 phi0 1.68842 d0 3.62428e-10 z0 -1.35306e-12
+Helix paramters: kappa -0.118548 tan(Lambda) 0.1485 phi0 to d0 3.25921
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 29 84 
+Track number: 11
+Charge 1
+4 momentum -0.989897 8.37715 0.616742 8.45795 
+Track parameters:  pT 8.43543 cot(theta) 13.6774 phi0 1.68842 d0 2.32272e-10 z0 2.86769e-13
+Helix paramters: kappa -0.118548 tan(Lambda) 0.0731132 phi0 to d0 3.25921
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 29 85 
+Track number: 12
+Charge -1
+4 momentum 0.0212365 1.3004 0.190681 1.31448 
+Track parameters:  pT 1.30057 cot(theta) 6.82068 phi0 1.55447 d0 1.98546e-11 z0 1.40497e-12
+Helix paramters: kappa 0.768893 tan(Lambda) 0.146613 phi0 to d0 3.12526
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 30 84 
+Track number: 13
+Charge -1
+4 momentum 0.0212365 1.3004 0.0928507 1.30388 
+Track parameters:  pT 1.30057 cot(theta) 14.0071 phi0 1.55447 d0 -4.32074e-11 z0 2.62028e-12
+Helix paramters: kappa 0.768893 tan(Lambda) 0.0713922 phi0 to d0 3.12526
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 30 85 
+Track number: 14
+Charge 1
+4 momentum -0.870697 9.8148 -0.0874077 9.85373 
+Track parameters:  pT 9.85334 cot(theta) -112.729 phi0 1.65928 d0 -2.39955e-11 z0 1.01372e-12
+Helix paramters: kappa -0.101488 tan(Lambda) -0.00887087 phi0 to d0 3.23007
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 86 
+Track number: 15
+Charge -1
+4 momentum 0.0766032 1.01011 -0.0108891 1.01307 
+Track parameters:  pT 1.01301 cot(theta) -93.0297 phi0 1.4951 d0 8.24082e-10 z0 3.58313e-12
+Helix paramters: kappa 0.987157 tan(Lambda) -0.0107493 phi0 to d0 3.0659
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 31 86 
+Track number: 16
+Charge 1
+4 momentum -2.16445 47.4309 3.95859 47.645 
+Track parameters:  pT 47.4802 cot(theta) 11.9942 phi0 1.6164 d0 -3.85753e-10 z0 5.07952e-10
+Helix paramters: kappa -0.0210614 tan(Lambda) 0.0833735 phi0 to d0 3.18719
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 31 87 
+Track number: 17
+Charge -1
+4 momentum 0.10154 1.14503 0.0937844 1.15334 
+Track parameters:  pT 1.14952 cot(theta) 12.2571 phi0 1.48235 d0 -2.91972e-10 z0 2.83558e-12
+Helix paramters: kappa 0.869927 tan(Lambda) 0.0815856 phi0 to d0 3.05315
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 32 87 
+Track number: 18
+Charge 1
+4 momentum -0.164074 1.01934 0.040849 1.03327 
+Track parameters:  pT 1.03246 cot(theta) 25.2751 phi0 1.73039 d0 5.29349e-11 z0 -1.30515e-12
+Helix paramters: kappa -0.968558 tan(Lambda) 0.0395646 phi0 to d0 3.30118
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 31 88 
+Track number: 19
+Charge 1
+4 momentum -0.33941 13.651 0.52097 13.6651 
+Track parameters:  pT 13.6552 cot(theta) 26.2111 phi0 1.59565 d0 1.50679e-12 z0 2.25006e-10
+Helix paramters: kappa -0.0732321 tan(Lambda) 0.0381517 phi0 to d0 3.16645
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 32 88 
+Track number: 20
+Charge -1
+4 momentum 0.105734 3.18363 0.119365 3.18762 
+Track parameters:  pT 3.18539 cot(theta) 26.6861 phi0 1.5376 d0 -4.21657e-11 z0 1.06827e-12
+Helix paramters: kappa 0.313933 tan(Lambda) 0.0374726 phi0 to d0 3.10839
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 33 88 
+Track number: 21
+Charge 1
+4 momentum -0.160768 2.53909 -0.225733 2.55417 
+Track parameters:  pT 2.54417 cot(theta) -11.2707 phi0 1.63403 d0 4.62126e-10 z0 -9.49349e-13
+Helix paramters: kappa -0.393055 tan(Lambda) -0.0887253 phi0 to d0 3.20483
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 32 89 
+Track number: 22
+Charge 1
+4 momentum -0.883225 171.312 -15.3228 171.998 
+Track parameters:  pT 171.314 cot(theta) -11.1803 phi0 1.57595 d0 -4.12305e-10 z0 -2.28622e-10
+Helix paramters: kappa -0.00583723 tan(Lambda) -0.0894428 phi0 to d0 3.14675
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 33 89 
+Track number: 23
+Charge 1
+4 momentum 0.511089 11.1663 0.85719 11.2108 
+Track parameters:  pT 11.178 cot(theta) 13.0402 phi0 1.52506 d0 1.45181e-10 z0 -1.54178e-12
+Helix paramters: kappa -0.0894618 tan(Lambda) 0.0766858 phi0 to d0 3.09585
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 90 
+Track number: 24
+Charge 1
+4 momentum 15.2152 166.646 -2.66611 167.36 
+Track parameters:  pT 167.339 cot(theta) -62.7652 phi0 1.47975 d0 -3.99316e-10 z0 -5.89498e-13
+Helix paramters: kappa -0.0059759 tan(Lambda) -0.0159324 phi0 to d0 3.05054
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 91 
+Track number: 25
+Charge -1
+4 momentum 0.299459 1.60816 -0.0277648 1.63604 
+Track parameters:  pT 1.63581 cot(theta) -58.9166 phi0 1.38669 d0 -6.37895e-12 z0 -4.6822e-10
+Helix paramters: kappa 0.611319 tan(Lambda) -0.0169731 phi0 to d0 2.95749
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 91 
 Reconstructed track set
 TrackSet 
 Number Tracks: 7
@@ -11476,6 +12579,321 @@ chi2 2.22999 ndof 5
 
 Number of hits 10
 Hit numbers: 0 9 19 27 37 44 54 64 74 84 
+Candidate track set
+TrackSet 
+Number Tracks: 39
+Track number: 0
+Charge -1
+4 momentum -16.9306 133.538 12.8808 135.222 
+Track parameters:  pT 134.607 cot(theta) 10.4502 phi0 1.69691 d0 3.74071e-10 z0 4.5849e-12
+Helix paramters: kappa 0.00742903 tan(Lambda) 0.0956917 phi0 to d0 3.2677
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 37 27 84 
+Track number: 1
+Charge 1
+4 momentum -0.144311 1.03719 0.0668669 1.04931 
+Track parameters:  pT 1.04718 cot(theta) 15.6606 phi0 1.70905 d0 5.26762e-11 z0 -1.12949e-12
+Helix paramters: kappa -0.954946 tan(Lambda) 0.0638543 phi0 to d0 3.27984
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 29 87 
+Track number: 2
+Charge 1
+4 momentum -0.144311 1.03719 0.0228975 1.04743 
+Track parameters:  pT 1.04718 cot(theta) 45.7333 phi0 1.70905 d0 1.04508e-10 z0 -2.08659e-12
+Helix paramters: kappa -0.954946 tan(Lambda) 0.0218659 phi0 to d0 3.27984
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 29 88 
+Track number: 3
+Charge 1
+4 momentum -0.0501053 18.5174 1.15749 18.5536 
+Track parameters:  pT 18.5174 cot(theta) 15.9979 phi0 1.5735 d0 -3.08707e-12 z0 -7.29713e-10
+Helix paramters: kappa -0.0540032 tan(Lambda) 0.062508 phi0 to d0 3.1443
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 30 87 
+Track number: 4
+Charge 1
+4 momentum -0.0501053 18.5174 0.377298 18.5213 
+Track parameters:  pT 18.5174 cot(theta) 49.0791 phi0 1.5735 d0 -3.4155e-12 z0 -7.62786e-10
+Helix paramters: kappa -0.0540032 tan(Lambda) 0.0203753 phi0 to d0 3.1443
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 30 88 
+Track number: 5
+Charge -1
+4 momentum 0.282373 24.5808 1.53261 24.6301 
+Track parameters:  pT 24.5824 cot(theta) 16.0396 phi0 1.55931 d0 3.30191e-13 z0 1.10457e-10
+Helix paramters: kappa 0.0406795 tan(Lambda) 0.0623457 phi0 to d0 3.13011
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 31 87 
+Track number: 6
+Charge -1
+4 momentum 0.282373 24.5808 0.496879 24.5874 
+Track parameters:  pT 24.5824 cot(theta) 49.4736 phi0 1.55931 d0 1.80072e-10 z0 2.33782e-08
+Helix paramters: kappa 0.0406795 tan(Lambda) 0.0202128 phi0 to d0 3.13011
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 31 88 
+Track number: 7
+Charge -1
+4 momentum 0.157894 1.48317 0.0912168 1.49433 
+Track parameters:  pT 1.49155 cot(theta) 16.3517 phi0 1.46474 d0 -1.17327e-10 z0 2.124e-12
+Helix paramters: kappa 0.670444 tan(Lambda) 0.0611558 phi0 to d0 3.03553
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 32 87 
+Track number: 8
+Charge -1
+4 momentum 0.157894 1.48317 0.0284792 1.49182 
+Track parameters:  pT 1.49155 cot(theta) 52.3733 phi0 1.46474 d0 -9.31734e-11 z0 1.77295e-12
+Helix paramters: kappa 0.670444 tan(Lambda) 0.0190937 phi0 to d0 3.03553
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 32 88 
+Track number: 9
+Charge 1
+4 momentum -0.114382 1.46864 -0.0655483 1.47454 
+Track parameters:  pT 1.47309 cot(theta) -22.4733 phi0 1.64852 d0 1.10742e-10 z0 -2.3075e-12
+Helix paramters: kappa -0.678847 tan(Lambda) -0.0444973 phi0 to d0 3.21932
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 30 89 
+Track number: 10
+Charge 1
+4 momentum -0.108655 1.70487 -0.0763291 1.71003 
+Track parameters:  pT 1.70833 cot(theta) -22.3811 phi0 1.63444 d0 -6.67844e-10 z0 -2.28285e-12
+Helix paramters: kappa -0.585367 tan(Lambda) -0.0446805 phi0 to d0 3.20524
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 31 89 
+Track number: 11
+Charge -1
+4 momentum 0.704735 22.8839 -1.04915 22.9188 
+Track parameters:  pT 22.8948 cot(theta) -21.8222 phi0 1.54001 d0 -9.15908e-12 z0 -1.09108e-09
+Helix paramters: kappa 0.0436781 tan(Lambda) -0.0458249 phi0 to d0 3.11081
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 32 89 
+Track number: 12
+Charge -1
+4 momentum 0.188004 1.56834 -0.0738766 1.5813 
+Track parameters:  pT 1.57957 cot(theta) -21.3812 phi0 1.45149 d0 -2.64229e-11 z0 6.88945e-13
+Helix paramters: kappa 0.633083 tan(Lambda) -0.04677 phi0 to d0 3.02229
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 33 89 
+Track number: 13
+Charge -1
+4 momentum 0.182779 1.35279 -0.0640476 1.36659 
+Track parameters:  pT 1.36508 cot(theta) -21.3136 phi0 1.4365 d0 -2.83906e-11 z0 7.78235e-13
+Helix paramters: kappa 0.732556 tan(Lambda) -0.0469185 phi0 to d0 3.00729
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 34 89 
+Track number: 14
+Charge -1
+4 momentum 0.176525 1.09483 -0.0523037 1.11021 
+Track parameters:  pT 1.10897 cot(theta) -21.2026 phi0 1.41094 d0 -2.77714e-11 z0 8.79259e-13
+Helix paramters: kappa 0.901735 tan(Lambda) -0.0471641 phi0 to d0 2.98173
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 35 89 
+Track number: 15
+Charge 1
+4 momentum -0.0778327 1.65004 -0.14669 1.65838 
+Track parameters:  pT 1.65188 cot(theta) -11.261 phi0 1.61793 d0 6.56917e-11 z0 -2.17311e-12
+Helix paramters: kappa -0.605371 tan(Lambda) -0.0888021 phi0 to d0 3.18873
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 32 90 
+Track number: 16
+Charge 1
+4 momentum 2.12805 51.9571 -4.67703 52.2105 
+Track parameters:  pT 52.0006 cot(theta) -11.1183 phi0 1.52986 d0 -4.40792e-10 z0 6.53498e-10
+Helix paramters: kappa -0.0192305 tan(Lambda) -0.0899418 phi0 to d0 3.10066
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 33 90 
+Track number: 17
+Charge -1
+4 momentum 0.69175 12.3509 -1.1147 12.4204 
+Track parameters:  pT 12.3702 cot(theta) -11.0973 phi0 1.51485 d0 -3.9015e-11 z0 -2.07414e-09
+Helix paramters: kappa 0.0808393 tan(Lambda) -0.0901119 phi0 to d0 3.08564
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 34 90 
+Track number: 18
+Charge -1
+4 momentum 0.323739 3.95807 -0.35895 3.98747 
+Track parameters:  pT 3.97129 cot(theta) -11.0636 phi0 1.48919 d0 7.11053e-11 z0 -9.19684e-10
+Helix paramters: kappa 0.251808 tan(Lambda) -0.0903864 phi0 to d0 3.05998
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 35 90 
+Track number: 19
+Charge -1
+4 momentum 0.193895 0.996852 -0.0927604 1.01976 
+Track parameters:  pT 1.01553 cot(theta) -10.9479 phi0 1.37869 d0 6.30585e-11 z0 -5.37636e-13
+Helix paramters: kappa 0.984704 tan(Lambda) -0.0913415 phi0 to d0 2.94948
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 36 90 
+Track number: 20
+Charge 1
+4 momentum -0.0854525 1.35184 0.195538 1.36858 
+Track parameters:  pT 1.35454 cot(theta) 6.92724 phi0 1.63392 d0 -7.85849e-11 z0 -1.2893e-12
+Helix paramters: kappa -0.738259 tan(Lambda) 0.144358 phi0 to d0 3.20472
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 32 90 
+Track number: 21
+Charge 1
+4 momentum -0.0854525 1.35184 -0.0090641 1.35457 
+Track parameters:  pT 1.35454 cot(theta) -149.44 phi0 1.63392 d0 -1.53937e-10 z0 -2.6759e-12
+Helix paramters: kappa -0.738259 tan(Lambda) -0.00669165 phi0 to d0 3.20472
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 32 91 
+Track number: 22
+Charge 1
+4 momentum 0.159603 6.46506 0.928813 6.53339 
+Track parameters:  pT 6.46703 cot(theta) 6.96268 phi0 1.54611 d0 2.42751e-10 z0 -1.60822e-12
+Helix paramters: kappa -0.154631 tan(Lambda) 0.143623 phi0 to d0 3.11691
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 33 90 
+Track number: 23
+Charge 1
+4 momentum 0.159603 6.46506 -0.04995 6.46722 
+Track parameters:  pT 6.46703 cot(theta) -129.47 phi0 1.54611 d0 1.63581e-10 z0 -1.16871e-12
+Helix paramters: kappa -0.154631 tan(Lambda) -0.0077238 phi0 to d0 3.11691
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 33 91 
+Track number: 24
+Charge 1
+4 momentum 0.724358 18.249 2.6201 18.4504 
+Track parameters:  pT 18.2634 cot(theta) 6.97049 phi0 1.53112 d0 1.0776e-10 z0 -1.30631e-12
+Helix paramters: kappa -0.0547544 tan(Lambda) 0.143462 phi0 to d0 3.10192
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 34 90 
+Track number: 25
+Charge 1
+4 momentum 0.724358 18.249 -0.14422 18.264 
+Track parameters:  pT 18.2634 cot(theta) -126.636 phi0 1.53112 d0 4.75013e-11 z0 -9.18005e-13
+Helix paramters: kappa -0.0547544 tan(Lambda) -0.00789667 phi0 to d0 3.10192
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 34 91 
+Track number: 26
+Charge -1
+4 momentum 0.562357 8.59905 1.23369 8.70528 
+Track parameters:  pT 8.61742 cot(theta) 6.98508 phi0 1.50549 d0 2.07951e-11 z0 -1.20115e-09
+Helix paramters: kappa 0.116044 tan(Lambda) 0.143162 phi0 to d0 3.07629
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 35 90 
+Track number: 27
+Charge -1
+4 momentum 0.562357 8.59905 -0.070579 8.61771 
+Track parameters:  pT 8.61742 cot(theta) -122.096 phi0 1.50549 d0 -1.21091e-11 z0 -1.79231e-09
+Helix paramters: kappa 0.116044 tan(Lambda) -0.00819027 phi0 to d0 3.07629
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 35 91 
+Track number: 28
+Charge -1
+4 momentum 0.205719 1.1576 0.166384 1.18745 
+Track parameters:  pT 1.17574 cot(theta) 7.06639 phi0 1.39492 d0 -3.45056e-10 z0 4.1344e-12
+Helix paramters: kappa 0.850532 tan(Lambda) 0.141515 phi0 to d0 2.96572
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 36 90 
+Track number: 29
+Charge -1
+4 momentum 0.205719 1.1576 -0.01109 1.17579 
+Track parameters:  pT 1.17574 cot(theta) -106.017 phi0 1.39492 d0 -5.38368e-11 z0 1.15834e-12
+Helix paramters: kappa 0.850532 tan(Lambda) -0.00943243 phi0 to d0 2.96572
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 36 91 
+Track number: 30
+Charge 1
+4 momentum -0.0938112 1.02472 0.101418 1.03399 
+Track parameters:  pT 1.029 cot(theta) 10.1462 phi0 1.66209 d0 2.16483e-10 z0 -2.07456e-12
+Helix paramters: kappa -0.971813 tan(Lambda) 0.0985592 phi0 to d0 3.23289
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 32 92 
+Track number: 31
+Charge 1
+4 momentum -0.0103565 2.5372 0.24822 2.54933 
+Track parameters:  pT 2.53722 cot(theta) 10.2217 phi0 1.57488 d0 -1.09343e-09 z0 -2.21247e-12
+Helix paramters: kappa -0.394132 tan(Lambda) 0.0978314 phi0 to d0 3.14567
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 33 92 
+Track number: 32
+Charge 1
+4 momentum 0.0367641 3.39118 0.331284 3.40752 
+Track parameters:  pT 3.39138 cot(theta) 10.2371 phi0 1.55996 d0 -5.20118e-10 z0 -2.1803e-12
+Helix paramters: kappa -0.294865 tan(Lambda) 0.097684 phi0 to d0 3.13075
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 34 92 
+Track number: 33
+Charge 1
+4 momentum 0.291387 8.0058 0.780409 8.04903 
+Track parameters:  pT 8.0111 cot(theta) 10.2653 phi0 1.53442 d0 2.05911e-10 z0 -1.60098e-12
+Helix paramters: kappa -0.124827 tan(Lambda) 0.0974159 phi0 to d0 3.10521
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 35 92 
+Track number: 34
+Charge -1
+4 momentum 0.239759 1.62034 0.157279 1.64551 
+Track parameters:  pT 1.63798 cot(theta) 10.4144 phi0 1.42389 d0 -1.36349e-10 z0 1.86105e-12
+Helix paramters: kappa 0.610509 tan(Lambda) 0.0960205 phi0 to d0 2.99469
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 36 92 
+Track number: 35
+Charge 1
+4 momentum -0.0765742 1.00687 0.0668538 1.01199 
+Track parameters:  pT 1.00977 cot(theta) 15.1042 phi0 1.6467 d0 -7.87654e-10 z0 -2.73926e-12
+Helix paramters: kappa -0.99032 tan(Lambda) 0.0662066 phi0 to d0 3.2175
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 33 93 
+Track number: 36
+Charge 1
+4 momentum -0.0685078 1.11642 0.0739097 1.12096 
+Track parameters:  pT 1.11852 cot(theta) 15.1336 phi0 1.63208 d0 2.74978e-10 z0 -3.37884e-12
+Helix paramters: kappa -0.894037 tan(Lambda) 0.066078 phi0 to d0 3.20288
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 34 93 
+Track number: 37
+Charge 1
+4 momentum -0.0496976 1.37189 0.0903964 1.37577 
+Track parameters:  pT 1.37279 cot(theta) 15.1864 phi0 1.60701 d0 2.58406e-10 z0 -3.26856e-12
+Helix paramters: kappa -0.728441 tan(Lambda) 0.0658484 phi0 to d0 3.1778
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 35 93 
+Track number: 38
+Charge 1
+4 momentum 32.2263 439.732 28.5309 441.834 
+Track parameters:  pT 440.911 cot(theta) 15.4538 phi0 1.49764 d0 -4.6884e-10 z0 2.27239e-12
+Helix paramters: kappa -0.00226803 tan(Lambda) 0.0647089 phi0 to d0 3.06844
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 36 93 
 Reconstructed track set
 TrackSet 
 Number Tracks: 8
@@ -13404,6 +14822,241 @@ chi2 6.04023 ndof 5
 
 Number of hits 10
 Hit numbers: 1 10 20 30 40 54 66 77 80 90 
+Candidate track set
+TrackSet 
+Number Tracks: 29
+Track number: 0
+Charge -1
+4 momentum -1.09617 10.5314 -0.0828684 10.5886 
+Track parameters:  pT 10.5883 cot(theta) -127.772 phi0 1.67451 d0 -6.55685e-10 z0 2.30738e-12
+Helix paramters: kappa 0.0944439 tan(Lambda) -0.00782642 phi0 to d0 3.24531
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 29 89 
+Track number: 1
+Charge -1
+4 momentum -0.0488053 1.6943 -0.0147347 1.69506 
+Track parameters:  pT 1.695 cot(theta) -115.035 phi0 1.59959 d0 -1.99968e-10 z0 3.64077e-12
+Helix paramters: kappa 0.58997 tan(Lambda) -0.00869301 phi0 to d0 3.17039
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 30 89 
+Track number: 2
+Charge -1
+4 momentum 0.0266435 1.0577 -0.00986301 1.05808 
+Track parameters:  pT 1.05804 cot(theta) -107.273 phi0 1.54561 d0 -2.51416e-10 z0 4.50332e-12
+Helix paramters: kappa 0.945145 tan(Lambda) -0.00932198 phi0 to d0 3.11641
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 31 89 
+Track number: 3
+Charge 1
+4 momentum -0.377094 2.21037 -0.104347 2.24473 
+Track parameters:  pT 2.24231 cot(theta) -21.489 phi0 1.73977 d0 -9.54794e-12 z0 8.46778e-10
+Helix paramters: kappa -0.445969 tan(Lambda) -0.0465354 phi0 to d0 3.31057
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 29 90 
+Track number: 4
+Charge -1
+4 momentum -1.58209 16.9821 -0.809156 17.0748 
+Track parameters:  pT 17.0557 cot(theta) -21.0783 phi0 1.66369 d0 -2.36931e-10 z0 2.39395e-12
+Helix paramters: kappa 0.0586316 tan(Lambda) -0.0474421 phi0 to d0 3.23449
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 90 
+Track number: 5
+Charge -1
+4 momentum -0.0888165 2.35377 -0.113182 2.35817 
+Track parameters:  pT 2.35545 cot(theta) -20.8112 phi0 1.60851 d0 -2.60478e-10 z0 3.53339e-12
+Helix paramters: kappa 0.424548 tan(Lambda) -0.0480511 phi0 to d0 3.17931
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 31 90 
+Track number: 6
+Charge -1
+4 momentum -0.0276457 1.75453 -0.0847241 1.7568 
+Track parameters:  pT 1.75475 cot(theta) -20.7114 phi0 1.58655 d0 -2.90002e-10 z0 3.87341e-12
+Helix paramters: kappa 0.569881 tan(Lambda) -0.0482827 phi0 to d0 3.15735
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 32 90 
+Track number: 7
+Charge 1
+4 momentum -0.249067 1.10311 0.0234484 1.13112 
+Track parameters:  pT 1.13088 cot(theta) 48.2283 phi0 1.79286 d0 -2.67142e-11 z0 -1.86666e-09
+Helix paramters: kappa -0.88427 tan(Lambda) 0.0207347 phi0 to d0 3.36366
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 29 91 
+Track number: 8
+Charge 1
+4 momentum -0.383165 2.61273 0.0525828 2.6412 
+Track parameters:  pT 2.64068 cot(theta) 50.2194 phi0 1.71641 d0 2.64683e-11 z0 2.18823e-09
+Helix paramters: kappa -0.378691 tan(Lambda) 0.0199126 phi0 to d0 3.28721
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 30 91 
+Track number: 9
+Charge 1
+4 momentum -10.6483 118.173 2.28816 118.674 
+Track parameters:  pT 118.652 cot(theta) 51.8546 phi0 1.66066 d0 -3.52293e-10 z0 -6.04219e-13
+Helix paramters: kappa -0.00842803 tan(Lambda) 0.0192847 phi0 to d0 3.23146
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 31 91 
+Track number: 10
+Charge -1
+4 momentum -0.484351 7.1534 0.136418 7.17108 
+Track parameters:  pT 7.16978 cot(theta) 52.5576 phi0 1.6384 d0 -7.30027e-10 z0 1.7418e-12
+Helix paramters: kappa 0.139474 tan(Lambda) 0.0190268 phi0 to d0 3.2092
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 32 91 
+Track number: 11
+Charge 1
+4 momentum -0.297273 1.75632 -0.0491406 1.78198 
+Track parameters:  pT 1.7813 cot(theta) -36.2491 phi0 1.73847 d0 2.66374e-12 z0 -7.48811e-10
+Helix paramters: kappa -0.561386 tan(Lambda) -0.0275869 phi0 to d0 3.30926
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 30 92 
+Track number: 12
+Charge 1
+4 momentum -0.585476 5.21535 -0.148283 5.2502 
+Track parameters:  pT 5.24811 cot(theta) -35.3926 phi0 1.68259 d0 -1.02707e-09 z0 6.30532e-13
+Helix paramters: kappa -0.190545 tan(Lambda) -0.0282545 phi0 to d0 3.25338
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 31 92 
+Track number: 13
+Charge 1
+4 momentum -2.12446 23.6862 -0.678109 23.791 
+Track parameters:  pT 23.7813 cot(theta) -35.07 phi0 1.66025 d0 -8.4255e-11 z0 1.48095e-12
+Helix paramters: kappa -0.0420498 tan(Lambda) -0.0285144 phi0 to d0 3.23104
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 32 92 
+Track number: 14
+Charge -1
+4 momentum 0.0612567 1.07634 -0.0324803 1.07857 
+Track parameters:  pT 1.07808 cot(theta) -33.1919 phi0 1.51395 d0 -2.44842e-10 z0 3.80432e-12
+Helix paramters: kappa 0.927571 tan(Lambda) -0.0301278 phi0 to d0 3.08474
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 33 92 
+Track number: 15
+Charge 1
+4 momentum -0.946818 15.0733 0.607126 15.1152 
+Track parameters:  pT 15.103 cot(theta) 24.8763 phi0 1.63353 d0 -1.95611e-11 z0 6.15438e-13
+Helix paramters: kappa -0.0662119 tan(Lambda) 0.040199 phi0 to d0 3.20432
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 33 93 
+Track number: 16
+Charge -1
+4 momentum 0.0517895 1.86453 0.0729553 1.86667 
+Track parameters:  pT 1.86525 cot(theta) 25.567 phi0 1.54303 d0 1.12601e-09 z0 2.29341e-12
+Helix paramters: kappa 0.536122 tan(Lambda) 0.0391129 phi0 to d0 3.11382
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 34 93 
+Track number: 17
+Charge 1
+4 momentum -0.218884 1.79825 -0.0980432 1.81417 
+Track parameters:  pT 1.81152 cot(theta) -18.4768 phi0 1.69192 d0 7.63831e-11 z0 -1.24582e-12
+Helix paramters: kappa -0.552022 tan(Lambda) -0.054122 phi0 to d0 3.26272
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 33 94 
+Track number: 18
+Charge -1
+4 momentum -0.5603 18.5769 -1.02639 18.6136 
+Track parameters:  pT 18.5853 cot(theta) -18.1075 phi0 1.60095 d0 -5.43992e-11 z0 8.67032e-13
+Helix paramters: kappa 0.0538059 tan(Lambda) -0.0552258 phi0 to d0 3.17174
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 94 
+Track number: 19
+Charge -1
+4 momentum 0.1092 1.06992 -0.0608424 1.0772 
+Track parameters:  pT 1.07548 cot(theta) -17.6764 phi0 1.46909 d0 -1.4523e-10 z0 2.24084e-12
+Helix paramters: kappa 0.929819 tan(Lambda) -0.0565724 phi0 to d0 3.03988
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 35 94 
+Track number: 20
+Charge 1
+4 momentum -0.165128 1.23004 0.0954773 1.24474 
+Track parameters:  pT 1.24107 cot(theta) 12.9986 phi0 1.70424 d0 1.12855e-11 z0 -5.05467e-13
+Helix paramters: kappa -0.805755 tan(Lambda) 0.0769313 phi0 to d0 3.27504
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 34 95 
+Track number: 21
+Charge -1
+4 momentum -0.00879962 12.8366 0.970345 12.8733 
+Track parameters:  pT 12.8366 cot(theta) 13.2289 phi0 1.57148 d0 8.75877e-12 z0 1.41227e-09
+Helix paramters: kappa 0.077902 tan(Lambda) 0.0755919 phi0 to d0 3.14228
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 95 
+Track number: 22
+Charge -1
+4 momentum 0.136773 1.06318 0.0791767 1.07486 
+Track parameters:  pT 1.07194 cot(theta) 13.5385 phi0 1.44285 d0 -1.73421e-10 z0 3.25201e-12
+Helix paramters: kappa 0.93289 tan(Lambda) 0.0738632 phi0 to d0 3.01365
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 95 
+Track number: 23
+Charge 1
+4 momentum -0.13124 1.1279 -0.0396378 1.1362 
+Track parameters:  pT 1.1355 cot(theta) -28.647 phi0 1.68663 d0 1.44881e-10 z0 -2.83404e-12
+Helix paramters: kappa -0.880665 tan(Lambda) -0.0349076 phi0 to d0 3.25743
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 35 96 
+Track number: 24
+Charge 1
+4 momentum 0.512235 39.9443 -1.45795 39.9741 
+Track parameters:  pT 39.9475 cot(theta) -27.3999 phi0 1.55797 d0 -3.8125e-11 z0 1.83925e-11
+Helix paramters: kappa -0.0250328 tan(Lambda) -0.0364965 phi0 to d0 3.12877
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 36 96 
+Track number: 25
+Charge -1
+4 momentum 1.35623 25.9141 1.6973 26.005 
+Track parameters:  pT 25.9495 cot(theta) 15.2887 phi0 1.51851 d0 9.72368e-12 z0 -2.24006e-09
+Helix paramters: kappa 0.0385363 tan(Lambda) 0.0654079 phi0 to d0 3.0893
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 37 97 
+Track number: 26
+Charge -1
+4 momentum 0.236575 1.85554 0.120624 1.87444 
+Track parameters:  pT 1.87056 cot(theta) 15.5074 phi0 1.44398 d0 -6.12497e-11 z0 1.18027e-12
+Helix paramters: kappa 0.5346 tan(Lambda) 0.0644855 phi0 to d0 3.01478
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 38 97 
+Track number: 27
+Charge 1
+4 momentum -0.0254438 1.98639 0.149954 1.9922 
+Track parameters:  pT 1.98655 cot(theta) 13.2477 phi0 1.5836 d0 2.02868e-10 z0 -2.63819e-12
+Helix paramters: kappa -0.503385 tan(Lambda) 0.0754847 phi0 to d0 3.1544
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 48 37 98 
+Track number: 28
+Charge 1
+4 momentum 5.51179 89.9466 6.73173 90.3664 
+Track parameters:  pT 90.1153 cot(theta) 13.3866 phi0 1.50959 d0 -2.99862e-10 z0 1.39594e-12
+Helix paramters: kappa -0.0110969 tan(Lambda) 0.0747014 phi0 to d0 3.08039
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 48 38 98 
 Reconstructed track set
 TrackSet 
 Number Tracks: 10
@@ -15353,6 +17006,377 @@ chi2 9.37164 ndof 5
 
 Number of hits 10
 Hit numbers: 8 18 28 38 46 52 63 73 87 95 
+Candidate track set
+TrackSet 
+Number Tracks: 46
+Track number: 0
+Charge -1
+4 momentum -4.8073 40.5557 -0.644545 40.8447 
+Track parameters:  pT 40.8397 cot(theta) -63.362 phi0 1.68878 d0 7.81039e-10 z0 9.827e-11
+Helix paramters: kappa 0.024486 tan(Lambda) -0.0157823 phi0 to d0 3.25958
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 88 
+Track number: 1
+Charge -1
+4 momentum -0.0932837 2.00693 -0.0333553 2.00937 
+Track parameters:  pT 2.0091 cot(theta) -60.2331 phi0 1.61724 d0 -2.18479e-10 z0 3.66421e-12
+Helix paramters: kappa 0.497736 tan(Lambda) -0.0166022 phi0 to d0 3.18804
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 31 88 
+Track number: 2
+Charge -1
+4 momentum 0.00984878 1.16357 -0.0200447 1.16378 
+Track parameters:  pT 1.16361 cot(theta) -58.0507 phi0 1.56233 d0 -2.75414e-10 z0 4.53483e-12
+Helix paramters: kappa 0.859397 tan(Lambda) -0.0172263 phi0 to d0 3.13313
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 32 88 
+Track number: 3
+Charge -1
+4 momentum 0.0214207 1.06894 -0.0185578 1.06931 
+Track parameters:  pT 1.06915 cot(theta) -57.6118 phi0 1.55076 d0 -2.87128e-10 z0 4.70746e-12
+Helix paramters: kappa 0.935322 tan(Lambda) -0.0173576 phi0 to d0 3.12156
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 33 88 
+Track number: 4
+Charge 1
+4 momentum -0.343308 1.82349 0.187867 1.86501 
+Track parameters:  pT 1.85553 cot(theta) 9.87678 phi0 1.75689 d0 1.06557e-10 z0 -8.22487e-13
+Helix paramters: kappa -0.538931 tan(Lambda) 0.101248 phi0 to d0 3.32768
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 30 89 
+Track number: 5
+Charge 1
+4 momentum -1.96274 17.2235 1.74263 17.4223 
+Track parameters:  pT 17.3349 cot(theta) 9.94758 phi0 1.68426 d0 1.29497e-10 z0 5.13219e-14
+Helix paramters: kappa -0.057687 tan(Lambda) 0.100527 phi0 to d0 3.25506
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 31 89 
+Track number: 6
+Charge -1
+4 momentum -0.182249 3.17429 0.317447 3.19533 
+Track parameters:  pT 3.17952 cot(theta) 10.0159 phi0 1.62815 d0 5.09804e-11 z0 1.08864e-12
+Helix paramters: kappa 0.314513 tan(Lambda) 0.0998411 phi0 to d0 3.19894
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 32 89 
+Track number: 7
+Charge -1
+4 momentum -0.115658 2.54105 0.253557 2.55628 
+Track parameters:  pT 2.54368 cot(theta) 10.032 phi0 1.61628 d0 4.22066e-11 z0 1.29325e-12
+Helix paramters: kappa 0.393132 tan(Lambda) 0.0996814 phi0 to d0 3.18708
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 33 89 
+Track number: 8
+Charge 1
+4 momentum -0.253061 1.08094 0.0380898 1.11082 
+Track parameters:  pT 1.11016 cot(theta) 29.1459 phi0 1.80077 d0 -2.70217e-11 z0 -1.11926e-09
+Helix paramters: kappa -0.900768 tan(Lambda) 0.0343101 phi0 to d0 3.37156
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 30 91 
+Track number: 9
+Charge 1
+4 momentum -0.373217 2.35635 0.0800694 2.38706 
+Track parameters:  pT 2.38572 cot(theta) 29.7956 phi0 1.72788 d0 -8.38303e-12 z0 4.41711e-13
+Helix paramters: kappa -0.419161 tan(Lambda) 0.033562 phi0 to d0 3.29868
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 31 91 
+Track number: 10
+Charge 1
+4 momentum -2.29696 22.7762 0.753965 22.9041 
+Track parameters:  pT 22.8917 cot(theta) 30.3617 phi0 1.67131 d0 -1.803e-11 z0 1.131e-12
+Helix paramters: kappa -0.043684 tan(Lambda) 0.0329362 phi0 to d0 3.2421
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 32 91 
+Track number: 11
+Charge -1
+4 momentum -2.45846 27.7008 0.912112 27.8247 
+Track parameters:  pT 27.8097 cot(theta) 30.4894 phi0 1.65931 d0 -4.76732e-11 z0 1.31125e-12
+Helix paramters: kappa 0.0359586 tan(Lambda) 0.0327983 phi0 to d0 3.23011
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 33 91 
+Track number: 12
+Charge -1
+4 momentum -2.99759 292.747 -7.58411 292.86 
+Track parameters:  pT 292.762 cot(theta) -38.602 phi0 1.58104 d0 5.03483e-10 z0 1.46637e-10
+Helix paramters: kappa 0.00341574 tan(Lambda) -0.0259054 phi0 to d0 3.15183
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 34 92 
+Track number: 13
+Charge -1
+4 momentum 0.06198 8.17864 -0.213535 8.18166 
+Track parameters:  pT 8.17888 cot(theta) -38.3022 phi0 1.56322 d0 7.07396e-12 z0 1.68015e-09
+Helix paramters: kappa 0.122266 tan(Lambda) -0.0261081 phi0 to d0 3.13401
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 35 92 
+Track number: 14
+Charge -1
+4 momentum 0.107761 3.92056 -0.103273 3.9234 
+Track parameters:  pT 3.92204 cot(theta) -37.9772 phi0 1.54332 d0 -3.92664e-11 z0 7.91677e-13
+Helix paramters: kappa 0.25497 tan(Lambda) -0.0263316 phi0 to d0 3.11411
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 36 92 
+Track number: 15
+Charge -1
+4 momentum 0.138977 1.01716 -0.0282266 1.027 
+Track parameters:  pT 1.02661 cot(theta) -36.3705 phi0 1.435 d0 -1.07537e-10 z0 2.11756e-12
+Helix paramters: kappa 0.974076 tan(Lambda) -0.0274948 phi0 to d0 3.0058
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 37 92 
+Track number: 16
+Charge 1
+4 momentum -0.22341 9.71713 1.52457 9.83854 
+Track parameters:  pT 9.7197 cot(theta) 6.37537 phi0 1.59378 d0 -2.74235e-12 z0 -2.49562e-10
+Helix paramters: kappa -0.102884 tan(Lambda) 0.156854 phi0 to d0 3.16458
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 92 
+Track number: 17
+Charge 1
+4 momentum -0.22341 9.71713 -0.494194 9.73226 
+Track parameters:  pT 9.7197 cot(theta) -19.6678 phi0 1.59378 d0 -1.24037e-12 z0 -5.21209e-10
+Helix paramters: kappa -0.102884 tan(Lambda) -0.0508446 phi0 to d0 3.16458
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 93 
+Track number: 18
+Charge -1
+4 momentum -0.322749 62.4831 9.78845 63.246 
+Track parameters:  pT 62.4839 cot(theta) 6.38343 phi0 1.57596 d0 2.11328e-10 z0 -2.05417e-10
+Helix paramters: kappa 0.0160041 tan(Lambda) 0.156656 phi0 to d0 3.14676
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 35 92 
+Track number: 19
+Charge -1
+4 momentum -0.322749 62.4831 -3.18985 62.5653 
+Track parameters:  pT 62.4839 cot(theta) -19.5884 phi0 1.57596 d0 2.11293e-10 z0 6.69377e-11
+Helix paramters: kappa 0.0160041 tan(Lambda) -0.0510508 phi0 to d0 3.14676
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 35 93 
+Track number: 20
+Charge -1
+4 momentum 0.0990873 6.71788 1.05089 6.8003 
+Track parameters:  pT 6.71861 cot(theta) 6.39327 phi0 1.55605 d0 6.46836e-12 z0 1.72569e-09
+Helix paramters: kappa 0.14884 tan(Lambda) 0.156414 phi0 to d0 3.12684
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 36 92 
+Track number: 21
+Charge -1
+4 momentum 0.0990873 6.71788 -0.344496 6.72744 
+Track parameters:  pT 6.71861 cot(theta) -19.5028 phi0 1.55605 d0 8.34724e-12 z0 1.72568e-09
+Helix paramters: kappa 0.14884 tan(Lambda) -0.0512748 phi0 to d0 3.12684
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 36 93 
+Track number: 22
+Charge -1
+4 momentum 0.141279 1.14027 0.177785 1.16266 
+Track parameters:  pT 1.14899 cot(theta) 6.46282 phi0 1.44752 d0 -1.86079e-10 z0 3.22778e-12
+Helix paramters: kappa 0.87033 tan(Lambda) 0.154731 phi0 to d0 3.01832
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 37 92 
+Track number: 23
+Charge -1
+4 momentum 0.141279 1.14027 -0.0601873 1.15056 
+Track parameters:  pT 1.14899 cot(theta) -19.0902 phi0 1.44752 d0 -7.2603e-11 z0 1.44215e-12
+Helix paramters: kappa 0.87033 tan(Lambda) -0.0523828 phi0 to d0 3.01832
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 37 93 
+Track number: 24
+Charge -1
+4 momentum 0.141794 1.07215 0.167175 1.09433 
+Track parameters:  pT 1.08149 cot(theta) 6.46921 phi0 1.43931 d0 -1.99991e-10 z0 3.39466e-12
+Helix paramters: kappa 0.924652 tan(Lambda) 0.154578 phi0 to d0 3.0101
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 38 92 
+Track number: 25
+Charge -1
+4 momentum 0.141794 1.07215 -0.056734 1.08297 
+Track parameters:  pT 1.08149 cot(theta) -19.0624 phi0 1.43931 d0 -7.24951e-11 z0 1.46152e-12
+Helix paramters: kappa 0.924652 tan(Lambda) -0.0524592 phi0 to d0 3.0101
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 38 93 
+Track number: 26
+Charge 1
+4 momentum -0.164609 4.19552 0.763462 4.26759 
+Track parameters:  pT 4.19874 cot(theta) 5.49961 phi0 1.61001 d0 -1.10185e-11 z0 -1.73544e-09
+Helix paramters: kappa -0.238166 tan(Lambda) 0.181831 phi0 to d0 3.18081
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 34 93 
+Track number: 27
+Charge 1
+4 momentum -0.164609 4.19552 -0.192259 4.20314 
+Track parameters:  pT 4.19874 cot(theta) -21.839 phi0 1.61001 d0 1.07738e-11 z0 -1.89238e-09
+Helix paramters: kappa -0.238166 tan(Lambda) -0.0457897 phi0 to d0 3.18081
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 34 94 
+Track number: 28
+Charge 1
+4 momentum -0.179272 8.37708 1.52209 8.51612 
+Track parameters:  pT 8.37899 cot(theta) 5.50492 phi0 1.59219 d0 -6.66107e-12 z0 -6.41386e-10
+Helix paramters: kappa -0.119346 tan(Lambda) 0.181656 phi0 to d0 3.16299
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 93 
+Track number: 29
+Charge 1
+4 momentum -0.179272 8.37708 -0.385444 8.38785 
+Track parameters:  pT 8.37899 cot(theta) -21.7386 phi0 1.59219 d0 -2.57832e-12 z0 -8.7955e-10
+Helix paramters: kappa -0.119346 tan(Lambda) -0.0460012 phi0 to d0 3.16299
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 94 
+Track number: 30
+Charge -1
+4 momentum -0.109252 73.9068 13.4094 75.1135 
+Track parameters:  pT 73.9069 cot(theta) 5.51155 phi0 1.57227 d0 2.52561e-10 z0 -8.37853e-11
+Helix paramters: kappa 0.0135305 tan(Lambda) 0.181437 phi0 to d0 3.14307
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 93 
+Track number: 31
+Charge -1
+4 momentum -0.109252 73.9068 -3.41685 73.9858 
+Track parameters:  pT 73.9069 cot(theta) -21.6301 phi0 1.57227 d0 2.52537e-10 z0 2.13485e-11
+Helix paramters: kappa 0.0135305 tan(Lambda) -0.0462319 phi0 to d0 3.14307
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 94 
+Track number: 32
+Charge -1
+4 momentum 0.14517 1.34837 0.243861 1.37791 
+Track parameters:  pT 1.35616 cot(theta) 5.5612 phi0 1.46355 d0 -1.67112e-10 z0 2.87108e-12
+Helix paramters: kappa 0.737377 tan(Lambda) 0.179817 phi0 to d0 3.03434
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 37 93 
+Track number: 33
+Charge -1
+4 momentum 0.14517 1.34837 -0.0642634 1.35768 
+Track parameters:  pT 1.35616 cot(theta) -21.1031 phi0 1.46355 d0 -6.66494e-11 z0 1.33617e-12
+Helix paramters: kappa 0.737377 tan(Lambda) -0.0473864 phi0 to d0 3.03434
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 37 94 
+Track number: 34
+Charge -1
+4 momentum 0.1455 1.25418 0.226843 1.28281 
+Track parameters:  pT 1.26259 cot(theta) 5.56592 phi0 1.4553 d0 -1.8205e-10 z0 3.06218e-12
+Helix paramters: kappa 0.792022 tan(Lambda) 0.179665 phi0 to d0 3.0261
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 38 93 
+Track number: 35
+Charge -1
+4 momentum 0.1455 1.25418 -0.0599314 1.26401 
+Track parameters:  pT 1.26259 cot(theta) -21.0673 phi0 1.4553 d0 -6.82802e-11 z0 1.38302e-12
+Helix paramters: kappa 0.792022 tan(Lambda) -0.047467 phi0 to d0 3.0261
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 38 94 
+Track number: 36
+Charge 1
+4 momentum -0.131253 1.06325 -0.0195231 1.0715 
+Track parameters:  pT 1.07132 cot(theta) -54.8746 phi0 1.69362 d0 1.46307e-10 z0 -2.85067e-12
+Helix paramters: kappa -0.933427 tan(Lambda) -0.0182234 phi0 to d0 3.26442
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 34 95 
+Track number: 37
+Charge 1
+4 momentum -0.128547 1.21723 -0.0225746 1.22421 
+Track parameters:  pT 1.224 cot(theta) -54.2204 phi0 1.67601 d0 1.27855e-10 z0 -2.51239e-12
+Helix paramters: kappa -0.816992 tan(Lambda) -0.0184433 phi0 to d0 3.24681
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 35 95 
+Track number: 38
+Charge 1
+4 momentum -0.12442 1.45198 -0.027232 1.45756 
+Track parameters:  pT 1.4573 cot(theta) -53.5144 phi0 1.65628 d0 1.07747e-10 z0 -2.13566e-12
+Helix paramters: kappa -0.686199 tan(Lambda) -0.0186866 phi0 to d0 3.22707
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 36 95 
+Track number: 39
+Charge -1
+4 momentum 0.620442 26.7672 -0.534715 26.7798 
+Track parameters:  pT 26.7744 cot(theta) -50.0723 phi0 1.54762 d0 -4.17108e-12 z0 -7.18208e-10
+Helix paramters: kappa 0.0373491 tan(Lambda) -0.0199711 phi0 to d0 3.11842
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 37 95 
+Track number: 40
+Charge -1
+4 momentum 0.339375 10.7771 -0.216357 10.7846 
+Track parameters:  pT 10.7824 cot(theta) -49.8362 phi0 1.53932 d0 -1.39928e-12 z0 -2.48292e-10
+Helix paramters: kappa 0.0927438 tan(Lambda) -0.0200657 phi0 to d0 3.11011
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 38 95 
+Track number: 41
+Charge 1
+4 momentum -0.127342 1.04724 -0.0137423 1.05505 
+Track parameters:  pT 1.05496 cot(theta) -76.7668 phi0 1.6918 d0 1.47652e-10 z0 -2.88824e-12
+Helix paramters: kappa -0.947907 tan(Lambda) -0.0130265 phi0 to d0 3.2626
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 35 96 
+Track number: 42
+Charge 1
+4 momentum -0.12369 1.21632 -0.0162213 1.2227 
+Track parameters:  pT 1.22259 cot(theta) -75.3697 phi0 1.67214 d0 1.28106e-10 z0 -2.52622e-12
+Helix paramters: kappa -0.817933 tan(Lambda) -0.0132679 phi0 to d0 3.24294
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 36 96 
+Track number: 43
+Charge 1
+4 momentum 0.0731354 10.3272 -0.150311 10.3286 
+Track parameters:  pT 10.3275 cot(theta) -68.7077 phi0 1.56371 d0 -9.57265e-12 z0 -2.07935e-09
+Helix paramters: kappa -0.0968289 tan(Lambda) -0.0145544 phi0 to d0 3.13451
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 37 96 
+Track number: 44
+Charge 1
+4 momentum 0.370855 24.1085 -0.353231 24.1139 
+Track parameters:  pT 24.1113 cot(theta) -68.2593 phi0 1.55541 d0 -8.75159e-12 z0 -1.61205e-09
+Helix paramters: kappa -0.0414743 tan(Lambda) -0.01465 phi0 to d0 3.12621
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 38 96 
+Track number: 45
+Charge 1
+4 momentum 3.60042 38.9038 1.29121 39.0914 
+Track parameters:  pT 39.0701 cot(theta) 30.2586 phi0 1.47851 d0 -2.43997e-10 z0 -7.95788e-11
+Helix paramters: kappa -0.025595 tan(Lambda) 0.0330485 phi0 to d0 3.04931
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 48 39 97 
 Reconstructed track set
 TrackSet 
 Number Tracks: 8
@@ -17259,6 +19283,217 @@ chi2 13.9998 ndof 5
 
 Number of hits 10
 Hit numbers: 2 12 22 32 42 58 67 74 78 88 
+Candidate track set
+TrackSet 
+Number Tracks: 26
+Track number: 0
+Charge 1
+4 momentum -9.88167 83.8796 6.33179 84.6967 
+Track parameters:  pT 84.4597 cot(theta) 13.339 phi0 1.68806 d0 -2.87543e-10 z0 -2.51835e-12
+Helix paramters: kappa -0.01184 tan(Lambda) 0.0749683 phi0 to d0 3.25886
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 86 
+Track number: 1
+Charge -1
+4 momentum -0.285132 3.76773 0.281365 3.78897 
+Track parameters:  pT 3.7785 cot(theta) 13.4292 phi0 1.64633 d0 3.63982e-11 z0 1.25916e-12
+Helix paramters: kappa 0.264655 tan(Lambda) 0.0744646 phi0 to d0 3.21713
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 31 86 
+Track number: 2
+Charge 1
+4 momentum -0.485414 3.12716 0.0833558 3.16571 
+Track parameters:  pT 3.16461 cot(theta) 37.9651 phi0 1.72479 d0 -2.05335e-11 z0 7.95683e-13
+Helix paramters: kappa -0.315994 tan(Lambda) 0.02634 phi0 to d0 3.29559
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 30 87 
+Track number: 3
+Charge 1
+4 momentum -3.01352 26.8107 0.69789 26.9886 
+Track parameters:  pT 26.9795 cot(theta) 38.6587 phi0 1.68273 d0 -2.71552e-11 z0 1.35139e-12
+Helix paramters: kappa -0.0370651 tan(Lambda) 0.0258674 phi0 to d0 3.25352
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 31 87 
+Track number: 4
+Charge -1
+4 momentum -0.702692 12.4043 -0.233105 12.4264 
+Track parameters:  pT 12.4242 cot(theta) -53.2988 phi0 1.62738 d0 -1.24645e-10 z0 1.46065e-12
+Helix paramters: kappa 0.080488 tan(Lambda) -0.0187621 phi0 to d0 3.19818
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 32 88 
+Track number: 5
+Charge -1
+4 momentum 0.0392828 1.61829 -0.0318456 1.61908 
+Track parameters:  pT 1.61877 cot(theta) -50.8318 phi0 1.54653 d0 -1.61619e-10 z0 2.78863e-12
+Helix paramters: kappa 0.617754 tan(Lambda) -0.0196727 phi0 to d0 3.11732
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 33 88 
+Track number: 6
+Charge 1
+4 momentum -0.242967 1.84635 -0.0397365 1.86269 
+Track parameters:  pT 1.86227 cot(theta) -46.8654 phi0 1.70164 d0 -9.19289e-12 z0 -2.04264e-09
+Helix paramters: kappa -0.53698 tan(Lambda) -0.0213377 phi0 to d0 3.27243
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 32 89 
+Track number: 7
+Charge -1
+4 momentum -7.74472 157.261 -3.51048 157.49 
+Track parameters:  pT 157.451 cot(theta) -44.8518 phi0 1.62 d0 3.89962e-10 z0 -4.40046e-13
+Helix paramters: kappa 0.00635117 tan(Lambda) -0.0222957 phi0 to d0 3.1908
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 33 89 
+Track number: 8
+Charge -1
+4 momentum 0.00985893 11.1645 0.988118 11.2082 
+Track parameters:  pT 11.1645 cot(theta) 11.2988 phi0 1.56991 d0 9.54429e-12 z0 1.51666e-09
+Helix paramters: kappa 0.0895693 tan(Lambda) 0.088505 phi0 to d0 3.14071
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 90 
+Track number: 9
+Charge -1
+4 momentum 0.126954 1.83068 0.160796 1.84211 
+Track parameters:  pT 1.83508 cot(theta) 11.4125 phi0 1.50156 d0 1.27463e-09 z0 2.93199e-12
+Helix paramters: kappa 0.544935 tan(Lambda) 0.0876236 phi0 to d0 3.07236
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 35 90 
+Track number: 10
+Charge -1
+4 momentum 0.131203 1.49192 0.130838 1.50338 
+Track parameters:  pT 1.49768 cot(theta) 11.4468 phi0 1.48308 d0 -1.17985e-10 z0 2.34405e-12
+Helix paramters: kappa 0.667701 tan(Lambda) 0.0873607 phi0 to d0 3.05388
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 36 90 
+Track number: 11
+Charge 1
+4 momentum -0.143613 2.40229 0.147514 2.4111 
+Track parameters:  pT 2.40658 cot(theta) 16.3143 phi0 1.63051 d0 3.42636e-10 z0 -9.80531e-13
+Helix paramters: kappa -0.415527 tan(Lambda) 0.061296 phi0 to d0 3.2013
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 34 91 
+Track number: 12
+Charge -1
+4 momentum 0.213836 24.4401 1.4799 24.4858 
+Track parameters:  pT 24.441 cot(theta) 16.5153 phi0 1.56205 d0 9.80325e-13 z0 2.66692e-10
+Helix paramters: kappa 0.0409149 tan(Lambda) 0.0605499 phi0 to d0 3.13284
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 91 
+Track number: 13
+Charge -1
+4 momentum 0.165757 6.06215 0.365873 6.07544 
+Track parameters:  pT 6.06442 cot(theta) 16.5752 phi0 1.54346 d0 1.85412e-12 z0 1.33002e-09
+Helix paramters: kappa 0.164896 tan(Lambda) 0.0603311 phi0 to d0 3.11426
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 91 
+Track number: 14
+Charge 1
+4 momentum -0.135658 1.59541 -0.0898252 1.60368 
+Track parameters:  pT 1.60117 cot(theta) -17.8254 phi0 1.65562 d0 1.04371e-10 z0 -2.04493e-12
+Helix paramters: kappa -0.624545 tan(Lambda) -0.0560999 phi0 to d0 3.22642
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 34 92 
+Track number: 15
+Charge 1
+4 momentum -0.0972758 5.89239 -0.335693 5.90275 
+Track parameters:  pT 5.8932 cot(theta) -17.5553 phi0 1.5873 d0 -8.42156e-12 z0 -1.96619e-09
+Helix paramters: kappa -0.169687 tan(Lambda) -0.0569628 phi0 to d0 3.1581
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 35 92 
+Track number: 16
+Charge 1
+4 momentum 0.0453338 21.8581 -1.24988 21.8938 
+Track parameters:  pT 21.8581 cot(theta) -17.4882 phi0 1.56872 d0 -5.34464e-12 z0 -9.52964e-10
+Helix paramters: kappa -0.0457496 tan(Lambda) -0.0571815 phi0 to d0 3.13952
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 36 92 
+Track number: 17
+Charge 1
+4 momentum 0.831919 9.06901 0.0479222 9.10722 
+Track parameters:  pT 9.10709 cot(theta) 190.039 phi0 1.47932 d0 7.34831e-10 z0 -2.13516e-12
+Helix paramters: kappa -0.109805 tan(Lambda) 0.00526208 phi0 to d0 3.05012
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 37 93 
+Track number: 18
+Charge -1
+4 momentum 0.405691 2.34228 0.0103187 2.37718 
+Track parameters:  pT 2.37715 cot(theta) 230.374 phi0 1.39929 d0 3.84222e-11 z0 -7.5508e-13
+Helix paramters: kappa 0.420671 tan(Lambda) 0.00434077 phi0 to d0 2.97009
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 38 93 
+Track number: 19
+Charge -1
+4 momentum 0.286989 1.24779 0.00475424 1.28038 
+Track parameters:  pT 1.28037 cot(theta) 269.312 phi0 1.34473 d0 4.38279e-12 z0 7.40361e-10
+Helix paramters: kappa 0.781023 tan(Lambda) 0.00371317 phi0 to d0 2.91553
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 47 39 93 
+Track number: 20
+Charge 1
+4 momentum 0.0687487 1.8077 0.109089 1.81229 
+Track parameters:  pT 1.809 cot(theta) 16.5829 phi0 1.53278 d0 4.05055e-10 z0 -4.80644e-12
+Helix paramters: kappa -0.552791 tan(Lambda) 0.0603033 phi0 to d0 3.10358
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 48 37 94 
+Track number: 21
+Charge 1
+4 momentum 3.82228 32.5264 1.94699 32.8081 
+Track parameters:  pT 32.7502 cot(theta) 16.8209 phi0 1.45382 d0 2.5747e-10 z0 -3.04803e-12
+Helix paramters: kappa -0.0305341 tan(Lambda) 0.0594497 phi0 to d0 3.02462
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 48 38 94 
+Track number: 22
+Charge -1
+4 momentum 0.519326 3.00508 0.179329 3.05489 
+Track parameters:  pT 3.04962 cot(theta) 17.0057 phi0 1.39967 d0 1.01014e-10 z0 -1.30958e-12
+Helix paramters: kappa 0.327909 tan(Lambda) 0.0588038 phi0 to d0 2.97047
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 48 39 94 
+Track number: 23
+Charge 1
+4 momentum 0.0112859 1.26096 0.0395718 1.26163 
+Track parameters:  pT 1.26101 cot(theta) 31.8663 phi0 1.56185 d0 3.44322e-10 z0 -4.90202e-12
+Helix paramters: kappa -0.793017 tan(Lambda) 0.0313811 phi0 to d0 3.13264
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 49 37 95 
+Track number: 24
+Charge 1
+4 momentum 0.313035 3.58516 0.109832 3.60048 
+Track parameters:  pT 3.5988 cot(theta) 32.7665 phi0 1.4837 d0 2.42479e-10 z0 -3.59401e-12
+Helix paramters: kappa -0.27787 tan(Lambda) 0.030519 phi0 to d0 3.0545
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 49 38 95 
+Track number: 25
+Charge -1
+4 momentum 1.80801 12.7521 0.385146 12.8854 
+Track parameters:  pT 12.8796 cot(theta) 33.4409 phi0 1.42995 d0 -7.47209e-11 z0 -2.5661e-12
+Helix paramters: kappa 0.077642 tan(Lambda) 0.0299035 phi0 to d0 3.00075
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 49 39 95 
 Reconstructed track set
 TrackSet 
 Number Tracks: 10
@@ -19206,6 +21441,353 @@ chi2 5.95567 ndof 5
 
 Number of hits 10
 Hit numbers: 2 13 22 31 41 55 63 73 81 91 
+Candidate track set
+TrackSet 
+Number Tracks: 43
+Track number: 0
+Charge 1
+4 momentum -2.80905 18.5175 0.0630105 18.7295 
+Track parameters:  pT 18.7294 cot(theta) 297.242 phi0 1.72135 d0 3.19316e-11 z0 2.18251e-12
+Helix paramters: kappa -0.0533921 tan(Lambda) 0.00336426 phi0 to d0 3.29214
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 37 28 87 
+Track number: 1
+Charge -1
+4 momentum -0.138328 2.03094 0.00487695 2.03565 
+Track parameters:  pT 2.03564 cot(theta) 417.401 phi0 1.6388 d0 -1.65753e-10 z0 3.56521e-12
+Helix paramters: kappa 0.491246 tan(Lambda) 0.00239578 phi0 to d0 3.2096
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 37 29 87 
+Track number: 2
+Charge 1
+4 momentum -0.422167 2.06587 0.0504029 2.10917 
+Track parameters:  pT 2.10856 cot(theta) 41.8342 phi0 1.77237 d0 -1.40829e-11 z0 7.77582e-13
+Helix paramters: kappa -0.474256 tan(Lambda) 0.0239039 phi0 to d0 3.34317
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 28 88 
+Track number: 3
+Charge -1
+4 momentum -1.4877 12.5626 0.290488 12.6538 
+Track parameters:  pT 12.6504 cot(theta) 43.5489 phi0 1.68867 d0 -4.82592e-10 z0 2.0315e-12
+Helix paramters: kappa 0.0790487 tan(Lambda) 0.0229627 phi0 to d0 3.25947
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 29 88 
+Track number: 4
+Charge -1
+4 momentum 0.00160209 1.15542 0.0248276 1.15569 
+Track parameters:  pT 1.15542 cot(theta) 46.5377 phi0 1.56941 d0 -1.36586e-10 z0 3.8477e-12
+Helix paramters: kappa 0.865487 tan(Lambda) 0.021488 phi0 to d0 3.14021
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 38 30 88 
+Track number: 5
+Charge 1
+4 momentum -0.274545 1.19149 0.00451913 1.22272 
+Track parameters:  pT 1.22271 cot(theta) 270.563 phi0 1.79727 d0 -9.88304e-12 z0 -1.0509e-09
+Helix paramters: kappa -0.817856 tan(Lambda) 0.003696 phi0 to d0 3.36806
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 29 89 
+Track number: 6
+Charge 1
+4 momentum -0.274545 1.19149 -0.0847073 1.22564 
+Track parameters:  pT 1.22271 cot(theta) -14.4345 phi0 1.79727 d0 1.7444e-10 z0 -2.17521e-12
+Helix paramters: kappa -0.817856 tan(Lambda) -0.0692784 phi0 to d0 3.36806
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 29 90 
+Track number: 7
+Charge 1
+4 momentum -13.3018 127.334 0.295297 128.027 
+Track parameters:  pT 128.027 cot(theta) 433.552 phi0 1.67488 d0 -3.65817e-10 z0 -8.59243e-14
+Helix paramters: kappa -0.00781088 tan(Lambda) 0.00230653 phi0 to d0 3.24568
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 30 89 
+Track number: 8
+Charge 1
+4 momentum -13.3018 127.334 -9.07116 128.347 
+Track parameters:  pT 128.027 cot(theta) -14.1136 phi0 1.67488 d0 -3.65675e-10 z0 2.67499e-12
+Helix paramters: kappa -0.00781088 tan(Lambda) -0.0708538 phi0 to d0 3.24568
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 30 90 
+Track number: 9
+Charge -1
+4 momentum -0.241511 3.80546 0.00699723 3.81313 
+Track parameters:  pT 3.81312 cot(theta) 544.947 phi0 1.63418 d0 -1.14522e-10 z0 2.36057e-12
+Helix paramters: kappa 0.262252 tan(Lambda) 0.00183504 phi0 to d0 3.20497
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 31 89 
+Track number: 10
+Charge -1
+4 momentum -0.241511 3.80546 -0.271899 3.8228 
+Track parameters:  pT 3.81312 cot(theta) -14.024 phi0 1.63418 d0 -2.8648e-10 z0 3.4901e-12
+Helix paramters: kappa 0.262252 tan(Lambda) -0.0713061 phi0 to d0 3.20497
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 31 90 
+Track number: 11
+Charge -1
+4 momentum -0.0130012 1.59281 0.00188862 1.59286 
+Track parameters:  pT 1.59286 cot(theta) 843.403 phi0 1.57896 d0 -1.62407e-10 z0 3.28299e-12
+Helix paramters: kappa 0.6278 tan(Lambda) 0.00118567 phi0 to d0 3.14975
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 32 89 
+Track number: 12
+Charge -1
+4 momentum -0.0130012 1.59281 -0.114471 1.59697 
+Track parameters:  pT 1.59286 cot(theta) -13.915 phi0 1.57896 d0 -3.85267e-10 z0 4.39728e-12
+Helix paramters: kappa 0.6278 tan(Lambda) -0.071865 phi0 to d0 3.14975
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 39 32 90 
+Track number: 13
+Charge 1
+4 momentum -0.27093 1.16328 0.0443111 1.19523 
+Track parameters:  pT 1.19441 cot(theta) 26.9551 phi0 1.79962 d0 2.73112e-12 z0 1.03912e-10
+Helix paramters: kappa -0.837234 tan(Lambda) 0.0370988 phi0 to d0 3.37042
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 29 89 
+Track number: 14
+Charge 1
+4 momentum -0.27093 1.16328 -0.0428447 1.19518 
+Track parameters:  pT 1.19441 cot(theta) -27.8776 phi0 1.79962 d0 8.41744e-11 z0 -1.25353e-12
+Helix paramters: kappa -0.837234 tan(Lambda) -0.035871 phi0 to d0 3.37042
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 29 90 
+Track number: 15
+Charge 1
+4 momentum -3.91978 36.6969 1.32118 36.9293 
+Track parameters:  pT 36.9057 cot(theta) 27.9339 phi0 1.67721 d0 -2.10649e-11 z0 1.20411e-12
+Helix paramters: kappa -0.0270961 tan(Lambda) 0.0357988 phi0 to d0 3.248
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 89 
+Track number: 16
+Charge 1
+4 momentum -3.91978 36.6969 -1.379 36.9314 
+Track parameters:  pT 36.9057 cot(theta) -26.7625 phi0 1.67721 d0 -1.31825e-10 z0 2.04531e-12
+Helix paramters: kappa -0.0270961 tan(Lambda) -0.0373656 phi0 to d0 3.248
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 30 90 
+Track number: 17
+Charge -1
+4 momentum -0.269943 4.10392 0.145264 4.11535 
+Track parameters:  pT 4.11279 cot(theta) 28.3125 phi0 1.63648 d0 -4.77135e-11 z0 1.81339e-12
+Helix paramters: kappa 0.243144 tan(Lambda) 0.0353201 phi0 to d0 3.20727
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 31 89 
+Track number: 18
+Charge -1
+4 momentum -0.269943 4.10392 -0.155579 4.11573 
+Track parameters:  pT 4.11279 cot(theta) -26.4353 phi0 1.63648 d0 -1.97472e-10 z0 2.89832e-12
+Helix paramters: kappa 0.243144 tan(Lambda) -0.0378281 phi0 to d0 3.20727
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 31 90 
+Track number: 19
+Charge -1
+4 momentum -0.0171178 1.64183 0.0568618 1.6429 
+Track parameters:  pT 1.64192 cot(theta) 28.8756 phi0 1.58122 d0 -8.52065e-11 z0 2.73723e-12
+Helix paramters: kappa 0.609044 tan(Lambda) 0.0346313 phi0 to d0 3.15202
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 32 89 
+Track number: 20
+Charge -1
+4 momentum -0.0171178 1.64183 -0.0630993 1.64313 
+Track parameters:  pT 1.64192 cot(theta) -26.0212 phi0 1.58122 d0 -2.68805e-10 z0 3.82397e-12
+Helix paramters: kappa 0.609044 tan(Lambda) -0.0384302 phi0 to d0 3.15202
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 40 32 90 
+Track number: 21
+Charge 1
+4 momentum -0.45069 3.18309 -0.117349 3.21698 
+Track parameters:  pT 3.21483 cot(theta) -27.3956 phi0 1.71145 d0 -1.48153e-11 z0 2.12814e-09
+Helix paramters: kappa -0.311058 tan(Lambda) -0.0365023 phi0 to d0 3.28225
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 30 91 
+Track number: 22
+Charge 1
+4 momentum -2.55751 25.5768 -0.950681 25.7219 
+Track parameters:  pT 25.7044 cot(theta) -27.0378 phi0 1.67046 d0 -1.08954e-10 z0 1.79592e-12
+Helix paramters: kappa -0.0389039 tan(Lambda) -0.0369852 phi0 to d0 3.24125
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 31 91 
+Track number: 23
+Charge -1
+4 momentum -0.132489 3.01563 -0.113541 3.02067 
+Track parameters:  pT 3.01854 cot(theta) -26.5854 phi0 1.6147 d0 -1.95431e-10 z0 2.90389e-12
+Helix paramters: kappa 0.331286 tan(Lambda) -0.0376146 phi0 to d0 3.1855
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 41 32 91 
+Track number: 24
+Charge 1
+4 momentum -0.277643 1.51134 0.0471392 1.53735 
+Track parameters:  pT 1.53663 cot(theta) 32.5977 phi0 1.75248 d0 -6.70655e-11 z0 -8.63186e-09
+Helix paramters: kappa -0.650776 tan(Lambda) 0.030677 phi0 to d0 3.32327
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 30 92 
+Track number: 25
+Charge 1
+4 momentum -0.370507 2.6191 0.0799902 2.64639 
+Track parameters:  pT 2.64518 cot(theta) 33.0688 phi0 1.71133 d0 3.11583e-11 z0 2.05916e-09
+Helix paramters: kappa -0.378046 tan(Lambda) 0.03024 phi0 to d0 3.28212
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 31 92 
+Track number: 26
+Charge 1
+4 momentum -16.931 200.17 5.9488 200.972 
+Track parameters:  pT 200.884 cot(theta) 33.7689 phi0 1.65518 d0 -4.18353e-10 z0 -1.03163e-12
+Helix paramters: kappa -0.00497799 tan(Lambda) 0.0296131 phi0 to d0 3.22597
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 42 32 92 
+Track number: 27
+Charge -1
+4 momentum -1.36315 263.657 -27.0958 265.049 
+Track parameters:  pT 263.661 cot(theta) -9.73066 phi0 1.57597 d0 4.5274e-10 z0 2.88932e-10
+Helix paramters: kappa 0.00379276 tan(Lambda) -0.102768 phi0 to d0 3.14676
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 43 33 93 
+Track number: 28
+Charge 1
+4 momentum 0.836362 22.2213 -0.792009 22.2511 
+Track parameters:  pT 22.237 cot(theta) -28.0768 phi0 1.53318 d0 3.31362e-11 z0 -7.7258e-13
+Helix paramters: kappa -0.04497 tan(Lambda) -0.0356166 phi0 to d0 3.10397
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 94 
+Track number: 29
+Charge 1
+4 momentum 0.836362 22.2213 -2.3438 22.3602 
+Track parameters:  pT 22.237 cot(theta) -9.48759 phi0 1.53318 d0 1.04706e-11 z0 -5.98969e-13
+Helix paramters: kappa -0.04497 tan(Lambda) -0.105401 phi0 to d0 3.10397
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 34 95 
+Track number: 30
+Charge -1
+4 momentum 3.57346 77.1063 -2.75693 77.2383 
+Track parameters:  pT 77.1891 cot(theta) -27.9982 phi0 1.52448 d0 2.63351e-10 z0 4.27223e-13
+Helix paramters: kappa 0.0129552 tan(Lambda) -0.0357166 phi0 to d0 3.09528
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 35 94 
+Track number: 31
+Charge -1
+4 momentum 3.57346 77.1063 -8.14355 77.6175 
+Track parameters:  pT 77.1891 cot(theta) -9.47856 phi0 1.52448 d0 2.63409e-10 z0 1.26258e-12
+Helix paramters: kappa 0.0129552 tan(Lambda) -0.105501 phi0 to d0 3.09528
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 35 95 
+Track number: 32
+Charge -1
+4 momentum 0.217687 1.52027 -0.0564498 1.53681 
+Track parameters:  pT 1.53577 cot(theta) -27.206 phi0 1.42857 d0 -1.6487e-11 z0 4.87047e-13
+Helix paramters: kappa 0.651139 tan(Lambda) -0.0367567 phi0 to d0 2.99937
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 36 94 
+Track number: 33
+Charge -1
+4 momentum 0.217687 1.52027 -0.163452 1.54444 
+Track parameters:  pT 1.53577 cot(theta) -9.39584 phi0 1.42857 d0 6.37563e-11 z0 1.86004e-09
+Helix paramters: kappa 0.651139 tan(Lambda) -0.10643 phi0 to d0 2.99937
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 44 36 95 
+Track number: 34
+Charge 1
+4 momentum 0.499629 14.3984 0.0939229 14.4073 
+Track parameters:  pT 14.407 cot(theta) 153.392 phi0 1.53611 d0 5.48479e-11 z0 -9.46124e-13
+Helix paramters: kappa -0.0694106 tan(Lambda) 0.00651924 phi0 to d0 3.10691
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 34 94 
+Track number: 35
+Charge 1
+4 momentum 0.499629 14.3984 -0.911416 14.4358 
+Track parameters:  pT 14.407 cot(theta) -15.8073 phi0 1.53611 d0 3.02919e-11 z0 -7.68727e-13
+Helix paramters: kappa -0.0694106 tan(Lambda) -0.0632619 phi0 to d0 3.10691
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 34 95 
+Track number: 36
+Charge 1
+4 momentum 3.76911 86.8406 0.55801 86.9241 
+Track parameters:  pT 86.9223 cot(theta) 155.772 phi0 1.52742 d0 -2.9131e-10 z0 8.30423e-14
+Helix paramters: kappa -0.0115045 tan(Lambda) 0.00641964 phi0 to d0 3.09822
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 94 
+Track number: 37
+Charge 1
+4 momentum 3.76911 86.8406 -5.50764 87.0966 
+Track parameters:  pT 86.9223 cot(theta) -15.7821 phi0 1.52742 d0 -2.91359e-10 z0 -8.19993e-13
+Helix paramters: kappa -0.0115045 tan(Lambda) -0.0633628 phi0 to d0 3.09822
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 35 95 
+Track number: 38
+Charge -1
+4 momentum 0.221514 1.58009 0.00847732 1.59556 
+Track parameters:  pT 1.59554 cot(theta) 188.213 phi0 1.43151 d0 -4.57223e-11 z0 8.81115e-13
+Helix paramters: kappa 0.626747 tan(Lambda) 0.00531314 phi0 to d0 3.00231
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 94 
+Track number: 39
+Charge -1
+4 momentum 0.221514 1.58009 -0.102699 1.59884 
+Track parameters:  pT 1.59554 cot(theta) -15.5361 phi0 1.43151 d0 4.4521e-11 z0 2.07939e-09
+Helix paramters: kappa 0.626747 tan(Lambda) -0.0643662 phi0 to d0 3.00231
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 45 36 95 
+Track number: 40
+Charge 1
+4 momentum -0.0626795 1.33489 -0.0865403 1.33916 
+Track parameters:  pT 1.33636 cot(theta) -15.4421 phi0 1.61772 d0 9.01569e-11 z0 -2.68937e-12
+Helix paramters: kappa -0.748299 tan(Lambda) -0.064758 phi0 to d0 3.18851
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 34 96 
+Track number: 41
+Charge 1
+4 momentum -0.0554611 1.44456 -0.09379 1.44866 
+Track parameters:  pT 1.44562 cot(theta) -15.4134 phi0 1.60917 d0 8.21326e-11 z0 -2.53015e-12
+Helix paramters: kappa -0.691743 tan(Lambda) -0.0648786 phi0 to d0 3.17997
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 35 96 
+Track number: 42
+Charge 1
+4 momentum 0.930702 16.4267 -1.08752 16.4889 
+Track parameters:  pT 16.453 cot(theta) -15.129 phi0 1.5142 d0 2.96388e-11 z0 -8.92965e-13
+Helix paramters: kappa -0.060779 tan(Lambda) -0.0660983 phi0 to d0 3.085
+Reference Point 0 0 0
+Number of hits 3
+Hit numbers: 46 36 96 
 Reconstructed track set
 TrackSet 
 Number Tracks: 12
