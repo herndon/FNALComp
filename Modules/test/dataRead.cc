@@ -12,6 +12,7 @@
 #include "Geometry/include/BuildDetectorGeometry.hh"
 #include "Framework/include/EventProcessor.hh"
 #include "Modules/include/DataSource.hh"
+#include "Modules/include/Day0HistogrammingModule.hh"
 #include <fstream>
 #include <iostream>
 
@@ -44,15 +45,23 @@ int main ()
 
  // Instantiate the class which handles the details of processing the events
   fc::EventProcessor processor( new fc::DataSource(config.getDebugLevel(),inputeventdatafile, genData,
-                                               "genTracks", //get these tracks from file
-                                                "hits", //get these hits from file
-                                                "strips", //get these strips
-						   detectorGeometry),
-				                  rootFile );
+                                                   "genTracks", //get these tracks from file
+                                                   "hits", //get these hits from file
+                                                   "strips", //get these strips
+                                                   detectorGeometry),
+                                rootFile );
 
   // Instantiate and initialize Module classes
   //  the order the modules are passed to the EventProcessor
   //  is the order the modules will run
+
+  processor.addModule( new fc::Day0HistogrammingModule("genTracks",
+						       "hits",
+						       "strips",
+						       detectorGeometry
+						       )
+		       );
+
  
   // Event loop over module classes
   processor.processEvents();
