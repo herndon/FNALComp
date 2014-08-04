@@ -3,29 +3,27 @@
 
 // Using Default constructor
 
-void fc::TrackSet::insertTrack(const Track& track) {
-  _trackSet.push_back(track);
-}
 
 void fc::TrackSet::insertTrack(Track&& track) {
-  _trackSet.push_back(std::move(track));
+    _trackSet.push_back(std::move(track));
 }
 
-void fc::TrackSet::print(ostream& out) const{
+void fc::TrackSet::print(ostream& out) const {
 
-  out << "TrackSet " << std::endl;
+    out << "TrackSet " << std::endl;
 
-  trackSet::size_type numberTracks =_trackSet.size();
+    TrackSetContainer::size_type numberTracks =_trackSet.size();
 
-  out << "Number Tracks: " << numberTracks << std::endl; 
+    out << "Number Tracks: " << numberTracks << std::endl;
 
-  int trackNumber = 0;
+    int trackNumber = 0;
 
-  for (trackSet::const_iterator trackIter =  _trackSet.begin(); trackIter != _trackSet.end(); ++trackIter,++trackNumber){
- 
-    out << "Track number: " << trackNumber << std::endl;
-    trackIter->print(out); 
+    for (auto const& track: getTracks()) {
 
-  } // end track loop
+        out << "Track number: " << trackNumber << std::endl;
+        track.print(out);
+        ++trackNumber;
+
+    } // end track loop
 
 }

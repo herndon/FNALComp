@@ -1,8 +1,8 @@
 //============================================================================
 // dataRead.cc
-// Main program for driving raw data reading modules 
+// Main program for driving raw data reading modules
 // Calls DataReadModule
-// 
+//
 // Author Matt Herndon, University of Wisconsin,
 //                      Fermi National Accelerator Laboratory
 // 2014-06-03
@@ -20,53 +20,57 @@
 
 int main ()
 {
- 
 
-  // Generator data
-  bool genData = false;
 
-  // Configure genData using general Config class
-  std::ifstream configfile("configfilereco.txt");
-  fc::Config config(configfile,genData);
+    // Generator data
+    bool genData = false;
 
-  // Open a root file to hold output histograms.
-  auto rootFile = std::make_shared<TFile>( config.getRootFileName().c_str(), "RECREATE");
+    // Configure genData using general Config class
+    std::ifstream configfile("configfilereco.txt");
+    fc::Config config(configfile,genData);
 
-  // Intialize Objects and Modules that are persistant
+    // Open a root file to hold output histograms.
+    auto rootFile = std::make_shared<TFile>( config.getRootFileName().c_str(),
+                    "RECREATE");
 
-  // DetectorGeomergy
-  std::ifstream detectorgeometryfile("sensorgeometry.txt");
-  fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(detectorgeometryfile));  
-  // files are closed by the default destructor
-  if (config.getDebugLevel() >= 2) detectorGeometry.printDetectorGeometry(std::cout);
+    // Intialize Objects and Modules that are persistant
 
-  // Input and output files
-  std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
+    // DetectorGeomergy
+    std::ifstream detectorgeometryfile("sensorgeometry.txt");
+    fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(
+            detectorgeometryfile));
+    // files are closed by the default destructor
+    if (config.getDebugLevel() >= 2) detectorGeometry.printDetectorGeometry(
+            std::cout);
 
- // Instantiate the class which handles the details of processing the events
-  fc::EventProcessor processor( new fc::DataSource(config.getDebugLevel(),inputeventdatafile, genData,
-                                                   "genTracks", //get these tracks from file
-                                                   "hits", //get these hits from file
-                                                   "strips", //get these strips
-                                                   detectorGeometry),
-                                rootFile );
+    // Input and output files
+    std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
-  // Instantiate and initialize Module classes
-  //  the order the modules are passed to the EventProcessor
-  //  is the order the modules will run
+// Instantiate the class which handles the details of processing the events
+    fc::EventProcessor processor( new fc::DataSource(config.getDebugLevel(),
+                                  inputeventdatafile, genData,
+                                  "genTracks", //get these tracks from file
+                                  "genHits", //get these hits from file
+                                  "strips", //get these strips
+                                  detectorGeometry),
+                                  rootFile );
 
-  processor.addModule( new fc::Day0HistogrammingModule("genTracks",
-						       "hits",
-						       "strips",
-						       detectorGeometry
-						       )
-		       );
+    // Instantiate and initialize Module classes
+    //  the order the modules are passed to the EventProcessor
+    //  is the order the modules will run
+    processor.addModule( new
+                         fc::Day0HistogrammingModule("genTracks", // tracks from file
+							"genHits", // hits from file
+							"strips", // strips from file
+							detectorGeometry)); //get these strips
 
- 
-  // Event loop over module classes
-  processor.processEvents();
 
-  processor.endJob();
-  return 0; 
+
+
+    // Event loop over module classes
+    processor.processEvents();
+
+    processor.endJob();
+    return 0;
 
 }

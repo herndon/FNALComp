@@ -5,7 +5,7 @@
 namespace fc {
 
 ///
-/// Structure Exception 
+/// Structure Exception
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-05
 /// Wrapper for std library exception functions
 ///
@@ -13,10 +13,12 @@ namespace fc {
 class Exception : public std::exception
 {
 public:
-   explicit Exception(const std::string& message) : _what(message) {}
-   const char* what() const noexcept override { return _what.c_str(); }
+    explicit Exception(const std::string& message) : _what(message) {}
+    const char* what() const noexcept override {
+        return _what.c_str();
+    }
 private:
-   std::string _what;
+    std::string _what;
 };
 } // end namespace fc
 

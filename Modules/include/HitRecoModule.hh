@@ -3,7 +3,7 @@
 //============================================================================
 // HitRecoModule.hh
 // Module for reconstructing hits from strip infomation
-// 
+//
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
 // 2014-06-11
@@ -19,6 +19,7 @@
 namespace fc {
 
 class DetectorGeometry;
+class Hit;
 class HitSet;
 
 
@@ -31,27 +32,24 @@ class HitRecoModule : public Module {
 
 public:
 
-  HitRecoModule(int, const std::string& iInputStripsLabel, const std::string& iOutputHitsLabel, const DetectorGeometry &);
+    HitRecoModule(int, const std::string& iInputStripsLabel,
+                  const std::string& iOutputHitsLabel, const DetectorGeometry &);
 
-  void processEvent(Event& ) override;
+    void processEvent(Event& ) override;
 
 
 private:
 
-  int _debugLevel;
-  const std::string _inStripsLabel;
-  const std::string _outHitsLabel;
+    int _debugLevel;
+    const std::string _inStripsLabel;
+    const std::string _outHitsLabel;
 
-  // Detector information
-  const DetectorGeometry & _detectorGeometry;
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
 
-  void recoHits(HitSet &, const StripSet &) const;
+    void recoHits(const StripSet &,HitSet &) const;
 
-  void recoHitsLayer(HitSet &, const StripSet &, int, int &) const;
 
-  void findCluster(int &,int, std::vector<int> &,layerStripMap::const_iterator &,layerStripMap::const_iterator &,const StripSet &) const;
-
-  double calculateStripHitPositionFromCluster(int, const std::vector<int> &) const;
 
 };
 } // end namespace fc

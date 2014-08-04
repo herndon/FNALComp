@@ -10,7 +10,7 @@
 #include "DataObjects/include/GenTrack.hh"
 #include "DataObjects/include/GenTrackSet.hh"
 #include "DataObjects/include/Helix.hh"
-#include "DataObjects/include/HitSet.hh"
+#include "DataObjects/include/GenHitSet.hh"
 #include "DataObjects/include/StripSet.hh"
 #include "Geometry/include/DetectorGeometry.hh"
 #include "Modules/include/Day0HistogrammingModule.hh"
@@ -79,9 +79,8 @@ void fc::Day0HistogrammingModule::bookGenTrackHistograms(TDirectory* dir,
 // Fill histograms about GenTracks
 void fc::Day0HistogrammingModule::fillGenTrackHistograms(fc::Event& event)
 {
-
   // Constant used to convert between pt and radius of curvature
-  double alpha = _detector.getCurvatureCInField(_detector.getBField());
+  double alpha = _detector.getCurvatureC();
 
   // Get the fc::GenTrackSet from the Event using the label provided in the constructor
   fc::Handle<fc::GenTrackSet> genTracks = event.get<fc::GenTrackSet>(_tracksLabel);
@@ -93,13 +92,13 @@ void fc::Day0HistogrammingModule::fillGenTrackHistograms(fc::Event& event)
     _hP ->Fill(track.getLorentzVector().P());
 
     // Get the helix representation of the track parameters.
-    Helix helix = track.makeHelix(alpha );
+    Helix helix = track.makeHelix(_detector.getBField(),alpha);
     _hKappa ->Fill( helix.getKappa() );
     _hphi0  ->Fill( helix.getPhi0()  );
     _htanl  ->Fill( helix.getTanL()  );
     _hdr    ->Fill( helix.getDr()    );
     _hdz    ->Fill( helix.getDz()    );
-    _hradius->Fill( std::abs(helix.getRadiusOfCurvature()) );
+    _hradius->Fill( std::abs(helix.getRadiusOfCurvature(_detector.getBField())) );
   }
 
 }
@@ -182,7 +181,6 @@ void fc::Day0HistogrammingModule::bookHitHistograms(TDirectory* dir,
 
   // These histograms will appear in the new directory.
   _hNHits       = new TH1D( "NHits",       "Number of Hits per Event;;N",      50, 75.,    125.  );
-  _hClusterSize = new TH1D( "ClusterSize", "Number of Strips per Hit;;N",       5,  0.,      5.  );
   _hLayerHit    = new TH1D( "LayerHit",    "Hit Layers;;N",               nLayers,  0, nLayers   );
   _hTrackNumber = new TH1D( "TrackNumber", "Track Number that made Hit;;N",    20,  0.,     20.  );
   _hAllHity     = new TH1D( "AllHity",     "Hit y for all Hits;m;m",          110,  0.,      1.1 );
@@ -207,17 +205,16 @@ void fc::Day0HistogrammingModule::bookHitHistograms(TDirectory* dir,
 // Fill histograms about Hits
 void fc::Day0HistogrammingModule::fillHitHistograms(fc::Event& event )
 {
-  fc::Handle<fc::HitSet> hitSet = event.get<fc::HitSet>(_hitSetLabel);
+  fc::Handle<fc::GenHitSet> hitSet = event.get<fc::GenHitSet>(_hitSetLabel);
 
-  _hNHits->Fill( hitSet->getHits().size() );
+  _hNHits->Fill( hitSet->getGenHits().size() );
 
   static int nn(0);
   ++nn;
 
-  for ( auto const& hit : hitSet->getHits() ){
-    auto const& pos = hit.getHitPosition();
+  for ( auto const& hit : hitSet->getGenHits() ){
+    auto const& pos = hit.getGenHitPosition();
 
-    _hClusterSize->Fill( hit.getNumberStrips() );
     _hLayerHit   ->Fill( hit.getLayer()        );
     _hTrackNumber->Fill( hit.getTrackNumber()  );
     _hAllHity    ->Fill( pos.y()               );

@@ -14,27 +14,28 @@
 
 namespace fc {
 
-  class DetectorGeometry;
-  class HitSet;
-  class Track;
+class DetectorGeometry;
+class HitSet;
+class Track;
 
-  class LayerTrackFinder {
+class LayerTrackFinder {
 
-  public:
-    LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,int layer,double minPTCut,double maxChi2NDofCut);
+public:
+    LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,
+                     int layer,unsigned int nExpHits, double minPTCut,double maxChi2NDofCut);
 
-    void findCandidateTracks(trackSet & trackCandidateSet,const HitSet & recoHitSet,unsigned int expNHit) const;
+    void findCandidateTracks(const HitSet & recoHitSet,unsigned int expNHit,
+                             TrackSetContainer & trackCandidateSet) const;
 
-  private:
-    void findSingleCandidateTracks(const Track &,trackSet& allnewTracks, const HitSet & recoHitSet) const;
+private:
+    void findSingleCandidateTracks(const Track &, const HitSet & recoHitSet,
+                                   TrackSetContainer& allnewTracks) const;
     std::vector<int> findHits(const Track & track, const HitSet & recoHitSet) const;
-    trackSet buildTrackCandidates(const Track &, const std::vector<int> &, const HitSet & recoHitSet) const;     
-    std::vector<int> bestTrackCandidates(const trackSet &) const;
-    void removeSeedTrack(trackSet&, const trackSet&) const;
-    void layerTrackFilter(trackSet &,unsigned int expNHit) const;
-
-    // Helper functions
-    bool goodTrack(const Track&) const;
+    TrackSetContainer buildTrackCandidates(const Track &, const std::vector<int> &,
+                                           const HitSet & recoHitSet) const;
+    std::vector<int> bestTrackCandidates(const TrackSetContainer & newTracks) const;
+    void removeSeedTrack(const TrackSetContainer& oldTracks,
+                         TrackSetContainer& newTracks) const;
 
     int _debugLevel;
 
@@ -42,13 +43,14 @@ namespace fc {
     const DetectorGeometry & _detectorGeometry;
 
     int _layer;
-    int _sensorType; 
- 
- 
+    int _sensorType;
+
+
     // intermediate tracking parameters
+    unsigned int _nExpHits;
     double _minPTCut;
     double _maxChi2NDofCut;
-  };
+};
 
 
 } // end namescape fc

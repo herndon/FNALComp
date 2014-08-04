@@ -3,30 +3,27 @@
 
 // Uses default constructor
 
-void fc::GenTrackSet::insertTrack(const GenTrack& genTrack) {
-  _genTrackSet.push_back(genTrack);
-}
 
 void fc::GenTrackSet::insertTrack(GenTrack&& genTrack) {
-  _genTrackSet.push_back(std::move(genTrack));
+    _genTrackSet.push_back(std::move(genTrack));
 }
 
 
-void fc::GenTrackSet::print(ostream& out) const{
+void fc::GenTrackSet::print(ostream& out) const {
 
-  out << "GenTrackSet" << std::endl;
+    out << "GenTrackSet" << std::endl;
 
-  genTrackSet::size_type numberGenTracks =_genTrackSet.size();
+    GenTrackSetContainer::size_type numberGenTracks =_genTrackSet.size();
 
-  out << "Number Gen Tracks: " << numberGenTracks << std::endl; 
+    out << "Number Gen Tracks: " << numberGenTracks << std::endl;
 
-  int genTrackNumber = 0;
+    int genTrackNumber = 0;
 
-  for (genTrackSet::const_iterator genTrackIter =  _genTrackSet.begin(); genTrackIter != _genTrackSet.end(); ++genTrackIter,++genTrackNumber){
- 
-    out << "Gen Track number: " << genTrackNumber << std::endl;
-    genTrackIter->print(out); 
+    for (auto const& genTrack: getGenTracks()) {
 
-  } // end gen track loop
+        out << "Gen Track number: " << genTrackNumber << std::endl;
+        genTrack.print(out);
+        ++genTrackNumber;
+    } // end gen track loop
 
 }

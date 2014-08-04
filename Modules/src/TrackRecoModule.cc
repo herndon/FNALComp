@@ -5,53 +5,57 @@
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
 #include "Modules/include/TrackRecoModule.hh"
-#include "Tracking/include/TrackCandidateStrategy1X2SAS.hh"
-#include "Tracking/include/TrackRecoStrategy1X2SAS.hh"
+#include "Tracking/include/TrackCandidateStrategy2X1SAS.hh"
+#include "Tracking/include/TrackRecoStrategy2X1SAS.hh"
 #include "Algorithms/include/TrackFitMeasurements.hh"
 #include "Algorithms/include/InitializeHelix.hh"
 #include "Services/include/Config.hh"
 
 
-fc::TrackRecoModule::TrackRecoModule(int debugLevel, 
-				     const std::string& inputHitsLabel, const std::string& outputTracksLabel,
-				     const Config& config, const DetectorGeometry & detectorGeometry):
-  _debugLevel(debugLevel),
-  _inHitsLabel(inputHitsLabel),
-  _outTracksLabel(outputTracksLabel),
-  _config(config),
-  _detectorGeometry(detectorGeometry){
+fc::TrackRecoModule::TrackRecoModule(int debugLevel,
+                                     const std::string& inputHitsLabel,
+                                     const std::string& inputTracksLabel, const std::string& outputTracksLabel,
+                                     const Config& config, const DetectorGeometry & detectorGeometry):
+    _debugLevel(debugLevel),
+    _inHitsLabel(inputHitsLabel),
+    _inTracksLabel(inputTracksLabel),
+    _outTracksLabel(outputTracksLabel),
+    _config(config),
+    _detectorGeometry(detectorGeometry) {
 }
 
 void fc::TrackRecoModule::processEvent(Event& event)
 {
 
-  Handle<HitSet> recoHitSet = event.get<HitSet>(_inHitsLabel);
-  
-  std::unique_ptr<TrackSet> recoTrackSet{ new TrackSet };
+    Handle<HitSet> recoHitSet = event.get<HitSet>(_inHitsLabel);
 
-  recoTracks(*recoTrackSet,*recoHitSet);
+    Handle<TrackSet> inputTrackCandidateSet = event.get<TrackSet>(_inTracksLabel);
 
-  event.put(_outTracksLabel,std::move(recoTrackSet) );
+    std::unique_ptr<TrackSet> recoTrackSet { new TrackSet };
+
+    recoTracks(*inputTrackCandidateSet,*recoHitSet,*recoTrackSet);
+
+    event.put(_outTracksLabel,std::move(recoTrackSet) );
 }
 
-void fc::TrackRecoModule::recoTracks(TrackSet & recoTrackSet, const HitSet& recoHitSet) const {
+void fc::TrackRecoModule::recoTracks(const TrackSet& inputTrackCandidateSet,
+                                     const HitSet& recoHitSet,TrackSet & recoTrackSet) const {
 
 
-  TrackCandidateStrategy1X2SAS candStrategy(_debugLevel,_detectorGeometry,_config.getMinCandPTCut());
-  TrackRecoStrategy1X2SAS recoStrategy(_debugLevel,_detectorGeometry,_config.getMinPTCut(),_config.getMaxChi2NDofCut());
+    TrackRecoStrategy2X1SAS recoStrategy(_debugLevel,_detectorGeometry,
+                                         _config.getMinPTCut(),_config.getMaxChi2NDofCut());
 
-  trackSet trackCandidateSet;
-  
-  candStrategy.findTrackCandidates(trackCandidateSet,recoHitSet);
-  recoStrategy.recoTracks(trackCandidateSet,recoHitSet);
+    TrackSetContainer trackCandidateSet(inputTrackCandidateSet.getTracks()) ;
 
-  for (trackSet::iterator trackIter = trackCandidateSet.begin(); trackIter!= trackCandidateSet.end(); ++trackIter){
-    recoTrackSet.insertTrack(*trackIter);
-  }
+    recoStrategy.recoTracks(recoHitSet,trackCandidateSet);
 
-  if (_debugLevel>=2){
-    std::cout << "Reconstructed track set" << std::endl;
-    recoTrackSet.print(std::cout);
-  }
+    for (auto& track : trackCandidateSet) {
+        recoTrackSet.insertTrack(std::move(track));
+    }
+
+    if (_debugLevel>=2) {
+        std::cout << "Reconstructed track set" << std::endl;
+        recoTrackSet.print(std::cout);
+    }
 
 }

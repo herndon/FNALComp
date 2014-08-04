@@ -3,7 +3,7 @@
 //============================================================================
 // PerfectTrackRecoModule.hh
 // Module for reconstructing hits from strip infomation
-// 
+//
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
 // 2014-06-11
@@ -15,6 +15,7 @@
 namespace fc {
 
 class DetectorGeometry;
+class GenHitSet;
 class HitSet;
 
 ///
@@ -26,29 +27,34 @@ class PerfectTrackRecoModule : public Module {
 
 public:
 
-  PerfectTrackRecoModule(int, const std::string& inputHitsLabel, const std::string& inputGenHitsLabel, const std::string& outputTracksLabel, 
-		  const DetectorGeometry &);
+    PerfectTrackRecoModule(int, const std::string& inputHitsLabel,
+                           const std::string& inputGenHitsLabel, const std::string& outputTracksLabel,
+                           const DetectorGeometry &);
 
-  void processEvent(Event&) override;
+    void processEvent(Event&) override;
 
 
 private:
 
-  int _debugLevel;
+    int _debugLevel;
 
-  const std::string _inHitsLabel;
-  const std::string _inGenHitsLabel;
-  const std::string _outTracksLabel;
+    const std::string _inHitsLabel;
+    const std::string _inGenHitsLabel;
+    const std::string _outTracksLabel;
 
-  // Detector information
-  const DetectorGeometry & _detectorGeometry;
-  
-  void recoTracks(TrackSet&, const HitSet&, const HitSet&) const;
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
 
-  void findTrackPerfectCandidates(std::vector<std::vector<int>> & trackHitCandidates,const HitSet & recoHitSet, const HitSet& genHitSet) const;
-  double compareHitPositions(const Hit & genHit, const Hit& recoHit) const;
+    void recoTracks(const HitSet&, const GenHitSet&,TrackSet&) const;
 
-  void buildPerfectTrackCandidates(TrackSet & trackCandidateSet, const std::vector<std::vector<int>> & trackHitCandidates,const HitSet & hitSet) const;
+    void findTrackPerfectCandidates(const HitSet & recoHitSet,
+                                    const GenHitSet& genHitSet,
+                                    std::vector<std::vector<int>> & trackHitCandidates) const;
+    double compareHitPositions(const GenHit & genHit, const Hit& recoHit) const;
+
+    void buildPerfectTrackCandidates(const std::vector<std::vector<int>> &
+                                     trackHitCandidates,const HitSet & hitSet,
+                                     TrackSet & trackCandidateSet) const;
 
 
 

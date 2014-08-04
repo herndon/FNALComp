@@ -70,7 +70,6 @@ private:
   void bookHitHistograms( TDirectory* dir, std::string const& label );
   void fillHitHistograms(fc::Event& event);
   TH1D* _hNHits       = nullptr;
-  TH1D* _hClusterSize = nullptr;
   TH1D* _hLayerHit    = nullptr;
   TH1D* _hTrackNumber = nullptr;
   TH1D* _hAllHity     = nullptr;

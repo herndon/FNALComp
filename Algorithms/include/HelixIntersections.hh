@@ -3,8 +3,6 @@
 //============================================================================
 // HelixIntersections.hh
 // header with function definitions for HelixIntersections
-// See <A HREF="doc/notes/Track.pdf">TrackF.pdf</A> for more information  !!!!! not done yet
-//
 //
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
@@ -18,8 +16,10 @@ namespace fc {
 class DetectorGeometry;
 class Helix;
 
-  bool intersectWithLayer(const Helix& helix, TVector3 & hitPosition, int layer, const fc::DetectorGeometry & detectorGeometry);
-  bool intersectWithPlane(const Helix& helix, TVector3 & hitPosition, const TVector3 & center, const TVector3 & normal,double & phi);
+bool intersectWithLayer(const Helix& helix, int layer,
+                        const fc::DetectorGeometry & detectorGeometry,TVector3 & hitPosition);
+bool intersectWithPlane(const Helix& helix, const TVector3 & center,
+                        const TVector3 & normal,double & phi,TVector3 & hitPosition);
 
 } // end namescape fc
 

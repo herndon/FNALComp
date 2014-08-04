@@ -5,7 +5,7 @@
 // header with class definition of the Track
 // Used for both generator level and reconstructed tracks
 // New version to support track fittering
-// See <A HREF="doc/notes/Track.pdf">Track.pdf</A> for more information
+// See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
 //
 // Track Helix parameter definition
 //
@@ -21,7 +21,7 @@
 //          pT = 1/abs(kappa)
 //          cot(theata) = 1/tan(lambda)
 // standard phi0 = helix phi0 + PI/2
-//          d0 = drho aka dr 
+//          d0 = drho aka dr
 //          z0 = dz
 //
 // Author Matt Herndon, University of Wisconsin,
@@ -40,12 +40,12 @@ class DetectorGeometry;
 
 namespace fc {
 
-typedef std::vector<int> trackHitSet; //!< Vector of hit indicies
+typedef std::vector<int> TrackHitContainer; //!< Vector of hit indicies
 
 ///
 /// Class Track: TLorentzVector to track physics properties and THGeoHelix to track tracking and helix properties
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-06-06
-/// For more information see <a href="../notes/Track.pdf">Track.pdf</a> 
+/// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a>
 ///
 
 class Track {
@@ -53,48 +53,74 @@ public:
 
 // Constructors
 
-  Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr, int d0sign, const DetectorGeometry & detectorGeometry);
-  Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,const trackHitSet& trackHitCandidate);
+    Track(const TLorentzVector & lorentzVector, int charge, const TVector3 & dr,
+          int d0sign, const DetectorGeometry & detectorGeometry);
+    Track(const Helix& helix,const TMatrixD& covMatrix,double chi2,int nDof,
+          const TrackHitContainer& trackHitCandidate);
 
-  // Get objects
+    // Get objects
 
-  const Helix & getHelix() const {return _helix;};
-  const TLorentzVector  getLorentzVector() const;
+    const Helix & getHelix() const {
+        return _helix;
+    };
+    const TLorentzVector  getLorentzVector() const;
 
-  int getCharge() const {return -getHelix().getKappa()/std::abs(getHelix().getKappa());};
+    int getCharge() const {
+        return -getHelix().getKappa()/std::abs(getHelix().getKappa());
+    };
 
-  const TMatrixD & getCovMatrix() const {return _covMatrix;}
-  double getSigmaDr() const {return std::sqrt(_covMatrix(0,0));}
-  double getSigmaPhi0() const {return std::sqrt(_covMatrix(1,1));}
-  double getSigmaKappa() const {return std::sqrt(_covMatrix(2,2));}
-  double getSigmaDz() const {return std::sqrt(_covMatrix(3,3));}
-  double getSigmaTanL() const {return std::sqrt(_covMatrix(4,4));}
+    const TMatrixD & getCovMatrix() const {
+        return _covMatrix;
+    }
+    double getSigmaDr() const {
+        return std::sqrt(_covMatrix(0,0));
+    }
+    double getSigmaPhi0() const {
+        return std::sqrt(_covMatrix(1,1));
+    }
+    double getSigmaKappa() const {
+        return std::sqrt(_covMatrix(2,2));
+    }
+    double getSigmaDz() const {
+        return std::sqrt(_covMatrix(3,3));
+    }
+    double getSigmaTanL() const {
+        return std::sqrt(_covMatrix(4,4));
+    }
 
-  double getChi2() const {return _chi2;}
-  int getNDof() const {return _nDof;}
-  double getChi2Prob() const;
+    double getChi2() const {
+        return _chi2;
+    }
+    int getNDof() const {
+        return _nDof;
+    }
+    double getChi2Prob() const;
 
-  // Hit/measurement point information
+    // Hit/measurement point information
 
-  const trackHitSet& getHits() const {return _trackHitSet;};
-  int numberHits() const {return _trackHitSet.size();}
+    const TrackHitContainer& getHits() const {
+        return _trackHits;
+    };
+    int numberHits() const {
+        return _trackHits.size();
+    }
 
 
-  void insertHit(int);
+  //void insertHit(int hitNumber);
 
-  void print(ostream& out) const;
+    void print(ostream& out) const;
 
 private:
 
-  Helix _helix;
+    Helix _helix;
 
-  TMatrixD _covMatrix;
+    TMatrixD _covMatrix;
 
-  double _chi2;
-  int _nDof;
+    double _chi2;
+    int _nDof;
 
 
-  trackHitSet _trackHitSet;
+    TrackHitContainer _trackHits;
 };
 } // end namescape fc
 

@@ -69,7 +69,7 @@ The detector geometry of the strip sensors is defined in ~\cite{detectorGeometry
 Implemented in the StripSet.hh and StripSet.cc files in the DataObjects directories.
 \\
 
-The StripSet contains a std::vector of typedef layerStripMaps with one map per layer of the detector.
+The StripSet contains a std::vector of typedef LayerStripMap with one map per layer of the detector.
 The detector is dynamically defined from a geometry file and the vector and size are initialized
 at run time.  Each layerStripMap is a map of key int stripNumber and adc value.  This allows
 the strip data to be stored in a sparse and ordered format.
@@ -105,12 +105,12 @@ that does not fit in one byte.  The data structure is as follows.
 \item -- 2 bytes. strip number and adc: strip number 11 bytes, max 2048, and acd 5 bytes, max 32. (repeated number of strips times)
 \end{itemize}
 
-Note event numbers and layer numbers are not necessary to the
+Note layer numbers are not necessary to the
 structure but are included to facilitate synchronization with write and read operation..
 \\
 
 A number of helper functions exist in the StripHitFunctions file in Geometry directories.  These functions
-can convert from strip number and layer to local and global positions and identify whether a strip number is valid
+can convert from strip number and layer to local and global positions and back again and identify whether a strip number is valid
 on a given layer.
 
 \subsection{binary input and output}
@@ -123,6 +123,83 @@ output functions. std::ofstream, ifstream.  Byte writing is performed for write 
 \end{itemize}
 \
 
+\section{The GenHit and GenHitSet}
+\subsection{GenHit class}
+Implemented in the GenHit.hh and GenHit.cc files in the DataObjects directories.
+\\
+
+The GenHit class contains:\\
+
+\begin{itemize}
+\item TVector3 \_hitPosition
+\item int \_layer
+\item Int \_trackNumber
+\end{itemize}
+
+
+The class server for generator GenHits only.\\
+\\  
+
+Constructor:
+
+\begin{itemize}
+\item Hit(hitPosition,layer,trackNumber)
+\end{itemize}
+
+Access methods:
+\begin{itemize}
+\item getHitPosition():... names correspond to the data members
+\item getLayer()
+\item getTrackNumber()
+\item print(ostream\&): To print to an a user specified ostream.
+\end{itemize}
+
+A number of helper functions exist in the StripHitFunctions file in Geometry directories.  These functions
+can convert from hit position to local and strip number position or back identify whether a hit position at a sensor
+plane is within the active area of the sensor.
+
+
+\subsection{GenHitSet class}
+Implemented in the GenHitSet.hh and GenHitSet.cc files in the DataObjects directories.
+\\
+
+The GenHitSet contains a typedef GenHitSetContainer of type std::vector of GenHits.
+\\
+
+Access methods:
+
+\begin{itemize}
+\item getGenHits(): const reference access to the vector using a generic method.
+The vector index indexes the GenHit number to allow direct access to a hit of a known number.
+
+\item insertGenHit(GenHit): Provided to insert data into the set.
+
+\item print(ostream\&): To print to an a user specified ostream that iterates over
+the GenHits calling the print method of each GenHit..
+\end{itemize}
+
+\subsection{GenHitSet IO}
+Implemented in the GenHitSetIO.hh and GenHitSetIO.cc files in the Algorithms directories.
+\\
+
+Input and output to disk in controlled by the GenHitSetIO helper class.  Reading and writing
+are performed by the readEvent and writeEvent functions.
+\\
+
+The data is stored in text format for simplicity.
+
+\begin{itemize}
+\item  Hits: to identify the set
+\item version: The version is checked on input to make sure the correct streamer code is being used.
+\item number of hits
+\item hit number (repeated number of hits times)
+\item - x position
+\item - y position
+\item - z position
+\item - layer number
+\item - track number 
+\end{itemize}
+
 \section{The Hit and HitSet}
 \subsection{Hit class}
 Implemented in the Hit.hh and Hit.cc files in the DataObjects directories.
@@ -134,12 +211,15 @@ The Hit class contains:\\
 \item TVector3 \_hitPosition
 \item int \_layer
 \item int \_numberStrips
-\item Int \_trackNumber (only for generator level hits)
+\item int \_charge
+\item bool \_isGoodHit
+\item double \_resolution 
 \end{itemize}
 
 
-The class servers for both generator Hits and reconstructed Hits.   Associated information such as Hit resolutions
-are stored in the DetectorGeometry.  Also note that a hit can be classified of as ``bad'' if it has a large ADC
+The class server for reconstructed Hits only.   Associated information such as Hit resolutions
+are read from DetectorGeometry though a resolution variable exists per hit to allow for any resolution model
+to be developed.  Also note that a hit is classified of as ``bad'' if it has a large ADC
 value or more than two associated strips indicating that it is actually due to several overlapping hits from
 different tracks.
 \\
@@ -147,22 +227,30 @@ different tracks.
 Constructors:
 
 \begin{itemize}
-\item Hit(hitPosition,layer,numberStrips,trackNumber)
-\item Hit(hitPosition,layer,numberStrips
+\item Hit(hitPosition,layer,numberStrips,charge,goodhit,resolution)
 \end{itemize}
 
 Access methods:
 \begin{itemize}
 \item getHitPosition():... names correspond to the data members
+\item getLayer()
+\item getNumberStrips()
+\item getCharge()
+\item bool isGoodHit()
+\item getResolution
 \item print(ostream\&): To print to an a user specified ostream.
 \end{itemize}
 
+A number of helper functions exist in the StripHitFunctions file in Geometry directories.  These functions
+can convert from hit position to local and strip number position or back identify whether a hit position at a sensor
+plane is within the active area of the sensor.
+\\
 
 \subsection{HitSet class}
 Implemented in the HitSet.hh and HitSet.cc files in the DataObjects directories.
 \\
 
-The HitSet is a typedef hitSet of type std::vector of Hits.
+The HitSet contains a typedef HitSetContainer of type std::vector of Hits.
 \\
 
 Access methods:
@@ -176,11 +264,6 @@ The vector index indexes the Hit number to allow direct access to a hit of a kno
 \item print(ostream\&): To print to an a user specified ostream that iterates over
 the Hits calling the print method of each Hit..
 \end{itemize}
-
-
-A number of helper functions exist in the StripHitFunctions file in Geometry directories.  These functions
-can convert from hit position to local and strip number position  identify whether a hit position at a sensor
-plane is within the active area of the sensor.
 
 \subsection{HitSet IO}
 Implemented in the HitSetIO.hh and HitSetIO.cc files in the Algorithms directories.
@@ -202,7 +285,9 @@ The data is stored in text format for simplicity.
 \item - z position
 \item - layer number
 \item - number of strips
-\item - track number, -1 if none 
+\item - charge
+\item - isGoodHit
+\item - resolution
 \end{itemize}
 
 \section{The GenTrack and GenTrackSet}
@@ -214,25 +299,26 @@ The GenTrack class contains:
 \begin{itemize}
 \item TLorentzVector \_lorentzVector
 \item int \_charge
-\item int \_dr, point of closest approach to the reference point, 0,0,0
+\item TVector3 \_dr, point of closest approach to the reference point, 0,0,0
 \end{itemize}
 
 Constructor:
 
 \begin{itemize}
-\item GenTrack(TLorentzVector,int charge, TVector3 position of closest approach)
+\item GenTrack(TLorentzVector,int charge, TVector3 dr position of closest approach)
 \item{itemize}
 \end{itemize}
 
 
 Access:
 \begin{itemize}
-\item getLorentzVector():... names correspond to the data members
+\item getLorentzVector():
 \item getPosition(): \_dr
 
-\item makeHelix(curvatureC): function which takes the curvature constant in the magnetic field and returns
+\item makeHelix(TVector3 bField,curvatureC): function which takes the magnetic field and the curvature constant and returns
 a Helix which can be used for operations like finding intersections with layers.  Note the magnetic field
-value is needed since it may not be uniform and the helix parameters would be different at different points.
+value is needed since it may not be uniform and the radius of curvature would be different at different points.
+With the standard bField from the DetectorGeometry you get the radius of curvature at the origin.
 
 \item print(ostream\&) to print to an a user specified ostream.
 \end{itemize}
@@ -242,7 +328,7 @@ value is needed since it may not be uniform and the helix parameters would be di
 Implemented in the GenTrackSet.hh and GenTrackSet.cc files in the DataObjects directories.
 \\
 
-The GenTrackSet contains a typedef genTrackSet of type std::vector of GenTracks.
+The GenTrackSet contains a typedef GenTrackSetContainer of type std::vector of GenTracks.
 \\
 Access:
 
@@ -293,15 +379,16 @@ The Track class contains:
 \item int \_covMatrix, 5x5 parameter covariance matrix
 \item double \_chi2
 \item int \_nDof
-\item \_trackHitSet, a typedef of type vector of ints with hit index numbers.
+\item \_trackHits, a typedef TrackHitContainer of type vector of ints with hit index numbers.
 \end{itemize}
 
 
-Construcor:
+Constructor:
 \begin{itemize}
 \item Tracks are constructed by the full set of parameters above.  These parameters
 are generated by the BuildTrack helper function in the Algorithms directories.
-That class fits a track based on a number of hits.
+That class fits a track based the input hits.
+\item setHelix() expert method for use in TrackFit where the helix must be updated frequently
 \end{itemize}
 
 
@@ -316,12 +403,37 @@ approach. Signed positive to indicate the reference point is within the circle o
 \item getKappa(): inverse Pt signed to indicate handedness + right handed (negative charge) - left handed
 (positive charge)
 \item getDz(): z distance to reference point at point of closest approach
+<<<<<<< HEAD
 \item getTanL(): pZ/pT or inverse cot(theta) where theta is the dip angle which is zero for track perpendicular
 to the z axis and 90 degrees for parallel.
 \end{itemize}
 The Helix helix parameter follow the convention of~\cite{helix} and are described in detail there.\\
 Note that helix parameters are always referenced from (0,0,0) in the parametrization used in this code.
 \item getLorentzVector() get a root TLorentzVector object based on the track parameters
+=======
+\item getTanL(): pZ/pT or cot(theta) where theta is the dip angle which is 90 for track perpendicular
+to the z axis and 0 degrees for parallel to the position z axis.
+\item getAlpha() get inverse curvature constant in the magnetic field at the origin
+\item getRadiusOfCurvatureAtOrigin()
+\item getRadiusOfCurvature(TVector3 bField) at an arbitrary point with field bField
+\item getPT()
+\item getPZ()
+\item getCotTheta() same as tanL
+\item getCosTheta() where theta is the dip angle
+\item getSinTheta() where theta is the dip angle 
+\end{itemize}
+The Helix helix parameter follow the convention of~\cite{helix} and are described in detail there.\\
+Note that helix parameters are always referenced from (0,0,0) in the parametrization used in this code.
+\item getSigmDR() ... unceartianties for the five track parameters from the covariance matrix
+\item getCharge()
+\item getCovMatrix()
+\item getChi2()
+\item getNDof()
+\item getChi2Prob()
+\item getLorentzVector() get a root TLorentzVector object based on the track parameters
+\item getHits() get TrackHitContainer vector of hit indices's
+\item numberHits()
+>>>>>>> master
 \item print(ostream\&): to print to an a user specified ostream.
 
 \end{itemize}
@@ -331,7 +443,7 @@ Note that helix parameters are always referenced from (0,0,0) in the parametriza
 Implemented in the TrackSet.hh and TrackSet.cc files in the DataObjects directories.
 \\
 
-The TrackSet is a typedef trackSet of type std::vector of GenTracks.
+The TrackSet is a typedef TrackSetContainer of type std::vector of Tracks.
 \\
 
 Access:

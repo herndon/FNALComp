@@ -4,7 +4,7 @@
 // GenTrackSet.hh
 // header with class definition of the GenTrackSet
 // A vector of GenTracks
-// See <A HREF="doc/notes/Track.pdf">Track.pdf</A> for more information
+// See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
 //
 //
 // Author Matt Herndon, University of Wisconsin,
@@ -16,27 +16,28 @@
 
 namespace fc {
 
-  typedef std::vector<GenTrack> genTrackSet;
+typedef std::vector<GenTrack> GenTrackSetContainer;
 
 ///
-/// Class GenTrackSet: 
+/// Class GenTrackSet:
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laboratory 2014-06-06
-/// For more information see <a href="../notes/Track.pdf">Track.pdf</a> 
+/// For more information see <a href="../notes/dataFormat.pdf">dataFormat.pdf</a>
 ///
 
 class GenTrackSet {
 public:
 
-  const genTrackSet & getGenTracks() const { return _genTrackSet;};
- 
-  void insertTrack(const GenTrack&);
-  void insertTrack(GenTrack&&);
+    const GenTrackSetContainer & getGenTracks() const {
+        return _genTrackSet;
+    };
 
-  void print(ostream& out) const;
+    void insertTrack(GenTrack&&);
+
+    void print(ostream& out) const;
 
 private:
 
-  genTrackSet _genTrackSet;
+    GenTrackSetContainer _genTrackSet;
 };
 } // end namespace fc
 

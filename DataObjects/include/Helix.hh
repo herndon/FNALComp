@@ -3,11 +3,11 @@
 //============================================================================
 // Helix.hh
 // header with class definition of the Helix
-// See <A HREF="doc/notes/Track.pdf">Track.pdf</A> for more information !!!!! not done yet
+// See <A HREF="doc/notes/dataFormat.pdf">dataFormat.pdf</A> for more information
 //
 // Helix parameter definition
 //
-// dr, phi0, kappa, dz, tanL 
+// dr, phi0, kappa, dz, tanL
 //
 // Units are in m, GeV  and Tesla such that alpha = 1.0e9/(_bField[2]*2.99792458e8)
 //
@@ -22,7 +22,7 @@
 //          pT = 1/abs(kappa)
 //          cot(theata) = 1/tan(lambda)
 // standard phi0 = helix phi0 + PI/2
-//          d0 = drho aka dr 
+//          d0 = drho aka dr
 //          z0 = dz
 //
 // Author Matt Herndon, University of Wisconsin,
@@ -39,44 +39,85 @@
 
 namespace fc {
 
+static const int _sDim = 5;     //!< helix dimension
+
 
 class Helix {
 
 public:
-  // Static members, matrix dimensions
-  static const int _sDim = 5;     //!< helix dimension
+    // Static members, matrix dimensions
 
 // Constructors
 
 
-  Helix();
-  Helix(double kappa, double dr, double dz, double phi0, double tanl, double alpha);
-  
-  // Get track parameters
+    Helix();
+    Helix(double dr, double phi0, double kappa, double dz, double tanl,
+          double alpha,double curvatureC);
 
-  const TVectorD& getHelix() const {return _helix;}
+    // Get track parameters
 
-  double getDr() const {return _helix(0);}
-  double getPhi0() const {return _helix(1);}
-  double getKappa() const {return _helix(2);}
-  double getDz() const {return _helix(3);}
-  double getTanL() const {return _helix(4);}
+    const TVectorD& getHelix() const {
+        return _helix;
+    }
 
-  double getAlpha() const {return _alpha;}
+    double getDr() const {
+        return _helix(0);
+    }
+    double getPhi0() const {
+        return _helix(1);
+    }
+    double getKappa() const {
+        return _helix(2);
+    }
+    double getDz() const {
+        return _helix(3);
+    }
+    double getTanL() const {
+        return _helix(4);
+    }
 
-  double getRadiusOfCurvature() const {return _alpha/_helix(2);}
+    double getAlpha() const {
+        return _alpha;
+    }
 
-  double getPT(const TVector3& bField) const {return std::abs(1.0/_helix(2));}
-  double getPZ() const {return _helix(4)*std::abs(1.0/_helix(2));}
-  double getCotTheta() const {return _helix(4);}
+    double getRadiusOfCurvatureAtOrigin() const {
+        return _alpha/_helix(2);
+    }
+    // alpha is 1/curvatureCInField  curvatureCInField = curvatureC*bFieldZ, 1/curvatureC*bFieldZ
+    // scale Radius of curvature by the ration of the magentic field at the origen (1/_alpha*_curvatureC) divided by the local field bField.Mag()
+    double getRadiusOfCurvature(const TVector3& bField) const {
+        return _alpha*((1/(_alpha*_curvatureC))/bField.Mag())/_helix(2);
+    }
 
-  // Set helix
-  void setHelix(const TVectorD& helix) {_helix = helix;}
+
+
+    double getPT() const {
+        return std::abs(1.0/_helix(2));
+    }
+    double getPZ() const {
+        return _helix(4)*std::abs(1.0/_helix(2));
+    }
+    double getCotTheta() const {
+        return _helix(4);
+    }
+    double getCosTheta() const {
+        return _helix(4)/std::sqrt(_helix(4)*_helix(4)+1);
+    }
+    double getSinTheta() const {
+        return 1.0/std::sqrt(_helix(4)*_helix(4)+1);
+    }
+
+
+    // Set helix
+    void setHelix(const TVectorD& helix) {
+        _helix = helix;
+    }
 
 private:
 
-  TVectorD _helix;
-  double _alpha;
+    TVectorD _helix;
+    double _alpha;
+    double _curvatureC;
 };
 } // end namescape fc
 

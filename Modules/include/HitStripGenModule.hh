@@ -2,12 +2,12 @@
 #define Modules_HitStripGenModule_hh
 //============================================================================
 // HitStripGenModule.hh
-// Module for generating associated hit and strip data from tracks on the 
+// Module for generating associated hit and strip data from tracks on the
 // sensors of a 5 layer planor silicon detector.
 // See detectorGeometry.pdf for detector description
 // Strip data is stored in bianary format
 // See  dataFormat.pdf for data format information
-// 
+//
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
 // 2014-06-08
@@ -25,7 +25,7 @@ namespace fc {
 class DetectorGeometry;
 class GenTrackSet;
 class GenTrack;
-class HitSet;
+class GenHitSet;
 class StripSet;
 class Random;
 
@@ -35,41 +35,45 @@ class Random;
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-04-17
 ///
 
-class HitStripGenModule : public Module{
+class HitStripGenModule : public Module {
 
 public:
 
-  HitStripGenModule(int, 
-		    const std::string& iInputTracksLabel,
-		    const std::string& iOutputHitsLabel,
-		    const std::string& iOutputStripsLabel,
-		    const DetectorGeometry &, Random &);
+    HitStripGenModule(int,
+                      const std::string& iInputTracksLabel,
+                      const std::string& iOutputHitsLabel,
+                      const std::string& iOutputStripsLabel,
+                      const DetectorGeometry &, Random &);
 
-  void processEvent(Event&) override;
+    void processEvent(Event&) override;
 
 
 private:
 
-  std::string const _inTracksLabel;
-  std::string const _outTracksLabel;
-  std::string const _outHitsLabel;
-  std::string const _outStripsLabel;
-  int _debugLevel;
+    std::string const _inTracksLabel;
+    std::string const _outTracksLabel;
+    std::string const _outHitsLabel;
+    std::string const _outStripsLabel;
+    int _debugLevel;
 
-  // Detector information
-  const DetectorGeometry & _detectorGeometry;
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
 
-  // Random numbers
-  Random &  _random;
+    // Random numbers
+    Random &  _random;
 
-  void makeHitsStrips(HitSet &, StripSet &, const GenTrack &, int, int &) const;
+    void makeHitsStrips(const GenTrack &, int trackNumber, GenHitSet &,
+                        StripSet &) const;
 
-  void storeHitInfo(HitSet &,int,int &,TVector3 &,int) const;
+    void storeHitInfo(int layer,int trackNumber,TVector3& hitPosition,
+                      GenHitSet &) const;
 
-  void storeStripInfo(StripSet &,const TVector3 &,int) const;
+    void storeStripInfo(const TVector3& hitPosition,int layer,StripSet&) const;
 
-  void generateClusterFromStripHitPosition(double, int &, std::vector<int> &) const;
-  void storeCluster(StripSet &, int, int, const std::vector<int> &) const;
+    void generateClusterFromStripHitPosition(double stripHitPosition,
+            int & initialStrip, std::vector<int> & stripAdcs) const;
+    void storeCluster(int layer, int initialStrip,
+                      const std::vector<int>& stripAdcs,StripSet &) const;
 
 
 };

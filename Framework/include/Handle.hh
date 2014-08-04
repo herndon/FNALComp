@@ -2,10 +2,10 @@
 #define Framework_Handle_hh
 
 namespace fc {
-  class Event;
+class Event;
 
-  template<typename T>
-  class Handle {
+template<typename T>
+class Handle {
     const T* _product;
 
     friend class Event;
@@ -13,20 +13,20 @@ namespace fc {
 
     Handle() = delete;
 
-  public:
+public:
     const T* operator->() const {
-      return _product;
+        return _product;
     }
 
     const T& operator*() const {
-      return *_product;
+        return *_product;
     }
 
     const T* get() const {
-      return _product;
+        return _product;
     }
 
-  };
+};
 }
 
 #endif //Framework_Handle_hh

@@ -7,7 +7,7 @@
 // See detectorGeometry.pdf for detector description
 // Strip data is stored in bianary format
 // See  dataFormat.pdf for data format information
-// 
+//
 // Author Matt Herndon, University of Wisconsin,
 //                       Fermi National Accelerator Laborator
 // 2014-06-03
@@ -34,24 +34,24 @@ class DataSource : public Source {
 
 public:
 
-  DataSource(int, std::ifstream&, bool genData,
-	       const std::string& iOutputTracksLabel,
-	       const std::string& iOutputHitsLabel,
-	       const std::string& iOutputStripsLabel,
-	       const DetectorGeometry&);
- 
-  std::unique_ptr<Event> getNextEvent() override;
+    DataSource(int, std::ifstream&, bool genData,
+               const std::string& iOutputTracksLabel,
+               const std::string& iOutputHitsLabel,
+               const std::string& iOutputStripsLabel,
+               const DetectorGeometry&);
+
+    std::unique_ptr<Event> getNextEvent() override;
 
 
 private:
 
-  std::string const _outTracksLabel;
-  std::string const _outHitsLabel;
-  std::string const _outStripsLabel;
-  int _debugLevel;
+    std::string const _outTracksLabel;
+    std::string const _outHitsLabel;
+    std::string const _outStripsLabel;
+    int _debugLevel;
 
-  const DetectorGeometry & _detectorGeometry;
- 
+    const DetectorGeometry & _detectorGeometry;
+
     // input event data file
     std::ifstream & _inputeventdatafile;
     const bool _genData;
