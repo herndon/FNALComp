@@ -58,7 +58,7 @@ struct HitData {
 
   void clear() { start = -1; curr_strip = -1; cnts.clear(); }
   //void add(int strip, int cnt) { curr_strip = strip; cnts.push_back(cnt); }
-  void add(std::pair<int,int> const& p) { curr_strip = p.first, cnts.push_back(p.second); }
+  void add(std::pair<int, int> const& p) { curr_strip = p.first, cnts.push_back(p.second); }
   void begin(int strip, int cnt) { start = strip; curr_strip = strip; cnts.push_back(cnt); }
   bool isAdjacent(int strip) { return strip == curr_strip + 1; }
   bool makingCluster() { return start >= 0; }
@@ -80,13 +80,13 @@ void fc::HitRecoModule::makeHits(int layer,
 
   // This local function defines what it means to be a strip that is a
   // candidate to go into a cluster.
-  auto goodStrip = [&desc](std::pair<int,int> const& s) {
+  auto goodStrip = [&desc](std::pair<int, int> const & s) {
     return s.second > desc._threshold;
   };
 
   // This local function defines what it means for a strip to be
   // appropirate to add to the current cluster.
-  auto inSameCluster = [&desc,&currentCluster,&goodStrip](std::pair<int,int> const& s) {
+  auto inSameCluster = [&desc, &currentCluster, &goodStrip](std::pair<int, int> const & s) {
     return goodStrip(s) && currentCluster.isAdjacent(s.first);
   };
 
