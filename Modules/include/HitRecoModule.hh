@@ -49,7 +49,7 @@ namespace fc {
     const DetectorGeometry& _detectorGeometry;
     int _num;
 
-    void recoHits(const StripSet&, HitSet&) const;
+    void processLayers(const StripSet&, HitSet&) const;
     void makeHits(int layer, LayerStripMap const& strips, HitSet& hits) const;
     void makeHit(int layer, int start_strip,
                  std::vector<int> const& adcs,

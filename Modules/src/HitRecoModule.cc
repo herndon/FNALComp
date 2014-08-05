@@ -27,7 +27,7 @@ void fc::HitRecoModule::processEvent(fc::Event& event) {
   Handle<StripSet> genStripSet = event.get<StripSet>(_inStripsLabel);
   std::unique_ptr<HitSet> recoHitSet(new HitSet);
 
-  recoHits(*genStripSet, *recoHitSet);
+  processLayers(*genStripSet, *recoHitSet);
 
   if (_debugLevel >= 2) { recoHitSet->print(std::cout); }
 
@@ -124,8 +124,8 @@ void fc::HitRecoModule::makeHits(int layer,
   }
 }
 
-void fc::HitRecoModule::recoHits(const StripSet& stripSet,
-                                 HitSet& hitSet) const {
+void fc::HitRecoModule::processLayers(const StripSet& stripSet,
+                                      HitSet& hitSet) const {
   auto const& layers = stripSet.getStrips();
   for (size_t i = 0; i < layers.size(); ++i) {
     std::cout << "calling makeHits for layer " << i << "\n";
