@@ -77,10 +77,6 @@ struct HitData {
 void fc::HitRecoModule::makeHits(int layer,
                                  LayerStripMap const& strips,
                                  HitSet& hits) const {
-  //int curr_start_strip = -1;
-  //int curr_strip = -1;
-  //std::vector<int> curr_cnts;
-
   HitData currentCluster;
   SensorDescriptor const& desc = _detectorGeometry.getSensor(layer);
 
@@ -92,7 +88,7 @@ void fc::HitRecoModule::makeHits(int layer,
 
   // This local function defines what it means for a strip to be
   // appropriate to add to the current cluster.
-  auto inSameCluster = [&desc, &currentCluster, &goodStrip](SiStrip const & s) {
+  auto inSameCluster = [&currentCluster, &goodStrip](SiStrip const & s) {
     return goodStrip(s) && currentCluster.isAdjacent(s.first);
   };
 
