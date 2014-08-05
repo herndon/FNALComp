@@ -75,7 +75,7 @@ void fc::HitRecoModule::makeHits(int layer,
   //int curr_strip = -1;
   //std::vector<int> curr_cnts;
 
-  HitData data;
+  HitData currentCluster;
   SensorDescriptor const& desc = _detectorGeometry.getSensor(layer);
 
   // This local function defines what it means to be a strip that is a
@@ -85,38 +85,38 @@ void fc::HitRecoModule::makeHits(int layer,
   };
 
   // This local function defines what it means for a strip to be
-  // appropirate to add to the current cluster, "data".
-  auto inSameCluster = [&desc,&data,&goodStrip](std::pair<int,int> const& s) {
-    return goodStrip(s) && data.isAdjacent(s.first);
+  // appropirate to add to the current cluster.
+  auto inSameCluster = [&desc,&currentCluster,&goodStrip](std::pair<int,int> const& s) {
+    return goodStrip(s) && currentCluster.isAdjacent(s.first);
   };
 
   for (auto const& strip : strips) {
 
     //std::cout << "layer=" << layer << " strip=" << it->first << " " << it->second << "\n";
 
-    if (data.makingCluster()) {
+    if (currentCluster.makingCluster()) {
       // ongoing cluster ...
       if (inSameCluster(strip)) {
-        data.add(strip);
+        currentCluster.add(strip);
       }
       else {
         // make hit
-        makeHit(layer, data.start, data.cnts, desc, hits);
+        makeHit(layer, currentCluster.start, currentCluster.cnts, desc, hits);
         // clear holders
-        data.clear();
+        currentCluster.clear();
       }
     }
     else {
       // no cluster ...
       if (goodStrip(strip)) {
-        data.begin(strip.first, strip.second);
+        currentCluster.begin(strip.first, strip.second);
       }
     }
   }
-  if (data.makingCluster()) {
+  if (currentCluster.makingCluster()) {
     // close last cluster
     std::cout << "got to close last cluster" << "\n";
-    makeHit(layer, data.start, data.cnts, desc, hits);
+    makeHit(layer, currentCluster.start, currentCluster.cnts, desc, hits);
   }
 }
 
