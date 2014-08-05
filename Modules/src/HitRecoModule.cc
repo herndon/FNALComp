@@ -63,14 +63,19 @@ void fc::HitRecoModule::makeHit(int layer, int curr_start_strip,
 namespace fc {
 
   struct HitAccum {
-    HitAccum(int lyr, DetectorGeometry const& dg) :
+    HitAccum(int lyr, DetectorGeometry const& dg, HitSet& results) :
       start(-1),
       curr_strip(-1),
       cnts(),
       layer(lyr),
       geom(dg),
-      desc(dg.getSensor(layer))
+      desc(dg.getSensor(layer)),
+      hits(results)
     { }
+
+    ~HitAccum() {
+      if (makingCluster()) { makeHit(); }
+    }
 
     void clear() { start = -1; curr_strip = -1; cnts.clear(); }
 
@@ -87,8 +92,8 @@ namespace fc {
     // appropriate to add to the current cluster.
     bool inSameCluster(SiStrip const& s) const { return goodStrip(s) && isAdjacent(s.first); }
 
-    void makeHit(HitSet& result);
-    void processStrip(SiStrip const& strip, HitSet& hits);
+    void makeHit();
+    void processStrip(SiStrip const& strip);
 
     // Accumulators for our current state.
     int start;
@@ -99,10 +104,11 @@ namespace fc {
     int layer;
     DetectorGeometry const& geom;
     SensorDescriptor const& desc;
+    HitSet&                 hits;
   };
 }
 
-void fc::HitAccum::makeHit(HitSet& hits) {
+void fc::HitAccum::makeHit() {
   if (cnts.size() < 2) { return; }
   double pos = fcf::calculateStripHitPositionFromCluster(start, cnts);
   double local = fcf::calculateLocalFromStripPosition(pos, layer, geom);
@@ -113,16 +119,14 @@ void fc::HitAccum::makeHit(HitSet& hits) {
   hits.insertHit(Hit(hpos, layer, cnts.size(), charge, good_hit, res));
 }
 
-void fc::HitAccum::processStrip(SiStrip const& strip,
-                                HitSet& hits) {
-
+void fc::HitAccum::processStrip(SiStrip const& strip) {
   if (makingCluster()) {
     // ongoing cluster ...
     if (inSameCluster(strip)) {
       add(strip);
     }
     else {
-      makeHit(hits);
+      makeHit();
       clear();
     }
   }
@@ -137,15 +141,10 @@ void fc::HitAccum::processStrip(SiStrip const& strip,
 void fc::HitRecoModule::makeHits(int layer,
                                  LayerStripMap const& strips,
                                  HitSet& hits) const {
-  HitAccum currentCluster(layer, _detectorGeometry);
+  HitAccum currentCluster(layer, _detectorGeometry, hits);
 
   for (auto const& strip : strips) {
-    currentCluster.processStrip(strip, hits);
-  }
-  if (currentCluster.makingCluster()) {
-    // close last cluster
-    std::cout << "got to close last cluster" << "\n";
-    currentCluster.makeHit(hits);
+    currentCluster.processStrip(strip);
   }
 }
 
