@@ -91,7 +91,7 @@ void fc::HitRecoModule::makeHits(int layer,
   };
 
   // This local function defines what it means for a strip to be
-  // appropirate to add to the current cluster.
+  // appropriate to add to the current cluster.
   auto inSameCluster = [&desc, &currentCluster, &goodStrip](SiStrip const & s) {
     return goodStrip(s) && currentCluster.isAdjacent(s.first);
   };
@@ -106,9 +106,7 @@ void fc::HitRecoModule::makeHits(int layer,
         currentCluster.add(strip);
       }
       else {
-        // make hit
         makeHit(layer, currentCluster.start, currentCluster.cnts, desc, hits);
-        // clear holders
         currentCluster.clear();
       }
     }
