@@ -78,13 +78,25 @@ void fc::HitRecoModule::makeHits(int layer,
   HitData data;
   SensorDescriptor const& desc = _detectorGeometry.getSensor(layer);
 
+  // This local function defines what it means to be a strip that is a
+  // candidate to go into a cluster.
+  auto goodStrip = [&desc](std::pair<int,int> const& s) {
+    return s.second > desc._threshold;
+  };
+
+  // This local function defines what it means for a strip to be
+  // appropirate to add to the current cluster, "data".
+  auto inSameCluster = [&desc,&data,&goodStrip](std::pair<int,int> const& s) {
+    return goodStrip(s) && data.isAdjacent(s.first);
+  };
+
   for (auto const& strip : strips) {
 
     //std::cout << "layer=" << layer << " strip=" << it->first << " " << it->second << "\n";
 
     if (data.makingCluster()) {
       // ongoing cluster ...
-      if (strip.second > desc._threshold && data.isAdjacent(strip.first)) {
+      if (inSameCluster(strip)) {
         data.add(strip);
       }
       else {
@@ -96,7 +108,7 @@ void fc::HitRecoModule::makeHits(int layer,
     }
     else {
       // no cluster ...
-      if (strip.second > desc._threshold) {
+      if (goodStrip(strip)) {
         data.begin(strip.first, strip.second);
       }
     }
