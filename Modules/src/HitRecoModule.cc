@@ -57,7 +57,8 @@ struct HitData {
   HitData(): start(-1), curr_strip(-1), cnts() { }
 
   void clear() { start = -1; curr_strip = -1; cnts.clear(); }
-  void add(int strip, int cnt) { curr_strip = strip; cnts.push_back(cnt); }
+  //void add(int strip, int cnt) { curr_strip = strip; cnts.push_back(cnt); }
+  void add(std::pair<int,int> const& p) { curr_strip = p.first, cnts.push_back(p.second); }
   void begin(int strip, int cnt) { start = strip; curr_strip = strip; cnts.push_back(cnt); }
   bool isAdjacent(int strip) { return strip == curr_strip + 1; }
   bool makingCluster() { return start >= 0; }
@@ -84,7 +85,7 @@ void fc::HitRecoModule::makeHits(int layer,
     if (data.makingCluster()) {
       // ongoing cluster ...
       if (strip.second > desc._threshold && data.isAdjacent(strip.first)) {
-        data.add(strip.first, strip.second);
+        data.add(strip);
       }
       else {
         // make hit
