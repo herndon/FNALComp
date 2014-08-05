@@ -49,6 +49,15 @@ private:
 
     void recoHits(const StripSet &,HitSet &) const;
 
+    void recoHitsLayer(const StripSet &, int layer, HitSet &) const;
+
+    bool findCluster(LayerStripMap::const_iterator& iter,
+                     LayerStripMap::const_iterator& end,
+                     const StripSet&,int layer,int& initialStrip, std::vector<int>& stripAdcs) const;
+
+    Hit buildHit(int, int,const std::vector<int> &) const;
+
+    //double calculateStripHitPositionFromCluster(int, const std::vector<int> &) const;
 
 
 };
