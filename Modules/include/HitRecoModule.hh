@@ -21,6 +21,7 @@ namespace fc {
 class DetectorGeometry;
 class Hit;
 class HitSet;
+  struct SensorDescriptor;
 
 
 ///
@@ -46,18 +47,14 @@ private:
 
     // Detector information
     const DetectorGeometry & _detectorGeometry;
+  int _num;
 
-    void recoHits(const StripSet &,HitSet &) const;
-
-    void recoHitsLayer(const StripSet &, int layer, HitSet &) const;
-
-    bool findCluster(LayerStripMap::const_iterator& iter,
-                     LayerStripMap::const_iterator& end,
-                     const StripSet&,int layer,int& initialStrip, std::vector<int>& stripAdcs) const;
-
-    Hit buildHit(int, int,const std::vector<int> &) const;
-
-    //double calculateStripHitPositionFromCluster(int, const std::vector<int> &) const;
+  void recoHits(const StripSet &,HitSet &) const;
+  void makeHits(int layer, LayerStripMap const& strips, HitSet& hits) const;
+  void makeHit(int layer, int start_strip, 
+	       std::vector<int> const& adcs, 
+	       SensorDescriptor const& desc,
+	       HitSet& hits) const;
 
 
 };
