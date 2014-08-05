@@ -51,12 +51,6 @@ namespace fc {
 
     void processLayers(const StripSet&, HitSet&) const;
     void makeHits(int layer, LayerStripMap const& strips, HitSet& hits) const;
-    void makeHit(int layer, int start_strip,
-                 std::vector<int> const& adcs,
-                 SensorDescriptor const& desc,
-                 HitSet& hits) const;
-
-
   };
 } // end namespace fc
 
