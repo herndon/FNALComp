@@ -174,9 +174,9 @@ void fc::HitStripGenModule::storeCluster(int layer, int initialStrip,
         const std::vector<int> & stripAdcs,StripSet & stripSet) const {
 
     int iiStrip = initialStrip;
-    for (auto stripAdc : stripAdcs) {
+    for (auto adc : stripAdcs) {
         if (fcf::isValidStrip(layer,iiStrip,
-                              _detectorGeometry)) stripSet.insertStrip(layer,iiStrip,stripAdc);
+                              _detectorGeometry) && adc > 0 ) stripSet.insertStrip(layer,iiStrip,adc);
         ++iiStrip;
     }
 

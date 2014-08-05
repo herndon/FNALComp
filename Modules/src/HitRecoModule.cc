@@ -56,7 +56,7 @@ void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,
  
   
       if (strip.second > _detectorGeometry.getSensor(layer)._threshold && strip.first == (initialStrip+stripAdcs.size())){
-	//Was above threshold and an ajacent strip
+	//Found an above threshold and an ajacent strip
 	stripAdcs.push_back(strip.second);
       } else if (stripAdcs.size() > 0){
 	// Was not adjacent and above threshold and a cluster is in stripAdc
@@ -68,7 +68,7 @@ void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,
 	  stripAdcs.push_back(strip.second);
 	}
       } else if (strip.second > _detectorGeometry.getSensor(layer)._threshold){
-	// start new cluster
+	// Was above threhold but not adjacent start new cluster, no previous cluster to store
 	initialStrip = strip.first;
 	stripAdcs.push_back(strip.second);
       } else {
