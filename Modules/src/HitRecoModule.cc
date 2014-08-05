@@ -11,6 +11,7 @@
 // at global scope with this name. This is why all code should be in a
 // namespace!
 //using Strip = std::map<int,int>::value_type;
+
 using SiStrip = std::map<int, int>::value_type;
 
 fc::HitRecoModule::HitRecoModule(int debugLevel,
@@ -59,25 +60,54 @@ void fc::HitRecoModule::makeHit(int layer, int curr_start_strip,
             << "\n";
 }
 
-struct HitData {
-  HitData(): start(-1), curr_strip(-1), cnts() { }
+namespace fc {
 
-  void clear() { start = -1; curr_strip = -1; cnts.clear(); }
-  //void add(int strip, int cnt) { curr_strip = strip; cnts.push_back(cnt); }
-  void add(SiStrip const& p) { curr_strip = p.first, cnts.push_back(p.second); }
-  void begin(int strip, int cnt) { start = strip; curr_strip = strip; cnts.push_back(cnt); }
-  bool isAdjacent(int strip) { return strip == curr_strip + 1; }
-  bool makingCluster() { return start >= 0; }
+  struct HitAccum {
+    HitAccum(int lyr, DetectorGeometry const& dg) :
+      start(-1),
+      curr_strip(-1),
+      cnts(),
+      layer(lyr),
+      geom(dg),
+      desc(dg.getSensor(layer))
+    { }
 
-  int start;
-  int curr_strip;
-  std::vector<int> cnts;
-};
+    void clear() { start = -1; curr_strip = -1; cnts.clear(); }
+
+    void add(SiStrip const& p) { curr_strip = p.first, cnts.push_back(p.second); }
+    void begin(int strip, int cnt) { start = strip; curr_strip = strip; cnts.push_back(cnt); }
+    bool isAdjacent(int strip) { return strip == curr_strip + 1; }
+    bool makingCluster() { return start >= 0; }
+
+    void makeHit(HitSet& result);
+
+    // Accumulators for our current state.
+    int start;
+    int curr_strip;
+    std::vector<int> cnts;
+
+    // Fixed for the whole layer.
+    int layer;
+    DetectorGeometry const& geom;
+    SensorDescriptor const& desc;
+  };
+}
+
+void fc::HitAccum::makeHit(HitSet& hits) {
+  if (cnts.size() < 2) { return; }
+  double pos = fcf::calculateStripHitPositionFromCluster(start, cnts);
+  double local = fcf::calculateLocalFromStripPosition(pos, layer, geom);
+  TVector3 hpos = fcf::calculateGlobalFromLocalPosition(local, layer, geom);
+  int charge = std::accumulate(cnts.begin(), cnts.end(), 0);
+  bool good_hit = cnts.size() <= 2 && charge <= geom.getMIP();
+  double res = good_hit ? desc._hitResolution : desc._badHitResolution;
+  hits.insertHit(Hit(hpos, layer, cnts.size(), charge, good_hit, res));
+}
 
 void fc::HitRecoModule::makeHits(int layer,
                                  LayerStripMap const& strips,
                                  HitSet& hits) const {
-  HitData currentCluster;
+  HitAccum currentCluster(layer, _detectorGeometry);
   SensorDescriptor const& desc = _detectorGeometry.getSensor(layer);
 
   // This local function defines what it means to be a strip that is a
@@ -102,7 +132,7 @@ void fc::HitRecoModule::makeHits(int layer,
         currentCluster.add(strip);
       }
       else {
-        makeHit(layer, currentCluster.start, currentCluster.cnts, desc, hits);
+        currentCluster.makeHit(hits);
         currentCluster.clear();
       }
     }
@@ -116,7 +146,7 @@ void fc::HitRecoModule::makeHits(int layer,
   if (currentCluster.makingCluster()) {
     // close last cluster
     std::cout << "got to close last cluster" << "\n";
-    makeHit(layer, currentCluster.start, currentCluster.cnts, desc, hits);
+    currentCluster.makeHit(hits);
   }
 }
 
