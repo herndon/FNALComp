@@ -20,7 +20,7 @@ namespace fc {
 class DetectorGeometry;
 
 // Map used to allow keying by strip number
-typedef std::map<int, int>
+typedef std::map<unsigned int, int>
 LayerStripMap; //!< Map of strip number and acd counts for one layer
 
 
