@@ -77,13 +77,14 @@ void fc::HitRecoModule::makeHits(int layer,
   HitData data;
   SensorDescriptor const& desc = _detectorGeometry.getSensor(layer);
 
-  for (auto it = strips.cbegin(), end = strips.cend(); it != end; ++it) {
+  for (auto const& strip : strips) {
+
     //std::cout << "layer=" << layer << " strip=" << it->first << " " << it->second << "\n";
 
     if (data.makingCluster()) {
       // ongoing cluster ...
-      if (it->second > desc._threshold && data.isAdjacent(it->first)) {
-        data.add(it->first, it->second);
+      if (strip.second > desc._threshold && data.isAdjacent(strip.first)) {
+        data.add(strip.first, strip.second);
       }
       else {
         // make hit
@@ -94,8 +95,8 @@ void fc::HitRecoModule::makeHits(int layer,
     }
     else {
       // no cluster ...
-      if (it->second > desc._threshold) {
-        data.begin(it->first, it->second);
+      if (strip.second > desc._threshold) {
+        data.begin(strip.first, strip.second);
       }
     }
   }
