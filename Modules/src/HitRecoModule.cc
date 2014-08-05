@@ -1,5 +1,8 @@
-#include<iostream>
-#include<numeric>
+#include <algorithm>
+#include <iostream>
+#include <iterator>
+#include <numeric>
+
 #include "Geometry/include/StripHitFunctions.hh"
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/Hit.hh"
@@ -7,14 +10,23 @@
 #include "DataObjects/include/StripSet.hh"
 #include "Modules/include/HitRecoModule.hh"
 
-// This natural typedef doesn't work because Root introduces a function
-// at global scope with this name. This is why all code should be in a
-// namespace!
-//using Strip = std::map<int,int>::value_type;
-
-using SiStrip = std::map<int, int>::value_type;
-
 namespace fc {
+
+  // An instance of Strip represents a strip with a signal. We use small
+  // integers for data members because their range is small. Our c'tor
+  // has to use what the surrounding code uses.
+  struct Strip {
+    Strip(int i, int adc) : id(i), cnt(adc) { }
+    unsigned short id;
+    unsigned short cnt;
+  };
+
+  struct Layer {
+    explicit Layer(int lyr) : strips(), layer(lyr) { }
+    std::vector<Strip> strips;
+    unsigned short     layer;
+  };
+
   // This structure is a helper that is used to accumulate hits within
   // one layer.
 
@@ -35,21 +47,21 @@ namespace fc {
 
     void clear() { start = -1; curr_strip = -1; cnts.clear(); }
 
-    void add(SiStrip const& p) { curr_strip = p.first, cnts.push_back(p.second); }
+    void add(Strip const& s) { curr_strip = s.id, cnts.push_back(s.cnt); }
     void begin(int strip, int cnt) { start = strip; curr_strip = strip; cnts.push_back(cnt); }
     bool isAdjacent(int strip) const { return strip == curr_strip + 1; }
     bool makingCluster() const { return start >= 0; }
 
     // This member function defines what it means to be a strip that is a
     // candidate to go into a cluster.
-    bool goodStrip(SiStrip const& s) const { return s.second > desc._threshold; }
+    bool goodStrip(Strip const& s) const { return s.cnt > desc._threshold; }
 
     // This member function defines what it means for a strip to be
     // appropriate to add to the current cluster.
-    bool inSameCluster(SiStrip const& s) const { return goodStrip(s) && isAdjacent(s.first); }
+    bool inSameCluster(Strip const& s) const { return goodStrip(s) && isAdjacent(s.id); }
 
     void makeHit();
-    void processStrip(SiStrip const& strip);
+    void processStrip(Strip const& strip);
 
     // Accumulators for our current state.
     int start;
@@ -84,7 +96,7 @@ void fc::HitAccum::makeHit() {
             << "\n";
 }
 
-void fc::HitAccum::processStrip(SiStrip const& strip) {
+void fc::HitAccum::processStrip(Strip const& strip) {
   if (makingCluster()) {
     // ongoing cluster ...
     if (inSameCluster(strip)) {
@@ -98,7 +110,7 @@ void fc::HitAccum::processStrip(SiStrip const& strip) {
   else {
     // no cluster ...
     if (goodStrip(strip)) {
-      begin(strip.first, strip.second);
+      begin(strip.id, strip.cnt);
     }
   }
 }
@@ -139,17 +151,17 @@ void fc::HitRecoModule::processLayers(const StripSet& stripSet,
 void fc::HitRecoModule::makeHits(int layer,
                                  LayerStripMap const& strips,
                                  HitSet& hits) const {
+  // LayerStripMap is not a convenient structure for our use, so we
+  // transform it here: a vector of pairs. The vector is sorted, so we
+  // need that.
+  Layer currentLayer(layer);
+  std::transform(begin(strips), end(strips),
+                 std::back_inserter(currentLayer.strips),
+  [](LayerStripMap::value_type p) { return Strip(p.first, p.second); });
+
   HitAccum currentCluster(layer, _detectorGeometry, hits);
 
-  for (auto const& strip : strips) {
+  for (auto const& strip : currentLayer.strips) {
     currentCluster.processStrip(strip);
   }
 }
-
-
-
-
-
-
-
-
