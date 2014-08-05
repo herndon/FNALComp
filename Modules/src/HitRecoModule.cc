@@ -76,10 +76,19 @@ namespace fc {
 
     void add(SiStrip const& p) { curr_strip = p.first, cnts.push_back(p.second); }
     void begin(int strip, int cnt) { start = strip; curr_strip = strip; cnts.push_back(cnt); }
-    bool isAdjacent(int strip) { return strip == curr_strip + 1; }
-    bool makingCluster() { return start >= 0; }
+    bool isAdjacent(int strip) const { return strip == curr_strip + 1; }
+    bool makingCluster() const { return start >= 0; }
+
+    // This member function defines what it means to be a strip that is a
+    // candidate to go into a cluster.
+    bool goodStrip(SiStrip const& s) const { return s.second > desc._threshold; }
+
+    // This member function defines what it means for a strip to be
+    // appropriate to add to the current cluster.
+    bool inSameCluster(SiStrip const& s) const { return goodStrip(s) && isAdjacent(s.first); }
 
     void makeHit(HitSet& result);
+    void processStrip(SiStrip const& strip, HitSet& hits);
 
     // Accumulators for our current state.
     int start;
@@ -104,44 +113,34 @@ void fc::HitAccum::makeHit(HitSet& hits) {
   hits.insertHit(Hit(hpos, layer, cnts.size(), charge, good_hit, res));
 }
 
+void fc::HitAccum::processStrip(SiStrip const& strip,
+                                HitSet& hits) {
+
+  if (makingCluster()) {
+    // ongoing cluster ...
+    if (inSameCluster(strip)) {
+      add(strip);
+    }
+    else {
+      makeHit(hits);
+      clear();
+    }
+  }
+  else {
+    // no cluster ...
+    if (goodStrip(strip)) {
+      begin(strip.first, strip.second);
+    }
+  }
+}
+
 void fc::HitRecoModule::makeHits(int layer,
                                  LayerStripMap const& strips,
                                  HitSet& hits) const {
   HitAccum currentCluster(layer, _detectorGeometry);
-  SensorDescriptor const& desc = _detectorGeometry.getSensor(layer);
-
-  // This local function defines what it means to be a strip that is a
-  // candidate to go into a cluster.
-  auto goodStrip = [&desc](SiStrip const & s) {
-    return s.second > desc._threshold;
-  };
-
-  // This local function defines what it means for a strip to be
-  // appropriate to add to the current cluster.
-  auto inSameCluster = [&currentCluster, &goodStrip](SiStrip const & s) {
-    return goodStrip(s) && currentCluster.isAdjacent(s.first);
-  };
 
   for (auto const& strip : strips) {
-
-    //std::cout << "layer=" << layer << " strip=" << it->first << " " << it->second << "\n";
-
-    if (currentCluster.makingCluster()) {
-      // ongoing cluster ...
-      if (inSameCluster(strip)) {
-        currentCluster.add(strip);
-      }
-      else {
-        currentCluster.makeHit(hits);
-        currentCluster.clear();
-      }
-    }
-    else {
-      // no cluster ...
-      if (goodStrip(strip)) {
-        currentCluster.begin(strip.first, strip.second);
-      }
-    }
+    currentCluster.processStrip(strip, hits);
   }
   if (currentCluster.makingCluster()) {
     // close last cluster
