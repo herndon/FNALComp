@@ -956,7 +956,7 @@ Resolution:    2.5e-05
 Hit: 15
 Hit position:  0.00835 0.4 0
 Layer          1
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -1271,14 +1271,14 @@ Resolution:    2.5e-05
 Hit: 60
 Hit position:  0 0.4002 -0.01805
 Layer          6
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
 Hit: 61
 Hit position:  0 0.4002 -0.01395
 Layer          6
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -1390,7 +1390,7 @@ Resolution:    5e-05
 Hit: 77
 Hit position:  0 0.6002 0.0611
 Layer          7
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -1474,7 +1474,7 @@ Resolution:    5e-05
 Hit: 89
 Hit position:  -0.0968852 1.0002 -0.00169114
 Layer          9
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -2212,7 +2212,7 @@ Resolution:    1.2e-05
 Hit: 3
 Hit position:  -0.012175 0.2 0
 Layer          0
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -2331,7 +2331,7 @@ Resolution:    5e-05
 Hit: 20
 Hit position:  -0.0617 0.6 0
 Layer          2
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -2646,7 +2646,7 @@ Resolution:    2.5e-05
 Hit: 65
 Hit position:  0 0.4002 0.03345
 Layer          6
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -2723,7 +2723,7 @@ Resolution:    5e-05
 Hit: 76
 Hit position:  -0.0848871 0.8002 -0.00148171
 Layer          8
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -2744,7 +2744,7 @@ Resolution:    5e-05
 Hit: 79
 Hit position:  -0.039694 0.8002 -0.000692861
 Layer          8
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -3684,7 +3684,7 @@ Resolution:    5e-05
 Hit: 25
 Hit position:  0.0593 0.6 0
 Layer          2
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -3908,7 +3908,7 @@ Resolution:    1.2e-05
 Hit: 57
 Hit position:  0 0.4002 -0.03435
 Layer          6
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -4863,7 +4863,7 @@ Resolution:    1.2e-05
 Hit: 3
 Hit position:  -0.014775 0.2 0
 Layer          0
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -4961,7 +4961,7 @@ Resolution:    2.5e-05
 Hit: 17
 Hit position:  0.01005 0.4 0
 Layer          1
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -5052,7 +5052,7 @@ Resolution:    5e-05
 Hit: 30
 Hit position:  -0.0903 0.8 0
 Layer          3
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -5227,7 +5227,7 @@ Resolution:    1.2e-05
 Hit: 55
 Hit position:  0 0.2002 -0.001725
 Layer          5
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -5262,7 +5262,7 @@ Resolution:    2.5e-05
 Hit: 60
 Hit position:  0 0.4002 -0.03625
 Layer          6
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -6173,7 +6173,7 @@ Strip: 1314  ADC 1
 Strip: 1485  ADC 1
 Strip: 1486  ADC 30
 HitSet
-Number Hits: 92
+Number Hits: 93
 Hit: 0
 Hit position:  -0.0259266 0.2 0
 Layer          0
@@ -6254,7 +6254,7 @@ Resolution:    2.5e-05
 Hit: 11
 Hit position:  -0.04165 0.4 0
 Layer          1
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -6378,440 +6378,447 @@ Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
 Hit: 29
-Hit position:  -0.0829581 0.8 0
+Hit position:  -0.0834677 0.8 0
 Layer          3
-Number strips: 6
-Charge (ADC ): 93
-goodHit:       0
+Number strips: 2
+Charge (ADC ): 31
+goodHit:       1
 Resolution:    5e-05
 Hit: 30
+Hit position:  -0.0827032 0.8 0
+Layer          3
+Number strips: 3
+Charge (ADC ): 62
+goodHit:       0
+Resolution:    5e-05
+Hit: 31
 Hit position:  -0.0611387 0.8 0
 Layer          3
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 31
+Hit: 32
 Hit position:  -0.0344806 0.8 0
 Layer          3
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 32
+Hit: 33
 Hit position:  -0.0128613 0.8 0
 Layer          3
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 33
+Hit: 34
 Hit position:  -0.00356452 0.8 0
 Layer          3
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 34
+Hit: 35
 Hit position:  0.0452355 0.8 0
 Layer          3
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 35
+Hit: 36
 Hit position:  0.0736226 0.8 0
 Layer          3
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 36
+Hit: 37
 Hit position:  0.0885839 0.8 0
 Layer          3
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 37
+Hit: 38
 Hit position:  -0.105984 1 0
 Layer          4
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 38
+Hit: 39
 Hit position:  -0.1031 1 0
 Layer          4
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 39
+Hit: 40
 Hit position:  -0.100094 1 0
 Layer          4
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 40
+Hit: 41
 Hit position:  -0.0733581 1 0
 Layer          4
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 41
+Hit: 42
 Hit position:  -0.0424677 1 0
 Layer          4
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 42
+Hit: 43
 Hit position:  -0.0138806 1 0
 Layer          4
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 43
+Hit: 44
 Hit position:  -0.00428065 1 0
 Layer          4
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 44
+Hit: 45
 Hit position:  0.0592419 1 0
 Layer          4
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 45
+Hit: 46
 Hit position:  0.0922097 1 0
 Layer          4
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 46
+Hit: 47
 Hit position:  0.112468 1 0
 Layer          4
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 47
+Hit: 48
 Hit position:  0 0.2002 -0.0201992
 Layer          5
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
-Hit: 48
+Hit: 49
 Hit position:  0 0.2002 -0.0198573
 Layer          5
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
-Hit: 49
+Hit: 50
 Hit position:  0 0.2002 -0.0136653
 Layer          5
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
-Hit: 50
+Hit: 51
 Hit position:  0 0.2002 -0.00542984
 Layer          5
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
-Hit: 51
+Hit: 52
 Hit position:  0 0.2002 -0.00131694
 Layer          5
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
-Hit: 52
+Hit: 53
 Hit position:  0 0.2002 0.00519919
 Layer          5
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
-Hit: 53
+Hit: 54
 Hit position:  0 0.2002 0.00710403
 Layer          5
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
-Hit: 54
+Hit: 55
 Hit position:  0 0.2002 0.00792339
 Layer          5
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
-Hit: 55
+Hit: 56
 Hit position:  0 0.2002 0.00823629
 Layer          5
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
-Hit: 56
+Hit: 57
 Hit position:  0 0.2002 0.0185702
 Layer          5
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
-Hit: 57
+Hit: 58
 Hit position:  0 0.4002 -0.0350435
 Layer          6
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
-Hit: 58
+Hit: 59
 Hit position:  0 0.4002 -0.0324952
 Layer          6
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
-Hit: 59
+Hit: 60
 Hit position:  0 0.4002 -0.012779
 Layer          6
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
-Hit: 60
+Hit: 61
 Hit position:  0 0.4002 0.00347903
 Layer          6
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
-Hit: 61
+Hit: 62
 Hit position:  0 0.4002 0.00477903
 Layer          6
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
-Hit: 62
+Hit: 63
 Hit position:  0 0.4002 0.0103758
 Layer          6
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
-Hit: 63
+Hit: 64
 Hit position:  0 0.4002 0.0117532
 Layer          6
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
-Hit: 64
+Hit: 65
 Hit position:  0 0.4002 0.0149048
 Layer          6
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
-Hit: 65
+Hit: 66
 Hit position:  0 0.4002 0.03555
 Layer          6
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
-Hit: 66
+Hit: 67
 Hit position:  0 0.6002 -0.0511968
 Layer          7
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 67
+Hit: 68
 Hit position:  0 0.6002 -0.0499258
 Layer          7
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 68
+Hit: 69
 Hit position:  0 0.6002 -0.0451452
 Layer          7
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 69
+Hit: 70
 Hit position:  0 0.6002 -0.020229
 Layer          7
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 70
+Hit: 71
 Hit position:  0 0.6002 0.00443548
 Layer          7
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 71
+Hit: 72
 Hit position:  0 0.6002 0.00824194
 Layer          7
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 72
+Hit: 73
 Hit position:  0 0.6002 0.0152419
 Layer          7
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 73
+Hit: 74
 Hit position:  0 0.6002 0.0227258
 Layer          7
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 74
+Hit: 75
 Hit position:  0 0.6002 0.0525194
 Layer          7
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 75
+Hit: 76
 Hit position:  -0.0829992 0.8002 -0.00144876
 Layer          8
 Number strips: 6
 Charge (ADC ): 93
 goodHit:       0
 Resolution:    5e-05
-Hit: 76
+Hit: 77
 Hit position:  -0.0611552 0.8002 -0.00106747
 Layer          8
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 77
+Hit: 78
 Hit position:  -0.0355785 0.8002 -0.000621024
 Layer          8
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 78
+Hit: 79
 Hit position:  -0.0132722 0.8002 -0.000231667
 Layer          8
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 79
+Hit: 80
 Hit position:  -0.00249962 0.8002 -4.3631e-05
 Layer          8
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 80
+Hit: 81
 Hit position:  0.044061 0.8002 0.000769088
 Layer          8
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 81
+Hit: 82
 Hit position:  0.0739274 0.8002 0.00129041
 Layer          8
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 82
+Hit: 83
 Hit position:  0.0887962 0.8002 0.00154994
 Layer          8
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 83
+Hit: 84
 Hit position:  -0.105387 1.0002 -0.00183954
 Layer          9
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 84
+Hit: 85
 Hit position:  -0.102684 1.0002 -0.00179236
 Layer          9
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 85
+Hit: 86
 Hit position:  -0.101362 1.0002 -0.00176928
 Layer          9
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 86
+Hit: 87
 Hit position:  -0.0731921 1.0002 -0.00127757
 Layer          9
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 87
+Hit: 88
 Hit position:  -0.0439191 1.0002 -0.000766611
 Layer          9
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 88
+Hit: 89
 Hit position:  -0.0145429 1.0002 -0.000253848
 Layer          9
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 89
+Hit: 90
 Hit position:  -0.00271894 1.0002 -4.74593e-05
 Layer          9
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 90
+Hit: 91
 Hit position:  0.0578976 1.0002 0.00101061
 Layer          9
 Number strips: 2
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
-Hit: 91
+Hit: 92
 Hit position:  0.0924795 1.0002 0.00161423
 Layer          9
 Number strips: 2
@@ -7517,7 +7524,7 @@ Resolution:    1.2e-05
 Hit: 7
 Hit position:  0.008975 0.2 0
 Layer          0
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -7566,7 +7573,7 @@ Resolution:    2.5e-05
 Hit: 14
 Hit position:  0.01185 0.4 0
 Layer          1
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -7734,7 +7741,7 @@ Resolution:    5e-05
 Hit: 38
 Hit position:  0.00538929 1 0
 Layer          4
-Number strips: 3
+Number strips: 2
 Charge (ADC ): 56
 goodHit:       0
 Resolution:    5e-05
@@ -8077,7 +8084,7 @@ Resolution:    5e-05
 Hit: 87
 Hit position:  0.00429935 1.0002 7.50453e-05
 Layer          9
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -8119,7 +8126,7 @@ Resolution:    5e-05
 Hit: 93
 Hit position:  0.072489 1.0002 0.0012653
 Layer          9
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -8851,7 +8858,7 @@ Resolution:    1.2e-05
 Hit: 8
 Hit position:  0.010975 0.2 0
 Layer          0
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -8872,7 +8879,7 @@ Resolution:    2.5e-05
 Hit: 11
 Hit position:  -0.03745 0.4 0
 Layer          1
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -8991,14 +8998,14 @@ Resolution:    5e-05
 Hit: 28
 Hit position:  0.0367 0.6 0
 Layer          2
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
 Hit: 29
 Hit position:  -0.0925 0.8 0
 Layer          3
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -9033,7 +9040,7 @@ Resolution:    5e-05
 Hit: 34
 Hit position:  -0.0293 0.8 0
 Layer          3
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -9236,7 +9243,7 @@ Resolution:    2.5e-05
 Hit: 63
 Hit position:  0 0.4002 -0.01095
 Layer          6
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -9313,7 +9320,7 @@ Resolution:    5e-05
 Hit: 74
 Hit position:  0 0.6002 0.0055
 Layer          7
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -10166,7 +10173,7 @@ Resolution:    1.2e-05
 Hit: 3
 Hit position:  -0.010925 0.2 0
 Layer          0
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -10586,7 +10593,7 @@ Resolution:    2.5e-05
 Hit: 63
 Hit position:  0 0.4002 0.00385
 Layer          6
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -10712,7 +10719,7 @@ Resolution:    5e-05
 Hit: 81
 Hit position:  -0.0768883 0.8002 -0.00134209
 Layer          8
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -10789,7 +10796,7 @@ Resolution:    5e-05
 Hit: 92
 Hit position:  -0.0102984 1.0002 -0.00017976
 Layer          9
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -10803,7 +10810,7 @@ Resolution:    5e-05
 Hit: 94
 Hit position:  -0.00269959 1.0002 -4.71215e-05
 Layer          9
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -11562,7 +11569,7 @@ Resolution:    1.2e-05
 Hit: 9
 Hit position:  0.031025 0.2 0
 Layer          0
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -11604,7 +11611,7 @@ Resolution:    2.5e-05
 Hit: 15
 Hit position:  0.00015 0.4 0
 Layer          1
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -11695,7 +11702,7 @@ Resolution:    5e-05
 Hit: 28
 Hit position:  0.0723 0.6 0
 Layer          2
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -11716,7 +11723,7 @@ Resolution:    5e-05
 Hit: 31
 Hit position:  -0.0863 0.8 0
 Layer          3
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -11905,7 +11912,7 @@ Resolution:    1.2e-05
 Hit: 58
 Hit position:  0 0.2002 0.010675
 Layer          5
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -11919,7 +11926,7 @@ Resolution:    2.5e-05
 Hit: 60
 Hit position:  0 0.4002 -0.02825
 Layer          6
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -12073,7 +12080,7 @@ Resolution:    5e-05
 Hit: 82
 Hit position:  0.00689895 0.8002 0.000120422
 Layer          8
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -12861,7 +12868,7 @@ Resolution:    1.2e-05
 Hit: 4
 Hit position:  -0.020325 0.2 0
 Layer          0
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -12875,7 +12882,7 @@ Resolution:    1.2e-05
 Hit: 6
 Hit position:  -0.004825 0.2 0
 Layer          0
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -12938,7 +12945,7 @@ Resolution:    2.5e-05
 Hit: 15
 Hit position:  -0.00415 0.4 0
 Layer          1
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    2.5e-05
@@ -13036,14 +13043,14 @@ Resolution:    5e-05
 Hit: 29
 Hit position:  -0.1025 0.8 0
 Layer          3
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
 Hit: 30
 Hit position:  -0.0828097 0.8 0
 Layer          3
-Number strips: 4
+Number strips: 3
 Charge (ADC ): 62
 goodHit:       0
 Resolution:    5e-05
@@ -13064,7 +13071,7 @@ Resolution:    5e-05
 Hit: 33
 Hit position:  -0.0045 0.8 0
 Layer          3
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05
@@ -13218,7 +13225,7 @@ Resolution:    1.2e-05
 Hit: 55
 Hit position:  0 0.2002 0.015075
 Layer          5
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    1.2e-05
@@ -13442,7 +13449,7 @@ Resolution:    5e-05
 Hit: 87
 Hit position:  -0.143478 1.0002 -0.00250442
 Layer          9
-Number strips: 2
+Number strips: 1
 Charge (ADC ): 31
 goodHit:       1
 Resolution:    5e-05

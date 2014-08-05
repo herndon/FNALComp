@@ -46,67 +46,47 @@ void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,
 
 
     std::vector<int> stripAdcs;
-    int initialStrip;
 
-    LayerStripMap layerStrips = stripSet.getLayerStripMap(layer);
-    LayerStripMap::const_iterator  layerStripIter = layerStrips.begin();
-    LayerStripMap::const_iterator  layerStripsEnd = layerStrips.end();
+    const LayerStripMap& layerStrips = stripSet.getLayerStripMap(layer);
+    unsigned int initialStrip = layerStrips.begin()->first;
 
-    while (layerStripIter != layerStripsEnd) {
-        if (findCluster(layerStripIter,layerStripsEnd,stripSet,layer,initialStrip,
-                        stripAdcs))
-            hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
+
+    for (auto const & strip : layerStrips){
+
+ 
+  
+      if (strip.second > _detectorGeometry.getSensor(layer)._threshold && strip.first == (initialStrip+stripAdcs.size())){
+	//Was above threshold and an ajacent strip
+	stripAdcs.push_back(strip.second);
+      } else if (stripAdcs.size() > 0){
+	// Was not adjacent and above threshold and a cluster is in stripAdc
+	hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
+	stripAdcs.clear();
+	if (strip.second > _detectorGeometry.getSensor(layer)._threshold) {
+	  // Was above threhold but not adjacent start new cluster
+	  initialStrip = strip.first;
+	  stripAdcs.push_back(strip.second);
+	}
+      } else if (strip.second > _detectorGeometry.getSensor(layer)._threshold){
+	// start new cluster
+	initialStrip = strip.first;
+	stripAdcs.push_back(strip.second);
+      } else {
+
+      }
+
     }
+
+    // Was there a cluster in the stripAdc buffer
+    if (stripAdcs.size()>0)	hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
+
+
+
+
 
 }
 
 
-bool fc::HitRecoModule::findCluster(LayerStripMap::const_iterator&
-                                    layerStripIter,
-                                    LayerStripMap::const_iterator& layerStripsEnd,const StripSet& stripSet,
-                                    int layer, int& initialStrip, std::vector<int>& stripAdcs) const {
-
-
-    stripAdcs.clear();
-
-    if (_debugLevel >= 5) std::cout << "findCluster " << std::endl;
-
-    while (layerStripIter != layerStripsEnd
-            && stripSet.getStripAdc(layerStripIter) < _detectorGeometry.getSensor(
-                layer)._threshold) {
-        ++layerStripIter;
-    }
-
-    if (layerStripIter == layerStripsEnd) return false;
-
-    initialStrip = stripSet.getStripNumber(layerStripIter);
-
-    if (_debugLevel >= 5) std::cout << "Initial strip: " << initialStrip <<
-                                        std::endl;
-
-    int intermediateStrip = initialStrip;
-
-    stripAdcs.push_back(stripSet.getStripAdc(layerStripIter));
-
-    ++layerStripIter;
-
-
-    while ( layerStripIter != layerStripsEnd &&
-            (stripSet.getStripNumber(layerStripIter) == (intermediateStrip + 1)) &&
-            (stripSet.getStripAdc(layerStripIter) >= _detectorGeometry.getSensor(
-                 layer)._threshold  )) {
-
-        intermediateStrip = stripSet.getStripNumber(layerStripIter);
-        stripAdcs.push_back(stripSet.getStripAdc(layerStripIter));
-        ++layerStripIter;
-        if (_debugLevel >= 5) std::cout << "Intermediate strip: " << intermediateStrip
-                                            << std::endl;
-
-    }
-
-    return (stripAdcs.size()>0);
-
-}
 
 fc::Hit fc::HitRecoModule::buildHit(int layer, int initialStrip,
                                     const std::vector<int> & stripAdcs) const {
