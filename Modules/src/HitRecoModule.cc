@@ -48,7 +48,7 @@ namespace fc {
     void clear() { start = -1; curr_strip = -1; cnts.clear(); }
 
     void add(Strip const& s) { curr_strip = s.id, cnts.push_back(s.cnt); }
-    void begin(int strip, int cnt) { start = strip; curr_strip = strip; cnts.push_back(cnt); }
+    void startNewHit(int strip, int cnt) { start = strip; curr_strip = strip; cnts.push_back(cnt); }
     bool isAdjacent(int strip) const { return strip == curr_strip + 1; }
     bool makingCluster() const { return start >= 0; }
 
@@ -110,7 +110,7 @@ void fc::HitAccum::processStrip(Strip const& strip) {
   else {
     // no cluster ...
     if (goodStrip(strip)) {
-      begin(strip.id, strip.cnt);
+      startNewHit(strip.id, strip.cnt);
     }
   }
 }
