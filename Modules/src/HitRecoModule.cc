@@ -94,6 +94,7 @@ void fc::HitAccum::makeHit() {
             << " good " << good_hit
             << " pos " << hpos.x() << " " << hpos.y() << " " << hpos.z()
             << "\n";
+  clear();
 }
 
 void fc::HitAccum::processStrip(Strip const& strip) {
@@ -104,7 +105,7 @@ void fc::HitAccum::processStrip(Strip const& strip) {
     }
     else {
       makeHit();
-      clear();
+      startNewHit(strip.id, strip.cnt);
     }
   }
   else {
