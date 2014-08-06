@@ -23,30 +23,37 @@ namespace fc {
 
   struct Layer {
     explicit Layer(int lyr) : strips(), layer(lyr) { }
-    std::vector<Strip> strips;
-    unsigned short     layer;
+    std::vector<Strip>   strips;
+    unsigned short const layer;
   };
 
   // This structure is a helper that is used to accumulate hits within
   // one layer.
 
   struct HitAccum {
-    HitAccum(int lyr, DetectorGeometry const& dg, HitSet& results) :
-      start(-1),
-      curr_strip(-1),
-      cnts(),
-      layer(lyr),
-      geom(dg),
-      desc(dg.getSensor(layer)),
-      hits(results)
-    { }
 
-    ~HitAccum() {
-      if (makingCluster()) { makeHit(); }
-    }
+    // Mutable data, representing the current state of the accumulation
+    // algorithm.
+    int start;
+    int curr_strip;
+    std::vector<int> cnts;
+    HitSet&          hits;
+
+    // Immutable data, representing the context in which this HitAccum
+    // object is working.
+    int const               layer;
+    DetectorGeometry const& geom;
+    SensorDescriptor const& desc;
+
+    // C'tor establishes our working context. This accumulator will put
+    // hits into 'results'.
+    HitAccum(int lyr, DetectorGeometry const& dg, HitSet& results);
+
+    // D'tor makes sure that the last hit is completed.
+    ~HitAccum();
+
 
     void clear() { start = -1; curr_strip = -1; cnts.clear(); }
-
     void add(Strip const& s) { curr_strip = s.id, cnts.push_back(s.cnt); }
     void startNewHit(int strip, int cnt) { start = strip; curr_strip = strip; cnts.push_back(cnt); }
     bool isAdjacent(int strip) const { return strip == curr_strip + 1; }
@@ -63,27 +70,31 @@ namespace fc {
     void makeHit();
     void processStrip(Strip const& strip);
 
-    // Accumulators for our current state.
-    int start;
-    int curr_strip;
-    std::vector<int> cnts;
-
-    // Fixed for the whole layer.
-    int layer;
-    DetectorGeometry const& geom;
-    SensorDescriptor const& desc;
-    HitSet&                 hits;
   };
+}
+
+fc::HitAccum::HitAccum(int lyr, DetectorGeometry const& dg, HitSet& results) :
+  start(-1),
+  curr_strip(-1),
+  cnts(),
+  hits(results),
+  layer(lyr),
+  geom(dg),
+  desc(dg.getSensor(layer))
+{ }
+
+fc::HitAccum::~HitAccum() {
+  if (makingCluster()) { makeHit(); }
 }
 
 void fc::HitAccum::makeHit() {
   if (cnts.size() < 2) { return; }
-  double pos = fcf::calculateStripHitPositionFromCluster(start, cnts);
-  double local = fcf::calculateLocalFromStripPosition(pos, layer, geom);
-  TVector3 hpos = fcf::calculateGlobalFromLocalPosition(local, layer, geom);
-  int charge = std::accumulate(cnts.begin(), cnts.end(), 0);
-  bool good_hit = cnts.size() <= 2 && charge <= geom.getMIP();
-  double res = good_hit ? desc._hitResolution : desc._badHitResolution;
+  double const pos = fcf::calculateStripHitPositionFromCluster(start, cnts);
+  double const local = fcf::calculateLocalFromStripPosition(pos, layer, geom);
+  TVector3 const hpos = fcf::calculateGlobalFromLocalPosition(local, layer, geom);
+  int const charge = std::accumulate(cnts.begin(), cnts.end(), 0);
+  bool const good_hit = cnts.size() <= 2 && charge <= geom.getMIP();
+  double const res = good_hit ? desc._hitResolution : desc._badHitResolution;
   hits.insertHit(Hit(hpos, layer, cnts.size(), charge, good_hit, res));
 
   std::cout << "closing:"
@@ -129,7 +140,7 @@ fc::HitRecoModule::HitRecoModule(int debugLevel,
 }
 
 void fc::HitRecoModule::processEvent(fc::Event& event) {
-  Handle<StripSet> genStripSet = event.get<StripSet>(_inStripsLabel);
+  Handle<StripSet> const genStripSet = event.get<StripSet>(_inStripsLabel);
   std::unique_ptr<HitSet> recoHitSet(new HitSet);
 
   processLayers(*genStripSet, *recoHitSet);

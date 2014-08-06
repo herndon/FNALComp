@@ -41,12 +41,11 @@ namespace fc {
 
    private:
 
-    int _debugLevel;
-    const std::string _inStripsLabel;
-    const std::string _outHitsLabel;
+    int const _debugLevel;
+    std::string const _inStripsLabel;
+    std::string const _outHitsLabel;
+    DetectorGeometry const& _detectorGeometry;
 
-    // Detector information
-    const DetectorGeometry& _detectorGeometry;
     int _num;
 
     void processLayers(const StripSet&, HitSet&) const;
