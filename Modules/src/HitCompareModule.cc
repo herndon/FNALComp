@@ -30,16 +30,16 @@ void fc::HitCompareModule::initializeHistograms() {
 
 
     for (int iiLayer = 0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
-        std::string histName = "deltaHitPositions  Layer " + std::to_string(iiLayer);
+        std::string histName = "deltaHitPositionsLayer" + std::to_string(iiLayer);
         const char * histNameC = histName.c_str();
         _hDeltaHitPositions.push_back(new TH1D(histNameC,
-                                             "Delta X Hit Positions;delta X (m);number of hits",1000, -0.0004, 0.0004));
+                                             "Delta X Hit Positions;delta X (m);number of hits",200, -0.0004, 0.0004));
     }
     for (int iiLayer = 0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
-        std::string histName = "deltaBadHitPositions  Layer " + std::to_string(iiLayer);
+        std::string histName = "deltaBadHitPositionsLayer" + std::to_string(iiLayer);
         const char * histNameC = histName.c_str();
         _hDeltaBadHitPositions.push_back(new TH1D(histNameC,
-                                             "Delta X Bad Hit Positions;delta X (m);number of hits",1000, -0.001, 0.001));
+                                             "Delta X Bad Hit Positions;delta X (m);number of hits",200, -0.001, 0.001));
     }
     _hHitResults    = new TH1D("HitResults", "Hit results, gen, found, good, bad;N",4,-0.5,3.5);
 

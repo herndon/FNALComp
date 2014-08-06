@@ -71,16 +71,16 @@ int main ()
                          "recoHits", detectorGeometry));
     processor.addModule( new fc::PerfectTrackRecoModule(config.getDebugLevel(),
                          "recoHits", "genHits", "perfectRecoTracks", detectorGeometry) );
-    processor.addModule( new fc::TrackCandidateModule(config.getDebugLevel(),
-                         "recoHits", "trackCandidates",config,detectorGeometry) );
-    processor.addModule( new fc::TrackRecoModule(config.getDebugLevel(), "recoHits",
-                         "trackCandidates", "recoTracks",config,detectorGeometry) );
+//     processor.addModule( new fc::TrackCandidateModule(config.getDebugLevel(),
+//                          "recoHits", "trackCandidates",config,detectorGeometry) );
+//     processor.addModule( new fc::TrackRecoModule(config.getDebugLevel(), "recoHits",
+//                          "trackCandidates", "recoTracks",config,detectorGeometry) );
     processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(),
                          "genTracks", "perfectRecoTracks", detectorGeometry) );
-    processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(),
-                         "genTracks", "trackCandidates", detectorGeometry) );
-    processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(),
-                         "genTracks", "recoTracks", detectorGeometry) );
+//     processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(),
+//                          "genTracks", "trackCandidates", detectorGeometry) );
+//     processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(),
+//                          "genTracks", "recoTracks", detectorGeometry) );
 
 
     // Event loop over module classes
