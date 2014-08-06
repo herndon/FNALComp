@@ -101,7 +101,7 @@ void fc::HitStripGenModule::storeHitInfo(int trackNumber,int layer,
 
 
     hitPosition = hitPosition + _random.getNormalDouble(0.0,
-                  _detectorGeometry.getSensor(layer)._hitResolution)*_detectorGeometry.getSensor(
+                  _detectorGeometry.getSensor(layer)._intrinsicHitResolution)*_detectorGeometry.getSensor(
                       layer)._measurementDirection;
 
     if (_debugLevel >=5 ) {

@@ -27,8 +27,8 @@ TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 1.2e-05
-Hit Resolution           (m) 1.2e-05
-Bad Hit Resolution       (m) 1.2e-05
+Hit Resolution           (m) 1.25e-05
+Bad Hit Resolution       (m) 4.7e-05
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
@@ -44,8 +44,8 @@ TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 2.5e-05
-Hit Resolution           (m) 2.5e-05
-Bad Hit Resolution       (m) 2.5e-05
+Hit Resolution           (m) 2.6e-05
+Bad Hit Resolution       (m) 9.5e-05
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.2048 X 0.2048
 
@@ -61,8 +61,8 @@ TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
@@ -78,8 +78,8 @@ TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
@@ -95,8 +95,8 @@ TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
@@ -112,8 +112,8 @@ TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 1.2e-05
-Hit Resolution           (m) 1.2e-05
-Bad Hit Resolution       (m) 1.2e-05
+Hit Resolution           (m) 1.25e-05
+Bad Hit Resolution       (m) 4.7e-05
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
@@ -129,8 +129,8 @@ TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 2.5e-05
-Hit Resolution           (m) 2.5e-05
-Bad Hit Resolution       (m) 2.5e-05
+Hit Resolution           (m) 2.6e-05
+Bad Hit Resolution       (m) 9.5e-05
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.2048 X 0.2048
 
@@ -146,8 +146,8 @@ TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
@@ -163,8 +163,8 @@ TVector3 A 3D physics vector (x,y,z)=(0.999848,0.000000,0.017452) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
@@ -180,8 +180,8 @@ TVector3 A 3D physics vector (x,y,z)=(0.999848,0.000000,0.017452) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 PV position 
