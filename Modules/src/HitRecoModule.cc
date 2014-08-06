@@ -135,8 +135,8 @@ fc::HitRecoModule::HitRecoModule(int debugLevel,
   _debugLevel(debugLevel),
   _inStripsLabel(iInputStripsLabel),
   _outHitsLabel(iOutputHitsLabel),
-  _detectorGeometry(detectorGeometry),
-  _num(0) {
+  _detectorGeometry(detectorGeometry)
+{
 }
 
 void fc::HitRecoModule::processEvent(fc::Event& event) {

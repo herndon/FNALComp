@@ -46,7 +46,7 @@ namespace fc {
     std::string const _outHitsLabel;
     DetectorGeometry const& _detectorGeometry;
 
-    int _num;
+    int _num = 0;
 
     void processLayers(const StripSet&, HitSet&) const;
     void makeHits(int layer, LayerStripMap const& strips, HitSet& hits) const;
