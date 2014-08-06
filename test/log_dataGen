@@ -1328,7 +1328,7 @@ Strip: 810  ADC 23
 Strip: 905  ADC 4
 Strip: 906  ADC 27
 Strip: 1040  ADC 9
-Strip: 1041  ADC 19
+Strip: 1041  ADC 32
 Strip: 1042  ADC 12
 Strip: 1230  ADC 30
 Strip: 1231  ADC 1
@@ -1387,7 +1387,7 @@ Strip: 787  ADC 30
 Strip: 865  ADC 23
 Strip: 866  ADC 8
 Strip: 1081  ADC 22
-Strip: 1082  ADC 9
+Strip: 1082  ADC 32
 Strip: 1083  ADC 2
 Strip: 1206  ADC 3
 Strip: 1207  ADC 28
@@ -1420,7 +1420,7 @@ Strip: 640  ADC 14
 Strip: 868  ADC 10
 Strip: 869  ADC 21
 Strip: 936  ADC 30
-Strip: 937  ADC 18
+Strip: 937  ADC 19
 Strip: 938  ADC 13
 Strip: 1048  ADC 14
 Strip: 1049  ADC 17
@@ -1982,8 +1982,8 @@ Strip: 1464  ADC 21
 Strip: 1532  ADC 2
 Strip: 1533  ADC 29
 Layer: 2 number Strips: 17
-Strip: 606  ADC 12
-Strip: 607  ADC 19
+Strip: 606  ADC 31
+Strip: 607  ADC 31
 Strip: 695  ADC 10
 Strip: 696  ADC 21
 Strip: 778  ADC 18
@@ -2123,8 +2123,8 @@ Strip: 1465  ADC 23
 Strip: 1548  ADC 17
 Strip: 1549  ADC 14
 Layer: 9 number Strips: 18
-Strip: 340  ADC 17
-Strip: 341  ADC 14
+Strip: 340  ADC 29
+Strip: 341  ADC 32
 Strip: 458  ADC 20
 Strip: 459  ADC 11
 Strip: 609  ADC 27
@@ -2735,8 +2735,8 @@ Strip: 1270  ADC 20
 Strip: 1361  ADC 29
 Strip: 1362  ADC 2
 Layer: 7 number Strips: 18
-Strip: 754  ADC 15
-Strip: 755  ADC 16
+Strip: 754  ADC 18
+Strip: 755  ADC 32
 Strip: 758  ADC 28
 Strip: 759  ADC 3
 Strip: 820  ADC 16
@@ -3364,8 +3364,8 @@ Strip: 1395  ADC 28
 Layer: 6 number Strips: 17
 Strip: 673  ADC 29
 Strip: 674  ADC 2
-Strip: 698  ADC 14
-Strip: 699  ADC 17
+Strip: 698  ADC 24
+Strip: 699  ADC 32
 Strip: 895  ADC 9
 Strip: 896  ADC 22
 Strip: 1058  ADC 22
@@ -3895,7 +3895,7 @@ Strip: 1072  ADC 11
 Strip: 1075  ADC 19
 Strip: 1076  ADC 12
 Strip: 1161  ADC 29
-Strip: 1162  ADC 7
+Strip: 1162  ADC 9
 Strip: 1163  ADC 24
 Strip: 1203  ADC 31
 Strip: 1342  ADC 2
@@ -3931,8 +3931,8 @@ Strip: 1050  ADC 12
 Strip: 1051  ADC 19
 Strip: 1105  ADC 9
 Strip: 1106  ADC 22
-Strip: 1152  ADC 27
-Strip: 1153  ADC 4
+Strip: 1152  ADC 28
+Strip: 1153  ADC 32
 Strip: 1162  ADC 5
 Strip: 1163  ADC 26
 Strip: 1244  ADC 30
@@ -3961,7 +3961,7 @@ Strip: 1318  ADC 23
 Layer: 4 number Strips: 14
 Strip: 383  ADC 4
 Strip: 384  ADC 27
-Strip: 1050  ADC 31
+Strip: 1050  ADC 32
 Strip: 1051  ADC 25
 Strip: 1144  ADC 9
 Strip: 1145  ADC 22
@@ -5994,7 +5994,7 @@ Strip: 821  ADC 7
 Strip: 846  ADC 10
 Strip: 847  ADC 21
 Strip: 930  ADC 18
-Strip: 931  ADC 25
+Strip: 931  ADC 32
 Strip: 932  ADC 6
 Strip: 1028  ADC 18
 Strip: 1029  ADC 13
@@ -6525,7 +6525,7 @@ Strip: 542  ADC 10
 Strip: 583  ADC 12
 Strip: 584  ADC 19
 Strip: 607  ADC 27
-Strip: 608  ADC 11
+Strip: 608  ADC 15
 Strip: 609  ADC 20
 Strip: 676  ADC 25
 Strip: 677  ADC 6
