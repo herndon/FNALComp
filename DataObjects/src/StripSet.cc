@@ -13,31 +13,31 @@ const fc::LayerStripMap& fc::StripSet::getLayerStripMap(
     throw Exception("StripSet::getLayerStripMap: Out of bounds layer");
 }
 
-void fc::StripSet::insertStrip(unsigned int layer, int strip, int adc) {
-    if (layer >= 0 && layer < _layerStripMaps.size()) {
-        _layerStripMaps[layer].insert(LayerStripMap::value_type(strip,adc));
-        return;
-    } else {
-        throw Exception("StripSet::insertStrip: Out of bounds layer");
-    }
-}
-
-// Improved insertStrip
-// void fc::StripSet::insertStrip(int layer, unsigned int strip, int adc) {
-//   if (layer >= 0 && layer < _layerStripMaps.size()){
-
-//     LayerStripMap::iterator stripIter =  _layerStripMaps[layer].find(strip);
-//     if (stripIter == _layerStripMaps[layer].end()) {
-//       _layerStripMaps[layer].insert(LayerStripMap::value_type(strip,adc));
+// void fc::StripSet::insertStrip(unsigned int layer, int strip, int adc) {
+//     if (layer >= 0 && layer < _layerStripMaps.size()) {
+//         _layerStripMaps[layer].insert(LayerStripMap::value_type(strip,adc));
+//         return;
 //     } else {
-//       // second is the strip acd value in the map of key strip number and value adc
-//       stripIter->second = std::min(stripIter->second + adc, 32);
+//         throw Exception("StripSet::insertStrip: Out of bounds layer");
 //     }
-//     return;
-//   } else {
-//     throw Exception("StripSet::insertStrip: Out of bounds layer");
-//   }
 // }
+
+//Improved insertStrip
+void fc::StripSet::insertStrip(unsigned int layer, int strip, int adc) {
+  if (layer >= 0 && layer < _layerStripMaps.size()){
+
+    LayerStripMap::iterator stripIter =  _layerStripMaps[layer].find(strip);
+    if (stripIter == _layerStripMaps[layer].end()) {
+      _layerStripMaps[layer].insert(LayerStripMap::value_type(strip,adc));
+    } else {
+      // second is the strip acd value in the map of key strip number and value adc
+      stripIter->second = std::min(stripIter->second + adc, 32);
+    }
+    return;
+  } else {
+    throw Exception("StripSet::insertStrip: Out of bounds layer");
+  }
+}
 
 
 

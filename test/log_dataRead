@@ -23,8 +23,8 @@ TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 1.2e-05
-Hit Resolution           (m) 1.2e-05
-Bad Hit Resolution       (m) 1.2e-05
+Hit Resolution           (m) 1.25e-05
+Bad Hit Resolution       (m) 4.7e-05
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
@@ -40,8 +40,8 @@ TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 2.5e-05
-Hit Resolution           (m) 2.5e-05
-Bad Hit Resolution       (m) 2.5e-05
+Hit Resolution           (m) 2.6e-05
+Bad Hit Resolution       (m) 9.5e-05
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.2048 X 0.2048
 
@@ -57,8 +57,8 @@ TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
@@ -74,8 +74,8 @@ TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
@@ -91,8 +91,8 @@ TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
@@ -108,8 +108,8 @@ TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 1.2e-05
-Hit Resolution           (m) 1.2e-05
-Bad Hit Resolution       (m) 1.2e-05
+Hit Resolution           (m) 1.25e-05
+Bad Hit Resolution       (m) 4.7e-05
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.1024 X 0.1024
 
@@ -125,8 +125,8 @@ TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 2.5e-05
-Hit Resolution           (m) 2.5e-05
-Bad Hit Resolution       (m) 2.5e-05
+Hit Resolution           (m) 2.6e-05
+Bad Hit Resolution       (m) 9.5e-05
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.2048 X 0.2048
 
@@ -142,8 +142,8 @@ TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
@@ -159,8 +159,8 @@ TVector3 A 3D physics vector (x,y,z)=(0.999848,0.000000,0.017452) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 
@@ -176,8 +176,8 @@ TVector3 A 3D physics vector (x,y,z)=(0.999848,0.000000,0.017452) (rho,theta,phi
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
-Hit Resolution           (m) 5e-05
-Bad Hit Resolution       (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
 Strip Threshold          (m) 0
 Sensor dimentions        (m)X(m)  0.4096 X 0.4096
 PV position 
@@ -2733,9 +2733,8 @@ Strip: 1270  ADC 13
 Strip: 1271  ADC 18
 Strip: 1361  ADC 18
 Strip: 1362  ADC 13
-Layer: 7 number Strips: 18
-Strip: 754  ADC 18
-Strip: 755  ADC 13
+Layer: 7 number Strips: 17
+Strip: 754  ADC 24
 Strip: 756  ADC 1
 Strip: 757  ADC 30
 Strip: 820  ADC 28
@@ -3297,8 +3296,7 @@ Strip: 1390  ADC 14
 Strip: 1391  ADC 17
 Strip: 1464  ADC 27
 Strip: 1465  ADC 4
-Layer: 3 number Strips: 17
-Strip: 463  ADC 9
+Layer: 3 number Strips: 16
 Strip: 464  ADC 22
 Strip: 520  ADC 9
 Strip: 521  ADC 22
@@ -3357,11 +3355,10 @@ Strip: 1188  ADC 14
 Strip: 1189  ADC 17
 Strip: 1394  ADC 4
 Strip: 1395  ADC 27
-Layer: 6 number Strips: 18
+Layer: 6 number Strips: 17
 Strip: 672  ADC 10
 Strip: 673  ADC 21
 Strip: 697  ADC 11
-Strip: 698  ADC 20
 Strip: 699  ADC 13
 Strip: 895  ADC 9
 Strip: 896  ADC 22
@@ -3395,9 +3392,8 @@ Strip: 1137  ADC 11
 Strip: 1138  ADC 20
 Strip: 1286  ADC 28
 Strip: 1287  ADC 3
-Layer: 8 number Strips: 18
-Strip: 465  ADC 30
-Strip: 466  ADC 1
+Layer: 8 number Strips: 17
+Strip: 466  ADC 22
 Strip: 515  ADC 4
 Strip: 516  ADC 27
 Strip: 628  ADC 16
@@ -3887,7 +3883,7 @@ Strip: 841  ADC 9
 Strip: 989  ADC 27
 Strip: 990  ADC 4
 Strip: 1152  ADC 20
-Strip: 1153  ADC 8
+Strip: 1153  ADC 19
 Strip: 1154  ADC 23
 Strip: 1158  ADC 8
 Strip: 1159  ADC 23
@@ -3909,7 +3905,7 @@ Strip: 1076  ADC 18
 Strip: 1176  ADC 11
 Strip: 1177  ADC 20
 Strip: 1247  ADC 18
-Strip: 1248  ADC 13
+Strip: 1248  ADC 30
 Strip: 1249  ADC 14
 Strip: 1262  ADC 1
 Strip: 1263  ADC 30
@@ -5235,7 +5231,7 @@ Strip: 649  ADC 17
 Strip: 650  ADC 14
 Strip: 986  ADC 31
 Strip: 1013  ADC 27
-Strip: 1014  ADC 23
+Strip: 1014  ADC 27
 Strip: 1015  ADC 8
 Strip: 1098  ADC 3
 Strip: 1099  ADC 28
@@ -5840,7 +5836,7 @@ Track number   9
 StripSet
 Layer: 0 number Strips: 19
 Strip: 343  ADC 10
-Strip: 344  ADC 4
+Strip: 344  ADC 25
 Strip: 345  ADC 27
 Strip: 766  ADC 23
 Strip: 767  ADC 8
@@ -5981,7 +5977,7 @@ Strip: 1145  ADC 8
 Strip: 1146  ADC 23
 Strip: 1227  ADC 18
 Strip: 1228  ADC 13
-Layer: 7 number Strips: 17
+Layer: 7 number Strips: 16
 Strip: 729  ADC 16
 Strip: 730  ADC 15
 Strip: 817  ADC 31
@@ -5989,8 +5985,7 @@ Strip: 819  ADC 30
 Strip: 820  ADC 1
 Strip: 846  ADC 10
 Strip: 847  ADC 21
-Strip: 930  ADC 7
-Strip: 931  ADC 24
+Strip: 931  ADC 28
 Strip: 1028  ADC 18
 Strip: 1029  ADC 13
 Strip: 1092  ADC 12

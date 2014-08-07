@@ -1,9 +1,6702 @@
 Program configuration information
 gen Data configuration
-Debug Level: 1
+Debug Level: 2
 Number Events: 10
 Number Tracks 10
 Random number seed 1
 Root file name genHistograms.root
 Random::Random constructor. Using seed: 1
+Detector Geometry information
+Detector Geometry version: 2
+Magnetic field, Bz 1 Tesla
+MIP charge ACD counts in silicon sensor 32
+Number     sensor layers 10
+Number X   sensor layers 5
+Number SAS sensor layers 2
+Number Z   sensor layers 3
+
+Sensor layer 0
+Sensor type 0: X, 1, SAS, 2 Z 0
+N strips    2048
+Strip pitch 5e-05
+X position (m) 0
+Y position (m) 0.2
+Z position (m) 0
+Measurement direction  
+TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
+Normal  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+Intrinsic Hit Resolution (m) 1.2e-05
+Hit Resolution           (m) 1.25e-05
+Bad Hit Resolution       (m) 4.7e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.1024 X 0.1024
+
+Sensor layer 1
+Sensor type 0: X, 1, SAS, 2 Z 0
+N strips    2048
+Strip pitch 0.0001
+X position (m) 0
+Y position (m) 0.4
+Z position (m) 0
+Measurement direction  
+TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
+Normal  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+Intrinsic Hit Resolution (m) 2.5e-05
+Hit Resolution           (m) 2.6e-05
+Bad Hit Resolution       (m) 9.5e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.2048 X 0.2048
+
+Sensor layer 2
+Sensor type 0: X, 1, SAS, 2 Z 0
+N strips    2048
+Strip pitch 0.0002
+X position (m) 0
+Y position (m) 0.6
+Z position (m) 0
+Measurement direction  
+TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
+Normal  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+Intrinsic Hit Resolution (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
+
+Sensor layer 3
+Sensor type 0: X, 1, SAS, 2 Z 0
+N strips    2048
+Strip pitch 0.0002
+X position (m) 0
+Y position (m) 0.8
+Z position (m) 0
+Measurement direction  
+TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
+Normal  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+Intrinsic Hit Resolution (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
+
+Sensor layer 4
+Sensor type 0: X, 1, SAS, 2 Z 0
+N strips    2048
+Strip pitch 0.0002
+X position (m) 0
+Y position (m) 1
+Z position (m) 0
+Measurement direction  
+TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
+Normal  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+Intrinsic Hit Resolution (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
+
+Sensor layer 5
+Sensor type 0: X, 1, SAS, 2 Z 2
+N strips    2048
+Strip pitch 5e-05
+X position (m) 0
+Y position (m) 0.2002
+Z position (m) 0
+Measurement direction  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi)=(1.000000,0.000000,0.000000)
+Normal  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+Intrinsic Hit Resolution (m) 1.2e-05
+Hit Resolution           (m) 1.25e-05
+Bad Hit Resolution       (m) 4.7e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.1024 X 0.1024
+
+Sensor layer 6
+Sensor type 0: X, 1, SAS, 2 Z 2
+N strips    2048
+Strip pitch 0.0001
+X position (m) 0
+Y position (m) 0.4002
+Z position (m) 0
+Measurement direction  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi)=(1.000000,0.000000,0.000000)
+Normal  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+Intrinsic Hit Resolution (m) 2.5e-05
+Hit Resolution           (m) 2.6e-05
+Bad Hit Resolution       (m) 9.5e-05
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.2048 X 0.2048
+
+Sensor layer 7
+Sensor type 0: X, 1, SAS, 2 Z 2
+N strips    2048
+Strip pitch 0.0002
+X position (m) 0
+Y position (m) 0.6002
+Z position (m) 0
+Measurement direction  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi)=(1.000000,0.000000,0.000000)
+Normal  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+Intrinsic Hit Resolution (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
+
+Sensor layer 8
+Sensor type 0: X, 1, SAS, 2 Z 1
+N strips    2048
+Strip pitch 0.0002
+X position (m) 0
+Y position (m) 0.8002
+Z position (m) 0
+Measurement direction  
+TVector3 A 3D physics vector (x,y,z)=(0.999848,0.000000,0.017452) (rho,theta,phi)=(1.000000,89.000000,0.000000)
+Normal  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+Intrinsic Hit Resolution (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
+
+Sensor layer 9
+Sensor type 0: X, 1, SAS, 2 Z 1
+N strips    2048
+Strip pitch 0.0002
+X position (m) 0
+Y position (m) 1.0002
+Z position (m) 0
+Measurement direction  
+TVector3 A 3D physics vector (x,y,z)=(0.999848,0.000000,0.017452) (rho,theta,phi)=(1.000000,89.000000,0.000000)
+Normal  
+TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+Intrinsic Hit Resolution (m) 5e-05
+Hit Resolution           (m) 5.2e-05
+Bad Hit Resolution       (m) 0.00019
+Strip Threshold          (m) 0
+Sensor dimentions        (m)X(m)  0.4096 X 0.4096
+PV position 
+X position    (m) 0
+Y position    (m) 0
+Z position    (m) 0
+PV Resolution (m) 0.01
 Event Number: 0
+Event: 0
+GenTrackSet
+Number Gen Tracks: 10
+Gen Track number: 0
+Charge -1
+4 momentum 0.940641 9.55765 0.343557 9.60997 
+Track parameters:  pT 9.60382 cot(theta) 27.9541 phi0 1.47269 d0 0.00869386 z0 0.000388327
+Helix paramters: kappa 0.104125 tan(Lambda) 0.0357729 phi0 to d0 3.04349
+Gen Track number: 1
+Charge 1
+4 momentum 1.06192 6.11856 -0.537984 6.23328 
+Track parameters:  pT 6.21002 cot(theta) -11.5431 phi0 1.39895 d0 0.00373545 z0 0.00860873
+Helix paramters: kappa -0.16103 tan(Lambda) -0.0866316 phi0 to d0 2.96975
+Gen Track number: 2
+Charge 1
+4 momentum -1.64499 23.3847 1.22932 23.4747 
+Track parameters:  pT 23.4425 cot(theta) 19.0696 phi0 1.64103 d0 -0.00905071 z0 -0.00343532
+Helix paramters: kappa -0.0426576 tan(Lambda) 0.0524396 phi0 to d0 3.21182
+Gen Track number: 3
+Charge -1
+4 momentum -5.27657 31.0289 1.59484 31.5147 
+Track parameters:  pT 31.4744 cot(theta) 19.7351 phi0 1.73924 d0 -0.00854628 z0 0.00769414
+Helix paramters: kappa 0.0317719 tan(Lambda) 0.0506712 phi0 to d0 3.31003
+Gen Track number: 4
+Charge -1
+4 momentum 1.59137 20.2118 -1.35227 20.3194 
+Track parameters:  pT 20.2744 cot(theta) -14.9928 phi0 1.49222 d0 0.00795313 z0 -0.00878871
+Helix paramters: kappa 0.0493233 tan(Lambda) -0.0666986 phi0 to d0 3.06302
+Gen Track number: 5
+Charge -1
+4 momentum 0.0476398 22.6583 -1.85466 22.7341 
+Track parameters:  pT 22.6583 cot(theta) -12.217 phi0 1.56869 d0 -0.00852502 z0 -0.00231716
+Helix paramters: kappa 0.0441339 tan(Lambda) -0.0818534 phi0 to d0 3.13949
+Gen Track number: 6
+Charge -1
+4 momentum 5.78444 36.5285 1.99863 37.0376 
+Track parameters:  pT 36.9836 cot(theta) 18.5045 phi0 1.41375 d0 -0.00749269 z0 0.00376911
+Helix paramters: kappa 0.027039 tan(Lambda) 0.0540409 phi0 to d0 2.98454
+Gen Track number: 7
+Charge 1
+4 momentum -3.65559 26.7857 -1.04718 27.0543 
+Track parameters:  pT 27.034 cot(theta) -25.816 phi0 1.70643 d0 0.000265474 z0 0.00691963
+Helix paramters: kappa -0.0369904 tan(Lambda) -0.0387356 phi0 to d0 3.27723
+Gen Track number: 8
+Charge -1
+4 momentum 0.385828 34.4507 -2.21651 34.5241 
+Track parameters:  pT 34.4529 cot(theta) -15.5438 phi0 1.5596 d0 0.0014331 z0 -0.00933892
+Helix paramters: kappa 0.0290252 tan(Lambda) -0.0643345 phi0 to d0 3.13039
+Gen Track number: 9
+Charge 1
+4 momentum -3.05211 22.2383 1.53554 22.4993 
+Track parameters:  pT 22.4468 cot(theta) 14.6182 phi0 1.70719 d0 -0.00574497 z0 -0.00739145
+Helix paramters: kappa -0.0445498 tan(Lambda) 0.0684079 phi0 to d0 3.27799
+GenHitSet
+Number GenHits: 99
+GenHit: 0
+GenHit position:  0.01032 0.2 -0.00676807
+Layer:         0
+Track number   0
+GenHit: 1
+GenHit position:  0.0281113 0.4 -0.0139509
+Layer:         1
+Track number   0
+GenHit: 2
+GenHit position:  0.0446402 0.6 -0.0211299
+Layer:         2
+Track number   0
+GenHit: 3
+GenHit position:  0.0599085 0.8 -0.0283053
+Layer:         3
+Track number   0
+GenHit: 4
+GenHit position:  0.0739182 1 -0.0354775
+Layer:         4
+Track number   0
+GenHit: 5
+GenHit position:  0.0103384 0.2002 -0.00677525
+Layer:         5
+Track number   0
+GenHit: 6
+GenHit position:  0.0281285 0.4002 -0.0139581
+Layer:         6
+Track number   0
+GenHit: 7
+GenHit position:  0.0446561 0.6002 -0.0211371
+Layer:         7
+Track number   0
+GenHit: 8
+GenHit position:  0.0599232 0.8002 -0.0283125
+Layer:         8
+Track number   0
+GenHit: 9
+GenHit position:  0.0739316 1.0002 -0.0354846
+Layer:         9
+Track number   0
+GenHit: 10
+GenHit position:  0.031925 0.2 0.0261531
+Layer:         0
+Track number   1
+GenHit: 11
+GenHit position:  0.0696708 0.4 0.0437853
+Layer:         1
+Track number   1
+GenHit: 12
+GenHit position:  0.109458 0.6 0.0614512
+Layer:         2
+Track number   1
+GenHit: 13
+GenHit position:  0.151297 0.8 0.0791527
+Layer:         3
+Track number   1
+GenHit: 14
+GenHit position:  0.195203 1 0.0968916
+Layer:         4
+Track number   1
+GenHit: 15
+GenHit position:  0.0319617 0.2002 0.0261707
+Layer:         5
+Track number   1
+GenHit: 16
+GenHit position:  0.0697096 0.4002 0.043803
+Layer:         6
+Track number   1
+GenHit: 17
+GenHit position:  0.109498 0.6002 0.0614689
+Layer:         7
+Track number   1
+GenHit: 18
+GenHit position:  0.15134 0.8002 0.0791704
+Layer:         8
+Track number   1
+GenHit: 19
+GenHit position:  0.195248 1.0002 0.0969094
+Layer:         9
+Track number   1
+GenHit: 20
+GenHit position:  -0.00473983 0.2 -0.0139148
+Layer:         0
+Track number   2
+GenHit: 21
+GenHit position:  -0.0180377 0.4 -0.0244259
+Layer:         1
+Track number   2
+GenHit: 22
+GenHit position:  -0.0308207 0.6 -0.0349352
+Layer:         2
+Track number   2
+GenHit: 23
+GenHit position:  -0.0430892 0.8 -0.0454429
+Layer:         3
+Track number   2
+GenHit: 24
+GenHit position:  -0.0548434 1 -0.0559489
+Layer:         4
+Track number   2
+GenHit: 25
+GenHit position:  -0.00475338 0.2002 -0.0139253
+Layer:         5
+Track number   2
+GenHit: 26
+GenHit position:  -0.0180507 0.4002 -0.0244364
+Layer:         6
+Track number   2
+GenHit: 27
+GenHit position:  -0.0308332 0.6002 -0.0349458
+Layer:         7
+Track number   2
+GenHit: 28
+GenHit position:  -0.0431012 0.8002 -0.0454534
+Layer:         8
+Track number   2
+GenHit: 29
+GenHit position:  -0.0548549 1.0002 -0.0559594
+Layer:         9
+Track number   2
+GenHit: 30
+GenHit position:  -0.0255377 0.2 -0.00251361
+Layer:         0
+Track number   3
+GenHit: 31
+GenHit position:  -0.0601424 0.4 -0.0127984
+Layer:         1
+Track number   3
+GenHit: 32
+GenHit position:  -0.0951456 0.6 -0.0230867
+Layer:         2
+Track number   3
+GenHit: 33
+GenHit position:  -0.130548 0.8 -0.0333785
+Layer:         3
+Track number   3
+GenHit: 34
+GenHit position:  -0.166349 1 -0.0436738
+Layer:         4
+Track number   3
+GenHit: 35
+GenHit position:  -0.0255721 0.2002 -0.00252389
+Layer:         5
+Track number   3
+GenHit: 36
+GenHit position:  -0.0601772 0.4002 -0.0128087
+Layer:         6
+Track number   3
+GenHit: 37
+GenHit position:  -0.0951808 0.6002 -0.023097
+Layer:         7
+Track number   3
+GenHit: 38
+GenHit position:  -0.130583 0.8002 -0.0333888
+Layer:         8
+Track number   3
+GenHit: 39
+GenHit position:  -0.166385 1.0002 -0.0436841
+Layer:         9
+Track number   3
+GenHit: 40
+GenHit position:  0.00747259 0.2 0.00454898
+Layer:         0
+Track number   4
+GenHit: 41
+GenHit position:  0.0223263 0.4 0.0179254
+Layer:         1
+Track number   4
+GenHit: 42
+GenHit position:  0.0365839 0.6 0.031299
+Layer:         2
+Track number   4
+GenHit: 43
+GenHit position:  0.0502457 0.8 0.0446698
+Layer:         3
+Track number   4
+GenHit: 44
+GenHit position:  0.00748774 0.2002 0.00456236
+Layer:         5
+Track number   4
+GenHit: 45
+GenHit position:  0.0223409 0.4002 0.0179388
+Layer:         6
+Track number   4
+GenHit: 46
+GenHit position:  0.0365979 0.6002 0.0313124
+Layer:         7
+Track number   4
+GenHit: 47
+GenHit position:  0.0502591 0.8002 0.0446832
+Layer:         8
+Track number   4
+GenHit: 48
+GenHit position:  0.0633248 1.0002 0.0580513
+Layer:         9
+Track number   4
+GenHit: 49
+GenHit position:  0.00868088 0.2 0.014055
+Layer:         0
+Track number   5
+GenHit: 50
+GenHit position:  0.00830747 0.4 0.0304257
+Layer:         1
+Track number   5
+GenHit: 51
+GenHit position:  0.00740482 0.6 0.0467966
+Layer:         2
+Track number   5
+GenHit: 52
+GenHit position:  0.0059729 0.8 0.0631677
+Layer:         3
+Track number   5
+GenHit: 53
+GenHit position:  0.00401168 1 0.0795392
+Layer:         4
+Track number   5
+GenHit: 54
+GenHit position:  0.00868077 0.2002 0.0140714
+Layer:         5
+Track number   5
+GenHit: 55
+GenHit position:  0.00830683 0.4002 0.0304421
+Layer:         6
+Track number   5
+GenHit: 56
+GenHit position:  0.00740365 0.6002 0.0468129
+Layer:         7
+Track number   5
+GenHit: 57
+GenHit position:  0.0059712 0.8002 0.0631841
+Layer:         8
+Track number   5
+GenHit: 58
+GenHit position:  0.00400945 1.0002 0.0795555
+Layer:         9
+Track number   5
+GenHit: 59
+GenHit position:  0.0390867 0.2 -0.00723644
+Layer:         0
+Track number   6
+GenHit: 60
+GenHit position:  0.0702512 0.4 -0.018175
+Layer:         1
+Track number   6
+GenHit: 61
+GenHit position:  0.10108 0.6 -0.0291109
+Layer:         2
+Track number   6
+GenHit: 62
+GenHit position:  0.131572 0.8 -0.040044
+Layer:         3
+Track number   6
+GenHit: 63
+GenHit position:  0.16173 1 -0.0509743
+Layer:         4
+Track number   6
+GenHit: 64
+GenHit position:  0.0391181 0.2002 -0.00724738
+Layer:         5
+Track number   6
+GenHit: 65
+GenHit position:  0.0702822 0.4002 -0.018186
+Layer:         6
+Track number   6
+GenHit: 66
+GenHit position:  0.10111 0.6002 -0.0291218
+Layer:         7
+Track number   6
+GenHit: 67
+GenHit position:  0.131603 0.8002 -0.0400549
+Layer:         8
+Track number   6
+GenHit: 68
+GenHit position:  0.16176 1.0002 -0.0509852
+Layer:         9
+Track number   6
+GenHit: 69
+GenHit position:  -0.027335 0.2 0.0147388
+Layer:         0
+Track number   7
+GenHit: 70
+GenHit position:  -0.0539464 0.4 0.0225542
+Layer:         1
+Track number   7
+GenHit: 71
+GenHit position:  -0.0801026 0.6 0.0303673
+Layer:         2
+Track number   7
+GenHit: 72
+GenHit position:  -0.105804 0.8 0.0381781
+Layer:         3
+Track number   7
+GenHit: 73
+GenHit position:  -0.131051 1 0.0459867
+Layer:         4
+Track number   7
+GenHit: 74
+GenHit position:  -0.0273618 0.2002 0.0147466
+Layer:         5
+Track number   7
+GenHit: 75
+GenHit position:  -0.0539728 0.4002 0.022562
+Layer:         6
+Track number   7
+GenHit: 76
+GenHit position:  -0.0801285 0.6002 0.0303751
+Layer:         7
+Track number   7
+GenHit: 77
+GenHit position:  -0.105829 0.8002 0.0381859
+Layer:         8
+Track number   7
+GenHit: 78
+GenHit position:  -0.131076 1.0002 0.0459945
+Layer:         9
+Track number   7
+GenHit: 79
+GenHit position:  0.000632666 0.2 0.00352762
+Layer:         0
+Track number   8
+GenHit: 80
+GenHit position:  0.00235041 0.4 0.016395
+Layer:         1
+Track number   8
+GenHit: 81
+GenHit position:  0.00372006 0.6 0.0292622
+Layer:         2
+Track number   8
+GenHit: 82
+GenHit position:  0.00474163 0.8 0.0421292
+Layer:         3
+Track number   8
+GenHit: 83
+GenHit position:  0.00541513 1 0.0549962
+Layer:         4
+Track number   8
+GenHit: 84
+GenHit position:  0.000634557 0.2002 0.00354049
+Layer:         5
+Track number   8
+GenHit: 85
+GenHit position:  0.00235195 0.4002 0.0164079
+Layer:         6
+Track number   8
+GenHit: 86
+GenHit position:  0.00372126 0.6002 0.0292751
+Layer:         7
+Track number   8
+GenHit: 87
+GenHit position:  0.00474248 0.8002 0.0421421
+Layer:         8
+Track number   8
+GenHit: 88
+GenHit position:  0.00541563 1.0002 0.0550091
+Layer:         9
+Track number   8
+GenHit: 89
+GenHit position:  -0.0213778 0.2 -0.0211448
+Layer:         0
+Track number   9
+GenHit: 90
+GenHit position:  -0.0480056 0.4 -0.0349472
+Layer:         1
+Track number   9
+GenHit: 91
+GenHit position:  -0.0740852 0.6 -0.0487446
+Layer:         2
+Track number   9
+GenHit: 92
+GenHit position:  -0.0996171 0.8 -0.0625372
+Layer:         3
+Track number   9
+GenHit: 93
+GenHit position:  -0.124602 1 -0.0763251
+Layer:         4
+Track number   9
+GenHit: 94
+GenHit position:  -0.0214047 0.2002 -0.0211586
+Layer:         5
+Track number   9
+GenHit: 95
+GenHit position:  -0.0480319 0.4002 -0.034961
+Layer:         6
+Track number   9
+GenHit: 96
+GenHit position:  -0.074111 0.6002 -0.0487584
+Layer:         7
+Track number   9
+GenHit: 97
+GenHit position:  -0.0996424 0.8002 -0.062551
+Layer:         8
+Track number   9
+GenHit: 98
+GenHit position:  -0.124627 1.0002 -0.0763389
+Layer:         9
+Track number   9
+StripSet
+Layer: 0 number Strips: 20
+Strip: 476  ADC 14
+Strip: 477  ADC 17
+Strip: 512  ADC 19
+Strip: 513  ADC 12
+Strip: 595  ADC 6
+Strip: 596  ADC 25
+Strip: 928  ADC 6
+Strip: 929  ADC 25
+Strip: 1036  ADC 17
+Strip: 1037  ADC 14
+Strip: 1172  ADC 12
+Strip: 1173  ADC 19
+Strip: 1196  ADC 4
+Strip: 1197  ADC 27
+Strip: 1230  ADC 22
+Strip: 1231  ADC 9
+Strip: 1662  ADC 21
+Strip: 1663  ADC 10
+Strip: 1805  ADC 12
+Strip: 1806  ADC 19
+Layer: 1 number Strips: 19
+Strip: 421  ADC 14
+Strip: 422  ADC 17
+Strip: 484  ADC 31
+Strip: 543  ADC 8
+Strip: 544  ADC 23
+Strip: 842  ADC 5
+Strip: 843  ADC 26
+Strip: 1046  ADC 9
+Strip: 1047  ADC 22
+Strip: 1106  ADC 15
+Strip: 1107  ADC 16
+Strip: 1246  ADC 11
+Strip: 1247  ADC 20
+Strip: 1304  ADC 3
+Strip: 1305  ADC 28
+Strip: 1720  ADC 16
+Strip: 1721  ADC 15
+Strip: 1725  ADC 1
+Strip: 1726  ADC 30
+Layer: 2 number Strips: 19
+Strip: 548  ADC 31
+Strip: 622  ADC 14
+Strip: 623  ADC 17
+Strip: 652  ADC 8
+Strip: 653  ADC 23
+Strip: 869  ADC 11
+Strip: 870  ADC 20
+Strip: 1042  ADC 12
+Strip: 1043  ADC 19
+Strip: 1060  ADC 14
+Strip: 1061  ADC 17
+Strip: 1206  ADC 28
+Strip: 1207  ADC 3
+Strip: 1246  ADC 17
+Strip: 1247  ADC 14
+Strip: 1528  ADC 6
+Strip: 1529  ADC 25
+Strip: 1570  ADC 27
+Strip: 1571  ADC 4
+Layer: 3 number Strips: 20
+Strip: 371  ADC 23
+Strip: 372  ADC 8
+Strip: 494  ADC 13
+Strip: 495  ADC 18
+Strip: 525  ADC 7
+Strip: 526  ADC 24
+Strip: 807  ADC 1
+Strip: 808  ADC 30
+Strip: 1047  ADC 19
+Strip: 1048  ADC 12
+Strip: 1053  ADC 14
+Strip: 1054  ADC 17
+Strip: 1274  ADC 23
+Strip: 1275  ADC 8
+Strip: 1323  ADC 19
+Strip: 1324  ADC 12
+Strip: 1681  ADC 19
+Strip: 1682  ADC 12
+Strip: 1780  ADC 24
+Strip: 1781  ADC 7
+Layer: 4 number Strips: 18
+Strip: 191  ADC 11
+Strip: 192  ADC 20
+Strip: 368  ADC 21
+Strip: 369  ADC 10
+Strip: 400  ADC 19
+Strip: 401  ADC 12
+Strip: 749  ADC 26
+Strip: 750  ADC 5
+Strip: 1043  ADC 24
+Strip: 1044  ADC 7
+Strip: 1050  ADC 17
+Strip: 1051  ADC 14
+Strip: 1393  ADC 17
+Strip: 1394  ADC 14
+Strip: 1831  ADC 1
+Strip: 1832  ADC 30
+Strip: 1999  ADC 15
+Strip: 2000  ADC 16
+Layer: 5 number Strips: 19
+Strip: 600  ADC 25
+Strip: 601  ADC 6
+Strip: 745  ADC 23
+Strip: 746  ADC 8
+Strip: 878  ADC 22
+Strip: 879  ADC 9
+Strip: 887  ADC 11
+Strip: 888  ADC 20
+Strip: 973  ADC 31
+Strip: 1094  ADC 5
+Strip: 1095  ADC 26
+Strip: 1114  ADC 8
+Strip: 1115  ADC 23
+Strip: 1304  ADC 4
+Strip: 1305  ADC 27
+Strip: 1318  ADC 15
+Strip: 1319  ADC 16
+Strip: 1547  ADC 19
+Strip: 1548  ADC 12
+Layer: 6 number Strips: 19
+Strip: 673  ADC 3
+Strip: 674  ADC 28
+Strip: 779  ADC 17
+Strip: 780  ADC 14
+Strip: 841  ADC 10
+Strip: 842  ADC 21
+Strip: 883  ADC 4
+Strip: 884  ADC 27
+Strip: 895  ADC 23
+Strip: 896  ADC 8
+Strip: 1188  ADC 30
+Strip: 1189  ADC 1
+Strip: 1202  ADC 11
+Strip: 1203  ADC 20
+Strip: 1249  ADC 31
+Strip: 1327  ADC 1
+Strip: 1328  ADC 30
+Strip: 1461  ADC 15
+Strip: 1462  ADC 16
+Layer: 7 number Strips: 19
+Strip: 780  ADC 31
+Strip: 848  ADC 6
+Strip: 849  ADC 25
+Strip: 878  ADC 25
+Strip: 879  ADC 6
+Strip: 908  ADC 23
+Strip: 909  ADC 8
+Strip: 917  ADC 9
+Strip: 918  ADC 22
+Strip: 1169  ADC 12
+Strip: 1170  ADC 19
+Strip: 1175  ADC 10
+Strip: 1176  ADC 21
+Strip: 1179  ADC 5
+Strip: 1180  ADC 26
+Strip: 1257  ADC 14
+Strip: 1258  ADC 17
+Strip: 1331  ADC 26
+Strip: 1332  ADC 5
+Layer: 8 number Strips: 20
+Strip: 368  ADC 16
+Strip: 369  ADC 15
+Strip: 497  ADC 14
+Strip: 498  ADC 17
+Strip: 520  ADC 27
+Strip: 521  ADC 4
+Strip: 803  ADC 4
+Strip: 804  ADC 27
+Strip: 1050  ADC 16
+Strip: 1051  ADC 15
+Strip: 1059  ADC 26
+Strip: 1060  ADC 5
+Strip: 1278  ADC 15
+Strip: 1279  ADC 16
+Strip: 1320  ADC 29
+Strip: 1321  ADC 2
+Strip: 1677  ADC 5
+Strip: 1678  ADC 26
+Strip: 1787  ADC 29
+Strip: 1788  ADC 2
+Layer: 9 number Strips: 19
+Strip: 188  ADC 23
+Strip: 189  ADC 8
+Strip: 372  ADC 27
+Strip: 373  ADC 4
+Strip: 393  ADC 9
+Strip: 394  ADC 22
+Strip: 743  ADC 2
+Strip: 744  ADC 29
+Strip: 1050  ADC 18
+Strip: 1051  ADC 13
+Strip: 1055  ADC 17
+Strip: 1056  ADC 14
+Strip: 1345  ADC 25
+Strip: 1346  ADC 6
+Strip: 1390  ADC 31
+Strip: 1827  ADC 20
+Strip: 1828  ADC 11
+Strip: 2007  ADC 3
+Strip: 2008  ADC 28
+Event Number: 1
+Event: 1
+GenTrackSet
+Number Gen Tracks: 10
+Gen Track number: 0
+Charge -1
+4 momentum 1.03866 35.752 1.24965 35.7889 
+Track parameters:  pT 35.7671 cot(theta) 28.6217 phi0 1.54175 d0 0.00626094 z0 0.0053872
+Helix paramters: kappa 0.0279587 tan(Lambda) 0.0349386 phi0 to d0 3.11255
+Gen Track number: 1
+Charge -1
+4 momentum 1.55528 36.3451 1.36475 36.4039 
+Track parameters:  pT 36.3783 cot(theta) 26.6556 phi0 1.52803 d0 -0.00846356 z0 -0.000447184
+Helix paramters: kappa 0.0274889 tan(Lambda) 0.0375156 phi0 to d0 3.09883
+Gen Track number: 2
+Charge 1
+4 momentum -0.842608 13.304 -0.36686 13.3357 
+Track parameters:  pT 13.3307 cot(theta) -36.3372 phi0 1.63405 d0 0.00588556 z0 -0.00852978
+Helix paramters: kappa -0.0750149 tan(Lambda) -0.02752 phi0 to d0 3.20484
+Gen Track number: 3
+Charge -1
+4 momentum -3.30167 21.6856 -1.55218 21.9904 
+Track parameters:  pT 21.9355 cot(theta) -14.1321 phi0 1.72189 d0 -0.00839356 z0 -0.00183645
+Helix paramters: kappa 0.0455881 tan(Lambda) -0.0707609 phi0 to d0 3.29268
+Gen Track number: 4
+Charge -1
+4 momentum 4.09598 38.4933 0.585918 38.715 
+Track parameters:  pT 38.7106 cot(theta) 66.0684 phi0 1.46479 d0 0.00171349 z0 -0.00263595
+Helix paramters: kappa 0.0258327 tan(Lambda) 0.0151358 phi0 to d0 3.03558
+Gen Track number: 5
+Charge -1
+4 momentum -4.47454 25.6168 -0.505843 26.0096 
+Track parameters:  pT 26.0046 cot(theta) -51.4085 phi0 1.74372 d0 0.00639054 z0 -0.00251501
+Helix paramters: kappa 0.0384547 tan(Lambda) -0.019452 phi0 to d0 3.31452
+Gen Track number: 6
+Charge 1
+4 momentum -2.27061 21.6736 -0.62033 21.8011 
+Track parameters:  pT 21.7923 cot(theta) -35.1301 phi0 1.67518 d0 -0.00331386 z0 -0.00710205
+Helix paramters: kappa -0.0458879 tan(Lambda) -0.0284656 phi0 to d0 3.24598
+Gen Track number: 7
+Charge -1
+4 momentum -1.01129 28.3219 2.38526 28.4402 
+Track parameters:  pT 28.34 cot(theta) 11.8813 phi0 1.60649 d0 0.000330629 z0 -0.00471733
+Helix paramters: kappa 0.0352859 tan(Lambda) 0.0841659 phi0 to d0 3.17728
+Gen Track number: 8
+Charge 1
+4 momentum 0.500506 34.174 -2.35229 34.2585 
+Track parameters:  pT 34.1777 cot(theta) -14.5295 phi0 1.55615 d0 0.00331946 z0 0.00589762
+Helix paramters: kappa -0.0292589 tan(Lambda) -0.0688254 phi0 to d0 3.12695
+Gen Track number: 9
+Charge -1
+4 momentum -1.15424 15.0587 -0.809832 15.1246 
+Track parameters:  pT 15.1029 cot(theta) -18.6494 phi0 1.6473 d0 -0.00253281 z0 -0.00852299
+Helix paramters: kappa 0.0662124 tan(Lambda) -0.0536209 phi0 to d0 3.21809
+GenHitSet
+Number GenHits: 98
+GenHit: 0
+GenHit position:  -0.00062077 0.2 -0.00159694
+Layer:         0
+Track number   0
+GenHit: 1
+GenHit position:  0.00468639 0.4 -0.00858711
+Layer:         1
+Track number   0
+GenHit: 2
+GenHit position:  0.00965795 0.6 -0.015577
+Layer:         2
+Track number   0
+GenHit: 3
+GenHit position:  0.0142939 0.8 -0.0225666
+Layer:         3
+Track number   0
+GenHit: 4
+GenHit position:  0.0185944 1 -0.0295559
+Layer:         4
+Track number   0
+GenHit: 5
+GenHit position:  -0.000615295 0.2002 -0.00160393
+Layer:         5
+Track number   0
+GenHit: 6
+GenHit position:  0.00469153 0.4002 -0.0085941
+Layer:         6
+Track number   0
+GenHit: 7
+GenHit position:  0.00966275 0.6002 -0.015584
+Layer:         7
+Track number   0
+GenHit: 8
+GenHit position:  0.0142984 0.8002 -0.0225736
+Layer:         8
+Track number   0
+GenHit: 9
+GenHit position:  0.0185985 1.0002 -0.0295629
+Layer:         9
+Track number   0
+GenHit: 10
+GenHit position:  0.0168639 0.2 -0.00797049
+Layer:         0
+Track number   1
+GenHit: 11
+GenHit position:  0.0249259 0.4 -0.0154797
+Layer:         1
+Track number   1
+GenHit: 12
+GenHit position:  0.0326576 0.6 -0.0229884
+Layer:         2
+Track number   1
+GenHit: 13
+GenHit position:  0.0400589 0.8 -0.0304967
+Layer:         3
+Track number   1
+GenHit: 14
+GenHit position:  0.04713 1 -0.0380045
+Layer:         4
+Track number   1
+GenHit: 15
+GenHit position:  0.0168721 0.2002 -0.007978
+Layer:         5
+Track number   1
+GenHit: 16
+GenHit position:  0.0249338 0.4002 -0.0154872
+Layer:         6
+Track number   1
+GenHit: 17
+GenHit position:  0.0326652 0.6002 -0.0229959
+Layer:         7
+Track number   1
+GenHit: 18
+GenHit position:  0.0400662 0.8002 -0.0305042
+Layer:         8
+Track number   1
+GenHit: 19
+GenHit position:  0.0471369 1.0002 -0.038012
+Layer:         9
+Track number   1
+GenHit: 20
+GenHit position:  -0.0181103 0.2 -0.00300527
+Layer:         0
+Track number   2
+GenHit: 21
+GenHit position:  -0.029419 0.4 0.00250752
+Layer:         1
+Track number   2
+GenHit: 22
+GenHit position:  -0.0398241 0.6 0.00801896
+Layer:         2
+Track number   2
+GenHit: 23
+GenHit position:  -0.0493263 0.8 0.0135292
+Layer:         3
+Track number   2
+GenHit: 24
+GenHit position:  -0.0579263 1 0.0190383
+Layer:         4
+Track number   2
+GenHit: 25
+GenHit position:  -0.018122 0.2002 -0.00299976
+Layer:         5
+Track number   2
+GenHit: 26
+GenHit position:  -0.0294298 0.4002 0.00251303
+Layer:         6
+Track number   2
+GenHit: 27
+GenHit position:  -0.0398341 0.6002 0.00802447
+Layer:         7
+Track number   2
+GenHit: 28
+GenHit position:  -0.0493354 0.8002 0.0135347
+Layer:         8
+Track number   2
+GenHit: 29
+GenHit position:  -0.0579344 1.0002 0.0190438
+Layer:         9
+Track number   2
+GenHit: 30
+GenHit position:  -0.0222394 0.2 0.0123914
+Layer:         0
+Track number   3
+GenHit: 31
+GenHit position:  -0.0535356 0.4 0.0267158
+Layer:         1
+Track number   3
+GenHit: 32
+GenHit position:  -0.085399 0.6 0.0410464
+Layer:         2
+Track number   3
+GenHit: 33
+GenHit position:  -0.11783 0.8 0.0553835
+Layer:         3
+Track number   3
+GenHit: 34
+GenHit position:  -0.150831 1 0.069727
+Layer:         4
+Track number   3
+GenHit: 35
+GenHit position:  -0.0222704 0.2002 0.0124057
+Layer:         5
+Track number   3
+GenHit: 36
+GenHit position:  -0.0535672 0.4002 0.0267301
+Layer:         6
+Track number   3
+GenHit: 37
+GenHit position:  -0.0854312 0.6002 0.0410608
+Layer:         7
+Track number   3
+GenHit: 38
+GenHit position:  -0.117863 0.8002 0.0553978
+Layer:         8
+Track number   3
+GenHit: 39
+GenHit position:  -0.150864 1.0002 0.0697414
+Layer:         9
+Track number   3
+GenHit: 40
+GenHit position:  0.0194011 0.2 -0.00567719
+Layer:         0
+Track number   4
+GenHit: 41
+GenHit position:  0.0402105 0.4 -0.0087207
+Layer:         1
+Track number   4
+GenHit: 42
+GenHit position:  0.0607052 0.6 -0.0117637
+Layer:         2
+Track number   4
+GenHit: 43
+GenHit position:  0.0808853 0.8 -0.0148063
+Layer:         3
+Track number   4
+GenHit: 44
+GenHit position:  0.100751 1 -0.0178483
+Layer:         4
+Track number   4
+GenHit: 45
+GenHit position:  0.0194221 0.2002 -0.00568024
+Layer:         5
+Track number   4
+GenHit: 46
+GenHit position:  0.0402312 0.4002 -0.00872375
+Layer:         6
+Track number   4
+GenHit: 47
+GenHit position:  0.0607255 0.6002 -0.0117668
+Layer:         7
+Track number   4
+GenHit: 48
+GenHit position:  0.0809053 0.8002 -0.0148093
+Layer:         8
+Track number   4
+GenHit: 49
+GenHit position:  0.100771 1.0002 -0.0178514
+Layer:         9
+Track number   4
+GenHit: 50
+GenHit position:  -0.0416657 0.2 0.00145683
+Layer:         0
+Track number   5
+GenHit: 51
+GenHit position:  -0.077327 0.4 0.00540859
+Layer:         1
+Track number   5
+GenHit: 52
+GenHit position:  -0.113472 0.6 0.00936202
+Layer:         2
+Track number   5
+GenHit: 53
+GenHit position:  -0.150101 0.8 0.0133171
+Layer:         3
+Track number   5
+GenHit: 54
+GenHit position:  -0.187215 1 0.017274
+Layer:         4
+Track number   5
+GenHit: 55
+GenHit position:  -0.0417011 0.2002 0.00146078
+Layer:         5
+Track number   5
+GenHit: 56
+GenHit position:  -0.0773629 0.4002 0.00541255
+Layer:         6
+Track number   5
+GenHit: 57
+GenHit position:  -0.113508 0.6002 0.00936598
+Layer:         7
+Track number   5
+GenHit: 58
+GenHit position:  -0.150138 0.8002 0.0133211
+Layer:         8
+Track number   5
+GenHit: 59
+GenHit position:  -0.187253 1.0002 0.0172779
+Layer:         9
+Track number   5
+GenHit: 60
+GenHit position:  -0.0173421 0.2 -0.00138847
+Layer:         0
+Track number   6
+GenHit: 61
+GenHit position:  -0.0374573 0.4 0.00433339
+Layer:         1
+Track number   6
+GenHit: 62
+GenHit position:  -0.0570141 0.6 0.0100537
+Layer:         2
+Track number   6
+GenHit: 63
+GenHit position:  -0.0760129 0.8 0.0157724
+Layer:         3
+Track number   6
+GenHit: 64
+GenHit position:  -0.0944542 1 0.0214897
+Layer:         4
+Track number   6
+GenHit: 65
+GenHit position:  -0.0173625 0.2002 -0.00138274
+Layer:         5
+Track number   6
+GenHit: 66
+GenHit position:  -0.0374771 0.4002 0.00433911
+Layer:         6
+Track number   6
+GenHit: 67
+GenHit position:  -0.0570334 0.6002 0.0100594
+Layer:         7
+Track number   6
+GenHit: 68
+GenHit position:  -0.0760316 0.8002 0.0157781
+Layer:         8
+Track number   6
+GenHit: 69
+GenHit position:  -0.0944724 1.0002 0.0214954
+Layer:         9
+Track number   6
+GenHit: 70
+GenHit position:  -0.00768424 0.2 -0.0215629
+Layer:         0
+Track number   7
+GenHit: 71
+GenHit position:  -0.0154617 0.4 -0.0384088
+Layer:         1
+Track number   7
+GenHit: 72
+GenHit position:  -0.0236633 0.6 -0.0552561
+Layer:         2
+Track number   7
+GenHit: 73
+GenHit position:  -0.0322891 0.8 -0.072105
+Layer:         3
+Track number   7
+GenHit: 74
+GenHit position:  -0.0413394 1 -0.0889554
+Layer:         4
+Track number   7
+GenHit: 75
+GenHit position:  -0.00769181 0.2002 -0.0215797
+Layer:         5
+Track number   7
+GenHit: 76
+GenHit position:  -0.0154697 0.4002 -0.0384256
+Layer:         6
+Track number   7
+GenHit: 77
+GenHit position:  -0.0236717 0.6002 -0.055273
+Layer:         7
+Track number   7
+GenHit: 78
+GenHit position:  -0.032298 0.8002 -0.0721218
+Layer:         8
+Track number   7
+GenHit: 79
+GenHit position:  -0.0413487 1.0002 -0.0889722
+Layer:         9
+Track number   7
+GenHit: 80
+GenHit position:  -0.000215252 0.2 0.019661
+Layer:         0
+Track number   8
+GenHit: 81
+GenHit position:  0.00324032 0.4 0.0334282
+Layer:         1
+Track number   8
+GenHit: 82
+GenHit position:  0.00704693 0.6 0.0471957
+Layer:         2
+Track number   8
+GenHit: 83
+GenHit position:  0.0112046 0.8 0.0609638
+Layer:         3
+Track number   8
+GenHit: 84
+GenHit position:  0.0157134 1 0.0747324
+Layer:         4
+Track number   8
+GenHit: 85
+GenHit position:  -0.000211971 0.2002 0.0196748
+Layer:         5
+Track number   8
+GenHit: 86
+GenHit position:  0.00324395 0.4002 0.0334419
+Layer:         6
+Track number   8
+GenHit: 87
+GenHit position:  0.0112089 0.8002 0.0609776
+Layer:         8
+Track number   8
+GenHit: 88
+GenHit position:  0.0157181 1.0002 0.0747461
+Layer:         9
+Track number   8
+GenHit: 89
+GenHit position:  -0.0131894 0.2 0.00222391
+Layer:         0
+Track number   9
+GenHit: 90
+GenHit position:  -0.0297209 0.4 0.0129847
+Layer:         1
+Track number   9
+GenHit: 91
+GenHit position:  -0.0470549 0.6 0.0237491
+Layer:         2
+Track number   9
+GenHit: 92
+GenHit position:  -0.0651923 0.8 0.0345173
+Layer:         3
+Track number   9
+GenHit: 93
+GenHit position:  -0.0132056 0.2002 0.00223467
+Layer:         5
+Track number   9
+GenHit: 94
+GenHit position:  -0.0297378 0.4002 0.0129954
+Layer:         6
+Track number   9
+GenHit: 95
+GenHit position:  -0.0470726 0.6002 0.0237598
+Layer:         7
+Track number   9
+GenHit: 96
+GenHit position:  -0.0652108 0.8002 0.034528
+Layer:         8
+Track number   9
+GenHit: 97
+GenHit position:  -0.0841533 1.0002 0.0453002
+Layer:         9
+Track number   9
+StripSet
+Layer: 0 number Strips: 19
+Strip: 190  ADC 30
+Strip: 191  ADC 1
+Strip: 578  ADC 18
+Strip: 579  ADC 13
+Strip: 661  ADC 13
+Strip: 662  ADC 18
+Strip: 676  ADC 18
+Strip: 677  ADC 13
+Strip: 759  ADC 12
+Strip: 760  ADC 19
+Strip: 869  ADC 4
+Strip: 870  ADC 27
+Strip: 1010  ADC 10
+Strip: 1011  ADC 21
+Strip: 1018  ADC 1
+Strip: 1019  ADC 30
+Strip: 1361  ADC 31
+Strip: 1411  ADC 24
+Strip: 1412  ADC 7
+Layer: 1 number Strips: 20
+Strip: 250  ADC 17
+Strip: 251  ADC 14
+Strip: 487  ADC 4
+Strip: 488  ADC 27
+Strip: 648  ADC 8
+Strip: 649  ADC 23
+Strip: 726  ADC 23
+Strip: 727  ADC 8
+Strip: 729  ADC 14
+Strip: 730  ADC 17
+Strip: 868  ADC 4
+Strip: 869  ADC 27
+Strip: 1055  ADC 5
+Strip: 1056  ADC 26
+Strip: 1070  ADC 28
+Strip: 1071  ADC 3
+Strip: 1272  ADC 11
+Strip: 1273  ADC 20
+Strip: 1425  ADC 14
+Strip: 1426  ADC 17
+Layer: 2 number Strips: 19
+Strip: 456  ADC 28
+Strip: 457  ADC 3
+Strip: 596  ADC 17
+Strip: 597  ADC 14
+Strip: 738  ADC 31
+Strip: 788  ADC 15
+Strip: 789  ADC 16
+Strip: 824  ADC 8
+Strip: 825  ADC 23
+Strip: 905  ADC 27
+Strip: 906  ADC 4
+Strip: 1058  ADC 19
+Strip: 1059  ADC 12
+Strip: 1071  ADC 5
+Strip: 1072  ADC 26
+Strip: 1186  ADC 3
+Strip: 1187  ADC 28
+Strip: 1327  ADC 21
+Strip: 1328  ADC 10
+Layer: 3 number Strips: 19
+Strip: 272  ADC 2
+Strip: 273  ADC 29
+Strip: 434  ADC 13
+Strip: 435  ADC 18
+Strip: 643  ADC 23
+Strip: 644  ADC 8
+Strip: 697  ADC 9
+Strip: 698  ADC 22
+Strip: 776  ADC 6
+Strip: 777  ADC 25
+Strip: 862  ADC 29
+Strip: 863  ADC 2
+Strip: 1079  ADC 28
+Strip: 1080  ADC 3
+Strip: 1095  ADC 31
+Strip: 1223  ADC 13
+Strip: 1224  ADC 18
+Strip: 1428  ADC 22
+Strip: 1429  ADC 9
+Layer: 4 number Strips: 18
+Strip: 87  ADC 16
+Strip: 88  ADC 15
+Strip: 269  ADC 23
+Strip: 270  ADC 8
+Strip: 550  ADC 1
+Strip: 551  ADC 30
+Strip: 733  ADC 6
+Strip: 734  ADC 25
+Strip: 816  ADC 12
+Strip: 817  ADC 19
+Strip: 1101  ADC 3
+Strip: 1102  ADC 28
+Strip: 1116  ADC 13
+Strip: 1117  ADC 18
+Strip: 1259  ADC 13
+Strip: 1260  ADC 18
+Strip: 1527  ADC 21
+Strip: 1528  ADC 10
+Layer: 5 number Strips: 20
+Strip: 592  ADC 22
+Strip: 593  ADC 9
+Strip: 863  ADC 12
+Strip: 864  ADC 19
+Strip: 909  ADC 2
+Strip: 910  ADC 29
+Strip: 963  ADC 21
+Strip: 964  ADC 10
+Strip: 990  ADC 1
+Strip: 991  ADC 30
+Strip: 996  ADC 27
+Strip: 997  ADC 4
+Strip: 1053  ADC 22
+Strip: 1054  ADC 9
+Strip: 1068  ADC 19
+Strip: 1069  ADC 12
+Strip: 1271  ADC 11
+Strip: 1272  ADC 20
+Strip: 1417  ADC 23
+Strip: 1418  ADC 8
+Layer: 6 number Strips: 19
+Strip: 639  ADC 21
+Strip: 640  ADC 10
+Strip: 868  ADC 13
+Strip: 869  ADC 18
+Strip: 935  ADC 2
+Strip: 936  ADC 29
+Strip: 937  ADC 18
+Strip: 938  ADC 13
+Strip: 1048  ADC 10
+Strip: 1049  ADC 21
+Strip: 1067  ADC 29
+Strip: 1068  ADC 2
+Strip: 1077  ADC 11
+Strip: 1078  ADC 20
+Strip: 1153  ADC 13
+Strip: 1154  ADC 18
+Strip: 1290  ADC 18
+Strip: 1291  ADC 13
+Strip: 1358  ADC 31
+Layer: 7 number Strips: 18
+Strip: 747  ADC 30
+Strip: 748  ADC 1
+Strip: 908  ADC 9
+Strip: 909  ADC 22
+Strip: 945  ADC 9
+Strip: 946  ADC 22
+Strip: 965  ADC 27
+Strip: 966  ADC 4
+Strip: 1063  ADC 14
+Strip: 1064  ADC 17
+Strip: 1070  ADC 14
+Strip: 1071  ADC 17
+Strip: 1073  ADC 6
+Strip: 1074  ADC 25
+Strip: 1142  ADC 21
+Strip: 1143  ADC 10
+Strip: 1228  ADC 8
+Strip: 1229  ADC 23
+Layer: 8 number Strips: 20
+Strip: 273  ADC 1
+Strip: 274  ADC 30
+Strip: 439  ADC 21
+Strip: 440  ADC 10
+Strip: 644  ADC 2
+Strip: 645  ADC 29
+Strip: 700  ADC 21
+Strip: 701  ADC 10
+Strip: 778  ADC 23
+Strip: 779  ADC 8
+Strip: 855  ADC 6
+Strip: 856  ADC 25
+Strip: 1085  ADC 29
+Strip: 1086  ADC 2
+Strip: 1093  ADC 27
+Strip: 1094  ADC 4
+Strip: 1220  ADC 3
+Strip: 1221  ADC 28
+Strip: 1426  ADC 16
+Strip: 1427  ADC 15
+Layer: 9 number Strips: 18
+Strip: 89  ADC 23
+Strip: 90  ADC 8
+Strip: 275  ADC 22
+Strip: 276  ADC 9
+Strip: 552  ADC 4
+Strip: 553  ADC 27
+Strip: 607  ADC 31
+Strip: 735  ADC 9
+Strip: 736  ADC 22
+Strip: 808  ADC 4
+Strip: 809  ADC 27
+Strip: 1108  ADC 14
+Strip: 1109  ADC 17
+Strip: 1114  ADC 31
+Strip: 1255  ADC 13
+Strip: 1256  ADC 18
+Strip: 1525  ADC 15
+Strip: 1526  ADC 16
+Event Number: 2
+Event: 2
+GenTrackSet
+Number Gen Tracks: 10
+Gen Track number: 0
+Charge 1
+4 momentum -2.16098 23.8652 -0.446908 23.967 
+Track parameters:  pT 23.9629 cot(theta) -53.6192 phi0 1.6611 d0 0.00404559 z0 0.00322355
+Helix paramters: kappa -0.0417312 tan(Lambda) -0.01865 phi0 to d0 3.2319
+Gen Track number: 1
+Charge -1
+4 momentum -2.31719 14.4897 1.18066 14.7212 
+Track parameters:  pT 14.6738 cot(theta) 12.4284 phi0 1.72937 d0 0.0094848 z0 -0.00180084
+Helix paramters: kappa 0.0681488 tan(Lambda) 0.0804608 phi0 to d0 3.30017
+Gen Track number: 2
+Charge 1
+4 momentum 4.46062 32.5572 -2.80611 32.9809 
+Track parameters:  pT 32.8613 cot(theta) -11.7107 phi0 1.43464 d0 -0.00233238 z0 -0.00218134
+Helix paramters: kappa -0.0304309 tan(Lambda) -0.0853923 phi0 to d0 3.00543
+Gen Track number: 3
+Charge 1
+4 momentum 4.17218 24.212 -0.553373 24.575 
+Track parameters:  pT 24.5688 cot(theta) -44.3983 phi0 1.40015 d0 0.0013138 z0 -0.00462829
+Helix paramters: kappa -0.040702 tan(Lambda) -0.0225234 phi0 to d0 2.97095
+Gen Track number: 4
+Charge 1
+4 momentum 1.14474 10.5951 0.315768 10.6614 
+Track parameters:  pT 10.6567 cot(theta) 33.7486 phi0 1.46317 d0 -0.0085429 z0 -0.0024209
+Helix paramters: kappa -0.0938376 tan(Lambda) 0.0296309 phi0 to d0 3.03397
+Gen Track number: 5
+Charge -1
+4 momentum 1.14094 22.2347 1.74615 22.3323 
+Track parameters:  pT 22.2639 cot(theta) 12.7503 phi0 1.51953 d0 -0.00121699 z0 0.00964336
+Helix paramters: kappa 0.0449157 tan(Lambda) 0.0784298 phi0 to d0 3.09032
+Gen Track number: 6
+Charge -1
+4 momentum 0.00144894 25.1823 -2.10223 25.2699 
+Track parameters:  pT 25.1823 cot(theta) -11.9788 phi0 1.57074 d0 -0.00654146 z0 -0.00250757
+Helix paramters: kappa 0.0397104 tan(Lambda) -0.0834805 phi0 to d0 3.14154
+Gen Track number: 7
+Charge -1
+4 momentum -1.09209 10.7084 -0.536593 10.7773 
+Track parameters:  pT 10.764 cot(theta) -20.0598 phi0 1.67243 d0 0.000996274 z0 0.000305809
+Helix paramters: kappa 0.0929026 tan(Lambda) -0.0498508 phi0 to d0 3.24323
+Gen Track number: 8
+Charge -1
+4 momentum -2.5037 17.1334 0.237678 17.317 
+Track parameters:  pT 17.3154 cot(theta) 72.8523 phi0 1.7159 d0 -0.00198954 z0 0.0061271
+Helix paramters: kappa 0.057752 tan(Lambda) 0.0137264 phi0 to d0 3.28669
+Gen Track number: 9
+Charge -1
+4 momentum -1.06301 6.432 -0.381756 6.53042 
+Track parameters:  pT 6.51925 cot(theta) -17.077 phi0 1.73459 d0 0.00661366 z0 -0.00387877
+Helix paramters: kappa 0.153392 tan(Lambda) -0.0585582 phi0 to d0 3.30538
+GenHitSet
+Number GenHits: 98
+GenHit: 0
+GenHit position:  -0.0392673 0.4 0.0107192
+Layer:         1
+Track number   0
+GenHit: 1
+GenHit position:  -0.0561108 0.6 0.0144625
+Layer:         2
+Track number   0
+GenHit: 2
+GenHit position:  -0.0724487 0.8 0.0182049
+Layer:         3
+Track number   0
+GenHit: 3
+GenHit position:  -0.0882813 1 0.0219466
+Layer:         4
+Track number   0
+GenHit: 4
+GenHit position:  -0.0392843 0.4002 0.010723
+Layer:         6
+Track number   0
+GenHit: 5
+GenHit position:  -0.0561273 0.6002 0.0144662
+Layer:         7
+Track number   0
+GenHit: 6
+GenHit position:  -0.0724647 0.8002 0.0182086
+Layer:         8
+Track number   0
+GenHit: 7
+GenHit position:  -0.0882968 1.0002 0.0219503
+Layer:         9
+Track number   0
+GenHit: 8
+GenHit position:  -0.0420205 0.2 -0.018225
+Layer:         0
+Track number   1
+GenHit: 9
+GenHit position:  -0.0752861 0.4 -0.0345383
+Layer:         1
+Track number   1
+GenHit: 10
+GenHit position:  -0.109404 0.6 -0.0508629
+Layer:         2
+Track number   1
+GenHit: 11
+GenHit position:  -0.144376 0.8 -0.0671993
+Layer:         3
+Track number   1
+GenHit: 12
+GenHit position:  -0.180204 1 -0.0835476
+Layer:         4
+Track number   1
+GenHit: 13
+GenHit position:  -0.0420533 0.2002 -0.0182413
+Layer:         5
+Track number   1
+GenHit: 14
+GenHit position:  -0.0753198 0.4002 -0.0345546
+Layer:         6
+Track number   1
+GenHit: 15
+GenHit position:  -0.109438 0.6002 -0.0508793
+Layer:         7
+Track number   1
+GenHit: 16
+GenHit position:  -0.144411 0.8002 -0.0672156
+Layer:         8
+Track number   1
+GenHit: 17
+GenHit position:  -0.18024 1.0002 -0.0835639
+Layer:         9
+Track number   1
+GenHit: 18
+GenHit position:  0.0299442 0.2 0.0150861
+Layer:         0
+Track number   2
+GenHit: 19
+GenHit position:  0.0579098 0.4 0.0323308
+Layer:         1
+Track number   2
+GenHit: 20
+GenHit position:  0.0862512 0.6 0.0495799
+Layer:         2
+Track number   2
+GenHit: 21
+GenHit position:  0.114969 0.8 0.0668335
+Layer:         3
+Track number   2
+GenHit: 22
+GenHit position:  0.144063 1 0.0840917
+Layer:         4
+Track number   2
+GenHit: 23
+GenHit position:  0.029972 0.2002 0.0151034
+Layer:         5
+Track number   2
+GenHit: 24
+GenHit position:  0.0579379 0.4002 0.032348
+Layer:         6
+Track number   2
+GenHit: 25
+GenHit position:  0.0862797 0.6002 0.0495971
+Layer:         7
+Track number   2
+GenHit: 26
+GenHit position:  0.114998 0.8002 0.0668507
+Layer:         8
+Track number   2
+GenHit: 27
+GenHit position:  0.144092 1.0002 0.084109
+Layer:         9
+Track number   2
+GenHit: 28
+GenHit position:  0.0333852 0.2 -6.1338e-05
+Layer:         0
+Track number   3
+GenHit: 29
+GenHit position:  0.0686142 0.4 0.00451269
+Layer:         1
+Track number   3
+GenHit: 30
+GenHit position:  0.104354 0.6 0.00908874
+Layer:         2
+Track number   3
+GenHit: 31
+GenHit position:  0.140607 0.8 0.0136668
+Layer:         3
+Track number   3
+GenHit: 32
+GenHit position:  0.177372 1 0.018247
+Layer:         4
+Track number   3
+GenHit: 33
+GenHit position:  0.0334202 0.2002 -5.6765e-05
+Layer:         5
+Track number   3
+GenHit: 34
+GenHit position:  0.0686497 0.4002 0.00451727
+Layer:         6
+Track number   3
+GenHit: 35
+GenHit position:  0.10439 0.6002 0.00909331
+Layer:         7
+Track number   3
+GenHit: 36
+GenHit position:  0.140643 0.8002 0.0136714
+Layer:         8
+Track number   3
+GenHit: 37
+GenHit position:  0.177409 1.0002 0.0182516
+Layer:         9
+Track number   3
+GenHit: 38
+GenHit position:  0.0307797 0.2 -0.00841078
+Layer:         0
+Track number   4
+GenHit: 39
+GenHit position:  0.054114 0.4 -0.0143772
+Layer:         1
+Track number   4
+GenHit: 40
+GenHit position:  0.0785977 0.6 -0.0203476
+Layer:         2
+Track number   4
+GenHit: 41
+GenHit position:  0.104233 0.8 -0.0263222
+Layer:         3
+Track number   4
+GenHit: 42
+GenHit position:  0.131023 1 -0.0323014
+Layer:         4
+Track number   4
+GenHit: 43
+GenHit position:  0.0308025 0.2002 -0.00841675
+Layer:         5
+Track number   4
+GenHit: 44
+GenHit position:  0.0541379 0.4002 -0.0143831
+Layer:         6
+Track number   4
+GenHit: 45
+GenHit position:  0.0786228 0.6002 -0.0203536
+Layer:         7
+Track number   4
+GenHit: 46
+GenHit position:  0.10426 0.8002 -0.0263282
+Layer:         8
+Track number   4
+GenHit: 47
+GenHit position:  0.131051 1.0002 -0.0323073
+Layer:         9
+Track number   4
+GenHit: 48
+GenHit position:  0.0112108 0.2 -0.00606707
+Layer:         0
+Track number   5
+GenHit: 49
+GenHit position:  0.0206625 0.4 -0.0217705
+Layer:         1
+Track number   5
+GenHit: 50
+GenHit position:  0.0295738 0.6 -0.0374721
+Layer:         2
+Track number   5
+GenHit: 51
+GenHit position:  0.0379451 0.8 -0.0531718
+Layer:         3
+Track number   5
+GenHit: 52
+GenHit position:  0.0457764 1 -0.0688698
+Layer:         4
+Track number   5
+GenHit: 53
+GenHit position:  0.0112205 0.2002 -0.00608277
+Layer:         5
+Track number   5
+GenHit: 54
+GenHit position:  0.0206717 0.4002 -0.0217862
+Layer:         6
+Track number   5
+GenHit: 55
+GenHit position:  0.0295825 0.6002 -0.0374878
+Layer:         7
+Track number   5
+GenHit: 56
+GenHit position:  0.0379532 0.8002 -0.0531875
+Layer:         8
+Track number   5
+GenHit: 57
+GenHit position:  0.0457839 1.0002 -0.0688855
+Layer:         9
+Track number   5
+GenHit: 58
+GenHit position:  0.00631487 0.2 0.0141886
+Layer:         0
+Track number   6
+GenHit: 59
+GenHit position:  0.00561208 0.4 0.0308848
+Layer:         1
+Track number   6
+GenHit: 60
+GenHit position:  0.00443307 0.6 0.0475812
+Layer:         2
+Track number   6
+GenHit: 61
+GenHit position:  0.00277784 0.8 0.0642778
+Layer:         3
+Track number   6
+GenHit: 62
+GenHit position:  0.000646347 1 0.0809749
+Layer:         4
+Track number   6
+GenHit: 63
+GenHit position:  0.0063144 0.2002 0.0142053
+Layer:         5
+Track number   6
+GenHit: 64
+GenHit position:  0.00561114 0.4002 0.0309015
+Layer:         6
+Track number   6
+GenHit: 65
+GenHit position:  0.00443166 0.6002 0.0475979
+Layer:         7
+Track number   6
+GenHit: 66
+GenHit position:  0.00277595 0.8002 0.0642945
+Layer:         8
+Track number   6
+GenHit: 67
+GenHit position:  0.000643977 1.0002 0.0809916
+Layer:         9
+Track number   6
+GenHit: 68
+GenHit position:  -0.0219649 0.2 0.0103357
+Layer:         0
+Track number   7
+GenHit: 69
+GenHit position:  -0.0440619 0.4 0.0203665
+Layer:         1
+Track number   7
+GenHit: 70
+GenHit position:  -0.0672944 0.6 0.0304038
+Layer:         2
+Track number   7
+GenHit: 71
+GenHit position:  -0.0916648 0.8 0.0404477
+Layer:         3
+Track number   7
+GenHit: 72
+GenHit position:  -0.117175 1 0.0504986
+Layer:         4
+Track number   7
+GenHit: 73
+GenHit position:  -0.0219864 0.2002 0.0103457
+Layer:         5
+Track number   7
+GenHit: 74
+GenHit position:  -0.0440845 0.4002 0.0203766
+Layer:         6
+Track number   7
+GenHit: 75
+GenHit position:  -0.0673182 0.6002 0.0304138
+Layer:         7
+Track number   7
+GenHit: 76
+GenHit position:  -0.0916897 0.8002 0.0404577
+Layer:         8
+Track number   7
+GenHit: 77
+GenHit position:  -0.117201 1.0002 0.0505087
+Layer:         9
+Track number   7
+GenHit: 78
+GenHit position:  -0.0275718 0.2 0.00335594
+Layer:         0
+Track number   8
+GenHit: 79
+GenHit position:  -0.0578702 0.4 0.000579337
+Layer:         1
+Track number   8
+GenHit: 80
+GenHit position:  -0.0888857 0.6 -0.00219876
+Layer:         2
+Track number   8
+GenHit: 81
+GenHit position:  -0.120619 0.8 -0.00497838
+Layer:         3
+Track number   8
+GenHit: 82
+GenHit position:  -0.153073 1 -0.00775957
+Layer:         4
+Track number   8
+GenHit: 83
+GenHit position:  -0.0276017 0.2002 0.00335317
+Layer:         5
+Track number   8
+GenHit: 84
+GenHit position:  -0.0579008 0.4002 0.00057656
+Layer:         6
+Track number   8
+GenHit: 85
+GenHit position:  -0.088917 0.6002 -0.00220154
+Layer:         7
+Track number   8
+GenHit: 86
+GenHit position:  -0.120652 0.8002 -0.00498116
+Layer:         8
+Track number   8
+GenHit: 87
+GenHit position:  -0.153105 1.0002 -0.00776235
+Layer:         9
+Track number   8
+GenHit: 88
+GenHit position:  -0.0407268 0.2 0.00806517
+Layer:         0
+Track number   9
+GenHit: 89
+GenHit position:  -0.0766746 0.4 0.0199645
+Layer:         1
+Track number   9
+GenHit: 90
+GenHit position:  -0.114557 0.6 0.0318844
+Layer:         2
+Track number   9
+GenHit: 91
+GenHit position:  -0.154384 0.8 0.0438261
+Layer:         3
+Track number   9
+GenHit: 92
+GenHit position:  -0.196166 1 0.0557906
+Layer:         4
+Track number   9
+GenHit: 93
+GenHit position:  -0.0407617 0.2002 0.00807706
+Layer:         5
+Track number   9
+GenHit: 94
+GenHit position:  -0.0767116 0.4002 0.0199764
+Layer:         6
+Track number   9
+GenHit: 95
+GenHit position:  -0.114596 0.6002 0.0318964
+Layer:         7
+Track number   9
+GenHit: 96
+GenHit position:  -0.154424 0.8002 0.043838
+Layer:         8
+Track number   9
+GenHit: 97
+GenHit position:  -0.196209 1.0002 0.0558026
+Layer:         9
+Track number   9
+StripSet
+Layer: 0 number Strips: 17
+Strip: 183  ADC 19
+Strip: 184  ADC 12
+Strip: 209  ADC 16
+Strip: 210  ADC 15
+Strip: 472  ADC 27
+Strip: 473  ADC 4
+Strip: 584  ADC 16
+Strip: 585  ADC 15
+Strip: 1149  ADC 5
+Strip: 1150  ADC 26
+Strip: 1247  ADC 15
+Strip: 1248  ADC 16
+Strip: 1622  ADC 7
+Strip: 1623  ADC 24
+Strip: 1639  ADC 31
+Strip: 1691  ADC 18
+Strip: 1692  ADC 13
+Layer: 1 number Strips: 20
+Strip: 256  ADC 5
+Strip: 257  ADC 26
+Strip: 270  ADC 17
+Strip: 271  ADC 14
+Strip: 444  ADC 5
+Strip: 445  ADC 26
+Strip: 582  ADC 8
+Strip: 583  ADC 23
+Strip: 630  ADC 3
+Strip: 631  ADC 28
+Strip: 1079  ADC 17
+Strip: 1080  ADC 14
+Strip: 1230  ADC 19
+Strip: 1231  ADC 12
+Strip: 1565  ADC 27
+Strip: 1566  ADC 4
+Strip: 1602  ADC 11
+Strip: 1603  ADC 20
+Strip: 1709  ADC 10
+Strip: 1710  ADC 21
+Layer: 2 number Strips: 20
+Strip: 450  ADC 13
+Strip: 451  ADC 18
+Strip: 476  ADC 10
+Strip: 477  ADC 21
+Strip: 579  ADC 26
+Strip: 580  ADC 5
+Strip: 687  ADC 7
+Strip: 688  ADC 24
+Strip: 742  ADC 5
+Strip: 743  ADC 26
+Strip: 1045  ADC 16
+Strip: 1046  ADC 15
+Strip: 1171  ADC 24
+Strip: 1172  ADC 7
+Strip: 1415  ADC 9
+Strip: 1416  ADC 22
+Strip: 1454  ADC 4
+Strip: 1455  ADC 27
+Strip: 1545  ADC 29
+Strip: 1546  ADC 2
+Layer: 3 number Strips: 19
+Strip: 251  ADC 20
+Strip: 252  ADC 11
+Strip: 301  ADC 14
+Strip: 302  ADC 17
+Strip: 420  ADC 20
+Strip: 421  ADC 11
+Strip: 565  ADC 30
+Strip: 566  ADC 1
+Strip: 661  ADC 25
+Strip: 662  ADC 6
+Strip: 1037  ADC 15
+Strip: 1038  ADC 16
+Strip: 1213  ADC 14
+Strip: 1214  ADC 17
+Strip: 1544  ADC 17
+Strip: 1545  ADC 14
+Strip: 1598  ADC 27
+Strip: 1599  ADC 4
+Strip: 1726  ADC 31
+Layer: 4 number Strips: 20
+Strip: 42  ADC 15
+Strip: 43  ADC 16
+Strip: 122  ADC 19
+Strip: 123  ADC 12
+Strip: 258  ADC 16
+Strip: 259  ADC 15
+Strip: 437  ADC 22
+Strip: 438  ADC 9
+Strip: 582  ADC 26
+Strip: 583  ADC 5
+Strip: 1026  ADC 17
+Strip: 1027  ADC 14
+Strip: 1252  ADC 18
+Strip: 1253  ADC 13
+Strip: 1678  ADC 16
+Strip: 1679  ADC 15
+Strip: 1743  ADC 12
+Strip: 1744  ADC 19
+Strip: 1910  ADC 27
+Strip: 1911  ADC 4
+Layer: 5 number Strips: 18
+Strip: 659  ADC 26
+Strip: 660  ADC 5
+Strip: 855  ADC 19
+Strip: 856  ADC 12
+Strip: 901  ADC 4
+Strip: 902  ADC 27
+Strip: 1022  ADC 11
+Strip: 1023  ADC 20
+Strip: 1090  ADC 21
+Strip: 1091  ADC 10
+Strip: 1185  ADC 26
+Strip: 1186  ADC 5
+Strip: 1230  ADC 16
+Strip: 1231  ADC 15
+Strip: 1307  ADC 12
+Strip: 1308  ADC 19
+Strip: 1325  ADC 19
+Strip: 1326  ADC 12
+Layer: 6 number Strips: 19
+Strip: 677  ADC 7
+Strip: 678  ADC 24
+Strip: 805  ADC 3
+Strip: 806  ADC 28
+Strip: 879  ADC 9
+Strip: 880  ADC 22
+Strip: 1028  ADC 4
+Strip: 1029  ADC 27
+Strip: 1068  ADC 19
+Strip: 1069  ADC 12
+Strip: 1131  ADC 31
+Strip: 1223  ADC 19
+Strip: 1224  ADC 12
+Strip: 1227  ADC 21
+Strip: 1228  ADC 10
+Strip: 1332  ADC 20
+Strip: 1333  ADC 11
+Strip: 1346  ADC 6
+Strip: 1347  ADC 25
+Layer: 7 number Strips: 20
+Strip: 769  ADC 19
+Strip: 770  ADC 12
+Strip: 835  ADC 1
+Strip: 836  ADC 30
+Strip: 921  ADC 16
+Strip: 922  ADC 15
+Strip: 1012  ADC 19
+Strip: 1013  ADC 12
+Strip: 1068  ADC 3
+Strip: 1069  ADC 28
+Strip: 1095  ADC 11
+Strip: 1096  ADC 20
+Strip: 1175  ADC 24
+Strip: 1176  ADC 7
+Strip: 1182  ADC 3
+Strip: 1183  ADC 28
+Strip: 1261  ADC 26
+Strip: 1262  ADC 5
+Strip: 1271  ADC 23
+Strip: 1272  ADC 8
+Layer: 8 number Strips: 19
+Strip: 255  ADC 31
+Strip: 295  ADC 6
+Strip: 296  ADC 25
+Strip: 419  ADC 5
+Strip: 420  ADC 26
+Strip: 568  ADC 6
+Strip: 569  ADC 25
+Strip: 662  ADC 7
+Strip: 663  ADC 24
+Strip: 1042  ADC 7
+Strip: 1043  ADC 24
+Strip: 1208  ADC 10
+Strip: 1209  ADC 21
+Strip: 1542  ADC 17
+Strip: 1543  ADC 14
+Strip: 1604  ADC 19
+Strip: 1605  ADC 12
+Strip: 1727  ADC 12
+Strip: 1728  ADC 19
+Layer: 9 number Strips: 20
+Strip: 47  ADC 22
+Strip: 48  ADC 9
+Strip: 114  ADC 9
+Strip: 115  ADC 22
+Strip: 257  ADC 15
+Strip: 258  ADC 16
+Strip: 442  ADC 12
+Strip: 443  ADC 19
+Strip: 584  ADC 15
+Strip: 585  ADC 16
+Strip: 1033  ADC 22
+Strip: 1034  ADC 9
+Strip: 1246  ADC 10
+Strip: 1247  ADC 21
+Strip: 1676  ADC 22
+Strip: 1677  ADC 9
+Strip: 1750  ADC 10
+Strip: 1751  ADC 21
+Strip: 1911  ADC 6
+Strip: 1912  ADC 25
+Event Number: 3
+Event: 3
+GenTrackSet
+Number Gen Tracks: 10
+Gen Track number: 0
+Charge -1
+4 momentum -5.42138 35.2702 2.75116 35.7903 
+Track parameters:  pT 35.6844 cot(theta) 12.9706 phi0 1.72331 d0 -0.00356156 z0 -0.00648841
+Helix paramters: kappa 0.0280235 tan(Lambda) 0.0770972 phi0 to d0 3.29411
+Gen Track number: 1
+Charge 1
+4 momentum -0.53735 10.6815 0.937656 10.736 
+Track parameters:  pT 10.695 cot(theta) 11.4061 phi0 1.62106 d0 0.00555446 z0 -0.00114358
+Helix paramters: kappa -0.093502 tan(Lambda) 0.0876727 phi0 to d0 3.19186
+Gen Track number: 2
+Charge -1
+4 momentum 0.447979 9.59283 0.432818 9.61303 
+Track parameters:  pT 9.60329 cot(theta) 22.1878 phi0 1.52413 d0 0.0054638 z0 0.00732077
+Helix paramters: kappa 0.104131 tan(Lambda) 0.0450697 phi0 to d0 3.09493
+Gen Track number: 3
+Charge 1
+4 momentum -0.852618 19.6971 -0.105706 19.7158 
+Track parameters:  pT 19.7155 cot(theta) -186.512 phi0 1.61406 d0 0.00539569 z0 -0.00472508
+Helix paramters: kappa -0.0507215 tan(Lambda) -0.00536159 phi0 to d0 3.18485
+Gen Track number: 4
+Charge 1
+4 momentum 0.555744 8.05804 -0.578914 8.0979 
+Track parameters:  pT 8.07718 cot(theta) -13.9523 phi0 1.50194 d0 0.00439282 z0 0.00504447
+Helix paramters: kappa -0.123806 tan(Lambda) -0.0716728 phi0 to d0 3.07273
+Gen Track number: 5
+Charge 1
+4 momentum -1.25062 7.15012 0.118792 7.25964 
+Track parameters:  pT 7.25867 cot(theta) 61.1042 phi0 1.74395 d0 -0.0095046 z0 -0.000672979
+Helix paramters: kappa -0.137766 tan(Lambda) 0.0163655 phi0 to d0 3.31475
+Gen Track number: 6
+Charge -1
+4 momentum -2.27536 19.3631 -1.22681 19.5349 
+Track parameters:  pT 19.4964 cot(theta) -15.8919 phi0 1.68777 d0 0.0063492 z0 -0.000656546
+Helix paramters: kappa 0.0512916 tan(Lambda) -0.0629252 phi0 to d0 3.25857
+Gen Track number: 7
+Charge -1
+4 momentum -2.6876 18.6125 0.0405305 18.8056 
+Track parameters:  pT 18.8056 cot(theta) 463.986 phi0 1.7142 d0 -0.00698548 z0 0.00884213
+Helix paramters: kappa 0.0531757 tan(Lambda) 0.00215524 phi0 to d0 3.285
+Gen Track number: 8
+Charge -1
+4 momentum 1.7684 22.5419 1.82524 22.6848 
+Track parameters:  pT 22.6112 cot(theta) 12.3881 phi0 1.49251 d0 -0.00905628 z0 0.00804505
+Helix paramters: kappa 0.0442259 tan(Lambda) 0.0807226 phi0 to d0 3.0633
+Gen Track number: 9
+Charge -1
+4 momentum 1.10505 23.6997 2.18492 23.8258 
+Track parameters:  pT 23.7254 cot(theta) 10.8587 phi0 1.5242 d0 0.00319027 z0 0.00167365
+Helix paramters: kappa 0.0421489 tan(Lambda) 0.0920919 phi0 to d0 3.095
+GenHitSet
+Number GenHits: 99
+GenHit: 0
+GenHit position:  -0.0273117 0.2 -0.0220488
+Layer:         0
+Track number   0
+GenHit: 1
+GenHit position:  -0.0585751 0.4 -0.0376554
+Layer:         1
+Track number   0
+GenHit: 2
+GenHit position:  -0.0901871 0.6 -0.0532663
+Layer:         2
+Track number   0
+GenHit: 3
+GenHit position:  -0.122148 0.8 -0.0688814
+Layer:         3
+Track number   0
+GenHit: 4
+GenHit position:  -0.154458 1 -0.0845007
+Layer:         4
+Track number   0
+GenHit: 5
+GenHit position:  -0.0273428 0.2002 -0.0220644
+Layer:         5
+Track number   0
+GenHit: 6
+GenHit position:  -0.0586066 0.4002 -0.0376711
+Layer:         6
+Track number   0
+GenHit: 7
+GenHit position:  -0.0902189 0.6002 -0.0532819
+Layer:         7
+Track number   0
+GenHit: 8
+GenHit position:  -0.12218 0.8002 -0.068897
+Layer:         8
+Track number   0
+GenHit: 9
+GenHit position:  -0.154491 1.0002 -0.0845164
+Layer:         9
+Track number   0
+GenHit: 10
+GenHit position:  -0.0150587 0.2 -0.0187224
+Layer:         0
+Track number   1
+GenHit: 11
+GenHit position:  -0.0234313 0.4 -0.0362723
+Layer:         1
+Track number   1
+GenHit: 12
+GenHit position:  -0.03068 0.6 -0.0538184
+Layer:         2
+Track number   1
+GenHit: 13
+GenHit position:  -0.0368057 0.8 -0.0713612
+Layer:         3
+Track number   1
+GenHit: 14
+GenHit position:  -0.0418088 1 -0.0889012
+Layer:         4
+Track number   1
+GenHit: 15
+GenHit position:  -0.0150676 0.2002 -0.0187399
+Layer:         5
+Track number   1
+GenHit: 16
+GenHit position:  -0.0234391 0.4002 -0.0362899
+Layer:         6
+Track number   1
+GenHit: 17
+GenHit position:  -0.0306867 0.6002 -0.0538359
+Layer:         7
+Track number   1
+GenHit: 18
+GenHit position:  -0.0368112 0.8002 -0.0713787
+Layer:         8
+Track number   1
+GenHit: 19
+GenHit position:  -0.0418132 1.0002 -0.0889187
+Layer:         9
+Track number   1
+GenHit: 20
+GenHit position:  0.00324549 0.2 -0.00169025
+Layer:         0
+Track number   2
+GenHit: 21
+GenHit position:  0.0107089 0.4 -0.0107105
+Layer:         1
+Track number   2
+GenHit: 22
+GenHit position:  0.0169215 0.6 -0.0197288
+Layer:         2
+Track number   2
+GenHit: 23
+GenHit position:  0.0218839 0.8 -0.0287455
+Layer:         3
+Track number   2
+GenHit: 24
+GenHit position:  0.0255966 1 -0.0377611
+Layer:         4
+Track number   2
+GenHit: 25
+GenHit position:  0.00325358 0.2002 -0.00169927
+Layer:         5
+Track number   2
+GenHit: 26
+GenHit position:  0.0107158 0.4002 -0.0107195
+Layer:         6
+Track number   2
+GenHit: 27
+GenHit position:  0.0169271 0.6002 -0.0197378
+Layer:         7
+Track number   2
+GenHit: 28
+GenHit position:  0.0218882 0.8002 -0.0287546
+Layer:         8
+Track number   2
+GenHit: 29
+GenHit position:  0.0255997 1.0002 -0.0377701
+Layer:         9
+Track number   2
+GenHit: 30
+GenHit position:  -0.0137524 0.2 -0.00365058
+Layer:         0
+Track number   3
+GenHit: 31
+GenHit position:  -0.0214943 0.4 -0.00257746
+Layer:         1
+Track number   3
+GenHit: 32
+GenHit position:  -0.0286268 0.6 -0.00150446
+Layer:         2
+Track number   3
+GenHit: 33
+GenHit position:  -0.0351499 0.8 -0.000431569
+Layer:         3
+Track number   3
+GenHit: 34
+GenHit position:  -0.0410639 1 0.000641217
+Layer:         4
+Track number   3
+GenHit: 35
+GenHit position:  -0.0137604 0.2002 -0.0036495
+Layer:         5
+Track number   3
+GenHit: 36
+GenHit position:  -0.0215018 0.4002 -0.00257638
+Layer:         6
+Track number   3
+GenHit: 37
+GenHit position:  -0.0286336 0.6002 -0.00150338
+Layer:         7
+Track number   3
+GenHit: 38
+GenHit position:  -0.0351561 0.8002 -0.000430497
+Layer:         8
+Track number   3
+GenHit: 39
+GenHit position:  -0.0410695 1.0002 0.00064229
+Layer:         9
+Track number   3
+GenHit: 40
+GenHit position:  0.010136 0.2 0.0193952
+Layer:         0
+Track number   4
+GenHit: 41
+GenHit position:  0.026173 0.4 0.0337758
+Layer:         1
+Track number   4
+GenHit: 42
+GenHit position:  0.0437104 0.6 0.0481654
+Layer:         2
+Track number   4
+GenHit: 43
+GenHit position:  0.062751 0.8 0.0625648
+Layer:         3
+Track number   4
+GenHit: 44
+GenHit position:  0.0832983 1 0.0769749
+Layer:         4
+Track number   4
+GenHit: 45
+GenHit position:  0.0101513 0.2002 0.0194096
+Layer:         5
+Track number   4
+GenHit: 46
+GenHit position:  0.0261898 0.4002 0.0337902
+Layer:         6
+Track number   4
+GenHit: 47
+GenHit position:  0.0437287 0.6002 0.0481798
+Layer:         7
+Track number   4
+GenHit: 48
+GenHit position:  0.0627708 0.8002 0.0625792
+Layer:         8
+Track number   4
+GenHit: 49
+GenHit position:  0.0833196 1.0002 0.0769893
+Layer:         9
+Track number   4
+GenHit: 50
+GenHit position:  -0.024484 0.2 -0.0039662
+Layer:         0
+Track number   5
+GenHit: 51
+GenHit position:  -0.0568958 0.4 -0.00728201
+Layer:         1
+Track number   5
+GenHit: 52
+GenHit position:  -0.0875935 0.6 -0.0105934
+Layer:         2
+Track number   5
+GenHit: 53
+GenHit position:  -0.116584 0.8 -0.0139008
+Layer:         3
+Track number   5
+GenHit: 54
+GenHit position:  -0.143872 1 -0.0172042
+Layer:         4
+Track number   5
+GenHit: 55
+GenHit position:  -0.0245173 0.2002 -0.00396952
+Layer:         5
+Track number   5
+GenHit: 56
+GenHit position:  -0.0569274 0.4002 -0.00728532
+Layer:         6
+Track number   5
+GenHit: 57
+GenHit position:  -0.0876233 0.6002 -0.0105968
+Layer:         7
+Track number   5
+GenHit: 58
+GenHit position:  -0.116612 0.8002 -0.0139041
+Layer:         8
+Track number   5
+GenHit: 59
+GenHit position:  -0.143899 1.0002 -0.0172075
+Layer:         9
+Track number   5
+GenHit: 60
+GenHit position:  -0.0302112 0.2 0.0120644
+Layer:         0
+Track number   6
+GenHit: 61
+GenHit position:  -0.0546581 0.4 0.0247431
+Layer:         1
+Track number   6
+GenHit: 62
+GenHit position:  -0.0797343 0.6 0.0374267
+Layer:         2
+Track number   6
+GenHit: 63
+GenHit position:  -0.10544 0.8 0.0501153
+Layer:         3
+Track number   6
+GenHit: 64
+GenHit position:  -0.131777 1 0.062809
+Layer:         4
+Track number   6
+GenHit: 65
+GenHit position:  -0.0302354 0.2002 0.0120771
+Layer:         5
+Track number   6
+GenHit: 66
+GenHit position:  -0.0546829 0.4002 0.0247558
+Layer:         6
+Track number   6
+GenHit: 67
+GenHit position:  -0.0797597 0.6002 0.0374394
+Layer:         7
+Track number   6
+GenHit: 68
+GenHit position:  -0.105466 0.8002 0.0501279
+Layer:         8
+Track number   6
+GenHit: 69
+GenHit position:  -0.131804 1.0002 0.0628217
+Layer:         9
+Track number   6
+GenHit: 70
+GenHit position:  -0.0221473 0.2 0.00840868
+Layer:         0
+Track number   7
+GenHit: 71
+GenHit position:  -0.0520112 0.4 0.00797286
+Layer:         1
+Track number   7
+GenHit: 72
+GenHit position:  -0.113719 0.8 0.00710056
+Layer:         3
+Track number   7
+GenHit: 73
+GenHit position:  -0.145564 1 0.00666409
+Layer:         4
+Track number   7
+GenHit: 74
+GenHit position:  -0.0221769 0.2002 0.00840825
+Layer:         5
+Track number   7
+GenHit: 75
+GenHit position:  -0.0520414 0.4002 0.00797242
+Layer:         6
+Track number   7
+GenHit: 76
+GenHit position:  -0.0825655 0.6002 0.00753638
+Layer:         7
+Track number   7
+GenHit: 77
+GenHit position:  -0.11375 0.8002 0.00710013
+Layer:         8
+Track number   7
+GenHit: 78
+GenHit position:  -0.145596 1.0002 0.00666365
+Layer:         9
+Track number   7
+GenHit: 79
+GenHit position:  0.0245045 0.2 -0.00820475
+Layer:         0
+Track number   8
+GenHit: 80
+GenHit position:  0.03939 0.4 -0.0243939
+Layer:         1
+Track number   8
+GenHit: 81
+GenHit position:  0.0537409 0.6 -0.04058
+Layer:         2
+Track number   8
+GenHit: 82
+GenHit position:  0.0675575 0.8 -0.056763
+Layer:         3
+Track number   8
+GenHit: 83
+GenHit position:  0.0808401 1 -0.0729431
+Layer:         4
+Track number   8
+GenHit: 84
+GenHit position:  0.0245197 0.2002 -0.00822094
+Layer:         5
+Track number   8
+GenHit: 85
+GenHit position:  0.0394046 0.4002 -0.0244101
+Layer:         6
+Track number   8
+GenHit: 86
+GenHit position:  0.053755 0.6002 -0.0405962
+Layer:         7
+Track number   8
+GenHit: 87
+GenHit position:  0.0675711 0.8002 -0.0567792
+Layer:         8
+Track number   8
+GenHit: 88
+GenHit position:  0.0808531 1.0002 -0.0729592
+Layer:         9
+Track number   8
+GenHit: 89
+GenHit position:  0.00587858 0.2 -0.01675
+Layer:         0
+Track number   9
+GenHit: 90
+GenHit position:  0.014444 0.4 -0.0351853
+Layer:         1
+Track number   9
+GenHit: 91
+GenHit position:  0.0225026 0.6 -0.0536186
+Layer:         2
+Track number   9
+GenHit: 92
+GenHit position:  0.0300547 0.8 -0.0720501
+Layer:         3
+Track number   9
+GenHit: 93
+GenHit position:  0.0371003 1 -0.0904799
+Layer:         4
+Track number   9
+GenHit: 94
+GenHit position:  0.00588739 0.2002 -0.0167684
+Layer:         5
+Track number   9
+GenHit: 95
+GenHit position:  0.0144523 0.4002 -0.0352037
+Layer:         6
+Track number   9
+GenHit: 96
+GenHit position:  0.0225104 0.6002 -0.053637
+Layer:         7
+Track number   9
+GenHit: 97
+GenHit position:  0.030062 0.8002 -0.0720685
+Layer:         8
+Track number   9
+GenHit: 98
+GenHit position:  0.0371071 1.0002 -0.0904984
+Layer:         9
+Track number   9
+StripSet
+Layer: 0 number Strips: 19
+Strip: 419  ADC 31
+Strip: 477  ADC 18
+Strip: 478  ADC 13
+Strip: 533  ADC 5
+Strip: 534  ADC 26
+Strip: 580  ADC 8
+Strip: 581  ADC 23
+Strip: 722  ADC 28
+Strip: 723  ADC 3
+Strip: 748  ADC 24
+Strip: 749  ADC 7
+Strip: 1088  ADC 14
+Strip: 1089  ADC 17
+Strip: 1140  ADC 6
+Strip: 1141  ADC 25
+Strip: 1226  ADC 21
+Strip: 1227  ADC 10
+Strip: 1513  ADC 19
+Strip: 1514  ADC 12
+Layer: 1 number Strips: 20
+Strip: 437  ADC 6
+Strip: 438  ADC 25
+Strip: 454  ADC 17
+Strip: 455  ADC 14
+Strip: 477  ADC 24
+Strip: 478  ADC 7
+Strip: 503  ADC 14
+Strip: 504  ADC 17
+Strip: 789  ADC 22
+Strip: 790  ADC 9
+Strip: 808  ADC 17
+Strip: 809  ADC 14
+Strip: 1130  ADC 1
+Strip: 1131  ADC 30
+Strip: 1168  ADC 20
+Strip: 1169  ADC 11
+Strip: 1284  ADC 1
+Strip: 1285  ADC 30
+Strip: 1417  ADC 18
+Strip: 1418  ADC 13
+Layer: 2 number Strips: 17
+Strip: 572  ADC 10
+Strip: 573  ADC 21
+Strip: 585  ADC 5
+Strip: 586  ADC 26
+Strip: 625  ADC 26
+Strip: 626  ADC 5
+Strip: 870  ADC 31
+Strip: 880  ADC 4
+Strip: 881  ADC 27
+Strip: 1108  ADC 25
+Strip: 1109  ADC 6
+Strip: 1135  ADC 4
+Strip: 1136  ADC 27
+Strip: 1241  ADC 1
+Strip: 1242  ADC 30
+Strip: 1291  ADC 4
+Strip: 1292  ADC 27
+Layer: 3 number Strips: 19
+Strip: 412  ADC 1
+Strip: 413  ADC 30
+Strip: 440  ADC 13
+Strip: 441  ADC 18
+Strip: 455  ADC 31
+Strip: 496  ADC 18
+Strip: 497  ADC 13
+Strip: 839  ADC 29
+Strip: 840  ADC 2
+Strip: 847  ADC 9
+Strip: 848  ADC 22
+Strip: 1133  ADC 28
+Strip: 1134  ADC 3
+Strip: 1174  ADC 19
+Strip: 1175  ADC 12
+Strip: 1336  ADC 2
+Strip: 1337  ADC 29
+Strip: 1361  ADC 10
+Strip: 1362  ADC 21
+Layer: 4 number Strips: 20
+Strip: 250  ADC 2
+Strip: 251  ADC 29
+Strip: 295  ADC 28
+Strip: 296  ADC 3
+Strip: 304  ADC 20
+Strip: 305  ADC 11
+Strip: 364  ADC 10
+Strip: 365  ADC 21
+Strip: 814  ADC 16
+Strip: 815  ADC 15
+Strip: 818  ADC 21
+Strip: 819  ADC 10
+Strip: 1151  ADC 21
+Strip: 1152  ADC 10
+Strip: 1209  ADC 24
+Strip: 1210  ADC 7
+Strip: 1427  ADC 26
+Strip: 1428  ADC 5
+Strip: 1439  ADC 3
+Strip: 1440  ADC 28
+Layer: 5 number Strips: 18
+Strip: 582  ADC 31
+Strip: 648  ADC 11
+Strip: 649  ADC 20
+Strip: 687  ADC 4
+Strip: 688  ADC 27
+Strip: 859  ADC 27
+Strip: 860  ADC 4
+Strip: 944  ADC 27
+Strip: 945  ADC 4
+Strip: 950  ADC 12
+Strip: 951  ADC 19
+Strip: 989  ADC 31
+Strip: 1191  ADC 15
+Strip: 1192  ADC 16
+Strip: 1265  ADC 30
+Strip: 1266  ADC 1
+Strip: 1412  ADC 26
+Strip: 1413  ADC 5
+Layer: 6 number Strips: 20
+Strip: 646  ADC 6
+Strip: 647  ADC 25
+Strip: 660  ADC 5
+Strip: 661  ADC 26
+Strip: 671  ADC 25
+Strip: 672  ADC 6
+Strip: 779  ADC 15
+Strip: 780  ADC 16
+Strip: 916  ADC 24
+Strip: 917  ADC 7
+Strip: 951  ADC 24
+Strip: 952  ADC 7
+Strip: 997  ADC 8
+Strip: 998  ADC 23
+Strip: 1103  ADC 17
+Strip: 1104  ADC 14
+Strip: 1270  ADC 13
+Strip: 1271  ADC 18
+Strip: 1361  ADC 18
+Strip: 1362  ADC 13
+Layer: 7 number Strips: 18
+Strip: 754  ADC 24
+Strip: 755  ADC 32
+Strip: 756  ADC 1
+Strip: 757  ADC 30
+Strip: 820  ADC 28
+Strip: 821  ADC 3
+Strip: 924  ADC 19
+Strip: 925  ADC 12
+Strip: 970  ADC 20
+Strip: 971  ADC 11
+Strip: 1016  ADC 30
+Strip: 1017  ADC 1
+Strip: 1061  ADC 23
+Strip: 1062  ADC 8
+Strip: 1210  ADC 13
+Strip: 1211  ADC 18
+Strip: 1264  ADC 4
+Strip: 1265  ADC 27
+Layer: 8 number Strips: 20
+Strip: 406  ADC 5
+Strip: 407  ADC 26
+Strip: 439  ADC 27
+Strip: 440  ADC 4
+Strip: 456  ADC 20
+Strip: 457  ADC 11
+Strip: 500  ADC 29
+Strip: 501  ADC 2
+Strip: 833  ADC 19
+Strip: 834  ADC 12
+Strip: 847  ADC 1
+Strip: 848  ADC 30
+Strip: 1130  ADC 23
+Strip: 1131  ADC 8
+Strip: 1167  ADC 3
+Strip: 1168  ADC 28
+Strip: 1342  ADC 12
+Strip: 1343  ADC 19
+Strip: 1356  ADC 19
+Strip: 1357  ADC 12
+Layer: 9 number Strips: 20
+Strip: 243  ADC 17
+Strip: 244  ADC 14
+Strip: 296  ADC 19
+Strip: 297  ADC 12
+Strip: 302  ADC 21
+Strip: 303  ADC 10
+Strip: 369  ADC 15
+Strip: 370  ADC 16
+Strip: 806  ADC 23
+Strip: 807  ADC 8
+Strip: 818  ADC 23
+Strip: 819  ADC 8
+Strip: 1147  ADC 2
+Strip: 1148  ADC 29
+Strip: 1200  ADC 3
+Strip: 1201  ADC 28
+Strip: 1421  ADC 10
+Strip: 1422  ADC 21
+Strip: 1446  ADC 8
+Strip: 1447  ADC 23
+Event Number: 4
+Event: 4
+GenTrackSet
+Number Gen Tracks: 10
+Gen Track number: 0
+Charge 1
+4 momentum 3.15368 21.4299 -0.517903 21.6669 
+Track parameters:  pT 21.6607 cot(theta) -41.8239 phi0 1.42468 d0 0.00272201 z0 -0.00612491
+Helix paramters: kappa -0.0461665 tan(Lambda) -0.0239098 phi0 to d0 2.99548
+Gen Track number: 1
+Charge 1
+4 momentum -0.951374 7.02376 0.446905 7.10198 
+Track parameters:  pT 7.0879 cot(theta) 15.86 phi0 1.70543 d0 0.00590895 z0 -0.00714118
+Helix paramters: kappa -0.141085 tan(Lambda) 0.0630517 phi0 to d0 3.27622
+Gen Track number: 2
+Charge -1
+4 momentum -0.476095 12.5359 1.18053 12.6004 
+Track parameters:  pT 12.5449 cot(theta) 10.6265 phi0 1.60876 d0 0.00771948 z0 0.00521465
+Helix paramters: kappa 0.0797135 tan(Lambda) 0.0941043 phi0 to d0 3.17955
+Gen Track number: 3
+Charge -1
+4 momentum 1.75611 12.6152 -0.153775 12.7378 
+Track parameters:  pT 12.7368 cot(theta) -82.8279 phi0 1.43248 d0 0.00563172 z0 0.00549572
+Helix paramters: kappa 0.0785125 tan(Lambda) -0.0120732 phi0 to d0 3.00328
+Gen Track number: 4
+Charge 1
+4 momentum -0.142824 6.64561 -0.563978 6.67103 
+Track parameters:  pT 6.64714 cot(theta) -11.7862 phi0 1.59228 d0 -0.0046461 z0 0.00157967
+Helix paramters: kappa -0.150441 tan(Lambda) -0.0848451 phi0 to d0 3.16308
+Gen Track number: 5
+Charge 1
+4 momentum -2.50454 27.2907 0.0534555 27.4055 
+Track parameters:  pT 27.4054 cot(theta) 512.678 phi0 1.66231 d0 0.00912315 z0 0.00559207
+Helix paramters: kappa -0.0364891 tan(Lambda) 0.00195054 phi0 to d0 3.23311
+Gen Track number: 6
+Charge 1
+4 momentum -5.48539 37.9967 -0.676766 38.3965 
+Track parameters:  pT 38.3906 cot(theta) -56.7265 phi0 1.71417 d0 -0.000902094 z0 0.00466847
+Helix paramters: kappa -0.0260481 tan(Lambda) -0.0176284 phi0 to d0 3.28497
+Gen Track number: 7
+Charge 1
+4 momentum -0.571578 32.7015 1.20603 32.7287 
+Track parameters:  pT 32.7065 cot(theta) 27.1191 phi0 1.58827 d0 0.00498662 z0 0.00194784
+Helix paramters: kappa -0.030575 tan(Lambda) 0.0368744 phi0 to d0 3.15907
+Gen Track number: 8
+Charge -1
+4 momentum -4.724 33.5406 -1.31552 33.8972 
+Track parameters:  pT 33.8717 cot(theta) -25.7478 phi0 1.71072 d0 -0.00346609 z0 -0.000694199
+Helix paramters: kappa 0.0295232 tan(Lambda) -0.0388383 phi0 to d0 3.28152
+Gen Track number: 9
+Charge 1
+4 momentum 0.771946 9.89749 0.737071 9.95487 
+Track parameters:  pT 9.92755 cot(theta) 13.4689 phi0 1.49296 d0 0.00577408 z0 -0.00531531
+Helix paramters: kappa -0.10073 tan(Lambda) 0.0742451 phi0 to d0 3.06376
+GenHitSet
+Number GenHits: 97
+GenHit: 0
+GenHit position:  0.0269661 0.2 -0.00130003
+Layer:         0
+Track number   0
+GenHit: 1
+GenHit position:  0.0572559 0.4 0.00353646
+Layer:         1
+Track number   0
+GenHit: 2
+GenHit position:  0.0881188 0.6 0.00837502
+Layer:         2
+Track number   0
+GenHit: 3
+GenHit position:  0.119556 0.8 0.0132157
+Layer:         3
+Track number   0
+GenHit: 4
+GenHit position:  0.151567 1 0.0180585
+Layer:         4
+Track number   0
+GenHit: 5
+GenHit position:  0.0269961 0.2002 -0.00129519
+Layer:         5
+Track number   0
+GenHit: 6
+GenHit position:  0.0572864 0.4002 0.0035413
+Layer:         6
+Track number   0
+GenHit: 7
+GenHit position:  0.08815 0.6002 0.00837986
+Layer:         7
+Track number   0
+GenHit: 8
+GenHit position:  0.119587 0.8002 0.0132205
+Layer:         8
+Track number   0
+GenHit: 9
+GenHit position:  -0.0321778 0.2 -0.0199099
+Layer:         0
+Track number   1
+GenHit: 10
+GenHit position:  -0.0566599 0.4 -0.0326144
+Layer:         1
+Track number   1
+GenHit: 11
+GenHit position:  -0.0794147 0.6 -0.0453061
+Layer:         2
+Track number   1
+GenHit: 12
+GenHit position:  -0.100447 0.8 -0.0579861
+Layer:         3
+Track number   1
+GenHit: 13
+GenHit position:  -0.119762 1 -0.0706551
+Layer:         4
+Track number   1
+GenHit: 14
+GenHit position:  -0.0322032 0.2002 -0.0199226
+Layer:         5
+Track number   1
+GenHit: 15
+GenHit position:  -0.0566836 0.4002 -0.0326271
+Layer:         6
+Track number   1
+GenHit: 16
+GenHit position:  -0.0794366 0.6002 -0.0453188
+Layer:         7
+Track number   1
+GenHit: 17
+GenHit position:  -0.100467 0.8002 -0.0579987
+Layer:         8
+Track number   1
+GenHit: 18
+GenHit position:  -0.11978 1.0002 -0.0706678
+Layer:         9
+Track number   1
+GenHit: 19
+GenHit position:  -0.0158012 0.2 -0.0136491
+Layer:         0
+Track number   2
+GenHit: 20
+GenHit position:  -0.0248359 0.4 -0.0324892
+Layer:         1
+Track number   2
+GenHit: 21
+GenHit position:  -0.0348298 0.6 -0.0513336
+Layer:         2
+Track number   2
+GenHit: 22
+GenHit position:  -0.0457835 0.8 -0.0701827
+Layer:         3
+Track number   2
+GenHit: 23
+GenHit position:  -0.0576978 1 -0.0890369
+Layer:         4
+Track number   2
+GenHit: 24
+GenHit position:  -0.0158098 0.2002 -0.013668
+Layer:         5
+Track number   2
+GenHit: 25
+GenHit position:  -0.0248455 0.4002 -0.0325081
+Layer:         6
+Track number   2
+GenHit: 26
+GenHit position:  -0.0348403 0.6002 -0.0513524
+Layer:         7
+Track number   2
+GenHit: 27
+GenHit position:  -0.045795 0.8002 -0.0702015
+Layer:         8
+Track number   2
+GenHit: 28
+GenHit position:  -0.0577102 1.0002 -0.0890558
+Layer:         9
+Track number   2
+GenHit: 29
+GenHit position:  0.0216747 0.2 0.00792339
+Layer:         0
+Track number   3
+GenHit: 30
+GenHit position:  0.0480683 0.4 0.010359
+Layer:         1
+Track number   3
+GenHit: 31
+GenHit position:  0.0734967 0.6 0.0127931
+Layer:         2
+Track number   3
+GenHit: 32
+GenHit position:  0.0979614 0.8 0.0152257
+Layer:         3
+Track number   3
+GenHit: 33
+GenHit position:  0.121464 1 0.017657
+Layer:         4
+Track number   3
+GenHit: 34
+GenHit position:  0.0217016 0.2002 0.00792583
+Layer:         5
+Track number   3
+GenHit: 35
+GenHit position:  0.0480942 0.4002 0.0103614
+Layer:         6
+Track number   3
+GenHit: 36
+GenHit position:  0.0979854 0.8002 0.0152281
+Layer:         8
+Track number   3
+GenHit: 37
+GenHit position:  0.121487 1.0002 0.0176594
+Layer:         9
+Track number   3
+GenHit: 38
+GenHit position:  0.00125048 0.2 0.0185427
+Layer:         0
+Track number   4
+GenHit: 39
+GenHit position:  -0.000341731 0.4 0.0355124
+Layer:         1
+Track number   4
+GenHit: 40
+GenHit position:  -0.000129831 0.6 0.0524814
+Layer:         2
+Track number   4
+GenHit: 41
+GenHit position:  0.00188623 0.8 0.0694514
+Layer:         3
+Track number   4
+GenHit: 42
+GenHit position:  0.00570694 1 0.0864236
+Layer:         4
+Track number   4
+GenHit: 43
+GenHit position:  0.00124798 0.2002 0.0185597
+Layer:         5
+Track number   4
+GenHit: 44
+GenHit position:  -0.000342421 0.4002 0.0355293
+Layer:         6
+Track number   4
+GenHit: 45
+GenHit position:  -0.000128716 0.6002 0.0524984
+Layer:         7
+Track number   4
+GenHit: 46
+GenHit position:  0.00188915 0.8002 0.0694684
+Layer:         8
+Track number   4
+GenHit: 47
+GenHit position:  0.00571166 1.0002 0.0864405
+Layer:         9
+Track number   4
+GenHit: 48
+GenHit position:  -0.0272926 0.2 0.00519873
+Layer:         0
+Track number   5
+GenHit: 49
+GenHit position:  -0.044981 0.4 0.0048071
+Layer:         1
+Track number   5
+GenHit: 50
+GenHit position:  -0.0622267 0.6 0.00441554
+Layer:         2
+Track number   5
+GenHit: 51
+GenHit position:  -0.0790301 0.8 0.00402406
+Layer:         3
+Track number   5
+GenHit: 52
+GenHit position:  -0.0953914 1 0.00363265
+Layer:         4
+Track number   5
+GenHit: 53
+GenHit position:  -0.0273105 0.2002 0.00519834
+Layer:         5
+Track number   5
+GenHit: 54
+GenHit position:  -0.0449984 0.4002 0.00480671
+Layer:         6
+Track number   5
+GenHit: 55
+GenHit position:  -0.0622437 0.6002 0.00441515
+Layer:         7
+Track number   5
+GenHit: 56
+GenHit position:  -0.0790467 0.8002 0.00402367
+Layer:         8
+Track number   5
+GenHit: 57
+GenHit position:  -0.0954075 1.0002 0.00363226
+Layer:         9
+Track number   5
+GenHit: 58
+GenHit position:  -0.0278007 0.2 0.00822801
+Layer:         0
+Track number   6
+GenHit: 59
+GenHit position:  -0.0561909 0.4 0.011789
+Layer:         1
+Track number   6
+GenHit: 60
+GenHit position:  -0.0842594 0.6 0.0153493
+Layer:         2
+Track number   6
+GenHit: 61
+GenHit position:  -0.112006 0.8 0.0189087
+Layer:         3
+Track number   6
+GenHit: 62
+GenHit position:  -0.139432 1 0.0224674
+Layer:         4
+Track number   6
+GenHit: 63
+GenHit position:  -0.0278293 0.2002 0.00823157
+Layer:         5
+Track number   6
+GenHit: 64
+GenHit position:  -0.0562192 0.4002 0.0117926
+Layer:         6
+Track number   6
+GenHit: 65
+GenHit position:  -0.0842873 0.6002 0.0153528
+Layer:         7
+Track number   6
+GenHit: 66
+GenHit position:  -0.112034 0.8002 0.0189123
+Layer:         8
+Track number   6
+GenHit: 67
+GenHit position:  -0.139459 1.0002 0.022471
+Layer:         9
+Track number   6
+GenHit: 68
+GenHit position:  -0.00829955 0.2 -0.00543126
+Layer:         0
+Track number   7
+GenHit: 69
+GenHit position:  -0.0138236 0.6 -0.0201824
+Layer:         2
+Track number   7
+GenHit: 70
+GenHit position:  -0.0160355 0.8 -0.0275577
+Layer:         3
+Track number   7
+GenHit: 71
+GenHit position:  -0.0178807 1 -0.0349329
+Layer:         4
+Track number   7
+GenHit: 72
+GenHit position:  -0.00830268 0.2002 -0.00543863
+Layer:         5
+Track number   7
+GenHit: 73
+GenHit position:  -0.0112477 0.4002 -0.0128143
+Layer:         6
+Track number   7
+GenHit: 74
+GenHit position:  -0.013826 0.6002 -0.0201898
+Layer:         7
+Track number   7
+GenHit: 75
+GenHit position:  -0.0160375 0.8002 -0.0275651
+Layer:         8
+Track number   7
+GenHit: 76
+GenHit position:  -0.0178824 1.0002 -0.0349403
+Layer:         9
+Track number   7
+GenHit: 77
+GenHit position:  -0.02485 0.2 0.00713216
+Layer:         0
+Track number   8
+GenHit: 78
+GenHit position:  -0.0535652 0.4 0.0149795
+Layer:         1
+Track number   8
+GenHit: 79
+GenHit position:  -0.0826455 0.6 0.0228288
+Layer:         2
+Track number   8
+GenHit: 80
+GenHit position:  -0.112091 0.8 0.0306802
+Layer:         3
+Track number   8
+GenHit: 81
+GenHit position:  -0.141903 1 0.0385337
+Layer:         4
+Track number   8
+GenHit: 82
+GenHit position:  -0.0248785 0.2002 0.00714001
+Layer:         5
+Track number   8
+GenHit: 83
+GenHit position:  -0.0535941 0.4002 0.0149873
+Layer:         6
+Track number   8
+GenHit: 84
+GenHit position:  -0.0826748 0.6002 0.0228367
+Layer:         7
+Track number   8
+GenHit: 85
+GenHit position:  -0.112121 0.8002 0.0306881
+Layer:         8
+Track number   8
+GenHit: 86
+GenHit position:  -0.141933 1.0002 0.0385416
+Layer:         9
+Track number   8
+GenHit: 87
+GenHit position:  0.0104142 0.2 -0.0201796
+Layer:         0
+Track number   9
+GenHit: 88
+GenHit position:  0.0278409 0.4 -0.0350849
+Layer:         1
+Track number   9
+GenHit: 89
+GenHit position:  0.0464902 0.6 -0.0499983
+Layer:         2
+Track number   9
+GenHit: 90
+GenHit position:  0.0663643 0.8 -0.0649205
+Layer:         3
+Track number   9
+GenHit: 91
+GenHit position:  0.0874654 1 -0.0798519
+Layer:         4
+Track number   9
+GenHit: 92
+GenHit position:  0.0104311 0.2002 -0.0201945
+Layer:         5
+Track number   9
+GenHit: 93
+GenHit position:  0.0278589 0.4002 -0.0350998
+Layer:         6
+Track number   9
+GenHit: 94
+GenHit position:  0.0465094 0.6002 -0.0500132
+Layer:         7
+Track number   9
+GenHit: 95
+GenHit position:  0.0663848 0.8002 -0.0649354
+Layer:         8
+Track number   9
+GenHit: 96
+GenHit position:  0.0874871 1.0002 -0.0798669
+Layer:         9
+Track number   9
+StripSet
+Layer: 0 number Strips: 20
+Strip: 379  ADC 10
+Strip: 380  ADC 21
+Strip: 467  ADC 26
+Strip: 468  ADC 5
+Strip: 477  ADC 2
+Strip: 478  ADC 29
+Strip: 526  ADC 16
+Strip: 527  ADC 15
+Strip: 707  ADC 12
+Strip: 708  ADC 19
+Strip: 856  ADC 1
+Strip: 857  ADC 30
+Strip: 1048  ADC 14
+Strip: 1049  ADC 17
+Strip: 1231  ADC 12
+Strip: 1232  ADC 19
+Strip: 1456  ADC 13
+Strip: 1457  ADC 18
+Strip: 1562  ADC 3
+Strip: 1563  ADC 28
+Layer: 1 number Strips: 17
+Strip: 456  ADC 16
+Strip: 457  ADC 15
+Strip: 461  ADC 13
+Strip: 462  ADC 18
+Strip: 488  ADC 31
+Strip: 573  ADC 17
+Strip: 574  ADC 14
+Strip: 775  ADC 21
+Strip: 776  ADC 10
+Strip: 1020  ADC 29
+Strip: 1021  ADC 2
+Strip: 1301  ADC 13
+Strip: 1302  ADC 18
+Strip: 1504  ADC 23
+Strip: 1505  ADC 8
+Strip: 1596  ADC 21
+Strip: 1597  ADC 10
+Layer: 2 number Strips: 18
+Strip: 602  ADC 19
+Strip: 603  ADC 12
+Strip: 610  ADC 30
+Strip: 611  ADC 1
+Strip: 625  ADC 3
+Strip: 626  ADC 28
+Strip: 712  ADC 20
+Strip: 713  ADC 11
+Strip: 849  ADC 12
+Strip: 850  ADC 19
+Strip: 954  ADC 31
+Strip: 1022  ADC 15
+Strip: 1023  ADC 16
+Strip: 1256  ADC 31
+Strip: 1390  ADC 14
+Strip: 1391  ADC 17
+Strip: 1464  ADC 27
+Strip: 1465  ADC 4
+Layer: 3 number Strips: 17
+Strip: 463  ADC 32
+Strip: 464  ADC 22
+Strip: 520  ADC 9
+Strip: 521  ADC 22
+Strip: 628  ADC 12
+Strip: 629  ADC 19
+Strip: 794  ADC 16
+Strip: 795  ADC 15
+Strip: 943  ADC 31
+Strip: 1033  ADC 17
+Strip: 1034  ADC 14
+Strip: 1355  ADC 15
+Strip: 1356  ADC 16
+Strip: 1513  ADC 26
+Strip: 1514  ADC 5
+Strip: 1621  ADC 24
+Strip: 1622  ADC 7
+Layer: 4 number Strips: 20
+Strip: 314  ADC 26
+Strip: 315  ADC 5
+Strip: 326  ADC 14
+Strip: 327  ADC 17
+Strip: 424  ADC 12
+Strip: 425  ADC 19
+Strip: 546  ADC 26
+Strip: 547  ADC 5
+Strip: 734  ADC 13
+Strip: 735  ADC 18
+Strip: 934  ADC 23
+Strip: 935  ADC 8
+Strip: 1052  ADC 25
+Strip: 1053  ADC 6
+Strip: 1460  ADC 9
+Strip: 1461  ADC 22
+Strip: 1630  ADC 8
+Strip: 1631  ADC 23
+Strip: 1781  ADC 20
+Strip: 1782  ADC 11
+Layer: 5 number Strips: 20
+Strip: 619  ADC 24
+Strip: 620  ADC 7
+Strip: 625  ADC 25
+Strip: 626  ADC 6
+Strip: 749  ADC 2
+Strip: 750  ADC 29
+Strip: 914  ADC 4
+Strip: 915  ADC 27
+Strip: 997  ADC 13
+Strip: 998  ADC 18
+Strip: 1127  ADC 17
+Strip: 1128  ADC 14
+Strip: 1166  ADC 26
+Strip: 1167  ADC 5
+Strip: 1182  ADC 29
+Strip: 1183  ADC 2
+Strip: 1188  ADC 14
+Strip: 1189  ADC 17
+Strip: 1394  ADC 4
+Strip: 1395  ADC 27
+Layer: 6 number Strips: 18
+Strip: 672  ADC 10
+Strip: 673  ADC 21
+Strip: 697  ADC 11
+Strip: 698  ADC 32
+Strip: 699  ADC 13
+Strip: 895  ADC 9
+Strip: 896  ADC 22
+Strip: 1058  ADC 8
+Strip: 1059  ADC 23
+Strip: 1071  ADC 22
+Strip: 1072  ADC 9
+Strip: 1127  ADC 18
+Strip: 1128  ADC 13
+Strip: 1141  ADC 20
+Strip: 1142  ADC 11
+Strip: 1173  ADC 25
+Strip: 1174  ADC 6
+Strip: 1379  ADC 31
+Layer: 7 number Strips: 18
+Strip: 767  ADC 21
+Strip: 768  ADC 10
+Strip: 773  ADC 16
+Strip: 774  ADC 15
+Strip: 797  ADC 26
+Strip: 798  ADC 5
+Strip: 922  ADC 21
+Strip: 923  ADC 10
+Strip: 1045  ADC 10
+Strip: 1046  ADC 21
+Strip: 1065  ADC 30
+Strip: 1066  ADC 1
+Strip: 1099  ADC 2
+Strip: 1100  ADC 29
+Strip: 1137  ADC 11
+Strip: 1138  ADC 20
+Strip: 1286  ADC 28
+Strip: 1287  ADC 3
+Layer: 8 number Strips: 18
+Strip: 465  ADC 32
+Strip: 466  ADC 22
+Strip: 515  ADC 4
+Strip: 516  ADC 27
+Strip: 628  ADC 16
+Strip: 629  ADC 15
+Strip: 788  ADC 1
+Strip: 789  ADC 30
+Strip: 940  ADC 2
+Strip: 941  ADC 29
+Strip: 1038  ADC 7
+Strip: 1039  ADC 24
+Strip: 1349  ADC 10
+Strip: 1350  ADC 21
+Strip: 1514  ADC 6
+Strip: 1515  ADC 25
+Strip: 1622  ADC 19
+Strip: 1623  ADC 12
+Layer: 9 number Strips: 17
+Strip: 317  ADC 29
+Strip: 318  ADC 2
+Strip: 328  ADC 14
+Strip: 329  ADC 17
+Strip: 418  ADC 26
+Strip: 419  ADC 5
+Strip: 546  ADC 2
+Strip: 547  ADC 29
+Strip: 727  ADC 24
+Strip: 728  ADC 7
+Strip: 930  ADC 2
+Strip: 931  ADC 29
+Strip: 1060  ADC 31
+Strip: 1454  ADC 30
+Strip: 1455  ADC 1
+Strip: 1632  ADC 27
+Strip: 1633  ADC 4
+Event Number: 5
+Event: 5
+GenTrackSet
+Number Gen Tracks: 10
+Gen Track number: 0
+Charge -1
+4 momentum -0.496588 28.6171 -1.91504 28.6855 
+Track parameters:  pT 28.6215 cot(theta) -14.9456 phi0 1.58815 d0 0.00546894 z0 -0.00296998
+Helix paramters: kappa 0.0349388 tan(Lambda) -0.0669094 phi0 to d0 3.15894
+Gen Track number: 1
+Charge 1
+4 momentum 0.818022 10.59 1.04477 10.6728 
+Track parameters:  pT 10.6216 cot(theta) 10.1664 phi0 1.4937 d0 0.00921381 z0 0.000328433
+Helix paramters: kappa -0.0941481 tan(Lambda) 0.0983634 phi0 to d0 3.0645
+Gen Track number: 2
+Charge 1
+4 momentum 1.72988 33.4904 -2.9512 33.6647 
+Track parameters:  pT 33.5351 cot(theta) -11.3632 phi0 1.51919 d0 -0.00102701 z0 0.000759322
+Helix paramters: kappa -0.0298195 tan(Lambda) -0.0880032 phi0 to d0 3.08999
+Gen Track number: 3
+Charge -1
+4 momentum 0.922627 25.2737 -0.992667 25.31 
+Track parameters:  pT 25.2905 cot(theta) -25.4773 phi0 1.53431 d0 -0.00166447 z0 0.00417236
+Helix paramters: kappa 0.0395405 tan(Lambda) -0.0392506 phi0 to d0 3.1051
+Gen Track number: 4
+Charge 1
+4 momentum -0.883258 34.5464 -0.708695 34.565 
+Track parameters:  pT 34.5577 cot(theta) -48.7624 phi0 1.59636 d0 0.00906774 z0 -0.00164365
+Helix paramters: kappa -0.0289371 tan(Lambda) -0.0205076 phi0 to d0 3.16715
+Gen Track number: 5
+Charge -1
+4 momentum 2.70289 32.6618 -0.0785722 32.7736 
+Track parameters:  pT 32.7735 cot(theta) -417.113 phi0 1.48823 d0 0.00982486 z0 0.000800394
+Helix paramters: kappa 0.0305125 tan(Lambda) -0.00239743 phi0 to d0 3.05903
+Gen Track number: 6
+Charge 1
+4 momentum 2.77526 31.0175 1.93808 31.2017 
+Track parameters:  pT 31.1415 cot(theta) 16.0682 phi0 1.48156 d0 -0.00236725 z0 -0.00598861
+Helix paramters: kappa -0.0321115 tan(Lambda) 0.0622346 phi0 to d0 3.05236
+Gen Track number: 7
+Charge 1
+4 momentum 0.225669 37.5997 0.393322 37.6025 
+Track parameters:  pT 37.6004 cot(theta) 95.597 phi0 1.56479 d0 0.00308154 z0 -0.00697853
+Helix paramters: kappa -0.0265954 tan(Lambda) 0.0104606 phi0 to d0 3.13559
+Gen Track number: 8
+Charge 1
+4 momentum -0.318213 35.8083 2.02249 35.8668 
+Track parameters:  pT 35.8097 cot(theta) 17.7057 phi0 1.57968 d0 -0.00804988 z0 -0.00582216
+Helix paramters: kappa -0.0279254 tan(Lambda) 0.0564789 phi0 to d0 3.15048
+Gen Track number: 9
+Charge -1
+4 momentum -2.1194 13.4575 1.19733 13.6759 
+Track parameters:  pT 13.6234 cot(theta) 11.3781 phi0 1.727 d0 0.0040475 z0 -0.00933944
+Helix paramters: kappa 0.0734033 tan(Lambda) 0.0878881 phi0 to d0 3.2978
+GenHitSet
+Number GenHits: 97
+GenHit: 0
+GenHit position:  -0.00915012 0.2 0.0104205
+Layer:         0
+Track number   0
+GenHit: 1
+GenHit position:  -0.0132497 0.4 0.0238052
+Layer:         1
+Track number   0
+GenHit: 2
+GenHit position:  -0.0227067 0.8 0.0505764
+Layer:         3
+Track number   0
+GenHit: 3
+GenHit position:  -0.00915401 0.2002 0.0104339
+Layer:         5
+Track number   0
+GenHit: 4
+GenHit position:  -0.013254 0.4002 0.0238186
+Layer:         6
+Track number   0
+GenHit: 5
+GenHit position:  -0.0177733 0.6002 0.0372039
+Layer:         7
+Track number   0
+GenHit: 6
+GenHit position:  -0.0227118 0.8002 0.0505898
+Layer:         8
+Track number   0
+GenHit: 7
+GenHit position:  -0.0280698 1.0002 0.0639765
+Layer:         9
+Track number   0
+GenHit: 8
+GenHit position:  0.00677344 0.2 -0.0193372
+Layer:         0
+Track number   1
+GenHit: 9
+GenHit position:  0.0239288 0.4 -0.0390822
+Layer:         1
+Track number   1
+GenHit: 10
+GenHit position:  0.0422265 0.6 -0.058837
+Layer:         2
+Track number   1
+GenHit: 11
+GenHit position:  0.0616683 0.8 -0.0786025
+Layer:         3
+Track number   1
+GenHit: 12
+GenHit position:  0.0822561 1 -0.0983791
+Layer:         4
+Track number   1
+GenHit: 13
+GenHit position:  0.00679002 0.2002 -0.019357
+Layer:         5
+Track number   1
+GenHit: 14
+GenHit position:  0.0239465 0.4002 -0.0391019
+Layer:         6
+Track number   1
+GenHit: 15
+GenHit position:  0.0422454 0.6002 -0.0588568
+Layer:         7
+Track number   1
+GenHit: 16
+GenHit position:  0.0616883 0.8002 -0.0786222
+Layer:         8
+Track number   1
+GenHit: 17
+GenHit position:  0.0822773 1.0002 -0.0983989
+Layer:         9
+Track number   1
+GenHit: 18
+GenHit position:  0.0115386 0.2 0.0183889
+Layer:         0
+Track number   2
+GenHit: 19
+GenHit position:  0.0224079 0.4 0.0360156
+Layer:         1
+Track number   2
+GenHit: 20
+GenHit position:  0.0336365 0.6 0.0536439
+Layer:         2
+Track number   2
+GenHit: 21
+GenHit position:  0.0452244 0.8 0.0712741
+Layer:         3
+Track number   2
+GenHit: 22
+GenHit position:  0.0571717 1 0.0889061
+Layer:         4
+Track number   2
+GenHit: 23
+GenHit position:  0.0115493 0.2002 0.0184066
+Layer:         5
+Track number   2
+GenHit: 24
+GenHit position:  0.022419 0.4002 0.0360332
+Layer:         6
+Track number   2
+GenHit: 25
+GenHit position:  0.0336479 0.6002 0.0536615
+Layer:         7
+Track number   2
+GenHit: 26
+GenHit position:  0.0452362 0.8002 0.0712917
+Layer:         8
+Track number   2
+GenHit: 27
+GenHit position:  0.0571839 1.0002 0.0889237
+Layer:         9
+Track number   2
+GenHit: 28
+GenHit position:  0.00872899 0.2 0.0120298
+Layer:         0
+Track number   3
+GenHit: 29
+GenHit position:  0.0153174 0.4 0.0198841
+Layer:         1
+Track number   3
+GenHit: 30
+GenHit position:  0.021431 0.6 0.0277379
+Layer:         2
+Track number   3
+GenHit: 31
+GenHit position:  0.0270697 0.8 0.0355912
+Layer:         3
+Track number   3
+GenHit: 32
+GenHit position:  0.0322338 1 0.0434439
+Layer:         4
+Track number   3
+GenHit: 33
+GenHit position:  0.00873582 0.2002 0.0120376
+Layer:         5
+Track number   3
+GenHit: 34
+GenHit position:  0.0153238 0.4002 0.019892
+Layer:         6
+Track number   3
+GenHit: 35
+GenHit position:  0.0214368 0.6002 0.0277458
+Layer:         7
+Track number   3
+GenHit: 36
+GenHit position:  0.0270751 0.8002 0.035599
+Layer:         8
+Track number   3
+GenHit: 37
+GenHit position:  0.0322388 1.0002 0.0434518
+Layer:         9
+Track number   3
+GenHit: 38
+GenHit position:  -0.0140101 0.2 0.00246387
+Layer:         0
+Track number   4
+GenHit: 39
+GenHit position:  -0.0186022 0.4 0.00656647
+Layer:         1
+Track number   4
+GenHit: 40
+GenHit position:  -0.022847 0.6 0.0106689
+Layer:         2
+Track number   4
+GenHit: 41
+GenHit position:  -0.0267446 0.8 0.0147712
+Layer:         3
+Track number   4
+GenHit: 42
+GenHit position:  -0.0140149 0.2002 0.00246797
+Layer:         5
+Track number   4
+GenHit: 43
+GenHit position:  -0.0186066 0.4002 0.00657057
+Layer:         6
+Track number   4
+GenHit: 44
+GenHit position:  -0.0228511 0.6002 0.010673
+Layer:         7
+Track number   4
+GenHit: 45
+GenHit position:  -0.0267484 0.8002 0.0147753
+Layer:         8
+Track number   4
+GenHit: 46
+GenHit position:  -0.0302984 1.0002 0.0188775
+Layer:         9
+Track number   4
+GenHit: 47
+GenHit position:  0.00650903 0.2 0.00127953
+Layer:         0
+Track number   5
+GenHit: 48
+GenHit position:  0.022507 0.4 0.00176055
+Layer:         1
+Track number   5
+GenHit: 49
+GenHit position:  0.0381356 0.6 0.0022415
+Layer:         2
+Track number   5
+GenHit: 50
+GenHit position:  0.0533951 0.8 0.00272238
+Layer:         3
+Track number   5
+GenHit: 51
+GenHit position:  0.0682855 1 0.0032032
+Layer:         4
+Track number   5
+GenHit: 52
+GenHit position:  0.00652521 0.2002 0.00128002
+Layer:         5
+Track number   5
+GenHit: 53
+GenHit position:  0.0225228 0.4002 0.00176103
+Layer:         6
+Track number   5
+GenHit: 54
+GenHit position:  0.0381511 0.6002 0.00224198
+Layer:         7
+Track number   5
+GenHit: 55
+GenHit position:  0.0534102 0.8002 0.00272286
+Layer:         8
+Track number   5
+GenHit: 56
+GenHit position:  0.0683003 1.0002 0.00320368
+Layer:         9
+Track number   5
+GenHit: 57
+GenHit position:  0.0204668 0.2 -0.0184995
+Layer:         0
+Track number   6
+GenHit: 58
+GenHit position:  0.0389468 0.4 -0.0309995
+Layer:         1
+Track number   6
+GenHit: 59
+GenHit position:  0.0578169 0.6 -0.0435017
+Layer:         2
+Track number   6
+GenHit: 60
+GenHit position:  0.0770773 0.8 -0.0560062
+Layer:         3
+Track number   6
+GenHit: 61
+GenHit position:  0.0967283 1 -0.068513
+Layer:         4
+Track number   6
+GenHit: 62
+GenHit position:  0.0204851 0.2002 -0.018512
+Layer:         5
+Track number   6
+GenHit: 63
+GenHit position:  0.0389655 0.4002 -0.031012
+Layer:         6
+Track number   6
+GenHit: 64
+GenHit position:  0.057836 0.6002 -0.0435142
+Layer:         7
+Track number   6
+GenHit: 65
+GenHit position:  0.0770968 0.8002 -0.0560187
+Layer:         8
+Track number   6
+GenHit: 66
+GenHit position:  0.0967482 1.0002 -0.0685255
+Layer:         9
+Track number   6
+GenHit: 67
+GenHit position:  -0.00172178 0.2 -0.0090705
+Layer:         0
+Track number   7
+GenHit: 68
+GenHit position:  -4.30041e-05 0.4 -0.0111627
+Layer:         1
+Track number   7
+GenHit: 69
+GenHit position:  0.00195473 0.6 -0.0132549
+Layer:         2
+Track number   7
+GenHit: 70
+GenHit position:  0.00427145 0.8 -0.0153472
+Layer:         3
+Track number   7
+GenHit: 71
+GenHit position:  0.00690717 1 -0.0174395
+Layer:         4
+Track number   7
+GenHit: 72
+GenHit position:  -0.00172026 0.2002 -0.00907259
+Layer:         5
+Track number   7
+GenHit: 73
+GenHit position:  -4.11657e-05 0.4002 -0.0111648
+Layer:         6
+Track number   7
+GenHit: 74
+GenHit position:  0.00195689 0.6002 -0.013257
+Layer:         7
+Track number   7
+GenHit: 75
+GenHit position:  0.00427393 0.8002 -0.0153493
+Layer:         8
+Track number   7
+GenHit: 76
+GenHit position:  0.00690996 1.0002 -0.0174416
+Layer:         9
+Track number   7
+GenHit: 77
+GenHit position:  0.00644022 0.2 -0.0171143
+Layer:         0
+Track number   8
+GenHit: 78
+GenHit position:  0.00516514 0.4 -0.0284103
+Layer:         1
+Track number   8
+GenHit: 79
+GenHit position:  0.00422495 0.6 -0.0397062
+Layer:         2
+Track number   8
+GenHit: 80
+GenHit position:  0.00361964 0.8 -0.051002
+Layer:         3
+Track number   8
+GenHit: 81
+GenHit position:  0.0033492 1 -0.0622978
+Layer:         4
+Track number   8
+GenHit: 82
+GenHit position:  0.00643877 0.2002 -0.0171256
+Layer:         5
+Track number   8
+GenHit: 83
+GenHit position:  0.00516403 0.4002 -0.0284216
+Layer:         6
+Track number   8
+GenHit: 84
+GenHit position:  0.00422418 0.6002 -0.0397175
+Layer:         7
+Track number   8
+GenHit: 85
+GenHit position:  0.0036192 0.8002 -0.0510133
+Layer:         8
+Track number   8
+GenHit: 86
+GenHit position:  0.0033491 1.0002 -0.0623091
+Layer:         9
+Track number   8
+GenHit: 87
+GenHit position:  -0.0360548 0.2 -0.0271961
+Layer:         0
+Track number   9
+GenHit: 88
+GenHit position:  -0.0689274 0.4 -0.0450096
+Layer:         1
+Track number   9
+GenHit: 89
+GenHit position:  -0.102717 0.6 -0.0628363
+Layer:         2
+Track number   9
+GenHit: 90
+GenHit position:  -0.137426 0.8 -0.0806767
+Layer:         3
+Track number   9
+GenHit: 91
+GenHit position:  -0.173056 1 -0.0985311
+Layer:         4
+Track number   9
+GenHit: 92
+GenHit position:  -0.0360872 0.2002 -0.0272139
+Layer:         5
+Track number   9
+GenHit: 93
+GenHit position:  -0.0689607 0.4002 -0.0450274
+Layer:         6
+Track number   9
+GenHit: 94
+GenHit position:  -0.102751 0.6002 -0.0628541
+Layer:         7
+Track number   9
+GenHit: 95
+GenHit position:  -0.137461 0.8002 -0.0806945
+Layer:         8
+Track number   9
+GenHit: 96
+GenHit position:  -0.173093 1.0002 -0.0985489
+Layer:         9
+Track number   9
+StripSet
+Layer: 0 number Strips: 18
+Strip: 302  ADC 19
+Strip: 303  ADC 12
+Strip: 743  ADC 25
+Strip: 744  ADC 6
+Strip: 840  ADC 22
+Strip: 841  ADC 9
+Strip: 989  ADC 27
+Strip: 990  ADC 4
+Strip: 1152  ADC 20
+Strip: 1153  ADC 19
+Strip: 1154  ADC 23
+Strip: 1158  ADC 8
+Strip: 1159  ADC 23
+Strip: 1198  ADC 21
+Strip: 1199  ADC 10
+Strip: 1255  ADC 31
+Strip: 1433  ADC 24
+Strip: 1434  ADC 7
+Layer: 1 number Strips: 18
+Strip: 334  ADC 31
+Strip: 837  ADC 6
+Strip: 838  ADC 25
+Strip: 891  ADC 25
+Strip: 892  ADC 6
+Strip: 1022  ADC 3
+Strip: 1023  ADC 28
+Strip: 1075  ADC 13
+Strip: 1076  ADC 18
+Strip: 1176  ADC 11
+Strip: 1177  ADC 20
+Strip: 1247  ADC 18
+Strip: 1248  ADC 30
+Strip: 1249  ADC 14
+Strip: 1262  ADC 1
+Strip: 1263  ADC 30
+Strip: 1413  ADC 22
+Strip: 1414  ADC 9
+Layer: 2 number Strips: 17
+Strip: 510  ADC 31
+Strip: 908  ADC 4
+Strip: 909  ADC 27
+Strip: 1033  ADC 22
+Strip: 1034  ADC 9
+Strip: 1044  ADC 22
+Strip: 1045  ADC 9
+Strip: 1130  ADC 1
+Strip: 1131  ADC 30
+Strip: 1191  ADC 14
+Strip: 1192  ADC 17
+Strip: 1214  ADC 20
+Strip: 1215  ADC 11
+Strip: 1234  ADC 6
+Strip: 1235  ADC 25
+Strip: 1312  ADC 18
+Strip: 1313  ADC 13
+Layer: 3 number Strips: 20
+Strip: 336  ADC 18
+Strip: 337  ADC 13
+Strip: 889  ADC 9
+Strip: 890  ADC 22
+Strip: 909  ADC 4
+Strip: 910  ADC 27
+Strip: 1041  ADC 10
+Strip: 1042  ADC 21
+Strip: 1044  ADC 3
+Strip: 1045  ADC 28
+Strip: 1158  ADC 18
+Strip: 1159  ADC 13
+Strip: 1249  ADC 18
+Strip: 1250  ADC 13
+Strip: 1290  ADC 25
+Strip: 1291  ADC 6
+Strip: 1331  ADC 20
+Strip: 1332  ADC 11
+Strip: 1409  ADC 21
+Strip: 1410  ADC 10
+Layer: 4 number Strips: 16
+Strip: 158  ADC 25
+Strip: 159  ADC 6
+Strip: 1040  ADC 10
+Strip: 1041  ADC 21
+Strip: 1058  ADC 30
+Strip: 1059  ADC 1
+Strip: 1184  ADC 18
+Strip: 1185  ADC 13
+Strip: 1309  ADC 28
+Strip: 1310  ADC 3
+Strip: 1364  ADC 8
+Strip: 1365  ADC 23
+Strip: 1434  ADC 1
+Strip: 1435  ADC 30
+Strip: 1506  ADC 11
+Strip: 1507  ADC 20
+Layer: 5 number Strips: 20
+Strip: 479  ADC 23
+Strip: 480  ADC 8
+Strip: 636  ADC 26
+Strip: 637  ADC 5
+Strip: 653  ADC 20
+Strip: 654  ADC 11
+Strip: 681  ADC 23
+Strip: 682  ADC 8
+Strip: 842  ADC 29
+Strip: 843  ADC 2
+Strip: 1049  ADC 30
+Strip: 1050  ADC 1
+Strip: 1073  ADC 26
+Strip: 1074  ADC 5
+Strip: 1232  ADC 22
+Strip: 1233  ADC 9
+Strip: 1264  ADC 19
+Strip: 1265  ADC 12
+Strip: 1391  ADC 15
+Strip: 1392  ADC 16
+Layer: 6 number Strips: 20
+Strip: 573  ADC 25
+Strip: 574  ADC 6
+Strip: 632  ADC 16
+Strip: 633  ADC 15
+Strip: 713  ADC 18
+Strip: 714  ADC 13
+Strip: 739  ADC 19
+Strip: 740  ADC 12
+Strip: 911  ADC 2
+Strip: 912  ADC 29
+Strip: 1040  ADC 3
+Strip: 1041  ADC 28
+Strip: 1089  ADC 9
+Strip: 1090  ADC 22
+Strip: 1222  ADC 20
+Strip: 1223  ADC 11
+Strip: 1261  ADC 10
+Strip: 1262  ADC 21
+Strip: 1384  ADC 28
+Strip: 1385  ADC 3
+Layer: 7 number Strips: 20
+Strip: 709  ADC 12
+Strip: 710  ADC 19
+Strip: 729  ADC 18
+Strip: 730  ADC 13
+Strip: 805  ADC 3
+Strip: 806  ADC 28
+Strip: 825  ADC 29
+Strip: 826  ADC 2
+Strip: 957  ADC 10
+Strip: 958  ADC 21
+Strip: 1034  ADC 17
+Strip: 1035  ADC 14
+Strip: 1076  ADC 14
+Strip: 1077  ADC 17
+Strip: 1161  ADC 1
+Strip: 1162  ADC 30
+Strip: 1209  ADC 28
+Strip: 1210  ADC 3
+Strip: 1292  ADC 23
+Strip: 1293  ADC 8
+Layer: 8 number Strips: 19
+Strip: 329  ADC 29
+Strip: 330  ADC 2
+Strip: 891  ADC 24
+Strip: 892  ADC 7
+Strip: 915  ADC 31
+Strip: 1036  ADC 2
+Strip: 1037  ADC 29
+Strip: 1043  ADC 17
+Strip: 1044  ADC 14
+Strip: 1161  ADC 16
+Strip: 1162  ADC 15
+Strip: 1255  ADC 13
+Strip: 1256  ADC 18
+Strip: 1290  ADC 16
+Strip: 1291  ADC 15
+Strip: 1325  ADC 30
+Strip: 1326  ADC 1
+Strip: 1403  ADC 3
+Strip: 1404  ADC 28
+Layer: 9 number Strips: 18
+Strip: 149  ADC 10
+Strip: 150  ADC 21
+Strip: 873  ADC 3
+Strip: 874  ADC 28
+Strip: 888  ADC 3
+Strip: 889  ADC 28
+Strip: 1034  ADC 4
+Strip: 1035  ADC 27
+Strip: 1056  ADC 9
+Strip: 1057  ADC 22
+Strip: 1188  ADC 18
+Strip: 1189  ADC 13
+Strip: 1317  ADC 31
+Strip: 1365  ADC 18
+Strip: 1366  ADC 13
+Strip: 1426  ADC 17
+Strip: 1427  ADC 14
+Strip: 1501  ADC 31
+Event Number: 6
+Event: 6
+GenTrackSet
+Number Gen Tracks: 10
+Gen Track number: 0
+Charge -1
+4 momentum -0.587814 13.0639 -0.693519 13.0955 
+Track parameters:  pT 13.0771 cot(theta) -18.8562 phi0 1.61576 d0 -0.00159643 z0 0.000413598
+Helix paramters: kappa 0.0764695 tan(Lambda) -0.053033 phi0 to d0 3.18656
+Gen Track number: 1
+Charge 1
+4 momentum -3.59917 28.1833 0.509105 28.4168 
+Track parameters:  pT 28.4122 cot(theta) 55.8081 phi0 1.69781 d0 -0.00218763 z0 -0.00371189
+Helix paramters: kappa -0.0351962 tan(Lambda) 0.0179185 phi0 to d0 3.26861
+Gen Track number: 2
+Charge -1
+4 momentum -3.54788 21.9219 -0.0467199 22.2072 
+Track parameters:  pT 22.2072 cot(theta) -475.326 phi0 1.73125 d0 -0.00749633 z0 0.00426057
+Helix paramters: kappa 0.0450305 tan(Lambda) -0.00210382 phi0 to d0 3.30204
+Gen Track number: 3
+Charge -1
+4 momentum -0.225384 15.5513 1.28853 15.6062 
+Track parameters:  pT 15.5529 cot(theta) 12.0703 phi0 1.58529 d0 -0.0043164 z0 0.00267777
+Helix paramters: kappa 0.0642965 tan(Lambda) 0.0828477 phi0 to d0 3.15608
+Gen Track number: 4
+Charge -1
+4 momentum 2.68985 27.5839 2.15705 27.7985 
+Track parameters:  pT 27.7147 cot(theta) 12.8484 phi0 1.47359 d0 0.00544898 z0 -0.00233518
+Helix paramters: kappa 0.0360819 tan(Lambda) 0.0778305 phi0 to d0 3.04438
+Gen Track number: 5
+Charge 1
+4 momentum -0.930498 12.4067 0.568183 12.4545 
+Track parameters:  pT 12.4416 cot(theta) 21.8971 phi0 1.64566 d0 0.00283366 z0 0.0026102
+Helix paramters: kappa -0.0803756 tan(Lambda) 0.0456681 phi0 to d0 3.21645
+Gen Track number: 6
+Charge -1
+4 momentum 0.66081 16.7615 -0.311429 16.7775 
+Track parameters:  pT 16.7746 cot(theta) -53.8632 phi0 1.53139 d0 0.00732093 z0 0.00985795
+Helix paramters: kappa 0.0596141 tan(Lambda) -0.0185656 phi0 to d0 3.10219
+Gen Track number: 7
+Charge -1
+4 momentum -3.35767 35.5233 -1.25967 35.7038 
+Track parameters:  pT 35.6816 cot(theta) -28.3262 phi0 1.66504 d0 0.00846851 z0 -0.000795288
+Helix paramters: kappa 0.0280256 tan(Lambda) -0.035303 phi0 to d0 3.23583
+Gen Track number: 8
+Charge -1
+4 momentum 2.5061 38.2246 2.56522 38.3925 
+Track parameters:  pT 38.3067 cot(theta) 14.9331 phi0 1.50533 d0 -0.00129363 z0 -0.00203487
+Helix paramters: kappa 0.0261051 tan(Lambda) 0.0669653 phi0 to d0 3.07612
+Gen Track number: 9
+Charge -1
+4 momentum -2.814 21.1788 -1.1371 21.3952 
+Track parameters:  pT 21.3649 cot(theta) -18.789 phi0 1.70289 d0 -0.0024705 z0 -0.00624884
+Helix paramters: kappa 0.0468057 tan(Lambda) -0.0532225 phi0 to d0 3.27369
+GenHitSet
+Number GenHits: 100
+GenHit: 0
+GenHit position:  -0.00786067 0.2 0.0110283
+Layer:         0
+Track number   0
+GenHit: 1
+GenHit position:  -0.0182398 0.4 0.0216491
+Layer:         1
+Track number   0
+GenHit: 2
+GenHit position:  -0.0295399 0.6 0.0322727
+Layer:         2
+Track number   0
+GenHit: 3
+GenHit position:  -0.0417618 0.8 0.0428991
+Layer:         3
+Track number   0
+GenHit: 4
+GenHit position:  -0.0549063 1 0.0535286
+Layer:         4
+Track number   0
+GenHit: 5
+GenHit position:  -0.00787059 0.2002 0.0110389
+Layer:         5
+Track number   0
+GenHit: 6
+GenHit position:  -0.0182506 0.4002 0.0216598
+Layer:         6
+Track number   0
+GenHit: 7
+GenHit position:  -0.0295517 0.6002 0.0322833
+Layer:         7
+Track number   0
+GenHit: 8
+GenHit position:  -0.0417745 0.8002 0.0429097
+Layer:         8
+Track number   0
+GenHit: 9
+GenHit position:  -0.0549199 1.0002 0.0535392
+Layer:         9
+Track number   0
+GenHit: 10
+GenHit position:  -0.0231202 0.2 -0.00731921
+Layer:         0
+Track number   1
+GenHit: 11
+GenHit position:  -0.0480138 0.4 -0.0109306
+Layer:         1
+Track number   1
+GenHit: 12
+GenHit position:  -0.0724756 0.6 -0.014541
+Layer:         2
+Track number   1
+GenHit: 13
+GenHit position:  -0.096506 0.8 -0.0181505
+Layer:         3
+Track number   1
+GenHit: 14
+GenHit position:  -0.120105 1 -0.021759
+Layer:         4
+Track number   1
+GenHit: 15
+GenHit position:  -0.0231453 0.2002 -0.00732282
+Layer:         5
+Track number   1
+GenHit: 16
+GenHit position:  -0.0480384 0.4002 -0.0109342
+Layer:         6
+Track number   1
+GenHit: 17
+GenHit position:  -0.0724998 0.6002 -0.0145446
+Layer:         7
+Track number   1
+GenHit: 18
+GenHit position:  -0.0965298 0.8002 -0.0181541
+Layer:         8
+Track number   1
+GenHit: 19
+GenHit position:  -0.120129 1.0002 -0.0217627
+Layer:         9
+Track number   1
+GenHit: 20
+GenHit position:  -0.0250519 0.2 0.00468435
+Layer:         0
+Track number   2
+GenHit: 21
+GenHit position:  -0.0582597 0.4 0.00511088
+Layer:         1
+Track number   2
+GenHit: 22
+GenHit position:  -0.0920303 0.6 0.0055376
+Layer:         2
+Track number   2
+GenHit: 23
+GenHit position:  -0.126365 0.8 0.00596452
+Layer:         3
+Track number   2
+GenHit: 24
+GenHit position:  -0.161263 1 0.00639164
+Layer:         4
+Track number   2
+GenHit: 25
+GenHit position:  -0.0250848 0.2002 0.00468478
+Layer:         5
+Track number   2
+GenHit: 26
+GenHit position:  -0.0582932 0.4002 0.00511131
+Layer:         6
+Track number   2
+GenHit: 27
+GenHit position:  -0.0920644 0.6002 0.00553803
+Layer:         7
+Track number   2
+GenHit: 28
+GenHit position:  -0.126399 0.8002 0.00596494
+Layer:         8
+Track number   2
+GenHit: 29
+GenHit position:  -0.161299 1.0002 0.00639207
+Layer:         9
+Track number   2
+GenHit: 30
+GenHit position:  0.00103285 0.2 -0.0138888
+Layer:         0
+Track number   3
+GenHit: 31
+GenHit position:  -0.00302257 0.4 -0.0304618
+Layer:         1
+Track number   3
+GenHit: 32
+GenHit position:  -0.00784959 0.6 -0.0470362
+Layer:         2
+Track number   3
+GenHit: 33
+GenHit position:  -0.0134484 0.8 -0.0636122
+Layer:         3
+Track number   3
+GenHit: 34
+GenHit position:  -0.0198193 1 -0.0801901
+Layer:         4
+Track number   3
+GenHit: 35
+GenHit position:  0.00102918 0.2002 -0.0139054
+Layer:         5
+Track number   3
+GenHit: 36
+GenHit position:  -0.00302701 0.4002 -0.0304784
+Layer:         6
+Track number   3
+GenHit: 37
+GenHit position:  -0.0078548 0.6002 -0.0470527
+Layer:         7
+Track number   3
+GenHit: 38
+GenHit position:  -0.0134544 0.8002 -0.0636288
+Layer:         8
+Track number   3
+GenHit: 39
+GenHit position:  -0.0198261 1.0002 -0.0802067
+Layer:         9
+Track number   3
+GenHit: 40
+GenHit position:  0.01381 0.2 -0.0179321
+Layer:         0
+Track number   4
+GenHit: 41
+GenHit position:  0.0326562 0.4 -0.0335672
+Layer:         1
+Track number   4
+GenHit: 42
+GenHit position:  0.051064 0.6 -0.0491991
+Layer:         2
+Track number   4
+GenHit: 43
+GenHit position:  0.0690338 0.8 -0.0648279
+Layer:         3
+Track number   4
+GenHit: 44
+GenHit position:  0.0865659 1 -0.0804537
+Layer:         4
+Track number   4
+GenHit: 45
+GenHit position:  0.013829 0.2002 -0.0179478
+Layer:         5
+Track number   4
+GenHit: 46
+GenHit position:  0.0326748 0.4002 -0.0335828
+Layer:         6
+Track number   4
+GenHit: 47
+GenHit position:  0.0510822 0.6002 -0.0492147
+Layer:         7
+Track number   4
+GenHit: 48
+GenHit position:  0.0690516 0.8002 -0.0648435
+Layer:         8
+Track number   4
+GenHit: 49
+GenHit position:  0.0865832 1.0002 -0.0804693
+Layer:         9
+Track number   4
+GenHit: 50
+GenHit position:  -0.0173546 0.2 -0.00655715
+Layer:         0
+Track number   5
+GenHit: 51
+GenHit position:  -0.0308967 0.4 -0.0157117
+Layer:         1
+Track number   5
+GenHit: 52
+GenHit position:  -0.0434688 0.6 -0.0248633
+Layer:         2
+Track number   5
+GenHit: 53
+GenHit position:  -0.0550717 0.8 -0.0340123
+Layer:         3
+Track number   5
+GenHit: 54
+GenHit position:  -0.0657063 1 -0.0431588
+Layer:         4
+Track number   5
+GenHit: 55
+GenHit position:  -0.0173687 0.2002 -0.0065663
+Layer:         5
+Track number   5
+GenHit: 56
+GenHit position:  -0.0309098 0.4002 -0.0157208
+Layer:         6
+Track number   5
+GenHit: 57
+GenHit position:  -0.0434808 0.6002 -0.0248725
+Layer:         7
+Track number   5
+GenHit: 58
+GenHit position:  -0.0550828 0.8002 -0.0340215
+Layer:         8
+Track number   5
+GenHit: 59
+GenHit position:  -0.0657164 1.0002 -0.043168
+Layer:         9
+Track number   5
+GenHit: 60
+GenHit position:  0.000201024 0.2 0.0135683
+Layer:         0
+Track number   6
+GenHit: 61
+GenHit position:  0.00701242 0.4 0.0172836
+Layer:         1
+Track number   6
+GenHit: 62
+GenHit position:  0.0131078 0.6 0.0209984
+Layer:         2
+Track number   6
+GenHit: 63
+GenHit position:  0.0184875 0.8 0.0247129
+Layer:         3
+Track number   6
+GenHit: 64
+GenHit position:  0.0231515 1 0.028427
+Layer:         4
+Track number   6
+GenHit: 65
+GenHit position:  0.000208194 0.2002 0.013572
+Layer:         5
+Track number   6
+GenHit: 66
+GenHit position:  0.00701887 0.4002 0.0172873
+Layer:         6
+Track number   6
+GenHit: 67
+GenHit position:  0.0131136 0.6002 0.0210021
+Layer:         7
+Track number   6
+GenHit: 68
+GenHit position:  0.0184925 0.8002 0.0247166
+Layer:         8
+Track number   6
+GenHit: 69
+GenHit position:  0.0231558 1.0002 0.0284307
+Layer:         9
+Track number   6
+GenHit: 70
+GenHit position:  -0.027582 0.2 0.00632561
+Layer:         0
+Track number   7
+GenHit: 71
+GenHit position:  -0.0469985 0.4 0.0134194
+Layer:         1
+Track number   7
+GenHit: 72
+GenHit position:  -0.0667559 0.6 0.0205144
+Layer:         2
+Track number   7
+GenHit: 73
+GenHit position:  -0.0868544 0.8 0.0276105
+Layer:         3
+Track number   7
+GenHit: 74
+GenHit position:  -0.107294 1 0.0347079
+Layer:         4
+Track number   7
+GenHit: 75
+GenHit position:  -0.0276012 0.2002 0.0063327
+Layer:         5
+Track number   7
+GenHit: 76
+GenHit position:  -0.0470181 0.4002 0.0134265
+Layer:         6
+Track number   7
+GenHit: 77
+GenHit position:  -0.0667759 0.6002 0.0205215
+Layer:         7
+Track number   7
+GenHit: 78
+GenHit position:  -0.0868747 0.8002 0.0276176
+Layer:         8
+Track number   7
+GenHit: 79
+GenHit position:  -0.107315 1.0002 0.034715
+Layer:         9
+Track number   7
+GenHit: 80
+GenHit position:  0.0142513 0.2 -0.0154617
+Layer:         0
+Track number   8
+GenHit: 81
+GenHit position:  0.0268912 0.4 -0.0288815
+Layer:         1
+Track number   8
+GenHit: 82
+GenHit position:  0.0392162 0.6 -0.0422999
+Layer:         2
+Track number   8
+GenHit: 83
+GenHit position:  0.0512264 0.8 -0.0557171
+Layer:         3
+Track number   8
+GenHit: 84
+GenHit position:  0.062922 1 -0.069133
+Layer:         4
+Track number   8
+GenHit: 85
+GenHit position:  0.0142641 0.2002 -0.0154751
+Layer:         5
+Track number   8
+GenHit: 86
+GenHit position:  0.0269037 0.4002 -0.0288949
+Layer:         6
+Track number   8
+GenHit: 87
+GenHit position:  0.0392284 0.6002 -0.0423133
+Layer:         7
+Track number   8
+GenHit: 88
+GenHit position:  0.0512383 0.8002 -0.0557305
+Layer:         8
+Track number   8
+GenHit: 89
+GenHit position:  0.0629335 1.0002 -0.0691465
+Layer:         9
+Track number   8
+GenHit: 90
+GenHit position:  -0.0243688 0.2 0.00447377
+Layer:         0
+Track number   9
+GenHit: 91
+GenHit position:  -0.0518067 0.4 0.015218
+Layer:         1
+Track number   9
+GenHit: 92
+GenHit position:  -0.0798221 0.6 0.0259664
+Layer:         2
+Track number   9
+GenHit: 93
+GenHit position:  -0.108416 0.8 0.0367192
+Layer:         3
+Track number   9
+GenHit: 94
+GenHit position:  -0.137588 1 0.0474763
+Layer:         4
+Track number   9
+GenHit: 95
+GenHit position:  -0.0243959 0.2002 0.00448452
+Layer:         5
+Track number   9
+GenHit: 96
+GenHit position:  -0.0518344 0.4002 0.0152287
+Layer:         6
+Track number   9
+GenHit: 97
+GenHit position:  -0.0798504 0.6002 0.0259772
+Layer:         7
+Track number   9
+GenHit: 98
+GenHit position:  -0.108445 0.8002 0.0367299
+Layer:         8
+Track number   9
+GenHit: 99
+GenHit position:  -0.137618 1.0002 0.0474871
+Layer:         9
+Track number   9
+StripSet
+Layer: 0 number Strips: 20
+Strip: 472  ADC 29
+Strip: 473  ADC 2
+Strip: 522  ADC 24
+Strip: 523  ADC 7
+Strip: 536  ADC 29
+Strip: 537  ADC 2
+Strip: 560  ADC 1
+Strip: 561  ADC 30
+Strip: 676  ADC 23
+Strip: 677  ADC 8
+Strip: 866  ADC 15
+Strip: 867  ADC 16
+Strip: 1027  ADC 3
+Strip: 1028  ADC 28
+Strip: 1044  ADC 24
+Strip: 1045  ADC 7
+Strip: 1299  ADC 10
+Strip: 1300  ADC 21
+Strip: 1308  ADC 12
+Strip: 1309  ADC 19
+Layer: 1 number Strips: 20
+Strip: 441  ADC 23
+Strip: 442  ADC 8
+Strip: 505  ADC 12
+Strip: 506  ADC 19
+Strip: 543  ADC 26
+Strip: 544  ADC 5
+Strip: 553  ADC 14
+Strip: 554  ADC 17
+Strip: 714  ADC 18
+Strip: 715  ADC 13
+Strip: 841  ADC 24
+Strip: 842  ADC 7
+Strip: 993  ADC 30
+Strip: 994  ADC 1
+Strip: 1093  ADC 7
+Strip: 1094  ADC 24
+Strip: 1292  ADC 9
+Strip: 1293  ADC 22
+Strip: 1349  ADC 2
+Strip: 1350  ADC 29
+Layer: 2 number Strips: 20
+Strip: 563  ADC 28
+Strip: 564  ADC 3
+Strip: 624  ADC 16
+Strip: 625  ADC 15
+Strip: 661  ADC 16
+Strip: 662  ADC 15
+Strip: 690  ADC 27
+Strip: 691  ADC 4
+Strip: 806  ADC 27
+Strip: 807  ADC 4
+Strip: 875  ADC 1
+Strip: 876  ADC 30
+Strip: 984  ADC 13
+Strip: 985  ADC 18
+Strip: 1089  ADC 28
+Strip: 1090  ADC 3
+Strip: 1219  ADC 13
+Strip: 1220  ADC 18
+Strip: 1278  ADC 8
+Strip: 1279  ADC 23
+Layer: 3 number Strips: 19
+Strip: 391  ADC 15
+Strip: 392  ADC 16
+Strip: 482  ADC 31
+Strip: 541  ADC 21
+Strip: 542  ADC 10
+Strip: 589  ADC 18
+Strip: 590  ADC 13
+Strip: 747  ADC 1
+Strip: 748  ADC 30
+Strip: 814  ADC 10
+Strip: 815  ADC 21
+Strip: 956  ADC 17
+Strip: 957  ADC 14
+Strip: 1115  ADC 14
+Strip: 1116  ADC 17
+Strip: 1279  ADC 8
+Strip: 1280  ADC 23
+Strip: 1368  ADC 2
+Strip: 1369  ADC 29
+Layer: 4 number Strips: 17
+Strip: 217  ADC 29
+Strip: 218  ADC 2
+Strip: 335  ADC 10
+Strip: 336  ADC 21
+Strip: 422  ADC 3
+Strip: 423  ADC 28
+Strip: 487  ADC 31
+Strip: 694  ADC 1
+Strip: 695  ADC 30
+Strip: 749  ADC 31
+Strip: 924  ADC 27
+Strip: 925  ADC 4
+Strip: 1139  ADC 31
+Strip: 1337  ADC 3
+Strip: 1338  ADC 28
+Strip: 1456  ADC 28
+Strip: 1457  ADC 3
+Layer: 5 number Strips: 20
+Strip: 664  ADC 21
+Strip: 665  ADC 10
+Strip: 714  ADC 28
+Strip: 715  ADC 3
+Strip: 745  ADC 28
+Strip: 746  ADC 3
+Strip: 876  ADC 1
+Strip: 877  ADC 30
+Strip: 892  ADC 29
+Strip: 893  ADC 2
+Strip: 1112  ADC 4
+Strip: 1113  ADC 27
+Strip: 1117  ADC 20
+Strip: 1118  ADC 11
+Strip: 1150  ADC 25
+Strip: 1151  ADC 6
+Strip: 1244  ADC 21
+Strip: 1245  ADC 10
+Strip: 1295  ADC 14
+Strip: 1296  ADC 17
+Layer: 6 number Strips: 19
+Strip: 687  ADC 13
+Strip: 688  ADC 18
+Strip: 718  ADC 7
+Strip: 719  ADC 24
+Strip: 734  ADC 6
+Strip: 735  ADC 25
+Strip: 866  ADC 25
+Strip: 867  ADC 6
+Strip: 913  ADC 7
+Strip: 914  ADC 24
+Strip: 1074  ADC 22
+Strip: 1075  ADC 9
+Strip: 1157  ADC 7
+Strip: 1158  ADC 24
+Strip: 1175  ADC 10
+Strip: 1176  ADC 21
+Strip: 1196  ADC 11
+Strip: 1197  ADC 20
+Strip: 1240  ADC 31
+Layer: 7 number Strips: 18
+Strip: 777  ADC 17
+Strip: 778  ADC 14
+Strip: 788  ADC 19
+Strip: 789  ADC 12
+Strip: 812  ADC 31
+Strip: 899  ADC 31
+Strip: 950  ADC 4
+Strip: 951  ADC 27
+Strip: 1051  ADC 29
+Strip: 1052  ADC 2
+Strip: 1125  ADC 3
+Strip: 1126  ADC 28
+Strip: 1128  ADC 17
+Strip: 1129  ADC 14
+Strip: 1153  ADC 25
+Strip: 1154  ADC 6
+Strip: 1184  ADC 9
+Strip: 1185  ADC 22
+Layer: 8 number Strips: 20
+Strip: 392  ADC 22
+Strip: 393  ADC 9
+Strip: 484  ADC 23
+Strip: 485  ADC 8
+Strip: 539  ADC 14
+Strip: 540  ADC 17
+Strip: 591  ADC 6
+Strip: 592  ADC 25
+Strip: 745  ADC 29
+Strip: 746  ADC 2
+Strip: 818  ADC 11
+Strip: 819  ADC 20
+Strip: 950  ADC 12
+Strip: 951  ADC 19
+Strip: 1118  ADC 24
+Strip: 1119  ADC 7
+Strip: 1275  ADC 24
+Strip: 1276  ADC 7
+Strip: 1363  ADC 20
+Strip: 1364  ADC 11
+Layer: 9 number Strips: 20
+Strip: 217  ADC 8
+Strip: 218  ADC 23
+Strip: 339  ADC 6
+Strip: 340  ADC 25
+Strip: 421  ADC 27
+Strip: 422  ADC 4
+Strip: 489  ADC 15
+Strip: 490  ADC 16
+Strip: 691  ADC 19
+Strip: 692  ADC 12
+Strip: 753  ADC 7
+Strip: 754  ADC 24
+Strip: 917  ADC 15
+Strip: 918  ADC 16
+Strip: 1142  ADC 25
+Strip: 1143  ADC 6
+Strip: 1332  ADC 26
+Strip: 1333  ADC 5
+Strip: 1449  ADC 13
+Strip: 1450  ADC 18
+Event Number: 7
+Event: 7
+GenTrackSet
+Number Gen Tracks: 10
+Gen Track number: 0
+Charge -1
+4 momentum -0.146368 31.8713 -0.640768 31.8781 
+Track parameters:  pT 31.8717 cot(theta) -49.7398 phi0 1.57539 d0 0.0031025 z0 0.00617248
+Helix paramters: kappa 0.0313758 tan(Lambda) -0.0201046 phi0 to d0 3.14619
+Gen Track number: 1
+Charge -1
+4 momentum 0.0955128 19.0324 -0.964282 19.057 
+Track parameters:  pT 19.0326 cot(theta) -19.7376 phi0 1.56578 d0 0.00198146 z0 -0.00326915
+Helix paramters: kappa 0.0525414 tan(Lambda) -0.0506647 phi0 to d0 3.13657
+Gen Track number: 2
+Charge 1
+4 momentum 0.411373 14.0589 -0.178452 14.066 
+Track parameters:  pT 14.0649 cot(theta) -78.8161 phi0 1.54154 d0 0.00632994 z0 0.00533288
+Helix paramters: kappa -0.071099 tan(Lambda) -0.0126878 phi0 to d0 3.11234
+Gen Track number: 3
+Charge -1
+4 momentum -2.8872 18.6194 -0.369594 18.8456 
+Track parameters:  pT 18.8419 cot(theta) -50.9801 phi0 1.72464 d0 0.000893833 z0 0.000231383
+Helix paramters: kappa 0.0530731 tan(Lambda) -0.0196155 phi0 to d0 3.29543
+Gen Track number: 4
+Charge -1
+4 momentum -2.22845 20.9352 0.363443 21.0566 
+Track parameters:  pT 21.0534 cot(theta) 57.9277 phi0 1.67684 d0 0.00934955 z0 -0.00980572
+Helix paramters: kappa 0.0474982 tan(Lambda) 0.0172629 phi0 to d0 3.24764
+Gen Track number: 5
+Charge 1
+4 momentum 1.23728 10.6335 0.367989 10.7116 
+Track parameters:  pT 10.7052 cot(theta) 29.0912 phi0 1.45496 d0 -0.00273292 z0 0.00525697
+Helix paramters: kappa -0.0934123 tan(Lambda) 0.0343747 phi0 to d0 3.02576
+Gen Track number: 6
+Charge 1
+4 momentum -0.200386 6.6592 -0.399673 6.67419 
+Track parameters:  pT 6.66221 cot(theta) -16.6692 phi0 1.60088 d0 -0.00781625 z0 -0.00644905
+Helix paramters: kappa -0.1501 tan(Lambda) -0.059991 phi0 to d0 3.17168
+Gen Track number: 7
+Charge 1
+4 momentum -4.42914 31.3068 2.86144 31.7478 
+Track parameters:  pT 31.6186 cot(theta) 11.0499 phi0 1.71134 d0 0.00364239 z0 -0.00909367
+Helix paramters: kappa -0.031627 tan(Lambda) 0.0904989 phi0 to d0 3.28214
+Gen Track number: 8
+Charge -1
+4 momentum -1.8207 13.6296 1.06993 13.7922 
+Track parameters:  pT 13.7506 cot(theta) 12.8519 phi0 1.70359 d0 -0.0092667 z0 0.00143363
+Helix paramters: kappa 0.0727239 tan(Lambda) 0.0778096 phi0 to d0 3.27439
+Gen Track number: 9
+Charge -1
+4 momentum 0.385047 17.4543 -0.490432 17.4655 
+Track parameters:  pT 17.4586 cot(theta) -35.5984 phi0 1.54874 d0 -0.00653041 z0 -0.00739966
+Helix paramters: kappa 0.0572784 tan(Lambda) -0.0280912 phi0 to d0 3.11954
+GenHitSet
+Number GenHits: 98
+GenHit: 0
+GenHit position:  -0.00420919 0.2 0.0101937
+Layer:         0
+Track number   0
+GenHit: 1
+GenHit position:  -0.00569212 0.4 0.0142148
+Layer:         1
+Track number   0
+GenHit: 2
+GenHit position:  -0.00755133 0.6 0.0182359
+Layer:         2
+Track number   0
+GenHit: 3
+GenHit position:  -0.00978686 0.8 0.0222571
+Layer:         3
+Track number   0
+GenHit: 4
+GenHit position:  -0.0123987 1 0.0262783
+Layer:         4
+Track number   0
+GenHit: 5
+GenHit position:  -0.00421048 0.2002 0.0101978
+Layer:         5
+Track number   0
+GenHit: 6
+GenHit position:  -0.00569379 0.4002 0.0142188
+Layer:         6
+Track number   0
+GenHit: 7
+GenHit position:  -0.00755338 0.6002 0.0182399
+Layer:         7
+Track number   0
+GenHit: 8
+GenHit position:  -0.00978928 0.8002 0.0222611
+Layer:         8
+Track number   0
+GenHit: 9
+GenHit position:  -0.0124015 1.0002 0.0262824
+Layer:         9
+Track number   0
+GenHit: 10
+GenHit position:  -0.0012928 0.2 0.00686335
+Layer:         0
+Track number   1
+GenHit: 11
+GenHit position:  -0.00123419 0.4 0.0169963
+Layer:         1
+Track number   1
+GenHit: 12
+GenHit position:  -0.00180564 0.6 0.0271293
+Layer:         2
+Track number   1
+GenHit: 13
+GenHit position:  -0.00300716 0.8 0.0372624
+Layer:         3
+Track number   1
+GenHit: 14
+GenHit position:  -0.00483881 1 0.0473958
+Layer:         4
+Track number   1
+GenHit: 15
+GenHit position:  -0.00129243 0.2002 0.00687348
+Layer:         5
+Track number   1
+GenHit: 16
+GenHit position:  -0.00123445 0.4002 0.0170064
+Layer:         6
+Track number   1
+GenHit: 17
+GenHit position:  -0.00180652 0.6002 0.0271394
+Layer:         7
+Track number   1
+GenHit: 18
+GenHit position:  -0.00300868 0.8002 0.0372725
+Layer:         8
+Track number   1
+GenHit: 19
+GenHit position:  -0.00484096 1.0002 0.0474059
+Layer:         9
+Track number   1
+GenHit: 20
+GenHit position:  -5.44066e-05 0.2 0.00786934
+Layer:         0
+Track number   2
+GenHit: 21
+GenHit position:  0.00707788 0.4 0.0104085
+Layer:         1
+Track number   2
+GenHit: 22
+GenHit position:  0.0150646 0.6 0.0129481
+Layer:         2
+Track number   2
+GenHit: 23
+GenHit position:  0.0239062 0.8 0.0154881
+Layer:         3
+Track number   2
+GenHit: 24
+GenHit position:  0.0336031 1 0.0180286
+Layer:         4
+Track number   2
+GenHit: 25
+GenHit position:  -4.7701e-05 0.2002 0.00787188
+Layer:         5
+Track number   2
+GenHit: 26
+GenHit position:  0.00708544 0.4002 0.010411
+Layer:         6
+Track number   2
+GenHit: 27
+GenHit position:  0.015073 0.6002 0.0129506
+Layer:         7
+Track number   2
+GenHit: 28
+GenHit position:  0.0239154 0.8002 0.0154907
+Layer:         8
+Track number   2
+GenHit: 29
+GenHit position:  0.0336132 1.0002 0.0180312
+Layer:         9
+Track number   2
+GenHit: 30
+GenHit position:  -0.0322477 0.2 0.00420509
+Layer:         0
+Track number   3
+GenHit: 31
+GenHit position:  -0.0642515 0.4 0.0081781
+Layer:         1
+Track number   3
+GenHit: 32
+GenHit position:  -0.0969168 0.6 0.0121532
+Layer:         2
+Track number   3
+GenHit: 33
+GenHit position:  -0.130245 0.8 0.0161304
+Layer:         3
+Track number   3
+GenHit: 34
+GenHit position:  -0.164236 1 0.0201097
+Layer:         4
+Track number   3
+GenHit: 35
+GenHit position:  -0.0322794 0.2002 0.00420906
+Layer:         5
+Track number   3
+GenHit: 36
+GenHit position:  -0.0642838 0.4002 0.00818208
+Layer:         6
+Track number   3
+GenHit: 37
+GenHit position:  -0.0969498 0.6002 0.0121572
+Layer:         7
+Track number   3
+GenHit: 38
+GenHit position:  -0.130278 0.8002 0.0161344
+Layer:         8
+Track number   3
+GenHit: 39
+GenHit position:  -0.164271 1.0002 0.0201137
+Layer:         9
+Track number   3
+GenHit: 40
+GenHit position:  -0.0309841 0.2 -0.0132955
+Layer:         0
+Track number   4
+GenHit: 41
+GenHit position:  -0.0531456 0.4 -0.0167692
+Layer:         1
+Track number   4
+GenHit: 42
+GenHit position:  -0.0758875 0.6 -0.0202441
+Layer:         2
+Track number   4
+GenHit: 43
+GenHit position:  -0.0992103 0.8 -0.02372
+Layer:         3
+Track number   4
+GenHit: 44
+GenHit position:  -0.123115 1 -0.0271972
+Layer:         4
+Track number   4
+GenHit: 45
+GenHit position:  -0.0310059 0.2002 -0.013299
+Layer:         5
+Track number   4
+GenHit: 46
+GenHit position:  -0.053168 0.4002 -0.0167727
+Layer:         6
+Track number   4
+GenHit: 47
+GenHit position:  -0.0759105 0.6002 -0.0202475
+Layer:         7
+Track number   4
+GenHit: 48
+GenHit position:  -0.099234 0.8002 -0.0237235
+Layer:         8
+Track number   4
+GenHit: 49
+GenHit position:  -0.123139 1.0002 -0.0272007
+Layer:         9
+Track number   4
+GenHit: 50
+GenHit position:  0.0265965 0.2 -0.00167759
+Layer:         0
+Track number   5
+GenHit: 51
+GenHit position:  0.0515869 0.4 -0.008606
+Layer:         1
+Track number   5
+GenHit: 52
+GenHit position:  0.077725 0.6 -0.0155394
+Layer:         2
+Track number   5
+GenHit: 53
+GenHit position:  0.105013 0.8 -0.0224781
+Layer:         3
+Track number   5
+GenHit: 54
+GenHit position:  0.133455 1 -0.0294222
+Layer:         4
+Track number   5
+GenHit: 55
+GenHit position:  0.0266209 0.2002 -0.00168452
+Layer:         5
+Track number   5
+GenHit: 56
+GenHit position:  0.0516124 0.4002 -0.00861293
+Layer:         6
+Track number   5
+GenHit: 57
+GenHit position:  0.0777518 0.6002 -0.0155463
+Layer:         7
+Track number   5
+GenHit: 58
+GenHit position:  0.133484 1.0002 -0.0294291
+Layer:         9
+Track number   5
+GenHit: 59
+GenHit position:  0.00270032 0.2 0.00553901
+Layer:         0
+Track number   6
+GenHit: 60
+GenHit position:  -0.000617959 0.4 0.0175389
+Layer:         1
+Track number   6
+GenHit: 61
+GenHit position:  -0.00213585 0.6 0.0295375
+Layer:         2
+Track number   6
+GenHit: 62
+GenHit position:  -0.00185372 0.8 0.0415357
+Layer:         3
+Track number   6
+GenHit: 63
+GenHit position:  0.000228498 1 0.0535346
+Layer:         4
+Track number   6
+GenHit: 64
+GenHit position:  0.0026961 0.2002 0.00555101
+Layer:         5
+Track number   6
+GenHit: 65
+GenHit position:  -0.000620376 0.4002 0.0175509
+Layer:         6
+Track number   6
+GenHit: 66
+GenHit position:  -0.00213647 0.6002 0.0295495
+Layer:         7
+Track number   6
+GenHit: 67
+GenHit position:  -0.00185254 0.8002 0.0415477
+Layer:         8
+Track number   6
+GenHit: 68
+GenHit position:  0.000231482 1.0002 0.0535466
+Layer:         9
+Track number   6
+GenHit: 69
+GenHit position:  -0.0317774 0.2 -0.0274178
+Layer:         0
+Track number   7
+GenHit: 70
+GenHit position:  -0.0594858 0.4 -0.0456905
+Layer:         1
+Track number   7
+GenHit: 71
+GenHit position:  -0.0868041 0.6 -0.0639583
+Layer:         2
+Track number   7
+GenHit: 72
+GenHit position:  -0.113733 0.8 -0.0822214
+Layer:         3
+Track number   7
+GenHit: 73
+GenHit position:  -0.140272 1 -0.10048
+Layer:         4
+Track number   7
+GenHit: 74
+GenHit position:  -0.0318053 0.2002 -0.0274361
+Layer:         5
+Track number   7
+GenHit: 75
+GenHit position:  -0.0595133 0.4002 -0.0457088
+Layer:         6
+Track number   7
+GenHit: 76
+GenHit position:  -0.0868312 0.6002 -0.0639766
+Layer:         7
+Track number   7
+GenHit: 77
+GenHit position:  -0.113759 0.8002 -0.0822397
+Layer:         8
+Track number   7
+GenHit: 78
+GenHit position:  -0.140298 1.0002 -0.100498
+Layer:         9
+Track number   7
+GenHit: 79
+GenHit position:  -0.0178105 0.2 -0.0141748
+Layer:         0
+Track number   8
+GenHit: 80
+GenHit position:  -0.0458671 0.4 -0.0298891
+Layer:         1
+Track number   8
+GenHit: 81
+GenHit position:  -0.0748225 0.6 -0.0456133
+Layer:         2
+Track number   8
+GenHit: 82
+GenHit position:  -0.104678 0.8 -0.0613477
+Layer:         3
+Track number   8
+GenHit: 83
+GenHit position:  -0.0178381 0.2002 -0.0141905
+Layer:         5
+Track number   8
+GenHit: 84
+GenHit position:  -0.0458956 0.4002 -0.0299048
+Layer:         6
+Track number   8
+GenHit: 85
+GenHit position:  -0.0748519 0.6002 -0.045629
+Layer:         7
+Track number   8
+GenHit: 86
+GenHit position:  -0.104709 0.8002 -0.0613634
+Layer:         8
+Track number   8
+GenHit: 87
+GenHit position:  -0.135468 1.0002 -0.0771083
+Layer:         9
+Track number   8
+GenHit: 88
+GenHit position:  0.0105999 0.2 -0.00177622
+Layer:         0
+Track number   9
+GenHit: 89
+GenHit position:  0.0139806 0.4 0.00384282
+Layer:         1
+Track number   9
+GenHit: 90
+GenHit position:  0.0166741 0.6 0.00946156
+Layer:         2
+Track number   9
+GenHit: 91
+GenHit position:  0.0186807 0.8 0.0150801
+Layer:         3
+Track number   9
+GenHit: 92
+GenHit position:  0.0200003 1 0.0206984
+Layer:         4
+Track number   9
+GenHit: 93
+GenHit position:  0.0106036 0.2002 -0.0017706
+Layer:         5
+Track number   9
+GenHit: 94
+GenHit position:  0.0139836 0.4002 0.00384844
+Layer:         6
+Track number   9
+GenHit: 95
+GenHit position:  0.0166765 0.6002 0.00946718
+Layer:         7
+Track number   9
+GenHit: 96
+GenHit position:  0.0186823 0.8002 0.0150857
+Layer:         8
+Track number   9
+GenHit: 97
+GenHit position:  0.0200013 1.0002 0.0207041
+Layer:         9
+Track number   9
+StripSet
+Layer: 0 number Strips: 20
+Strip: 378  ADC 20
+Strip: 379  ADC 11
+Strip: 387  ADC 12
+Strip: 388  ADC 19
+Strip: 403  ADC 1
+Strip: 404  ADC 30
+Strip: 667  ADC 29
+Strip: 668  ADC 2
+Strip: 938  ADC 6
+Strip: 939  ADC 25
+Strip: 997  ADC 29
+Strip: 998  ADC 2
+Strip: 1022  ADC 3
+Strip: 1023  ADC 28
+Strip: 1077  ADC 23
+Strip: 1078  ADC 8
+Strip: 1235  ADC 20
+Strip: 1236  ADC 11
+Strip: 1555  ADC 14
+Strip: 1556  ADC 17
+Layer: 1 number Strips: 20
+Strip: 381  ADC 24
+Strip: 382  ADC 7
+Strip: 428  ADC 10
+Strip: 429  ADC 21
+Strip: 492  ADC 21
+Strip: 493  ADC 10
+Strip: 565  ADC 29
+Strip: 566  ADC 2
+Strip: 966  ADC 15
+Strip: 967  ADC 16
+Strip: 1011  ADC 30
+Strip: 1012  ADC 1
+Strip: 1017  ADC 30
+Strip: 1018  ADC 1
+Strip: 1094  ADC 18
+Strip: 1095  ADC 13
+Strip: 1163  ADC 13
+Strip: 1164  ADC 18
+Strip: 1539  ADC 20
+Strip: 1540  ADC 11
+Layer: 2 number Strips: 18
+Strip: 539  ADC 28
+Strip: 540  ADC 3
+Strip: 589  ADC 8
+Strip: 590  ADC 23
+Strip: 644  ADC 29
+Strip: 645  ADC 2
+Strip: 649  ADC 17
+Strip: 650  ADC 14
+Strip: 986  ADC 31
+Strip: 1013  ADC 27
+Strip: 1014  ADC 27
+Strip: 1015  ADC 8
+Strip: 1098  ADC 3
+Strip: 1099  ADC 28
+Strip: 1106  ADC 12
+Strip: 1107  ADC 19
+Strip: 1412  ADC 25
+Strip: 1413  ADC 6
+Layer: 3 number Strips: 20
+Strip: 371  ADC 7
+Strip: 372  ADC 24
+Strip: 454  ADC 5
+Strip: 455  ADC 26
+Strip: 500  ADC 23
+Strip: 501  ADC 8
+Strip: 527  ADC 10
+Strip: 528  ADC 21
+Strip: 974  ADC 6
+Strip: 975  ADC 25
+Strip: 1008  ADC 30
+Strip: 1009  ADC 1
+Strip: 1014  ADC 26
+Strip: 1015  ADC 5
+Strip: 1117  ADC 26
+Strip: 1118  ADC 5
+Strip: 1142  ADC 10
+Strip: 1143  ADC 21
+Strip: 1548  ADC 24
+Strip: 1549  ADC 7
+Layer: 4 number Strips: 17
+Strip: 202  ADC 21
+Strip: 203  ADC 10
+Strip: 322  ADC 31
+Strip: 408  ADC 23
+Strip: 409  ADC 8
+Strip: 961  ADC 10
+Strip: 962  ADC 21
+Strip: 999  ADC 13
+Strip: 1000  ADC 18
+Strip: 1024  ADC 7
+Strip: 1025  ADC 24
+Strip: 1123  ADC 10
+Strip: 1124  ADC 21
+Strip: 1191  ADC 10
+Strip: 1192  ADC 21
+Strip: 1691  ADC 28
+Strip: 1692  ADC 3
+Layer: 5 number Strips: 18
+Strip: 475  ADC 31
+Strip: 739  ADC 14
+Strip: 740  ADC 17
+Strip: 757  ADC 11
+Strip: 758  ADC 20
+Strip: 987  ADC 12
+Strip: 988  ADC 19
+Strip: 989  ADC 10
+Strip: 990  ADC 21
+Strip: 1108  ADC 31
+Strip: 1134  ADC 16
+Strip: 1135  ADC 15
+Strip: 1161  ADC 27
+Strip: 1162  ADC 4
+Strip: 1181  ADC 21
+Strip: 1182  ADC 10
+Strip: 1227  ADC 25
+Strip: 1228  ADC 6
+Layer: 6 number Strips: 19
+Strip: 566  ADC 27
+Strip: 567  ADC 4
+Strip: 724  ADC 26
+Strip: 725  ADC 5
+Strip: 855  ADC 1
+Strip: 856  ADC 30
+Strip: 937  ADC 21
+Strip: 938  ADC 10
+Strip: 1062  ADC 31
+Strip: 1105  ADC 29
+Strip: 1106  ADC 2
+Strip: 1127  ADC 13
+Strip: 1128  ADC 18
+Strip: 1166  ADC 23
+Strip: 1167  ADC 8
+Strip: 1193  ADC 15
+Strip: 1194  ADC 16
+Strip: 1198  ADC 20
+Strip: 1199  ADC 11
+Layer: 7 number Strips: 20
+Strip: 703  ADC 12
+Strip: 704  ADC 19
+Strip: 795  ADC 18
+Strip: 796  ADC 13
+Strip: 922  ADC 30
+Strip: 923  ADC 1
+Strip: 945  ADC 1
+Strip: 946  ADC 30
+Strip: 1070  ADC 19
+Strip: 1071  ADC 12
+Strip: 1084  ADC 19
+Strip: 1085  ADC 12
+Strip: 1088  ADC 18
+Strip: 1089  ADC 13
+Strip: 1114  ADC 8
+Strip: 1115  ADC 23
+Strip: 1159  ADC 22
+Strip: 1160  ADC 9
+Strip: 1170  ADC 2
+Strip: 1171  ADC 29
+Layer: 8 number Strips: 18
+Strip: 373  ADC 9
+Strip: 374  ADC 22
+Strip: 447  ADC 12
+Strip: 448  ADC 19
+Strip: 494  ADC 5
+Strip: 495  ADC 26
+Strip: 525  ADC 22
+Strip: 526  ADC 9
+Strip: 976  ADC 24
+Strip: 977  ADC 7
+Strip: 1011  ADC 9
+Strip: 1012  ADC 22
+Strip: 1018  ADC 28
+Strip: 1019  ADC 3
+Strip: 1118  ADC 4
+Strip: 1119  ADC 27
+Strip: 1144  ADC 22
+Strip: 1145  ADC 9
+Layer: 9 number Strips: 19
+Strip: 203  ADC 11
+Strip: 204  ADC 20
+Strip: 313  ADC 28
+Strip: 314  ADC 3
+Strip: 339  ADC 11
+Strip: 340  ADC 20
+Strip: 405  ADC 20
+Strip: 406  ADC 11
+Strip: 963  ADC 1
+Strip: 964  ADC 30
+Strip: 1003  ADC 11
+Strip: 1004  ADC 20
+Strip: 1029  ADC 23
+Strip: 1030  ADC 8
+Strip: 1125  ADC 18
+Strip: 1126  ADC 13
+Strip: 1193  ADC 31
+Strip: 1688  ADC 24
+Strip: 1689  ADC 7
+Event Number: 8
+Event: 8
+GenTrackSet
+Number Gen Tracks: 10
+Gen Track number: 0
+Charge 1
+4 momentum 1.97415 13.3933 0.0166969 13.538 
+Track parameters:  pT 13.538 cot(theta) 810.809 phi0 1.42445 d0 0.00790037 z0 0.00175035
+Helix paramters: kappa -0.0738662 tan(Lambda) 0.00123334 phi0 to d0 2.99525
+Gen Track number: 1
+Charge 1
+4 momentum -3.02639 39.5029 -0.93528 39.6297 
+Track parameters:  pT 39.6186 cot(theta) -42.3602 phi0 1.64726 d0 -0.00348486 z0 -2.82304e-06
+Helix paramters: kappa -0.0252407 tan(Lambda) -0.0236071 phi0 to d0 3.21806
+Gen Track number: 2
+Charge 1
+4 momentum -0.311896 20.2861 1.33848 20.3326 
+Track parameters:  pT 20.2885 cot(theta) 15.1579 phi0 1.58617 d0 -0.008947 z0 0.00421516
+Helix paramters: kappa -0.0492891 tan(Lambda) 0.0659722 phi0 to d0 3.15697
+Gen Track number: 3
+Charge -1
+4 momentum 3.34907 19.2508 0.444955 19.545 
+Track parameters:  pT 19.5399 cot(theta) 43.9144 phi0 1.39855 d0 -0.00523005 z0 -0.00472746
+Helix paramters: kappa 0.0511772 tan(Lambda) 0.0227716 phi0 to d0 2.96935
+Gen Track number: 4
+Charge -1
+4 momentum -2.90992 23.4265 0.588821 23.6139 
+Track parameters:  pT 23.6066 cot(theta) 40.0913 phi0 1.69438 d0 0.00875887 z0 -0.0035842
+Helix paramters: kappa 0.0423611 tan(Lambda) 0.0249431 phi0 to d0 3.26517
+Gen Track number: 5
+Charge -1
+4 momentum -2.95494 20.9794 1.67759 21.2528 
+Track parameters:  pT 21.1865 cot(theta) 12.6291 phi0 1.71073 d0 0.00546892 z0 0.00726837
+Helix paramters: kappa 0.0471998 tan(Lambda) 0.079182 phi0 to d0 3.28152
+Gen Track number: 6
+Charge -1
+4 momentum -0.329996 18.4262 1.55226 18.4944 
+Track parameters:  pT 18.4292 cot(theta) 11.8725 phi0 1.5887 d0 -0.00635442 z0 -0.00820754
+Helix paramters: kappa 0.0542618 tan(Lambda) 0.0842284 phi0 to d0 3.1595
+Gen Track number: 7
+Charge 1
+4 momentum 4.91187 31.1747 2.00763 31.6231 
+Track parameters:  pT 31.5593 cot(theta) 15.7197 phi0 1.41452 d0 -8.10214e-05 z0 -0.00256527
+Helix paramters: kappa -0.0316864 tan(Lambda) 0.0636143 phi0 to d0 2.98532
+Gen Track number: 8
+Charge -1
+4 momentum 1.02138 35.5208 -2.32916 35.6117 
+Track parameters:  pT 35.5355 cot(theta) -15.2568 phi0 1.54205 d0 0.0086787 z0 -0.00584071
+Helix paramters: kappa 0.0281409 tan(Lambda) -0.0655447 phi0 to d0 3.11285
+Gen Track number: 9
+Charge -1
+4 momentum -2.85076 30.2518 -0.238509 30.3868 
+Track parameters:  pT 30.3858 cot(theta) -127.399 phi0 1.66475 d0 -0.00615616 z0 0.00909091
+Helix paramters: kappa 0.0329101 tan(Lambda) -0.00784934 phi0 to d0 3.23555
+GenHitSet
+Number GenHits: 100
+GenHit: 0
+GenHit position:  0.0219464 0.2 0.00150237
+Layer:         0
+Track number   0
+GenHit: 1
+GenHit position:  0.0527952 0.4 0.00125279
+Layer:         1
+Track number   0
+GenHit: 2
+GenHit position:  0.0845625 0.6 0.00100303
+Layer:         2
+Track number   0
+GenHit: 3
+GenHit position:  0.11725 0.8 0.00075309
+Layer:         3
+Track number   0
+GenHit: 4
+GenHit position:  0.150861 1 0.000502963
+Layer:         4
+Track number   0
+GenHit: 5
+GenHit position:  0.0219768 0.2002 0.00150212
+Layer:         5
+Track number   0
+GenHit: 6
+GenHit position:  0.0528265 0.4002 0.00125254
+Layer:         6
+Track number   0
+GenHit: 7
+GenHit position:  0.0845947 0.6002 0.00100278
+Layer:         7
+Track number   0
+GenHit: 8
+GenHit position:  0.117283 0.8002 0.00075284
+Layer:         8
+Track number   0
+GenHit: 9
+GenHit position:  0.150895 1.0002 0.000502713
+Layer:         9
+Track number   0
+GenHit: 10
+GenHit position:  -0.0116751 0.2 0.00472585
+Layer:         0
+Track number   1
+GenHit: 11
+GenHit position:  -0.02654 0.4 0.00946029
+Layer:         1
+Track number   1
+GenHit: 12
+GenHit position:  -0.0410998 0.6 0.0141942
+Layer:         2
+Track number   1
+GenHit: 13
+GenHit position:  -0.0553545 0.8 0.0189276
+Layer:         3
+Track number   1
+GenHit: 14
+GenHit position:  -0.0693043 1 0.0236605
+Layer:         4
+Track number   1
+GenHit: 15
+GenHit position:  -0.0116901 0.2002 0.00473059
+Layer:         5
+Track number   1
+GenHit: 16
+GenHit position:  -0.0265547 0.4002 0.00946502
+Layer:         6
+Track number   1
+GenHit: 17
+GenHit position:  -0.0411142 0.6002 0.0141989
+Layer:         7
+Track number   1
+GenHit: 18
+GenHit position:  -0.0553686 0.8002 0.0189323
+Layer:         8
+Track number   1
+GenHit: 19
+GenHit position:  -0.0693181 1.0002 0.0236652
+Layer:         9
+Track number   1
+GenHit: 20
+GenHit position:  0.0061683 0.2 -0.00897149
+Layer:         0
+Track number   2
+GenHit: 21
+GenHit position:  0.00397974 0.4 -0.0221667
+Layer:         1
+Track number   2
+GenHit: 22
+GenHit position:  0.00238232 0.6 -0.0353616
+Layer:         2
+Track number   2
+GenHit: 23
+GenHit position:  0.001376 0.8 -0.0485562
+Layer:         3
+Track number   2
+GenHit: 24
+GenHit position:  0.00096075 1 -0.0617507
+Layer:         4
+Track number   2
+GenHit: 25
+GenHit position:  0.00616581 0.2002 -0.00898469
+Layer:         5
+Track number   2
+GenHit: 26
+GenHit position:  0.00397784 0.4002 -0.0221799
+Layer:         6
+Track number   2
+GenHit: 27
+GenHit position:  0.00238102 0.6002 -0.0353748
+Layer:         7
+Track number   2
+GenHit: 28
+GenHit position:  0.00137529 0.8002 -0.0485694
+Layer:         8
+Track number   2
+GenHit: 29
+GenHit position:  0.00096063 1.0002 -0.0617639
+Layer:         9
+Track number   2
+GenHit: 30
+GenHit position:  0.0397791 0.2 -0.00936964
+Layer:         0
+Track number   3
+GenHit: 31
+GenHit position:  0.0736088 0.4 -0.0139886
+Layer:         1
+Track number   3
+GenHit: 32
+GenHit position:  0.106799 0.6 -0.0186052
+Layer:         2
+Track number   3
+GenHit: 33
+GenHit position:  0.13935 0.8 -0.0232195
+Layer:         3
+Track number   3
+GenHit: 34
+GenHit position:  0.171264 1 -0.0278314
+Layer:         4
+Track number   3
+GenHit: 35
+GenHit position:  0.0398132 0.2002 -0.00937426
+Layer:         5
+Track number   3
+GenHit: 36
+GenHit position:  0.0736423 0.4002 -0.0139933
+Layer:         6
+Track number   3
+GenHit: 37
+GenHit position:  0.106832 0.6002 -0.0186099
+Layer:         7
+Track number   3
+GenHit: 38
+GenHit position:  0.139382 0.8002 -0.0232241
+Layer:         8
+Track number   3
+GenHit: 39
+GenHit position:  0.171295 1.0002 -0.027836
+Layer:         9
+Track number   3
+GenHit: 40
+GenHit position:  -0.0339319 0.2 -0.00863911
+Layer:         0
+Track number   4
+GenHit: 41
+GenHit position:  -0.0595579 0.4 -0.0136685
+Layer:         1
+Track number   4
+GenHit: 42
+GenHit position:  -0.0857047 0.6 -0.0186996
+Layer:         2
+Track number   4
+GenHit: 43
+GenHit position:  -0.112373 0.8 -0.0237324
+Layer:         3
+Track number   4
+GenHit: 44
+GenHit position:  -0.139563 1 -0.0287669
+Layer:         4
+Track number   4
+GenHit: 45
+GenHit position:  -0.0339573 0.2002 -0.00864414
+Layer:         5
+Track number   4
+GenHit: 46
+GenHit position:  -0.0595838 0.4002 -0.0136735
+Layer:         6
+Track number   4
+GenHit: 47
+GenHit position:  -0.0857311 0.6002 -0.0187046
+Layer:         7
+Track number   4
+GenHit: 48
+GenHit position:  -0.1124 0.8002 -0.0237374
+Layer:         8
+Track number   4
+GenHit: 49
+GenHit position:  -0.13959 1.0002 -0.0287719
+Layer:         9
+Track number   4
+GenHit: 50
+GenHit position:  -0.0339866 0.2 -0.00878861
+Layer:         0
+Track number   5
+GenHit: 51
+GenHit position:  -0.063034 0.4 -0.0247912
+Layer:         1
+Track number   5
+GenHit: 52
+GenHit position:  -0.0926657 0.6 -0.0408004
+Layer:         2
+Track number   5
+GenHit: 53
+GenHit position:  -0.122883 0.8 -0.0568166
+Layer:         3
+Track number   5
+GenHit: 54
+GenHit position:  -0.153685 1 -0.0728397
+Layer:         4
+Track number   5
+GenHit: 55
+GenHit position:  -0.0340154 0.2002 -0.00880461
+Layer:         5
+Track number   5
+GenHit: 56
+GenHit position:  -0.0630633 0.4002 -0.0248072
+Layer:         6
+Track number   5
+GenHit: 57
+GenHit position:  -0.0926956 0.6002 -0.0408165
+Layer:         7
+Track number   5
+GenHit: 58
+GenHit position:  -0.122913 0.8002 -0.0568326
+Layer:         8
+Track number   5
+GenHit: 59
+GenHit position:  -0.153716 1.0002 -0.0728557
+Layer:         9
+Track number   5
+GenHit: 60
+GenHit position:  0.00244847 0.2 -0.0250469
+Layer:         0
+Track number   6
+GenHit: 61
+GenHit position:  -0.00210961 0.4 -0.0418969
+Layer:         1
+Track number   6
+GenHit: 62
+GenHit position:  -0.00731898 0.6 -0.0587483
+Layer:         2
+Track number   6
+GenHit: 63
+GenHit position:  -0.0131798 0.8 -0.0756012
+Layer:         3
+Track number   6
+GenHit: 64
+GenHit position:  -0.0196922 1 -0.0924559
+Layer:         4
+Track number   6
+GenHit: 65
+GenHit position:  0.00244424 0.2002 -0.0250637
+Layer:         5
+Track number   6
+GenHit: 66
+GenHit position:  -0.0021145 0.4002 -0.0419138
+Layer:         6
+Track number   6
+GenHit: 67
+GenHit position:  -0.00732451 0.6002 -0.0587652
+Layer:         7
+Track number   6
+GenHit: 68
+GenHit position:  -0.013186 0.8002 -0.0756181
+Layer:         8
+Track number   6
+GenHit: 69
+GenHit position:  -0.0196991 1.0002 -0.0924727
+Layer:         9
+Track number   6
+GenHit: 70
+GenHit position:  0.0317911 0.2 -0.0154479
+Layer:         0
+Track number   7
+GenHit: 71
+GenHit position:  0.0638947 0.4 -0.0283336
+Layer:         1
+Track number   7
+GenHit: 72
+GenHit position:  0.0963933 0.6 -0.0412233
+Layer:         2
+Track number   7
+GenHit: 73
+GenHit position:  0.129287 0.8 -0.0541171
+Layer:         3
+Track number   7
+GenHit: 74
+GenHit position:  0.162577 1 -0.0670151
+Layer:         4
+Track number   7
+GenHit: 75
+GenHit position:  0.031823 0.2002 -0.0154608
+Layer:         5
+Track number   7
+GenHit: 76
+GenHit position:  0.063927 0.4002 -0.0283465
+Layer:         6
+Track number   7
+GenHit: 77
+GenHit position:  0.096426 0.6002 -0.0412362
+Layer:         7
+Track number   7
+GenHit: 78
+GenHit position:  0.12932 0.8002 -0.05413
+Layer:         8
+Track number   7
+GenHit: 79
+GenHit position:  0.16261 1.0002 -0.067028
+Layer:         9
+Track number   7
+GenHit: 80
+GenHit position:  -0.00309988 0.2 0.00725698
+Layer:         0
+Track number   8
+GenHit: 81
+GenHit position:  0.00214469 0.4 0.0203704
+Layer:         1
+Track number   8
+GenHit: 82
+GenHit position:  0.00705148 0.6 0.0334833
+Layer:         2
+Track number   8
+GenHit: 83
+GenHit position:  0.0116205 0.8 0.0465957
+Layer:         3
+Track number   8
+GenHit: 84
+GenHit position:  0.0158519 1 0.0597076
+Layer:         4
+Track number   8
+GenHit: 85
+GenHit position:  -0.00309447 0.2002 0.0072701
+Layer:         5
+Track number   8
+GenHit: 86
+GenHit position:  0.00214976 0.4002 0.0203835
+Layer:         6
+Track number   8
+GenHit: 87
+GenHit position:  0.00705622 0.6002 0.0334964
+Layer:         7
+Track number   8
+GenHit: 88
+GenHit position:  0.0116249 0.8002 0.0466088
+Layer:         8
+Track number   8
+GenHit: 89
+GenHit position:  0.0158559 1.0002 0.0597207
+Layer:         9
+Track number   8
+GenHit: 90
+GenHit position:  -0.0128623 0.2 0.0106633
+Layer:         0
+Track number   9
+GenHit: 91
+GenHit position:  -0.0323081 0.4 0.0122406
+Layer:         1
+Track number   9
+GenHit: 92
+GenHit position:  -0.0521544 0.6 0.0138182
+Layer:         2
+Track number   9
+GenHit: 93
+GenHit position:  -0.0724012 0.8 0.0153961
+Layer:         3
+Track number   9
+GenHit: 94
+GenHit position:  -0.0930489 1 0.0169743
+Layer:         4
+Track number   9
+GenHit: 95
+GenHit position:  -0.0128815 0.2002 0.0106649
+Layer:         5
+Track number   9
+GenHit: 96
+GenHit position:  -0.0323278 0.4002 0.0122422
+Layer:         6
+Track number   9
+GenHit: 97
+GenHit position:  -0.0521744 0.6002 0.0138198
+Layer:         7
+Track number   9
+GenHit: 98
+GenHit position:  -0.0724217 0.8002 0.0153976
+Layer:         8
+Track number   9
+GenHit: 99
+GenHit position:  -0.0930698 1.0002 0.0169759
+Layer:         9
+Track number   9
+StripSet
+Layer: 0 number Strips: 19
+Strip: 343  ADC 10
+Strip: 344  ADC 25
+Strip: 345  ADC 27
+Strip: 766  ADC 23
+Strip: 767  ADC 8
+Strip: 790  ADC 29
+Strip: 791  ADC 2
+Strip: 961  ADC 8
+Strip: 962  ADC 23
+Strip: 1072  ADC 18
+Strip: 1073  ADC 13
+Strip: 1147  ADC 30
+Strip: 1148  ADC 1
+Strip: 1462  ADC 29
+Strip: 1463  ADC 2
+Strip: 1659  ADC 19
+Strip: 1660  ADC 12
+Strip: 1818  ADC 5
+Strip: 1819  ADC 26
+Layer: 1 number Strips: 18
+Strip: 393  ADC 14
+Strip: 394  ADC 17
+Strip: 428  ADC 31
+Strip: 700  ADC 11
+Strip: 701  ADC 20
+Strip: 758  ADC 28
+Strip: 759  ADC 3
+Strip: 1002  ADC 8
+Strip: 1003  ADC 23
+Strip: 1044  ADC 3
+Strip: 1045  ADC 28
+Strip: 1063  ADC 17
+Strip: 1064  ADC 14
+Strip: 1551  ADC 27
+Strip: 1552  ADC 4
+Strip: 1662  ADC 31
+Strip: 1759  ADC 21
+Strip: 1760  ADC 10
+Layer: 2 number Strips: 20
+Strip: 559  ADC 6
+Strip: 560  ADC 25
+Strip: 595  ADC 29
+Strip: 596  ADC 2
+Strip: 762  ADC 9
+Strip: 763  ADC 22
+Strip: 817  ADC 8
+Strip: 818  ADC 23
+Strip: 986  ADC 3
+Strip: 987  ADC 28
+Strip: 1035  ADC 13
+Strip: 1036  ADC 18
+Strip: 1058  ADC 9
+Strip: 1059  ADC 22
+Strip: 1446  ADC 18
+Strip: 1447  ADC 13
+Strip: 1505  ADC 15
+Strip: 1506  ADC 16
+Strip: 1557  ADC 24
+Strip: 1558  ADC 7
+Layer: 3 number Strips: 20
+Strip: 409  ADC 25
+Strip: 410  ADC 6
+Strip: 461  ADC 6
+Strip: 462  ADC 25
+Strip: 661  ADC 14
+Strip: 662  ADC 17
+Strip: 746  ADC 7
+Strip: 747  ADC 24
+Strip: 957  ADC 17
+Strip: 958  ADC 14
+Strip: 1030  ADC 18
+Strip: 1031  ADC 13
+Strip: 1081  ADC 6
+Strip: 1082  ADC 25
+Strip: 1609  ADC 17
+Strip: 1610  ADC 14
+Strip: 1669  ADC 11
+Strip: 1670  ADC 20
+Strip: 1720  ADC 16
+Strip: 1721  ADC 15
+Layer: 4 number Strips: 19
+Strip: 255  ADC 20
+Strip: 256  ADC 11
+Strip: 325  ADC 14
+Strip: 326  ADC 17
+Strip: 558  ADC 24
+Strip: 559  ADC 7
+Strip: 676  ADC 11
+Strip: 677  ADC 20
+Strip: 924  ADC 7
+Strip: 925  ADC 24
+Strip: 1028  ADC 24
+Strip: 1029  ADC 7
+Strip: 1103  ADC 31
+Strip: 1778  ADC 27
+Strip: 1779  ADC 4
+Strip: 1836  ADC 17
+Strip: 1837  ADC 14
+Strip: 1880  ADC 26
+Strip: 1881  ADC 5
+Layer: 5 number Strips: 20
+Strip: 522  ADC 15
+Strip: 523  ADC 16
+Strip: 714  ADC 29
+Strip: 715  ADC 2
+Strip: 835  ADC 9
+Strip: 836  ADC 22
+Strip: 843  ADC 18
+Strip: 844  ADC 13
+Strip: 847  ADC 26
+Strip: 848  ADC 5
+Strip: 850  ADC 17
+Strip: 851  ADC 14
+Strip: 1053  ADC 24
+Strip: 1054  ADC 7
+Strip: 1118  ADC 24
+Strip: 1119  ADC 7
+Strip: 1169  ADC 27
+Strip: 1170  ADC 4
+Strip: 1237  ADC 30
+Strip: 1238  ADC 1
+Layer: 6 number Strips: 20
+Strip: 604  ADC 24
+Strip: 605  ADC 7
+Strip: 739  ADC 13
+Strip: 740  ADC 18
+Strip: 775  ADC 25
+Strip: 776  ADC 6
+Strip: 801  ADC 4
+Strip: 802  ADC 27
+Strip: 883  ADC 5
+Strip: 884  ADC 26
+Strip: 886  ADC 6
+Strip: 887  ADC 25
+Strip: 1036  ADC 10
+Strip: 1037  ADC 21
+Strip: 1117  ADC 5
+Strip: 1118  ADC 26
+Strip: 1145  ADC 8
+Strip: 1146  ADC 23
+Strip: 1227  ADC 18
+Strip: 1228  ADC 13
+Layer: 7 number Strips: 17
+Strip: 729  ADC 16
+Strip: 730  ADC 15
+Strip: 817  ADC 31
+Strip: 819  ADC 30
+Strip: 820  ADC 1
+Strip: 846  ADC 10
+Strip: 847  ADC 21
+Strip: 930  ADC 32
+Strip: 931  ADC 28
+Strip: 1028  ADC 18
+Strip: 1029  ADC 13
+Strip: 1092  ADC 12
+Strip: 1093  ADC 19
+Strip: 1094  ADC 12
+Strip: 1095  ADC 19
+Strip: 1191  ADC 28
+Strip: 1192  ADC 3
+Layer: 8 number Strips: 20
+Strip: 404  ADC 22
+Strip: 405  ADC 9
+Strip: 459  ADC 14
+Strip: 460  ADC 17
+Strip: 662  ADC 12
+Strip: 663  ADC 19
+Strip: 748  ADC 15
+Strip: 749  ADC 16
+Strip: 950  ADC 8
+Strip: 951  ADC 23
+Strip: 1026  ADC 18
+Strip: 1027  ADC 13
+Strip: 1086  ADC 30
+Strip: 1087  ADC 1
+Strip: 1609  ADC 6
+Strip: 1610  ADC 25
+Strip: 1665  ADC 22
+Strip: 1666  ADC 9
+Strip: 1718  ADC 25
+Strip: 1719  ADC 6
+Layer: 9 number Strips: 19
+Strip: 248  ADC 10
+Strip: 249  ADC 21
+Strip: 323  ADC 23
+Strip: 324  ADC 8
+Strip: 559  ADC 4
+Strip: 560  ADC 27
+Strip: 678  ADC 13
+Strip: 679  ADC 18
+Strip: 917  ADC 30
+Strip: 918  ADC 1
+Strip: 1022  ADC 1
+Strip: 1023  ADC 30
+Strip: 1108  ADC 31
+Strip: 1777  ADC 8
+Strip: 1778  ADC 23
+Strip: 1831  ADC 25
+Strip: 1832  ADC 6
+Strip: 1877  ADC 13
+Strip: 1878  ADC 18
+Event Number: 9
+Event: 9
+GenTrackSet
+Number Gen Tracks: 10
+Gen Track number: 0
+Charge 1
+4 momentum -4.27882 29.5456 -1.28398 29.8814 
+Track parameters:  pT 29.8538 cot(theta) -23.2511 phi0 1.71462 d0 -0.00113359 z0 -0.00663057
+Helix paramters: kappa -0.0334965 tan(Lambda) -0.0430088 phi0 to d0 3.28541
+Gen Track number: 1
+Charge -1
+4 momentum -1.40815 8.25418 0.116051 8.37424 
+Track parameters:  pT 8.37343 cot(theta) 72.1529 phi0 1.73977 d0 -0.00383061 z0 -0.00275042
+Helix paramters: kappa 0.119425 tan(Lambda) 0.0138595 phi0 to d0 3.31056
+Gen Track number: 2
+Charge 1
+4 momentum 1.88986 22.1924 -1.68941 22.3367 
+Track parameters:  pT 22.2727 cot(theta) -13.1837 phi0 1.48584 d0 0.00313363 z0 -0.00372056
+Helix paramters: kappa -0.044898 tan(Lambda) -0.0758512 phi0 to d0 3.05664
+Gen Track number: 3
+Charge -1
+4 momentum 0.0762464 7.91627 -0.768468 7.95385 
+Track parameters:  pT 7.91664 cot(theta) -10.3019 phi0 1.56117 d0 0.00596936 z0 0.00365067
+Helix paramters: kappa 0.126316 tan(Lambda) -0.0970699 phi0 to d0 3.13196
+Gen Track number: 4
+Charge -1
+4 momentum -3.52783 34.6871 1.28839 34.8898 
+Track parameters:  pT 34.866 cot(theta) 27.0617 phi0 1.67215 d0 0.00356679 z0 0.00957298
+Helix paramters: kappa 0.0286812 tan(Lambda) 0.0369526 phi0 to d0 3.24295
+Gen Track number: 5
+Charge -1
+4 momentum 2.36423 35.4116 -1.72165 35.5322 
+Track parameters:  pT 35.4904 cot(theta) -20.6142 phi0 1.50413 d0 0.00166415 z0 -0.00724443
+Helix paramters: kappa 0.0281766 tan(Lambda) -0.0485103 phi0 to d0 3.07493
+Gen Track number: 6
+Charge 1
+4 momentum 0.472424 8.53685 -0.534281 8.56659 
+Track parameters:  pT 8.54991 cot(theta) -16.0026 phi0 1.51551 d0 0.00315296 z0 -0.0030001
+Helix paramters: kappa -0.11696 tan(Lambda) -0.0624897 phi0 to d0 3.08631
+Gen Track number: 7
+Charge -1
+4 momentum -4.9528 28.6827 0.424721 29.1103 
+Track parameters:  pT 29.1072 cot(theta) 68.5325 phi0 1.74179 d0 0.0098589 z0 0.00832825
+Helix paramters: kappa 0.0343558 tan(Lambda) 0.0145916 phi0 to d0 3.31258
+Gen Track number: 8
+Charge -1
+4 momentum -0.749986 6.33605 -0.00929296 6.38029 
+Track parameters:  pT 6.38029 cot(theta) -686.572 phi0 1.68862 d0 0.00734223 z0 -0.00391396
+Helix paramters: kappa 0.156733 tan(Lambda) -0.00145651 phi0 to d0 3.25941
+Gen Track number: 9
+Charge -1
+4 momentum -1.98088 18.5583 -0.613773 18.6738 
+Track parameters:  pT 18.6637 cot(theta) -30.4082 phi0 1.67713 d0 0.00876121 z0 0.00843898
+Helix paramters: kappa 0.0535799 tan(Lambda) -0.0328859 phi0 to d0 3.24793
+GenHitSet
+Number GenHits: 99
+GenHit: 0
+GenHit position:  -0.027612 0.2 0.00205259
+Layer:         0
+Track number   0
+GenHit: 1
+GenHit position:  -0.0559554 0.4 0.0107403
+Layer:         1
+Track number   0
+GenHit: 2
+GenHit position:  -0.0838851 0.6 0.0194255
+Layer:         2
+Track number   0
+GenHit: 3
+GenHit position:  -0.111401 0.8 0.0281083
+Layer:         3
+Track number   0
+GenHit: 4
+GenHit position:  -0.138505 1 0.0367887
+Layer:         4
+Track number   0
+GenHit: 5
+GenHit position:  -0.0276405 0.2002 0.00206128
+Layer:         5
+Track number   0
+GenHit: 6
+GenHit position:  -0.0559835 0.4002 0.010749
+Layer:         6
+Track number   0
+GenHit: 7
+GenHit position:  -0.0839128 0.6002 0.0194342
+Layer:         7
+Track number   0
+GenHit: 8
+GenHit position:  -0.111429 0.8002 0.028117
+Layer:         8
+Track number   0
+GenHit: 9
+GenHit position:  -0.138532 1.0002 0.0367974
+Layer:         9
+Track number   0
+GenHit: 10
+GenHit position:  -0.0309773 0.2 -0.00555506
+Layer:         0
+Track number   1
+GenHit: 11
+GenHit position:  -0.0673414 0.4 -0.0083724
+Layer:         1
+Track number   1
+GenHit: 12
+GenHit position:  -0.105212 0.6 -0.0111936
+Layer:         2
+Track number   1
+GenHit: 13
+GenHit position:  -0.144596 0.8 -0.0140187
+Layer:         3
+Track number   1
+GenHit: 14
+GenHit position:  -0.185499 1 -0.016848
+Layer:         4
+Track number   1
+GenHit: 15
+GenHit position:  -0.0310129 0.2002 -0.00555788
+Layer:         5
+Track number   1
+GenHit: 16
+GenHit position:  -0.0673785 0.4002 -0.00837522
+Layer:         6
+Track number   1
+GenHit: 17
+GenHit position:  -0.105251 0.6002 -0.0111964
+Layer:         7
+Track number   1
+GenHit: 18
+GenHit position:  -0.144636 0.8002 -0.0140215
+Layer:         8
+Track number   1
+GenHit: 19
+GenHit position:  -0.185541 1.0002 -0.0168508
+Layer:         9
+Track number   1
+GenHit: 20
+GenHit position:  0.0141581 0.2 0.0114861
+Layer:         0
+Track number   2
+GenHit: 21
+GenHit position:  0.0503985 0.6 0.0419509
+Layer:         2
+Track number   2
+GenHit: 22
+GenHit position:  0.0693368 0.8 0.057189
+Layer:         3
+Track number   2
+GenHit: 23
+GenHit position:  0.0888208 1 0.072431
+Layer:         4
+Track number   2
+GenHit: 24
+GenHit position:  0.0141757 0.2002 0.0115013
+Layer:         5
+Track number   2
+GenHit: 25
+GenHit position:  0.0320239 0.4002 0.0267319
+Layer:         6
+Track number   2
+GenHit: 26
+GenHit position:  0.0504172 0.6002 0.0419661
+Layer:         7
+Track number   2
+GenHit: 27
+GenHit position:  0.069356 0.8002 0.0572042
+Layer:         8
+Track number   2
+GenHit: 28
+GenHit position:  0.0888406 1.0002 0.0724463
+Layer:         9
+Track number   2
+GenHit: 29
+GenHit position:  -0.00480032 0.2 0.0230594
+Layer:         0
+Track number   3
+GenHit: 30
+GenHit position:  -0.00514577 0.4 0.0424735
+Layer:         1
+Track number   3
+GenHit: 31
+GenHit position:  -0.00700607 0.6 0.0618884
+Layer:         2
+Track number   3
+GenHit: 32
+GenHit position:  -0.0103815 0.8 0.0813052
+Layer:         3
+Track number   3
+GenHit: 33
+GenHit position:  -0.0152727 1 0.100725
+Layer:         4
+Track number   3
+GenHit: 34
+GenHit position:  -0.00479991 0.2002 0.0230789
+Layer:         5
+Track number   3
+GenHit: 35
+GenHit position:  -0.00514688 0.4002 0.0424929
+Layer:         6
+Track number   3
+GenHit: 36
+GenHit position:  -0.00700869 0.6002 0.0619078
+Layer:         7
+Track number   3
+GenHit: 37
+GenHit position:  -0.0103857 0.8002 0.0813246
+Layer:         8
+Track number   3
+GenHit: 38
+GenHit position:  -0.0152784 1.0002 0.100744
+Layer:         9
+Track number   3
+GenHit: 39
+GenHit position:  -0.0241014 0.2 0.00213027
+Layer:         0
+Track number   4
+GenHit: 40
+GenHit position:  -0.0449671 0.4 -0.00530036
+Layer:         1
+Track number   4
+GenHit: 41
+GenHit position:  -0.0661824 0.6 -0.0127323
+Layer:         2
+Track number   4
+GenHit: 42
+GenHit position:  -0.0877476 0.8 -0.0201657
+Layer:         3
+Track number   4
+GenHit: 43
+GenHit position:  -0.109663 1 -0.0276004
+Layer:         4
+Track number   4
+GenHit: 44
+GenHit position:  -0.0241221 0.2002 0.00212284
+Layer:         5
+Track number   4
+GenHit: 45
+GenHit position:  -0.0449881 0.4002 -0.00530779
+Layer:         6
+Track number   4
+GenHit: 46
+GenHit position:  -0.0662038 0.6002 -0.0127398
+Layer:         7
+Track number   4
+GenHit: 47
+GenHit position:  -0.0877694 0.8002 -0.0201731
+Layer:         8
+Track number   4
+GenHit: 48
+GenHit position:  -0.109685 1.0002 -0.0276079
+Layer:         9
+Track number   4
+GenHit: 49
+GenHit position:  0.0115151 0.2 0.0024733
+Layer:         0
+Track number   5
+GenHit: 50
+GenHit position:  0.0243581 0.4 0.0121953
+Layer:         1
+Track number   5
+GenHit: 51
+GenHit position:  0.0368611 0.6 0.0219164
+Layer:         2
+Track number   5
+GenHit: 52
+GenHit position:  0.0490243 0.8 0.0316363
+Layer:         3
+Track number   5
+GenHit: 53
+GenHit position:  0.0608478 1 0.0413553
+Layer:         4
+Track number   5
+GenHit: 54
+GenHit position:  0.0115281 0.2002 0.00248302
+Layer:         5
+Track number   5
+GenHit: 55
+GenHit position:  0.0243708 0.4002 0.0122051
+Layer:         6
+Track number   5
+GenHit: 56
+GenHit position:  0.0368734 0.6002 0.0219261
+Layer:         7
+Track number   5
+GenHit: 57
+GenHit position:  0.0490363 0.8002 0.0316461
+Layer:         8
+Track number   5
+GenHit: 58
+GenHit position:  0.0608595 1.0002 0.0413651
+Layer:         9
+Track number   5
+GenHit: 59
+GenHit position:  0.00861364 0.2 0.00950859
+Layer:         0
+Track number   6
+GenHit: 60
+GenHit position:  0.0217958 0.4 0.0220337
+Layer:         1
+Track number   6
+GenHit: 61
+GenHit position:  0.0363908 0.6 0.0345649
+Layer:         2
+Track number   6
+GenHit: 62
+GenHit position:  0.0524006 0.8 0.0471028
+Layer:         3
+Track number   6
+GenHit: 63
+GenHit position:  0.0698277 1 0.0596481
+Layer:         4
+Track number   6
+GenHit: 64
+GenHit position:  0.00862612 0.2002 0.00952111
+Layer:         5
+Track number   6
+GenHit: 65
+GenHit position:  0.0218097 0.4002 0.0220462
+Layer:         6
+Track number   6
+GenHit: 66
+GenHit position:  0.0364061 0.6002 0.0345774
+Layer:         7
+Track number   6
+GenHit: 67
+GenHit position:  0.0524173 0.8002 0.0471154
+Layer:         8
+Track number   6
+GenHit: 68
+GenHit position:  0.0698459 1.0002 0.0596607
+Layer:         9
+Track number   6
+GenHit: 69
+GenHit position:  -0.0447589 0.2 0.00534135
+Layer:         0
+Track number   7
+GenHit: 70
+GenHit position:  -0.0799439 0.4 0.00237821
+Layer:         1
+Track number   7
+GenHit: 71
+GenHit position:  -0.11556 0.6 -0.000586031
+Layer:         2
+Track number   7
+GenHit: 72
+GenHit position:  -0.151609 0.8 -0.00355138
+Layer:         3
+Track number   7
+GenHit: 73
+GenHit position:  -0.18809 1 -0.00651786
+Layer:         4
+Track number   7
+GenHit: 74
+GenHit position:  -0.0447938 0.2002 0.00533839
+Layer:         5
+Track number   7
+GenHit: 75
+GenHit position:  -0.0799793 0.4002 0.00237524
+Layer:         6
+Track number   7
+GenHit: 76
+GenHit position:  -0.115596 0.6002 -0.000588996
+Layer:         7
+Track number   7
+GenHit: 77
+GenHit position:  -0.151645 0.8002 -0.00355435
+Layer:         8
+Track number   7
+GenHit: 78
+GenHit position:  -0.188127 1.0002 -0.00652083
+Layer:         9
+Track number   7
+GenHit: 79
+GenHit position:  -0.0320361 0.2 -0.00361919
+Layer:         0
+Track number   8
+GenHit: 80
+GenHit position:  -0.0586046 0.4 -0.00332533
+Layer:         1
+Track number   8
+GenHit: 81
+GenHit position:  -0.0871063 0.6 -0.00303108
+Layer:         2
+Track number   8
+GenHit: 82
+GenHit position:  -0.117549 0.8 -0.00273642
+Layer:         3
+Track number   8
+GenHit: 83
+GenHit position:  -0.149941 1 -0.00244132
+Layer:         4
+Track number   8
+GenHit: 84
+GenHit position:  -0.0320617 0.2002 -0.0036189
+Layer:         5
+Track number   8
+GenHit: 85
+GenHit position:  -0.0586321 0.4002 -0.00332503
+Layer:         6
+Track number   8
+GenHit: 86
+GenHit position:  -0.0871358 0.6002 -0.00303079
+Layer:         7
+Track number   8
+GenHit: 87
+GenHit position:  -0.117581 0.8002 -0.00273613
+Layer:         8
+Track number   8
+GenHit: 88
+GenHit position:  -0.149975 1.0002 -0.00244103
+Layer:         9
+Track number   8
+GenHit: 89
+GenHit position:  -0.0304885 0.2 0.0150854
+Layer:         0
+Track number   9
+GenHit: 90
+GenHit position:  -0.0528202 0.4 0.0217035
+Layer:         1
+Track number   9
+GenHit: 91
+GenHit position:  -0.0758069 0.6 0.028324
+Layer:         2
+Track number   9
+GenHit: 92
+GenHit position:  -0.0994492 0.8 0.0349469
+Layer:         3
+Track number   9
+GenHit: 93
+GenHit position:  -0.123748 1 0.0415725
+Layer:         4
+Track number   9
+GenHit: 94
+GenHit position:  -0.0305105 0.2002 0.015092
+Layer:         5
+Track number   9
+GenHit: 95
+GenHit position:  -0.0528429 0.4002 0.0217101
+Layer:         6
+Track number   9
+GenHit: 96
+GenHit position:  -0.0758302 0.6002 0.0283306
+Layer:         7
+Track number   9
+GenHit: 97
+GenHit position:  -0.0994732 0.8002 0.0349536
+Layer:         8
+Track number   9
+GenHit: 98
+GenHit position:  -0.123773 1.0002 0.0415791
+Layer:         9
+Track number   9
+StripSet
+Layer: 0 number Strips: 19
+Strip: 128  ADC 15
+Strip: 129  ADC 16
+Strip: 382  ADC 13
+Strip: 383  ADC 18
+Strip: 403  ADC 5
+Strip: 404  ADC 26
+Strip: 413  ADC 5
+Strip: 414  ADC 26
+Strip: 471  ADC 15
+Strip: 472  ADC 16
+Strip: 541  ADC 9
+Strip: 542  ADC 22
+Strip: 927  ADC 31
+Strip: 1195  ADC 9
+Strip: 1196  ADC 22
+Strip: 1254  ADC 22
+Strip: 1255  ADC 9
+Strip: 1307  ADC 30
+Strip: 1308  ADC 1
+Layer: 1 number Strips: 18
+Strip: 224  ADC 27
+Strip: 225  ADC 4
+Strip: 350  ADC 27
+Strip: 351  ADC 4
+Strip: 437  ADC 20
+Strip: 438  ADC 11
+Strip: 463  ADC 9
+Strip: 464  ADC 22
+Strip: 495  ADC 23
+Strip: 496  ADC 8
+Strip: 573  ADC 16
+Strip: 574  ADC 15
+Strip: 972  ADC 18
+Strip: 973  ADC 13
+Strip: 1241  ADC 15
+Strip: 1242  ADC 16
+Strip: 1267  ADC 25
+Strip: 1268  ADC 6
+Layer: 2 number Strips: 20
+Strip: 445  ADC 19
+Strip: 446  ADC 12
+Strip: 497  ADC 14
+Strip: 498  ADC 17
+Strip: 587  ADC 1
+Strip: 588  ADC 30
+Strip: 604  ADC 30
+Strip: 605  ADC 1
+Strip: 644  ADC 17
+Strip: 645  ADC 14
+Strip: 692  ADC 23
+Strip: 693  ADC 8
+Strip: 988  ADC 27
+Strip: 989  ADC 4
+Strip: 1205  ADC 20
+Strip: 1206  ADC 11
+Strip: 1207  ADC 26
+Strip: 1208  ADC 5
+Strip: 1275  ADC 11
+Strip: 1276  ADC 20
+Layer: 3 number Strips: 20
+Strip: 265  ADC 23
+Strip: 266  ADC 8
+Strip: 300  ADC 8
+Strip: 301  ADC 23
+Strip: 435  ADC 6
+Strip: 436  ADC 25
+Strip: 466  ADC 26
+Strip: 467  ADC 5
+Strip: 526  ADC 22
+Strip: 527  ADC 9
+Strip: 584  ADC 17
+Strip: 585  ADC 14
+Strip: 972  ADC 26
+Strip: 973  ADC 5
+Strip: 1268  ADC 7
+Strip: 1269  ADC 24
+Strip: 1285  ADC 10
+Strip: 1286  ADC 21
+Strip: 1370  ADC 16
+Strip: 1371  ADC 15
+Layer: 4 number Strips: 18
+Strip: 83  ADC 27
+Strip: 84  ADC 4
+Strip: 96  ADC 31
+Strip: 273  ADC 5
+Strip: 274  ADC 26
+Strip: 331  ADC 31
+Strip: 405  ADC 26
+Strip: 406  ADC 5
+Strip: 475  ADC 26
+Strip: 476  ADC 5
+Strip: 946  ADC 7
+Strip: 947  ADC 24
+Strip: 1327  ADC 1
+Strip: 1328  ADC 30
+Strip: 1372  ADC 15
+Strip: 1373  ADC 16
+Strip: 1468  ADC 27
+Strip: 1469  ADC 4
+Layer: 5 number Strips: 20
+Strip: 912  ADC 23
+Strip: 913  ADC 8
+Strip: 951  ADC 23
+Strip: 952  ADC 8
+Strip: 1064  ADC 14
+Strip: 1065  ADC 17
+Strip: 1066  ADC 22
+Strip: 1067  ADC 9
+Strip: 1072  ADC 2
+Strip: 1073  ADC 29
+Strip: 1130  ADC 26
+Strip: 1131  ADC 5
+Strip: 1213  ADC 7
+Strip: 1214  ADC 24
+Strip: 1253  ADC 13
+Strip: 1254  ADC 18
+Strip: 1325  ADC 17
+Strip: 1326  ADC 14
+Strip: 1485  ADC 29
+Strip: 1486  ADC 2
+Layer: 6 number Strips: 20
+Strip: 939  ADC 4
+Strip: 940  ADC 27
+Strip: 970  ADC 9
+Strip: 971  ADC 22
+Strip: 989  ADC 8
+Strip: 990  ADC 23
+Strip: 1047  ADC 11
+Strip: 1048  ADC 20
+Strip: 1131  ADC 29
+Strip: 1132  ADC 2
+Strip: 1145  ADC 13
+Strip: 1146  ADC 18
+Strip: 1240  ADC 7
+Strip: 1241  ADC 24
+Strip: 1244  ADC 17
+Strip: 1245  ADC 14
+Strip: 1290  ADC 15
+Strip: 1291  ADC 16
+Strip: 1448  ADC 13
+Strip: 1449  ADC 18
+Layer: 7 number Strips: 19
+Strip: 960  ADC 31
+Strip: 967  ADC 8
+Strip: 968  ADC 23
+Strip: 1008  ADC 16
+Strip: 1009  ADC 15
+Strip: 1020  ADC 14
+Strip: 1021  ADC 17
+Strip: 1120  ADC 8
+Strip: 1121  ADC 23
+Strip: 1133  ADC 21
+Strip: 1134  ADC 10
+Strip: 1165  ADC 28
+Strip: 1166  ADC 3
+Strip: 1196  ADC 8
+Strip: 1197  ADC 23
+Strip: 1233  ADC 25
+Strip: 1234  ADC 6
+Strip: 1332  ADC 15
+Strip: 1333  ADC 16
+Layer: 8 number Strips: 20
+Strip: 265  ADC 25
+Strip: 266  ADC 6
+Strip: 299  ADC 29
+Strip: 300  ADC 2
+Strip: 435  ADC 14
+Strip: 436  ADC 17
+Strip: 468  ADC 24
+Strip: 469  ADC 7
+Strip: 529  ADC 7
+Strip: 530  ADC 24
+Strip: 583  ADC 21
+Strip: 584  ADC 10
+Strip: 978  ADC 7
+Strip: 979  ADC 24
+Strip: 1271  ADC 29
+Strip: 1272  ADC 2
+Strip: 1289  ADC 9
+Strip: 1290  ADC 22
+Strip: 1375  ADC 16
+Strip: 1376  ADC 15
+Layer: 9 number Strips: 19
+Strip: 82  ADC 6
+Strip: 83  ADC 25
+Strip: 93  ADC 3
+Strip: 94  ADC 28
+Strip: 273  ADC 13
+Strip: 274  ADC 18
+Strip: 334  ADC 23
+Strip: 335  ADC 8
+Strip: 408  ADC 18
+Strip: 409  ADC 13
+Strip: 472  ADC 15
+Strip: 473  ADC 16
+Strip: 955  ADC 9
+Strip: 956  ADC 22
+Strip: 1331  ADC 29
+Strip: 1332  ADC 2
+Strip: 1378  ADC 28
+Strip: 1379  ADC 3
+Strip: 1474  ADC 31

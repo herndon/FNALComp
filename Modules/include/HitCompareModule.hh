@@ -11,7 +11,7 @@
 
 #include "Framework/include/Module.hh"
 
-class TH1F;
+class TH1D;
 
 
 namespace fc {
@@ -56,8 +56,10 @@ private:
 
     // Histograms
     // ROOT will delete these when the TFile to which the are attached is deleted
-    std::vector<TH1F *> _hDeltaHitPositions;
+    std::vector<TH1D *> _hDeltaHitPositions;
+    std::vector<TH1D *> _hDeltaBadHitPositions;
 
+    TH1D * _hHitResults;
 
     void initializeHistograms();
 

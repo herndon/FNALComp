@@ -74,11 +74,13 @@ int main ()
                                                         "genHits", // hits from file
                                                         "genStrips", // strips from file
                                                         detectorGeometry)); //get these strips
+
     processor.addModule( new fc::HitCompareModule(config.getDebugLevel(),"genHits",
                          "recoHits", detectorGeometry));
 
     processor.addModule( new fc::PerfectTrackRecoModule(config.getDebugLevel(),
                          "recoHits", "genHits", "perfectRecoTracks", detectorGeometry) );
+
     processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(),
                          "genTracks", "perfectRecoTracks", detectorGeometry) );
 
@@ -88,11 +90,8 @@ int main ()
                          "perfectRecoTracks", "trackCandidates", detectorGeometry) );
 
 
-
     processor.addModule( new fc::TrackRecoModule(config.getDebugLevel(), "recoHits",
                          "trackCandidates", "recoTracks",config,detectorGeometry) );
-    processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(),
-                         "genTracks", "trackCandidates", detectorGeometry) );
     processor.addModule( new fc::TrackCompareModule(config.getDebugLevel(),
                         "genTracks", "recoTracks", detectorGeometry) );
 
