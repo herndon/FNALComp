@@ -14,7 +14,7 @@ class Track;
 namespace fcf {
 
 // Helper functions for track contention filters
-int numberMatchedHits(const fc::Track&, const fc::Track&);
+unsigned int numberMatchedHits(const fc::Track&, const fc::Track&);
 bool betterOverlappingTrack(const fc::Track&, const fc::Track&);
 
 } // end namescape fcf

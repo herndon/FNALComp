@@ -32,6 +32,7 @@ public:
 
     TrackCandidateModule(int, const std::string& inputHitsLabel,
                          const std::string& outputTracksLabel,
+                         const std::string& trackCandidateStrategy,
                          const Config&, const DetectorGeometry &);
 
     void processEvent(Event&) override;
@@ -43,6 +44,7 @@ private:
 
     const std::string _inHitsLabel;
     const std::string _outTracksLabel;
+    const std::string _trackCandidateStrategy;
 
     // Configuration object for tracking parameters
     const Config& _config;

@@ -1,21 +1,22 @@
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
 #include "Tracking/include/TrackingFunctions.hh"
+#include <iostream>
 
-int fcf::numberMatchedHits(const fc::Track& track1, const fc::Track& track2 ) {
+unsigned int fcf::numberMatchedHits(const fc::Track& track1, const fc::Track& track2 ) {
 
-    int matchedHits = 0;
+    unsigned int matchedHits = 0;
     for (auto const& hit : track1.getHits()) {
 
         for (auto const& hit2 :  track2.getHits()) {
 
             if (hit == hit2) ++matchedHits;
+
         }
 
     }
 
     return matchedHits;
-
 }
 
 

@@ -26,7 +26,7 @@ void fc::TrackSetIO::writeEvent(const TrackSet & trackSet,
     TrackSetContainer::size_type numberTracks = trackSet.getTracks().size();
     trackdata << numberTracks << std::endl;
 
-    int trackNumber;
+    int trackNumber = 0;
 
     for (auto const& track : trackSet.getTracks()) {
 

@@ -23,24 +23,29 @@ void fc::TrackRecoStrategy2X1SAS::recoTracks(const HitSet& recoHitSet,
 
     findTracks(recoHitSet,trackCandidateSet);
 
-    fcf::contentionTrackSetFilter(trackCandidateSet);
+    fcf::contentionTrackSetFilter(trackCandidateSet,5);
 
 
 }
 
 
 void fc::TrackRecoStrategy2X1SAS::findTracks(const HitSet & recoHitSet,
-        TrackSetContainer& trackCandidateSet) const {
+					     TrackSetContainer& trackCandidateSet) const {
 
-    std::vector<int> layers {8,2,1,0,7,6,5};
-    unsigned int expNHit = 3;
+  std::vector<int> layers {4,9,3,8,2,7,1,6,0,5};
+  unsigned int expNHit = 0;
 
-    for (auto layer : layers) {
-        LayerTrackFinder layerTrackFinder(_debugLevel,_detectorGeometry,layer,expNHit,
-                                          _minPTCut,_maxChi2NDofCut);
-        layerTrackFinder.findCandidateTracks(recoHitSet,expNHit,trackCandidateSet);
-        if (layer==0) fcf::contentionTrackSetFilter(trackCandidateSet);
-        ++expNHit;
-    }
+  for (auto layer : layers) {
+
+    //if (layer==3) --expNHit;
+    //if(layer==7) ++expNHit;
+    LayerTrackFinder layerTrackFinder(_debugLevel,_detectorGeometry,layer,expNHit,
+				      _minPTCut,_maxChi2NDofCut);
+  
+    layerTrackFinder.findCandidateTracks(recoHitSet,expNHit,trackCandidateSet);
+    //std::cout << "findTracks layer" << layer << std::endl; 
+    //iffcf::duplicateTrackSetFilter(trackCandidateSet);
+    ++expNHit;
+  }
 
 }

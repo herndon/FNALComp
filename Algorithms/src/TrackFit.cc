@@ -94,15 +94,29 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
         dchi2dHC.Zero();
         chi2 = 0;
 
+	int numberBadHits = 0;
+        int numberHits = trackHits.size();
+	bool useBadHits = true;
+       for (auto const& hit : trackHits) {
+	 if (hit>=0 && !hitSet.getHits()[hit].isGoodHit()) ++numberBadHits;
+       }
 
+       if ((numberHits - numberBadHits) >6 ) useBadHits = false;
+ 
 
         for (auto const& hit : trackHits) {
-
+ 
             // Hit information
             int hitNumber = hit;
             TVector3 hitPosition;
             int layer;
-            if (hitNumber>=0) {
+            if (_debugLevel >= 5) {
+	      if (hitNumber>=0 && !useBadHits && !hitSet.getHits()[hit].isGoodHit() ) {
+		std::cout << "Didn't use a bad hit" << std::endl;
+		continue;
+	      }
+	    }
+           if (hitNumber>=0) {
                 layer = hitSet.getHits()[hit].getLayer();
                 hitPosition = hitSet.getHits()[hit].getHitPosition();
             } else {

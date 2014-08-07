@@ -7,10 +7,10 @@ OBJS = $(addprefix  $(LIB_PATH),$(notdir $(OBJSRCS:.cc=.o)))
 MAINEXES = $(basename $(notdir  $(wildcard */test/*.cc)))
 TESTTARGETS = $(addsuffix  .test,$(MAINEXES))
 
-#INCDIRS = -I. $(foreach DIR,$(wildcard */include/),-I$(DIR))
 INCDIRS = -I.
 CC = g++
-DEBUG = -g -O0
+#DEBUG = -g -O0
+DEBUG = -g -O3 -fno-omit-frame-pointer -DNDEBUG
 CFLAGS = -std=c++11 -Wall $(DEBUG) `root-config --cflags`
 LFLAGS = -std=c++11 -Wall $(DEBUG) `root-config --glibs`
 

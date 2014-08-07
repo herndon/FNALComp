@@ -6,15 +6,17 @@
 #include "DataObjects/include/TrackSet.hh"
 #include "Modules/include/TrackCandidateModule.hh"
 #include "Tracking/include/TrackCandidateStrategy2X1SAS.hh"
+#include "Tracking/include/TrackCandidateStrategy2X1SASML.hh"
 #include "Services/include/Config.hh"
-
+#include "Services/include/Exception.hh"
 
 fc::TrackCandidateModule::TrackCandidateModule(int debugLevel,
-        const std::string& inputHitsLabel, const std::string& outputTracksLabel,
+	const std::string& inputHitsLabel, const std::string& outputTracksLabel, const std::string& trackCandidateStrategy,
         const Config& config, const DetectorGeometry & detectorGeometry):
     _debugLevel(debugLevel),
     _inHitsLabel(inputHitsLabel),
     _outTracksLabel(outputTracksLabel),
+    _trackCandidateStrategy(trackCandidateStrategy),
     _config(config),
     _detectorGeometry(detectorGeometry) {
 }
@@ -40,21 +42,30 @@ void fc::TrackCandidateModule::processEvent(Event& event)
 void fc::TrackCandidateModule::findTrackCandidates(const HitSet& recoHitSet,
         TrackSet & recoTrackCandidateSet) const {
 
+   TrackSetContainer trackCandidateSet;
+
+
+  if (_trackCandidateStrategy=="trackCandidateStrategy2X1SAS"){
 
     TrackCandidateStrategy2X1SAS candStrategy(_debugLevel,_detectorGeometry,
             _config.getMinCandPTCut());
-
-    TrackSetContainer trackCandidateSet;
-
     candStrategy.findTrackCandidates(recoHitSet,trackCandidateSet);
+
+
+  } else if  (_trackCandidateStrategy=="trackCandidateStrategy2X1SASML"){
+
+    TrackCandidateStrategy2X1SASML candStrategy(_debugLevel,_detectorGeometry,
+            _config.getMinCandPTCut());
+    candStrategy.findTrackCandidates(recoHitSet,trackCandidateSet);
+
+  } else {
+    throw Exception("TrackCandidateModule::findTrackCandidates strategy not recongnized");
+  }
+
 
     for (auto& track : trackCandidateSet) {
         recoTrackCandidateSet.insertTrack(std::move(track));
     }
 
-    if (_debugLevel>=2) {
-        //std::cout << "Reconstructed track set" << std::endl;
-        //recoTrackSet.print(std::cout);
-    }
 
 }

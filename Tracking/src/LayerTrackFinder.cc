@@ -77,7 +77,7 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track ,
     }
     if (hasLayerHit) return hits;
 
-    double maxResidual = 5.0*expectedMeasurementUncertianty1D(track.getHelix(),
+    double maxResidual = 4.0*expectedMeasurementUncertianty1D(track.getHelix(),
                          track.getCovMatrix(), _layer, _detectorGeometry);
     int hitNumber = 0;
 

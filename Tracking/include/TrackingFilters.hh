@@ -21,7 +21,11 @@ namespace fcf {
 // Track selection filters
 void simpleTrackSetFilter(const fc::DetectorGeometry&,const TrackingSelector&,
                           fc::TrackSetContainer &);
-void contentionTrackSetFilter(fc::TrackSetContainer &);
+
+  void duplicateTrackSetFilter(fc::TrackSetContainer & trackCandidateSet);
+
+
+  void contentionTrackSetFilter(fc::TrackSetContainer &, unsigned int numberToMatch);
 
 
 
