@@ -23,42 +23,41 @@ fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,
     _maxChi2NDofCut(maxChi2NDofCut) {
 }
 
-void fc::LayerTrackFinder::findCandidateTracks(const HitSet& recoHitSet,
-        unsigned int expNHit,TrackSetContainer& trackCandidateSet) const {
+void fc::LayerTrackFinder::findTracks(const HitSet& recoHitSet,
+        unsigned int expNHit,TrackSetContainer& trackSet) const {
 
     TrackSetContainer allNewTracks;
 
-    for (auto& track :  trackCandidateSet) {
+    for (auto& track :  trackSet) {
 
-        findSingleCandidateTracks(track,recoHitSet,allNewTracks);
+        findTrack(track,recoHitSet,allNewTracks);
 
     }
 
-    trackCandidateSet.reserve(trackCandidateSet.size()+allNewTracks.size());
+    trackSet.reserve(trackSet.size()+allNewTracks.size());
     for (auto& track: allNewTracks) {
-        trackCandidateSet.push_back(std::move(track));
+        trackSet.push_back(std::move(track));
     }
 
     fcf::TrackingSelector trackSelector = {0.0,_nExpHits,1000000.0,false,false};
-
-
-    fcf::simpleTrackSetFilter(_detectorGeometry,trackSelector,trackCandidateSet);
-    //layerTrackFilter(trackCandidateSet,expNHit);
+    fcf::simpleTrackSetFilter(_detectorGeometry,trackSelector,trackSet);
+    if (_layer==1||_layer==8)fcf::duplicateTrackSetFilter(trackSet);
+ 
 
 }
 
-void fc::LayerTrackFinder::findSingleCandidateTracks(const Track& track,
+void fc::LayerTrackFinder::findTrack(const Track& track,
         const HitSet& recoHitSet, TrackSetContainer& allNewTracks) const {
 
 
 
     std::vector<int> hits = findHits(track,recoHitSet);
-    TrackSetContainer newTracks = buildTrackCandidates(track, hits, recoHitSet);
-    std::vector<int> bestTracks = bestTrackCandidates(newTracks);
+    TrackSetContainer newTracks = buildTracks(track, hits, recoHitSet);
+    std::vector<int> tracks = bestTracks(newTracks);
     //We may want to decide whether to remove the seed track
-    //removeSeedTrack(trackCandidateSet,trackSet);
+    //removeSeedTrack(trackSet,trackSet);
 
-    for (auto trackNumber: bestTracks) {
+    for (auto trackNumber: tracks) {
         allNewTracks.push_back(std::move(newTracks[trackNumber]));
     }
 
@@ -103,7 +102,7 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track ,
 
 }
 
-std::vector<int> fc::LayerTrackFinder::bestTrackCandidates(
+std::vector<int> fc::LayerTrackFinder::bestTracks(
     const TrackSetContainer & tracks) const {
 
     std::vector<int> trackList;
@@ -149,20 +148,21 @@ std::vector<int> fc::LayerTrackFinder::bestTrackCandidates(
 
 
 
-fc::TrackSetContainer fc::LayerTrackFinder::buildTrackCandidates(
+fc::TrackSetContainer fc::LayerTrackFinder::buildTracks(
     const Track & track, const std::vector<int> & hits,
     const HitSet & recoHitSet) const {
 
     fcf::TrackingSelector trackSelector = {_minPTCut,_nExpHits,_maxChi2NDofCut,true,true};
     TrackSetContainer newTracks;
     for (auto hitNumber : hits) {
-        TrackHitContainer trackHitCandidate = track.getHits();
-        trackHitCandidate.push_back(hitNumber);
+      //TrackHitContainer trackHits = track.getHits();
+      TrackHitContainer trackHits;
+        trackHits.push_back(hitNumber);
 
-        Track newTrack(buildTrack(recoHitSet,trackHitCandidate,_detectorGeometry,
+        Track newTrack(buildTrack(track,recoHitSet,trackHits,_detectorGeometry,
                                   _debugLevel));
 
-        if (fcf::goodCandidateTrack(newTrack,_detectorGeometry,
+        if (fcf::goodTrack(newTrack,_detectorGeometry,
                                     trackSelector)) newTracks.push_back(std::move(newTrack));
     }
     return newTracks;

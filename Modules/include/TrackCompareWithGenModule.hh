@@ -1,7 +1,7 @@
-#ifndef Modules_TrackCompareModule_hh
-#define Modules_TrackCompareModule_hh
+#ifndef Modules_TrackCompareWithGenModule_hh
+#define Modules_TrackCompareWithGenModule_hh
 //============================================================================
-// TrackCompareModule.hh
+// TrackCompareWithGenModule.hh
 // Module for comparing reconstructed track parameters to generated track parameters
 //
 // Author Matt Herndon, University of Wisconsin,
@@ -24,15 +24,15 @@ class Track;
 class TrackSet;
 
 ///
-/// Class TrackCompareModule  Module for comparing reconstructed track parameters to generated track parameters
+/// Class TrackCompareWithGenModule  Module for comparing reconstructed track parameters to generated track parameters
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-07-15
 ///
 
-class TrackCompareModule : public Module {
+class TrackCompareWithGenModule : public Module {
 
 public:
 
-    TrackCompareModule(int debugLevel,
+    TrackCompareWithGenModule(int debugLevel,
                        const std::string& inputGenTracksLabel,
                        const std::string& inputRecTracksLabel,
                        const DetectorGeometry & detectorGeometry );
@@ -54,10 +54,13 @@ private:
 
     // Comparison of hits
 
-    void compareTracks(const GenTrackSet &, const TrackSet &) const;
-    const Track & matchTrack(const GenTrack &,const TrackSet &) const;
-    double deltaTracks(const GenTrack &, const Track &) const;
-    TVectorD deltaHP(const GenTrack &, const Track &) const;
+    void compareTracks(const GenTrackSet &, const TrackSet &);
+    const Track & matchTrack(const GenTrack &,const TrackSet &,bool& matchedTrack) const;
+  double deltaTracks(const GenTrack &, const Track &) const;
+  bool goodMatch(const GenTrack & genTrack,const Track& recoTrack) const;
+ 
+
+   TVectorD deltaHP(const GenTrack &, const Track &) const;
     void fillHistograms(const TVectorD &,const Track&) const;
 
     // Histograms
@@ -92,10 +95,16 @@ private:
     TH1F * deltaKappaPull;
     TH1F * deltaDzPull;
     TH1F * deltaTanLPull;
+  // counter for efficiency measurments
+
+  int _perfectTracks;
+  int _recoTracks;
+  int _matchedRecoTracks;
+
 
     void initializeHistograms();
 
 };
 } // end namespace fc
 
-#endif // Modules_TrackCompareModule_hh
+#endif // Modules_TrackCompareWithGenModule_hh

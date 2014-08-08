@@ -159,7 +159,7 @@ X position (m) 0
 Y position (m) 0.8002
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(0.999848,0.000000,0.017452) (rho,theta,phi)=(1.000000,89.000000,0.000000)
+TVector3 A 3D physics vector (x,y,z)=(0.984808,0.000000,-0.173648) (rho,theta,phi)=(1.000000,100.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
@@ -176,7 +176,7 @@ X position (m) 0
 Y position (m) 1.0002
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(0.999848,0.000000,0.017452) (rho,theta,phi)=(1.000000,89.000000,0.000000)
+TVector3 A 3D physics vector (x,y,z)=(0.984808,0.000000,0.173648) (rho,theta,phi)=(1.000000,80.000000,0.000000)
 Normal  
 TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
 Intrinsic Hit Resolution (m) 5e-05
@@ -244,7 +244,7 @@ Charge 1
 Track parameters:  pT 22.4468 cot(theta) 14.6182 phi0 1.70719 d0 -0.00574497 z0 -0.00739145
 Helix paramters: kappa -0.0445498 tan(Lambda) 0.0684079 phi0 to d0 3.27799
 GenHitSet
-Number GenHits: 99
+Number GenHits: 98
 GenHit: 0
 GenHit position:  0.01032 0.2 -0.00676807
 Layer:         0
@@ -322,322 +322,318 @@ GenHit position:  0.15134 0.8002 0.0791704
 Layer:         8
 Track number   1
 GenHit: 19
-GenHit position:  0.195248 1.0002 0.0969094
-Layer:         9
-Track number   1
-GenHit: 20
 GenHit position:  -0.00473983 0.2 -0.0139148
 Layer:         0
 Track number   2
-GenHit: 21
+GenHit: 20
 GenHit position:  -0.0180377 0.4 -0.0244259
 Layer:         1
 Track number   2
-GenHit: 22
+GenHit: 21
 GenHit position:  -0.0308207 0.6 -0.0349352
 Layer:         2
 Track number   2
-GenHit: 23
+GenHit: 22
 GenHit position:  -0.0430892 0.8 -0.0454429
 Layer:         3
 Track number   2
-GenHit: 24
+GenHit: 23
 GenHit position:  -0.0548434 1 -0.0559489
 Layer:         4
 Track number   2
-GenHit: 25
+GenHit: 24
 GenHit position:  -0.00475338 0.2002 -0.0139253
 Layer:         5
 Track number   2
-GenHit: 26
+GenHit: 25
 GenHit position:  -0.0180507 0.4002 -0.0244364
 Layer:         6
 Track number   2
-GenHit: 27
+GenHit: 26
 GenHit position:  -0.0308332 0.6002 -0.0349458
 Layer:         7
 Track number   2
-GenHit: 28
+GenHit: 27
 GenHit position:  -0.0431012 0.8002 -0.0454534
 Layer:         8
 Track number   2
-GenHit: 29
+GenHit: 28
 GenHit position:  -0.0548549 1.0002 -0.0559594
 Layer:         9
 Track number   2
-GenHit: 30
+GenHit: 29
 GenHit position:  -0.0255377 0.2 -0.00251361
 Layer:         0
 Track number   3
-GenHit: 31
+GenHit: 30
 GenHit position:  -0.0601424 0.4 -0.0127984
 Layer:         1
 Track number   3
-GenHit: 32
+GenHit: 31
 GenHit position:  -0.0951456 0.6 -0.0230867
 Layer:         2
 Track number   3
-GenHit: 33
+GenHit: 32
 GenHit position:  -0.130548 0.8 -0.0333785
 Layer:         3
 Track number   3
-GenHit: 34
+GenHit: 33
 GenHit position:  -0.166349 1 -0.0436738
 Layer:         4
 Track number   3
-GenHit: 35
+GenHit: 34
 GenHit position:  -0.0255721 0.2002 -0.00252389
 Layer:         5
 Track number   3
-GenHit: 36
+GenHit: 35
 GenHit position:  -0.0601772 0.4002 -0.0128087
 Layer:         6
 Track number   3
-GenHit: 37
+GenHit: 36
 GenHit position:  -0.0951808 0.6002 -0.023097
 Layer:         7
 Track number   3
-GenHit: 38
+GenHit: 37
 GenHit position:  -0.130583 0.8002 -0.0333888
 Layer:         8
 Track number   3
-GenHit: 39
+GenHit: 38
 GenHit position:  -0.166385 1.0002 -0.0436841
 Layer:         9
 Track number   3
-GenHit: 40
+GenHit: 39
 GenHit position:  0.00747259 0.2 0.00454898
 Layer:         0
 Track number   4
-GenHit: 41
+GenHit: 40
 GenHit position:  0.0223263 0.4 0.0179254
 Layer:         1
 Track number   4
-GenHit: 42
+GenHit: 41
 GenHit position:  0.0365839 0.6 0.031299
 Layer:         2
 Track number   4
-GenHit: 43
+GenHit: 42
 GenHit position:  0.0502457 0.8 0.0446698
 Layer:         3
 Track number   4
-GenHit: 44
+GenHit: 43
 GenHit position:  0.00748774 0.2002 0.00456236
 Layer:         5
 Track number   4
-GenHit: 45
+GenHit: 44
 GenHit position:  0.0223409 0.4002 0.0179388
 Layer:         6
 Track number   4
-GenHit: 46
+GenHit: 45
 GenHit position:  0.0365979 0.6002 0.0313124
 Layer:         7
 Track number   4
-GenHit: 47
+GenHit: 46
 GenHit position:  0.0502591 0.8002 0.0446832
 Layer:         8
 Track number   4
-GenHit: 48
+GenHit: 47
 GenHit position:  0.0633248 1.0002 0.0580513
 Layer:         9
 Track number   4
-GenHit: 49
+GenHit: 48
 GenHit position:  0.00868088 0.2 0.014055
 Layer:         0
 Track number   5
-GenHit: 50
+GenHit: 49
 GenHit position:  0.00830747 0.4 0.0304257
 Layer:         1
 Track number   5
-GenHit: 51
+GenHit: 50
 GenHit position:  0.00740482 0.6 0.0467966
 Layer:         2
 Track number   5
-GenHit: 52
+GenHit: 51
 GenHit position:  0.0059729 0.8 0.0631677
 Layer:         3
 Track number   5
-GenHit: 53
+GenHit: 52
 GenHit position:  0.00401168 1 0.0795392
 Layer:         4
 Track number   5
-GenHit: 54
+GenHit: 53
 GenHit position:  0.00868077 0.2002 0.0140714
 Layer:         5
 Track number   5
-GenHit: 55
+GenHit: 54
 GenHit position:  0.00830683 0.4002 0.0304421
 Layer:         6
 Track number   5
-GenHit: 56
+GenHit: 55
 GenHit position:  0.00740365 0.6002 0.0468129
 Layer:         7
 Track number   5
-GenHit: 57
+GenHit: 56
 GenHit position:  0.0059712 0.8002 0.0631841
 Layer:         8
 Track number   5
-GenHit: 58
+GenHit: 57
 GenHit position:  0.00400945 1.0002 0.0795555
 Layer:         9
 Track number   5
-GenHit: 59
+GenHit: 58
 GenHit position:  0.0390867 0.2 -0.00723644
 Layer:         0
 Track number   6
-GenHit: 60
+GenHit: 59
 GenHit position:  0.0702512 0.4 -0.018175
 Layer:         1
 Track number   6
-GenHit: 61
+GenHit: 60
 GenHit position:  0.10108 0.6 -0.0291109
 Layer:         2
 Track number   6
-GenHit: 62
+GenHit: 61
 GenHit position:  0.131572 0.8 -0.040044
 Layer:         3
 Track number   6
-GenHit: 63
+GenHit: 62
 GenHit position:  0.16173 1 -0.0509743
 Layer:         4
 Track number   6
-GenHit: 64
+GenHit: 63
 GenHit position:  0.0391181 0.2002 -0.00724738
 Layer:         5
 Track number   6
-GenHit: 65
+GenHit: 64
 GenHit position:  0.0702822 0.4002 -0.018186
 Layer:         6
 Track number   6
-GenHit: 66
+GenHit: 65
 GenHit position:  0.10111 0.6002 -0.0291218
 Layer:         7
 Track number   6
-GenHit: 67
+GenHit: 66
 GenHit position:  0.131603 0.8002 -0.0400549
 Layer:         8
 Track number   6
-GenHit: 68
+GenHit: 67
 GenHit position:  0.16176 1.0002 -0.0509852
 Layer:         9
 Track number   6
-GenHit: 69
+GenHit: 68
 GenHit position:  -0.027335 0.2 0.0147388
 Layer:         0
 Track number   7
-GenHit: 70
+GenHit: 69
 GenHit position:  -0.0539464 0.4 0.0225542
 Layer:         1
 Track number   7
-GenHit: 71
+GenHit: 70
 GenHit position:  -0.0801026 0.6 0.0303673
 Layer:         2
 Track number   7
-GenHit: 72
+GenHit: 71
 GenHit position:  -0.105804 0.8 0.0381781
 Layer:         3
 Track number   7
-GenHit: 73
+GenHit: 72
 GenHit position:  -0.131051 1 0.0459867
 Layer:         4
 Track number   7
-GenHit: 74
+GenHit: 73
 GenHit position:  -0.0273618 0.2002 0.0147466
 Layer:         5
 Track number   7
-GenHit: 75
+GenHit: 74
 GenHit position:  -0.0539728 0.4002 0.022562
 Layer:         6
 Track number   7
-GenHit: 76
+GenHit: 75
 GenHit position:  -0.0801285 0.6002 0.0303751
 Layer:         7
 Track number   7
-GenHit: 77
+GenHit: 76
 GenHit position:  -0.105829 0.8002 0.0381859
 Layer:         8
 Track number   7
-GenHit: 78
+GenHit: 77
 GenHit position:  -0.131076 1.0002 0.0459945
 Layer:         9
 Track number   7
-GenHit: 79
+GenHit: 78
 GenHit position:  0.000632666 0.2 0.00352762
 Layer:         0
 Track number   8
-GenHit: 80
+GenHit: 79
 GenHit position:  0.00235041 0.4 0.016395
 Layer:         1
 Track number   8
-GenHit: 81
+GenHit: 80
 GenHit position:  0.00372006 0.6 0.0292622
 Layer:         2
 Track number   8
-GenHit: 82
+GenHit: 81
 GenHit position:  0.00474163 0.8 0.0421292
 Layer:         3
 Track number   8
-GenHit: 83
+GenHit: 82
 GenHit position:  0.00541513 1 0.0549962
 Layer:         4
 Track number   8
-GenHit: 84
+GenHit: 83
 GenHit position:  0.000634557 0.2002 0.00354049
 Layer:         5
 Track number   8
-GenHit: 85
+GenHit: 84
 GenHit position:  0.00235195 0.4002 0.0164079
 Layer:         6
 Track number   8
-GenHit: 86
+GenHit: 85
 GenHit position:  0.00372126 0.6002 0.0292751
 Layer:         7
 Track number   8
-GenHit: 87
+GenHit: 86
 GenHit position:  0.00474248 0.8002 0.0421421
 Layer:         8
 Track number   8
-GenHit: 88
+GenHit: 87
 GenHit position:  0.00541563 1.0002 0.0550091
 Layer:         9
 Track number   8
-GenHit: 89
+GenHit: 88
 GenHit position:  -0.0213778 0.2 -0.0211448
 Layer:         0
 Track number   9
-GenHit: 90
+GenHit: 89
 GenHit position:  -0.0480056 0.4 -0.0349472
 Layer:         1
 Track number   9
-GenHit: 91
+GenHit: 90
 GenHit position:  -0.0740852 0.6 -0.0487446
 Layer:         2
 Track number   9
-GenHit: 92
+GenHit: 91
 GenHit position:  -0.0996171 0.8 -0.0625372
 Layer:         3
 Track number   9
-GenHit: 93
+GenHit: 92
 GenHit position:  -0.124602 1 -0.0763251
 Layer:         4
 Track number   9
-GenHit: 94
+GenHit: 93
 GenHit position:  -0.0214047 0.2002 -0.0211586
 Layer:         5
 Track number   9
-GenHit: 95
+GenHit: 94
 GenHit position:  -0.0480319 0.4002 -0.034961
 Layer:         6
 Track number   9
-GenHit: 96
+GenHit: 95
 GenHit position:  -0.074111 0.6002 -0.0487584
 Layer:         7
 Track number   9
-GenHit: 97
+GenHit: 96
 GenHit position:  -0.0996424 0.8002 -0.062551
 Layer:         8
 Track number   9
-GenHit: 98
+GenHit: 97
 GenHit position:  -0.124627 1.0002 -0.0763389
 Layer:         9
 Track number   9
@@ -803,47 +799,44 @@ Strip: 1257  ADC 14
 Strip: 1258  ADC 17
 Strip: 1331  ADC 26
 Strip: 1332  ADC 5
-Layer: 8 number Strips: 20
-Strip: 368  ADC 16
-Strip: 369  ADC 15
-Strip: 497  ADC 14
-Strip: 498  ADC 17
-Strip: 520  ADC 27
-Strip: 521  ADC 4
-Strip: 803  ADC 4
-Strip: 804  ADC 27
-Strip: 1050  ADC 16
-Strip: 1051  ADC 15
-Strip: 1059  ADC 26
-Strip: 1060  ADC 5
-Strip: 1278  ADC 15
-Strip: 1279  ADC 16
-Strip: 1320  ADC 29
-Strip: 1321  ADC 2
-Strip: 1677  ADC 5
-Strip: 1678  ADC 26
-Strip: 1787  ADC 29
-Strip: 1788  ADC 2
-Layer: 9 number Strips: 19
-Strip: 188  ADC 23
-Strip: 189  ADC 8
-Strip: 372  ADC 27
-Strip: 373  ADC 4
-Strip: 393  ADC 9
-Strip: 394  ADC 22
-Strip: 743  ADC 2
-Strip: 744  ADC 29
-Strip: 1050  ADC 18
-Strip: 1051  ADC 13
-Strip: 1055  ADC 17
-Strip: 1056  ADC 14
-Strip: 1345  ADC 25
-Strip: 1346  ADC 6
-Strip: 1390  ADC 31
-Strip: 1827  ADC 20
-Strip: 1828  ADC 11
-Strip: 2007  ADC 3
-Strip: 2008  ADC 28
+Layer: 8 number Strips: 19
+Strip: 410  ADC 25
+Strip: 411  ADC 6
+Strip: 469  ADC 31
+Strip: 587  ADC 18
+Strip: 588  ADC 13
+Strip: 850  ADC 15
+Strip: 851  ADC 16
+Strip: 998  ADC 21
+Strip: 999  ADC 10
+Strip: 1009  ADC 4
+Strip: 1010  ADC 27
+Strip: 1232  ADC 30
+Strip: 1233  ADC 1
+Strip: 1342  ADC 11
+Strip: 1343  ADC 20
+Strip: 1700  ADC 30
+Strip: 1701  ADC 1
+Strip: 1706  ADC 25
+Strip: 1707  ADC 6
+Layer: 9 number Strips: 17
+Strip: 166  ADC 11
+Strip: 167  ADC 20
+Strip: 343  ADC 17
+Strip: 344  ADC 14
+Strip: 417  ADC 2
+Strip: 418  ADC 29
+Strip: 704  ADC 21
+Strip: 705  ADC 10
+Strip: 1098  ADC 31
+Strip: 1112  ADC 24
+Strip: 1113  ADC 7
+Strip: 1356  ADC 7
+Strip: 1357  ADC 24
+Strip: 1385  ADC 7
+Strip: 1386  ADC 24
+Strip: 1775  ADC 20
+Strip: 1776  ADC 11
 Event Number: 1
 Event: 1
 GenTrackSet
@@ -1453,46 +1446,45 @@ Strip: 1142  ADC 21
 Strip: 1143  ADC 10
 Strip: 1228  ADC 8
 Strip: 1229  ADC 23
-Layer: 8 number Strips: 20
-Strip: 273  ADC 1
-Strip: 274  ADC 30
-Strip: 439  ADC 21
-Strip: 440  ADC 10
-Strip: 644  ADC 2
-Strip: 645  ADC 29
-Strip: 700  ADC 21
-Strip: 701  ADC 10
-Strip: 778  ADC 23
-Strip: 779  ADC 8
-Strip: 855  ADC 6
-Strip: 856  ADC 25
-Strip: 1085  ADC 29
-Strip: 1086  ADC 2
-Strip: 1093  ADC 27
-Strip: 1094  ADC 4
-Strip: 1220  ADC 3
-Strip: 1221  ADC 28
-Strip: 1426  ADC 16
-Strip: 1427  ADC 15
-Layer: 9 number Strips: 18
-Strip: 89  ADC 23
-Strip: 90  ADC 8
-Strip: 275  ADC 22
-Strip: 276  ADC 9
-Strip: 552  ADC 4
-Strip: 553  ADC 27
-Strip: 607  ADC 31
-Strip: 735  ADC 9
-Strip: 736  ADC 22
-Strip: 808  ADC 4
-Strip: 809  ADC 27
-Strip: 1108  ADC 14
-Strip: 1109  ADC 17
-Strip: 1114  ADC 31
-Strip: 1255  ADC 13
-Strip: 1256  ADC 18
-Strip: 1525  ADC 15
-Strip: 1526  ADC 16
+Layer: 8 number Strips: 18
+Strip: 272  ADC 15
+Strip: 273  ADC 16
+Strip: 395  ADC 24
+Strip: 396  ADC 7
+Strip: 635  ADC 13
+Strip: 636  ADC 18
+Strip: 672  ADC 24
+Strip: 673  ADC 7
+Strip: 769  ADC 31
+Strip: 927  ADC 27
+Strip: 928  ADC 4
+Strip: 1025  ADC 1
+Strip: 1026  ADC 30
+Strip: 1113  ADC 11
+Strip: 1114  ADC 20
+Strip: 1247  ADC 31
+Strip: 1434  ADC 14
+Strip: 1435  ADC 17
+Layer: 9 number Strips: 19
+Strip: 116  ADC 5
+Strip: 117  ADC 26
+Strip: 341  ADC 28
+Strip: 342  ADC 3
+Strip: 576  ADC 8
+Strip: 577  ADC 23
+Strip: 648  ADC 9
+Strip: 649  ADC 22
+Strip: 742  ADC 16
+Strip: 743  ADC 15
+Strip: 754  ADC 2
+Strip: 755  ADC 29
+Strip: 1089  ADC 15
+Strip: 1090  ADC 16
+Strip: 1165  ADC 8
+Strip: 1166  ADC 23
+Strip: 1222  ADC 21
+Strip: 1223  ADC 10
+Strip: 1504  ADC 31
 Event Number: 2
 Event: 2
 GenTrackSet
@@ -2103,47 +2095,45 @@ Strip: 1261  ADC 26
 Strip: 1262  ADC 5
 Strip: 1271  ADC 23
 Strip: 1272  ADC 8
-Layer: 8 number Strips: 19
-Strip: 255  ADC 31
-Strip: 295  ADC 6
-Strip: 296  ADC 25
-Strip: 419  ADC 5
-Strip: 420  ADC 26
-Strip: 568  ADC 6
-Strip: 569  ADC 25
-Strip: 662  ADC 7
-Strip: 663  ADC 24
-Strip: 1042  ADC 7
-Strip: 1043  ADC 24
-Strip: 1208  ADC 10
-Strip: 1209  ADC 21
-Strip: 1542  ADC 17
-Strip: 1543  ADC 14
-Strip: 1604  ADC 19
-Strip: 1605  ADC 12
-Strip: 1727  ADC 12
-Strip: 1728  ADC 19
-Layer: 9 number Strips: 20
-Strip: 47  ADC 22
-Strip: 48  ADC 9
-Strip: 114  ADC 9
-Strip: 115  ADC 22
-Strip: 257  ADC 15
-Strip: 258  ADC 16
-Strip: 442  ADC 12
-Strip: 443  ADC 19
-Strip: 584  ADC 15
-Strip: 585  ADC 16
-Strip: 1033  ADC 22
-Strip: 1034  ADC 9
-Strip: 1246  ADC 10
-Strip: 1247  ADC 21
-Strip: 1676  ADC 22
-Strip: 1677  ADC 9
-Strip: 1750  ADC 10
-Strip: 1751  ADC 21
-Strip: 1911  ADC 6
-Strip: 1912  ADC 25
+Layer: 8 number Strips: 18
+Strip: 224  ADC 8
+Strip: 225  ADC 23
+Strip: 370  ADC 4
+Strip: 371  ADC 27
+Strip: 433  ADC 10
+Strip: 434  ADC 21
+Strip: 537  ADC 31
+Strip: 650  ADC 5
+Strip: 651  ADC 26
+Strip: 981  ADC 28
+Strip: 982  ADC 3
+Strip: 1256  ADC 11
+Strip: 1257  ADC 20
+Strip: 1531  ADC 3
+Strip: 1532  ADC 28
+Strip: 1559  ADC 7
+Strip: 1560  ADC 24
+Strip: 1704  ADC 31
+Layer: 9 number Strips: 19
+Strip: 63  ADC 31
+Strip: 105  ADC 11
+Strip: 106  ADC 20
+Strip: 262  ADC 1
+Strip: 263  ADC 30
+Strip: 490  ADC 3
+Strip: 491  ADC 28
+Strip: 608  ADC 22
+Strip: 609  ADC 9
+Strip: 1096  ADC 15
+Strip: 1097  ADC 16
+Strip: 1189  ADC 18
+Strip: 1190  ADC 13
+Strip: 1641  ADC 25
+Strip: 1642  ADC 6
+Strip: 1805  ADC 15
+Strip: 1806  ADC 16
+Strip: 1912  ADC 9
+Strip: 1913  ADC 22
 Event Number: 3
 Event: 3
 GenTrackSet
@@ -2756,48 +2746,46 @@ Strip: 1210  ADC 13
 Strip: 1211  ADC 18
 Strip: 1264  ADC 4
 Strip: 1265  ADC 27
-Layer: 8 number Strips: 20
-Strip: 406  ADC 5
-Strip: 407  ADC 26
-Strip: 439  ADC 27
-Strip: 440  ADC 4
-Strip: 456  ADC 20
-Strip: 457  ADC 11
-Strip: 500  ADC 29
-Strip: 501  ADC 2
-Strip: 833  ADC 19
-Strip: 834  ADC 12
-Strip: 847  ADC 1
-Strip: 848  ADC 30
-Strip: 1130  ADC 23
-Strip: 1131  ADC 8
-Strip: 1167  ADC 3
-Strip: 1168  ADC 28
-Strip: 1342  ADC 12
-Strip: 1343  ADC 19
-Strip: 1356  ADC 19
-Strip: 1357  ADC 12
+Layer: 8 number Strips: 18
+Strip: 458  ADC 28
+Strip: 459  ADC 3
+Strip: 460  ADC 28
+Strip: 461  ADC 28
+Strip: 462  ADC 6
+Strip: 481  ADC 5
+Strip: 482  ADC 26
+Strip: 851  ADC 31
+Strip: 904  ADC 20
+Strip: 905  ADC 11
+Strip: 1156  ADC 28
+Strip: 1157  ADC 3
+Strip: 1234  ADC 15
+Strip: 1235  ADC 16
+Strip: 1278  ADC 28
+Strip: 1279  ADC 3
+Strip: 1405  ADC 13
+Strip: 1406  ADC 18
 Layer: 9 number Strips: 20
-Strip: 243  ADC 17
-Strip: 244  ADC 14
-Strip: 296  ADC 19
-Strip: 297  ADC 12
-Strip: 302  ADC 21
-Strip: 303  ADC 10
-Strip: 369  ADC 15
-Strip: 370  ADC 16
-Strip: 806  ADC 23
-Strip: 807  ADC 8
-Strip: 818  ADC 23
-Strip: 819  ADC 8
-Strip: 1147  ADC 2
-Strip: 1148  ADC 29
-Strip: 1200  ADC 3
-Strip: 1201  ADC 28
-Strip: 1421  ADC 10
-Strip: 1422  ADC 21
-Strip: 1446  ADC 8
-Strip: 1447  ADC 23
+Strip: 189  ADC 30
+Strip: 190  ADC 1
+Strip: 299  ADC 9
+Strip: 300  ADC 22
+Strip: 312  ADC 14
+Strip: 313  ADC 17
+Strip: 428  ADC 16
+Strip: 429  ADC 15
+Strip: 739  ADC 1
+Strip: 740  ADC 30
+Strip: 821  ADC 4
+Strip: 822  ADC 27
+Strip: 1116  ADC 16
+Strip: 1117  ADC 15
+Strip: 1127  ADC 18
+Strip: 1128  ADC 13
+Strip: 1358  ADC 12
+Strip: 1359  ADC 19
+Strip: 1500  ADC 13
+Strip: 1501  ADC 18
 Event Number: 4
 Event: 4
 GenTrackSet
@@ -3399,43 +3387,42 @@ Strip: 1137  ADC 11
 Strip: 1138  ADC 20
 Strip: 1286  ADC 28
 Strip: 1287  ADC 3
-Layer: 8 number Strips: 18
-Strip: 465  ADC 32
-Strip: 466  ADC 22
-Strip: 515  ADC 4
-Strip: 516  ADC 27
-Strip: 628  ADC 16
-Strip: 629  ADC 15
-Strip: 788  ADC 1
-Strip: 789  ADC 30
-Strip: 940  ADC 2
-Strip: 941  ADC 29
-Strip: 1038  ADC 7
-Strip: 1039  ADC 24
-Strip: 1349  ADC 10
-Strip: 1350  ADC 21
-Strip: 1514  ADC 6
-Strip: 1515  ADC 25
-Strip: 1622  ADC 19
-Strip: 1623  ADC 12
-Layer: 9 number Strips: 17
-Strip: 317  ADC 29
-Strip: 318  ADC 2
-Strip: 328  ADC 14
-Strip: 329  ADC 17
-Strip: 418  ADC 26
-Strip: 419  ADC 5
-Strip: 546  ADC 2
-Strip: 547  ADC 29
-Strip: 727  ADC 24
-Strip: 728  ADC 7
-Strip: 930  ADC 2
-Strip: 931  ADC 29
-Strip: 1060  ADC 31
-Strip: 1454  ADC 30
-Strip: 1455  ADC 1
-Strip: 1632  ADC 27
-Strip: 1633  ADC 4
+Layer: 8 number Strips: 20
+Strip: 444  ADC 6
+Strip: 445  ADC 25
+Strip: 455  ADC 18
+Strip: 456  ADC 13
+Strip: 578  ADC 5
+Strip: 579  ADC 26
+Strip: 630  ADC 13
+Strip: 631  ADC 18
+Strip: 859  ADC 16
+Strip: 860  ADC 15
+Strip: 968  ADC 16
+Strip: 969  ADC 15
+Strip: 972  ADC 24
+Strip: 973  ADC 7
+Strip: 1406  ADC 8
+Strip: 1407  ADC 23
+Strip: 1492  ADC 4
+Strip: 1493  ADC 27
+Strip: 1600  ADC 7
+Strip: 1601  ADC 24
+Layer: 9 number Strips: 14
+Strip: 356  ADC 13
+Strip: 357  ADC 22
+Strip: 358  ADC 27
+Strip: 372  ADC 31
+Strip: 556  ADC 1
+Strip: 557  ADC 30
+Strip: 662  ADC 31
+Strip: 905  ADC 31
+Strip: 1127  ADC 28
+Strip: 1128  ADC 3
+Strip: 1385  ADC 28
+Strip: 1386  ADC 3
+Strip: 1636  ADC 6
+Strip: 1637  ADC 25
 Event Number: 5
 Event: 5
 GenTrackSet
@@ -4038,45 +4025,47 @@ Strip: 1209  ADC 28
 Strip: 1210  ADC 3
 Strip: 1292  ADC 23
 Strip: 1293  ADC 8
-Layer: 8 number Strips: 19
-Strip: 329  ADC 29
-Strip: 330  ADC 2
-Strip: 891  ADC 24
-Strip: 892  ADC 7
-Strip: 915  ADC 31
-Strip: 1036  ADC 2
-Strip: 1037  ADC 29
+Layer: 8 number Strips: 20
+Strip: 416  ADC 14
+Strip: 417  ADC 17
+Strip: 868  ADC 20
+Strip: 869  ADC 11
+Strip: 879  ADC 28
+Strip: 880  ADC 3
+Strip: 1057  ADC 6
+Strip: 1058  ADC 25
+Strip: 1085  ADC 19
+Strip: 1086  ADC 12
+Strip: 1125  ADC 18
+Strip: 1126  ADC 13
+Strip: 1184  ADC 29
+Strip: 1185  ADC 2
+Strip: 1283  ADC 3
+Strip: 1284  ADC 28
+Strip: 1395  ADC 15
+Strip: 1396  ADC 16
+Strip: 1451  ADC 12
+Strip: 1452  ADC 19
+Layer: 9 number Strips: 19
+Strip: 85  ADC 9
+Strip: 86  ADC 22
+Strip: 890  ADC 3
+Strip: 891  ADC 28
+Strip: 941  ADC 31
+Strip: 985  ADC 1
+Strip: 986  ADC 30
+Strip: 1042  ADC 14
 Strip: 1043  ADC 17
-Strip: 1044  ADC 14
-Strip: 1161  ADC 16
-Strip: 1162  ADC 15
-Strip: 1255  ADC 13
-Strip: 1256  ADC 18
-Strip: 1290  ADC 16
-Strip: 1291  ADC 15
-Strip: 1325  ADC 30
-Strip: 1326  ADC 1
-Strip: 1403  ADC 3
-Strip: 1404  ADC 28
-Layer: 9 number Strips: 18
-Strip: 149  ADC 10
-Strip: 150  ADC 21
-Strip: 873  ADC 3
-Strip: 874  ADC 28
-Strip: 888  ADC 3
-Strip: 889  ADC 28
-Strip: 1034  ADC 4
-Strip: 1035  ADC 27
-Strip: 1056  ADC 9
-Strip: 1057  ADC 22
-Strip: 1188  ADC 18
-Strip: 1189  ADC 13
-Strip: 1317  ADC 31
-Strip: 1365  ADC 18
-Strip: 1366  ADC 13
-Strip: 1426  ADC 17
-Strip: 1427  ADC 14
-Strip: 1501  ADC 31
+Strip: 1219  ADC 2
+Strip: 1220  ADC 29
+Strip: 1343  ADC 18
+Strip: 1344  ADC 13
+Strip: 1362  ADC 6
+Strip: 1363  ADC 25
+Strip: 1382  ADC 27
+Strip: 1383  ADC 4
+Strip: 1440  ADC 24
+Strip: 1441  ADC 7
 Event Number: 6
 Event: 6
 GenTrackSet
@@ -4695,48 +4684,47 @@ Strip: 1153  ADC 25
 Strip: 1154  ADC 6
 Strip: 1184  ADC 9
 Strip: 1185  ADC 22
-Layer: 8 number Strips: 20
-Strip: 392  ADC 22
-Strip: 393  ADC 9
-Strip: 484  ADC 23
-Strip: 485  ADC 8
-Strip: 539  ADC 14
-Strip: 540  ADC 17
-Strip: 591  ADC 6
-Strip: 592  ADC 25
-Strip: 745  ADC 29
-Strip: 746  ADC 2
-Strip: 818  ADC 11
-Strip: 819  ADC 20
-Strip: 950  ADC 12
-Strip: 951  ADC 19
-Strip: 1118  ADC 24
-Strip: 1119  ADC 7
-Strip: 1275  ADC 24
-Strip: 1276  ADC 7
-Strip: 1363  ADC 20
-Strip: 1364  ADC 11
+Layer: 8 number Strips: 19
+Strip: 396  ADC 28
+Strip: 397  ADC 3
+Strip: 457  ADC 21
+Strip: 458  ADC 10
+Strip: 564  ADC 27
+Strip: 565  ADC 4
+Strip: 571  ADC 1
+Strip: 572  ADC 30
+Strip: 780  ADC 7
+Strip: 781  ADC 32
+Strip: 782  ADC 22
+Strip: 1012  ADC 19
+Strip: 1013  ADC 12
+Strip: 1093  ADC 24
+Strip: 1094  ADC 7
+Strip: 1324  ADC 12
+Strip: 1325  ADC 19
+Strip: 1420  ADC 28
+Strip: 1421  ADC 3
 Layer: 9 number Strips: 20
-Strip: 217  ADC 8
-Strip: 218  ADC 23
-Strip: 339  ADC 6
-Strip: 340  ADC 25
-Strip: 421  ADC 27
-Strip: 422  ADC 4
-Strip: 489  ADC 15
-Strip: 490  ADC 16
-Strip: 691  ADC 19
-Strip: 692  ADC 12
-Strip: 753  ADC 7
-Strip: 754  ADC 24
-Strip: 917  ADC 15
-Strip: 918  ADC 16
-Strip: 1142  ADC 25
-Strip: 1143  ADC 6
-Strip: 1332  ADC 26
-Strip: 1333  ADC 5
-Strip: 1449  ADC 13
-Strip: 1450  ADC 18
+Strip: 234  ADC 4
+Strip: 235  ADC 27
+Strip: 387  ADC 24
+Strip: 388  ADC 7
+Strip: 413  ADC 26
+Strip: 414  ADC 5
+Strip: 524  ADC 9
+Strip: 525  ADC 22
+Strip: 662  ADC 12
+Strip: 663  ADC 19
+Strip: 799  ADC 9
+Strip: 800  ADC 22
+Strip: 856  ADC 19
+Strip: 857  ADC 12
+Strip: 1162  ADC 10
+Strip: 1163  ADC 21
+Strip: 1273  ADC 17
+Strip: 1274  ADC 14
+Strip: 1380  ADC 24
+Strip: 1381  ADC 7
 Event Number: 7
 Event: 7
 GenTrackSet
@@ -5347,44 +5335,44 @@ Strip: 1160  ADC 9
 Strip: 1170  ADC 2
 Strip: 1171  ADC 29
 Layer: 8 number Strips: 18
-Strip: 373  ADC 9
-Strip: 374  ADC 22
-Strip: 447  ADC 12
-Strip: 448  ADC 19
-Strip: 494  ADC 5
-Strip: 495  ADC 26
-Strip: 525  ADC 22
-Strip: 526  ADC 9
-Strip: 976  ADC 24
-Strip: 977  ADC 7
-Strip: 1011  ADC 9
-Strip: 1012  ADC 22
-Strip: 1018  ADC 28
-Strip: 1019  ADC 3
-Strip: 1118  ADC 4
-Strip: 1119  ADC 27
-Strip: 1144  ADC 22
-Strip: 1145  ADC 9
+Strip: 368  ADC 29
+Strip: 369  ADC 2
+Strip: 534  ADC 7
+Strip: 535  ADC 24
+Strip: 555  ADC 18
+Strip: 556  ADC 13
+Strip: 561  ADC 21
+Strip: 562  ADC 10
+Strip: 955  ADC 9
+Strip: 956  ADC 22
+Strip: 976  ADC 21
+Strip: 977  ADC 10
+Strip: 978  ADC 14
+Strip: 979  ADC 17
+Strip: 1103  ADC 30
+Strip: 1104  ADC 1
+Strip: 1127  ADC 9
+Strip: 1128  ADC 22
 Layer: 9 number Strips: 19
-Strip: 203  ADC 11
-Strip: 204  ADC 20
-Strip: 313  ADC 28
-Strip: 314  ADC 3
-Strip: 339  ADC 11
-Strip: 340  ADC 20
-Strip: 405  ADC 20
-Strip: 406  ADC 11
-Strip: 963  ADC 1
-Strip: 964  ADC 30
-Strip: 1003  ADC 11
-Strip: 1004  ADC 20
-Strip: 1029  ADC 23
-Strip: 1030  ADC 8
-Strip: 1125  ADC 18
-Strip: 1126  ADC 13
-Strip: 1193  ADC 31
-Strip: 1688  ADC 24
-Strip: 1689  ADC 7
+Strip: 231  ADC 9
+Strip: 232  ADC 22
+Strip: 245  ADC 26
+Strip: 246  ADC 5
+Strip: 289  ADC 12
+Strip: 290  ADC 19
+Strip: 393  ADC 19
+Strip: 394  ADC 12
+Strip: 985  ADC 18
+Strip: 986  ADC 13
+Strip: 1041  ADC 31
+Strip: 1071  ADC 29
+Strip: 1072  ADC 2
+Strip: 1140  ADC 29
+Strip: 1141  ADC 2
+Strip: 1204  ADC 15
+Strip: 1205  ADC 16
+Strip: 1655  ADC 24
+Strip: 1656  ADC 7
 Event Number: 8
 Event: 8
 GenTrackSet
@@ -6003,47 +5991,45 @@ Strip: 1094  ADC 12
 Strip: 1095  ADC 19
 Strip: 1191  ADC 28
 Strip: 1192  ADC 3
-Layer: 8 number Strips: 20
-Strip: 404  ADC 22
-Strip: 405  ADC 9
-Strip: 459  ADC 14
-Strip: 460  ADC 17
-Strip: 662  ADC 12
-Strip: 663  ADC 19
-Strip: 748  ADC 15
-Strip: 749  ADC 16
-Strip: 950  ADC 8
-Strip: 951  ADC 23
-Strip: 1026  ADC 18
-Strip: 1027  ADC 13
-Strip: 1086  ADC 30
-Strip: 1087  ADC 1
-Strip: 1609  ADC 6
-Strip: 1610  ADC 25
-Strip: 1665  ADC 22
-Strip: 1666  ADC 9
-Strip: 1718  ADC 25
-Strip: 1719  ADC 6
-Layer: 9 number Strips: 19
-Strip: 248  ADC 10
-Strip: 249  ADC 21
-Strip: 323  ADC 23
-Strip: 324  ADC 8
-Strip: 559  ADC 4
-Strip: 560  ADC 27
-Strip: 678  ADC 13
-Strip: 679  ADC 18
-Strip: 917  ADC 30
-Strip: 918  ADC 1
-Strip: 1022  ADC 1
-Strip: 1023  ADC 30
-Strip: 1108  ADC 31
-Strip: 1777  ADC 8
-Strip: 1778  ADC 23
-Strip: 1831  ADC 25
-Strip: 1832  ADC 6
-Strip: 1877  ADC 13
-Strip: 1878  ADC 18
+Layer: 8 number Strips: 19
+Strip: 467  ADC 5
+Strip: 468  ADC 26
+Strip: 490  ADC 10
+Strip: 491  ADC 21
+Strip: 653  ADC 20
+Strip: 654  ADC 11
+Strip: 734  ADC 13
+Strip: 735  ADC 18
+Strip: 1024  ADC 31
+Strip: 1040  ADC 11
+Strip: 1041  ADC 20
+Strip: 1072  ADC 8
+Strip: 1073  ADC 23
+Strip: 1600  ADC 23
+Strip: 1601  ADC 8
+Strip: 1707  ADC 22
+Strip: 1708  ADC 9
+Strip: 1729  ADC 2
+Strip: 1730  ADC 29
+Layer: 9 number Strips: 18
+Strip: 203  ADC 20
+Strip: 204  ADC 11
+Strip: 311  ADC 23
+Strip: 312  ADC 8
+Strip: 580  ADC 28
+Strip: 581  ADC 3
+Strip: 702  ADC 22
+Strip: 703  ADC 9
+Strip: 846  ADC 21
+Strip: 847  ADC 10
+Strip: 974  ADC 11
+Strip: 975  ADC 20
+Strip: 1153  ADC 16
+Strip: 1154  ADC 15
+Strip: 1766  ADC 17
+Strip: 1767  ADC 32
+Strip: 1842  ADC 1
+Strip: 1843  ADC 30
 Event Number: 9
 Event: 9
 GenTrackSet
@@ -6659,44 +6645,43 @@ Strip: 1233  ADC 25
 Strip: 1234  ADC 6
 Strip: 1332  ADC 15
 Strip: 1333  ADC 16
-Layer: 8 number Strips: 20
-Strip: 265  ADC 25
-Strip: 266  ADC 6
-Strip: 299  ADC 29
-Strip: 300  ADC 2
-Strip: 435  ADC 14
-Strip: 436  ADC 17
-Strip: 468  ADC 24
-Strip: 469  ADC 7
-Strip: 529  ADC 7
-Strip: 530  ADC 24
-Strip: 583  ADC 21
-Strip: 584  ADC 10
-Strip: 978  ADC 7
-Strip: 979  ADC 24
-Strip: 1271  ADC 29
-Strip: 1272  ADC 2
-Strip: 1289  ADC 9
-Strip: 1290  ADC 22
-Strip: 1375  ADC 16
-Strip: 1376  ADC 15
-Layer: 9 number Strips: 19
-Strip: 82  ADC 6
-Strip: 83  ADC 25
-Strip: 93  ADC 3
-Strip: 94  ADC 28
-Strip: 273  ADC 13
-Strip: 274  ADC 18
-Strip: 334  ADC 23
-Strip: 335  ADC 8
-Strip: 408  ADC 18
-Strip: 409  ADC 13
-Strip: 472  ADC 15
-Strip: 473  ADC 16
-Strip: 955  ADC 9
-Strip: 956  ADC 22
-Strip: 1331  ADC 29
-Strip: 1332  ADC 2
-Strip: 1378  ADC 28
-Strip: 1379  ADC 3
-Strip: 1474  ADC 31
+Layer: 8 number Strips: 18
+Strip: 280  ADC 31
+Strip: 323  ADC 20
+Strip: 324  ADC 11
+Strip: 447  ADC 31
+Strip: 449  ADC 7
+Strip: 450  ADC 24
+Strip: 503  ADC 4
+Strip: 504  ADC 27
+Strip: 609  ADC 25
+Strip: 610  ADC 6
+Strip: 901  ADC 4
+Strip: 902  ADC 27
+Strip: 1237  ADC 26
+Strip: 1238  ADC 5
+Strip: 1240  ADC 8
+Strip: 1241  ADC 23
+Strip: 1315  ADC 12
+Strip: 1316  ADC 19
+Layer: 9 number Strips: 20
+Strip: 91  ADC 4
+Strip: 92  ADC 27
+Strip: 94  ADC 10
+Strip: 95  ADC 21
+Strip: 282  ADC 2
+Strip: 283  ADC 29
+Strip: 373  ADC 18
+Strip: 374  ADC 13
+Strip: 450  ADC 25
+Strip: 451  ADC 6
+Strip: 459  ADC 25
+Strip: 460  ADC 6
+Strip: 1035  ADC 14
+Strip: 1036  ADC 17
+Strip: 1358  ADC 5
+Strip: 1359  ADC 26
+Strip: 1419  ADC 17
+Strip: 1420  ADC 14
+Strip: 1523  ADC 3
+Strip: 1524  ADC 28

@@ -17,12 +17,13 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
 
 
     // Define static constants...
+  // The loop convergence pattern has been speeded up which with more realism would have to be revisited
 
     const double chi2Dummy = 1.e20;
     const double chi2Tol = 1.e-8;
-    const double deltaIncr   = 10.;
-    const double deltaDecr   = 0.1;
-    const int    loopMax = 100;
+    const double deltaIncr   = 100.;
+    const double deltaDecr   = 0.001;
+    const int    loopMax = 20;
 
     double delta  = 1.0;
 

@@ -16,36 +16,33 @@ fc::TrackRecoStrategy2X1SAS::TrackRecoStrategy2X1SAS(int debugLevel,
 }
 
 void fc::TrackRecoStrategy2X1SAS::recoTracks(const HitSet& recoHitSet,
-        TrackSetContainer& trackCandidateSet) const {
+        TrackSetContainer& trackSet) const {
 
 
     // !!!!! trackCandidateSet type def to a track list since we are doing may insertions and deletions?
 
-    findTracks(recoHitSet,trackCandidateSet);
+    findTracks(recoHitSet,trackSet);
 
-    fcf::contentionTrackSetFilter(trackCandidateSet,5);
+    int numberHitsForMatching =5;
+    fcf::contentionTrackSetFilter(trackSet,numberHitsForMatching);
 
 
 }
 
 
 void fc::TrackRecoStrategy2X1SAS::findTracks(const HitSet & recoHitSet,
-					     TrackSetContainer& trackCandidateSet) const {
+        TrackSetContainer& trackSet) const {
 
-  std::vector<int> layers {4,9,3,8,2,7,1,6,0,5};
-  unsigned int expNHit = 0;
+  std::vector<int> layers {9,4,8,3,7,2,6,1,5,0};
+    unsigned int expNHit = 0;
 
-  for (auto layer : layers) {
+    for (auto layer : layers) {
 
-    //if (layer==3) --expNHit;
-    //if(layer==7) ++expNHit;
-    LayerTrackFinder layerTrackFinder(_debugLevel,_detectorGeometry,layer,expNHit,
-				      _minPTCut,_maxChi2NDofCut);
+        LayerTrackFinder layerTrackFinder(_debugLevel,_detectorGeometry,layer,expNHit,
+                                          _minPTCut,_maxChi2NDofCut);
   
-    layerTrackFinder.findCandidateTracks(recoHitSet,expNHit,trackCandidateSet);
-    //std::cout << "findTracks layer" << layer << std::endl; 
-    //iffcf::duplicateTrackSetFilter(trackCandidateSet);
-    ++expNHit;
-  }
+	layerTrackFinder.findTracks(recoHitSet,expNHit,trackSet);
+        ++expNHit;
+    }
 
 }

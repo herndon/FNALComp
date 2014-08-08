@@ -21,6 +21,10 @@ const Track buildTrack(const HitSet & hitSet,
                        const std::vector<int> & trackHitCandidate,
                        const DetectorGeometry & detectorGeometry, int debugLevel);
 
+const fc::Track buildTrack(const Track & track, const HitSet & hitSet,
+                               const std::vector<int> & newTrackHitCandidate,
+		     const DetectorGeometry & detectorGeometry, int debugLevel);
+
 } // end namescape fc
 
 #endif // Algorithms_BuildTrack_hh

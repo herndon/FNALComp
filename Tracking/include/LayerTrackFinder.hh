@@ -24,16 +24,16 @@ public:
     LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,
                      int layer,unsigned int nExpHits, double minPTCut,double maxChi2NDofCut);
 
-    void findCandidateTracks(const HitSet & recoHitSet,unsigned int expNHit,
-                             TrackSetContainer & trackCandidateSet) const;
+    void findTracks(const HitSet & recoHitSet,unsigned int expNHit,
+                             TrackSetContainer & trackSet) const;
 
 private:
-    void findSingleCandidateTracks(const Track &, const HitSet & recoHitSet,
+    void findTrack(const Track &, const HitSet & recoHitSet,
                                    TrackSetContainer& allnewTracks) const;
     std::vector<int> findHits(const Track & track, const HitSet & recoHitSet) const;
-    TrackSetContainer buildTrackCandidates(const Track &, const std::vector<int> &,
+    TrackSetContainer buildTracks(const Track &, const std::vector<int> &,
                                            const HitSet & recoHitSet) const;
-    std::vector<int> bestTrackCandidates(const TrackSetContainer & newTracks) const;
+    std::vector<int> bestTracks(const TrackSetContainer & newTracks) const;
     void removeSeedTrack(const TrackSetContainer& oldTracks,
                          TrackSetContainer& newTracks) const;
 

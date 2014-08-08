@@ -86,9 +86,6 @@ void fc::CandidateCompareModule::compareCandidates(const TrackSet & perfectTrack
 
   for (auto const& track : perfectTrackSet.getTracks()) {
 
-    // This is the the critical function.  You sould look for the up to four
-    // candidates that match the perfect track and return the index of each one
-    // from the candidatesTrackSet in the vector std::vector<int> candidates
     std::vector<int> candidates =  matchCandidates(track,candidateTrackSet);
 
     for (auto candidate: candidates) {
@@ -102,28 +99,36 @@ void fc::CandidateCompareModule::compareCandidates(const TrackSet & perfectTrack
 
 
 
-const std::vector<int> fc::CandidateCompareModule::matchCandidates(const Track & perfectTrack,
+const std::vector<int> fc::CandidateCompareModule::matchCandidates(const Track & track,
         const TrackSet& candidateTrackSet) const {
 
-  std::vector<int> candidates;
+  int candidateNumber = 0;
+  std::vector<int> candidateNumbers;
+    for (auto const& candidate : candidateTrackSet.getTracks()) {
 
-  // loop over the candidates here and match them
+      if (matchCandidate(track,candidate)) candidateNumbers.push_back(candidateNumber);
+        ++candidateNumber;
+    }
 
-    _hMatchedCandidates->Fill(candidates.size());
+    _hMatchedCandidates->Fill(candidateNumbers.size());
 
-    return candidates;
-
+    return candidateNumbers;
 
 }
 
-
-// You might want to use algorithm abstraction and make a seperate function that compares one
-// perfect track and one candidate track
-bool fc::CandidateCompareModule::matchCandidate(const Track & perfectTrack,
+bool fc::CandidateCompareModule::matchCandidate(const Track & track,
         const Track& candidate) const {
 
+  unsigned int matchedHits = 0;
+  for (auto const hitp : track.getHits()) {
 
-  return false;
+    for (auto const hitc : candidate.getHits()){
+
+      if (hitp == hitc) matchedHits++;
+    }
+  }
+
+  return (matchedHits == candidate.getHits().size());
 }
 
 

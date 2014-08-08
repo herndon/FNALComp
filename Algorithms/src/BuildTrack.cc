@@ -69,3 +69,49 @@ const fc::Track fc::buildTrack(const HitSet & hitSet,
 
 }
 
+const fc::Track fc::buildTrack(const Track & track, const HitSet & hitSet,
+                               const std::vector<int> & newTrackHitCandidate,
+                               const DetectorGeometry & detectorGeometry, int debugLevel) {
+
+    int numberXHits = 0;
+    int numberSASHits = 0;
+    int numberZHits = 0;
+
+    TrackHitContainer trackHitCandidate = track.getHits();
+
+
+    for (auto const&  trackHit : newTrackHitCandidate) {
+      trackHitCandidate.push_back(trackHit);
+    }
+
+    // !!!!! Geometry needs to understand types of sensors for use here
+    int layer;
+    for (auto const&  trackHit : trackHitCandidate) {
+        layer = hitSet.getHits()[trackHit].getLayer();
+        if (layer >= 0 && layer <= 4) ++numberXHits;
+        if (layer==9||layer==8) ++numberSASHits;
+        if (layer>=5 && layer <=7) ++numberZHits;
+    }
+
+
+
+    Helix initialHelix = track.getHelix();
+
+    double chi2=0.0;
+    int nDof=0;
+    TMatrixD covMatrix(_sDim,_sDim);
+
+    int fitType = 0;
+    if (numberXHits <3 ) fitType += 1;
+    if ((numberSASHits+numberZHits)<2) fitType += 2;
+
+    if (fitType >0) {
+        Helix helix = fitToHelixWithPV(initialHelix,hitSet,trackHitCandidate,
+                                       detectorGeometry,covMatrix,chi2,nDof,fitType,2);
+        return Track(helix,covMatrix,chi2,nDof,trackHitCandidate);
+    } else {
+        Helix helix = fitToHelix(initialHelix,hitSet,trackHitCandidate,detectorGeometry,
+                                 covMatrix,chi2,nDof,2);
+        return Track(helix,covMatrix,chi2,nDof,trackHitCandidate);
+    }
+}
