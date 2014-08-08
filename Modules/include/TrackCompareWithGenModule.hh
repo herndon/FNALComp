@@ -97,7 +97,7 @@ private:
     TH1F * deltaTanLPull;
   // counter for efficiency measurments
 
-  int _perfectTracks;
+  int _genTracks;
   int _recoTracks;
   int _matchedRecoTracks;
 

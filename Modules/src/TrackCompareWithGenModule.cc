@@ -18,7 +18,7 @@ fc::TrackCompareWithGenModule::TrackCompareWithGenModule(int debugLevel,
     _detectorGeometry(detectorGeometry),
     _genTracksLabel(inputGenTracksLabel),
     _recTracksLabel(inputRecTracksLabel),  
-    _perfectTracks(0),
+    _genTracks(0),
     _recoTracks(0),
     _matchedRecoTracks(0) {
 
@@ -84,6 +84,8 @@ void fc::TrackCompareWithGenModule::processEvent(Event& event)
 
     compareTracks(*genTrackSet,*recoTrackSet);
 
+    _genTracks += genTrackSet->getGenTracks().size();
+    _recoTracks += recoTrackSet->getTracks().size();
 
 
 }
@@ -100,6 +102,7 @@ void fc::TrackCompareWithGenModule::compareTracks(const GenTrackSet & genTrackSe
  
       const Track& recoTrack = matchTrack(genTrack,recoTrackSet,goodMatch);
       if (goodMatch){
+	++_matchedRecoTracks;
 	TVectorD bestDeltaHP = deltaHP(genTrack,recoTrack);
         fillHistograms(bestDeltaHP,recoTrack);
       }
@@ -212,6 +215,13 @@ void fc::TrackCompareWithGenModule::fillHistograms(const TVectorD & deltaHP,
 }
 
 void fc::TrackCompareWithGenModule::endJob() {
+  if (_debugLevel >=1) {
+
+    std::cout << "TrackCompareWithGenModule Results" << std::endl;
+  std::cout << "Perfect Tracks:    " << _genTracks << std::endl;
+  std::cout << "Reco eff:          " << static_cast<double>(_matchedRecoTracks)/static_cast<double>(_genTracks) << std::endl;     
+  std::cout << "Ghost Tracks rate: " << (static_cast<double>(_recoTracks) - static_cast<double>(_matchedRecoTracks))/static_cast<double>(_recoTracks) << std::endl;
+  }
 
 
 }

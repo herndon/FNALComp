@@ -33,7 +33,7 @@ void fc::TrackRecoStrategy2X1SAS::recoTracks(const HitSet& recoHitSet,
 void fc::TrackRecoStrategy2X1SAS::findTracks(const HitSet & recoHitSet,
         TrackSetContainer& trackSet) const {
 
-  std::vector<int> layers {9,4,8,3,7,2,6,1,5,0};
+  std::vector<int> layers {9,4,8,3,2,1,0,7,6,5};
     unsigned int expNHit = 0;
 
     for (auto layer : layers) {
@@ -42,6 +42,7 @@ void fc::TrackRecoStrategy2X1SAS::findTracks(const HitSet & recoHitSet,
                                           _minPTCut,_maxChi2NDofCut);
   
 	layerTrackFinder.findTracks(recoHitSet,expNHit,trackSet);
+
         ++expNHit;
     }
 
