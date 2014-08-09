@@ -38,7 +38,6 @@ namespace fc {
 
     void processEvent(Event&) override;
 
-
    private:
 
     int const _debugLevel;
