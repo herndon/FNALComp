@@ -22,7 +22,9 @@ class LayerTrackFinder {
 
 public:
     LayerTrackFinder(int debugLevel,const DetectorGeometry& detectorGeometry,
-                     int layer,unsigned int nExpHits, double minPTCut,double maxChi2NDofCut);
+                     int layer,unsigned int nExpHits, 
+		     double minPTCut,double dRCut,double dZCut,
+		     double maxChi2NDofCut);
 
     void findTracks(const HitSet & recoHitSet,unsigned int expNHit,
                              TrackSetContainer & trackSet) const;
@@ -49,6 +51,8 @@ private:
     // intermediate tracking parameters
     unsigned int _nExpHits;
     double _minPTCut;
+    double _dRCut;
+    double _dZCut;
     double _maxChi2NDofCut;
 };
 

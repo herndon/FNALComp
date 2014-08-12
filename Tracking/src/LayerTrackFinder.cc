@@ -13,13 +13,16 @@
 
 
 fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,
-                                       const DetectorGeometry& detectorGeometry,int layer,int unsigned nExpHits,double minPTCut,
+                                       const DetectorGeometry& detectorGeometry,int layer,int unsigned nExpHits,
+				       double minPTCut,double dRCut, double dZCut,
                                        double maxChi2NDofCut):
     _debugLevel(debugLevel),
     _detectorGeometry(detectorGeometry),
     _layer(layer),
     _nExpHits(nExpHits),
     _minPTCut(minPTCut),
+    _dRCut(dRCut),
+    _dZCut(dZCut),
     _maxChi2NDofCut(maxChi2NDofCut) {
 }
 
@@ -39,7 +42,7 @@ void fc::LayerTrackFinder::findTracks(const HitSet& recoHitSet,
         trackSet.push_back(std::move(track));
     }
 
-    fcf::TrackingSelector trackSelector = {0.0,_nExpHits,1000000.0,false,false};
+    fcf::TrackingSelector trackSelector = {_minPTCut,_dRCut,_dZCut,_nExpHits,1000000.0,true,true};
     fcf::simpleTrackSetFilter(_detectorGeometry,trackSelector,trackSet);
     if (_layer==1||_layer==8)fcf::duplicateTrackSetFilter(trackSet);
  
@@ -136,11 +139,13 @@ std::vector<int> fc::LayerTrackFinder::bestTracks(
         ++trackNumber;
     }
 
-
+    // Tested keeping all or just the best track.  Keeping top 2 works best
     if (bestTrack > -1)  trackList.push_back(bestTrack);
     if (secondBestTrack > -1)  trackList.push_back(secondBestTrack);
 
-    // !!!!! could consider getting rid of the original track if the new ones are much better
+
+
+
 
     return trackList;
 
@@ -152,7 +157,7 @@ fc::TrackSetContainer fc::LayerTrackFinder::buildTracks(
     const Track & track, const std::vector<int> & hits,
     const HitSet & recoHitSet) const {
 
-    fcf::TrackingSelector trackSelector = {_minPTCut,_nExpHits,_maxChi2NDofCut,true,true};
+  fcf::TrackingSelector trackSelector = {_minPTCut,_dRCut,_dZCut,_nExpHits,_maxChi2NDofCut,true,true};
     TrackSetContainer newTracks;
     for (auto hitNumber : hits) {
       //TrackHitContainer trackHits = track.getHits();

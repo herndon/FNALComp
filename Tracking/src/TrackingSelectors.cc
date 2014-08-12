@@ -2,6 +2,7 @@
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
 #include "Tracking/include/TrackingSelectors.hh"
+#include <iostream>
 
 bool fcf::goodCandidateHelix(const fc::Helix & helix,
                              const fc::DetectorGeometry& detectorGeometry,
@@ -15,7 +16,10 @@ bool fcf::goodTrack(const fc::Track& track,
                              const fc::DetectorGeometry& detectorGeometry,
                              const TrackingSelector& trackSelector) {
 
+
   return  track.getHelix().getPT() > trackSelector._minPTCut &&
+    std::abs(track.getHelix().getDr()) < trackSelector._dRCut &&
+    std::abs(track.getHelix().getDz()) < trackSelector._dZCut &&
     (track.getNDof()<=0
      || track.getChi2()/track.getNDof()< trackSelector._maxChi2NDofCut) &&
     track.getHits().size() >= trackSelector._nHitCut &&

@@ -4,15 +4,18 @@
 #include <vector>
 #include "Geometry/include/DetectorGeometry.hh"
 #include "Tracking/include/LayerTrackFinder.hh"
+#include "Services/include/Config.hh"
 #include "Tracking/include/TrackingFilters.hh"
 #include "Tracking/include/TrackRecoStrategy2X1SAS.hh"
 
 fc::TrackRecoStrategy2X1SAS::TrackRecoStrategy2X1SAS(int debugLevel,
-        const DetectorGeometry& detectorGeometry,double minPTCut,double maxChi2NDofCut):
+        const DetectorGeometry& detectorGeometry,const Config& config):
     _debugLevel(debugLevel),
     _detectorGeometry(detectorGeometry),
-    _minPTCut(minPTCut),
-    _maxChi2NDofCut(maxChi2NDofCut) {
+    _minPTCut(config.getMinPTCut()),
+    _dRCut(config.dRCut()),
+    _dZCut(config.dZCut()),
+    _maxChi2NDofCut(config.getMaxChi2NDofCut()) {
 }
 
 void fc::TrackRecoStrategy2X1SAS::recoTracks(const HitSet& recoHitSet,
@@ -39,7 +42,7 @@ void fc::TrackRecoStrategy2X1SAS::findTracks(const HitSet & recoHitSet,
     for (auto layer : layers) {
 
         LayerTrackFinder layerTrackFinder(_debugLevel,_detectorGeometry,layer,expNHit,
-                                          _minPTCut,_maxChi2NDofCut);
+                                          _minPTCut,_dRCut,_dZCut,_maxChi2NDofCut);
   
 	layerTrackFinder.findTracks(recoHitSet,expNHit,trackSet);
 

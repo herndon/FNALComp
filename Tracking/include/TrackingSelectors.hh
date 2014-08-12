@@ -17,6 +17,8 @@ struct TrackingSelection;
 namespace fcf {
 struct TrackingSelector {
     double _minPTCut;
+    double _dRCut;
+    double _dZCut;
     unsigned int _nHitCut;
     double _maxChi2NDofCut;
     bool _useFiducialDRCut;

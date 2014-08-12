@@ -15,6 +15,7 @@ namespace fc {
 
 class DetectorGeometry;
 class HitSet;
+class Config;
 
 class TrackRecoStrategy2X1SAS {
 
@@ -23,7 +24,7 @@ public:
 
 
     TrackRecoStrategy2X1SAS(int debugLevel,const DetectorGeometry& detectorGeometry,
-                            double minPTCut,double maxChiNDofCut);
+                            const Config & config);
 
     void recoTracks(const HitSet& recoHitSet,
                     TrackSetContainer& trackCandidateSet) const;
@@ -39,6 +40,8 @@ private:
     const DetectorGeometry & _detectorGeometry;
 
     double _minPTCut;
+    double _dRCut;
+    double _dZCut;
     double _maxChi2NDofCut;
 
 };

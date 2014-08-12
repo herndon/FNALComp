@@ -42,7 +42,7 @@ void fc::TrackRecoModule::recoTracks(const TrackSet& inputTrackCandidateSet,
 
 
     TrackRecoStrategy2X1SAS recoStrategy(_debugLevel,_detectorGeometry,
-                                         _config.getMinPTCut(),_config.getMaxChi2NDofCut());
+                                         _config);
 
     TrackSetContainer trackCandidateSet(inputTrackCandidateSet.getTracks()) ;
 

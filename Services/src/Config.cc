@@ -53,6 +53,10 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
                 configfile >> _minCandPTCut;
             } else if (configString == "minPTCut") {
                 configfile >> _minPTCut;
+            } else if (configString == "dRCut") {
+                configfile >> _dRCut;
+            } else if (configString == "dZCut") {
+                configfile >> _dZCut;
             } else if (configString == "maxChi2NDofCut") {
                 configfile >> _maxChi2NDofCut;
             } else {

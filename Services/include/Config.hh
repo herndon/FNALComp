@@ -54,6 +54,12 @@ public:
     double getMinPTCut() const {
         return _minPTCut;
     }
+    double dRCut() const {
+        return _dRCut;
+    }
+    double dZCut() const {
+        return _dZCut;
+    }
     double getMaxChi2NDofCut() const {
         return _maxChi2NDofCut;
     }
@@ -71,6 +77,8 @@ private:
     std::string _rootFileName;
     double _minCandPTCut;
     double _minPTCut;
+    double _dRCut;
+    double _dZCut;
     double _maxChi2NDofCut;
 
     void _initConfig(std::ifstream&);
