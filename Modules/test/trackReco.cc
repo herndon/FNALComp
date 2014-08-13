@@ -21,6 +21,7 @@
 #include "Modules/include/TrackCompareWithPerfectModule.hh"
 #include "Modules/include/CandidateCompareModule.hh"
 #include "Modules/include/TrackCompareWithGenModule.hh"
+#include "EventDisplay/include/EventDisplayModule.hh"
 #include <fstream>
 #include <iostream>
 #include <memory>
@@ -100,7 +101,9 @@ int main ()
                       "genTracks", "recoTracks", detectorGeometry) );
  
 
-
+   fc::EventDisplayModule eventDisplay;
+   
+   eventDisplay.displayGeometry();
 
     // Event loop over module classes
     processor.processEvents();
