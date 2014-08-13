@@ -64,7 +64,7 @@ void fc::EventDisplayModule::displayGeometry(){
 
   gROOT->SetBatch(kFALSE);
  std::cout << "batch " << gROOT->IsBatch() << " gClient " << gClient << std::endl;
-TCanvas *c1 = new TCanvas("c1","Dynamic Filling Example",200,10,700,500);
+ //TCanvas *c1 = new TCanvas("c1","Dynamic Filling Example",200,10,700,500);
 
    int temp;
    std::cin >> temp;
@@ -167,15 +167,18 @@ TCanvas *c1 = new TCanvas("c1","Dynamic Filling Example",200,10,700,500);
   std::cout.flush();
 
 
-   gEve->Redraw3D(kTRUE);
+  //gEve->Redraw3D(kTRUE);
 
 
 
-//    TEveViewer *ev = gEve->GetDefaultViewer();
-//    TGLViewer  *gv = ev->GetGLViewer();
-//    gv->SetGuideState(TGLUtil::kAxesOrigin, kTRUE, kFALSE, 0);
+  //    TEveViewer *ev = gEve->GetDefaultViewer();
+  // TGLViewer  *gv = ev->GetGLViewer();
+  // gv->SetGuideState(TGLUtil::kAxesOrigin, kTRUE, kFALSE, 0);
+   std::cin >> temp;
 
-//    gEve->Redraw3D(kTRUE);
+    gEve->Redraw3D(kTRUE);
+   std::cin >> temp;
+
 //    gSystem->ProcessEvents();
 
 //    gv->CurrentCamera().RotateRad(-0.5, 1.4);

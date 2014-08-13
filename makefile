@@ -19,7 +19,7 @@ LFLAGS = -std=c++11 -Wall $(DEBUG) `root-config --glibs`
 all: $(MAINEXES)
 
 %: $(MLIB_PATH)%.o $(OBJS)
-	$(CC) $(LFLAGS) $(OBJS) ../../products/root/v5_34_18d/Darwin64bit+13-e5-prof/lib/libGeom.so ../../products/root/v5_34_18d/Darwin64bit+13-e5-prof/lib/libEve.so $< -o $@
+	$(CC) $(LFLAGS) $(OBJS) $(ROOTSYS)/lib/libGeom.so $(ROOTSYS)/lib/libEve.so $(ROOTSYS)/lib/libRGL.so $< -o $@
 
 -include  $(LIB_PATH)*.d
 
