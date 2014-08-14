@@ -48,8 +48,8 @@ void fc::HitRecoModule::makeHits(int layer,
                                  LayerStripMap const& strips,
                                  HitSet& hits) const {
   // LayerStripMap is not a convenient structure for our use, so we
-  // transform it here: a vector of pairs. The vector is sorted, so we
-  // need that.
+  // transform it here, to a vector of pairs. The vector is sorted,
+  // which we rely upon.
   Layer currentLayer(layer);
   std::transform(begin(strips), end(strips),
                  std::back_inserter(currentLayer.strips),

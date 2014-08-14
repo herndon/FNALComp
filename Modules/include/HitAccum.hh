@@ -48,7 +48,6 @@ namespace fc {
 
     void makeHit();
     void processStrip(Strip const& strip);
-
   };
 }
 

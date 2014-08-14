@@ -3,10 +3,6 @@
 //============================================================================
 // HitRecoModule.hh
 // Module for reconstructing hits from strip infomation
-//
-// Author Matt Herndon, University of Wisconsin,
-//                       Fermi National Accelerator Laborator
-// 2014-06-11
 //============================================================================
 
 #include "Framework/include/Module.hh"
@@ -15,19 +11,12 @@
 #include <vector>
 #include <string>
 
-
 namespace fc {
 
   class DetectorGeometry;
   class Hit;
   class HitSet;
   struct SensorDescriptor;
-
-
-  ///
-  /// Class HitRecoModule  Module for reconstructing hits from strip infomation
-  /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-11
-  ///
 
   class HitRecoModule : public Module {
 
