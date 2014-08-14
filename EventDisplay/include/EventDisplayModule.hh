@@ -8,35 +8,59 @@
 //
 // 2014-08-13
 //============================================================================
-#include <vector>
-#include "TVector3.h"
+
+#include "Framework/include/Module.hh"
+
+class TApplication;
+
 
 namespace fc {
 
+  class Config;
+  class DetectorGeometry;
 
 ///
 /// Class EventDisplayModule
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-08-13
 ///
 
-class EventDisplayModule {
+class EventDisplayModule : public Module {
 
 
 public:
 
 
-    EventDisplayModule();
+  EventDisplayModule(int debugLevel, const std::string& inputGenHitsLabel,const std::string& inputGenTracksLabel,const std::string& inputRecoTracksLabel, 
+		     unsigned int eventNumber, const Config&, const DetectorGeometry&);
 
-  void displayGeometry();
+    void processEvent(Event&) override;
+
+    void displayGeometry();
 
 private:
+
+    int _debugLevel;
+
+    const std::string _genHitsLabel;
+    const std::string _genTracksLabel;
+    const std::string _recoTracksLabel;
+
+  unsigned int _eventNumber;
+
+    // Configuration object for event display parameters
+    const Config& _config;
+
+    // Detector information
+    const DetectorGeometry & _detectorGeometry;
+
+  TApplication* _tApp = nullptr;
 
     bool            _drawGenTracks;
     bool            _drawGenHits;
     bool            _drawRecoTracks;
     bool            _drawSeedRecoTracks;
     bool            _drawRecoHits;
-
+ 
 
 };
 } // end namespace fc

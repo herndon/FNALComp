@@ -64,6 +64,11 @@ public:
         return _maxChi2NDofCut;
     }
 
+    unsigned int getEventNumberForEventDisplay() const {
+        return _eventNumberForEventDisplay;
+    }
+
+
     void printConfig(std::ostream& out) const;
 
 
@@ -80,6 +85,7 @@ private:
     double _dRCut;
     double _dZCut;
     double _maxChi2NDofCut;
+  unsigned int _eventNumberForEventDisplay;
 
     void _initConfig(std::ifstream&);
 

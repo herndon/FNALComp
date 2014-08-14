@@ -101,10 +101,12 @@ int main ()
                       "genTracks", "recoTracks", detectorGeometry) );
  
 
-   fc::EventDisplayModule eventDisplay;
-   
-   eventDisplay.displayGeometry();
+   processor.addModule( new fc::EventDisplayModule(config.getDebugLevel(),"genHits","genTracks","recoTracks",13,config,detectorGeometry) );
+ 
 
+
+
+ 
     // Event loop over module classes
     processor.processEvents();
 

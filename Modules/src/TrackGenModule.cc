@@ -46,9 +46,11 @@ fc::GenTrack fc::TrackGenModule::generateTrack() const {
     int trackCharge = (_random.getUniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
     double trackPhi0 = _random.getUniformDouble(-M_PI/18.0,M_PI/18.0) + M_PI/2.0;
     double trackTanL = _random.getUniformDouble(-0.1,0.1);
-    double trackD0 = _random.getUniformDouble(-0.01,0.01);
-    double trackZ0 = _random.getUniformDouble(-0.01,0.01);
+    double trackD0 = _random.getUniformDouble(-0.1,0.1);
+    double trackZ0 = _random.getUniformDouble(-0.1,0.1);
 
+      trackD0 = 0.000001;
+      trackZ0 = 0.000001;
 
     if (_debugLevel >=5 ) {
         std::cout << "Track pT " << trackPT << std::endl;

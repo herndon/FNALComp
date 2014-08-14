@@ -1,3 +1,5 @@
+#define _USE_MATH_DEFINES
+#include<cmath>
 
 // ROOT includes
 // ... libCore
@@ -41,150 +43,215 @@
 #include <TCanvas.h>
 #include <TApplication.h>
 
+#include "DataObjects/include/GenHit.hh"
+#include "DataObjects/include/GenHitSet.hh"
+#include "DataObjects/include/GenTrack.hh"
+#include "DataObjects/include/TrackSet.hh"
+#include "DataObjects/include/Track.hh"
+#include "DataObjects/include/GenTrackSet.hh"
+#include "Services/include/Config.hh"
+#include "Geometry/include/DetectorGeometry.hh"
 #include "EventDisplay/include/EventDisplayModule.hh"
 
 #include <iostream>
 #define X_DISPLAY_MISSING 0
 
-fc::EventDisplayModule::EventDisplayModule():
+fc::EventDisplayModule::EventDisplayModule(int debugLevel,const std::string& inputGenHitsLabel,const std::string& inputGenTracksLabel,const std::string& inputRecoTracksLabel,
+					   unsigned int eventNumber,
+					   const Config& config, const DetectorGeometry& detectorGeometry ):
+  _debugLevel(debugLevel),
+  _genHitsLabel(inputGenHitsLabel),
+  _genTracksLabel(inputGenTracksLabel),
+  _recoTracksLabel(inputRecoTracksLabel),
+  _eventNumber(config.getEventNumberForEventDisplay()),
+  _config(config),
+  _detectorGeometry(detectorGeometry),
   _drawGenTracks(true),
   _drawGenHits(true),
   _drawRecoTracks(false),
   _drawSeedRecoTracks(false),
   _drawRecoHits(false){
 
+
 }
 
+void fc::EventDisplayModule::processEvent(Event& event) {
+
+  Handle<GenHitSet> genHitSet = event.get<GenHitSet>(_genHitsLabel);
+  Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_genTracksLabel);
+  Handle<TrackSet> recoTrackSet = event.get<TrackSet>(_recoTracksLabel);
+
+
+  if (event.eventNumber() == _eventNumber) {
+  displayGeometry();
+   if (_debugLevel>=1) std::cout << "Exit Eve Veiwer to continue processing events." << std::endl;
+
+
+
+   TEveTrackList *trackList = new TEveTrackList();
+   TEveTrackPropagator* trackPropagator = trackList->GetPropagator();
+   //trackPropagator->SetMagField(_detectorGeometry.getBField().Z());
+   //trackPropagator->SetMagField(1.0);
+   trackPropagator->SetMagFieldObj(new TEveMagFieldConst(0., 0., -1.0*100.0));
+trackPropagator->SetMaxStep(0.01);
+ 
+ trackList->SetElementName(Form("%s, constB", trackList->GetElementName()));
+
+
+   trackPropagator->SetFitDaughters(kFALSE);
+   trackPropagator->SetMaxR(1.2);
+   trackPropagator->SetMaxZ(1.2);
+
+   trackList->SetName("GenTrackList");
+   gEve->AddElement(trackList);
+
+
+   for (auto const& genTrack : genTrackSet->getGenTracks()){
+     TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
+     eveRecoTrack->fV.Set(genTrack.getPosition().X(),genTrack.getPosition().Y() , genTrack.getPosition().Z());
+     eveRecoTrack->fP.Set(genTrack.getLorentzVector().Px(),genTrack.getLorentzVector().Py(), -genTrack.getLorentzVector().Pz());
+     eveRecoTrack->fSign = genTrack.getCharge();
+
+     TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
+     eveTrack->SetIndex(0);
+     eveTrack->SetStdTitle();
+     eveTrack->SetAttLineAttMarker(trackList);
+     eveTrack->SetMainColor(kGreen);
+     trackList->AddElement(eveTrack);
+     eveTrack->MakeTrack();
+ 
+  }
+
+ 
+  TEveTrackList *recoTrackList = new TEveTrackList();
+ 
+   TEveTrackPropagator* trackPropagator2 = recoTrackList->GetPropagator();
+   trackPropagator2->SetMagFieldObj(new TEveMagFieldConst(0., 0., -1.0*100.0));
+trackPropagator2->SetMaxStep(0.01);
+ 
+ recoTrackList->SetElementName(Form("%s, constB", trackList->GetElementName()));
+
+
+   trackPropagator2->SetFitDaughters(kFALSE);
+   trackPropagator2->SetMaxR(1.2);
+   trackPropagator2->SetMaxZ(1.2);
+
+   recoTrackList->SetName("RecoTrackList");
+   gEve->AddElement(recoTrackList);
+
+
+
+   for (auto const& track : recoTrackSet->getTracks()){
+     TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
+     eveRecoTrack->fV.Set(0.0,0.0 ,0.0);
+     eveRecoTrack->fP.Set(track.getLorentzVector().Px(),track.getLorentzVector().Py(), -track.getLorentzVector().Pz());
+     eveRecoTrack->fSign = track.getCharge();
+
+     TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
+     eveTrack->SetIndex(0);
+     eveTrack->SetStdTitle();
+     eveTrack->SetAttLineAttMarker(trackList);
+     eveTrack->SetMainColor(kRed);
+     recoTrackList->AddElement(eveTrack);
+     eveTrack->MakeTrack();
+ 
+  }
+
+
+
+     TEveElementList* hitList = new TEveElementList("Hits"); 
+
+      int n = 0;
+   for (auto const& hit : genHitSet->getGenHits()){
+    std::string hstr=" hit %d";
+    std::string dstr=" hit# %d\nLayer: %d";
+    std::string strlst=hstr;
+    std::string strlab=dstr;
+
+    TEvePointSet* h = new TEvePointSet(Form(strlst.c_str(),n));
+    h->SetTitle(Form(strlab.c_str(),n));
+    h->SetNextPoint(hit.getGenHitPosition().x(),hit.getGenHitPosition().y(),hit.getGenHitPosition().z());
+    h->SetMarkerColor(kYellow);
+    h->SetMarkerSize(2.0);
+    hitList->AddElement(h);
+    n++;
+
+   }
+
+   gEve->AddElement(hitList);
+ 
+
+
+
+
+  gEve->Redraw3D(kTRUE);
+  _tApp->Run(kTRUE);
+  }
+
+}
 
 void fc::EventDisplayModule::displayGeometry(){
 
-  // Initialize global Eve application manager (return gEve)
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  TApplication theApp("tapp",0,0);
 
-  gROOT->SetBatch(kFALSE);
- std::cout << "batch " << gROOT->IsBatch() << " gClient " << gClient << std::endl;
- //TCanvas *c1 = new TCanvas("c1","Dynamic Filling Example",200,10,700,500);
+  std::cout << "int Eve init " << std::endl;
+  // Instatiate TApplication, controls running root
+  if (!_tApp) _tApp = new TApplication("tapp",0,0);
 
-   int temp;
-   std::cin >> temp;
-
-
- std::cout << "batch " << gROOT->IsBatch() << " gClient " << gClient << std::endl;
- std::cout << "before create" << std::endl;
- std::cout << "batch " << gROOT->IsBatch() << " gClient " << gClient << std::endl;
-  std::cout.flush();
-   gSystem->IgnoreSignal(kSigSegmentationViolation, true);
-
+ 
+ // Initialize global Eve application manager (creates pointer gEve at global scope)
   TEveManager::Create();
 
-  std::cout << "before geo manager" << std::endl;
-  std::cout.flush();
+  // Geometry Manager
+  TGeoManager *geom = new TGeoManager("Assemblies","Geometry using assemblies");
+  
 
-//--- Definition of a simple geometry
-   gSystem->Load("libGeom");
-   TGeoManager *geom = new TGeoManager("Assemblies",
-      "Geometry using assemblies");
-   Int_t i;
-   //--- define some materials
+ // define materials
    TGeoMaterial *matVacuum = new TGeoMaterial("Vacuum", 0,0,0);
    TGeoMaterial *matSi = new TGeoMaterial("Si", 26.085,14,9.37);
-//   //--- define some media
+ // define media
    TGeoMedium *Vacuum = new TGeoMedium("Vacuum",1, matVacuum);
    TGeoMedium *Si = new TGeoMedium("Silicon",2, matSi);
 
-   //--- make the top container volume
-   TGeoVolume *top = geom->MakeBox("TOP", Vacuum, 1.2, 1.2, 1.2);
+   // make the top container volume
+   TGeoVolume *top = geom->MakeBox("TOP", Vacuum, 0.6, 1.2, 0.6);
    geom->SetTopVolume(top);
 
-   TGeoVolume *plate0 = geom->MakeBox("SENSOR1", Si, 0.1024,0.000001,0.1024);
-   plate0->SetLineColor(kBlue);
-   top->AddNode(plate0,1,new TGeoTranslation(0.0,0.2,0.0));
 
-   TGeoVolume *plate1 = geom->MakeBox("SENSOR2", Si, 0.2048,0.000001,0.2048);
-   plate1->SetLineColor(kBlue);
-   top->AddNode(plate1,2,new TGeoTranslation(0.0,0.4,0.0));
+   // input sensor information from detectorGeometry
+   int ii_layer=0;
+   for (auto const& sensor: _detectorGeometry.getSensors()){
 
-   TGeoVolume *plate2 = geom->MakeBox("SENSOR3", Si, 0.4096,0.000001,0.4096);
-   plate2->SetLineColor(kBlue);
-   top->AddNode(plate2,3,new TGeoTranslation(0.0,0.6,0.0));
+     std::string geoSensorName = "SENSOR" + std::to_string(ii_layer);
+     const char * geoSensorNameC = geoSensorName.c_str();
+     TGeoVolume *geoSensor = geom->MakeBox(geoSensorNameC, Si, sensor._perpSize/2.0,0.0,sensor._stripPitch*sensor._nStrips/2.0);
+     geoSensor->SetLineColor(kBlue);
+     TGeoRotation *rot = new TGeoRotation();
+     rot->RotateY(std::atan2(sensor._measurementDirection.Z(),sensor._measurementDirection.X())*180.0/M_PI);
+     top->AddNode(geoSensor,ii_layer+1,new TGeoCombiTrans(sensor._center[0],sensor._center[1],sensor._center[2],rot));
+     ii_layer++;
 
-   TGeoVolume *plate3 = geom->MakeBox("SENSOR3", Si, 0.4096,0.000001,0.4096);
-   plate3->SetLineColor(kBlue);
-   top->AddNode(plate3,4,new TGeoTranslation(0.0,0.8,0.0));
+   }
 
-   TGeoVolume *plate4 = geom->MakeBox("SENSOR3", Si, 0.4096,0.000001,0.4096);
-   plate4->SetLineColor(kBlue);
-   top->AddNode(plate4,3,new TGeoTranslation(0.0,1.0,0.0));
-
-   TGeoVolume *plate5 = geom->MakeBox("SENSOR1", Si, 0.1024,0.000001,0.1024);
-   plate5->SetLineColor(kBlue);
-   top->AddNode(plate5,6,new TGeoTranslation(0.0,0.2002,0.0));
-
-
-   TGeoRotation *rot = new TGeoRotation();
-   rot->RotateZ(1);
-
-
-   TGeoVolume *plate6 = geom->MakeBox("SENSOR2", Si, 0.2048,0.000001,0.2048);
-   plate6->SetLineColor(kBlue);
-   top->AddNode(plate6,7,new TGeoTranslation(0.0,0.4002,0.0));
-
-   TGeoVolume *plate7 = geom->MakeBox("SENSOR3", Si, 0.4096,0.000001,0.4096);
-   plate7->SetLineColor(kBlue);
-   top->AddNode(plate7,8,new TGeoTranslation(0.0,0.6002,0.0));
-
-   TGeoVolume *plate8 = geom->MakeBox("SENSOR3", Si, 0.4096,0.000001,0.4096);
-   plate8->SetLineColor(kBlue);
-   top->AddNode(plate8,9,new TGeoCombiTrans(0.0,0.8002,0.0,rot));
-
-   TGeoVolume *plate9 = geom->MakeBox("SENSOR3", Si, 0.4096,0.000001,0.4096);
-   plate9->SetLineColor(kBlue);
-   top->AddNode(plate9,10,new TGeoCombiTrans(0.0,1.0002,0.0,rot));
-
-
-
-   //--- close the geometry
    geom->CloseGeometry();
 
-
+   // Add geometry manager node to gEve
    TGeoNode* node = gGeoManager->GetTopNode();
    TEveGeoTopNode* en = new TEveGeoTopNode(gGeoManager, node);
    en->SetVisLevel(4);
    en->GetNode()->GetVolume()->SetVisibility(kFALSE);
-
-
-   //gEve->AddElement(list);
-   //list->AddElement(track);
-
-   //track->MakeTrack();
-
-   //gEve->Redraw3D(kTRUE);
-
    gEve->AddGlobalElement(en);
+ 
+   // Eve will run an event loop
+   gEve->AddEvent(new TEveEventManager("Event", "FC Detector Event"));
 
-  std::cout << "before draw" << std::endl;
-  std::cout.flush();
-
-
-  //gEve->Redraw3D(kTRUE);
-
-
-
-  //    TEveViewer *ev = gEve->GetDefaultViewer();
-  // TGLViewer  *gv = ev->GetGLViewer();
-  // gv->SetGuideState(TGLUtil::kAxesOrigin, kTRUE, kFALSE, 0);
-   std::cin >> temp;
-
-    gEve->Redraw3D(kTRUE);
-   std::cin >> temp;
-
-//    gSystem->ProcessEvents();
-
-//    gv->CurrentCamera().RotateRad(-0.5, 1.4);
-//    gv->RequestDraw();
+   TEveViewer *ev = gEve->GetDefaultViewer();
+   TGLViewer  *gv = ev->GetGLViewer();
+   gv->SetGuideState(TGLUtil::kAxesOrigin, kTRUE, kFALSE, 0);
+   
+  _tApp->Connect( "TEveBrowser", "CloseWindow()", "TApplication", _tApp, "Terminate(=0)");
+ 
 
 
-
+ 
 
 }

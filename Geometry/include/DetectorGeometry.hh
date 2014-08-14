@@ -54,8 +54,8 @@ public:
                      const std::vector<SensorDescriptor>& sensors,
                      const SensorDescriptor& primaryVertexX,const SensorDescriptor& primaryVertexZ);
 
-    const SensorDescriptor& getSensor(int nsensor)
-    const; //!< Returns struct describing sensor number nsensor
+  const std::vector<SensorDescriptor>& getSensors() const {return _sensors;}
+    const SensorDescriptor& getSensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
     int getDetectorGeometryVersion() const {
         return _detectorGeometryVersion;
     }
