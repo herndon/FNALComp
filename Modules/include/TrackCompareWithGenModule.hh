@@ -52,57 +52,87 @@ private:
     const std::string _genTracksLabel;
     const std::string _recTracksLabel;
 
-    // Comparison of hits
-
-    void compareTracks(const GenTrackSet &, const TrackSet &);
-    const Track & matchTrack(const GenTrack &,const TrackSet &,bool& matchedTrack) const;
-  double deltaTracks(const GenTrack &, const Track &) const;
-  bool goodMatch(const GenTrack & genTrack,const Track& recoTrack) const;
- 
-
-   TVectorD deltaHP(const GenTrack &, const Track &) const;
-    void fillHistograms(const TVectorD &,const Track&) const;
-
-    // Histograms
-    // ROOT will delete these when the TFile to which they are attached is deleted
-
-    TH1F * dR;
-    TH1F * phi0;
-    TH1F * kappa;
-    TH1F * dZ;
-    TH1F * tanL;
-
-    TH1F * sigmaDr;
-    TH1F * sigmaPhi0;
-    TH1F * sigmaKappa;
-    TH1F * sigmaDz;
-    TH1F * sigmaTanL;
-
-
-    TH1F * pT;
-    TH1F * chi2;
-    TH1F * nDof;
-    TH1F * prob;
-
-    TH1F * deltaDr;
-    TH1F * deltaPhi0;
-    TH1F * deltaKappa;
-    TH1F * deltaDz;
-    TH1F * deltaTanL;
-
-    TH1F * deltaDrPull;
-    TH1F * deltaPhi0Pull;
-    TH1F * deltaKappaPull;
-    TH1F * deltaDzPull;
-    TH1F * deltaTanLPull;
   // counter for efficiency measurments
 
   int _genTracks;
   int _recoTracks;
   int _matchedRecoTracks;
+  int _matchedRecoTracksXY;
 
+    // Histograms
+    // ROOT will delete these when the TFile to which they are attached is deleted
+
+    TH1F * dR = nullptr;
+    TH1F * phi0 = nullptr;
+    TH1F * kappa = nullptr;
+    TH1F * dZ = nullptr;
+    TH1F * tanL = nullptr;
+
+    TH1F * sigmaDr = nullptr;
+    TH1F * sigmaPhi0 = nullptr;
+    TH1F * sigmaKappa = nullptr;
+    TH1F * sigmaDz = nullptr;
+    TH1F * sigmaTanL = nullptr;
+
+    TH1F * pT = nullptr;
+    TH1F * chi2 = nullptr;
+    TH1F * nDof = nullptr;
+    TH1F * prob = nullptr;
+
+    TH1F * deltaDr = nullptr;
+    TH1F * deltaPhi0 = nullptr;
+    TH1F * deltaKappa = nullptr;
+    TH1F * deltaDz = nullptr;
+    TH1F * deltaTanL = nullptr;
+
+    TH1F * deltaDrPull = nullptr;
+    TH1F * deltaPhi0Pull = nullptr;
+    TH1F * deltaKappaPull = nullptr;
+    TH1F * deltaDzPull = nullptr;
+    TH1F * deltaTanLPull = nullptr;
+
+    TH1F * badDR = nullptr;
+    TH1F * badPhi0 = nullptr;
+    TH1F * badKappa = nullptr;
+    TH1F * badDZ = nullptr;
+    TH1F * badTanL = nullptr;
+
+    TH1F * badSigmaDr = nullptr;
+    TH1F * badSigmaPhi0 = nullptr;
+    TH1F * badSigmaKappa = nullptr;
+    TH1F * badSigmaDz = nullptr;
+    TH1F * badSigmaTanL = nullptr;
+
+    TH1F * badPT = nullptr;
+    TH1F * badChi2 = nullptr;
+    TH1F * badNDof = nullptr;
+    TH1F * badProb = nullptr;
+
+    TH1F * badDeltaDr = nullptr;
+    TH1F * badDeltaPhi0 = nullptr;
+    TH1F * badDeltaKappa = nullptr;
+    TH1F * badDeltaDz = nullptr;
+    TH1F * badDeltaTanL = nullptr;
+
+    TH1F * badDeltaDrPull = nullptr;
+    TH1F * badDeltaPhi0Pull = nullptr;
+    TH1F * badDeltaKappaPull = nullptr;
+    TH1F * badDeltaDzPull = nullptr;
+    TH1F * badDeltaTanLPull = nullptr;
 
     void initializeHistograms();
+
+    void compareTracks(const GenTrackSet &, const TrackSet &);
+  const Track & matchTrack(const GenTrack &,const TrackSet &,bool& matchedTrack,bool& matchedTrackXY) const;
+  double deltaTracks(const GenTrack &, const Track &) const;
+  bool goodMatch(const GenTrack & genTrack,const Track& recoTrack) const;
+  bool goodMatchXY(const GenTrack & genTrack,const Track& recoTrack) const;
+ 
+
+   TVectorD deltaHP(const GenTrack &, const Track &) const;
+  void fillHistograms(const TVectorD &,const Track&,bool matched) const;
+
+
 
 };
 } // end namespace fc

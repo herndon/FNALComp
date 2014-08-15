@@ -33,6 +33,41 @@ public:
     int getDebugLevel() const {
         return _debugLevel;   //!< Returns debug level: 0 nothing, 1 progress infrmation; 2 data object printout; 3-5 basic-detailed debug
     }
+
+  bool runGenHistogrammingModule() const {
+    return _runGenHistogrammingModule;
+  }
+  bool runHitRecoModule() const {
+    return _runHitRecoModule;
+  }
+  bool runHitCompareModule() const {
+    return _runHitCompareModule;
+  }
+  bool runPerfectTrackRecoModule() const {
+    return _runPerfectTrackRecoModule;
+  }
+  bool runPerfectTrackCompareWithGenModule() const {
+    return _runPerfectTrackCompareWithGenModule;
+  }
+  bool runTrackCandidateModule() const {
+    return _runTrackCandidateModule;
+  }
+  bool runCandidateCompareModule() const {
+    return _runCandidateCompareModule;
+  }
+  bool runTrackRecoModule() const {
+    return _runTrackRecoModule;
+  }
+  bool runTrackCompareWithPerfectModule() const {
+    return _runTrackCompareWithPerfectModule;
+  }
+  bool runRecoTrackCompareWithGenModule() const {
+    return _runRecoTrackCompareWithGenModule;
+  }
+  bool runEventDisplayModule() const {
+    return _runEventDisplayModule;
+  }
+
     int getSeed() const {
         return _seed;
     }; //!< Returns random number seed
@@ -74,20 +109,37 @@ public:
 
 private:
 
-    int _debugLevel;
-    bool _genData;
-    int _numberEvents;
-    int _numberTracks;
-    int _seed;
-    std::string _rootFileName;
-    double _minCandPTCut;
-    double _minPTCut;
-    double _dRCut;
-    double _dZCut;
-    double _maxChi2NDofCut;
+  int _debugLevel;
+
+  bool _runGenHistogrammingModule = false;
+  bool _runHitRecoModule = false;
+  bool _runHitCompareModule = false;
+  bool _runPerfectTrackRecoModule = false;
+  bool _runPerfectTrackCompareWithGenModule = false;
+  bool _runTrackCandidateModule = false;
+  bool _runCandidateCompareModule = false;
+  bool _runTrackRecoModule = false;
+  bool _runTrackCompareWithPerfectModule = false;
+  bool _runRecoTrackCompareWithGenModule = false;
+  bool _runEventDisplayModule = false;
+
+
+  bool _genData;
+  int _numberEvents;
+  int _numberTracks;
+  int _seed;
+
+  std::string _rootFileName;
+
+  double _minCandPTCut;
+  double _minPTCut;
+  double _dRCut;
+  double _dZCut;
+  double _maxChi2NDofCut;
+
   unsigned int _eventNumberForEventDisplay;
 
-    void _initConfig(std::ifstream&);
+  void _initConfig(std::ifstream&);
 
 };
 } // end namespace fc
