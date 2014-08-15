@@ -9,7 +9,7 @@ RunCandidateCompareModule 1
 RunTrackRecoModule 1
 RunTrackCompareWithPerfectModule 1
 RunRecoTrackCompareWithGenModule 1
-RunEventDisplayModule 1
+RunEventDisplayModule 0 
 RootFileName recoHistograms.root
 minCandPTCut 1.0
 minPTCut 1.0
