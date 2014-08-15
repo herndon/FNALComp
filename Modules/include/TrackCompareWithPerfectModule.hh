@@ -55,10 +55,6 @@ private:
     // Comparison of hits
 
     void compareTracks(const TrackSet &, const TrackSet &);
-  const Track & matchTrack(const Track &,const TrackSet &, bool& goodMatch) const;
-    double deltaTracks(const Track &, const Track &) const;
-  bool goodMatch(const Track & perfectTrack,const Track& recoTrack) const;
-    TVectorD deltaHP(const Track &, const Track &) const;
     void fillHistograms(const TVectorD &,const Track&) const;
 
     // Histograms

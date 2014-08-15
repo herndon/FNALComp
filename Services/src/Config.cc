@@ -46,47 +46,47 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
                 throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
             }
         } else {
-            if (configString == "DebugLevel") {
-                configfile >> _debugLevel;
-            } else if (configString == "RootFileName") {
-                configfile >> _rootFileName;
-           } else if (configString == "RunGenHistogrammingModule") {
-                configfile >> _runGenHistogrammingModule;
-           } else if (configString == "RunHitRecoModule") {
-                configfile >> _runHitRecoModule;
-           } else if (configString == "RunHitCompareModule") {
-                configfile >> _runHitCompareModule;
-           } else if (configString == "RunPerfectTrackRecoModule") {
-                configfile >> _runPerfectTrackRecoModule;
-           } else if (configString == "RunPerfectTrackCompareWithGenModule") {
-                configfile >> _runPerfectTrackCompareWithGenModule;
-           } else if (configString == "RunTrackCandidateModule") {
-                configfile >> _runTrackCandidateModule;
-           } else if (configString == "RunCandidateCompareModule") {
-                configfile >> _runCandidateCompareModule;
-           } else if (configString == "RunTrackRecoModule") {
-                configfile >> _runTrackRecoModule;
-           } else if (configString == "RunTrackCompareWithPerfectModule") {
-                configfile >> _runTrackCompareWithPerfectModule;
-           } else if (configString == "RunRecoTrackCompareWithGenModule") {
-                configfile >> _runRecoTrackCompareWithGenModule;
-           } else if (configString == "RunEventDisplayModule") {
-                configfile >> _runEventDisplayModule;
-            } else if (configString == "minCandPTCut") {
-                configfile >> _minCandPTCut;
-            } else if (configString == "minPTCut") {
-                configfile >> _minPTCut;
-            } else if (configString == "dRCut") {
-                configfile >> _dRCut;
-            } else if (configString == "dZCut") {
-                configfile >> _dZCut;
-            } else if (configString == "maxChi2NDofCut") {
-                configfile >> _maxChi2NDofCut;
-           } else if (configString == "EventNumberForEventDisplay") {
-                configfile >> _eventNumberForEventDisplay;
-            } else {
-                throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
-            }
+	  if (configString == "DebugLevel") {
+	    configfile >> _debugLevel;
+	  } else if (configString == "RootFileName") {
+	    configfile >> _rootFileName;
+	  } else if (configString == "RunGenHistogrammingModule") {
+	    configfile >> _runGenHistogrammingModule;
+	  } else if (configString == "RunHitRecoModule") {
+	    configfile >> _runHitRecoModule;
+	  } else if (configString == "RunHitCompareModule") {
+	    configfile >> _runHitCompareModule;
+	  } else if (configString == "RunPerfectTrackRecoModule") {
+	    configfile >> _runPerfectTrackRecoModule;
+	  } else if (configString == "RunPerfectTrackCompareWithGenModule") {
+	    configfile >> _runPerfectTrackCompareWithGenModule;
+	  } else if (configString == "RunTrackCandidateModule") {
+	    configfile >> _runTrackCandidateModule;
+	  } else if (configString == "RunCandidateCompareModule") {
+	    configfile >> _runCandidateCompareModule;
+	  } else if (configString == "RunTrackRecoModule") {
+	    configfile >> _runTrackRecoModule;
+	  } else if (configString == "RunTrackCompareWithPerfectModule") {
+	    configfile >> _runTrackCompareWithPerfectModule;
+	  } else if (configString == "RunRecoTrackCompareWithGenModule") {
+	    configfile >> _runRecoTrackCompareWithGenModule;
+	  } else if (configString == "RunEventDisplayModule") {
+	    configfile >> _runEventDisplayModule;
+	  } else if (configString == "minCandPTCut") {
+	    configfile >> _minCandPTCut;
+	  } else if (configString == "minPTCut") {
+	    configfile >> _minPTCut;
+	  } else if (configString == "dRCut") {
+	    configfile >> _dRCut;
+	  } else if (configString == "dZCut") {
+	    configfile >> _dZCut;
+	  } else if (configString == "maxChi2NDofCut") {
+	    configfile >> _maxChi2NDofCut;
+	  } else if (configString == "EventNumberForEventDisplay") {
+	    configfile >> _eventNumberForEventDisplay;
+	  } else {
+	    throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
+	  }
 
         }
 

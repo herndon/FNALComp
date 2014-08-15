@@ -123,13 +123,7 @@ private:
     void initializeHistograms();
 
     void compareTracks(const GenTrackSet &, const TrackSet &);
-  const Track & matchTrack(const GenTrack &,const TrackSet &,bool& matchedTrack,bool& matchedTrackXY) const;
-  double deltaTracks(const GenTrack &, const Track &) const;
-  bool goodMatch(const GenTrack & genTrack,const Track& recoTrack) const;
-  bool goodMatchXY(const GenTrack & genTrack,const Track& recoTrack) const;
- 
 
-   TVectorD deltaHP(const GenTrack &, const Track &) const;
   void fillHistograms(const TVectorD &,const Track&,bool matched) const;
 
 

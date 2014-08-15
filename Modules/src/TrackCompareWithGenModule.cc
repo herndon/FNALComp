@@ -1,14 +1,15 @@
 #include<iostream>
 #include<cmath>
 #include<string>
+#include "TH1F.h"
 #include "Geometry/include/DetectorGeometry.hh"
+#include "Services/include/UniqueRootDirectory.hh"
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
 #include "DataObjects/include/GenTrack.hh"
 #include "DataObjects/include/GenTrackSet.hh"
+#include "Tracking/include/TrackMatching.hh"
 #include "Modules/include/TrackCompareWithGenModule.hh"
-#include "TH1F.h"
-#include "Services/include/UniqueRootDirectory.hh"
 
 fc::TrackCompareWithGenModule::TrackCompareWithGenModule(int debugLevel,
         const std::string& inputGenTracksLabel,
@@ -145,8 +146,8 @@ void fc::TrackCompareWithGenModule::compareTracks(const GenTrackSet & genTrackSe
       bool goodMatch = false;
       bool goodMatchXY = false;
  
-      const Track& recoTrack = matchTrack(genTrack,recoTrackSet,goodMatch,goodMatchXY);
-      TVectorD bestDeltaHP = deltaHP(genTrack,recoTrack);
+      const Track& recoTrack = fcf::matchTrack(genTrack,recoTrackSet,_detectorGeometry,goodMatch,goodMatchXY);
+      TVectorD bestDeltaHP = fcf::deltaHP(genTrack,recoTrack,_detectorGeometry);
       fillHistograms(bestDeltaHP,recoTrack,goodMatch);
       if (goodMatch)++_matchedRecoTracks;
      if (goodMatchXY)++_matchedRecoTracksXY;
@@ -155,80 +156,6 @@ void fc::TrackCompareWithGenModule::compareTracks(const GenTrackSet & genTrackSe
 }
 
 
-const fc::Track & fc::TrackCompareWithGenModule::matchTrack(const GenTrack & genTrack,
-							    const TrackSet& recoTrackSet, bool& matchedTrack,bool& matchedTrackXY) const {
-
-    double bestDeltaTracks = 1000.0;
-    double tmpDeltaTracks;
-    int trackNumber=0;
-    int bestTrack=-1;
- 
-    for (auto const& recoTrack : recoTrackSet.getTracks()) {
-
-        tmpDeltaTracks = deltaTracks(genTrack,recoTrack);
-
-        if (tmpDeltaTracks < bestDeltaTracks) {
-            bestDeltaTracks = tmpDeltaTracks;
-            bestTrack = trackNumber;
-        }
-        ++trackNumber;
-    }
-    matchedTrack = goodMatch(genTrack,recoTrackSet.getTracks()[bestTrack]);
-    matchedTrackXY = goodMatchXY(genTrack,recoTrackSet.getTracks()[bestTrack]);
-
-
-    return recoTrackSet.getTracks()[bestTrack];
-
-}
-
-double fc::TrackCompareWithGenModule::deltaTracks(const GenTrack & genTrack,
-						  const Track& recoTrack) const {
-
-    Helix helix(genTrack.makeHelix(_detectorGeometry.getBField(),
-                                   _detectorGeometry.getCurvatureC()));
-
- 
-    return std::sqrt((helix.getKappa()-recoTrack.getHelix().getKappa())*
-                     (helix.getKappa()-recoTrack.getHelix().getKappa())+
-                     (helix.getPhi0()-recoTrack.getHelix().getPhi0())*(helix.getPhi0()
-                             -recoTrack.getHelix().getPhi0()));
-
-
-}
-
-bool fc::TrackCompareWithGenModule::goodMatch(const GenTrack & genTrack,
-        const Track& recoTrack) const {
-
-
-    TVectorD dHP = deltaHP(genTrack,recoTrack);
-
-    return (std::abs(dHP(0)/recoTrack.getSigmaDr()) < 10.0 &&
-	    std::abs(dHP(1)/recoTrack.getSigmaPhi0()) < 10.0 &&
-	    std::abs(dHP(2)/recoTrack.getSigmaKappa()) < 10.0 &&
-	    std::abs(dHP(3)/recoTrack.getSigmaDz()) < 10.0 &&
-	    std::abs(dHP(4)/recoTrack.getSigmaTanL()) < 10.0);
-
-}
-
-bool fc::TrackCompareWithGenModule::goodMatchXY(const GenTrack & genTrack,
-        const Track& recoTrack) const {
-
-    TVectorD dHP = deltaHP(genTrack,recoTrack);
-
-    return (std::abs(dHP(0)/recoTrack.getSigmaDr()) < 10.0 &&
-	    std::abs(dHP(1)/recoTrack.getSigmaPhi0()) < 10.0 &&
-	    std::abs(dHP(2)/recoTrack.getSigmaKappa()) < 10.0);
-
-}
-
-TVectorD fc::TrackCompareWithGenModule::deltaHP(const GenTrack & genTrack,
-        const Track& recoTrack) const {
-
-
-    return recoTrack.getHelix().getHelix() - genTrack.makeHelix(
-               _detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getHelix();
-
-}
 
 void fc::TrackCompareWithGenModule::fillHistograms(const TVectorD & deltaHP,
 						   const Track& recoTrack, bool matched) const {
