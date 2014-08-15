@@ -112,11 +112,11 @@ void fc::TrackCompareWithGenModule::initializeHistograms() {
     badDeltaDz    = new TH1F("badTrackDeltaZ0", "Delta dz;delta dz (m); N",100, -0.001,0.001);
     badDeltaTanL  = new TH1F("badTrackDeltaTanL", "Delta tanL;delta tanL;N",100, -0.001,0.001);
 
-    badDeltaDrPull    = new TH1F("badTrackDeltaD0Pull", "Delta dr Pull;delta dr  Pull);N",100, -4.0, 4.0);
-    badDeltaPhi0Pull  = new TH1F("badTrackDeltaPhi0Pull","Delta phi0 Pull;delta phi0 Pull);N",100, -4.0, 4.0);
-    badDeltaKappaPull = new TH1F("badTrackDeltaKappaPull","Delta kappa Pull; delta kappa  Pull;N",100, -4.0, 4.0);
-    badDeltaDzPull    = new TH1F("badTrackDeltaZ0Pull", "Delta dz Pull;delta dz  Pull; N",100, -4.0, 4.0);
-    badDeltaTanLPull  = new TH1F("badTrackDeltaTanLPull","Delta tanL Pull;delta tanL PUll;N",100, -4.0, 4.0);
+    badDeltaDrPull    = new TH1F("badTrackDeltaD0Pull", "Delta dr Pull;delta dr  Pull);N",100, -10.0, 10.0);
+    badDeltaPhi0Pull  = new TH1F("badTrackDeltaPhi0Pull","Delta phi0 Pull;delta phi0 Pull);N",100, -10.0, 10.0);
+    badDeltaKappaPull = new TH1F("badTrackDeltaKappaPull","Delta kappa Pull; delta kappa  Pull;N",100, -10.0, 10.0);
+    badDeltaDzPull    = new TH1F("badTrackDeltaZ0Pull", "Delta dz Pull;delta dz  Pull; N",100, -10.0, 10.0);
+    badDeltaTanLPull  = new TH1F("badTrackDeltaTanLPull","Delta tanL Pull;delta tanL PUll;N",100, -1000.0, 1000.0);
 
 }
 

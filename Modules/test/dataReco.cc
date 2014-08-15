@@ -110,7 +110,7 @@ int main ()
  
 
   if (config.runEventDisplayModule()) 
-    processor.addModule( new fc::EventDisplayModule(config.getDebugLevel(),"genHits","genTracks","recoTracks",13,config,detectorGeometry) );
+    processor.addModule( new fc::EventDisplayModule(config.getDebugLevel(),"genHits","genTracks","recoHits","recoTracks",13,config,detectorGeometry) );
  
 
 

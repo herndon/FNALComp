@@ -30,7 +30,8 @@ class EventDisplayModule : public Module {
 public:
 
 
-  EventDisplayModule(int debugLevel, const std::string& inputGenHitsLabel,const std::string& inputGenTracksLabel,const std::string& inputRecoTracksLabel, 
+  EventDisplayModule(int debugLevel, const std::string& inputGenHitsLabel,const std::string& inputGenTracksLabel,
+		     const std::string& inputRecoHitsLabel,const std::string& inputRecoTracksLabel, 
 		     unsigned int eventNumber, const Config&, const DetectorGeometry&);
 
     void processEvent(Event&) override;
@@ -43,6 +44,7 @@ private:
 
     const std::string _genHitsLabel;
     const std::string _genTracksLabel;
+    const std::string _recoHitsLabel;
     const std::string _recoTracksLabel;
 
   unsigned int _eventNumber;
