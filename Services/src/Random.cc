@@ -15,3 +15,8 @@ double fc::Random::getNormalDouble (double mean, double dev) {
     std::normal_distribution<double> dist(mean,dev);
     return dist( getEngine());
 }
+
+double fc::Random::getExponentialDouble (double exponent) {
+    std::exponential_distribution<double> dist(exponent);
+    return dist( getEngine());
+}

@@ -8,7 +8,7 @@
 const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream &
         detectorgeometryfile) {
 
-    int maxNumberStrips = 2048;
+    int maxNumberStrips = 4096;
 
     if (!detectorgeometryfile) {
         throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: can't open sensorgeometry.txt file");
@@ -130,7 +130,7 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream &
         sensor._measurementDirection *= 1.0/sensor._measurementDirection.Mag();
 
         if ( sensor._nStrips > maxNumberStrips)
-            throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Out of bounds sensor number specifications in sensorgeometry.txt, maximum number of strips is 2048");
+            throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Out of bounds sensor number specifications in sensorgeometry.txt, maximum number of strips is 4096");
 
         sensors.push_back(std::move(sensor));
 

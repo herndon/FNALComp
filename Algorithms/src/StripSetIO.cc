@@ -36,13 +36,15 @@ void fc::StripSetIO::writeEvent(const StripSet & stripSet,
 
         for (auto const& strip : stripMap) {
 
-            binaryData = stripSet.getStripNumber(strip) * 32 + stripSet.getStripAdc(strip);
-            binaryData1 = binaryData & bitmask1;
-            binaryData2 = binaryData & bitmask2;
-            binaryData2 = binaryData2 >> 8;
+	  binaryData = stripSet.getStripNumber(strip);
+	  binaryData1 = binaryData & bitmask1;
+	  binaryData2 = binaryData & bitmask2;
+	  binaryData2 = binaryData2 >> 8;
+	  stripdata.write (reinterpret_cast<const char *>(&binaryData2), 1);
+	  stripdata.write (reinterpret_cast<const char *>(&binaryData1), 1);
 
-            stripdata.write (reinterpret_cast<const char *>(&binaryData2), 1);
-            stripdata.write (reinterpret_cast<const char *>(&binaryData1), 1);
+          binaryData =  stripSet.getStripAdc(strip);
+	  stripdata.write (reinterpret_cast<const char *>(&binaryData), 1);
 
         } // end strip loop
 
@@ -95,19 +97,18 @@ void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
         for (int iiStrip = 0; iiStrip < numberStrips; ++iiStrip) {
 
             stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
-
             int stripData2 =  static_cast<int>(binaryData);
             stripData2 = stripData2 << 8;
 
             stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
-            int adc =  static_cast<int>(binaryData);
-            adc = adc&adcBitmask;
             int stripData1 =  static_cast<int>(binaryData);
             int stripData12 = stripData2 + stripData1;
-            stripData12 = stripData12&stripBitmask;
-            int strip = stripData12 >> 5;
+            int strip = stripData12;
 
-            stripSet.insertStrip(iiLayer,strip,adc);
+            stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
+            int adc =  static_cast<int>(binaryData);
+  
+           stripSet.insertStrip(iiLayer,strip,adc);
 
         } // end strip loop
 

@@ -25,6 +25,8 @@ public:
 
     double getNormalDouble (double mean, double dev);
 
+    double getExponentialDouble (double exponent);
+
 private:
 
     std::default_random_engine engine;
