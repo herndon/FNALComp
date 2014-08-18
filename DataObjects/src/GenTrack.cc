@@ -16,9 +16,18 @@ fc::GenTrack::GenTrack(const TLorentzVector & lorentzVector, int charge,
 const fc::Helix fc::GenTrack::makeHelix(const TVector3& bField,
                                         double curvatureC) const {
 
-    double dr = 1.0*_dr.Perp()*_dr.Y()/std::abs(_dr.Y());
 
-    Helix helix(dr,_lorentzVector.Phi()+M_PI/2.0,-1.0*_charge/_lorentzVector.Pt(),
+
+
+    double phi0ToDr = std::atan2(_lorentzVector.Py(),_lorentzVector.Px()) -_charge*M_PI/2.0;
+
+   
+    
+    double dr = std::abs(_dr.Perp());
+
+    if (std::abs(phi0ToDr - std::atan2(_dr.Y(),_dr.X())) > M_PI/4.0) dr = -dr; 
+
+    Helix helix(dr,phi0ToDr,-1.0*_charge/_lorentzVector.Pt(),
                 _dr.Z(),_lorentzVector.Pz()/_lorentzVector.Pt(),curvatureC*bField.Z(),
                 curvatureC);
 

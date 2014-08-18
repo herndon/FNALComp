@@ -118,7 +118,11 @@ void fc::EventDisplayModule::processEvent(Event& event) {
 
     for (auto const& genTrack : genTrackSet->getGenTracks()){
       TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
-      eveRecoTrack->fV.Set(genTrack.getPosition().X(),genTrack.getPosition().Y() , genTrack.getPosition().Z());
+
+      double phi0ToD0 = std::atan2(genTrack.getLorentzVector().Py(),genTrack.getLorentzVector().Px())-genTrack.getCharge()*M_PI/2.0;
+
+
+      eveRecoTrack->fV.Set(-genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::cos(phi0ToD0),-genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::sin(phi0ToD0), genTrack.getPosition().Z());
       eveRecoTrack->fP.Set(genTrack.getLorentzVector().Px(),genTrack.getLorentzVector().Py(), -genTrack.getLorentzVector().Pz());
       eveRecoTrack->fSign = genTrack.getCharge();
 
@@ -155,7 +159,10 @@ void fc::EventDisplayModule::processEvent(Event& event) {
 
     for (auto const& track : recoTrackSet->getTracks()){
       TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
-      eveRecoTrack->fV.Set(0.0,0.0 ,0.0);
+
+      double phi0ToD0 = std::atan2(track.getLorentzVector().Py(),track.getLorentzVector().Px())-track.getCharge()*M_PI/2.0;
+ 
+      eveRecoTrack->fV.Set(-track.getCharge()*track.getHelix().getDr()*std::cos(phi0ToD0),-track.getCharge()*track.getHelix().getDr()*std::sin(phi0ToD0) ,track.getHelix().getDz());
       eveRecoTrack->fP.Set(track.getLorentzVector().Px(),track.getLorentzVector().Py(), -track.getLorentzVector().Pz());
       eveRecoTrack->fSign = track.getCharge();
 
