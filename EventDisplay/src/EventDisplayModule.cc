@@ -119,10 +119,10 @@ void fc::EventDisplayModule::processEvent(Event& event) {
     for (auto const& genTrack : genTrackSet->getGenTracks()){
       TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
 
-      double phi0ToD0 = std::atan2(genTrack.getLorentzVector().Py(),genTrack.getLorentzVector().Px())-genTrack.getCharge()*M_PI/2.0;
+      double phi0ToD0 = std::atan2(genTrack.getLorentzVector().Py(),genTrack.getLorentzVector().Px())+genTrack.getCharge()*M_PI/2.0;
+ 
 
-
-      eveRecoTrack->fV.Set(-genTrack.getCharge()*genTrack.getPosition().X(),-genTrack.getCharge()*genTrack.getPosition().Y(), genTrack.getPosition().Z());
+      eveRecoTrack->fV.Set(genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::cos(phi0ToD0),genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::sin(phi0ToD0), genTrack.getPosition().Z());
       eveRecoTrack->fP.Set(genTrack.getLorentzVector().Px(),genTrack.getLorentzVector().Py(), genTrack.getLorentzVector().Pz());
       eveRecoTrack->fSign = genTrack.getCharge();
 
@@ -171,6 +171,8 @@ void fc::EventDisplayModule::processEvent(Event& event) {
       eveTrack->SetStdTitle();
       eveTrack->SetAttLineAttMarker(trackList);
       GenTrack genTrack= fcf::matchTrack(track,*genTrackSet,_detectorGeometry,matchedTrack,matchedTrackXY);
+      track.print(std::cout);
+      genTrack.print(std::cout);
       if (matchedTrack) {eveTrack->SetMainColor(kRed);} else {eveTrack->SetMainColor(kYellow);}
       if (!matchedTrack){
 	//hit lines here
