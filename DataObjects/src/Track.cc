@@ -39,8 +39,11 @@ const TLorentzVector fc::Track::getLorentzVector() const {
     TLorentzVector lorentzVector;
     double pT = std::abs(1.0/getHelix().getKappa());
     double pZ = getHelix().getTanL()*pT;
-    lorentzVector.SetPxPyPzE(pT*std::cos(getHelix().getPhi0()-M_PI/2.0),
-                             pT*std::sin(getHelix().getPhi0()-M_PI/2.0),pZ,std::sqrt(pT*pT+pZ*pZ));
+    double trackPhi0  = getHelix().getPhi0()-M_PI/2.0;
+
+
+    lorentzVector.SetPxPyPzE(pT*std::cos(trackPhi0),
+                             pT*std::sin(trackPhi0),pZ,std::sqrt(pT*pT+pZ*pZ));
     return lorentzVector;
 }
 
@@ -59,12 +62,16 @@ void fc::Track::print(ostream& out) const {
     out << "Charge " << getCharge() << std::endl;
     out << "4 momentum " << lorentzVector.Px() << " " <<  lorentzVector.Py() << " "
         <<  lorentzVector.Pz() << " " <<  lorentzVector.E() << " " << std::endl;
-    out << "Track parameters:  pT " <<  lorentzVector.Pt() << " cot(theta) " <<
-        1/getHelix().getTanL() << " phi0 " << getHelix().getPhi0()-M_PI/2.0 << " d0 " <<
-        getHelix().getDr() << " z0 " << getHelix().getDz() << std::endl;
-    out << "Helix paramters: kappa " << getHelix().getKappa() << " tan(Lambda) " <<
-        getHelix().getTanL() << " phi0 to d0 " << getHelix().getPhi0() << std::endl;
+    out << "pT " <<  lorentzVector.Pt() << " cot(theta) " <<
+      1/getHelix().getTanL() << " phi0 " << std::atan2(lorentzVector.Py(),lorentzVector.Px()) << std::endl; 
+   out << "Helix parameters: kappa" << _helix.getKappa() << " tan(Lambda) " << _helix.getTanL() << std::endl;
+    out << "phi0 to d0 " << _helix.getPhi0() << " d0 " << _helix.getDr() << " z0 " << _helix.getDz() << std::endl;
+    out << "Vertex : " << _helix.getDr()*std::cos(_helix.getPhi0()) << " " << _helix.getDr()*std::sin(_helix.getPhi0()) << " " << _helix.getDz() << std::endl;
+
+
     out << "Reference Point " << 0.0 << " " << 0.0 << " " << 0.0 << std::endl;
+
+
 
     if (_nDof > 0) {
 

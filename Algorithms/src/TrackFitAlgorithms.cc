@@ -19,7 +19,7 @@ const TVector3 fc::calcXAt(const Helix& helix, double phi) {
 
     double x    = helix.getDr() * csf0 + rho * (csf0 - csfd);
     double y    = helix.getDr() * snf0 + rho * (snf0 - snfd);
-    double z    = helix.getDz()          - rho * helix.getTanL() * phi;
+    double z    = helix.getDz()          + rho * helix.getTanL() * phi;
 
     return TVector3(x,y,z);
 }
@@ -69,7 +69,7 @@ const TMatrixD fc::calcDxDHC(const Helix& helix, double phi) {
     dxDHC(2,1) = 0;
     dxDHC(2,2) = rcpar * phi * helix.getTanL();
     dxDHC(2,3) = 1;
-    dxDHC(2,4) = - radiusCurvature * phi;
+    dxDHC(2,4) = + radiusCurvature * phi;
 
     //std::cout << "radiusCurvature " << radiusCurvature << " phi " << phi << std::endl;
 

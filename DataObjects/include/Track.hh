@@ -66,7 +66,7 @@ public:
     const TLorentzVector  getLorentzVector() const;
 
     int getCharge() const {
-        return -getHelix().getKappa()/std::abs(getHelix().getKappa());
+        return getHelix().getKappa()/std::abs(getHelix().getKappa());
     };
 
     const TMatrixD & getCovMatrix() const {

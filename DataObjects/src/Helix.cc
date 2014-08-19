@@ -16,8 +16,6 @@ fc::Helix::Helix(double dr, double phi0, double kappa, double dz, double tanL,
 
     _helix(0) = dr;
     _helix(1) = phi0;
-    if (phi0 >= M_PI/2.0) _helix(1) = phi0;
-    if (phi0 < M_PI/2.0) _helix(1) = phi0+M_PI;
     _helix(2) = kappa;
     _helix(3) = dz;
     _helix(4) = tanL;

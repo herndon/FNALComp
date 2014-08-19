@@ -49,20 +49,19 @@ fc::GenTrack fc::TrackGenModule::generateTrack() const {
     double trackD0 = _random.getUniformDouble(-0.01,0.01);
     double trackZ0 = _random.getUniformDouble(-0.01,0.01);
 
-    //trackD0 = -0.01;
 
     if (_debugLevel >=5 ) {
-        std::cout << "Track pT " << trackPT << std::endl;
         std::cout << "Track Charge " << trackCharge << std::endl;
+        std::cout << "Track pT " << trackPT << std::endl;
+	std::cout << "Track tanL " << trackTanL << std::endl;
         std::cout << "Track phi0 " << trackPhi0 << std::endl;
-    }
+        std::cout << "Track D0 " << trackD0 << std::endl;
+        std::cout << "Track Z0 " << trackZ0 << std::endl;
+	}
 
+	// real phi to d0, reversed in d0 is negative
     double phi0ToD0 = trackPhi0-trackCharge*M_PI/2.0;
-    //if (trackD0<0.0) phi0ToD0 = trackCharge*M_PI/2.
-
-    //if ( trackPhi0>=M_PI/2.0) phi0ToD0 = trackPhi0 - M_PI/2.0;
-    //if ( trackPhi0<M_PI/2.0) phi0ToD0  = trackPhi0 + M_PI/2.0;
-
+ 
     TLorentzVector lorentzVector(trackPT*std::cos(trackPhi0),
                                  trackPT*std::sin(trackPhi0),trackTanL*trackPT,
                                  trackPT*std::sqrt(1+trackTanL*trackTanL));

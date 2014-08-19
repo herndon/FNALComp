@@ -99,7 +99,7 @@ void fc::EventDisplayModule::processEvent(Event& event) {
     TEveTrackPropagator* trackPropagator = trackList->GetPropagator();
     //trackPropagator->SetMagField(_detectorGeometry.getBField().Z());
     //trackPropagator->SetMagField(1.0);
-    trackPropagator->SetMagFieldObj(new TEveMagFieldConst(0., 0., -1.0*100.0));
+    trackPropagator->SetMagFieldObj(new TEveMagFieldConst(0., 0., 1.0*100.0));
     trackPropagator->SetMaxStep(0.01);
  
     trackList->SetElementName(Form("%s, constB", trackList->GetElementName()));
@@ -122,8 +122,8 @@ void fc::EventDisplayModule::processEvent(Event& event) {
       double phi0ToD0 = std::atan2(genTrack.getLorentzVector().Py(),genTrack.getLorentzVector().Px())-genTrack.getCharge()*M_PI/2.0;
 
 
-      eveRecoTrack->fV.Set(-genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::cos(phi0ToD0),-genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::sin(phi0ToD0), genTrack.getPosition().Z());
-      eveRecoTrack->fP.Set(genTrack.getLorentzVector().Px(),genTrack.getLorentzVector().Py(), -genTrack.getLorentzVector().Pz());
+      eveRecoTrack->fV.Set(-genTrack.getCharge()*genTrack.getPosition().X(),-genTrack.getCharge()*genTrack.getPosition().Y(), genTrack.getPosition().Z());
+      eveRecoTrack->fP.Set(genTrack.getLorentzVector().Px(),genTrack.getLorentzVector().Py(), genTrack.getLorentzVector().Pz());
       eveRecoTrack->fSign = genTrack.getCharge();
 
       TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
@@ -160,10 +160,10 @@ void fc::EventDisplayModule::processEvent(Event& event) {
     for (auto const& track : recoTrackSet->getTracks()){
       TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
 
-      double phi0ToD0 = std::atan2(track.getLorentzVector().Py(),track.getLorentzVector().Px())-track.getCharge()*M_PI/2.0;
+      double phi0ToD0 = std::atan2(track.getLorentzVector().Py(),track.getLorentzVector().Px())+track.getCharge()*M_PI/2.0;
  
-      eveRecoTrack->fV.Set(-track.getCharge()*track.getHelix().getDr()*std::cos(phi0ToD0),-track.getCharge()*track.getHelix().getDr()*std::sin(phi0ToD0) ,track.getHelix().getDz());
-      eveRecoTrack->fP.Set(track.getLorentzVector().Px(),track.getLorentzVector().Py(), -track.getLorentzVector().Pz());
+      eveRecoTrack->fV.Set(track.getCharge()*track.getHelix().getDr()*std::cos(phi0ToD0),track.getCharge()*track.getHelix().getDr()*std::sin(phi0ToD0) ,track.getHelix().getDz());
+      eveRecoTrack->fP.Set(track.getLorentzVector().Px(),track.getLorentzVector().Py(), track.getLorentzVector().Pz());
       eveRecoTrack->fSign = track.getCharge();
 
       TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
@@ -204,7 +204,7 @@ void fc::EventDisplayModule::processEvent(Event& event) {
 
       TEvePointSet* h = new TEvePointSet(Form(strlst.c_str(),n));
       h->SetTitle(Form(strlab.c_str(),n));
-      h->SetNextPoint(hit.getGenHitPosition().x(),hit.getGenHitPosition().y(),hit.getGenHitPosition().z());
+      h->SetNextPoint(hit.getGenHitPosition().x(),hit.getGenHitPosition().y(),+hit.getGenHitPosition().z());
       h->SetMarkerColor(kYellow);
       h->SetMarkerSize(2.0);
       hitList->AddElement(h);
