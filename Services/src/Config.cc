@@ -2,7 +2,7 @@
 #include "Services/include/Exception.hh"
 #include "Services/include/Config.hh"
 
-fc::Config::Config(std::ifstream & configfile,int genData):
+fc::Config::Config(std::ifstream & configfile,int genData,int eventNumberForEventDisplay=-1):
     _debugLevel(1),
     _genData(genData),
     _numberEvents(128),
@@ -11,7 +11,7 @@ fc::Config::Config(std::ifstream & configfile,int genData):
     _minCandPTCut(1.0),
     _minPTCut(1.0),
     _maxChi2NDofCut(10.0),
-    _eventNumberForEventDisplay(0) {
+    _eventNumberForEventDisplay(eventNumberForEventDisplay) {
 
     _initConfig(configfile);
     if (_debugLevel >=1 )printConfig(std::cout);
@@ -82,8 +82,6 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
 	    configfile >> _dZCut;
 	  } else if (configString == "maxChi2NDofCut") {
 	    configfile >> _maxChi2NDofCut;
-	  } else if (configString == "EventNumberForEventDisplay") {
-	    configfile >> _eventNumberForEventDisplay;
 	  } else {
 	    throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
 	  }

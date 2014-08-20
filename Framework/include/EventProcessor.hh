@@ -10,6 +10,7 @@ class TFile;
 
 namespace fc {
 class Module;
+class Config;
 
 class EventProcessor {
 public:
@@ -22,7 +23,7 @@ public:
     //takes ownership of the module
     void addModule(Module*);
 
-    void processEvents();
+    void processEvents(const Config&);
     void endJob();
 
 private:

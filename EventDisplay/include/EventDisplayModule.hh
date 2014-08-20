@@ -12,12 +12,16 @@
 #include "Framework/include/Module.hh"
 
 class TApplication;
-
+class TEveTrackList;
+class TEveElementList;
 
 namespace fc {
 
   class Config;
   class DetectorGeometry;
+  class TrackSet;
+  class GenTrackSet;
+  class HitSet;
 
 ///
 /// Class EventDisplayModule
@@ -32,7 +36,7 @@ public:
 
   EventDisplayModule(int debugLevel, const std::string& inputGenHitsLabel,const std::string& inputGenTracksLabel,
 		     const std::string& inputRecoHitsLabel,const std::string& inputRecoTracksLabel, 
-		     unsigned int eventNumber, const Config&, const DetectorGeometry&);
+		     const Config&, const DetectorGeometry&);
 
     void processEvent(Event&) override;
 
@@ -63,6 +67,11 @@ private:
     bool            _drawSeedRecoTracks;
     bool            _drawRecoHits;
  
+  void fillGenTrackList(const GenTrackSet& genTrackSet,const TrackSet& recoTrackSet,TEveTrackList& trackList);
+  void fillRecoTrackList(const TrackSet& recoTrackSet,const GenTrackSet& genTrackSet,const HitSet& recoHitSet,TEveTrackList& trackList);
+  void fillGenHitList(const GenHitSet& genHitSet,TEveElementList& hitList,TEveElementList& sasZHitList);
+
+
 
 };
 } // end namespace fc

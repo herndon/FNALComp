@@ -62,7 +62,6 @@
 
 fc::EventDisplayModule::EventDisplayModule(int debugLevel,const std::string& inputGenHitsLabel,const std::string& inputGenTracksLabel,
 					   const std::string& inputRecoHitsLabel,const std::string& inputRecoTracksLabel,
-					   unsigned int eventNumber,
 					   const Config& config, const DetectorGeometry& detectorGeometry ):
   _debugLevel(debugLevel),
   _genHitsLabel(inputGenHitsLabel),
@@ -90,137 +89,25 @@ void fc::EventDisplayModule::processEvent(Event& event) {
 
 
   if (event.eventNumber() == _eventNumber) {
+
     displayGeometry();
-    if (_debugLevel>=1) std::cout << "Exit Eve Veiwer to continue processing events." << std::endl;
 
+    TEveTrackList *genTrackList = new TEveTrackList();
+    fillGenTrackList(*genTrackSet,*recoTrackSet,*genTrackList);
+    gEve->AddElement(genTrackList);
 
-
-    TEveTrackList *trackList = new TEveTrackList();
-    TEveTrackPropagator* trackPropagator = trackList->GetPropagator();
-    //trackPropagator->SetMagField(_detectorGeometry.getBField().Z());
-    //trackPropagator->SetMagField(1.0);
-    trackPropagator->SetMagFieldObj(new TEveMagFieldConst(0., 0., 1.0*100.0));
-    trackPropagator->SetMaxStep(0.01);
- 
-    trackList->SetElementName(Form("%s, constB", trackList->GetElementName()));
-
-
-    trackPropagator->SetFitDaughters(kFALSE);
-    trackPropagator->SetMaxR(1.2);
-    trackPropagator->SetMaxZ(1.2);
-
-    trackList->SetName("GenTrackList");
-    gEve->AddElement(trackList);
-
-
-    bool matchedTrack = false;
-    bool matchedTrackXY = false;
-
-    for (auto const& genTrack : genTrackSet->getGenTracks()){
-      TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
-
-      double phi0ToD0 = std::atan2(genTrack.getLorentzVector().Py(),genTrack.getLorentzVector().Px())+genTrack.getCharge()*M_PI/2.0;
- 
-
-      eveRecoTrack->fV.Set(genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::cos(phi0ToD0),genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::sin(phi0ToD0), genTrack.getPosition().Z());
-      eveRecoTrack->fP.Set(genTrack.getLorentzVector().Px(),genTrack.getLorentzVector().Py(), genTrack.getLorentzVector().Pz());
-      eveRecoTrack->fSign = genTrack.getCharge();
-
-      TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
-      eveTrack->SetIndex(0);
-      eveTrack->SetStdTitle();
-      eveTrack->SetAttLineAttMarker(trackList);
-      Track track= fcf::matchTrack(genTrack,*recoTrackSet,_detectorGeometry,matchedTrack,matchedTrackXY);
-      if (matchedTrack) {eveTrack->SetMainColor(kGreen);} else {eveTrack->SetMainColor(kOrange);}
-      trackList->AddElement(eveTrack);
-      eveTrack->MakeTrack();
- 
-    }
-
- 
     TEveTrackList *recoTrackList = new TEveTrackList();
- 
-    TEveTrackPropagator* trackPropagator2 = recoTrackList->GetPropagator();
-    trackPropagator2->SetMagFieldObj(new TEveMagFieldConst(0., 0., -1.0*100.0));
-    trackPropagator2->SetMaxStep(0.01);
- 
-    recoTrackList->SetElementName(Form("%s, constB", trackList->GetElementName()));
-
-
-    trackPropagator2->SetFitDaughters(kFALSE);
-    trackPropagator2->SetMaxR(1.2);
-    trackPropagator2->SetMaxZ(1.2);
-
-    recoTrackList->SetName("RecoTrackList");
+    fillRecoTrackList(*recoTrackSet,*genTrackSet,*recoHitSet,*recoTrackList);
     gEve->AddElement(recoTrackList);
 
-    TEveStraightLineSet* lineSet = new TEveStraightLineSet();
-
-
-    for (auto const& track : recoTrackSet->getTracks()){
-      TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
-
-      double phi0ToD0 = std::atan2(track.getLorentzVector().Py(),track.getLorentzVector().Px())+track.getCharge()*M_PI/2.0;
- 
-      eveRecoTrack->fV.Set(track.getCharge()*track.getHelix().getDr()*std::cos(phi0ToD0),track.getCharge()*track.getHelix().getDr()*std::sin(phi0ToD0) ,track.getHelix().getDz());
-      eveRecoTrack->fP.Set(track.getLorentzVector().Px(),track.getLorentzVector().Py(), track.getLorentzVector().Pz());
-      eveRecoTrack->fSign = track.getCharge();
-
-      TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
-      eveTrack->SetIndex(0);
-      eveTrack->SetStdTitle();
-      eveTrack->SetAttLineAttMarker(trackList);
-      GenTrack genTrack= fcf::matchTrack(track,*genTrackSet,_detectorGeometry,matchedTrack,matchedTrackXY);
-      track.print(std::cout);
-      genTrack.print(std::cout);
-      if (matchedTrack) {eveTrack->SetMainColor(kRed);} else {eveTrack->SetMainColor(kYellow);}
-      if (!matchedTrack){
-	//hit lines here
-	for (auto const hitNumber : track.getHits()){
-          const Hit& hit = recoHitSet->getHits()[hitNumber];
-	  TVector3 hitPosition = hit.getHitPosition();
-	  TVector3 stripDir = _detectorGeometry.getSensor(hit.getLayer())._normal.Cross(_detectorGeometry.getSensor(hit.getLayer())._measurementDirection);
-	  stripDir *= _detectorGeometry.getSensor(hit.getLayer())._perpSize/2.0;
-	  lineSet->AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y(),hitPosition.Z()-stripDir.Z(),
-			  hitPosition.X()+stripDir.X(),hitPosition.Y()+stripDir.Y(),hitPosition.Z()+stripDir.Z());
-	}
-      }
-
-      recoTrackList->AddElement(eveTrack);
-      eveTrack->MakeTrack();
- 
-    }
-
-    lineSet->SetLineColor(6);
-    gEve->AddElement(lineSet);
-
-
-    TEveElementList* hitList = new TEveElementList("Hits"); 
-
-    int n = 0;
-    for (auto const& hit : genHitSet->getGenHits()){
-      std::string hstr=" hit %d";
-      std::string dstr=" hit# %d\nLayer: %d";
-      std::string strlst=hstr;
-      std::string strlab=dstr;
-
-      TEvePointSet* h = new TEvePointSet(Form(strlst.c_str(),n));
-      h->SetTitle(Form(strlab.c_str(),n));
-      h->SetNextPoint(hit.getGenHitPosition().x(),hit.getGenHitPosition().y(),+hit.getGenHitPosition().z());
-      h->SetMarkerColor(kYellow);
-      h->SetMarkerSize(2.0);
-      hitList->AddElement(h);
-      n++;
-
-    }
-
+    TEveElementList* hitList = new TEveElementList("XHits"); 
+    TEveElementList* sasZHitList = new TEveElementList("SASZHits"); 
+    fillGenHitList(*genHitSet,*hitList,*sasZHitList);
     gEve->AddElement(hitList);
+    gEve->AddElement(sasZHitList);
  
-
-
-
-
     gEve->Redraw3D(kTRUE);
+    if (_debugLevel>=1) std::cout << "Exit Eve Veiwer to continue processing events." << std::endl;
     _tApp->Run(kTRUE);
   }
 
@@ -286,8 +173,139 @@ void fc::EventDisplayModule::displayGeometry(){
    
   _tApp->Connect( "TEveBrowser", "CloseWindow()", "TApplication", _tApp, "Terminate(=0)");
  
+}
 
+void fc::EventDisplayModule::fillGenTrackList(const fc::GenTrackSet& genTrackSet,const fc::TrackSet& recoTrackSet,TEveTrackList& trackList){
+ 
+
+  TEveTrackPropagator* trackPropagator = trackList.GetPropagator();
+  trackPropagator->SetMagFieldObj(new TEveMagFieldConst(_detectorGeometry.getBField().X()*100.0, 
+							_detectorGeometry.getBField().Y()*100.0, 
+							_detectorGeometry.getBField().Z()*100.0));
+  trackPropagator->SetMaxStep(0.01);
+ 
+  trackPropagator->SetFitDaughters(kFALSE);
+  trackPropagator->SetMaxR(1.2);
+  trackPropagator->SetMaxZ(1.2);
+
+  trackList.SetElementName(Form("%s, constB", trackList.GetElementName()));
+  trackList.SetName("GenTrackList");
+
+  bool matchedTrackLoose = false;
+  bool matchedTrackXYLoose = false;
+  bool matchedTrackTight = false;
+  bool matchedTrackXYTight = false;
+
+  int n = 0;
+  for (auto const& genTrack : genTrackSet.getGenTracks()){
+    TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
+
+    double phi0ToD0 = std::atan2(genTrack.getLorentzVector().Py(),genTrack.getLorentzVector().Px())+genTrack.getCharge()*M_PI/2.0;
+ 
+    eveRecoTrack->fV.Set(genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::cos(phi0ToD0),
+			 genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::sin(phi0ToD0), 
+			 genTrack.getPosition().Z());
+    eveRecoTrack->fP.Set(genTrack.getLorentzVector().Px(),genTrack.getLorentzVector().Py(), genTrack.getLorentzVector().Pz());
+    eveRecoTrack->fSign = genTrack.getCharge();
+
+    TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
+    eveTrack->SetIndex(n);
+    eveTrack->SetStdTitle();
+    Track track= fcf::matchTrack(genTrack,recoTrackSet,_detectorGeometry,matchedTrackLoose,matchedTrackXYLoose,matchedTrackTight,matchedTrackXYTight);
+    if (matchedTrackLoose) {eveTrack->SetMainColor(kGreen);} else {eveTrack->SetMainColor(kOrange);}
+    eveTrack->MakeTrack();
+    trackList.AddElement(eveTrack);
+    ++n;
+ 
+  }
+}
+
+
+void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,const fc::GenTrackSet& genTrackSet,const fc::HitSet& recoHitSet,TEveTrackList& recoTrackList){
+
+
+
+  TEveTrackPropagator* trackPropagator = recoTrackList.GetPropagator();
+  trackPropagator->SetMagFieldObj(new TEveMagFieldConst(_detectorGeometry.getBField().X()*100.0, 
+							_detectorGeometry.getBField().Y()*100.0, 
+							_detectorGeometry.getBField().Z()*100.0));
+  trackPropagator->SetMaxStep(0.01);
+ 
+  trackPropagator->SetFitDaughters(kFALSE);
+  trackPropagator->SetMaxR(1.2);
+  trackPropagator->SetMaxZ(1.2);
 
  
+  recoTrackList.SetName("RecoTrackList");
+
+  TEveStraightLineSet* lineSet = new TEveStraightLineSet();
+
+  bool matchedTrackLoose = false;
+  bool matchedTrackXYLoose = false;
+  bool matchedTrackTight = false;
+  bool matchedTrackXYTight = false;
+
+  int n = 0;
+  for (auto const& track : recoTrackSet.getTracks()){
+    TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
+
+    double phi0ToD0 = std::atan2(track.getLorentzVector().Py(),track.getLorentzVector().Px())+track.getCharge()*M_PI/2.0;
+ 
+    eveRecoTrack->fV.Set(track.getCharge()*track.getHelix().getDr()*std::cos(phi0ToD0),track.getCharge()*track.getHelix().getDr()*std::sin(phi0ToD0) ,track.getHelix().getDz());
+    eveRecoTrack->fP.Set(track.getLorentzVector().Px(),track.getLorentzVector().Py(), track.getLorentzVector().Pz());
+    eveRecoTrack->fSign = track.getCharge();
+
+    TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
+    eveTrack->SetIndex(n);
+    eveTrack->SetStdTitle();
+    GenTrack genTrack= fcf::matchTrack(track,genTrackSet,_detectorGeometry,matchedTrackLoose,matchedTrackXYLoose,matchedTrackTight,matchedTrackXYTight);
+    if (matchedTrackLoose) {eveTrack->SetMainColor(kRed);} else {eveTrack->SetMainColor(kYellow);}
+    if (!matchedTrackLoose){
+      //hit lines here
+      for (auto const hitNumber : track.getHits()){
+	const Hit& hit = recoHitSet.getHits()[hitNumber];
+	TVector3 hitPosition = hit.getHitPosition();
+	TVector3 stripDir = _detectorGeometry.getSensor(hit.getLayer())._normal.Cross(_detectorGeometry.getSensor(hit.getLayer())._measurementDirection);
+	stripDir *= _detectorGeometry.getSensor(hit.getLayer())._perpSize/2.0;
+	lineSet->AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y(),hitPosition.Z()-stripDir.Z(),
+			 hitPosition.X()+stripDir.X(),hitPosition.Y()+stripDir.Y(),hitPosition.Z()+stripDir.Z());
+      }
+      ++n;
+    }
+
+    eveTrack->MakeTrack();
+    recoTrackList.AddElement(eveTrack);
+ 
+  }
+
+  lineSet->SetLineColor(6);
+  gEve->AddElement(lineSet);
+
+}
+
+void fc::EventDisplayModule::fillGenHitList(const fc::GenHitSet& genHitSet,TEveElementList& hitList,TEveElementList& sasZHitList){
+
+  int n = 0;
+  for (auto const& hit : genHitSet.getGenHits()){
+    std::string hstr=" hit %d";
+    std::string dstr=" hit# %d\nLayer: %d";
+    std::string strlst=hstr;
+    std::string strlab=dstr;
+
+    TEvePointSet* h = new TEvePointSet(Form(strlst.c_str(),n));
+    h->SetTitle(Form(strlab.c_str(),n));
+    double yPos = hit.getGenHitPosition().y();
+    if (hit.getLayer() < 5) yPos -= 0.001;
+    if (hit.getLayer() >= 5) yPos += 0.001;
+
+    h->SetNextPoint(hit.getGenHitPosition().x(),yPos,+hit.getGenHitPosition().z());
+    if (hit.getLayer() < 5) h->SetMarkerColor(6);
+    if (hit.getLayer() >= 5) h->SetMarkerColor(kYellow);
+    h->SetMarkerSize(2.0);
+     if (hit.getLayer() < 5)  hitList.AddElement(h);
+     if (hit.getLayer() >= 5)  sasZHitList.AddElement(h);
+    n++;
+
+  }
 
 }

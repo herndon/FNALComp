@@ -27,18 +27,21 @@
 #include <memory>
 #include "TFile.h"
 
-int main ()
+int main (int argc,const char *argv[])
 {
 
+  int eventNumber = -1;
+  if (argc>1) eventNumber = std::atoi( argv[1] );
 
-
+  
+  std::cout << "EventNumber " << eventNumber << std::endl;
 
     // data objects created in this module are reconstruted, not generated
     bool genData = false;
 
     // Get configuration information.
     std::ifstream configfile("configfilereco.txt");
-    fc::Config config(configfile,genData);
+    fc::Config config(configfile,genData,eventNumber);
 
     // Intialize Objects and Modules that are persistant
 
@@ -110,14 +113,14 @@ int main ()
  
 
   if (config.runEventDisplayModule()) 
-    processor.addModule( new fc::EventDisplayModule(config.getDebugLevel(),"genHits","genTracks","recoHits","recoTracks",13,config,detectorGeometry) );
+    processor.addModule( new fc::EventDisplayModule(config.getDebugLevel(),"genHits","genTracks","recoHits","recoTracks",config,detectorGeometry) );
  
 
 
 
  
     // Event loop over module classes
-    processor.processEvents();
+    processor.processEvents(config);
 
     // end job functions.  Only needed to write and close root files
     processor.endJob();

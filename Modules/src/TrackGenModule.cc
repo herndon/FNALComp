@@ -60,13 +60,17 @@ fc::GenTrack fc::TrackGenModule::generateTrack() const {
 	}
 
 	// real phi to d0, reversed in d0 is negative
+
     double phi0ToD0 = trackPhi0-trackCharge*M_PI/2.0;
- 
+
     TLorentzVector lorentzVector(trackPT*std::cos(trackPhi0),
                                  trackPT*std::sin(trackPhi0),trackTanL*trackPT,
                                  trackPT*std::sqrt(1+trackTanL*trackTanL));
-    TVector3 position(trackD0*std::cos(phi0ToD0),trackD0*std::sin(phi0ToD0),
-                      trackZ0);
+
+
+    //    TVector3 position(trackD0*std::cos(phi0ToD0),trackD0*std::sin(phi0ToD0),trackZ0);
+    TVector3 position(trackD0*std::cos(phi0ToD0),trackD0*std::sin(phi0ToD0),trackZ0);
+
     GenTrack genTrack(lorentzVector,trackCharge,position);
 
     return genTrack;

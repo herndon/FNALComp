@@ -21,8 +21,10 @@ fc::TrackCompareWithGenModule::TrackCompareWithGenModule(int debugLevel,
     _recTracksLabel(inputRecTracksLabel),  
     _genTracks(0),
     _recoTracks(0),
-    _matchedRecoTracks(0),
-   _matchedRecoTracksXY(0) {
+    _matchedRecoTracksLoose(0),
+    _matchedRecoTracksXYLoose(0),
+    _matchedRecoTracksTight(0),
+   _matchedRecoTracksXYTight(0) {
 
     initializeHistograms();
 }
@@ -143,14 +145,18 @@ void fc::TrackCompareWithGenModule::compareTracks(const GenTrackSet & genTrackSe
 
     for (auto const& genTrack : genTrackSet.getGenTracks()) {
  
-      bool goodMatch = false;
-      bool goodMatchXY = false;
+      bool goodMatchLoose = false;
+      bool goodMatchXYLoose = false;
+      bool goodMatchTight = false;
+      bool goodMatchXYTight = false;
  
-      const Track& recoTrack = fcf::matchTrack(genTrack,recoTrackSet,_detectorGeometry,goodMatch,goodMatchXY);
+      const Track& recoTrack = fcf::matchTrack(genTrack,recoTrackSet,_detectorGeometry,goodMatchLoose,goodMatchXYLoose,goodMatchTight,goodMatchXYTight);
       TVectorD bestDeltaHP = fcf::deltaHP(genTrack,recoTrack,_detectorGeometry);
-      fillHistograms(bestDeltaHP,recoTrack,goodMatch);
-      if (goodMatch)++_matchedRecoTracks;
-     if (goodMatchXY)++_matchedRecoTracksXY;
+      fillHistograms(bestDeltaHP,recoTrack,goodMatchLoose);
+      if (goodMatchLoose)++_matchedRecoTracksLoose;
+     if (goodMatchXYLoose)++_matchedRecoTracksXYLoose;
+     if (goodMatchTight)++_matchedRecoTracksTight;
+     if (goodMatchXYTight)++_matchedRecoTracksXYTight;
 
     }
 }
@@ -231,11 +237,15 @@ void fc::TrackCompareWithGenModule::endJob() {
   if (_debugLevel >=1) {
 
     std::cout << "TrackCompareWithGenModule Results" << std::endl;
-  std::cout << "Perfect Tracks:       " << _genTracks << std::endl;
-  std::cout << "Reco eff:             " << static_cast<double>(_matchedRecoTracks)/static_cast<double>(_genTracks) << std::endl;     
-  std::cout << "Ghost Tracks rate:    " << (static_cast<double>(_recoTracks) - static_cast<double>(_matchedRecoTracks))/static_cast<double>(_recoTracks) << std::endl;
-  std::cout << "Reco eff XY:          " << static_cast<double>(_matchedRecoTracksXY)/static_cast<double>(_genTracks) << std::endl;     
-  std::cout << "Ghost Tracks rate XY: " << (static_cast<double>(_recoTracks) - static_cast<double>(_matchedRecoTracksXY))/static_cast<double>(_recoTracks) << std::endl;
+  std::cout << "Gen Tracks:                     " << _genTracks << std::endl;
+  std::cout << "Reco eff:                       " << static_cast<double>(_matchedRecoTracksTight)/static_cast<double>(_genTracks) << std::endl;     
+  std::cout << "Misreconstructed Track rate:    " << (static_cast<double>(_matchedRecoTracksLoose) - static_cast<double>(_matchedRecoTracksTight))/static_cast<double>(_recoTracks) << std::endl;
+  std::cout << "Ghost Track rate:               " << (static_cast<double>(_recoTracks) - static_cast<double>(_matchedRecoTracksLoose))/static_cast<double>(_recoTracks) << std::endl;
+
+  std::cout << "Reco eff XY:                    " << static_cast<double>(_matchedRecoTracksXYTight)/static_cast<double>(_genTracks) << std::endl;     
+  std::cout << "Misreconstructed Track rate XY: " << (static_cast<double>(_matchedRecoTracksXYLoose) - static_cast<double>(_matchedRecoTracksXYTight))/static_cast<double>(_recoTracks) << std::endl;
+
+  std::cout << "Ghost Track rate XY:            " << (static_cast<double>(_recoTracks) - static_cast<double>(_matchedRecoTracksXYLoose))/static_cast<double>(_recoTracks) << std::endl;
   }
 
 

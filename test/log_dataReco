@@ -1,3 +1,4 @@
+EventNumber -1
 Program configuration information
 reco Data configuration
 Debug Level: 2
@@ -88426,14 +88427,18 @@ chi2 2.99072 ndof 5
 Number of hits 10
 Hit numbers: 34 44 83 93 23 14 5 74 64 54 
 TrackCompareWithGenModule Results
-Perfect Tracks:       100
-Reco eff:             1
-Ghost Tracks rate:    0
-Reco eff XY:          1
-Ghost Tracks rate XY: 0
+Gen Tracks:                     100
+Reco eff:                       1
+Misreconstructed Track rate:    0
+Ghost Track rate:               0
+Reco eff XY:                    1
+Misreconstructed Track rate XY: 0
+Ghost Track rate XY:            0
 TrackCompareWithGenModule Results
-Perfect Tracks:       100
-Reco eff:             0.93
-Ghost Tracks rate:    0.0210526
-Reco eff XY:          0.93
-Ghost Tracks rate XY: 0.0210526
+Gen Tracks:                     100
+Reco eff:                       0.93
+Misreconstructed Track rate:    0.0210526
+Ghost Track rate:               0
+Reco eff XY:                    0.93
+Misreconstructed Track rate XY: 0.0210526
+Ghost Track rate XY:            0

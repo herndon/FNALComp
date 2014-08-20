@@ -23,10 +23,12 @@ namespace fcf {
 
   const fc::Track & matchTrack(const fc::GenTrack & genTrack,
 			       const fc::TrackSet& trackSet, const fc::DetectorGeometry& detectorGeometry,
-			       bool& matchedTrack, bool& matchedTrackXY);
+			       bool& matchedTrackLoose, bool& matchedTrackXYLoose,
+			       bool& matchedTrackTight, bool& matchedTrackXYTight);
   const fc::GenTrack & matchTrack(const fc::Track & track,
 			       const fc::GenTrackSet& genTrackSet, const fc::DetectorGeometry& detectorGeometry,
-			       bool& matchedTrack, bool& matchedTrackXY);
+			       bool& matchedTrackLoose, bool& matchedTrackXYLoose,
+			       bool& matchedTrackTight, bool& matchedTrackXYTight);
   const fc::Track & matchTrack(const fc::Track & track,
 			       const fc::TrackSet& trackSet,
 			       bool& matchedTrack, bool& matchedTrackXY);
@@ -34,8 +36,8 @@ namespace fcf {
 
 
 
-  bool goodMatch(const fc::GenTrack & genTrack,const fc::Track& track,const fc::DetectorGeometry& detectorGeometry);
-  bool goodMatchXY(const fc::GenTrack & genTrack,const fc::Track& track,const fc::DetectorGeometry& detectorGeometry);
+  bool goodMatch(const fc::GenTrack & genTrack,const fc::Track& track,double sigma,const fc::DetectorGeometry& detectorGeometry);
+  bool goodMatchXY(const fc::GenTrack & genTrack,const fc::Track& track,double sigma,const fc::DetectorGeometry& detectorGeometry);
   bool goodMatch(const fc::Track & track,const fc::Track& track1);
   bool goodMatchXY(const fc::Track & track,const fc::Track& track1);
 

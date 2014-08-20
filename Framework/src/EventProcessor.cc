@@ -3,6 +3,7 @@
 #include "Framework/include/Module.hh"
 #include "Framework/include/Source.hh"
 #include "Services/include/Exception.hh"
+#include "Services/include/Config.hh"
 
 #include "TFile.h"
 
@@ -12,7 +13,7 @@ void fc::EventProcessor::addModule(Module* iModule) {
     _modules.emplace_back(iModule);
 }
 
-void fc::EventProcessor::processEvents() {
+void fc::EventProcessor::processEvents(const Config& config) {
     try {
         while(true) {
             std::unique_ptr<fc::Event> event {_source->getNextEvent()};
@@ -20,6 +21,7 @@ void fc::EventProcessor::processEvents() {
                 break;
             }
             for(auto& module : _modules) {
+	      if (config.getEventNumberForEventDisplay()==-1 || (event->eventNumber()==static_cast<unsigned int>(config.getEventNumberForEventDisplay())))
                 module->processEvent(*event);
             }
         }

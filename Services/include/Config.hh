@@ -28,7 +28,7 @@ class Config {
 
 public:
 
-    Config(std::ifstream&,int);
+  Config(std::ifstream&,int genData,int eventNumberForEventDisplay);
 
     int getDebugLevel() const {
         return _debugLevel;   //!< Returns debug level: 0 nothing, 1 progress infrmation; 2 data object printout; 3-5 basic-detailed debug
@@ -99,7 +99,7 @@ public:
         return _maxChi2NDofCut;
     }
 
-    unsigned int getEventNumberForEventDisplay() const {
+    int getEventNumberForEventDisplay() const {
         return _eventNumberForEventDisplay;
     }
 
@@ -137,7 +137,7 @@ private:
   double _dZCut;
   double _maxChi2NDofCut;
 
-  unsigned int _eventNumberForEventDisplay;
+  int _eventNumberForEventDisplay;
 
   void _initConfig(std::ifstream&);
 

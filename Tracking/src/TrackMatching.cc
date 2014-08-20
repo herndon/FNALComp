@@ -11,8 +11,7 @@
 
 const fc::Track & fcf::matchTrack(const fc::GenTrack & genTrack,
 				  const fc::TrackSet& trackSet, const fc::DetectorGeometry& detectorGeometry, 
-				  bool& matchedTrack, bool& matchedTrackXY) {
-
+				  bool& matchedTrackLoose, bool& matchedTrackXYLoose,bool& matchedTrackTight, bool& matchedTrackXYTight) {
     double bestDeltaTracks = 1000.0;
     double tmpDeltaTracks;
     int trackNumber=0;
@@ -28,8 +27,10 @@ const fc::Track & fcf::matchTrack(const fc::GenTrack & genTrack,
         }
         ++trackNumber;
     }
-    matchedTrack = goodMatch(genTrack,trackSet.getTracks()[bestTrack],detectorGeometry);
-    matchedTrackXY = goodMatchXY(genTrack,trackSet.getTracks()[bestTrack],detectorGeometry);
+    matchedTrackLoose = goodMatch(genTrack,trackSet.getTracks()[bestTrack],50.0,detectorGeometry);
+    matchedTrackXYLoose = goodMatchXY(genTrack,trackSet.getTracks()[bestTrack],50.0,detectorGeometry);
+    matchedTrackTight = goodMatch(genTrack,trackSet.getTracks()[bestTrack],5.0,detectorGeometry);
+    matchedTrackXYTight = goodMatchXY(genTrack,trackSet.getTracks()[bestTrack],5.0,detectorGeometry);
 
     return trackSet.getTracks()[bestTrack];
 
@@ -37,7 +38,7 @@ const fc::Track & fcf::matchTrack(const fc::GenTrack & genTrack,
 
 const fc::GenTrack & fcf::matchTrack(const fc::Track & track,
 				  const fc::GenTrackSet& genTrackSet, const fc::DetectorGeometry& detectorGeometry, 
-				  bool& matchedTrack, bool& matchedTrackXY) {
+				     bool& matchedTrackLoose, bool& matchedTrackXYLoose,bool& matchedTrackTight, bool& matchedTrackXYTight) {
 
     double bestDeltaTracks = 1000.0;
     double tmpDeltaTracks;
@@ -54,8 +55,11 @@ const fc::GenTrack & fcf::matchTrack(const fc::Track & track,
         }
         ++trackNumber;
     }
-    matchedTrack = goodMatch(genTrackSet.getGenTracks()[bestTrack],track,detectorGeometry);
-    matchedTrackXY = goodMatchXY(genTrackSet.getGenTracks()[bestTrack],track,detectorGeometry);
+    matchedTrackLoose = goodMatch(genTrackSet.getGenTracks()[bestTrack],track,50.0,detectorGeometry);
+    matchedTrackXYLoose = goodMatchXY(genTrackSet.getGenTracks()[bestTrack],track,50.0,detectorGeometry);
+    matchedTrackTight = goodMatch(genTrackSet.getGenTracks()[bestTrack],track,5.0,detectorGeometry);
+    matchedTrackXYTight = goodMatchXY(genTrackSet.getGenTracks()[bestTrack],track,5.0,detectorGeometry);
+
 
     return genTrackSet.getGenTracks()[bestTrack];
 
@@ -99,11 +103,11 @@ bool fcf::goodMatch(const fc::Track & track,
 
   TVectorD dHP = fcf::deltaHP(track,track1);
 
-    return (std::abs(dHP(0)/track1.getSigmaDr()) < 10.0 &&
-	    std::abs(dHP(1)/track1.getSigmaPhi0()) < 10.0 &&
-	    std::abs(dHP(2)/track1.getSigmaKappa()) < 10.0 &&
-	    std::abs(dHP(3)/track1.getSigmaDz()) < 10.0 &&
-	    std::abs(dHP(4)/track1.getSigmaTanL()) < 10.0);
+    return (std::abs(dHP(0)/track1.getSigmaDr()) < 5.0 &&
+	    std::abs(dHP(1)/track1.getSigmaPhi0()) < 5.0 &&
+	    std::abs(dHP(2)/track1.getSigmaKappa()) < 5.0 &&
+	    std::abs(dHP(3)/track1.getSigmaDz()) < 5.0 &&
+	    std::abs(dHP(4)/track1.getSigmaTanL()) < 5.0);
 
 }
 
@@ -112,40 +116,36 @@ bool fcf::goodMatchXY(const fc::Track & track,
 
   TVectorD dHP = fcf::deltaHP(track,track1);
 
-    return (std::abs(dHP(0)/track1.getSigmaDr()) < 10.0 &&
-	    std::abs(dHP(1)/track1.getSigmaPhi0()) < 10.0 &&
-	    std::abs(dHP(2)/track1.getSigmaKappa()) < 10.0);
+    return (std::abs(dHP(0)/track1.getSigmaDr()) < 5.0 &&
+	    std::abs(dHP(1)/track1.getSigmaPhi0()) < 5.0 &&
+	    std::abs(dHP(2)/track1.getSigmaKappa()) < 5.0);
 
 }
 
 bool fcf::goodMatch(const fc::GenTrack & genTrack,
-		    const fc::Track& track,const fc::DetectorGeometry& detectorGeometry) {
+		    const fc::Track& track,double sigma, const fc::DetectorGeometry& detectorGeometry) {
 
 
 
   TVectorD dHP = fcf::deltaHP(genTrack,track,detectorGeometry);
 
-  if (std::abs(dHP(4)/track.getSigmaTanL()) > 10.0){
-    //std::cout << "Reco Track " << track.getHelix().getTanL() << " " << track.getLorentzVector().Pz() << "/" << track.getLorentzVector().Pt() << std::endl;
-    //std::cout << "Gen  Track " << genTrack.makeHelix(detectorGeometry.getBField(),detectorGeometry.getCurvatureC()).getTanL() << " " << genTrack.getLorentzVector().Pz() << "/" << genTrack.getLorentzVector().Pt() << std::endl;
-  }
 
-    return (std::abs(dHP(0)/track.getSigmaDr()) < 10.0 &&
-	    std::abs(dHP(1)/track.getSigmaPhi0()) < 10.0 &&
-	    std::abs(dHP(2)/track.getSigmaKappa()) < 10.0 &&
-	    std::abs(dHP(3)/track.getSigmaDz()) < 10.0 &&
-	    std::abs(dHP(4)/track.getSigmaTanL()) < 10.0);
+    return (std::abs(dHP(0)/track.getSigmaDr()) < sigma &&
+	    std::abs(dHP(1)/track.getSigmaPhi0()) < sigma &&
+	    std::abs(dHP(2)/track.getSigmaKappa()) < sigma &&
+	    std::abs(dHP(3)/track.getSigmaDz()) < sigma &&
+	    std::abs(dHP(4)/track.getSigmaTanL()) < sigma);
 
 }
 
 bool fcf::goodMatchXY(const fc::GenTrack & genTrack,
-		      const fc::Track& track,const fc::DetectorGeometry& detectorGeometry) {
+		      const fc::Track& track,double sigma, const fc::DetectorGeometry& detectorGeometry) {
 
   TVectorD dHP = fcf::deltaHP(genTrack,track,detectorGeometry);
 
-    return (std::abs(dHP(0)/track.getSigmaDr()) < 10.0 &&
-	    std::abs(dHP(1)/track.getSigmaPhi0()) < 10.0 &&
-	    std::abs(dHP(2)/track.getSigmaKappa()) < 10.0);
+    return (std::abs(dHP(0)/track.getSigmaDr()) < sigma &&
+	    std::abs(dHP(1)/track.getSigmaPhi0()) < sigma &&
+	    std::abs(dHP(2)/track.getSigmaKappa()) < sigma);
 
 }
 

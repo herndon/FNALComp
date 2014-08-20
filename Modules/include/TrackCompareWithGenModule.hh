@@ -56,8 +56,10 @@ private:
 
   int _genTracks;
   int _recoTracks;
-  int _matchedRecoTracks;
-  int _matchedRecoTracksXY;
+  int _matchedRecoTracksLoose;
+  int _matchedRecoTracksXYLoose;
+  int _matchedRecoTracksTight;
+  int _matchedRecoTracksXYTight;
 
     // Histograms
     // ROOT will delete these when the TFile to which they are attached is deleted

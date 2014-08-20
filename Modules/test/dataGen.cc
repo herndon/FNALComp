@@ -33,7 +33,7 @@ int main ()
 
     // Configure genData using general Config class
     std::ifstream configfile("configfile.txt");
-    fc::Config config(configfile,genData);
+    fc::Config config(configfile,genData,-1);
 
 // Intialize Objects and Modules that are persistant
 
@@ -81,7 +81,7 @@ int main ()
                          detectorGeometry));
 
     // Event loop over module classes
-    processor.processEvents();
+    processor.processEvents(config);
 
     processor.endJob();
     return 0;
