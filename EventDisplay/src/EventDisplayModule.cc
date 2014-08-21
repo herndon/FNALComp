@@ -151,7 +151,7 @@ void fc::EventDisplayModule::displayGeometry(){
     geoSensor->SetLineColor(kBlue);
     geoSensor->	SetTransparency(40);
     TGeoRotation *rot = new TGeoRotation();
-    rot->RotateY(std::atan2(sensor._measurementDirection.Z(),sensor._measurementDirection.X())*180.0/M_PI);
+    rot->RotateY(-std::atan2(sensor._measurementDirection.Z(),sensor._measurementDirection.X())*180.0/M_PI);
     top->AddNode(geoSensor,ii_layer+1,new TGeoCombiTrans(sensor._center[0],sensor._center[1],sensor._center[2],rot));
     ii_layer++;
 
