@@ -124,6 +124,7 @@ void fc::EventDisplayModule::displayGeometry(){
   // Initialize global Eve application manager (creates pointer gEve at global scope)
   TEveManager::Create();
 
+
   // Geometry Manager
   TGeoManager *geom = new TGeoManager("Assemblies","Geometry using assemblies");
   
@@ -148,6 +149,7 @@ void fc::EventDisplayModule::displayGeometry(){
     const char * geoSensorNameC = geoSensorName.c_str();
     TGeoVolume *geoSensor = geom->MakeBox(geoSensorNameC, Si, sensor._perpSize/2.0,0.0,sensor._stripPitch*sensor._nStrips/2.0);
     geoSensor->SetLineColor(kBlue);
+    geoSensor->	SetTransparency(40);
     TGeoRotation *rot = new TGeoRotation();
     rot->RotateY(std::atan2(sensor._measurementDirection.Z(),sensor._measurementDirection.X())*180.0/M_PI);
     top->AddNode(geoSensor,ii_layer+1,new TGeoCombiTrans(sensor._center[0],sensor._center[1],sensor._center[2],rot));
@@ -211,8 +213,9 @@ void fc::EventDisplayModule::fillGenTrackList(const fc::GenTrackSet& genTrackSet
     TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
     eveTrack->SetIndex(n);
     eveTrack->SetStdTitle();
+    eveTrack->SetLineWidth(2);
     Track track= fcf::matchTrack(genTrack,recoTrackSet,_detectorGeometry,matchedTrackLoose,matchedTrackXYLoose,matchedTrackTight,matchedTrackXYTight);
-    if (matchedTrackLoose) {eveTrack->SetMainColor(kGreen);} else {eveTrack->SetMainColor(kOrange);}
+    if (matchedTrackLoose) {eveTrack->SetMainColor(210);} else {eveTrack->SetMainColor(88);}
     eveTrack->MakeTrack();
     trackList.AddElement(eveTrack);
     ++n;
@@ -239,6 +242,7 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
   recoTrackList.SetName("RecoTrackList");
 
   TEveStraightLineSet* lineSet = new TEveStraightLineSet();
+  lineSet->SetLineWidth(2);
 
   bool matchedTrackLoose = false;
   bool matchedTrackXYLoose = false;
@@ -258,8 +262,9 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
     TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
     eveTrack->SetIndex(n);
     eveTrack->SetStdTitle();
+    eveTrack->SetLineWidth(2);
     GenTrack genTrack= fcf::matchTrack(track,genTrackSet,_detectorGeometry,matchedTrackLoose,matchedTrackXYLoose,matchedTrackTight,matchedTrackXYTight);
-    if (matchedTrackLoose) {eveTrack->SetMainColor(kRed);} else {eveTrack->SetMainColor(kYellow);}
+    if (matchedTrackLoose) {eveTrack->SetMainColor(kRed);} else {eveTrack->SetMainColor(kOrange-3);}
     if (!matchedTrackLoose){
       //hit lines here
       for (auto const hitNumber : track.getHits()){
@@ -267,8 +272,8 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
 	TVector3 hitPosition = hit.getHitPosition();
 	TVector3 stripDir = _detectorGeometry.getSensor(hit.getLayer())._normal.Cross(_detectorGeometry.getSensor(hit.getLayer())._measurementDirection);
 	stripDir *= _detectorGeometry.getSensor(hit.getLayer())._perpSize/2.0;
-	lineSet->AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y(),hitPosition.Z()-stripDir.Z(),
-			 hitPosition.X()+stripDir.X(),hitPosition.Y()+stripDir.Y(),hitPosition.Z()+stripDir.Z());
+	lineSet->AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y()+0.001,hitPosition.Z()-stripDir.Z(),
+			 hitPosition.X()+stripDir.X(),hitPosition.Y()+stripDir.Y()+0.001,hitPosition.Z()+stripDir.Z());
       }
       ++n;
     }
@@ -299,9 +304,9 @@ void fc::EventDisplayModule::fillGenHitList(const fc::GenHitSet& genHitSet,TEveE
     if (hit.getLayer() >= 5) yPos += 0.001;
 
     h->SetNextPoint(hit.getGenHitPosition().x(),yPos,+hit.getGenHitPosition().z());
-    if (hit.getLayer() < 5) h->SetMarkerColor(6);
+    if (hit.getLayer() < 5) h->SetMarkerColor(kYellow);
     if (hit.getLayer() >= 5) h->SetMarkerColor(kYellow);
-    h->SetMarkerSize(2.0);
+    h->SetMarkerSize(1.5);
      if (hit.getLayer() < 5)  hitList.AddElement(h);
      if (hit.getLayer() >= 5)  sasZHitList.AddElement(h);
     n++;

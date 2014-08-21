@@ -129,6 +129,7 @@ void fc::TrackCompareWithGenModule::processEvent(Event& event)
     Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_genTracksLabel);
     Handle<TrackSet> recoTrackSet = event.get<TrackSet>(_recTracksLabel);
 
+    if (_debugLevel>=5) std::cout << "Event " << event.eventNumber() << std::endl;
     compareTracks(*genTrackSet,*recoTrackSet);
 
     _genTracks += genTrackSet->getGenTracks().size();
@@ -140,9 +141,24 @@ void fc::TrackCompareWithGenModule::processEvent(Event& event)
 void fc::TrackCompareWithGenModule::compareTracks(const GenTrackSet & genTrackSet,
 						  const TrackSet& recoTrackSet) {
 
-
     if (recoTrackSet.getTracks().begin() == recoTrackSet.getTracks().end()) return;
 
+
+    // if (_debugLevel>=5) {
+    //   for (auto const& track : recoTrackSet.getTracks()) {
+
+    // 	bool goodMatchLoose = false;
+    // 	bool goodMatchXYLoose = false;
+    // 	bool goodMatchTight = false;
+    // 	bool goodMatchXYTight = false;
+ 
+    // 	const GenTrack& genTrack = fcf::matchTrack(track,genTrackSet,_detectorGeometry,goodMatchLoose,goodMatchXYLoose,goodMatchTight,goodMatchXYTight);
+ 
+    // 	if (!goodMatchLoose) std::cout << "Found a ghost track" << std::endl;
+    // 	if (!goodMatchXYLoose) std::cout << "also bad in xy" << std::endl;
+
+    //   }
+    // }
     for (auto const& genTrack : genTrackSet.getGenTracks()) {
  
       bool goodMatchLoose = false;

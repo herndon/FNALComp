@@ -1,4 +1,4 @@
-DebugLevel 2 
+DebugLevel 1 
 RunGenHistogrammingModule 1
 RunHitRecoModule 1
 RunHitCompareModule 1
@@ -9,7 +9,7 @@ RunCandidateCompareModule 1
 RunTrackRecoModule 1
 RunTrackCompareWithPerfectModule 1
 RunRecoTrackCompareWithGenModule 1
-RunEventDisplayModule 0 
+RunEventDisplayModule 1 
 RootFileName recoHistograms.root
 minCandPTCut 0.5
 minPTCut 0.5

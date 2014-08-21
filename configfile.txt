@@ -1,5 +1,5 @@
-DebugLevel 2 
-NumberEvents 10 
+DebugLevel 1 
+NumberEvents 200 
 NumberTracks 10 
 Seed 1
 RootFileName genHistograms.root
