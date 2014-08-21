@@ -27,9 +27,9 @@ fc::LayerTrackFinder::LayerTrackFinder(int debugLevel,
 }
 
 void fc::LayerTrackFinder::findTracks(const HitSet& recoHitSet,
-        unsigned int expNHit,TrackSetContainer& trackSet) const {
+        unsigned int expNHit,FastTrackSetContainer& trackSet) const {
 
-    TrackSetContainer allNewTracks;
+    FastTrackSetContainer allNewTracks;
 
     for (auto& track :  trackSet) {
 
@@ -37,7 +37,7 @@ void fc::LayerTrackFinder::findTracks(const HitSet& recoHitSet,
 
     }
 
-    trackSet.reserve(trackSet.size()+allNewTracks.size());
+    //trackSet.reserve(trackSet.size()+allNewTracks.size());
     for (auto& track: allNewTracks) {
         trackSet.push_back(std::move(track));
     }
@@ -50,18 +50,24 @@ void fc::LayerTrackFinder::findTracks(const HitSet& recoHitSet,
 }
 
 void fc::LayerTrackFinder::findTrack(const Track& track,
-        const HitSet& recoHitSet, TrackSetContainer& allNewTracks) const {
+        const HitSet& recoHitSet, FastTrackSetContainer& allNewTracks) const {
 
 
 
     std::vector<int> hits = findHits(track,recoHitSet);
-    TrackSetContainer newTracks = buildTracks(track, hits, recoHitSet);
+    FastTrackSetContainer newTracks = buildTracks(track, hits, recoHitSet);
     std::vector<int> tracks = bestTracks(newTracks);
     //We may want to decide whether to remove the seed track
     //removeSeedTrack(trackSet,trackSet);
 
-    for (auto trackNumber: tracks) {
-        allNewTracks.push_back(std::move(newTracks[trackNumber]));
+    int ii_track=0; 
+    for (auto & track: newTracks){
+
+      for (auto trackNumber: tracks) {
+	if (trackNumber == ii_track) allNewTracks.push_back(std::move(track));
+      }
+
+      ++ii_track;
     }
 
 }
@@ -106,7 +112,7 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track ,
 }
 
 std::vector<int> fc::LayerTrackFinder::bestTracks(
-    const TrackSetContainer & tracks) const {
+    const FastTrackSetContainer & tracks) const {
 
     std::vector<int> trackList;
 
@@ -153,12 +159,12 @@ std::vector<int> fc::LayerTrackFinder::bestTracks(
 
 
 
-fc::TrackSetContainer fc::LayerTrackFinder::buildTracks(
+fc::FastTrackSetContainer fc::LayerTrackFinder::buildTracks(
     const Track & track, const std::vector<int> & hits,
     const HitSet & recoHitSet) const {
 
   fcf::TrackingSelector trackSelector = {_minPTCut,_dRCut,_dZCut,_nExpHits,_maxChi2NDofCut,true,true};
-    TrackSetContainer newTracks;
+    FastTrackSetContainer newTracks;
     for (auto hitNumber : hits) {
       //TrackHitContainer trackHits = track.getHits();
       TrackHitContainer trackHits;

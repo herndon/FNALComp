@@ -8,7 +8,7 @@
 
 void fcf::simpleTrackSetFilter(const fc::DetectorGeometry& detectorGeometry,
                                const TrackingSelector& trackSelector,
-                               fc::TrackSetContainer & trackSet) {
+                               fc::FastTrackSetContainer & trackSet) {
 
     // Right now just checks the number of expected hits
 
@@ -25,7 +25,7 @@ void fcf::simpleTrackSetFilter(const fc::DetectorGeometry& detectorGeometry,
 }
 
 
-void fcf::duplicateTrackSetFilter(fc::TrackSetContainer & trackCandidateSet) {
+void fcf::duplicateTrackSetFilter(fc::FastTrackSetContainer & trackCandidateSet) {
 
 
   std::set<int> deleteSet;
@@ -33,10 +33,10 @@ void fcf::duplicateTrackSetFilter(fc::TrackSetContainer & trackCandidateSet) {
   int trackNumber=0;
   int trackNumber2=0;
 
-  for (fc::TrackSetContainer::iterator trackIter = trackCandidateSet.begin();
+  for (fc::FastTrackSetContainer::iterator trackIter = trackCandidateSet.begin();
        trackIter != trackCandidateSet.end(); ++trackIter,++trackNumber) {
 
-    fc::TrackSetContainer::iterator trackIter2 = trackIter;
+    fc::FastTrackSetContainer::iterator trackIter2 = trackIter;
     trackNumber2 = trackNumber+1; 
     ++trackIter2;
 
@@ -63,7 +63,7 @@ void fcf::duplicateTrackSetFilter(fc::TrackSetContainer & trackCandidateSet) {
 
 
 
-void fcf::contentionTrackSetFilter(fc::TrackSetContainer & trackCandidateSet,unsigned int numberToMatch) {
+void fcf::contentionTrackSetFilter(fc::FastTrackSetContainer & trackCandidateSet,unsigned int numberToMatch) {
 
   // !!!!! this may not be safe and needs to be revisited
 
@@ -72,10 +72,10 @@ void fcf::contentionTrackSetFilter(fc::TrackSetContainer & trackCandidateSet,uns
   int trackNumber=0;
   int trackNumber2=0;
 
-for (fc::TrackSetContainer::iterator trackIter = trackCandidateSet.begin();
+for (fc::FastTrackSetContainer::iterator trackIter = trackCandidateSet.begin();
        trackIter != trackCandidateSet.end(); ++trackIter,++trackNumber) {
 
-    fc::TrackSetContainer::iterator trackIter2 = trackIter;
+    fc::FastTrackSetContainer::iterator trackIter2 = trackIter;
     trackNumber2 = trackNumber+1; 
     ++trackIter2;
 

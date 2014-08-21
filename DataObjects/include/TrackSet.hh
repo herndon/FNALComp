@@ -13,11 +13,13 @@
 // 2014-06-06
 //============================================================================
 #include <vector>
+#include <list>
 #include "DataObjects/include/Track.hh"
 
 namespace fc {
 
 typedef std::vector<Track> TrackSetContainer;
+typedef std::list<Track> FastTrackSetContainer;
 
 ///
 /// Class TrackSet:

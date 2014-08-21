@@ -19,7 +19,7 @@ fc::TrackRecoStrategy2X1SAS::TrackRecoStrategy2X1SAS(int debugLevel,
 }
 
 void fc::TrackRecoStrategy2X1SAS::recoTracks(const HitSet& recoHitSet,
-        TrackSetContainer& trackSet) const {
+        FastTrackSetContainer& trackSet) const {
 
 
     // !!!!! trackCandidateSet type def to a track list since we are doing may insertions and deletions?
@@ -34,7 +34,7 @@ void fc::TrackRecoStrategy2X1SAS::recoTracks(const HitSet& recoHitSet,
 
 
 void fc::TrackRecoStrategy2X1SAS::findTracks(const HitSet & recoHitSet,
-        TrackSetContainer& trackSet) const {
+        FastTrackSetContainer& trackSet) const {
 
   std::vector<int> layers {9,4,8,3,2,1,0,7,6,5};
     unsigned int expNHit = 0;

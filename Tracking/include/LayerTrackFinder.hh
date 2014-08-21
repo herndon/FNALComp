@@ -27,17 +27,17 @@ public:
 		     double maxChi2NDofCut);
 
     void findTracks(const HitSet & recoHitSet,unsigned int expNHit,
-                             TrackSetContainer & trackSet) const;
+                             FastTrackSetContainer & trackSet) const;
 
 private:
     void findTrack(const Track &, const HitSet & recoHitSet,
-                                   TrackSetContainer& allnewTracks) const;
+                                   FastTrackSetContainer& allnewTracks) const;
     std::vector<int> findHits(const Track & track, const HitSet & recoHitSet) const;
-    TrackSetContainer buildTracks(const Track &, const std::vector<int> &,
+    FastTrackSetContainer buildTracks(const Track &, const std::vector<int> &,
                                            const HitSet & recoHitSet) const;
-    std::vector<int> bestTracks(const TrackSetContainer & newTracks) const;
-    void removeSeedTrack(const TrackSetContainer& oldTracks,
-                         TrackSetContainer& newTracks) const;
+    std::vector<int> bestTracks(const FastTrackSetContainer & newTracks) const;
+    void removeSeedTrack(const FastTrackSetContainer& oldTracks,
+                         FastTrackSetContainer& newTracks) const;
 
     int _debugLevel;
 

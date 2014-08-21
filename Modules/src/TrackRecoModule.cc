@@ -44,7 +44,15 @@ void fc::TrackRecoModule::recoTracks(const TrackSet& inputTrackCandidateSet,
     TrackRecoStrategy2X1SAS recoStrategy(_debugLevel,_detectorGeometry,
                                          _config);
 
-    TrackSetContainer trackCandidateSet(inputTrackCandidateSet.getTracks()) ;
+    //FastTrackSetContainer trackCandidateSet(inputTrackCandidateSet.getTracks()) ;
+
+    FastTrackSetContainer trackCandidateSet;
+
+    for (const auto& track: inputTrackCandidateSet.getTracks()){
+      trackCandidateSet.push_back(std::move(track));
+    }
+
+
 
     recoStrategy.recoTracks(recoHitSet,trackCandidateSet);
 

@@ -42,7 +42,7 @@ void fc::TrackCandidateModule::processEvent(Event& event)
 void fc::TrackCandidateModule::findTrackCandidates(const HitSet& recoHitSet,
         TrackSet & recoTrackCandidateSet) const {
 
-   TrackSetContainer trackCandidateSet;
+   FastTrackSetContainer trackCandidateSet;
 
 
   if (_trackCandidateStrategy=="trackCandidateStrategy2X1SAS"){

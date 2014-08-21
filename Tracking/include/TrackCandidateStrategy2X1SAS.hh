@@ -28,7 +28,7 @@ public:
                           std::vector<fc::TrackHitContainer>& trackHitCandidates) const;
 
     void findTrackCandidates(const HitSet& hitSet,
-                             TrackSetContainer& trackCandidateSet) const;
+                             FastTrackSetContainer& trackCandidateSet) const;
 
 
 

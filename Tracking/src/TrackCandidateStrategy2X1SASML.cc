@@ -19,7 +19,7 @@ fc::TrackCandidateStrategy2X1SASML::TrackCandidateStrategy2X1SASML(int debugLeve
 
 
 void fc::TrackCandidateStrategy2X1SASML::findTrackCandidates(
-    const HitSet& recoHitSet,TrackSetContainer& trackCandidateSet) const {
+    const HitSet& recoHitSet,FastTrackSetContainer& trackCandidateSet) const {
 
     std::vector<TrackHitContainer> trackHitCandidates;
 

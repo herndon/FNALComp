@@ -27,10 +27,10 @@ public:
                             const Config & config);
 
     void recoTracks(const HitSet& recoHitSet,
-                    TrackSetContainer& trackCandidateSet) const;
+                    FastTrackSetContainer& trackCandidateSet) const;
 
     void findTracks(const HitSet& recoHitSet,
-                    TrackSetContainer& trackCandidateSet) const;;
+                    FastTrackSetContainer& trackCandidateSet) const;;
 
 
 private:

@@ -19,7 +19,7 @@ fc::TrackCandidateStrategy2X1SAS::TrackCandidateStrategy2X1SAS(int debugLevel,
 
 
 void fc::TrackCandidateStrategy2X1SAS::findTrackCandidates(
-    const HitSet& recoHitSet,TrackSetContainer& trackCandidateSet) const {
+    const HitSet& recoHitSet,FastTrackSetContainer& trackCandidateSet) const {
 
     std::vector<TrackHitContainer> trackHitCandidates;
 
