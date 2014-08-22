@@ -3,7 +3,7 @@
 *.so
 *.bin
 *.root
+testlog_dataGen
+testlog_dataReco
 dataGen
-dataRead
-hitReco
-trackReco
+dataReco
