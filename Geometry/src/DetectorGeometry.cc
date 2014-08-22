@@ -32,30 +32,32 @@ void fc::DetectorGeometry::printDetectorGeometry(ostream& out) const {
     out << "Number SAS sensor layers " << getNSASSensors() << std::endl;
     out << "Number Z   sensor layers " << getNZSensors() << std::endl;
 
-    for (int iiLayer = 0; iiLayer < getNSensors(); ++iiLayer) {
+    int iiLayer = 0;
+    for (auto const& sensor: getSensors()){
         out << std::endl;
         out << "Sensor layer " << iiLayer << std::endl;
-        out << "Sensor type 0: X, 1, SAS, 2 Z " << _sensors[iiLayer]._type <<std::endl;
-        out << "N strips    "  << _sensors[iiLayer]._nStrips    << std::endl;
-        out << "Strip pitch "  << _sensors[iiLayer]._stripPitch << std::endl;
-        out << "X position (m) "  << _sensors[iiLayer]._center.x()       << std::endl;
-        out << "Y position (m) "  << _sensors[iiLayer]._center.y()       << std::endl;
-        out << "Z position (m) "  << _sensors[iiLayer]._center.z()       << std::endl;
+        out << "Sensor type 0: X, 1, SAS, 2 Z " << sensor._type <<std::endl;
+        out << "N strips    "  << sensor._nStrips    << std::endl;
+        out << "Strip pitch "  << sensor._stripPitch << std::endl;
+        out << "X position (m) "  << sensor._center.x()       << std::endl;
+        out << "Y position (m) "  << sensor._center.y()       << std::endl;
+        out << "Z position (m) "  << sensor._center.z()       << std::endl;
         out << "Measurement direction  "  << std::endl;
-        _sensors[iiLayer]._measurementDirection.Print();
+        sensor._measurementDirection.Print();
         out << "Normal  "  << std::endl;
-        _sensors[iiLayer]._normal.Print();
+        sensor._normal.Print();
         out << "Intrinsic Hit Resolution (m) "  <<
-            _sensors[iiLayer]._intrinsicHitResolution << std::endl;
-        out << "Hit Resolution           (m) "  << _sensors[iiLayer]._hitResolution <<
+            sensor._intrinsicHitResolution << std::endl;
+        out << "Hit Resolution           (m) "  << sensor._hitResolution <<
             std::endl;
-        out << "Bad Hit Resolution       (m) "  << _sensors[iiLayer]._badHitResolution
+        out << "Bad Hit Resolution       (m) "  << sensor._badHitResolution
             << std::endl;
-        out << "Strip Threshold          (m) "  << _sensors[iiLayer]._threshold <<
+        out << "Strip Threshold          (m) "  << sensor._threshold <<
             std::endl;
         out << "Sensor dimentions        (m)X(m)  "  <<
-            _sensors[iiLayer]._stripPitch*_sensors[iiLayer]._nStrips
-            << " X " << _sensors[iiLayer]._perpSize  << std::endl;
+            sensor._stripPitch*sensor._nStrips
+            << " X " << sensor._perpSize  << std::endl;
+	iiLayer++;
     }
     out << "PV position " << std::endl;
     out << "X position    (m) "  << _primaryVertexX._center.x()       << std::endl;

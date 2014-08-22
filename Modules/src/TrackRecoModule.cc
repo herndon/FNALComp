@@ -28,27 +28,25 @@ void fc::TrackRecoModule::processEvent(Event& event)
 
     Handle<HitSet> recoHitSet = event.get<HitSet>(_inHitsLabel);
 
-    Handle<TrackSet> inputTrackCandidateSet = event.get<TrackSet>(_inTracksLabel);
+    Handle<TrackSet> inputTrackSeedSet = event.get<TrackSet>(_inTracksLabel);
 
     std::unique_ptr<TrackSet> recoTrackSet { new TrackSet };
 
-    recoTracks(*inputTrackCandidateSet,*recoHitSet,*recoTrackSet);
+    recoTracks(*inputTrackSeedSet,*recoHitSet,*recoTrackSet);
 
     event.put(_outTracksLabel,std::move(recoTrackSet) );
 }
 
-void fc::TrackRecoModule::recoTracks(const TrackSet& inputTrackCandidateSet,
+void fc::TrackRecoModule::recoTracks(const TrackSet& inputTrackSeedSet,
                                      const HitSet& recoHitSet,TrackSet & recoTrackSet) const {
 
 
     TrackRecoStrategy2X1SAS recoStrategy(_debugLevel,_detectorGeometry,
                                          _config);
 
-    //FastTrackSetContainer trackCandidateSet(inputTrackCandidateSet.getTracks()) ;
-
     FastTrackSetContainer trackCandidateSet;
 
-    for (const auto& track: inputTrackCandidateSet.getTracks()){
+    for (const auto& track: inputTrackSeedSet.getTracks()){
       trackCandidateSet.push_back(std::move(track));
     }
 

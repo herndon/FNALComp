@@ -60,10 +60,10 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
 	    configfile >> _runPerfectTrackRecoModule;
 	  } else if (configString == "RunPerfectTrackCompareWithGenModule") {
 	    configfile >> _runPerfectTrackCompareWithGenModule;
-	  } else if (configString == "RunTrackCandidateModule") {
-	    configfile >> _runTrackCandidateModule;
-	  } else if (configString == "RunCandidateCompareModule") {
-	    configfile >> _runCandidateCompareModule;
+	  } else if (configString == "RunTrackSeedModule") {
+	    configfile >> _runTrackSeedModule;
+	  } else if (configString == "RunTrackSeedCompareModule") {
+	    configfile >> _runTrackSeedCompareModule;
 	  } else if (configString == "RunTrackRecoModule") {
 	    configfile >> _runTrackRecoModule;
 	  } else if (configString == "RunTrackCompareWithPerfectModule") {

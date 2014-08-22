@@ -4,7 +4,7 @@
 #include "Tracking/include/TrackingSelectors.hh"
 #include <iostream>
 
-bool fcf::goodCandidateHelix(const fc::Helix & helix,
+bool fcf::goodSeedHelix(const fc::Helix & helix,
                              const fc::DetectorGeometry& detectorGeometry,
                              const TrackingSelector& trackSelector) {
 

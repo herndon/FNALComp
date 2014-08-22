@@ -26,7 +26,7 @@ struct TrackingSelector {
 };
 
 // helper functions for track selection
-bool goodCandidateHelix(const fc::Helix &,const fc::DetectorGeometry&,
+bool goodSeedHelix(const fc::Helix &,const fc::DetectorGeometry&,
                         const TrackingSelector&);
 bool goodTrack(const fc::Track &,const fc::DetectorGeometry&,
                         const TrackingSelector&);

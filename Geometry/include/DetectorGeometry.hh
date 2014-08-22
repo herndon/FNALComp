@@ -36,6 +36,9 @@ struct SensorDescriptor {
     double _perpSize;
 };
 
+typedef std::vector<SensorDescriptor> SensorContainer;
+
+
 ///
 /// Class DetectorGeometry
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-05-01

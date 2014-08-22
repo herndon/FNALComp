@@ -1,7 +1,7 @@
-#ifndef Modules_CandidateCompareModule_hh
-#define Modules_CandidateCompareModule_hh
+#ifndef Modules_TrackSeedCompareModule_hh
+#define Modules_TrackSeedCompareModule_hh
 //============================================================================
-// CandidateCompareModule.hh
+// TrackSeedCompareModule.hh
 // Module for comparing reconstructed track parameters to generated track parameters
 //
 // Author Matt Herndon, University of Wisconsin,
@@ -24,17 +24,17 @@ class Track;
 class TrackSet;
 
 ///
-/// Class CandidateCompareModule  Module for comparing reconstructed track parameters to generated track parameters
+/// Class TrackSeedCompareModule  Module for comparing reconstructed track parameters to generated track parameters
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-00-06
 ///
 
-class CandidateCompareModule : public Module {
+class TrackSeedCompareModule : public Module {
 
 public:
 
-    CandidateCompareModule(int debugLevel,
+    TrackSeedCompareModule(int debugLevel,
                        const std::string& inputPerfectTracksLabel,
-                       const std::string& inputCandidateTracksLabel,
+                       const std::string& inputSeedTracksLabel,
                        const DetectorGeometry & detectorGeometry );
 
     void processEvent(fc::Event&) override;
@@ -50,13 +50,13 @@ private:
     const DetectorGeometry & _detectorGeometry;
 
     const std::string _perfectTracksLabel;
-    const std::string _candidateTracksLabel;
+    const std::string _seedTracksLabel;
 
     // Comparison of hits
 
-    void compareCandidates(const TrackSet &, const TrackSet &) const;
-    const std::vector<int> matchCandidates(const Track &,const TrackSet &) const;
-    bool matchCandidate(const Track &, const Track&) const; 
+    void compareTrackSeeds(const TrackSet &, const TrackSet &) const;
+    const std::vector<int> matchTrackSeeds(const Track &,const TrackSet &) const;
+    bool matchTrackSeed(const Track &, const Track&) const; 
     const TVectorD deltaHP(const Track &, const Track &) const;
     void fillHistograms(const TVectorD &,const Track&) const;
 
@@ -89,11 +89,11 @@ private:
     TH1D * _hDeltaDzPull = nullptr;
     TH1D * _hDeltaTanLPull = nullptr;
 
-    TH1D * _hMatchedCandidates = nullptr;
+    TH1D * _hMatchedTrackSeeds = nullptr;
 
     void initializeHistograms();
 
 };
 } // end namespace fc
 
-#endif // Modules_CandidateCompareModule_hh
+#endif // Modules_TrackSeedCompareModule_hh

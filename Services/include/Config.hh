@@ -49,11 +49,11 @@ public:
   bool runPerfectTrackCompareWithGenModule() const {
     return _runPerfectTrackCompareWithGenModule;
   }
-  bool runTrackCandidateModule() const {
-    return _runTrackCandidateModule;
+  bool runTrackSeedModule() const {
+    return _runTrackSeedModule;
   }
-  bool runCandidateCompareModule() const {
-    return _runCandidateCompareModule;
+  bool runTrackSeedCompareModule() const {
+    return _runTrackSeedCompareModule;
   }
   bool runTrackRecoModule() const {
     return _runTrackRecoModule;
@@ -116,8 +116,8 @@ private:
   bool _runHitCompareModule = false;
   bool _runPerfectTrackRecoModule = false;
   bool _runPerfectTrackCompareWithGenModule = false;
-  bool _runTrackCandidateModule = false;
-  bool _runCandidateCompareModule = false;
+  bool _runTrackSeedModule = false;
+  bool _runTrackSeedCompareModule = false;
   bool _runTrackRecoModule = false;
   bool _runTrackCompareWithPerfectModule = false;
   bool _runRecoTrackCompareWithGenModule = false;

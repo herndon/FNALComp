@@ -1,7 +1,7 @@
-#ifndef Modules_TrackCandidateModule_hh
-#define Modules_TrackCandidateModule_hh
+#ifndef Modules_TrackSeedModule_hh
+#define Modules_TrackSeedModule_hh
 //============================================================================
-// TrackCandidateModule.hh
+// TrackSeedModule.hh
 // Module for finding candidate track to pursue in reconstruction
 //
 // Author Matt Herndon, University of Wisconsin,
@@ -22,17 +22,17 @@ class TrackSet;
 
 
 ///
-/// Class TrackCandidateModule  Module for reconstructing hits from strip infomation
+/// Class TrackSeedModule  Module for reconstructing hits from strip infomation
 /// Author Matt Herndon, University of Wisconsin, Fermi National Accelerator Laborator 2014-06-11
 ///
 
-class TrackCandidateModule : public Module {
+class TrackSeedModule : public Module {
 
 public:
 
-    TrackCandidateModule(int, const std::string& inputHitsLabel,
+    TrackSeedModule(int, const std::string& inputHitsLabel,
                          const std::string& outputTracksLabel,
-                         const std::string& trackCandidateStrategy,
+                         const std::string& trackSeedStrategy,
                          const Config&, const DetectorGeometry &);
 
     void processEvent(Event&) override;
@@ -44,7 +44,7 @@ private:
 
     const std::string _inHitsLabel;
     const std::string _outTracksLabel;
-    const std::string _trackCandidateStrategy;
+    const std::string _trackSeedStrategy;
 
     // Configuration object for tracking parameters
     const Config& _config;
@@ -56,9 +56,9 @@ private:
 
 
 
-    void findTrackCandidates(const HitSet& hitSet,TrackSet & trackSet) const;
+    void findTrackSeeds(const HitSet& hitSet,TrackSet & trackSet) const;
 
 };
 } // end namespace fc
 
-#endif // Modules_TrackCandidateModule_hh
+#endif // Modules_TrackSeedModule_hh

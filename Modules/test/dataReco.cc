@@ -17,9 +17,9 @@
 #include "Modules/include/HitCompareModule.hh"
 #include "Modules/include/PerfectTrackRecoModule.hh"
 #include "Modules/include/TrackRecoModule.hh"
-#include "Modules/include/TrackCandidateModule.hh"
+#include "Modules/include/TrackSeedModule.hh"
 #include "Modules/include/TrackCompareWithPerfectModule.hh"
-#include "Modules/include/CandidateCompareModule.hh"
+#include "Modules/include/TrackSeedCompareModule.hh"
 #include "Modules/include/TrackCompareWithGenModule.hh"
 #include "EventDisplay/include/EventDisplayModule.hh"
 #include <fstream>
@@ -93,11 +93,11 @@ int main (int argc,const char *argv[])
     processor.addModule( new fc::TrackCompareWithGenModule(config.getDebugLevel(),
 							   "genTracks", "perfectRecoTracks", detectorGeometry) );
 
-  if (config.runTrackCandidateModule()) 
-    processor.addModule( new fc::TrackCandidateModule(config.getDebugLevel(),
-						      "recoHits", "seedTracks","trackCandidateStrategy2X1SASML",config,detectorGeometry) );
-  if (config.runCandidateCompareModule()) 
-    processor.addModule( new fc::CandidateCompareModule(config.getDebugLevel(),
+  if (config.runTrackSeedModule()) 
+    processor.addModule( new fc::TrackSeedModule(config.getDebugLevel(),
+						      "recoHits", "seedTracks","trackSeedStrategy2X1SASML",config,detectorGeometry) );
+  if (config.runTrackSeedCompareModule()) 
+    processor.addModule( new fc::TrackSeedCompareModule(config.getDebugLevel(),
 							"perfectRecoTracks", "seedTracks", detectorGeometry) );
 
 

@@ -4,8 +4,8 @@ RunHitRecoModule 1
 RunHitCompareModule 1
 RunPerfectTrackRecoModule 1
 RunPerfectTrackCompareWithGenModule 1
-RunTrackCandidateModule 1
-RunCandidateCompareModule 1
+RunTrackSeedModule 1
+RunTrackSeedCompareModule 1
 RunTrackRecoModule 1
 RunTrackCompareWithPerfectModule 1
 RunRecoTrackCompareWithGenModule 1
