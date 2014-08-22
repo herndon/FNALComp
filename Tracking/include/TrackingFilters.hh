@@ -10,6 +10,7 @@
 // 2014-07-30
 //============================================================================
 
+#include <vector>
 #include "DataObjects/include/TrackSet.hh"
 #include "Tracking/include/TrackingSelectors.hh"
 
@@ -27,6 +28,7 @@ void simpleTrackSetFilter(const fc::DetectorGeometry&,const TrackingSelector&,
 
   void contentionTrackSetFilter(fc::FastTrackSetContainer &, unsigned int numberToMatch);
 
+  std::vector<int> bestTracksFilter(const fc::FastTrackSetContainer & newTracks);
 
 
 

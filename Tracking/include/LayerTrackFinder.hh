@@ -36,9 +36,7 @@ private:
     FastTrackSetContainer buildTracks(const Track &, const std::vector<int> &,
                                            const HitSet & recoHitSet) const;
     std::vector<int> bestTracks(const FastTrackSetContainer & newTracks) const;
-    void removeSeedTrack(const FastTrackSetContainer& oldTracks,
-                         FastTrackSetContainer& newTracks) const;
-
+ 
     int _debugLevel;
 
     // Detector information

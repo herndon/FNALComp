@@ -56,7 +56,7 @@ void fc::LayerTrackFinder::findTrack(const Track& track,
 
     std::vector<int> hits = findHits(track,recoHitSet);
     FastTrackSetContainer newTracks = buildTracks(track, hits, recoHitSet);
-    std::vector<int> tracks = bestTracks(newTracks);
+    std::vector<int> tracks = fcf::bestTracksFilter(newTracks);
     //We may want to decide whether to remove the seed track
     //removeSeedTrack(trackSet,trackSet);
 
@@ -111,51 +111,6 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track ,
 
 }
 
-std::vector<int> fc::LayerTrackFinder::bestTracks(
-    const FastTrackSetContainer & tracks) const {
-
-    std::vector<int> trackList;
-
-    // keep the two best and all before the fit is constrined
-    double bestChi2 = 999.0;
-    double secondBestChi2 = 999.0;
-    int bestTrack = -1;
-    int secondBestTrack = -1;
-    int trackNumber = 0;
-
-
-    for (auto const& track : tracks) {
-        if (track.getNDof() > 0 && track.getChi2() < bestChi2) {
-            secondBestChi2 = bestChi2;
-            secondBestTrack = bestTrack;
-            bestChi2 = track.getChi2();
-            bestTrack = trackNumber;
-        } else if (track.getNDof() > 0 && track.getChi2() < secondBestChi2) {
-            secondBestChi2 = track.getChi2();
-            secondBestTrack = trackNumber;
-        }
-        ++trackNumber;
-    }
-
-    trackNumber = 0;
-
-    // Keep all if not yet constrainted since we can't compare chi2/ndof
-    for (auto const& track : tracks) {
-        if (track.getNDof() <= 0) trackList.push_back(trackNumber);
-        ++trackNumber;
-    }
-
-    // Tested keeping all or just the best track.  Keeping top 2 works best
-    if (bestTrack > -1)  trackList.push_back(bestTrack);
-    if (secondBestTrack > -1)  trackList.push_back(secondBestTrack);
-
-
-
-
-
-    return trackList;
-
-}
 
 
 
