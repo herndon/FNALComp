@@ -78,24 +78,24 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track ,
     std::vector<int> hits;
 
     bool hasLayerHit = false;
-    for (auto hitIndex : track.getHits()) {
-        if (recoHitSet.getHits()[hitIndex].getLayer() == _layer) {
+    for (auto hitIndex : track.trackHits()) {
+        if (recoHitSet.hits()[hitIndex].layer() == _layer) {
             hasLayerHit = true;
         }
     }
     if (hasLayerHit) return hits;
 
-    double maxResidual = 4.0*expectedMeasurementUncertianty1D(track.getHelix(),
-                         track.getCovMatrix(), _layer, _detectorGeometry);
+    double maxResidual = 4.0*expectedMeasurementUncertianty1D(track.helix(),
+                         track.covMatrix(), _layer, _detectorGeometry);
     int hitNumber = 0;
 
-    for (auto hit : recoHitSet.getHits()) {
+    for (auto hit : recoHitSet.hits()) {
 
-        if (hit.getLayer()==_layer) {
+        if (hit.layer()==_layer) {
 
-            if (std::abs(expectedMeasurementVector1D(track.getHelix(),_layer,
+            if (std::abs(expectedMeasurementVector1D(track.helix(),_layer,
                          _detectorGeometry)(0,0)
-                         - measurementVector1D(hit.getHitPosition(),_layer,_detectorGeometry)(0,0))
+                         - measurementVector1D(hit.position(),_layer,_detectorGeometry)(0,0))
                     < maxResidual) {
 
                 hits.push_back(hitNumber);
@@ -121,7 +121,7 @@ fc::FastTrackSetContainer fc::LayerTrackFinder::buildTracks(
   fcf::TrackingSelector trackSelector = {_minPTCut,_dRCut,_dZCut,_nExpHits,_maxChi2NDofCut,true,true};
     FastTrackSetContainer newTracks;
     for (auto hitNumber : hits) {
-      //TrackHitContainer trackHits = track.getHits();
+      //TrackHitContainer trackHits = track.trackHits();
       TrackHitContainer trackHits;
         trackHits.push_back(hitNumber);
 

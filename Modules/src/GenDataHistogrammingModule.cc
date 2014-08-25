@@ -90,43 +90,43 @@ void fc::GenDataHistogrammingModule::processEvent(fc::Event& event)
     fc::Handle<fc::StripSet> strips = event.get<fc::StripSet>(_stripSetLabel);
 
     _numberEvents++; 
-   for(auto const& track : genTracks->getGenTracks()) {
-        Helix helix(track.makeHelix(_detectorGeometry.getBField(),
-                                    _detectorGeometry.getCurvatureC()));
-        _hDR->Fill(helix.getDr());
-        _hPhi0->Fill(helix.getPhi0());
-        _hKappa->Fill(helix.getKappa());
-        _hDZ->Fill(helix.getDz());
-        _hTanL->Fill(helix.getTanL());
-        _hPT->Fill(track.getLorentzVector().Pt());
-        _hPZ->Fill(track.getLorentzVector().Pz());
-        _hRC->Fill(helix.getRadiusOfCurvature(_detectorGeometry.getBField()));
+   for(auto const& track : genTracks->genTracks()) {
+        Helix helix(track.makeHelix(_detectorGeometry.bField(),
+                                    _detectorGeometry.curvatureC()));
+        _hDR->Fill(helix.dR());
+        _hPhi0->Fill(helix.phi0());
+        _hKappa->Fill(helix.kappa());
+        _hDZ->Fill(helix.dZ());
+        _hTanL->Fill(helix.tanL());
+        _hPT->Fill(track.lorentzVector().Pt());
+        _hPZ->Fill(track.lorentzVector().Pz());
+        _hRC->Fill(helix.radiusOfCurvature(_detectorGeometry.bField()));
 
  
     }
 
-    int trackNumber=genHits->getGenHits().begin()->getTrackNumber();;
+    int trackNumber=genHits->genHits().begin()->trackNumber();;
     int numberHits = 0;
 
-    for(auto const& hit : genHits->getGenHits()) {
-      _hHitPositionX->Fill(hit.getGenHitPosition().X());
-        _hHitPositionY->Fill(hit.getGenHitPosition().Y());
-        _hHitPositionZ->Fill(hit.getGenHitPosition().Z());
-	_hNHitsLayer->Fill(hit.getLayer());
+    for(auto const& hit : genHits->genHits()) {
+      _hHitPositionX->Fill(hit.position().X());
+        _hHitPositionY->Fill(hit.position().Y());
+        _hHitPositionZ->Fill(hit.position().Z());
+	_hNHitsLayer->Fill(hit.layer());
 
-	if (hit.getTrackNumber() == trackNumber) {
+	if (hit.trackNumber() == trackNumber) {
 	    numberHits++;
 	} else {
 	    _hNHitsTrack->Fill(numberHits);
 	    numberHits=1;
-	    trackNumber=hit.getTrackNumber();
+	    trackNumber=hit.trackNumber();
 	}
     }
 
 
     int layer =0;
-    for (auto const& stripMap : strips->getStrips()) {
-        _hNStripsPerLayer->Fill(layer,stripMap.size());
+    for (auto const& layerStrips : strips->strips()) {
+        _hNStripsPerLayer->Fill(layer,layerStrips.size());
         ++layer;
     }
 

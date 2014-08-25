@@ -30,7 +30,7 @@ typedef std::list<Track> FastTrackSetContainer;
 class TrackSet {
 public:
 
-    const TrackSetContainer & getTracks() const {
+    const TrackSetContainer & tracks() const {
         return _trackSet;
     };
 

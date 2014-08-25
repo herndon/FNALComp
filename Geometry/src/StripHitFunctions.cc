@@ -5,14 +5,14 @@
 // From Global hits position to strip number position
 double fcf::calclateLocalFromGlobalPostion(const TVector3& hitPosition,
         int layer,const fc::DetectorGeometry& detectorGeometry) {
-    return (hitPosition-detectorGeometry.getSensor(layer)._center)
-           *detectorGeometry.getSensor(layer)._measurementDirection;
+    return (hitPosition-detectorGeometry.sensor(layer)._center)
+           *detectorGeometry.sensor(layer)._measurementDirection;
 }
 
 double fcf::calculateStripFromLocalPosition(double localHitPosition, int layer,
         const fc::DetectorGeometry& detectorGeometry) {
-    return localHitPosition/detectorGeometry.getSensor(layer)._stripPitch + ((
-                detectorGeometry.getSensor(layer)._nStrips/2.0) - 0.5);
+    return localHitPosition/detectorGeometry.sensor(layer)._stripPitch + ((
+                detectorGeometry.sensor(layer)._nStrips/2.0) - 0.5);
 }
 
 // Find strip nubmer position
@@ -44,14 +44,14 @@ double fcf::calculateStripHitPositionFromCluster(int initialStrip,
 // From strips number position to global Hit position
 double fcf::calculateLocalFromStripPosition(double stripHitPosition, int layer,
         const fc::DetectorGeometry& detectorGeometry) {
-    return (stripHitPosition - ((detectorGeometry.getSensor(
-                                     layer)._nStrips/2.0)-0.5)) * detectorGeometry.getSensor(layer)._stripPitch;
+    return (stripHitPosition - ((detectorGeometry.sensor(
+                                     layer)._nStrips/2.0)-0.5)) * detectorGeometry.sensor(layer)._stripPitch;
 }
 
 const TVector3 fcf::calculateGlobalFromLocalPosition(double localHitPosition,
         int layer, const fc::DetectorGeometry& detectorGeometry) {
-    TVector3 hitPosition = detectorGeometry.getSensor(
-                               layer)._measurementDirection*localHitPosition + detectorGeometry.getSensor(
+    TVector3 hitPosition = detectorGeometry.sensor(
+                               layer)._measurementDirection*localHitPosition + detectorGeometry.sensor(
                                layer)._center;
     return hitPosition;
 }
@@ -60,20 +60,20 @@ const TVector3 fcf::calculateGlobalFromLocalPosition(double localHitPosition,
 bool fcf::isValidStrip(int layer, int strip,
                        const fc::DetectorGeometry& detectorGeometry) {
 
-    return (strip >=0 && strip<detectorGeometry.getSensor(layer)._nStrips);
+    return (strip >=0 && strip<detectorGeometry.sensor(layer)._nStrips);
 
 }
 
 bool fcf::isValidHit(int layer, const TVector3& hitPosition,
                      const fc::DetectorGeometry& detectorGeometry) {
 
-    TVector3 perpDir = detectorGeometry.getSensor(layer)._normal.Cross((
-                           detectorGeometry.getSensor(layer)._measurementDirection));
-    return ((std::abs((hitPosition-detectorGeometry.getSensor(
-                           layer)._center)*detectorGeometry.getSensor(layer)._measurementDirection) <
-             detectorGeometry.getSensor(layer)._nStrips*detectorGeometry.getSensor(
+    TVector3 perpDir = detectorGeometry.sensor(layer)._normal.Cross((
+                           detectorGeometry.sensor(layer)._measurementDirection));
+    return ((std::abs((hitPosition-detectorGeometry.sensor(
+                           layer)._center)*detectorGeometry.sensor(layer)._measurementDirection) <
+             detectorGeometry.sensor(layer)._nStrips*detectorGeometry.sensor(
                  layer)._stripPitch/2.0) &&
-            (std::abs((hitPosition-detectorGeometry.getSensor(layer)._center)*perpDir)
-             <detectorGeometry.getSensor(layer)._perpSize/2.0));
+            (std::abs((hitPosition-detectorGeometry.sensor(layer)._center)*perpDir)
+             <detectorGeometry.sensor(layer)._perpSize/2.0));
 
 }

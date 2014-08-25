@@ -4,13 +4,12 @@
 #include "DataObjects/include/StripSet.hh"
 
 fc::StripSet::StripSet(const DetectorGeometry & detectorGeometry) {
-    _layerStripMaps.resize(detectorGeometry.getNSensors());
+    _layerStripMaps.resize(detectorGeometry.nSensors());
 }
 
-const fc::LayerStripMap& fc::StripSet::getLayerStripMap(
-    unsigned int layer) const {
+const fc::LayerStripMap& fc::StripSet::layerStrips(unsigned int layer) const {
     if (layer >= 0 && layer < _layerStripMaps.size()) return _layerStripMaps[layer];
-    throw Exception("StripSet::getLayerStripMap: Out of bounds layer");
+    throw Exception("StripSet::layerStripMap: Out of bounds layer");
 }
 
 // void fc::StripSet::insertStrip(unsigned int layer, int strip, int adc) {
@@ -49,14 +48,13 @@ void fc::StripSet::print(ostream& out) const {
 
     int iiLayer = 0;
 
-    for (auto const& stripMap: getStrips()) {
+    for (auto const& stripMap: strips()) {
 
         LayerStripMap::size_type numberStrips = stripMap.size();
         out << "Layer: " << iiLayer << " number Strips: " << numberStrips << std::endl;
 
         for (auto const& strip : stripMap) {
-            out << "Strip: " << getStripNumber(strip) << " " << " ADC " << getStripAdc(
-                    strip)  << std::endl;
+            out << "Strip: " << stripNumber(strip) << " " << " ADC " << stripAdc(strip)  << std::endl;
         } // end strip loop
 
         ++iiLayer;

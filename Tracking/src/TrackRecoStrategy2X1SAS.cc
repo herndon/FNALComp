@@ -12,10 +12,10 @@ fc::TrackRecoStrategy2X1SAS::TrackRecoStrategy2X1SAS(int debugLevel,
         const DetectorGeometry& detectorGeometry,const Config& config):
     _debugLevel(debugLevel),
     _detectorGeometry(detectorGeometry),
-    _minPTCut(config.getMinPTCut()),
+    _minPTCut(config.minPTCut()),
     _dRCut(config.dRCut()),
     _dZCut(config.dZCut()),
-    _maxChi2NDofCut(config.getMaxChi2NDofCut()) {
+    _maxChi2NDofCut(config.maxChi2NDofCut()) {
 }
 
 void fc::TrackRecoStrategy2X1SAS::recoTracks(const HitSet& recoHitSet,

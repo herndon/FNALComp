@@ -60,45 +60,72 @@ public:
 
     // Get objects
 
-    const Helix & getHelix() const {
+    const Helix & helix() const {
         return _helix;
     };
-    const TLorentzVector  getLorentzVector() const;
 
-    int getCharge() const {
-        return getHelix().getKappa()/std::abs(getHelix().getKappa());
+    const TVectorD & helixParam() const {
+      return _helix.helixParam();
     };
 
-    const TMatrixD & getCovMatrix() const {
+
+    const TLorentzVector  lorentzVector() const;
+
+    int charge() const {
+        return kappa()/std::abs(kappa());
+    };
+
+    const TMatrixD & covMatrix() const {
         return _covMatrix;
     }
-    double getSigmaDr() const {
+
+    double dR() const {
+      return helix().dR();
+    }
+    double phi0() const {
+      return helix().phi0();
+    }
+    double kappa() const {
+      return helix().kappa();
+    }
+    double dZ() const {
+      return helix().dZ();
+    }
+    double tanL() const {
+      return helix().tanL();
+    }
+
+    double pT() const {
+      return helix().pT();
+    }
+
+    double sigmaDr() const {
         return std::sqrt(_covMatrix(0,0));
     }
-    double getSigmaPhi0() const {
+    double sigmaPhi0() const {
         return std::sqrt(_covMatrix(1,1));
     }
-    double getSigmaKappa() const {
+    double sigmaKappa() const {
         return std::sqrt(_covMatrix(2,2));
     }
-    double getSigmaDz() const {
+    double sigmaDz() const {
         return std::sqrt(_covMatrix(3,3));
     }
-    double getSigmaTanL() const {
+    double sigmaTanL() const {
         return std::sqrt(_covMatrix(4,4));
     }
 
-    double getChi2() const {
+    double chi2() const {
         return _chi2;
     }
-    int getNDof() const {
+    int nDof() const {
         return _nDof;
     }
-    double getChi2Prob() const;
+    double chi2Prob() const;
 
     // Hit/measurement point information
 
-    const TrackHitContainer& getHits() const {
+    const TrackHitContainer& trackHits() const {
         return _trackHits;
     };
     int numberHits() const {

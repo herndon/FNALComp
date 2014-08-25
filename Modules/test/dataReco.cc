@@ -50,19 +50,19 @@ int main (int argc,const char *argv[])
     fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(
             detectorgeometryfile));
     // files are closed by the default destructor
-    if (config.getDebugLevel() >= 1) detectorGeometry.printDetectorGeometry(
+    if (config.debugLevel() >= 1) detectorGeometry.printDetectorGeometry(
             std::cout);
 
     // Input and output files
     std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
 
     // Open a root file to hold output histograms.
-    auto rootFile = std::make_shared<TFile>( config.getRootFileName().c_str(),
+    auto rootFile = std::make_shared<TFile>( config.rootFileName().c_str(),
                     "RECREATE");
 
 
 // Instantiate the class which handles the details of processing the events
-    fc::EventProcessor processor( new fc::DataSource(config.getDebugLevel(),
+    fc::EventProcessor processor( new fc::DataSource(config.debugLevel(),
                                   inputeventdatafile, genData,
                                   "genTracks", //get these tracks from file
                                   "genHits", //get these hits from file
@@ -80,40 +80,40 @@ int main (int argc,const char *argv[])
 						     detectorGeometry)); //get these strips
  
   if (config.runHitRecoModule()) 
-    processor.addModule( new fc::HitRecoModule(config.getDebugLevel(),"genStrips",
+    processor.addModule( new fc::HitRecoModule(config.debugLevel(),"genStrips",
 					       "recoHits", detectorGeometry));
   if (config.runHitCompareModule()) 
-    processor.addModule( new fc::HitCompareModule(config.getDebugLevel(),"genHits",
+    processor.addModule( new fc::HitCompareModule(config.debugLevel(),"genHits",
 						  "recoHits", detectorGeometry));
 
   if (config.runPerfectTrackRecoModule()) 
-    processor.addModule( new fc::PerfectTrackRecoModule(config.getDebugLevel(),
+    processor.addModule( new fc::PerfectTrackRecoModule(config.debugLevel(),
 							"recoHits", "genHits", "perfectRecoTracks", detectorGeometry) );
   if (config.runPerfectTrackCompareWithGenModule()) 
-    processor.addModule( new fc::TrackCompareWithGenModule(config.getDebugLevel(),
+    processor.addModule( new fc::TrackCompareWithGenModule(config.debugLevel(),
 							   "genTracks", "perfectRecoTracks", detectorGeometry) );
 
   if (config.runTrackSeedModule()) 
-    processor.addModule( new fc::TrackSeedModule(config.getDebugLevel(),
+    processor.addModule( new fc::TrackSeedModule(config.debugLevel(),
 						      "recoHits", "seedTracks","trackSeedStrategy2X1SASML",config,detectorGeometry) );
   if (config.runTrackSeedCompareModule()) 
-    processor.addModule( new fc::TrackSeedCompareModule(config.getDebugLevel(),
+    processor.addModule( new fc::TrackSeedCompareModule(config.debugLevel(),
 							"perfectRecoTracks", "seedTracks", detectorGeometry) );
 
 
   if (config.runTrackRecoModule()) 
-    processor.addModule( new fc::TrackRecoModule(config.getDebugLevel(), "recoHits",
+    processor.addModule( new fc::TrackRecoModule(config.debugLevel(), "recoHits",
 						 "seedTracks", "recoTracks",config,detectorGeometry) );
   if (config.runTrackCompareWithPerfectModule()) 
-    processor.addModule( new fc::TrackCompareWithPerfectModule(config.getDebugLevel(),
+    processor.addModule( new fc::TrackCompareWithPerfectModule(config.debugLevel(),
 							       "perfectRecoTracks", "recoTracks", detectorGeometry) );
   if (config.runRecoTrackCompareWithGenModule()) 
-    processor.addModule( new fc::TrackCompareWithGenModule(config.getDebugLevel(),
+    processor.addModule( new fc::TrackCompareWithGenModule(config.debugLevel(),
 							   "genTracks", "recoTracks", detectorGeometry) );
  
 
   if (config.runEventDisplayModule()) 
-    processor.addModule( new fc::EventDisplayModule(config.getDebugLevel(),"genHits","genTracks","recoHits","recoTracks",config,detectorGeometry) );
+    processor.addModule( new fc::EventDisplayModule(config.debugLevel(),"genHits","genTracks","recoHits","recoTracks",config,detectorGeometry) );
  
 
 

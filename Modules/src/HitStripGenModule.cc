@@ -38,7 +38,7 @@ void fc::HitStripGenModule::processEvent(fc::Event & event)
 
     int trackNumber = 0;
 
-    for (auto const& genTrack :  genTrackSet->getGenTracks()) {
+    for (auto const& genTrack :  genTrackSet->genTracks()) {
 
         makeHitsStrips(genTrack,trackNumber,*genHitSet, *genStripSet);
         ++trackNumber;
@@ -57,13 +57,13 @@ void fc::HitStripGenModule::makeHitsStrips(const GenTrack & genTrack,
     TVector3 hitPosition;
 
 
-    for (int iiLayer = 0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
+    for (int iiLayer = 0; iiLayer < _detectorGeometry.nSensors(); ++iiLayer) {
 
         // 98% efficiency factor
-        if (_random.getUniformDouble(0.0,
-                                     1.0) > _detectorGeometry.getSensor(iiLayer)._hitEfficiency) continue;
+        if (_random.uniformDouble(0.0,
+                                     1.0) > _detectorGeometry.sensor(iiLayer)._hitEfficiency) continue;
         bool intersectedLayer = intersectWithLayer(genTrack.makeHelix(
-                                    _detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()),
+                                    _detectorGeometry.bField(),_detectorGeometry.curvatureC()),
                                 iiLayer,_detectorGeometry,hitPosition);
 
         if (intersectedLayer) {
@@ -100,8 +100,8 @@ void fc::HitStripGenModule::storeHitInfo(int trackNumber,int layer,
     }
 
 
-    hitPosition = hitPosition + _random.getNormalDouble(0.0,
-                  _detectorGeometry.getSensor(layer)._intrinsicHitResolution)*_detectorGeometry.getSensor(
+    hitPosition = hitPosition + _random.normalDouble(0.0,
+                  _detectorGeometry.sensor(layer)._intrinsicHitResolution)*_detectorGeometry.sensor(
                       layer)._measurementDirection;
 
     if (_debugLevel >=5 ) {
@@ -153,18 +153,18 @@ void fc::HitStripGenModule::generateClusterFromStripHitPosition(
 
     if (remainder < 0.0) {
         initialStrip = strip - 1;
-        stripAdcVector.push_back(-1.0*remainder*_detectorGeometry.getMIP());
-        stripAdcVector.push_back((1.0+remainder)*_detectorGeometry.getMIP());
+        stripAdcVector.push_back(-1.0*remainder*_detectorGeometry.MIP());
+        stripAdcVector.push_back((1.0+remainder)*_detectorGeometry.MIP());
         if (_debugLevel >=5) std::cout << "initialStrip " << initialStrip << std::endl;
-        if (_debugLevel >=5) std::cout << -1.0*remainder*_detectorGeometry.getMIP() <<
-                                           " " << (1.0+remainder)*_detectorGeometry.getMIP() << std::endl;
+        if (_debugLevel >=5) std::cout << -1.0*remainder*_detectorGeometry.MIP() <<
+                                           " " << (1.0+remainder)*_detectorGeometry.MIP() << std::endl;
     } else {
         initialStrip = strip;
-        stripAdcVector.push_back((1.0-remainder)*_detectorGeometry.getMIP());
-        stripAdcVector.push_back(remainder*_detectorGeometry.getMIP());
+        stripAdcVector.push_back((1.0-remainder)*_detectorGeometry.MIP());
+        stripAdcVector.push_back(remainder*_detectorGeometry.MIP());
         if (_debugLevel >=5) std::cout << "initialStrip " << initialStrip << std::endl;
-        if (_debugLevel >=5) std::cout << (1.0-remainder)*_detectorGeometry.getMIP() <<
-                                           " " << remainder*_detectorGeometry.getMIP() << std::endl;
+        if (_debugLevel >=5) std::cout << (1.0-remainder)*_detectorGeometry.MIP() <<
+                                           " " << remainder*_detectorGeometry.MIP() << std::endl;
     }
 
 }

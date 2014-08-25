@@ -30,7 +30,7 @@ void fc::HitRecoModule::processEvent(fc::Event& event)
 void fc::HitRecoModule::recoHits(const StripSet& stripSet,
                                  HitSet & hitSet) const {
 
-    for (int iiLayer =  0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
+    for (int iiLayer =  0; iiLayer < _detectorGeometry.nSensors(); ++iiLayer) {
 
         if (_debugLevel >= 5) std::cout << "HitReco layer: " << iiLayer << std::endl;
         recoHitsLayer(stripSet,iiLayer,hitSet);
@@ -47,7 +47,7 @@ void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,
 
     std::vector<int> stripAdcs;
 
-    const LayerStripMap& layerStrips = stripSet.getLayerStripMap(layer);
+    const LayerStripMap& layerStrips = stripSet.layerStrips(layer);
     unsigned int initialStrip = layerStrips.begin()->first;
 
 
@@ -55,19 +55,19 @@ void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,
 
  
   
-      if (strip.second > _detectorGeometry.getSensor(layer)._threshold && strip.first == (initialStrip+stripAdcs.size())){
+      if (strip.second > _detectorGeometry.sensor(layer)._threshold && strip.first == (initialStrip+stripAdcs.size())){
 	//Found an above threshold and an ajacent strip
 	stripAdcs.push_back(strip.second);
       } else if (stripAdcs.size() > 0){
 	// Was not adjacent and above threshold and a cluster is in stripAdc
 	hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
 	stripAdcs.clear();
-	if (strip.second > _detectorGeometry.getSensor(layer)._threshold) {
+	if (strip.second > _detectorGeometry.sensor(layer)._threshold) {
 	  // Was above threhold but not adjacent start new cluster
 	  initialStrip = strip.first;
 	  stripAdcs.push_back(strip.second);
 	}
-      } else if (strip.second > _detectorGeometry.getSensor(layer)._threshold){
+      } else if (strip.second > _detectorGeometry.sensor(layer)._threshold){
 	// Was above threhold but not adjacent start new cluster, no previous cluster to store
 	initialStrip = strip.first;
 	stripAdcs.push_back(strip.second);
@@ -105,13 +105,13 @@ fc::Hit fc::HitRecoModule::buildHit(int layer, int initialStrip,
     }
 
     bool goodHit = true;
-    if (numberStrips>2 || charge > _detectorGeometry.getMIP()) goodHit = false;
+    if (numberStrips>2 || charge > _detectorGeometry.MIP()) goodHit = false;
 
     double resolution;
     if (goodHit) {
-        resolution = _detectorGeometry.getSensor(layer)._hitResolution;
+        resolution = _detectorGeometry.sensor(layer)._hitResolution;
     } else {
-        resolution = _detectorGeometry.getSensor(layer)._badHitResolution;
+        resolution = _detectorGeometry.sensor(layer)._badHitResolution;
     }
 
 

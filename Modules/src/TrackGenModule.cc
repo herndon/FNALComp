@@ -42,12 +42,12 @@ fc::GenTrack fc::TrackGenModule::generateTrack() const {
     // Generate track data
 
     // Track pT, phi0 and charge
-    double trackPT = 1.0 + _random.getExponentialDouble(1.0);
-    int trackCharge = (_random.getUniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
-    double trackPhi0 = _random.getUniformDouble(-M_PI/16.0,M_PI/16.0) + M_PI/2.0;
-    double trackTanL = _random.getUniformDouble(-0.4,0.4);
-    double trackD0 = _random.getUniformDouble(-0.01,0.01);
-    double trackZ0 = _random.getUniformDouble(-0.01,0.01);
+    double trackPT = 1.0 + _random.exponentialDouble(1.0);
+    int trackCharge = (_random.uniformDouble(0.0,1.0) > 0.5) ? 1 : -1;
+    double trackPhi0 = _random.uniformDouble(-M_PI/16.0,M_PI/16.0) + M_PI/2.0;
+    double trackTanL = _random.uniformDouble(-0.4,0.4);
+    double trackD0 = _random.uniformDouble(-0.01,0.01);
+    double trackZ0 = _random.uniformDouble(-0.01,0.01);
 
 
     if (_debugLevel >=5 ) {

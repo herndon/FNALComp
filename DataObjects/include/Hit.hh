@@ -24,25 +24,25 @@ namespace fc {
 class Hit {
 public:
 
-    Hit(const TVector3& hitPosition, int layer, int numberStrips, int charge,
+    Hit(const TVector3& position, int layer, int numberStrips, int charge,
         bool goodHit, double resolution);
 
-    const TVector3 & getHitPosition() const {
+    const TVector3 & position() const {
         return _hitPosition;
     }
-    int getLayer() const {
+    int layer() const {
         return _layer;
     }
-    int getNumberStrips() const {
+    int numberStrips() const {
         return _numberStrips;
     }
-    int getCharge() const {
+    int charge() const {
         return _charge;
     }
-    bool isGoodHit() const {
+    bool goodHit() const {
         return _goodHit;
     }
-    double getResolution() const {
+    double resolution() const {
         return _resolution;
     }
 

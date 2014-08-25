@@ -27,7 +27,7 @@ typedef std::vector<GenHit> GenHitSetContainer;
 class GenHitSet {
 public:
 
-    const GenHitSetContainer & getGenHits() const {
+    const GenHitSetContainer & genHits() const {
         return _genHitSet;
     };
 

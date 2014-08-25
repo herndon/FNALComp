@@ -48,14 +48,14 @@ void fc::TrackSeedModule::findTrackSeeds(const HitSet& recoHitSet,
   if (_trackSeedStrategy=="trackSeedStrategy2X1SAS"){
 
     TrackSeedStrategy2X1SAS seedStrategy(_debugLevel,_detectorGeometry,
-            _config.getMinCandPTCut());
+            _config.minCandPTCut());
     seedStrategy.findTrackSeeds(recoHitSet,trackSeedSet);
 
 
   } else if  (_trackSeedStrategy=="trackSeedStrategy2X1SASML"){
 
     TrackSeedStrategy2X1SASML seedStrategy(_debugLevel,_detectorGeometry,
-            _config.getMinCandPTCut());
+            _config.minCandPTCut());
     seedStrategy.findTrackSeeds(recoHitSet,trackSeedSet);
 
   } else {

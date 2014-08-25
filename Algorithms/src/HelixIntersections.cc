@@ -13,8 +13,8 @@ bool fc::intersectWithLayer(const Helix& helix, int layer,
 
     double phi = 0.0;
 
-    return intersectWithPlane(helix,detectorGeometry.getSensor(layer)._center,
-                              detectorGeometry.getSensor(layer)._normal,phi,hitPosition);
+    return intersectWithPlane(helix,detectorGeometry.sensor(layer)._center,
+                              detectorGeometry.sensor(layer)._normal,phi,hitPosition);
 }
 
 

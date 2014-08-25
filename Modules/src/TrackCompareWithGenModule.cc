@@ -132,8 +132,8 @@ void fc::TrackCompareWithGenModule::processEvent(Event& event)
     if (_debugLevel>=5) std::cout << "Event " << event.eventNumber() << std::endl;
     compareTracks(*genTrackSet,*recoTrackSet);
 
-    _genTracks += genTrackSet->getGenTracks().size();
-    _recoTracks += recoTrackSet->getTracks().size();
+    _genTracks += genTrackSet->genTracks().size();
+    _recoTracks += recoTrackSet->tracks().size();
 
 
 }
@@ -141,11 +141,11 @@ void fc::TrackCompareWithGenModule::processEvent(Event& event)
 void fc::TrackCompareWithGenModule::compareTracks(const GenTrackSet & genTrackSet,
 						  const TrackSet& recoTrackSet) {
 
-    if (recoTrackSet.getTracks().begin() == recoTrackSet.getTracks().end()) return;
+    if (recoTrackSet.tracks().begin() == recoTrackSet.tracks().end()) return;
 
 
     // if (_debugLevel>=5) {
-    //   for (auto const& track : recoTrackSet.getTracks()) {
+    //   for (auto const& track : recoTrackSet.tracks()) {
 
     // 	bool goodMatchLoose = false;
     // 	bool goodMatchXYLoose = false;
@@ -159,7 +159,7 @@ void fc::TrackCompareWithGenModule::compareTracks(const GenTrackSet & genTrackSe
 
     //   }
     // }
-    for (auto const& genTrack : genTrackSet.getGenTracks()) {
+    for (auto const& genTrack : genTrackSet.genTracks()) {
  
       bool goodMatchLoose = false;
       bool goodMatchXYLoose = false;
@@ -184,23 +184,23 @@ void fc::TrackCompareWithGenModule::fillHistograms(const TVectorD & deltaHP,
 
 
   if (matched){
-    dR->Fill(recoTrack.getHelix().getDr());
-    phi0->Fill(recoTrack.getHelix().getPhi0());
-    kappa->Fill(recoTrack.getHelix().getKappa());
-    dZ->Fill(recoTrack.getHelix().getDz());
-    tanL->Fill(recoTrack.getHelix().getTanL());
+    dR->Fill(recoTrack.dR());
+    phi0->Fill(recoTrack.phi0());
+    kappa->Fill(recoTrack.kappa());
+    dZ->Fill(recoTrack.dZ());
+    tanL->Fill(recoTrack.tanL());
 
-    sigmaDr->Fill(recoTrack.getSigmaDr());
-    sigmaPhi0->Fill(recoTrack.getSigmaPhi0());
-    sigmaKappa->Fill(recoTrack.getSigmaKappa());
-    sigmaDz->Fill(recoTrack.getSigmaDz());
-    sigmaTanL->Fill(recoTrack.getSigmaTanL());
+    sigmaDr->Fill(recoTrack.sigmaDr());
+    sigmaPhi0->Fill(recoTrack.sigmaPhi0());
+    sigmaKappa->Fill(recoTrack.sigmaKappa());
+    sigmaDz->Fill(recoTrack.sigmaDz());
+    sigmaTanL->Fill(recoTrack.sigmaTanL());
 
 
-    pT->Fill(recoTrack.getHelix().getPT());
-    chi2->Fill(recoTrack.getChi2());
-    nDof->Fill(recoTrack.getNDof());
-    prob->Fill(recoTrack.getChi2Prob());
+    pT->Fill(recoTrack.pT());
+    chi2->Fill(recoTrack.chi2());
+    nDof->Fill(recoTrack.nDof());
+    prob->Fill(recoTrack.chi2Prob());
 
     deltaDr->Fill(deltaHP(0));
     deltaPhi0->Fill(deltaHP(1));
@@ -209,29 +209,29 @@ void fc::TrackCompareWithGenModule::fillHistograms(const TVectorD & deltaHP,
     deltaTanL->Fill(deltaHP(4));
 
 
-    deltaDrPull->Fill(deltaHP(0)/recoTrack.getSigmaDr());
-    deltaPhi0Pull->Fill(deltaHP(1)/recoTrack.getSigmaPhi0());
-    deltaKappaPull->Fill(deltaHP(2)/recoTrack.getSigmaKappa());
-    deltaDzPull->Fill(deltaHP(3)/recoTrack.getSigmaDz());
-    deltaTanLPull->Fill(deltaHP(4)/recoTrack.getSigmaTanL());
+    deltaDrPull->Fill(deltaHP(0)/recoTrack.sigmaDr());
+    deltaPhi0Pull->Fill(deltaHP(1)/recoTrack.sigmaPhi0());
+    deltaKappaPull->Fill(deltaHP(2)/recoTrack.sigmaKappa());
+    deltaDzPull->Fill(deltaHP(3)/recoTrack.sigmaDz());
+    deltaTanLPull->Fill(deltaHP(4)/recoTrack.sigmaTanL());
   } else {
-    badDR->Fill(recoTrack.getHelix().getDr());
-    badPhi0->Fill(recoTrack.getHelix().getPhi0());
-    badKappa->Fill(recoTrack.getHelix().getKappa());
-    badDZ->Fill(recoTrack.getHelix().getDz());
-    badTanL->Fill(recoTrack.getHelix().getTanL());
+    badDR->Fill(recoTrack.dR());
+    badPhi0->Fill(recoTrack.phi0());
+    badKappa->Fill(recoTrack.kappa());
+    badDZ->Fill(recoTrack.dZ());
+    badTanL->Fill(recoTrack.tanL());
 
-    badSigmaDr->Fill(recoTrack.getSigmaDr());
-    badSigmaPhi0->Fill(recoTrack.getSigmaPhi0());
-    badSigmaKappa->Fill(recoTrack.getSigmaKappa());
-    badSigmaDz->Fill(recoTrack.getSigmaDz());
-    badSigmaTanL->Fill(recoTrack.getSigmaTanL());
+    badSigmaDr->Fill(recoTrack.sigmaDr());
+    badSigmaPhi0->Fill(recoTrack.sigmaPhi0());
+    badSigmaKappa->Fill(recoTrack.sigmaKappa());
+    badSigmaDz->Fill(recoTrack.sigmaDz());
+    badSigmaTanL->Fill(recoTrack.sigmaTanL());
 
 
-    badPT->Fill(recoTrack.getHelix().getPT());
-    badChi2->Fill(recoTrack.getChi2());
-    badNDof->Fill(recoTrack.getNDof());
-    badProb->Fill(recoTrack.getChi2Prob());
+    badPT->Fill(recoTrack.pT());
+    badChi2->Fill(recoTrack.chi2());
+    badNDof->Fill(recoTrack.nDof());
+    badProb->Fill(recoTrack.chi2Prob());
 
     badDeltaDr->Fill(deltaHP(0));
     badDeltaPhi0->Fill(deltaHP(1));
@@ -240,11 +240,11 @@ void fc::TrackCompareWithGenModule::fillHistograms(const TVectorD & deltaHP,
     badDeltaTanL->Fill(deltaHP(4));
 
 
-    badDeltaDrPull->Fill(deltaHP(0)/recoTrack.getSigmaDr());
-    badDeltaPhi0Pull->Fill(deltaHP(1)/recoTrack.getSigmaPhi0());
-    badDeltaKappaPull->Fill(deltaHP(2)/recoTrack.getSigmaKappa());
-    badDeltaDzPull->Fill(deltaHP(3)/recoTrack.getSigmaDz());
-    badDeltaTanLPull->Fill(deltaHP(4)/recoTrack.getSigmaTanL());
+    badDeltaDrPull->Fill(deltaHP(0)/recoTrack.sigmaDr());
+    badDeltaPhi0Pull->Fill(deltaHP(1)/recoTrack.sigmaPhi0());
+    badDeltaKappaPull->Fill(deltaHP(2)/recoTrack.sigmaKappa());
+    badDeltaDzPull->Fill(deltaHP(3)/recoTrack.sigmaDz());
+    badDeltaTanLPull->Fill(deltaHP(4)/recoTrack.sigmaTanL());
 
   }
 }

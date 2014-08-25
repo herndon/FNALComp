@@ -44,7 +44,7 @@ void fcf::duplicateTrackSetFilter(fc::FastTrackSetContainer & trackCandidateSet)
 
       // Find number of matching hits
       unsigned int matchedHits = fcf::numberMatchedHits(*trackIter,*trackIter2);
-      if (matchedHits == trackIter->getHits().size() && matchedHits == trackIter2->getHits().size()) deleteSet.insert(trackNumber2);
+      if (matchedHits == trackIter->trackHits().size() && matchedHits == trackIter2->trackHits().size()) deleteSet.insert(trackNumber2);
 
     }
   }
@@ -126,13 +126,13 @@ std::vector<int> fcf::bestTracksFilter(const fc::FastTrackSetContainer & tracks)
 
 
     for (auto const& track : tracks) {
-        if (track.getNDof() > 0 && track.getChi2() < bestChi2) {
+        if (track.nDof() > 0 && track.chi2() < bestChi2) {
             secondBestChi2 = bestChi2;
             secondBestTrack = bestTrack;
-            bestChi2 = track.getChi2();
+            bestChi2 = track.chi2();
             bestTrack = trackNumber;
-        } else if (track.getNDof() > 0 && track.getChi2() < secondBestChi2) {
-            secondBestChi2 = track.getChi2();
+        } else if (track.nDof() > 0 && track.chi2() < secondBestChi2) {
+            secondBestChi2 = track.chi2();
             secondBestTrack = trackNumber;
         }
         ++trackNumber;
@@ -142,7 +142,7 @@ std::vector<int> fcf::bestTracksFilter(const fc::FastTrackSetContainer & tracks)
 
     // Keep all if not yet constrainted since we can't compare chi2/ndof
     for (auto const& track : tracks) {
-        if (track.getNDof() <= 0) trackList.push_back(trackNumber);
+        if (track.nDof() <= 0) trackList.push_back(trackNumber);
         ++trackNumber;
     }
 

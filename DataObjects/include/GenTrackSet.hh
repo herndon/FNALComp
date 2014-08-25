@@ -27,7 +27,7 @@ typedef std::vector<GenTrack> GenTrackSetContainer;
 class GenTrackSet {
 public:
 
-    const GenTrackSetContainer & getGenTracks() const {
+    const GenTrackSetContainer & genTracks() const {
         return _genTrackSet;
     };
 

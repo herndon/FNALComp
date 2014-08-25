@@ -57,22 +57,22 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(
     const HitSet & recoHitSet,const GenHitSet & genHitSet,
     std::vector<std::vector<int>> & trackHitCandidates) const {
 
-    int trackNumber = (genHitSet.getGenHits().empty() ? 0 :
-                       genHitSet.getGenHits().front().getTrackNumber());
+    int trackNumber = (genHitSet.genHits().empty() ? 0 :
+                       genHitSet.genHits().front().trackNumber());
 
     std::vector<int> trackHitCandidate;
 
     // Form all hit candidates
 
-    for (auto const& genHit : genHitSet.getGenHits()) {
+    for (auto const& genHit : genHitSet.genHits()) {
 
         double deltaPosition = 999.0;
         int recoHitNumber = 0;
         int bestRecoHitNumber = -1;
 
-        for (auto const& recoHit : recoHitSet.getHits()) {
+        for (auto const& recoHit : recoHitSet.hits()) {
 
-            if (genHit.getLayer()==recoHit.getLayer()) {
+            if (genHit.layer()==recoHit.layer()) {
                 double tempDeltaPosition = compareHitPositions(genHit,recoHit);
                 if (std::abs(tempDeltaPosition) < std::abs(deltaPosition)) {
                     deltaPosition = tempDeltaPosition;
@@ -81,16 +81,16 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(
             }
             ++recoHitNumber;
         } // end reco Hit loop
-        if (genHit.getTrackNumber() == trackNumber && bestRecoHitNumber>-1 && 
-	    std::abs(deltaPosition)<(10.0*_detectorGeometry.getSensor(genHit.getLayer())._hitResolution)) {
+        if (genHit.trackNumber() == trackNumber && bestRecoHitNumber>-1 && 
+	    std::abs(deltaPosition)<(10.0*_detectorGeometry.sensor(genHit.layer())._hitResolution)) {
 
             trackHitCandidate.push_back(bestRecoHitNumber);
 
-        } else if (genHit.getTrackNumber() != trackNumber) {
+        } else if (genHit.trackNumber() != trackNumber) {
             trackHitCandidates.push_back(trackHitCandidate);
             trackHitCandidate.clear();
             trackHitCandidate.push_back(bestRecoHitNumber);
-            trackNumber = genHit.getTrackNumber();
+            trackNumber = genHit.trackNumber();
         }
     } // end gen Hit loop
     trackHitCandidates.push_back(std::move(trackHitCandidate));
@@ -103,10 +103,10 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(
 double fc::PerfectTrackRecoModule::compareHitPositions(const GenHit & genHit,
         const Hit& recoHit) const {
 
-    return recoHit.getHitPosition()*_detectorGeometry.getSensor(
-               recoHit.getLayer())._measurementDirection
-           - genHit.getGenHitPosition()*_detectorGeometry.getSensor(
-               genHit.getLayer())._measurementDirection;
+    return recoHit.position()*_detectorGeometry.sensor(
+               recoHit.layer())._measurementDirection
+           - genHit.position()*_detectorGeometry.sensor(
+               genHit.layer())._measurementDirection;
 
 }
 

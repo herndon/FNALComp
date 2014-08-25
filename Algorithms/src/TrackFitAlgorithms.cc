@@ -10,30 +10,30 @@
 
 
 const TVector3 fc::calcXAt(const Helix& helix, double phi) {
-    double csf0 = std::cos(helix.getPhi0());
-    double snf0 = std::sin(helix.getPhi0());
-    double snfd = std::sin(helix.getPhi0() + phi);
-    double csfd = std::cos(helix.getPhi0() + phi);
-    double rho  = helix.getRadiusOfCurvatureAtOrigin();
+    double csf0 = std::cos(helix.phi0());
+    double snf0 = std::sin(helix.phi0());
+    double snfd = std::sin(helix.phi0() + phi);
+    double csfd = std::cos(helix.phi0() + phi);
+    double rho  = helix.radiusOfCurvatureAtOrigin();
 
 
-    double x    = helix.getDr() * csf0 + rho * (csf0 - csfd);
-    double y    = helix.getDr() * snf0 + rho * (snf0 - snfd);
-    double z    = helix.getDz()          + rho * helix.getTanL() * phi;
+    double x    = helix.dR() * csf0 + rho * (csf0 - csfd);
+    double y    = helix.dR() * snf0 + rho * (snf0 - snfd);
+    double z    = helix.dZ()          + rho * helix.tanL() * phi;
 
     return TVector3(x,y,z);
 }
 
 const TMatrixD fc::calcDxDphi(const Helix& helix, double phi) {
-    double radiusCurvature    = helix.getRadiusOfCurvatureAtOrigin();
+    double radiusCurvature    = helix.radiusOfCurvatureAtOrigin();
 
-    double snfd = std::sin(helix.getPhi0() + phi);
-    double csfd = std::cos(helix.getPhi0() + phi);
+    double snfd = std::sin(helix.phi0() + phi);
+    double csfd = std::cos(helix.phi0() + phi);
 
     TMatrixD dxdphi(3,1);
     dxdphi(0,0) =  radiusCurvature * snfd;
     dxdphi(1,0) = -radiusCurvature * csfd;
-    dxdphi(2,0) = -radiusCurvature * helix.getTanL();
+    dxdphi(2,0) = -radiusCurvature * helix.tanL();
 
     return dxdphi;
 }
@@ -41,25 +41,25 @@ const TMatrixD fc::calcDxDphi(const Helix& helix, double phi) {
 
 
 const TMatrixD fc::calcDxDHC(const Helix& helix, double phi) {
-    double radiusCurvature     = helix.getRadiusOfCurvatureAtOrigin();
-    double rcpar = radiusCurvature/helix.getKappa();
+    double radiusCurvature     = helix.radiusOfCurvatureAtOrigin();
+    double rcpar = radiusCurvature/helix.kappa();
 
-    double snf0 = std::sin(helix.getPhi0());
-    double csf0 = std::cos(helix.getPhi0());
-    double snfd = std::sin(helix.getPhi0() + phi);
-    double csfd = std::cos(helix.getPhi0() + phi);
+    double snf0 = std::sin(helix.phi0());
+    double csf0 = std::cos(helix.phi0());
+    double snfd = std::sin(helix.phi0() + phi);
+    double csfd = std::cos(helix.phi0() + phi);
 
     TMatrixD dxDHC(3,5);
     // @x/@a
     dxDHC(0,0) =  csf0;
-    dxDHC(0,1) = -helix.getDr() * snf0 - radiusCurvature * (snf0 - snfd);
+    dxDHC(0,1) = -helix.dR() * snf0 - radiusCurvature * (snf0 - snfd);
     dxDHC(0,2) = -rcpar * (csf0 - csfd);
     dxDHC(0,3) =  0;
     dxDHC(0,4) =  0;
 
     // @y/@a
     dxDHC(1,0) =  snf0;
-    dxDHC(1,1) =  helix.getDr() * csf0 + radiusCurvature *(csf0 - csfd);
+    dxDHC(1,1) =  helix.dR() * csf0 + radiusCurvature *(csf0 - csfd);
     dxDHC(1,2) = -rcpar * (snf0 - snfd);
     dxDHC(1,3) =  0;
     dxDHC(1,4) =  0;
@@ -67,7 +67,7 @@ const TMatrixD fc::calcDxDHC(const Helix& helix, double phi) {
     // @z/@a
     dxDHC(2,0) = 0;
     dxDHC(2,1) = 0;
-    dxDHC(2,2) = rcpar * phi * helix.getTanL();
+    dxDHC(2,2) = rcpar * phi * helix.tanL();
     dxDHC(2,3) = 1;
     dxDHC(2,4) = + radiusCurvature * phi;
 

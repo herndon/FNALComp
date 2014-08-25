@@ -27,7 +27,7 @@ void fc::StripSetIO::writeEvent(const StripSet & stripSet,
 
     int iiLayer = 0;
 
-    for (auto const& stripMap: stripSet.getStrips()) {
+    for (auto const& stripMap: stripSet.strips()) {
 
         LayerStripMap::size_type numberStrips = stripMap.size();
 
@@ -36,14 +36,14 @@ void fc::StripSetIO::writeEvent(const StripSet & stripSet,
 
         for (auto const& strip : stripMap) {
 
-	  binaryData = stripSet.getStripNumber(strip);
+	  binaryData = stripSet.stripNumber(strip);
 	  binaryData1 = binaryData & bitmask1;
 	  binaryData2 = binaryData & bitmask2;
 	  binaryData2 = binaryData2 >> 8;
 	  stripdata.write (reinterpret_cast<const char *>(&binaryData2), 1);
 	  stripdata.write (reinterpret_cast<const char *>(&binaryData1), 1);
 
-          binaryData =  stripSet.getStripAdc(strip);
+          binaryData =  stripSet.stripAdc(strip);
 	  stripdata.write (reinterpret_cast<const char *>(&binaryData), 1);
 
         } // end strip loop
@@ -83,7 +83,7 @@ void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
     }
 
 
-    for (int iiLayer = 0; iiLayer < _detectorGeometry.getNSensors(); ++iiLayer) {
+    for (int iiLayer = 0; iiLayer < _detectorGeometry.nSensors(); ++iiLayer) {
 
         stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
         int layer = static_cast<int>(binaryData);

@@ -38,15 +38,15 @@ void fc::GenTrack::print(ostream& out) const {
     // dummy field for makeHelix  Can not be used to retrieve the radius of curvature with needs the magentic field
     TVector3 bField(0.0,0.0,0.0);
 
-    out << "Charge " << _charge << std::endl;
-    out << "4 momentum " << _lorentzVector.Px() << " " <<  _lorentzVector.Py() <<
-        " " <<  _lorentzVector.Pz() << " " <<  _lorentzVector.E() << " " << std::endl;
+    out << "Charge " << charge() << std::endl;
+    out << "4 momentum " << lorentzVector().Px() << " " <<  lorentzVector().Py() <<
+      " " <<  lorentzVector().Pz() << " " <<  lorentzVector().E() << " " << std::endl;
     out << "pT " <<  _lorentzVector.Pt() << " cot(theta) " <<
-        _lorentzVector.Pt()/_lorentzVector.Pz()  << " phi0 " << std::atan2(_lorentzVector.Py(),_lorentzVector.Px()) << std::endl;
-    out << "Helix parameters: kappa" << makeHelix(bField,0.0).getKappa() << " tan(Lambda) " << makeHelix(bField,0.0).getTanL() << std::endl;
+      lorentzVector().Pt()/lorentzVector().Pz()  << " phi0 " << std::atan2(lorentzVector().Py(),lorentzVector().Px()) << std::endl;
+    out << "Helix parameters: kappa" << makeHelix(bField,0.0).kappa() << " tan(Lambda) " << makeHelix(bField,0.0).tanL() << std::endl;
 
-    out << "phi0 to d0 " << makeHelix(bField,0.0).getPhi0() << " d0 " << makeHelix(bField,0.0).getDr() << " z0 " << makeHelix(bField,0.0).getDz() << std::endl;
-     out << "Vertex : " << _dr.X() << " " << _dr.Y() << " " <<_dr.Z() << std::endl;
+    out << "phi0 to d0 " << makeHelix(bField,0.0).phi0() << " d0 " << makeHelix(bField,0.0).dR() << " z0 " << makeHelix(bField,0.0).dZ() << std::endl;
+    out << "Vertex : " << dR().X() << " " << dR().Y() << " " << dR().Z() << std::endl;
  
 
 }

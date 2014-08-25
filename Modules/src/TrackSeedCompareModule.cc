@@ -5,6 +5,7 @@
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
 #include "Modules/include/TrackSeedCompareModule.hh"
+#include "Tracking/include/TrackMatching.hh"
 #include "TH1F.h"
 #include "Services/include/UniqueRootDirectory.hh"
 
@@ -84,13 +85,13 @@ void fc::TrackSeedCompareModule::compareTrackSeeds(const TrackSet & perfectTrack
 						   const TrackSet& seedTrackSet) const {
 
 
-  for (auto const& track : perfectTrackSet.getTracks()) {
+  for (auto const& track : perfectTrackSet.tracks()) {
 
     std::vector<int> seeds =  matchTrackSeeds(track,seedTrackSet);
 
     for (auto seed: seeds) {
-      TVectorD deltaPos = deltaHP(track,seedTrackSet.getTracks()[seed]);
-      fillHistograms(deltaPos,seedTrackSet.getTracks()[seed]);
+      TVectorD deltaPos = fcf::deltaHP(track,seedTrackSet.tracks()[seed]);
+      fillHistograms(deltaPos,seedTrackSet.tracks()[seed]);
     }
 
   }
@@ -104,7 +105,7 @@ const std::vector<int> fc::TrackSeedCompareModule::matchTrackSeeds(const Track &
 
   int seedNumber = 0;
   std::vector<int> seedNumbers;
-    for (auto const& seed : seedTrackSet.getTracks()) {
+    for (auto const& seed : seedTrackSet.tracks()) {
 
       if (matchTrackSeed(track,seed)) seedNumbers.push_back(seedNumber);
         ++seedNumber;
@@ -120,41 +121,33 @@ bool fc::TrackSeedCompareModule::matchTrackSeed(const Track & track,
         const Track& seed) const {
 
   unsigned int matchedHits = 0;
-  for (auto const hitp : track.getHits()) {
+  for (auto const hitp : track.trackHits()) {
 
-    for (auto const hits : seed.getHits()){
+    for (auto const hits : seed.trackHits()){
 
       if (hitp == hits) matchedHits++;
     }
   }
 
-  return (matchedHits == seed.getHits().size());
+  return (matchedHits == seed.trackHits().size());
 }
 
-
-const TVectorD fc::TrackSeedCompareModule::deltaHP(const Track & track,
-        const Track& seed) const {
-
-
-  return track.getHelix().getHelix() - seed.getHelix().getHelix();
- 
-}
 
 void fc::TrackSeedCompareModule::fillHistograms(const TVectorD & deltaHP,
         const Track& recoTrack) const {
 
 
-    _hDR->Fill(recoTrack.getHelix().getDr());
-    _hPhi0->Fill(recoTrack.getHelix().getPhi0());
-    _hKappa->Fill(recoTrack.getHelix().getKappa());
-    _hDZ->Fill(recoTrack.getHelix().getDz());
-    _hTanL->Fill(recoTrack.getHelix().getTanL());
+    _hDR->Fill(recoTrack.dR());
+    _hPhi0->Fill(recoTrack.phi0());
+    _hKappa->Fill(recoTrack.kappa());
+    _hDZ->Fill(recoTrack.dZ());
+    _hTanL->Fill(recoTrack.tanL());
 
-    _hSigmaDr->Fill(recoTrack.getSigmaDr());
-    _hSigmaPhi0->Fill(recoTrack.getSigmaPhi0());
-    _hSigmaKappa->Fill(recoTrack.getSigmaKappa());
-    _hSigmaDz->Fill(recoTrack.getSigmaDz());
-    _hSigmaTanL->Fill(recoTrack.getSigmaTanL());
+    _hSigmaDr->Fill(recoTrack.sigmaDr());
+    _hSigmaPhi0->Fill(recoTrack.sigmaPhi0());
+    _hSigmaKappa->Fill(recoTrack.sigmaKappa());
+    _hSigmaDz->Fill(recoTrack.sigmaDz());
+    _hSigmaTanL->Fill(recoTrack.sigmaTanL());
 
 
  
@@ -165,11 +158,11 @@ void fc::TrackSeedCompareModule::fillHistograms(const TVectorD & deltaHP,
     _hDeltaTanL->Fill(deltaHP(4));
 
 
-    _hDeltaDrPull->Fill(deltaHP(0)/recoTrack.getSigmaDr());
-    _hDeltaPhi0Pull->Fill(deltaHP(1)/recoTrack.getSigmaPhi0());
-    _hDeltaKappaPull->Fill(deltaHP(2)/recoTrack.getSigmaKappa());
-    _hDeltaDzPull->Fill(deltaHP(3)/recoTrack.getSigmaDz());
-    _hDeltaTanLPull->Fill(deltaHP(4)/recoTrack.getSigmaTanL());
+    _hDeltaDrPull->Fill(deltaHP(0)/recoTrack.sigmaDr());
+    _hDeltaPhi0Pull->Fill(deltaHP(1)/recoTrack.sigmaPhi0());
+    _hDeltaKappaPull->Fill(deltaHP(2)/recoTrack.sigmaKappa());
+    _hDeltaDzPull->Fill(deltaHP(3)/recoTrack.sigmaDz());
+    _hDeltaTanLPull->Fill(deltaHP(4)/recoTrack.sigmaTanL());
 
 
 }

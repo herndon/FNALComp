@@ -57,21 +57,21 @@ void fc::TrackSeedStrategy2X1SASML::findHitCadidates(const HitSet& hitSet,
 
   // Form hitPatern combinations
 
-  for (auto const& hitO : hitSet.getHits()) {
+  for (auto const& hitO : hitSet.hits()) {
 
-    if (hitO.getLayer() == pattern[0]) {
+    if (hitO.layer() == pattern[0]) {
 
       int hitNumberI = 0;
 
-      for (auto const& hitI : hitSet.getHits()) {
+      for (auto const& hitI : hitSet.hits()) {
 
-	if (hitI.getLayer() == pattern[1]) {
+	if (hitI.layer() == pattern[1]) {
 
 	  int hitNumberOSAS = 0;
 
-	  for (auto const&  hitOSAS : hitSet.getHits()) {
+	  for (auto const&  hitOSAS : hitSet.hits()) {
 
-	    if (hitOSAS.getLayer() == pattern[2]) {
+	    if (hitOSAS.layer() == pattern[2]) {
 
 	      TVector3 zIntersection;
 	      bool goodIntersection = intersectStrips(hitO,hitOSAS,_detectorGeometry,
@@ -81,8 +81,8 @@ void fc::TrackSeedStrategy2X1SASML::findHitCadidates(const HitSet& hitSet,
 	      if (goodIntersection) {
 
 		TVector3 primaryVertex(0.0,0.0,0.0);
-		Helix helix = initializeHelix(primaryVertex,hitO.getHitPosition(),
-					      hitI.getHitPosition(),zIntersection,_detectorGeometry);
+		Helix helix = initializeHelix(primaryVertex,hitO.position(),
+					      hitI.position(),zIntersection,_detectorGeometry);
 		if (fcf::goodSeedHelix(helix,_detectorGeometry,trackSelector)) {
 		  //avoids a copy twice
 		  trackHitSeeds.emplace_back(std::vector<int> {hitNumberO,hitNumberI,hitNumberOSAS});

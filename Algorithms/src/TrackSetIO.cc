@@ -23,19 +23,19 @@ void fc::TrackSetIO::writeEvent(const TrackSet & trackSet,
     trackdata << "Tracks" << std::endl;
     trackdata << _version << std::endl;
 
-    TrackSetContainer::size_type numberTracks = trackSet.getTracks().size();
+    TrackSetContainer::size_type numberTracks = trackSet.tracks().size();
     trackdata << numberTracks << std::endl;
 
     int trackNumber = 0;
 
-    for (auto const& track : trackSet.getTracks()) {
+    for (auto const& track : trackSet.tracks()) {
 
         // Extract a copy of the lorentzVector since functions in it are not const
-        TLorentzVector lorentzVector = track.getLorentzVector();
+        TLorentzVector lorentzVector = track.lorentzVector();
 
         trackdata << trackNumber << std::endl;
 
-        trackdata << track.getCharge() << std::endl;
+        trackdata << track.charge() << std::endl;
 
         trackdata << lorentzVector.Px() << std::endl;
         trackdata << lorentzVector.Py() << std::endl;
@@ -44,14 +44,14 @@ void fc::TrackSetIO::writeEvent(const TrackSet & trackSet,
 
         // Point of clossest approach to the the reference point 0 0 0 and sign
 
-        trackdata << std::abs(track.getHelix().getDr())*std::cos(
-                      track.getHelix().getPhi0()) <<std::endl;
-        trackdata << std::abs(track.getHelix().getDr())*std::sin(
-                      track.getHelix().getPhi0()) <<std::endl;
-        trackdata << track.getHelix().getDz() <<std::endl;
+        trackdata << std::abs(track.dR())*std::cos(
+                      track.phi0()) <<std::endl;
+        trackdata << std::abs(track.dR())*std::sin(
+                      track.phi0()) <<std::endl;
+        trackdata << track.dZ() <<std::endl;
 
         int d0Sign;
-        if (std::signbit(track.getHelix().getDr())) {
+        if (std::signbit(track.dR())) {
             d0Sign = -1;
         }
         else {
@@ -60,12 +60,12 @@ void fc::TrackSetIO::writeEvent(const TrackSet & trackSet,
         trackdata << d0Sign << std::endl;
 
 
-        TrackHitContainer::size_type numberHits = track.getHits().size();
+        TrackHitContainer::size_type numberHits = track.trackHits().size();
 
         trackdata << numberHits << std::endl;
 
         // !!!!! Nice place for that reference bug
-        for (auto const& hit : track.getHits()) {
+        for (auto const& hit : track.trackHits()) {
             trackdata << hit << std::endl;
         } // end hit loop
 

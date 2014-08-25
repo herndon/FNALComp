@@ -38,10 +38,10 @@ int main ()
 // Intialize Objects and Modules that are persistant
 
 // Initialie random number generator with seed = 1
-    fc::Random random(config.getSeed());
+    fc::Random random(config.seed());
 
     // Open a root file to hold output histograms.
-    auto rootFile = std::make_shared<TFile>( config.getRootFileName().c_str(),
+    auto rootFile = std::make_shared<TFile>( config.rootFileName().c_str(),
                     "RECREATE");
 
     // DetectorGeometry
@@ -49,7 +49,7 @@ int main ()
     fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(
             detectorgeometryfile));
     // files are closed by the default destructor
-    if (config.getDebugLevel() >= 2) detectorGeometry.printDetectorGeometry(
+    if (config.debugLevel() >= 2) detectorGeometry.printDetectorGeometry(
             std::cout);
 
     // Input and output files and modules
@@ -58,22 +58,22 @@ int main ()
 
 
     // Instantiate the class which handles the details of processing the events
-    fc::EventProcessor processor(new fc::CountEventsSource(config.getDebugLevel(),
-                                 config.getNumberEvents(),genData),rootFile);
+    fc::EventProcessor processor(new fc::CountEventsSource(config.debugLevel(),
+                                 config.numberEvents(),genData),rootFile);
 
     // Instantiate and initialize Module classes
     //  the order the modules are passed to the EventProcessor
     //  is th eorder the modules will run
-    processor.addModule( new fc::TrackGenModule(config.getDebugLevel(),
-                         config.getNumberTracks(),
+    processor.addModule( new fc::TrackGenModule(config.debugLevel(),
+                         config.numberTracks(),
                          "genTracks", //label used for tracks put into the event
                          detectorGeometry,random));
-    processor.addModule( new fc::HitStripGenModule(config.getDebugLevel(),
+    processor.addModule( new fc::HitStripGenModule(config.debugLevel(),
                          "genTracks",//get these tracks
                          "genHits", //create these hits
                          "strips", //create these strips
                          detectorGeometry,random) );
-    processor.addModule( new fc::DataOutputModule(config.getDebugLevel(),
+    processor.addModule( new fc::DataOutputModule(config.debugLevel(),
                          genoutputeventdatafile,
                          "genTracks", //get these tracks
                          "genHits", //get these hits

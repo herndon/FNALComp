@@ -27,7 +27,7 @@ typedef std::vector<Hit> HitSetContainer;
 class HitSet {
 public:
 
-    const HitSetContainer & getHits() const {
+    const HitSetContainer & hits() const {
         return _hitSet;
     };
 

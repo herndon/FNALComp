@@ -28,10 +28,10 @@ fc::DataSource::DataSource(int debugLevel,std::ifstream& inputeventdatafile,
     _inputeventdatafile >> inputDetectorGeometryVersion ;
 
     if (inputDetectorGeometryVersion !=
-            _detectorGeometry.getDetectorGeometryVersion()) {
+            _detectorGeometry.detectorGeometryVersion()) {
         std::string wrongDetectorGeometryVersion =
             "DataSource constructor: wrong detector geometry version: Set up for " +
-            std::to_string(_detectorGeometry.getDetectorGeometryVersion()) + ", reading " +
+            std::to_string(_detectorGeometry.detectorGeometryVersion()) + ", reading " +
             std::to_string(inputDetectorGeometryVersion);
         throw Exception(wrongDetectorGeometryVersion);
     }

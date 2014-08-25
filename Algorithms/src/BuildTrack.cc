@@ -22,7 +22,7 @@ const fc::Track fc::buildTrack(const HitSet & hitSet,
     // !!!!! Geometry needs to understand types of sensors for use here
     int layer;
     for (auto const&  trackHit : trackHitCandidate) {
-        layer = hitSet.getHits()[trackHit].getLayer();
+        layer = hitSet.hits()[trackHit].layer();
         if (layer >= 0 && layer <= 4) ++numberXHits;
         if (layer==9||layer==8) ++numberSASHits;
         if (layer>=5 && layer <=7) ++numberZHits;
@@ -39,8 +39,8 @@ const fc::Track fc::buildTrack(const HitSet & hitSet,
 
     // Primary vertex used to help find seed tracks
     TVector3 x1(0.0,0.0,0.0);
-    TVector3 x2 = hitSet.getHits()[middleXHit].getHitPosition();
-    TVector3 x3 = hitSet.getHits()[outerXHit].getHitPosition();
+    TVector3 x2 = hitSet.hits()[middleXHit].position();
+    TVector3 x3 = hitSet.hits()[outerXHit].position();
 
     TVector3 z1;
     findZForInitialization(hitSet,trackHitCandidate,detectorGeometry,z1);
@@ -77,7 +77,7 @@ const fc::Track fc::buildTrack(const Track & track, const HitSet & hitSet,
     int numberSASHits = 0;
     int numberZHits = 0;
 
-    TrackHitContainer trackHitCandidate = track.getHits();
+    TrackHitContainer trackHitCandidate = track.trackHits();
 
 
     for (auto const&  trackHit : newTrackHitCandidate) {
@@ -87,7 +87,7 @@ const fc::Track fc::buildTrack(const Track & track, const HitSet & hitSet,
     // !!!!! Geometry needs to understand types of sensors for use here
     int layer;
     for (auto const&  trackHit : trackHitCandidate) {
-        layer = hitSet.getHits()[trackHit].getLayer();
+        layer = hitSet.hits()[trackHit].layer();
         if (layer >= 0 && layer <= 4) ++numberXHits;
         if (layer==9||layer==8) ++numberSASHits;
         if (layer>=5 && layer <=7) ++numberZHits;
@@ -95,7 +95,7 @@ const fc::Track fc::buildTrack(const Track & track, const HitSet & hitSet,
 
 
 
-    Helix initialHelix = track.getHelix();
+    Helix initialHelix = track.helix();
 
     double chi2=0.0;
     int nDof=0;

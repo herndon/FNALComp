@@ -14,13 +14,13 @@ void fc::GenHitSet::print(ostream& out) const {
 
     out << "GenHitSet" << std::endl;
 
-    GenHitSetContainer::size_type numberGenHits =_genHitSet.size();
+    GenHitSetContainer::size_type numberGenHits = genHits().size();
 
     int hitNumber = 0;
 
     out << "Number GenHits: " << numberGenHits << std::endl;
 
-    for (auto const& hit : getGenHits()) {
+    for (auto const& hit : genHits()) {
         out << "GenHit: " << hitNumber  << std::endl;
         hit.print(out);
         ++hitNumber;

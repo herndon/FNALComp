@@ -16,12 +16,12 @@ const TMatrixD fc::expectedMeasurementVector1D(const Helix& helix, int layer,
 
     double phi = 0.0;
 
-    intersectWithPlane(helix, detectorGeometry.getSensor(layer)._center,
-                       detectorGeometry.getSensor(layer)._normal,phi,hitPosition);
+    intersectWithPlane(helix, detectorGeometry.sensor(layer)._center,
+                       detectorGeometry.sensor(layer)._normal,phi,hitPosition);
 
     TMatrixD expectedMeasurementVector(_mDim,1);
 
-    TVector3 measurementDirection = detectorGeometry.getSensor(
+    TVector3 measurementDirection = detectorGeometry.sensor(
                                         layer)._measurementDirection;
 
     expectedMeasurementVector.Zero();
@@ -43,15 +43,15 @@ const TMatrixD fc::expectedMeasurementDerivatived1DdHC(const Helix& helix,
 
     // advances phi to the phi at crossing!
 
-    intersectWithPlane(helix,detectorGeometry.getSensor(layer)._center,
-                       detectorGeometry.getSensor(layer)._normal,phi,hitPosition);
+    intersectWithPlane(helix,detectorGeometry.sensor(layer)._center,
+                       detectorGeometry.sensor(layer)._normal,phi,hitPosition);
 
     // get normal
     // !!!!! could this be simpler and probably has to be in the correct coordinates. called dsdx
     TMatrixD detectorNormal(1,3);
-    detectorNormal(0,0) = detectorGeometry.getSensor(layer)._normal.X();
-    detectorNormal(0,1) = detectorGeometry.getSensor(layer)._normal.Y();
-    detectorNormal(0,2) = detectorGeometry.getSensor(layer)._normal.Z();
+    detectorNormal(0,0) = detectorGeometry.sensor(layer)._normal.X();
+    detectorNormal(0,1) = detectorGeometry.sensor(layer)._normal.Y();
+    detectorNormal(0,2) = detectorGeometry.sensor(layer)._normal.Z();
 
 
     TMatrixD dxdHC(3,_sDim);
@@ -88,11 +88,11 @@ const TMatrixD fc::expectedMeasurementDerivatived1DdHC(const Helix& helix,
 
     TMatrixD measurementDirection(1,3);
 
-    measurementDirection(0,0) =  detectorGeometry.getSensor(
+    measurementDirection(0,0) =  detectorGeometry.sensor(
                                      layer)._measurementDirection.X();
-    measurementDirection(0,1) =  detectorGeometry.getSensor(
+    measurementDirection(0,1) =  detectorGeometry.sensor(
                                      layer)._measurementDirection.Y();
-    measurementDirection(0,2) =  detectorGeometry.getSensor(
+    measurementDirection(0,2) =  detectorGeometry.sensor(
                                      layer)._measurementDirection.Z();
 
 
@@ -112,7 +112,7 @@ const TMatrixD fc::measurementVector1D(const TVector3 & hitPosition,int layer,
 
     TMatrixD measurementVector(_mDim,1);
 
-    TVector3 measurementDirection = detectorGeometry.getSensor(
+    TVector3 measurementDirection = detectorGeometry.sensor(
                                         layer)._measurementDirection;
 
     measurementVector(0,0) = hitPosition*measurementDirection;

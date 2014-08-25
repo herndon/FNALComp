@@ -13,13 +13,13 @@ void fc::GenTrackSet::print(ostream& out) const {
 
     out << "GenTrackSet" << std::endl;
 
-    GenTrackSetContainer::size_type numberGenTracks =_genTrackSet.size();
+    GenTrackSetContainer::size_type numberGenTracks = genTracks().size();
 
     out << "Number Gen Tracks: " << numberGenTracks << std::endl;
 
     int genTrackNumber = 0;
 
-    for (auto const& genTrack: getGenTracks()) {
+    for (auto const& genTrack: genTracks()) {
 
         out << "Gen Track number: " << genTrackNumber << std::endl;
         genTrack.print(out);

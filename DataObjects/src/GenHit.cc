@@ -1,8 +1,8 @@
 #include <iostream>
 #include "DataObjects/include/GenHit.hh"
 
-fc::GenHit::GenHit(const TVector3 & hitPosition, int layer, int trackNumber):
-    _hitPosition(hitPosition),
+fc::GenHit::GenHit(const TVector3 & position, int layer, int trackNumber):
+    _position(position),
     _layer(layer),
     _trackNumber(trackNumber) {
 }
@@ -10,10 +10,9 @@ fc::GenHit::GenHit(const TVector3 & hitPosition, int layer, int trackNumber):
 
 void fc::GenHit::print(ostream& out) const {
 
-    out << "GenHit position:  " << _hitPosition.x() << " " <<  _hitPosition.y() <<
-        " " <<_hitPosition.z() << std::endl;
-    out << "Layer:         " << _layer << std::endl;
-    out << "Track number   " << _trackNumber << std::endl;
+  out << "GenHit position:  " << position().x() << " " <<  position().y() << " " << position().z() << std::endl;
+  out << "Layer:         " << layer() << std::endl;
+  out << "Track number   " << trackNumber() << std::endl;
 
 }
 

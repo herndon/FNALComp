@@ -46,7 +46,7 @@ void fc::TrackRecoModule::recoTracks(const TrackSet& inputTrackSeedSet,
 
     FastTrackSetContainer trackCandidateSet;
 
-    for (const auto& track: inputTrackSeedSet.getTracks()){
+    for (const auto& track: inputTrackSeedSet.tracks()){
       trackCandidateSet.push_back(std::move(track));
     }
 

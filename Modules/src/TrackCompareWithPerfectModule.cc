@@ -75,8 +75,8 @@ void fc::TrackCompareWithPerfectModule::processEvent(Event& event)
 
     compareTracks(*perfectTrackSet,*recoTrackSet);
 
-    _perfectTracks += perfectTrackSet->getTracks().size();
-    _recoTracks += recoTrackSet->getTracks().size();
+    _perfectTracks += perfectTrackSet->tracks().size();
+    _recoTracks += recoTrackSet->tracks().size();
 
     // Function to histogram results
 
@@ -86,9 +86,9 @@ void fc::TrackCompareWithPerfectModule::compareTracks(const TrackSet & perfectTr
         const TrackSet& recoTrackSet) {
 
 
-    if (recoTrackSet.getTracks().begin() == recoTrackSet.getTracks().end()) return;
+    if (recoTrackSet.tracks().begin() == recoTrackSet.tracks().end()) return;
 
-    for (auto const& perfectTrack : perfectTrackSet.getTracks()) {
+    for (auto const& perfectTrack : perfectTrackSet.tracks()) {
 
       bool goodMatch = false;
       bool goodMatchXY = false;
@@ -108,23 +108,23 @@ void fc::TrackCompareWithPerfectModule::fillHistograms(const TVectorD & deltaHP,
         const Track& recoTrack) const {
 
 
-    dR->Fill(recoTrack.getHelix().getDr());
-    phi0->Fill(recoTrack.getHelix().getPhi0());
-    kappa->Fill(recoTrack.getHelix().getKappa());
-    dZ->Fill(recoTrack.getHelix().getDz());
-    tanL->Fill(recoTrack.getHelix().getTanL());
+    dR->Fill(recoTrack.dR());
+    phi0->Fill(recoTrack.phi0());
+    kappa->Fill(recoTrack.kappa());
+    dZ->Fill(recoTrack.dZ());
+    tanL->Fill(recoTrack.tanL());
 
-    sigmaDr->Fill(recoTrack.getSigmaDr());
-    sigmaPhi0->Fill(recoTrack.getSigmaPhi0());
-    sigmaKappa->Fill(recoTrack.getSigmaKappa());
-    sigmaDz->Fill(recoTrack.getSigmaDz());
-    sigmaTanL->Fill(recoTrack.getSigmaTanL());
+    sigmaDr->Fill(recoTrack.sigmaDr());
+    sigmaPhi0->Fill(recoTrack.sigmaPhi0());
+    sigmaKappa->Fill(recoTrack.sigmaKappa());
+    sigmaDz->Fill(recoTrack.sigmaDz());
+    sigmaTanL->Fill(recoTrack.sigmaTanL());
 
 
-    pT->Fill(recoTrack.getHelix().getPT());
-    chi2->Fill(recoTrack.getChi2());
-    nDof->Fill(recoTrack.getNDof());
-    prob->Fill(recoTrack.getChi2Prob());
+    pT->Fill(recoTrack.pT());
+    chi2->Fill(recoTrack.chi2());
+    nDof->Fill(recoTrack.nDof());
+    prob->Fill(recoTrack.chi2Prob());
 
     deltaDr->Fill(deltaHP(0));
     deltaPhi0->Fill(deltaHP(1));

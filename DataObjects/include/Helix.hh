@@ -56,54 +56,54 @@ public:
 
     // Get track parameters
 
-    const TVectorD& getHelix() const {
+    const TVectorD& helixParam() const {
         return _helix;
     }
 
-    double getDr() const {
+    double dR() const {
         return _helix(0);
     }
-    double getPhi0() const {
+    double phi0() const {
         return _helix(1);
     }
-    double getKappa() const {
+    double kappa() const {
         return _helix(2);
     }
-    double getDz() const {
+    double dZ() const {
         return _helix(3);
     }
-    double getTanL() const {
+    double tanL() const {
         return _helix(4);
     }
 
-    double getAlpha() const {
+    double alpha() const {
         return _alpha;
     }
 
-    double getRadiusOfCurvatureAtOrigin() const {
+    double radiusOfCurvatureAtOrigin() const {
         return _alpha/_helix(2);
     }
     // alpha is 1/curvatureCInField  curvatureCInField = curvatureC*bFieldZ, 1/curvatureC*bFieldZ
     // scale Radius of curvature by the ration of the magentic field at the origen (1/_alpha*_curvatureC) divided by the local field bField.Mag()
-    double getRadiusOfCurvature(const TVector3& bField) const {
+    double radiusOfCurvature(const TVector3& bField) const {
         return _alpha*((1/(_alpha*_curvatureC))/bField.Mag())/_helix(2);
     }
 
 
 
-    double getPT() const {
+    double pT() const {
         return std::abs(1.0/_helix(2));
     }
-    double getPZ() const {
+    double pZ() const {
         return _helix(4)*std::abs(1.0/_helix(2));
     }
-    double getCotTheta() const {
+    double cotTheta() const {
         return _helix(4);
     }
-    double getCosTheta() const {
+    double cosTheta() const {
         return _helix(4)/std::sqrt(_helix(4)*_helix(4)+1);
     }
-    double getSinTheta() const {
+    double sinTheta() const {
         return 1.0/std::sqrt(_helix(4)*_helix(4)+1);
     }
 

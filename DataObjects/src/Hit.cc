@@ -14,13 +14,12 @@ fc::Hit::Hit(const TVector3 & hitPosition, int layer, int numberStrips,
 
 void fc::Hit::print(ostream& out) const {
 
-    out << "Hit position:  " << _hitPosition.x() << " " <<  _hitPosition.y() << " "
-        <<_hitPosition.z() << std::endl;
-    out << "Layer          " << _layer << std::endl;
-    out << "Number strips: " << _numberStrips << std::endl;
-    out << "Charge (ADC ): " << _charge << std::endl;
-    out << "goodHit:       " << _goodHit << std::endl;
-    out << "Resolution:    " << _resolution << std::endl;
+  out << "Hit position:  " << position().x() << " " <<  position().y() << " " << position().z() << std::endl;
+  out << "Layer          " << layer() << std::endl;
+  out << "Number strips: " << numberStrips() << std::endl;
+  out << "Charge (ADC ): " << charge() << std::endl;
+  out << "goodHit:       " << goodHit() << std::endl;
+  out << "Resolution:    " << resolution() << std::endl;
 
 
 

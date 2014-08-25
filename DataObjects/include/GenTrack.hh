@@ -41,13 +41,13 @@ public:
 
     // Get objects
 
-    const TLorentzVector&  getLorentzVector() const {
+    const TLorentzVector&  lorentzVector() const {
         return _lorentzVector;
     }
-    const TVector3& getPosition() const {
+    const TVector3& dR() const {
         return _dr;
     }
-    int getCharge() const {
+    int charge() const {
         return _charge;
     }
 

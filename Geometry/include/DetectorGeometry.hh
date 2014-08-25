@@ -57,36 +57,36 @@ public:
                      const std::vector<SensorDescriptor>& sensors,
                      const SensorDescriptor& primaryVertexX,const SensorDescriptor& primaryVertexZ);
 
-  const std::vector<SensorDescriptor>& getSensors() const {return _sensors;}
-    const SensorDescriptor& getSensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
-    int getDetectorGeometryVersion() const {
+  const std::vector<SensorDescriptor>& sensors() const {return _sensors;}
+    const SensorDescriptor& sensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
+    int detectorGeometryVersion() const {
         return _detectorGeometryVersion;
     }
-    int getNSensors() const {
+    int nSensors() const {
         return _sensors.size();
     }
-    int getNXSensors() const {
+    int nXSensors() const {
         return _nXSensors;
     }
-    int getNSASSensors() const {
+    int nSASSensors() const {
         return _nSASSensors;
     }
-    int getNZSensors() const {
+    int nZSensors() const {
         return _nZSensors;
     }
-    double getZBField() const {
+    double zBField() const {
         return _bField.Z();
     }
-    const TVector3 & getBField() const {
+    const TVector3 & bField() const {
         return _bField;
     }
-    double getMIP() const {
+    double MIP() const {
         return _MIP;
     }
-    double getCurvatureCInField(TVector3 _bField) const {
+    double curvatureCInField(TVector3 _bField) const {
         return _curvatureC*_bField.Z();
     }
-    double getCurvatureC() const {
+    double curvatureC() const {
         return _curvatureC;
     }
 

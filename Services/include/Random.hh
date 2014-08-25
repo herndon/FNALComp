@@ -17,19 +17,19 @@ public:
 
     explicit Random(int);
 
-    std::default_random_engine & getEngine() {
-        return engine;
+    std::default_random_engine & engine() {
+        return _engine;
     }
 
-    double getUniformDouble (double min, double max);
+    double uniformDouble (double min, double max);
 
-    double getNormalDouble (double mean, double dev);
+    double normalDouble (double mean, double dev);
 
-    double getExponentialDouble (double exponent);
+    double exponentialDouble (double exponent);
 
 private:
 
-    std::default_random_engine engine;
+    std::default_random_engine _engine;
 
 };
 }// end namespace fc

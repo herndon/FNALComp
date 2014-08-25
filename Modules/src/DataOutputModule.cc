@@ -21,14 +21,13 @@ fc::DataOutputModule::DataOutputModule(int debugLevel,
     _detectorGeometry(detectorGeometry),
     _outputeventdatafile(outputeventdatafile) {
 
-    _outputeventdatafile << detectorGeometry.getDetectorGeometryVersion() <<
+    _outputeventdatafile << detectorGeometry.detectorGeometryVersion() <<
                          std::endl;
 
 }
 
 void fc::DataOutputModule::processEvent(Event& event) {
 
-    //Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_inTracksLabel);
     auto genTrackSet = event.get<fc::GenTrackSet>(_inTracksLabel);
     auto genHitSet = event.get<fc::GenHitSet>(_inHitsLabel);
     auto stripSet = event.get<fc::StripSet>(_inStripsLabel);

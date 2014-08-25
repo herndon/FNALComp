@@ -21,21 +21,21 @@ void fc::HitSetIO::writeEvent(const HitSet & hitSet,
     hitdata << "Hits" << std::endl;
     hitdata << _version << std::endl;
 
-    HitSetContainer::size_type numberHits = hitSet.getHits().size();
+    HitSetContainer::size_type numberHits = hitSet.hits().size();
 
     hitdata << numberHits << std::endl;
 
-    for (auto const& hit : hitSet.getHits()) {
+    for (auto const& hit : hitSet.hits()) {
 
         hitdata << hitNumber << std::endl;
-        hitdata << hit.getHitPosition().x() << std::endl;;
-        hitdata << hit.getHitPosition().y() << std::endl;;
-        hitdata << hit.getHitPosition().z() << std::endl;
-        hitdata << hit.getLayer() << std::endl;
-        hitdata << hit.getNumberStrips() << std::endl;
-        hitdata << hit.getCharge() << std::endl;
-        hitdata << hit.isGoodHit() << std::endl;
-        hitdata << hit.getResolution() << std::endl;
+        hitdata << hit.position().x() << std::endl;;
+        hitdata << hit.position().y() << std::endl;;
+        hitdata << hit.position().z() << std::endl;
+        hitdata << hit.layer() << std::endl;
+        hitdata << hit.numberStrips() << std::endl;
+        hitdata << hit.charge() << std::endl;
+        hitdata << hit.goodHit() << std::endl;
+        hitdata << hit.resolution() << std::endl;
 
         ++hitNumber;
 

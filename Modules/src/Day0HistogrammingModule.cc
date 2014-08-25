@@ -24,9 +24,9 @@ fc::Day0HistogrammingModule::Day0HistogrammingModule(const std::string& inputGen
   _hitSetLabel(inputHitSetLabel),
   _stripSetLabel(inputStripSetLabel),
   _detector(detector),
-  _hStripsPerLayer(_detector.getNSensors(),nullptr),
-  _hOccupancyPerLayer(_detector.getNSensors(),nullptr),
-  _hHitxz(_detector.getNSensors(),nullptr)
+  _hStripsPerLayer(_detector.nSensors(),nullptr),
+  _hOccupancyPerLayer(_detector.nSensors(),nullptr),
+  _hHitxz(_detector.nSensors(),nullptr)
 {
   //NOTE: The framework running the module already has a ROOT file open
   // all ROOT histograms made will be added to that file
@@ -80,25 +80,25 @@ void fc::Day0HistogrammingModule::bookGenTrackHistograms(TDirectory* dir,
 void fc::Day0HistogrammingModule::fillGenTrackHistograms(fc::Event& event)
 {
   // Constant used to convert between pt and radius of curvature
-  double alpha = _detector.getCurvatureC();
+  double alpha = _detector.curvatureC();
 
   // Get the fc::GenTrackSet from the Event using the label provided in the constructor
   fc::Handle<fc::GenTrackSet> genTracks = event.get<fc::GenTrackSet>(_tracksLabel);
 
-  _hNTracks->Fill( genTracks->getGenTracks().size() );
+  _hNTracks->Fill( genTracks->genTracks().size() );
 
-  for(auto const& track : genTracks->getGenTracks()) {
-    _hPt->Fill(track.getLorentzVector().Pt());
-    _hP ->Fill(track.getLorentzVector().P());
+  for(auto const& track : genTracks->genTracks()) {
+    _hPt->Fill(track.lorentzVector().Pt());
+    _hP ->Fill(track.lorentzVector().P());
 
     // Get the helix representation of the track parameters.
-    Helix helix = track.makeHelix(_detector.getBField(),alpha);
-    _hKappa ->Fill( helix.getKappa() );
-    _hphi0  ->Fill( helix.getPhi0()  );
-    _htanl  ->Fill( helix.getTanL()  );
-    _hdr    ->Fill( helix.getDr()    );
-    _hdz    ->Fill( helix.getDz()    );
-    _hradius->Fill( std::abs(helix.getRadiusOfCurvature(_detector.getBField())) );
+    Helix helix = track.makeHelix(_detector.bField(),alpha);
+    _hKappa ->Fill( helix.kappa() );
+    _hphi0  ->Fill( helix.phi0()  );
+    _htanl  ->Fill( helix.tanL()  );
+    _hdr    ->Fill( helix.dR()    );
+    _hdz    ->Fill( helix.dZ()    );
+    _hradius->Fill( std::abs(helix.radiusOfCurvature(_detector.bField())) );
   }
 
 }
@@ -119,18 +119,18 @@ void fc::Day0HistogrammingModule::bookStripHistograms(TDirectory* dir,
   _hTotalStrips  = new TH1D( "totalStrips",  "Total Hit Strips per Event",   100, 150., 250. );
   _hADCAllStrips = new TH1D( "ADCAllStrips", "ADC Spectrum for all strips",  100,  0., 100. );
 
-  for ( int lay=0; lay<_detector.getNSensors(); ++lay ){
+  for ( int lay=0; lay<_detector.nSensors(); ++lay ){
     std::ostringstream name, title;
     name << "hNStrips_" << lay;
     title << "Number of hit strips in layer " << lay << ";;N";
     _hStripsPerLayer.at(lay) = new TH1D( TString(name.str()), TString(title.str()), 40, 0., 40. );
   }
 
-  for ( int lay=0; lay<_detector.getNSensors(); ++lay ){
+  for ( int lay=0; lay<_detector.nSensors(); ++lay ){
     std::ostringstream name, title;
     name << "hOccupancy_" << lay;
     title << "Strip cccupancy map for layer " << lay << ";;N";
-    auto const& sensor = _detector.getSensor(lay);
+    auto const& sensor = _detector.sensor(lay);
     _hOccupancyPerLayer.at(lay) = new TH1D( TString(name.str()), TString(title.str()), 128, 0., sensor._nStrips );
   }
 
@@ -149,8 +149,8 @@ void fc::Day0HistogrammingModule::fillStripHistograms(fc::Event& event)
   size_t sum(0);
 
   // Loop over layers
-  for ( int lay=0; lay<strips->getNumberLayers(); ++lay ){
-    auto const& layerStrips = strips->getLayerStripMap(lay);
+  for ( int lay=0; lay<strips->numberLayers(); ++lay ){
+    auto const& layerStrips = strips->layerStrips(lay);
     sum += layerStrips.size();
     _hStripsPerLayer.at(lay)->Fill(layerStrips.size() );
 
@@ -177,7 +177,7 @@ void fc::Day0HistogrammingModule::bookHitHistograms(TDirectory* dir,
   TDirectory* newDir=dir->mkdir(TString(label));
   newDir->cd();
   
-  int nLayers = _detector.getNSensors();
+  int nLayers = _detector.nSensors();
 
   // These histograms will appear in the new directory.
   _hNHits       = new TH1D( "NHits",       "Number of Hits per Event;;N",      50, 75.,    125.  );
@@ -190,7 +190,7 @@ void fc::Day0HistogrammingModule::bookHitHistograms(TDirectory* dir,
 
   _hAllHitxz = new TH2D( "AllHitxz", "z vs x for all Hits;m;m", 100, -xzmax, xzmax, 100, -xzmax, xzmax);
 
-  for ( int lay=0; lay<_detector.getNSensors(); ++lay ){
+  for ( int lay=0; lay<_detector.nSensors(); ++lay ){
     std::ostringstream name, title;
     name  << "hHitxz_" << lay;
     title << "Hit Position, z vs x, in layer " << lay << ";m;m";
@@ -207,19 +207,19 @@ void fc::Day0HistogrammingModule::fillHitHistograms(fc::Event& event )
 {
   fc::Handle<fc::GenHitSet> hitSet = event.get<fc::GenHitSet>(_hitSetLabel);
 
-  _hNHits->Fill( hitSet->getGenHits().size() );
+  _hNHits->Fill( hitSet->genHits().size() );
 
   static int nn(0);
   ++nn;
 
-  for ( auto const& hit : hitSet->getGenHits() ){
-    auto const& pos = hit.getGenHitPosition();
+  for ( auto const& hit : hitSet->genHits() ){
+    auto const& pos = hit.position();
 
-    _hLayerHit   ->Fill( hit.getLayer()        );
-    _hTrackNumber->Fill( hit.getTrackNumber()  );
+    _hLayerHit   ->Fill( hit.layer()        );
+    _hTrackNumber->Fill( hit.trackNumber()  );
     _hAllHity    ->Fill( pos.y()               );
     _hAllHitxz   ->Fill( pos.x(), pos.z()      );
     
-    _hHitxz.at(hit.getLayer())->Fill( pos.x(), pos.z() );
+    _hHitxz.at(hit.layer())->Fill( pos.x(), pos.z() );
   }
 }

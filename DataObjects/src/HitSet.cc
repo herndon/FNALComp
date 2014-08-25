@@ -17,13 +17,13 @@ void fc::HitSet::print(ostream& out) const {
 
     out << "HitSet" << std::endl;
 
-    HitSetContainer::size_type numberHits =_hitSet.size();
+    HitSetContainer::size_type numberHits = hits().size();
 
     int hitNumber = 0;
 
     out << "Number Hits: " << numberHits << std::endl;
 
-    for (auto hit: getHits()) {
+    for (auto hit: hits()) {
         out << "Hit: " << hitNumber << std::endl;
         hit.print(out);
         ++hitNumber;

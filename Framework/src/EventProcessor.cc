@@ -21,7 +21,7 @@ void fc::EventProcessor::processEvents(const Config& config) {
                 break;
             }
             for(auto& module : _modules) {
-	      if (config.getEventNumberForEventDisplay()==-1 || (event->eventNumber()==static_cast<unsigned int>(config.getEventNumberForEventDisplay())))
+	      if (config.eventNumberForEventDisplay()==-1 || (event->eventNumber()==static_cast<unsigned int>(config.eventNumberForEventDisplay())))
                 module->processEvent(*event);
             }
         }

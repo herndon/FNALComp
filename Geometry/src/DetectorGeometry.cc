@@ -24,16 +24,16 @@ fc::DetectorGeometry::DetectorGeometry(int detectorGeometryVersion,
 void fc::DetectorGeometry::printDetectorGeometry(ostream& out) const {
 
     out << "Detector Geometry information" << std::endl;
-    out << "Detector Geometry version: " << _detectorGeometryVersion << std::endl;
-    out << "Magnetic field, Bz " << _bField[2] << " Tesla" << std::endl;
-    out << "MIP charge ACD counts in silicon sensor " << _MIP << std::endl;
-    out << "Number     sensor layers " << getNSensors() << std::endl;
-    out << "Number X   sensor layers " << getNXSensors() << std::endl;
-    out << "Number SAS sensor layers " << getNSASSensors() << std::endl;
-    out << "Number Z   sensor layers " << getNZSensors() << std::endl;
+    out << "Detector Geometry version: " << detectorGeometryVersion() << std::endl;
+    out << "Magnetic field, Bz " << zBField() << " Tesla" << std::endl;
+    out << "MIP charge ACD counts in silicon sensor " << MIP() << std::endl;
+    out << "Number     sensor layers " << nSensors() << std::endl;
+    out << "Number X   sensor layers " << nXSensors() << std::endl;
+    out << "Number SAS sensor layers " << nSASSensors() << std::endl;
+    out << "Number Z   sensor layers " << nZSensors() << std::endl;
 
     int iiLayer = 0;
-    for (auto const& sensor: getSensors()){
+    for (auto const& sensor: sensors()){
         out << std::endl;
         out << "Sensor layer " << iiLayer << std::endl;
         out << "Sensor type 0: X, 1, SAS, 2 Z " << sensor._type <<std::endl;
@@ -69,11 +69,11 @@ void fc::DetectorGeometry::printDetectorGeometry(ostream& out) const {
 
 }
 
-const fc::SensorDescriptor& fc::DetectorGeometry::getSensor(int layer) const {
+const fc::SensorDescriptor& fc::DetectorGeometry::sensor(int layer) const {
 
-    if (layer >= 0 && layer < getNSensors()) return _sensors[layer];
+    if (layer >= 0 && layer < nSensors()) return _sensors[layer];
     if (layer==-2) return _primaryVertexX;
     if (layer==-1) return _primaryVertexZ;
-    throw Exception(" DetectorGeometry::getSensor: Out of bounds layer");
+    throw Exception(" DetectorGeometry::sensor: Out of bounds layer");
 
 }

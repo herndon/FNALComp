@@ -57,7 +57,6 @@ private:
     void compareTrackSeeds(const TrackSet &, const TrackSet &) const;
     const std::vector<int> matchTrackSeeds(const Track &,const TrackSet &) const;
     bool matchTrackSeed(const Track &, const Track&) const; 
-    const TVectorD deltaHP(const Track &, const Track &) const;
     void fillHistograms(const TVectorD &,const Track&) const;
 
     // Histograms

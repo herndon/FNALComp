@@ -35,24 +35,24 @@ public:
 
     explicit StripSet(const DetectorGeometry&);
 
-    int getNumberLayers() const {
+    int numberLayers() const {
         return _layerStripMaps.size();
     }
-    const std::vector<LayerStripMap>& getStrips() const {
+    const std::vector<LayerStripMap>& strips() const {
         return _layerStripMaps;
     }
-    const LayerStripMap& getLayerStripMap(unsigned int layer) const;
+    const LayerStripMap& layerStrips(unsigned int layer) const;
 
-    int getStripNumber(LayerStripMap::const_iterator iter) const {
+    int stripNumber(LayerStripMap::const_iterator iter) const {
         return iter->first;
     };
-    int getStripAdc(LayerStripMap::const_iterator iter) const {
+    int stripAdc(LayerStripMap::const_iterator iter) const {
         return iter->second;
     };
-    int getStripNumber(const std::pair<int,int>& pair) const {
+    int stripNumber(const std::pair<int,int>& pair) const {
         return pair.first;
     };
-    int getStripAdc(const std::pair<int,int>& pair) const {
+    int stripAdc(const std::pair<int,int>& pair) const {
         return pair.second;
     };
 

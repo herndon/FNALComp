@@ -30,7 +30,7 @@ public:
 
   Config(std::ifstream&,int genData,int eventNumberForEventDisplay);
 
-    int getDebugLevel() const {
+    int debugLevel() const {
         return _debugLevel;   //!< Returns debug level: 0 nothing, 1 progress infrmation; 2 data object printout; 3-5 basic-detailed debug
     }
 
@@ -68,25 +68,25 @@ public:
     return _runEventDisplayModule;
   }
 
-    int getSeed() const {
+    int seed() const {
         return _seed;
     }; //!< Returns random number seed
-    int getNumberEvents() const {
+    int numberEvents() const {
         return _numberEvents;
     }; //!< Returns number of events to generate
-    int getNumberTracks() const {
+    int numberTracks() const {
         return _numberTracks;
     }; //!< Returns number of tracks to generate per event
 
-    std::string const& getRootFileName() const {
+    std::string const& rootFileName() const {
         return _rootFileName;    //!< Returns the name of the root file to be created.
     }
 
 
-    double getMinCandPTCut() const {
+    double minCandPTCut() const {
         return _minCandPTCut;
     }
-    double getMinPTCut() const {
+    double minPTCut() const {
         return _minPTCut;
     }
     double dRCut() const {
@@ -95,11 +95,11 @@ public:
     double dZCut() const {
         return _dZCut;
     }
-    double getMaxChi2NDofCut() const {
+    double maxChi2NDofCut() const {
         return _maxChi2NDofCut;
     }
 
-    int getEventNumberForEventDisplay() const {
+    int eventNumberForEventDisplay() const {
         return _eventNumberForEventDisplay;
     }
 

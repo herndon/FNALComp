@@ -67,9 +67,9 @@ const fc::Helix fc::initializeHelix(const TVector3 & x1, const TVector3 & x2,
    if (phi -M_PI/2.0 < 0.0) phi = phi+M_PI;
 
    Helix helix(0.0,phi,
-                -1.0 /(radiusCurvature*detectorGeometry.getCurvatureCInField(detectorGeometry.getBField())),
-                0.0,tanL,detectorGeometry.getCurvatureCInField(detectorGeometry.getBField()),
-                detectorGeometry.getCurvatureC());
+                -1.0 /(radiusCurvature*detectorGeometry.curvatureCInField(detectorGeometry.bField())),
+                0.0,tanL,detectorGeometry.curvatureCInField(detectorGeometry.bField()),
+                detectorGeometry.curvatureC());
     // Note that phi23 has to be scaled up to the phi between z1 and x1
 
 
@@ -83,21 +83,21 @@ void fc::chooseHitsForInitialization(const HitSet & hitSet,
                                      int& outerZHit) {
 
     int outerXLayer = -1;
-    int outerZLayer = detectorGeometry.getNXSensors()-1;
+    int outerZLayer = detectorGeometry.nXSensors()-1;
     int middleXLayer = -1;
 
 
     for (auto const& hit : trackHitCandidate) {
 
 
-        if (hitSet.getHits()[hit].getLayer() > outerXLayer
-                && hitSet.getHits()[hit].getLayer() < detectorGeometry.getNXSensors()) {
-            outerXLayer = hitSet.getHits()[hit].getLayer();
+        if (hitSet.hits()[hit].layer() > outerXLayer
+                && hitSet.hits()[hit].layer() < detectorGeometry.nXSensors()) {
+            outerXLayer = hitSet.hits()[hit].layer();
             outerXHit = hit;
         }
 
-        if (hitSet.getHits()[hit].getLayer() > outerZLayer) {
-            outerZLayer = hitSet.getHits()[hit].getLayer();
+        if (hitSet.hits()[hit].layer() > outerZLayer) {
+            outerZLayer = hitSet.hits()[hit].layer();
             outerZHit = hit;
         }
 
@@ -107,23 +107,23 @@ void fc::chooseHitsForInitialization(const HitSet & hitSet,
 
 
         // !!!!! Figuring out a way to make this general is difficult.
-        if (  hitSet.getHits()[hit].getLayer() == 2
-                && hitSet.getHits()[hit].getLayer() != outerXLayer) {
-            middleXLayer = hitSet.getHits()[hit].getLayer();
+        if (  hitSet.hits()[hit].layer() == 2
+                && hitSet.hits()[hit].layer() != outerXLayer) {
+            middleXLayer = hitSet.hits()[hit].layer();
             middleXHit = hit;
-        } else if (middleXLayer !=2 && hitSet.getHits()[hit].getLayer() == 1
-                   && hitSet.getHits()[hit].getLayer() != outerXLayer) {
-            middleXLayer = hitSet.getHits()[hit].getLayer();
+        } else if (middleXLayer !=2 && hitSet.hits()[hit].layer() == 1
+                   && hitSet.hits()[hit].layer() != outerXLayer) {
+            middleXLayer = hitSet.hits()[hit].layer();
             middleXHit = hit;
         } else if (middleXLayer !=2 && middleXLayer !=1
-                   && hitSet.getHits()[hit].getLayer() == 3
-                   && hitSet.getHits()[hit].getLayer() != outerXLayer) {
-            middleXLayer = hitSet.getHits()[hit].getLayer();
+                   && hitSet.hits()[hit].layer() == 3
+                   && hitSet.hits()[hit].layer() != outerXLayer) {
+            middleXLayer = hitSet.hits()[hit].layer();
             middleXHit = hit;
         } else if (middleXLayer !=2 && middleXLayer !=1 && middleXLayer !=3
-                   && hitSet.getHits()[hit].getLayer() == 0
-                   && hitSet.getHits()[hit].getLayer() != outerXLayer) {
-            middleXLayer = hitSet.getHits()[hit].getLayer();
+                   && hitSet.hits()[hit].layer() == 0
+                   && hitSet.hits()[hit].layer() != outerXLayer) {
+            middleXLayer = hitSet.hits()[hit].layer();
             middleXHit = hit;
         }
 
@@ -145,30 +145,30 @@ bool fc::findZForInitialization(const HitSet & hitSet,
 
 
     for (auto const& hit : trackHitCandidate) {
-        if (hitSet.getHits()[hit].getLayer() == 4) layer4XHit = hit;
-        if (hitSet.getHits()[hit].getLayer() == 9) layer4SASHit = hit;
-        if (hitSet.getHits()[hit].getLayer() == 3) layer3XHit = hit;
-        if (hitSet.getHits()[hit].getLayer() == 8) layer3SASHit = hit;
-        if (((hitSet.getHits()[hit].getLayer() == 5)||(hitSet.getHits()[hit].getLayer() == 6)
-	     ||(hitSet.getHits()[hit].getLayer() == 8))&&hitSet.getHits()[hit].getLayer() > layerZ){
-	  layerZ = hitSet.getHits()[hit].getLayer();
+        if (hitSet.hits()[hit].layer() == 4) layer4XHit = hit;
+        if (hitSet.hits()[hit].layer() == 9) layer4SASHit = hit;
+        if (hitSet.hits()[hit].layer() == 3) layer3XHit = hit;
+        if (hitSet.hits()[hit].layer() == 8) layer3SASHit = hit;
+        if (((hitSet.hits()[hit].layer() == 5)||(hitSet.hits()[hit].layer() == 6)
+	     ||(hitSet.hits()[hit].layer() == 8))&&hitSet.hits()[hit].layer() > layerZ){
+	  layerZ = hitSet.hits()[hit].layer();
 	  layerZHit = hit;
 	}
    }
 
 
     if (layer4XHit != -1 &&  layer4SASHit != -1) {
-        if (intersectStrips(hitSet.getHits()[layer4XHit],hitSet.getHits()[layer4SASHit],
+        if (intersectStrips(hitSet.hits()[layer4XHit],hitSet.hits()[layer4SASHit],
                             detectorGeometry,zPosition)) return true;
     }
     if (layer3XHit != -1 &&  layer3SASHit != -1) {
-        if (intersectStrips(hitSet.getHits()[layer3XHit],hitSet.getHits()[layer3SASHit],
+        if (intersectStrips(hitSet.hits()[layer3XHit],hitSet.hits()[layer3SASHit],
                             detectorGeometry,zPosition)) return true;
     }
 
     if (layerZHit != -1) {
 
-      zPosition = hitSet.getHits()[layerZHit].getHitPosition();
+      zPosition = hitSet.hits()[layerZHit].position();
       return true;
     }
 
@@ -183,12 +183,12 @@ bool fc::intersectStrips(const Hit & xHit, const Hit & sasHit,
 
     // Note, in the SAS geometry the strips will always intersect so there is no need to check for non intersecting cases
 
-    TVector3 xPos = xHit.getHitPosition();
-    TVector3 xDir = detectorGeometry.getSensor(xHit.getLayer())._normal.Cross(
-                        detectorGeometry.getSensor(xHit.getLayer())._measurementDirection);
-    TVector3 sasPos = sasHit.getHitPosition();
-    TVector3 sasDir = detectorGeometry.getSensor(sasHit.getLayer())._normal.Cross(
-                          detectorGeometry.getSensor(sasHit.getLayer())._measurementDirection);
+    TVector3 xPos = xHit.position();
+    TVector3 xDir = detectorGeometry.sensor(xHit.layer())._normal.Cross(
+                        detectorGeometry.sensor(xHit.layer())._measurementDirection);
+    TVector3 sasPos = sasHit.position();
+    TVector3 sasDir = detectorGeometry.sensor(sasHit.layer())._normal.Cross(
+                          detectorGeometry.sensor(sasHit.layer())._measurementDirection);
 
     TVector3 num = (sasPos-xPos).Cross(sasDir);
     TVector3 denom = xDir.Cross(sasDir);
@@ -198,9 +198,9 @@ bool fc::intersectStrips(const Hit & xHit, const Hit & sasHit,
     z = xPos + xDir*disX;
 
     double localZ = z.Dot(xDir);
-    if (std::abs(localZ) < (detectorGeometry.getSensor(
-                                xHit.getLayer())._nStrips*detectorGeometry.getSensor(
-                                xHit.getLayer())._stripPitch/2.0)) return true;
+    if (std::abs(localZ) < (detectorGeometry.sensor(
+                                xHit.layer())._nStrips*detectorGeometry.sensor(
+                                xHit.layer())._stripPitch/2.0)) return true;
     return false;
 }
 

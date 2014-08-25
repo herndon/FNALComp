@@ -68,7 +68,7 @@ fc::EventDisplayModule::EventDisplayModule(int debugLevel,const std::string& inp
   _genTracksLabel(inputGenTracksLabel),
   _recoHitsLabel(inputRecoHitsLabel),
   _recoTracksLabel(inputRecoTracksLabel),
-  _eventNumber(config.getEventNumberForEventDisplay()),
+  _eventNumber(config.eventNumberForEventDisplay()),
   _config(config),
   _detectorGeometry(detectorGeometry),
   _drawGenTracks(true),
@@ -143,7 +143,7 @@ void fc::EventDisplayModule::displayGeometry(){
 
   // input sensor information from detectorGeometry
   int ii_layer=0;
-  for (auto const& sensor: _detectorGeometry.getSensors()){
+  for (auto const& sensor: _detectorGeometry.sensors()){
 
     std::string geoSensorName = "SENSOR" + std::to_string(ii_layer);
     const char * geoSensorNameC = geoSensorName.c_str();
@@ -181,9 +181,9 @@ void fc::EventDisplayModule::fillGenTrackList(const fc::GenTrackSet& genTrackSet
  
 
   TEveTrackPropagator* trackPropagator = trackList.GetPropagator();
-  trackPropagator->SetMagFieldObj(new TEveMagFieldConst(_detectorGeometry.getBField().X()*100.0, 
-							_detectorGeometry.getBField().Y()*100.0, 
-							_detectorGeometry.getBField().Z()*100.0));
+  trackPropagator->SetMagFieldObj(new TEveMagFieldConst(_detectorGeometry.bField().X()*100.0, 
+							_detectorGeometry.bField().Y()*100.0, 
+							_detectorGeometry.bField().Z()*100.0));
   trackPropagator->SetMaxStep(0.01);
  
   trackPropagator->SetFitDaughters(kFALSE);
@@ -199,16 +199,16 @@ void fc::EventDisplayModule::fillGenTrackList(const fc::GenTrackSet& genTrackSet
   bool matchedTrackXYTight = false;
 
   int n = 0;
-  for (auto const& genTrack : genTrackSet.getGenTracks()){
+  for (auto const& genTrack : genTrackSet.genTracks()){
     TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
 
-    double phi0ToD0 = std::atan2(genTrack.getLorentzVector().Py(),genTrack.getLorentzVector().Px())+genTrack.getCharge()*M_PI/2.0;
+    double phi0ToD0 = std::atan2(genTrack.lorentzVector().Py(),genTrack.lorentzVector().Px())+genTrack.charge()*M_PI/2.0;
  
-    eveRecoTrack->fV.Set(genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::cos(phi0ToD0),
-			 genTrack.getCharge()*genTrack.makeHelix(_detectorGeometry.getBField(),_detectorGeometry.getCurvatureC()).getDr()*std::sin(phi0ToD0), 
-			 genTrack.getPosition().Z());
-    eveRecoTrack->fP.Set(genTrack.getLorentzVector().Px(),genTrack.getLorentzVector().Py(), genTrack.getLorentzVector().Pz());
-    eveRecoTrack->fSign = genTrack.getCharge();
+    eveRecoTrack->fV.Set(genTrack.charge()*genTrack.makeHelix(_detectorGeometry.bField(),_detectorGeometry.curvatureC()).dR()*std::cos(phi0ToD0),
+			 genTrack.charge()*genTrack.makeHelix(_detectorGeometry.bField(),_detectorGeometry.curvatureC()).dR()*std::sin(phi0ToD0), 
+			 genTrack.dR().Z());
+    eveRecoTrack->fP.Set(genTrack.lorentzVector().Px(),genTrack.lorentzVector().Py(), genTrack.lorentzVector().Pz());
+    eveRecoTrack->fSign = genTrack.charge();
 
     TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
     eveTrack->SetIndex(n);
@@ -229,9 +229,9 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
 
 
   TEveTrackPropagator* trackPropagator = recoTrackList.GetPropagator();
-  trackPropagator->SetMagFieldObj(new TEveMagFieldConst(_detectorGeometry.getBField().X()*100.0, 
-							_detectorGeometry.getBField().Y()*100.0, 
-							_detectorGeometry.getBField().Z()*100.0));
+  trackPropagator->SetMagFieldObj(new TEveMagFieldConst(_detectorGeometry.bField().X()*100.0, 
+							_detectorGeometry.bField().Y()*100.0, 
+							_detectorGeometry.bField().Z()*100.0));
   trackPropagator->SetMaxStep(0.01);
  
   trackPropagator->SetFitDaughters(kFALSE);
@@ -250,14 +250,14 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
   bool matchedTrackXYTight = false;
 
   int n = 0;
-  for (auto const& track : recoTrackSet.getTracks()){
+  for (auto const& track : recoTrackSet.tracks()){
     TEveRecTrackD *eveRecoTrack = new TEveRecTrackD();
 
-    double phi0ToD0 = std::atan2(track.getLorentzVector().Py(),track.getLorentzVector().Px())+track.getCharge()*M_PI/2.0;
+    double phi0ToD0 = std::atan2(track.lorentzVector().Py(),track.lorentzVector().Px())+track.charge()*M_PI/2.0;
  
-    eveRecoTrack->fV.Set(track.getCharge()*track.getHelix().getDr()*std::cos(phi0ToD0),track.getCharge()*track.getHelix().getDr()*std::sin(phi0ToD0) ,track.getHelix().getDz());
-    eveRecoTrack->fP.Set(track.getLorentzVector().Px(),track.getLorentzVector().Py(), track.getLorentzVector().Pz());
-    eveRecoTrack->fSign = track.getCharge();
+    eveRecoTrack->fV.Set(track.charge()*track.dR()*std::cos(phi0ToD0),track.charge()*track.dR()*std::sin(phi0ToD0) ,track.dZ());
+    eveRecoTrack->fP.Set(track.lorentzVector().Px(),track.lorentzVector().Py(), track.lorentzVector().Pz());
+    eveRecoTrack->fSign = track.charge();
 
     TEveTrack* eveTrack = new TEveTrack(eveRecoTrack, trackPropagator);
     eveTrack->SetIndex(n);
@@ -267,11 +267,11 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
     if (matchedTrackLoose) {eveTrack->SetMainColor(kRed);} else {eveTrack->SetMainColor(kOrange-3);}
     if (!matchedTrackLoose){
       //hit lines here
-      for (auto const hitNumber : track.getHits()){
-	const Hit& hit = recoHitSet.getHits()[hitNumber];
-	TVector3 hitPosition = hit.getHitPosition();
-	TVector3 stripDir = _detectorGeometry.getSensor(hit.getLayer())._normal.Cross(_detectorGeometry.getSensor(hit.getLayer())._measurementDirection);
-	stripDir *= _detectorGeometry.getSensor(hit.getLayer())._perpSize/2.0;
+      for (auto const hitNumber : track.trackHits()){
+	const Hit& hit = recoHitSet.hits()[hitNumber];
+	TVector3 hitPosition = hit.position();
+	TVector3 stripDir = _detectorGeometry.sensor(hit.layer())._normal.Cross(_detectorGeometry.sensor(hit.layer())._measurementDirection);
+	stripDir *= _detectorGeometry.sensor(hit.layer())._perpSize/2.0;
 	lineSet->AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y()+0.001,hitPosition.Z()-stripDir.Z(),
 			 hitPosition.X()+stripDir.X(),hitPosition.Y()+stripDir.Y()+0.001,hitPosition.Z()+stripDir.Z());
       }
@@ -291,7 +291,7 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
 void fc::EventDisplayModule::fillGenHitList(const fc::GenHitSet& genHitSet,TEveElementList& hitList,TEveElementList& sasZHitList){
 
   int n = 0;
-  for (auto const& hit : genHitSet.getGenHits()){
+  for (auto const& hit : genHitSet.genHits()){
     std::string hstr=" hit %d";
     std::string dstr=" hit# %d\nLayer: %d";
     std::string strlst=hstr;
@@ -299,16 +299,16 @@ void fc::EventDisplayModule::fillGenHitList(const fc::GenHitSet& genHitSet,TEveE
 
     TEvePointSet* h = new TEvePointSet(Form(strlst.c_str(),n));
     h->SetTitle(Form(strlab.c_str(),n));
-    double yPos = hit.getGenHitPosition().y();
-    if (hit.getLayer() < 5) yPos -= 0.001;
-    if (hit.getLayer() >= 5) yPos += 0.001;
+    double yPos = hit.position().y();
+    if (hit.layer() < _detectorGeometry.nXSensors()) yPos -= 0.001;
+    if (hit.layer() >= _detectorGeometry.nXSensors()) yPos += 0.001;
 
-    h->SetNextPoint(hit.getGenHitPosition().x(),yPos,+hit.getGenHitPosition().z());
-    if (hit.getLayer() < 5) h->SetMarkerColor(kYellow);
-    if (hit.getLayer() >= 5) h->SetMarkerColor(kYellow);
+    h->SetNextPoint(hit.position().x(),yPos,hit.position().z());
+    if (hit.layer() < _detectorGeometry.nXSensors()) h->SetMarkerColor(kYellow);
+    if (hit.layer() >= _detectorGeometry.nXSensors()) h->SetMarkerColor(kYellow);
     h->SetMarkerSize(1.5);
-     if (hit.getLayer() < 5)  hitList.AddElement(h);
-     if (hit.getLayer() >= 5)  sasZHitList.AddElement(h);
+     if (hit.layer() < _detectorGeometry.nXSensors())  hitList.AddElement(h);
+     if (hit.layer() >= _detectorGeometry.nXSensors())  sasZHitList.AddElement(h);
     n++;
 
   }

@@ -21,18 +21,18 @@ void fc::GenHitSetIO::writeEvent(const GenHitSet & genHitSet,
     hitdata << "GenHits" << std::endl;
     hitdata << _version << std::endl;
 
-    GenHitSetContainer::size_type numberHits = genHitSet.getGenHits().size();
+    GenHitSetContainer::size_type numberHits = genHitSet.genHits().size();
 
     hitdata << numberHits << std::endl;
 
-    for (auto const& hit : genHitSet.getGenHits()) {
+    for (auto const& hit : genHitSet.genHits()) {
 
         hitdata << hitNumber << std::endl;
-        hitdata << hit.getGenHitPosition().x() << std::endl;;
-        hitdata << hit.getGenHitPosition().y() << std::endl;;
-        hitdata << hit.getGenHitPosition().z() << std::endl;
-        hitdata << hit.getLayer() << std::endl;
-        hitdata << hit.getTrackNumber() << std::endl;
+        hitdata << hit.position().x() << std::endl;;
+        hitdata << hit.position().y() << std::endl;;
+        hitdata << hit.position().z() << std::endl;
+        hitdata << hit.layer() << std::endl;
+        hitdata << hit.trackNumber() << std::endl;
 
     } // end hit loop
 

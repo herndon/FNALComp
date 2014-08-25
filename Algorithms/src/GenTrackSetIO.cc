@@ -20,19 +20,19 @@ void fc::GenTrackSetIO::writeEvent(const GenTrackSet& genTrackSet,
     gentrackdata << _version << std::endl;
 
     GenTrackSetContainer::size_type numberGenTracks =
-        genTrackSet.getGenTracks().size();
+        genTrackSet.genTracks().size();
     gentrackdata << numberGenTracks << std::endl;
 
     int genTrackNumber =0;
 
-    for (auto const& genTrack : genTrackSet.getGenTracks()) {
+    for (auto const& genTrack : genTrackSet.genTracks()) {
 
         // Extract a copy of the lorentzVector since functions in it are not const
-        TLorentzVector lorentzVector = genTrack.getLorentzVector();
+        TLorentzVector lorentzVector = genTrack.lorentzVector();
 
         gentrackdata << genTrackNumber << std::endl;
 
-        gentrackdata << genTrack.getCharge() << std::endl;
+        gentrackdata << genTrack.charge() << std::endl;
 
         gentrackdata << lorentzVector.Px() << std::endl;
         gentrackdata << lorentzVector.Py() << std::endl;
@@ -42,9 +42,9 @@ void fc::GenTrackSetIO::writeEvent(const GenTrackSet& genTrackSet,
         // Point of clossest approach to the the reference point 0 0 0 and sign
 
 
-        gentrackdata << genTrack.getPosition().X() <<std::endl;
-        gentrackdata << genTrack.getPosition().Y() <<std::endl;
-        gentrackdata << genTrack.getPosition().Z() <<std::endl;
+        gentrackdata << genTrack.dR().X() <<std::endl;
+        gentrackdata << genTrack.dR().Y() <<std::endl;
+        gentrackdata << genTrack.dR().Z() <<std::endl;
 
 
         ++genTrackNumber;

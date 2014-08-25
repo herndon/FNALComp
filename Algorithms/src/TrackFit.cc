@@ -34,7 +34,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
 
 
     TVectorD    helix(_sDim); // original helix paramters
-    helix = initialHelix.getHelix();
+    helix = initialHelix.helixParam();
 
     Helix workingHelix(initialHelix);
 
@@ -99,7 +99,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
         int numberHits = trackHits.size();
 	bool useBadHits = true;
        for (auto const& hit : trackHits) {
-	 if (hit>=0 && !hitSet.getHits()[hit].isGoodHit()) ++numberBadHits;
+	 if (hit>=0 && !hitSet.hits()[hit].goodHit()) ++numberBadHits;
        }
 
        if ((numberHits - numberBadHits) >6 ) useBadHits = false;
@@ -112,17 +112,17 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
             TVector3 hitPosition;
             int layer;
             if (_debugLevel >= 5) {
-	      if (hitNumber>=0 && !useBadHits && !hitSet.getHits()[hit].isGoodHit() ) {
+	      if (hitNumber>=0 && !useBadHits && !hitSet.hits()[hit].goodHit() ) {
 		std::cout << "Didn't use a bad hit" << std::endl;
 		continue;
 	      }
 	    }
            if (hitNumber>=0) {
-                layer = hitSet.getHits()[hit].getLayer();
-                hitPosition = hitSet.getHits()[hit].getHitPosition();
+                layer = hitSet.hits()[hit].layer();
+                hitPosition = hitSet.hits()[hit].position();
             } else {
                 layer = hit;
-                hitPosition - detectorGeometry.getSensor(layer)._center;
+                hitPosition - detectorGeometry.sensor(layer)._center;
             }
 
 
@@ -150,11 +150,11 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
 
             // Get the inverse resolutions squared
             if (layer < 0) {
-                invMeasurementRes2(0,0) = detectorGeometry.getSensor(
-                                              layer)._hitResolution*detectorGeometry.getSensor(layer)._hitResolution;;
+                invMeasurementRes2(0,0) = detectorGeometry.sensor(
+                                              layer)._hitResolution*detectorGeometry.sensor(layer)._hitResolution;;
             } else {
-                invMeasurementRes2(0,0) = hitSet.getHits()[hit].getResolution()
-                                          *hitSet.getHits()[hit].getResolution();
+                invMeasurementRes2(0,0) = hitSet.hits()[hit].resolution()
+                                          *hitSet.hits()[hit].resolution();
             }
             invMeasurementRes2.Invert();
 

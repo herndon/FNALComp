@@ -24,15 +24,15 @@ namespace fc {
 class GenHit {
 public:
 
-    GenHit(const TVector3& hitPosition, int layer, int trackNumber);
+    GenHit(const TVector3& position, int layer, int trackNumber);
 
-    const TVector3 & getGenHitPosition() const {
-        return _hitPosition;
+    const TVector3 & position() const {
+        return _position;
     }
-    int getLayer() const {
+    int layer() const {
         return _layer;
     }
-    int getTrackNumber() const {
+    int trackNumber() const {
         return _trackNumber;
     }
 
@@ -40,7 +40,7 @@ public:
 
 private:
 
-    TVector3 _hitPosition;
+    TVector3 _position;
     int _layer;
     int _trackNumber;
 };
