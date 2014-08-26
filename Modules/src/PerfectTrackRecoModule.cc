@@ -82,7 +82,7 @@ void fc::PerfectTrackRecoModule::findTrackPerfectCandidates(
             ++recoHitNumber;
         } // end reco Hit loop
         if (genHit.trackNumber() == trackNumber && bestRecoHitNumber>-1 && 
-	    std::abs(deltaPosition)<(10.0*_detectorGeometry.sensor(genHit.layer())._hitResolution)) {
+	    std::abs(deltaPosition)<(10.0*_detectorGeometry.sensor(genHit.layer()).hitResolution())) {
 
             trackHitCandidate.push_back(bestRecoHitNumber);
 
@@ -104,9 +104,9 @@ double fc::PerfectTrackRecoModule::compareHitPositions(const GenHit & genHit,
         const Hit& recoHit) const {
 
     return recoHit.position()*_detectorGeometry.sensor(
-               recoHit.layer())._measurementDirection
+						       recoHit.layer()).measurementDirection()
            - genHit.position()*_detectorGeometry.sensor(
-               genHit.layer())._measurementDirection;
+							genHit.layer()).measurementDirection();
 
 }
 

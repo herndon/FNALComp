@@ -24,9 +24,8 @@ bool fcf::goodTrack(const fc::Track& track,
      || track.chi2()/track.nDof()< trackSelector._maxChi2NDofCut) &&
     track.trackHits().size() >= trackSelector._nHitCut &&
     (!trackSelector._useFiducialDRCut || std::abs(track.dR())
-     < detectorGeometry.sensor(0)._perpSize) &&
+     < detectorGeometry.sensor(0).perpSize()/2.0) &&
     (!trackSelector._useFiducialDRCut || std::abs(track.dZ())
-     < detectorGeometry.sensor(0)._nStrips*
-     detectorGeometry.sensor(0)._stripPitch/2.0);
+     < detectorGeometry.sensor(0).measurementSize()/2.0);
 
 }

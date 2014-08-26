@@ -61,7 +61,7 @@ void fc::HitStripGenModule::makeHitsStrips(const GenTrack & genTrack,
 
         // 98% efficiency factor
         if (_random.uniformDouble(0.0,
-                                     1.0) > _detectorGeometry.sensor(iiLayer)._hitEfficiency) continue;
+				  1.0) > _detectorGeometry.sensor(iiLayer).hitEfficiency()) continue;
         bool intersectedLayer = intersectWithLayer(genTrack.makeHelix(
                                     _detectorGeometry.bField(),_detectorGeometry.curvatureC()),
                                 iiLayer,_detectorGeometry,hitPosition);
@@ -100,9 +100,7 @@ void fc::HitStripGenModule::storeHitInfo(int trackNumber,int layer,
     }
 
 
-    hitPosition = hitPosition + _random.normalDouble(0.0,
-                  _detectorGeometry.sensor(layer)._intrinsicHitResolution)*_detectorGeometry.sensor(
-                      layer)._measurementDirection;
+    hitPosition = hitPosition + _random.normalDouble(0.0,_detectorGeometry.sensor(layer).intrinsicHitResolution())*_detectorGeometry.sensor(layer).measurementDirection();
 
     if (_debugLevel >=5 ) {
         std::cout << "Layer " << layer << " Resolution smeared Hit x " << hitPosition[0]
@@ -175,8 +173,7 @@ void fc::HitStripGenModule::storeCluster(int layer, int initialStrip,
 
     int iiStrip = initialStrip;
     for (auto adc : stripAdcs) {
-        if (fcf::isValidStrip(layer,iiStrip,
-                              _detectorGeometry) && adc > 0 ) stripSet.insertStrip(layer,iiStrip,adc);
+      if (fcf::isValidStrip(layer,iiStrip,_detectorGeometry) && adc > 0 ) stripSet.insertStrip(layer,iiStrip,adc);
         ++iiStrip;
     }
 

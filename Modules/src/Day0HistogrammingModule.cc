@@ -131,7 +131,7 @@ void fc::Day0HistogrammingModule::bookStripHistograms(TDirectory* dir,
     name << "hOccupancy_" << lay;
     title << "Strip cccupancy map for layer " << lay << ";;N";
     auto const& sensor = _detector.sensor(lay);
-    _hOccupancyPerLayer.at(lay) = new TH1D( TString(name.str()), TString(title.str()), 128, 0., sensor._nStrips );
+    _hOccupancyPerLayer.at(lay) = new TH1D( TString(name.str()), TString(title.str()), 128, 0., sensor.nStrips() );
   }
 
 

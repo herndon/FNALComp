@@ -8,7 +8,7 @@
 const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream &
         detectorgeometryfile) {
 
-    int maxNumberStrips = 4096;
+    unsigned int maxNumberStrips = 4096;
 
     if (!detectorgeometryfile) {
         throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: can't open sensorgeometry.txt file");
@@ -79,8 +79,23 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream &
     detectorgeometryfile.precision(std::numeric_limits<double>::digits10 + 2);
 
     // Read numberSensors sensors
-    std::vector<SensorDescriptor> sensors;
+    std::vector<Sensor> sensors;
     sensors.reserve(numberSensors);
+
+    unsigned int type;// types 0: X, 1, SAS, 2, Z, 3 vertex
+    unsigned int nStrips;
+    double stripPitch;
+    double intrinsicHitResolution;
+    double hitResolution;
+    double badHitResolution;
+    double hitEfficiency;
+    double threshold;
+    TVector3 center;
+    TVector3 normal;
+    TVector3 measurementDirection;
+    double perpSize;
+
+
 
     for (int iiLayer = 0; iiLayer < numberSensors; ++iiLayer) {
         detectorgeometryfile >> detectorGeometryString;
@@ -89,95 +104,142 @@ const fc::DetectorGeometry fc::buildDetectorGeometry(std::ifstream &
 
         detectorgeometryfile >> sensorNumber;
 
-        SensorDescriptor sensor;
-
         detectorgeometryfile >> detectorGeometryString;
-        if (detectorGeometryString != "X" && detectorGeometryString != "SAS"
-                && detectorGeometryString != "Z")
-            throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Unrecognized sensor type, types are X, SAS, and Z");
         if (detectorGeometryString == "X") {
-            sensor._type = 0;
+            type = 0;
             ++nXSensors;
-        }
-        if (detectorGeometryString == "SAS") {
-            sensor._type = 1;
+        } else if (detectorGeometryString == "SAS") {
+            type = 1;
             ++nSASSensors;
-        }
-        if (detectorGeometryString == "Z") {
-            sensor._type = 2;
+        } else if (detectorGeometryString == "Z") {
+            type = 2;
             ++nZSensors;
-        }
-        detectorgeometryfile >> sensor._nStrips;
-        detectorgeometryfile >> sensor._stripPitch;
-        detectorgeometryfile >> sensor._intrinsicHitResolution;
-        detectorgeometryfile >> sensor._hitResolution;
-        detectorgeometryfile >> sensor._badHitResolution;
+        } else {
+           throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Unrecognized sensor type, types are X, SAS, and Z");
+ 	}
+
+
+        detectorgeometryfile >> nStrips;
+        detectorgeometryfile >> stripPitch;
+        detectorgeometryfile >> intrinsicHitResolution;
+        detectorgeometryfile >> hitResolution;
+        detectorgeometryfile >> badHitResolution;
         // !!!!! This is a good place for a test case using valgrind
-        detectorgeometryfile >> sensor._threshold;
-        detectorgeometryfile >> sensor._hitEfficiency;
-        detectorgeometryfile >> sensor._center[0];
-        detectorgeometryfile >> sensor._center[1];
-        detectorgeometryfile >> sensor._center[2];
-        detectorgeometryfile >> sensor._normal[0];
-        detectorgeometryfile >> sensor._normal[1];
-        detectorgeometryfile >> sensor._normal[2];
-        detectorgeometryfile >> sensor._measurementDirection[0];
-        detectorgeometryfile >> sensor._measurementDirection[1];
-        detectorgeometryfile >> sensor._measurementDirection[2];
-        detectorgeometryfile >> sensor._perpSize;
+        detectorgeometryfile >> threshold;
+        detectorgeometryfile >> hitEfficiency;
+        detectorgeometryfile >> center[0];
+        detectorgeometryfile >> center[1];
+        detectorgeometryfile >> center[2];
+        detectorgeometryfile >> normal[0];
+        detectorgeometryfile >> normal[1];
+        detectorgeometryfile >> normal[2];
+        detectorgeometryfile >> measurementDirection[0];
+        detectorgeometryfile >> measurementDirection[1];
+        detectorgeometryfile >> measurementDirection[2];
+        detectorgeometryfile >> perpSize;
 
-        sensor._normal *= 1.0/sensor._normal.Mag();
-        sensor._measurementDirection *= 1.0/sensor._measurementDirection.Mag();
+        normal *= 1.0/normal.Mag();
+        measurementDirection *= 1.0/measurementDirection.Mag();
 
-        if ( sensor._nStrips > maxNumberStrips)
+        if ( nStrips > maxNumberStrips)
             throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Out of bounds sensor number specifications in sensorgeometry.txt, maximum number of strips is 4096");
+        Sensor sensor(type,
+		      nStrips,
+		      stripPitch,
+		      intrinsicHitResolution,
+		      hitResolution,
+		      badHitResolution,
+		      hitEfficiency,
+		      threshold,
+		      center,
+		      normal,
+		      measurementDirection,
+		      perpSize);
 
         sensors.push_back(std::move(sensor));
 
     }
 
-    SensorDescriptor primaryVertexX;
-
+ 
     detectorgeometryfile >> detectorGeometryString;
     if (detectorGeometryString != "PVX")
         throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Bad format in sensorgeometry.txt, PVX");
-    detectorgeometryfile >> primaryVertexX._hitResolution;
-    detectorgeometryfile >> primaryVertexX._center[0];
-    detectorgeometryfile >> primaryVertexX._center[1];
-    detectorgeometryfile >> primaryVertexX._center[2];
-    detectorgeometryfile >> primaryVertexX._normal[0];
-    detectorgeometryfile >> primaryVertexX._normal[1];
-    detectorgeometryfile >> primaryVertexX._normal[2];
-    detectorgeometryfile >> primaryVertexX._measurementDirection[0];
-    detectorgeometryfile >> primaryVertexX._measurementDirection[1];
-    detectorgeometryfile >> primaryVertexX._measurementDirection[2];
+    type = 3;
+    nStrips = 0;
+    stripPitch = 0.0;
+    detectorgeometryfile >> intrinsicHitResolution;
+    hitResolution = intrinsicHitResolution;
+    badHitResolution = intrinsicHitResolution;
+    hitEfficiency = 0.0;
+    threshold = 0;
+    detectorgeometryfile >> center[0];
+    detectorgeometryfile >> center[1];
+    detectorgeometryfile >> center[2];
+    detectorgeometryfile >> normal[0];
+    detectorgeometryfile >> normal[1];
+    detectorgeometryfile >> normal[2];
+    detectorgeometryfile >> measurementDirection[0];
+    detectorgeometryfile >> measurementDirection[1];
+    detectorgeometryfile >> measurementDirection[2];
 
-    primaryVertexX._normal *= 1.0/primaryVertexX._normal.Mag();
-    primaryVertexX._measurementDirection *=
-        1.0/primaryVertexX._measurementDirection.Mag();
+    normal *= 1.0/normal.Mag();
+    measurementDirection *= 1.0/measurementDirection.Mag();
+
+    Sensor primaryVertexX(type,
+			  nStrips,
+			  stripPitch,
+			  intrinsicHitResolution,
+			  hitResolution,
+			  badHitResolution,
+			  hitEfficiency,
+			  threshold,
+			  center,
+			  normal,
+			  measurementDirection,
+			  perpSize);
+
+
 
     detectorgeometryfile >> detectorGeometryString;
 
-    SensorDescriptor primaryVertexZ;
-
     if (detectorGeometryString != "PVZ")
         throw Exception("BuildDetectorGeometry::_initBuildDetectorGeometryFromFile: Bad format in sensorgeometry.txt, PVY");
+    type = 3;
+    nStrips = 0;
+    stripPitch = 0.0;
+    detectorgeometryfile >> intrinsicHitResolution;
+    hitResolution = intrinsicHitResolution;
+    badHitResolution = intrinsicHitResolution;
+    hitEfficiency = 0.0;
+    threshold = 0;
+    detectorgeometryfile >> center[0];
+    detectorgeometryfile >> center[1];
+    detectorgeometryfile >> center[2];
+    detectorgeometryfile >> normal[0];
+    detectorgeometryfile >> normal[1];
+    detectorgeometryfile >> normal[2];
+    detectorgeometryfile >> measurementDirection[0];
+    detectorgeometryfile >> measurementDirection[1];
+    detectorgeometryfile >> measurementDirection[2];
 
-    detectorgeometryfile >> primaryVertexZ._hitResolution;
-    detectorgeometryfile >> primaryVertexZ._center[0];
-    detectorgeometryfile >> primaryVertexZ._center[1];
-    detectorgeometryfile >> primaryVertexZ._center[2];
-    detectorgeometryfile >> primaryVertexZ._normal[0];
-    detectorgeometryfile >> primaryVertexZ._normal[1];
-    detectorgeometryfile >> primaryVertexZ._normal[2];
-    detectorgeometryfile >> primaryVertexZ._measurementDirection[0];
-    detectorgeometryfile >> primaryVertexZ._measurementDirection[1];
-    detectorgeometryfile >> primaryVertexZ._measurementDirection[2];
+    normal *= 1.0/normal.Mag();
+    measurementDirection *= 1.0/measurementDirection.Mag();
 
-    primaryVertexZ._normal *= 1.0/primaryVertexZ._normal.Mag();
-    primaryVertexZ._measurementDirection *=
-        1.0/primaryVertexZ._measurementDirection.Mag();
+    Sensor primaryVertexZ(type,
+			  nStrips,
+			  stripPitch,
+			  intrinsicHitResolution,
+			  hitResolution,
+			  badHitResolution,
+			  hitEfficiency,
+			  threshold,
+			  center,
+			  normal,
+			  measurementDirection,
+			  perpSize);
 
+
+ 
     DetectorGeometry detectorGeometry(detectorGeometryVersion,nXSensors,nSASSensors,
                                       nZSensors,
                                       bField,MIP,curvatureC,maxNumberStrips,

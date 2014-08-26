@@ -20,10 +20,57 @@ namespace fc {
 
 static const int _mDim = 1; //!< Measurement dimention of hits
 
+  class Sensor{
 
-struct SensorDescriptor {
-    int _type;// types 0: X, 1, SAS, 2, Z
-    int _nStrips;
+  public:
+
+    Sensor(){};
+
+    Sensor(unsigned int type,
+	   unsigned int nStrips,
+	   double stripPitch,
+	   double intrinsicHitResolution,
+	   double hitResolution,
+	   double badHitResolution,
+	   double hitEfficiency,
+	   double threshold,
+	   TVector3 center,
+	   TVector3 normal,
+	   TVector3 measurementDirection,
+	   double perpSize):
+      _type(type),
+      _nStrips(nStrips),
+      _stripPitch(stripPitch),
+      _intrinsicHitResolution(intrinsicHitResolution),
+      _hitResolution(hitResolution),
+      _badHitResolution(badHitResolution),
+      _hitEfficiency(hitEfficiency),
+      _threshold(threshold),
+      _center(center),
+      _normal(normal),
+      _measurementDirection(measurementDirection),
+      _perpSize(perpSize){
+    };
+
+    unsigned int type() const {return _type;}
+    unsigned int nStrips() const {return _nStrips;} 
+    double stripPitch() const {return _stripPitch;}
+    double intrinsicHitResolution() const {return _intrinsicHitResolution;}
+    double hitResolution() const {return _hitResolution;}
+    double badHitResolution() const {return _badHitResolution;}
+    double hitEfficiency() const {return _hitEfficiency;}
+    double threshold() const {return _threshold;}
+    const TVector3 & center() const {return _center;}
+    const TVector3 & normal() const {return _normal;}
+    const TVector3 & measurementDirection() const {return _measurementDirection;}
+    const TVector3 perpDirection() const {return _normal.Cross(_measurementDirection);}
+    double perpSize() const {return _perpSize;}
+    double measurementSize() const {return _nStrips*_stripPitch;}
+
+  private:
+
+    unsigned int _type;// types 0: X, 1, SAS, 2, Z, 3 vertex
+    unsigned int _nStrips;
     double _stripPitch;
     double _intrinsicHitResolution;
     double _hitResolution;
@@ -34,9 +81,12 @@ struct SensorDescriptor {
     TVector3 _normal;
     TVector3 _measurementDirection;
     double _perpSize;
-};
 
-typedef std::vector<SensorDescriptor> SensorContainer;
+
+  };
+
+typedef std::vector<Sensor> SensorContainer;
+
 
 
 ///
@@ -54,11 +104,11 @@ public:
     DetectorGeometry(int detectorGeometryVersion,int nXSensors, int nSASSensors,
                      int nZSensors,
                      const TVector3& bField,double MIP,double curvatureC,int maxNumberStrips,
-                     const std::vector<SensorDescriptor>& sensors,
-                     const SensorDescriptor& primaryVertexX,const SensorDescriptor& primaryVertexZ);
+                     const std::vector<Sensor>& sensors,
+                     const Sensor& primaryVertexX,const Sensor& primaryVertexZ);
 
-  const std::vector<SensorDescriptor>& sensors() const {return _sensors;}
-    const SensorDescriptor& sensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
+  const std::vector<Sensor>& sensors() const {return _sensors;}
+    const Sensor& sensor(int nsensor) const; //!< Returns struct describing sensor number nsensor
     int detectorGeometryVersion() const {
         return _detectorGeometryVersion;
     }
@@ -116,12 +166,12 @@ private:
     int _maxNumberStrips;
 
 
-    std::vector<SensorDescriptor> _sensors;
+    std::vector<Sensor> _sensors;
 
     // Parameters for the primary vetex if used in a fit
 
-    SensorDescriptor _primaryVertexX;
-    SensorDescriptor _primaryVertexZ;
+    Sensor _primaryVertexX;
+    Sensor _primaryVertexZ;
 
 };
 } // end namespace fc

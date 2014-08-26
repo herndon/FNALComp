@@ -6,8 +6,8 @@
 fc::DetectorGeometry::DetectorGeometry(int detectorGeometryVersion,
                                        int nXSensors, int nSASSensors, int nZSensors,
                                        const TVector3& bField,double MIP,double curvatureC,int maxNumberStrips,
-                                       const std::vector<SensorDescriptor>& sensors,
-                                       const SensorDescriptor& primaryVertexX,const SensorDescriptor& primaryVertexZ):
+                                       const std::vector<Sensor>& sensors,
+                                       const Sensor& primaryVertexX,const Sensor& primaryVertexZ):
     _detectorGeometryVersion(detectorGeometryVersion),
     _nXSensors(nXSensors),
     _nSASSensors(nSASSensors),
@@ -36,40 +36,40 @@ void fc::DetectorGeometry::printDetectorGeometry(ostream& out) const {
     for (auto const& sensor: sensors()){
         out << std::endl;
         out << "Sensor layer " << iiLayer << std::endl;
-        out << "Sensor type 0: X, 1, SAS, 2 Z " << sensor._type <<std::endl;
-        out << "N strips    "  << sensor._nStrips    << std::endl;
-        out << "Strip pitch "  << sensor._stripPitch << std::endl;
-        out << "X position (m) "  << sensor._center.x()       << std::endl;
-        out << "Y position (m) "  << sensor._center.y()       << std::endl;
-        out << "Z position (m) "  << sensor._center.z()       << std::endl;
+        out << "Sensor type 0: X, 1, SAS, 2 Z " << sensor.type() <<std::endl;
+        out << "N strips    "  << sensor.nStrips()    << std::endl;
+        out << "Strip pitch "  << sensor.stripPitch() << std::endl;
+        out << "X position (m) "  << sensor.center().x()       << std::endl;
+        out << "Y position (m) "  << sensor.center().y()       << std::endl;
+        out << "Z position (m) "  << sensor.center().z()       << std::endl;
         out << "Measurement direction  "  << std::endl;
-        sensor._measurementDirection.Print();
+        sensor.measurementDirection().Print();
         out << "Normal  "  << std::endl;
-        sensor._normal.Print();
+        sensor.normal().Print();
         out << "Intrinsic Hit Resolution (m) "  <<
-            sensor._intrinsicHitResolution << std::endl;
-        out << "Hit Resolution           (m) "  << sensor._hitResolution <<
+	  sensor.intrinsicHitResolution() << std::endl;
+        out << "Hit Resolution           (m) "  << sensor.hitResolution() <<
             std::endl;
-        out << "Bad Hit Resolution       (m) "  << sensor._badHitResolution
+        out << "Bad Hit Resolution       (m) "  << sensor.badHitResolution()
             << std::endl;
-        out << "Strip Threshold          (m) "  << sensor._threshold <<
+        out << "Strip Threshold          (m) "  << sensor.threshold() <<
             std::endl;
         out << "Sensor dimentions        (m)X(m)  "  <<
-            sensor._stripPitch*sensor._nStrips
-            << " X " << sensor._perpSize  << std::endl;
+	  sensor.measurementSize()
+            << " X " << sensor.perpSize()  << std::endl;
 	iiLayer++;
     }
     out << "PV position " << std::endl;
-    out << "X position    (m) "  << _primaryVertexX._center.x()       << std::endl;
-    out << "Y position    (m) "  << _primaryVertexX._center.y()       << std::endl;
-    out << "Z position    (m) "  << _primaryVertexX._center.z()       << std::endl;
-    out << "PV Resolution (m) "  << _primaryVertexX._hitResolution    << std::endl;
+    out << "X position    (m) "  << _primaryVertexX.center().x()       << std::endl;
+    out << "Y position    (m) "  << _primaryVertexX.center().y()       << std::endl;
+    out << "Z position    (m) "  << _primaryVertexX.center().z()       << std::endl;
+    out << "PV Resolution (m) "  << _primaryVertexX.hitResolution()    << std::endl;
 
 
 
 }
 
-const fc::SensorDescriptor& fc::DetectorGeometry::sensor(int layer) const {
+const fc::Sensor& fc::DetectorGeometry::sensor(int layer) const {
 
     if (layer >= 0 && layer < nSensors()) return _sensors[layer];
     if (layer==-2) return _primaryVertexX;

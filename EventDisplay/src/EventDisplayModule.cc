@@ -147,12 +147,12 @@ void fc::EventDisplayModule::displayGeometry(){
 
     std::string geoSensorName = "SENSOR" + std::to_string(ii_layer);
     const char * geoSensorNameC = geoSensorName.c_str();
-    TGeoVolume *geoSensor = geom->MakeBox(geoSensorNameC, Si, sensor._perpSize/2.0,0.0,sensor._stripPitch*sensor._nStrips/2.0);
+    TGeoVolume *geoSensor = geom->MakeBox(geoSensorNameC, Si, sensor.perpSize()/2.0,0.0,sensor.measurementSize()/2.0);
     geoSensor->SetLineColor(kBlue);
     geoSensor->	SetTransparency(40);
     TGeoRotation *rot = new TGeoRotation();
-    rot->RotateY(-std::atan2(sensor._measurementDirection.Z(),sensor._measurementDirection.X())*180.0/M_PI);
-    top->AddNode(geoSensor,ii_layer+1,new TGeoCombiTrans(sensor._center[0],sensor._center[1],sensor._center[2],rot));
+    rot->RotateY(-std::atan2(sensor.measurementDirection().Z(),sensor.measurementDirection().X())*180.0/M_PI);
+    top->AddNode(geoSensor,ii_layer+1,new TGeoCombiTrans(sensor.center()[0],sensor.center()[1],sensor.center()[2],rot));
     ii_layer++;
 
   }
@@ -270,8 +270,8 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
       for (auto const hitNumber : track.trackHits()){
 	const Hit& hit = recoHitSet.hits()[hitNumber];
 	TVector3 hitPosition = hit.position();
-	TVector3 stripDir = _detectorGeometry.sensor(hit.layer())._normal.Cross(_detectorGeometry.sensor(hit.layer())._measurementDirection);
-	stripDir *= _detectorGeometry.sensor(hit.layer())._perpSize/2.0;
+	TVector3 stripDir = _detectorGeometry.sensor(hit.layer()).perpDirection();
+	stripDir *= _detectorGeometry.sensor(hit.layer()).perpSize()/2.0;
 	lineSet->AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y()+0.001,hitPosition.Z()-stripDir.Z(),
 			 hitPosition.X()+stripDir.X(),hitPosition.Y()+stripDir.Y()+0.001,hitPosition.Z()+stripDir.Z());
       }

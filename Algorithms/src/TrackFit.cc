@@ -122,7 +122,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
                 hitPosition = hitSet.hits()[hit].position();
             } else {
                 layer = hit;
-                hitPosition - detectorGeometry.sensor(layer)._center;
+                hitPosition - detectorGeometry.sensor(layer).center();
             }
 
 
@@ -150,8 +150,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
 
             // Get the inverse resolutions squared
             if (layer < 0) {
-                invMeasurementRes2(0,0) = detectorGeometry.sensor(
-                                              layer)._hitResolution*detectorGeometry.sensor(layer)._hitResolution;;
+                invMeasurementRes2(0,0) = detectorGeometry.sensor(layer).hitResolution()*detectorGeometry.sensor(layer).hitResolution();
             } else {
                 invMeasurementRes2(0,0) = hitSet.hits()[hit].resolution()
                                           *hitSet.hits()[hit].resolution();

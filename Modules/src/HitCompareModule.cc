@@ -93,14 +93,14 @@ void fc::HitCompareModule::compareHits(const GenHitSet & genHitSet,
        //                  3 if a bad hit
       _hHitResults->Fill(0);
 	if (recoHitSet.hits()[bestHit].goodHit()) {
-	  if (std::abs(deltaPosition)<(10.0*_detectorGeometry.sensor(genHit.layer())._hitResolution)){
+	  if (std::abs(deltaPosition)<(10.0*_detectorGeometry.sensor(genHit.layer()).hitResolution())){
 	    _hHitResults->Fill(1);
 	    _hHitResults->Fill(2);
 	  }
 	  _hDeltaHitPositions[genHit.layer()]->Fill(deltaPosition);
 
 	} else {
-	  if (std::abs(deltaPosition)<(10.0*_detectorGeometry.sensor(genHit.layer())._hitResolution)){
+	  if (std::abs(deltaPosition)<(10.0*_detectorGeometry.sensor(genHit.layer()).hitResolution())){
 	    _hHitResults->Fill(1);
 	    _hHitResults->Fill(3);
 	  }
@@ -115,9 +115,7 @@ void fc::HitCompareModule::compareHits(const GenHitSet & genHitSet,
 double fc::HitCompareModule::compareHitPositions(const GenHit & genHit,
         const Hit& recoHit) const {
 
-    return recoHit.position()*_detectorGeometry.sensor(
-               recoHit.layer())._measurementDirection
-           - genHit.position()*_detectorGeometry.sensor(
-               genHit.layer())._measurementDirection;
+    return recoHit.position()*_detectorGeometry.sensor(recoHit.layer()).measurementDirection()
+           - genHit.position()*_detectorGeometry.sensor(genHit.layer()).measurementDirection();
 
 }

@@ -184,12 +184,9 @@ bool fc::intersectStrips(const Hit & xHit, const Hit & sasHit,
     // Note, in the SAS geometry the strips will always intersect so there is no need to check for non intersecting cases
 
     TVector3 xPos = xHit.position();
-    TVector3 xDir = detectorGeometry.sensor(xHit.layer())._normal.Cross(
-                        detectorGeometry.sensor(xHit.layer())._measurementDirection);
+    TVector3 xDir = detectorGeometry.sensor(xHit.layer()).perpDirection();
     TVector3 sasPos = sasHit.position();
-    TVector3 sasDir = detectorGeometry.sensor(sasHit.layer())._normal.Cross(
-                          detectorGeometry.sensor(sasHit.layer())._measurementDirection);
-
+    TVector3 sasDir = detectorGeometry.sensor(sasHit.layer()).perpDirection();
     TVector3 num = (sasPos-xPos).Cross(sasDir);
     TVector3 denom = xDir.Cross(sasDir);
 
@@ -198,9 +195,7 @@ bool fc::intersectStrips(const Hit & xHit, const Hit & sasHit,
     z = xPos + xDir*disX;
 
     double localZ = z.Dot(xDir);
-    if (std::abs(localZ) < (detectorGeometry.sensor(
-                                xHit.layer())._nStrips*detectorGeometry.sensor(
-                                xHit.layer())._stripPitch/2.0)) return true;
+    if (std::abs(localZ) < detectorGeometry.sensor(xHit.layer()).measurementSize()/2.0) return true;
     return false;
 }
 

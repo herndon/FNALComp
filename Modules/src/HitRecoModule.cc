@@ -55,19 +55,19 @@ void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,
 
  
   
-      if (strip.second > _detectorGeometry.sensor(layer)._threshold && strip.first == (initialStrip+stripAdcs.size())){
+      if (strip.second > _detectorGeometry.sensor(layer).threshold() && strip.first == (initialStrip+stripAdcs.size())){
 	//Found an above threshold and an ajacent strip
 	stripAdcs.push_back(strip.second);
       } else if (stripAdcs.size() > 0){
 	// Was not adjacent and above threshold and a cluster is in stripAdc
 	hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
 	stripAdcs.clear();
-	if (strip.second > _detectorGeometry.sensor(layer)._threshold) {
+	if (strip.second > _detectorGeometry.sensor(layer).threshold()) {
 	  // Was above threhold but not adjacent start new cluster
 	  initialStrip = strip.first;
 	  stripAdcs.push_back(strip.second);
 	}
-      } else if (strip.second > _detectorGeometry.sensor(layer)._threshold){
+      } else if (strip.second > _detectorGeometry.sensor(layer).threshold()){
 	// Was above threhold but not adjacent start new cluster, no previous cluster to store
 	initialStrip = strip.first;
 	stripAdcs.push_back(strip.second);
@@ -109,9 +109,9 @@ fc::Hit fc::HitRecoModule::buildHit(int layer, int initialStrip,
 
     double resolution;
     if (goodHit) {
-        resolution = _detectorGeometry.sensor(layer)._hitResolution;
+      resolution = _detectorGeometry.sensor(layer).hitResolution();
     } else {
-        resolution = _detectorGeometry.sensor(layer)._badHitResolution;
+      resolution = _detectorGeometry.sensor(layer).badHitResolution();
     }
 
 
