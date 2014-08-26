@@ -1,0 +1,31 @@
+#ifndef Tracking_BuildTrack_hh
+#define Tracking_BuildTrack_hh
+//============================================================================
+// BuildTrack.hh
+// header with class definition of the BuildTrack building a track from hits
+//
+// Author Matt Herndon, University of Wisconsin,
+//                       Fermi National Accelerator Laborator
+// 2014-07-08
+//============================================================================
+
+
+
+namespace fc {
+
+class DetectorGeometry;
+class HitSet;
+class Track;
+
+const Track buildTrack(const HitSet & hitSet,
+                       const std::vector<int> & trackHitCandidate,
+                       const DetectorGeometry & detectorGeometry, int debugLevel);
+
+const fc::Track buildTrack(const Track & track, const HitSet & hitSet,
+                               const std::vector<int> & newTrackHitCandidate,
+		     const DetectorGeometry & detectorGeometry, int debugLevel);
+
+} // end namescape fc
+
+#endif // Tracking_BuildTrack_hh
+
