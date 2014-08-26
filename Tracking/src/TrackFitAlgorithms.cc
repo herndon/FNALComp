@@ -71,7 +71,6 @@ const TMatrixD fc::calcDxDHC(const Helix& helix, double phi) {
     dxDHC(2,3) = 1;
     dxDHC(2,4) = + radiusCurvature * phi;
 
-    //std::cout << "radiusCurvature " << radiusCurvature << " phi " << phi << std::endl;
 
     return dxDHC;
 }

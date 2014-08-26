@@ -32,7 +32,6 @@ void fc::HitRecoModule::recoHits(const StripSet& stripSet,
 
     for (int iiLayer =  0; iiLayer < _detectorGeometry.nSensors(); ++iiLayer) {
 
-        if (_debugLevel >= 5) std::cout << "HitReco layer: " << iiLayer << std::endl;
         recoHitsLayer(stripSet,iiLayer,hitSet);
 
     } // end layer loop

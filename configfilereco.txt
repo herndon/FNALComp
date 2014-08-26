@@ -1,4 +1,4 @@
-DebugLevel 1 
+DebugLevel 2 
 RunGenHistogrammingModule 1
 RunHitRecoModule 1
 RunHitCompareModule 1

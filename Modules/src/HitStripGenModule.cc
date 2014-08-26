@@ -82,10 +82,6 @@ void fc::HitStripGenModule::makeHitsStrips(const GenTrack & genTrack,
 void fc::HitStripGenModule::storeHitInfo(int trackNumber,int layer,
         TVector3 & hitPosition,GenHitSet & genHitSet) const {
 
-    if (_debugLevel >=5 ) {
-        std::cout << "Layer " << layer << " Hit y " << hitPosition[0] << std::endl;
-        std::cout << "Layer " << layer << " Hit x " << hitPosition[1] << std::endl;
-    }
 
     // Pure gen hit, numberStrip = -1, charge -1, resolution 0.0, goodHit true
     GenHit hit(hitPosition,layer,trackNumber);
@@ -102,10 +98,6 @@ void fc::HitStripGenModule::storeHitInfo(int trackNumber,int layer,
 
     hitPosition = hitPosition + _random.normalDouble(0.0,_detectorGeometry.sensor(layer).intrinsicHitResolution())*_detectorGeometry.sensor(layer).measurementDirection();
 
-    if (_debugLevel >=5 ) {
-        std::cout << "Layer " << layer << " Resolution smeared Hit x " << hitPosition[0]
-                  << std::endl;
-    }
 
 }
 
@@ -142,27 +134,15 @@ void fc::HitStripGenModule::generateClusterFromStripHitPosition(
     int strip = stripHitPosition;
     double remainder = stripHitPosition - strip;
 
-    if (_debugLevel >=5) std::cout << "stripHitPosition " << stripHitPosition
-                                       <<std::endl;
-    if (_debugLevel >=5) std::cout << "strip " << strip << std::endl;
-    if (_debugLevel >=5) std::cout << "remainder " << remainder << std::endl;
-
-
 
     if (remainder < 0.0) {
         initialStrip = strip - 1;
         stripAdcVector.push_back(-1.0*remainder*_detectorGeometry.MIP());
         stripAdcVector.push_back((1.0+remainder)*_detectorGeometry.MIP());
-        if (_debugLevel >=5) std::cout << "initialStrip " << initialStrip << std::endl;
-        if (_debugLevel >=5) std::cout << -1.0*remainder*_detectorGeometry.MIP() <<
-                                           " " << (1.0+remainder)*_detectorGeometry.MIP() << std::endl;
     } else {
         initialStrip = strip;
         stripAdcVector.push_back((1.0-remainder)*_detectorGeometry.MIP());
         stripAdcVector.push_back(remainder*_detectorGeometry.MIP());
-        if (_debugLevel >=5) std::cout << "initialStrip " << initialStrip << std::endl;
-        if (_debugLevel >=5) std::cout << (1.0-remainder)*_detectorGeometry.MIP() <<
-                                           " " << remainder*_detectorGeometry.MIP() << std::endl;
     }
 
 }

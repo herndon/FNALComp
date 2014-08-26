@@ -116,7 +116,6 @@ void fc::EventDisplayModule::processEvent(Event& event) {
 void fc::EventDisplayModule::displayGeometry(){
 
 
-  std::cout << "int Eve init " << std::endl;
   // Instatiate TApplication, controls running root
   if (!_tApp) _tApp = new TApplication("tapp",0,0);
 

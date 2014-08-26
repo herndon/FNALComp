@@ -75,14 +75,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
     // Minimization loop starts here
 
     while (1) {
-        if (_debugLevel >= 5) {
-            std::cout << "FitTo Helix minimization loop, nloop: " << nloops << std::endl;
-        }
         if (nloops > loopMax) {
-            if (_debugLevel >= 5) {
-                std::cout << "TrackFit::FitToHelix >>>>>>>>>>>>>>"
-                          << " Loop count limit reached. nloops = " << nloops << std::endl;
-            }
 
             helix = helixBest;
             d2chi2dHCdHC = d2chi2dHCdHCbest;
@@ -113,7 +106,6 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
             int layer;
             if (_debugLevel >= 5) {
 	      if (hitNumber>=0 && !useBadHits && !hitSet.hits()[hit].goodHit() ) {
-		std::cout << "Didn't use a bad hit" << std::endl;
 		continue;
 	      }
 	    }
@@ -132,10 +124,6 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
                                         detectorGeometry);
 
 
-            if (_debugLevel >= 5) {
-                std::cout << "expectedVector 1D mDim:" << std::endl;
-                expectedMeasurementVector.Print();
-            }
 
             // Find how the measurement expectation varies with each helix coordinate
             expectedMeasurementDerivative = expectedMeasurementDerivatived1DdHC(
@@ -143,11 +131,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
 
             expectedMeasurementDerivativeT.Transpose(expectedMeasurementDerivative);
 
-            if (_debugLevel >= 5) {
-                std::cout << "expectedDerivative d1DdHC  mDim x sDim:" << std::endl;
-                expectedMeasurementDerivative.Print();
-            }
-
+ 
             // Get the inverse resolutions squared
             if (layer < 0) {
                 invMeasurementRes2(0,0) = detectorGeometry.sensor(layer).hitResolution()*detectorGeometry.sensor(layer).hitResolution();
@@ -157,10 +141,6 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
             }
             invMeasurementRes2.Invert();
 
-            if (_debugLevel >= 5) {
-                std::cout << " invMeasurementRes2 mDim x mDim: " << std::endl;
-                invMeasurementRes2.Print();
-            }
 
             // 1D Hit position in local measurement coordinate
             measurementVector = measurementVector1D(hitPosition,layer,detectorGeometry);
@@ -170,22 +150,11 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
             measurementResidualVectorT.Transpose(measurementResidualVector);
 
 
-            if (_debugLevel >= 5) {
-                std::cout << "measurementResidualVector 1D " << std::endl;
-                measurementResidualVector.Print();
-            }
 
             // Accumulate chi2
             double delchi2 = (measurementResidualVectorT * invMeasurementRes2 *
                               measurementResidualVector)(0,0);
             chi2 += delchi2;
-
-
-            if (_debugLevel >=3) {
-                std::cout.flush();
-                std::cout << "Chi2 contribution: " << delchi2 << " total chi2: " << chi2 <<
-                          std::endl;
-            }
 
 
             // Calculate derivatires of the chi2 with respect the helix parameters for each hit and accumulate
@@ -194,21 +163,10 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
             d2chi2dHCdHC += (expectedMeasurementDerivativeT * invMeasurementRes2 *
                              expectedMeasurementDerivative);
 
-            if (_debugLevel >=5) {
-                std::cout << " dchi2dHC total:" << std::endl;
-                dchi2dHC.Print();
-                std::cout << "d2chi2dHCdHC total:" << std::endl;
-                d2chi2dHCdHC.Print();
-            }
-
         }// end hit loop
 
 
         if (std::abs(chi2Best - chi2) < chi2Tol) {
-            if (_debugLevel >=3) {
-                std::cout << "Breaking loop, chi2 " << chi2 << " chi2Best " << chi2Best <<
-                          " chi2Tol " << chi2Tol << std::endl;
-            }
             d2chi2dHCdHCbest = d2chi2dHCdHC;
             chi2Best = chi2;
             helixBest = helix;
@@ -217,11 +175,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
 
         if (chi2 < chi2Best) {
             // chi2 decreased. Save this step as the current best
-            if (_debugLevel >=3) {
-                std::cout << "Chi2 decreased " << chi2 << " compared to " << chi2Best <<
-                          std::endl;
-            }
-            helixSave = helix;
+           helixSave = helix;
             helixBest = helix;
             chi2Best    = chi2;
             dchi2dHCbest = dchi2dHC;
@@ -229,11 +183,7 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
             delta     *= deltaDecr;
         } else {
             // chi2 increased. Restore the current best
-            if (_debugLevel >=3) {
-                std::cout << "Chi2 increased " << chi2 << " compared to " << chi2Best <<
-                          std::endl;
-            }
-            helix = helixSave;
+           helix = helixSave;
             helixBest = helixSave;
             dchi2dHC     = dchi2dHCbest;
             d2chi2dHCdHC  = d2chi2dHCdHCbest;
@@ -255,24 +205,6 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
 
         TMatrixD deltaM = d2chi2dHCdHCinv * dchi2dHCT;
 
-        if (_debugLevel >=5) {
-            std::cout << "d2chi2dadainv " << std::endl;
-            d2chi2dHCdHCinv.Print();
-            std::cout << "dchi2dHCT" << std::endl;
-            dchi2dHCT.Print();
-            std::cout << "deltaM:" << std::endl;
-            deltaM.Print();
-            std::cout << "Intermediate helix before += delta" << std::endl;
-            helix.Print();
-        }
-
-        if (_debugLevel >=3) {
-            std::cout.precision(std::numeric_limits<double>::digits10 + 2);
-            std::cout << "Intermediate Helix " << helix(0) << " " << helix(
-                          1)  << " " << helix(2)  << " " << helix(3)  << " " << helix(4) << std::endl;
-        }
-
-
         // modify the helix
 
 
@@ -280,26 +212,11 @@ const fc::Helix fc::fitToHelix(const Helix& initialHelix, const HitSet& hitSet,
         TVectorD deltaMVector(_sDim,deltaM.GetMatrixArray());
         helix += (deltaMVector); // propegate the helix parameters by derivatires times residual directions sqaured and normlized by uncerainties
 
-        if (_debugLevel >=5) {
-            std::cout << "Intermediate helix after += delta" << std::endl;
-            helix.Print();
-        }
-
-        if (_debugLevel >=3) {
-            std::cout.precision(std::numeric_limits<double>::digits10 + 2);
-            std::cout << "Intermediate Helix after += delta" << helix(0) << " " << helix(
-                          1)  << " " << helix(2)  << " " << helix(3)  << " " << helix(4) << std::endl;
-        }
-
+ 
         workingHelix.setHelix(helix);
 
     }
 
-    if (_debugLevel >=3) {
-        std::cout.precision(std::numeric_limits<double>::digits10 + 2);
-        std::cout << "Final Helix " << helix(0) << " " << helix(1)  << " " << helix(
-                      2)  << " " << helix(3)  << " " << helix(4) << std::endl;
-    }
 
 
 

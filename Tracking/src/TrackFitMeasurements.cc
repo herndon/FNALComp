@@ -38,7 +38,6 @@ const TMatrixD fc::expectedMeasurementDerivatived1DdHC(const Helix& helix,
 
     double phi = 0.0;
 
-    // std::cout << "In expectedMeasurementDerivative1DdHC " << std::endl;
 
     // advances phi to the phi at crossing!
 
@@ -67,21 +66,6 @@ const TMatrixD fc::expectedMeasurementDerivatived1DdHC(const Helix& helix,
 
     TMatrixD dxphidHC(3,_sDim);
     dxphidHC = dxdphi*dphidHC + dxdHC;
-
-//   std::cout << "dxdHC" << std::endl;
-//   dxdHC.Print();
-//   std::cout << "dxdphi" << std::endl;
-//   dxdphi.Print();
-//   std::cout << "dphidHC" << std::endl;
-//   dphidHC.Print();
-//   std::cout << "dsdphi" << std::endl;
-//   dsdphi.Print();
-//   std::cout << "dxphidHC" << std::endl;
-//   dxphidHC.Print();
-
-
-
-
 
     TMatrixD expectedMeasurementDerivative(_mDim,_sDim);
 

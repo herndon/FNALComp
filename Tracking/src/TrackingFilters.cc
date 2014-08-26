@@ -49,7 +49,6 @@ void fcf::duplicateTrackSetFilter(fc::FastTrackSetContainer & trackCandidateSet)
     }
   }
 
-  //std::cout << "Remove matched tracks " << deleteSet.size() << std::endl;
   int ii=0;
     auto newEndItr = std::remove_if( trackCandidateSet.begin(),
                                      trackCandidateSet.end(),
