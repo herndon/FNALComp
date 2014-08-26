@@ -6,8 +6,6 @@
 #include "DataObjects/include/TrackSet.hh"
 #include "Modules/include/TrackRecoModule.hh"
 #include "Tracking/include/TrackRecoStrategy2X1SAS.hh"
-#include "Algorithms/include/TrackFitMeasurements.hh"
-#include "Algorithms/include/InitializeHelix.hh"
 #include "Services/include/Config.hh"
 
 

@@ -5,7 +5,7 @@
 #include "DataObjects/include/HitSet.hh"
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/TrackSet.hh"
-#include "Algorithms/include/BuildTrack.hh"
+#include "Tracking/include/BuildTrack.hh"
 #include "Modules/include/PerfectTrackRecoModule.hh"
 
 fc::PerfectTrackRecoModule::PerfectTrackRecoModule(int debugLevel,

@@ -4,8 +4,8 @@
 #include "Geometry/include/DetectorGeometry.hh"
 #include "DataObjects/include/Track.hh"
 #include "DataObjects/include/HitSet.hh"
-#include "Algorithms/include/InitializeHelix.hh"
-#include "Algorithms/include/BuildTrack.hh"
+#include "Tracking/include/InitializeHelix.hh"
+#include "Tracking/include/BuildTrack.hh"
 #include "Tracking/include/TrackingSelectors.hh"
 #include "Tracking/include/TrackSeedStrategy2X1SAS.hh"
 
