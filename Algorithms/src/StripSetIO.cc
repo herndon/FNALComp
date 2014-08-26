@@ -116,7 +116,7 @@ void fc::StripSetIO::readEvent(StripSet & stripSet, std::ifstream & stripdata) {
 
 }
 
-void fc::StripSetIO::printRawData(std::ifstream & stripdata) const {
+void fc::StripSetIO::printRawData(std::ifstream & stripdata, std::ofstream& debugfile) const {
 
     int ii = 0;
 
@@ -127,7 +127,7 @@ void fc::StripSetIO::printRawData(std::ifstream & stripdata) const {
         stripdata.read (reinterpret_cast<char *>(&binaryData), 1);
         if (stripdata) {
 
-            std::cout << "Byte " << ii << " " << static_cast<int>(binaryData) << "\n";
+	  debugfile << "Byte " << ii << " " << static_cast<int>(binaryData) << "\n";
             ++ii;
         }
     }

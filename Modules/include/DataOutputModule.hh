@@ -32,7 +32,7 @@ class DataOutputModule : public Module {
 
 public:
 
-    DataOutputModule(int,std::ofstream&,
+  DataOutputModule(int debugLevel,std::ofstream & _debugfilem, std::ofstream&,
                      const std::string& iInputTracksLabel,
                      const std::string& iInputHitsLabel,
                      const std::string& iInputStripsLabel,
@@ -43,6 +43,7 @@ public:
 private:
 
     int _debugLevel;
+    std::ofstream & _debugfile;
 
     const std::string  _inTracksLabel;
     const std::string _inHitsLabel;

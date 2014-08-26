@@ -11,6 +11,8 @@
 
 #include "Framework/include/Module.hh"
 #include <vector>
+#include <fstream>
+#include <iostream>
 
 
 namespace fc {
@@ -30,7 +32,7 @@ class TrackRecoModule : public Module {
 
 public:
 
-    TrackRecoModule(int, const std::string& inputHitsLabel,
+  TrackRecoModule(int,    std::ofstream & debugfile, const std::string& inputHitsLabel,
                     const std::string& inputTracksLabel,const std::string& outputTracksLabel,
                     const Config&, const DetectorGeometry &);
 
@@ -40,6 +42,7 @@ public:
 private:
 
     int _debugLevel;
+    std::ofstream & _debugfile;
 
     const std::string _inHitsLabel;
     const std::string _inTracksLabel;

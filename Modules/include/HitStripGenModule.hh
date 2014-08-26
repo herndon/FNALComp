@@ -39,7 +39,7 @@ class HitStripGenModule : public Module {
 
 public:
 
-    HitStripGenModule(int,
+    HitStripGenModule(int,std::ofstream & debugfile,
                       const std::string& iInputTracksLabel,
                       const std::string& iOutputHitsLabel,
                       const std::string& iOutputStripsLabel,
@@ -54,7 +54,9 @@ private:
     std::string const _outTracksLabel;
     std::string const _outHitsLabel;
     std::string const _outStripsLabel;
+
     int _debugLevel;
+   std::ofstream & _debugfile;
 
     // Detector information
     const DetectorGeometry & _detectorGeometry;

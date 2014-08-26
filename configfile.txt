@@ -1,4 +1,5 @@
 DebugLevel 2 
+DebugOutputFileName testlog_dataGen 
 NumberEvents 10 
 NumberTracks 10 
 Seed 1

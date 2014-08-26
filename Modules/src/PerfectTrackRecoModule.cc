@@ -8,11 +8,12 @@
 #include "Tracking/include/BuildTrack.hh"
 #include "Modules/include/PerfectTrackRecoModule.hh"
 
-fc::PerfectTrackRecoModule::PerfectTrackRecoModule(int debugLevel,
+fc::PerfectTrackRecoModule::PerfectTrackRecoModule(int debugLevel,std::ofstream & debugfile,
         const std::string& inputHitsLabel, const std::string& inputGenHitsLabel,
         const std::string& outputTracksLabel,
         const DetectorGeometry & detectorGeometry):
     _debugLevel(debugLevel),
+    _debugfile(debugfile),
     _inHitsLabel(inputHitsLabel),
     _inGenHitsLabel(inputGenHitsLabel),
     _outTracksLabel(outputTracksLabel),
@@ -30,8 +31,8 @@ void fc::PerfectTrackRecoModule::processEvent(Event& event)
     recoTracks(*recoHitSet,*genHitSet,*perfectRecoTrackSet);
 
     if (_debugLevel>=2) {
-        std::cout << "Perfect reconstructed tracks" << std::endl;
-        perfectRecoTrackSet->print(std::cout);
+        _debugfile << "Perfect reconstructed tracks" << std::endl;
+        perfectRecoTrackSet->print(_debugfile);
     }
 
     event.put(_outTracksLabel,std::move(perfectRecoTrackSet) );

@@ -3,7 +3,6 @@
 
 fc::Random::Random(int seed) {
     _engine.seed(seed);
-    std::cout << "Random::Random constructor. Using seed: " << seed << std::endl;
 }
 
 double fc::Random::uniformDouble(double min, double max) {

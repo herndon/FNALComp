@@ -10,7 +10,8 @@
 #include "Services/include/Exception.hh"
 #include <string>
 
-fc::DataSource::DataSource(int debugLevel,std::ifstream& inputeventdatafile,
+fc::DataSource::DataSource(int debugLevel,std::ofstream & debugfile,
+			   std::ifstream& inputeventdatafile,
                            bool genData,
                            const std::string& iOutputTracksLabel,
                            const std::string& iOutputHitsLabel,
@@ -20,6 +21,7 @@ fc::DataSource::DataSource(int debugLevel,std::ifstream& inputeventdatafile,
     _outHitsLabel(iOutputHitsLabel),
     _outStripsLabel(iOutputStripsLabel),
     _debugLevel(debugLevel),
+    _debugfile(debugfile),
     _detectorGeometry(detectorGeometry),
     _inputeventdatafile(inputeventdatafile),
     _genData(genData) {
@@ -54,8 +56,9 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
     }
 
     if ((_debugLevel >=2) || (_debugLevel>=1
-                              && (eventNumber % 1000) == 0)) std::cout << "Event Number: " << eventNumber <<
+                              && (eventNumber % 1000) == 0)) _debugfile << "Event Number: " << eventNumber <<
                                           std::endl;
+    if (_debugLevel==1 && (eventNumber % 100) == 0) std::cout << "Event Number: " << eventNumber << std::endl;
 
 
     GenTrackSetIO genTrackSetIO;
@@ -76,11 +79,11 @@ std::unique_ptr<fc::Event> fc::DataSource::getNextEvent() {
 
     std::unique_ptr<fc::Event> event( new fc::Event {static_cast<unsigned int>(eventNumber)} );
 
-    if (_debugLevel >=2) std::cout << "Event: " << event->eventNumber() <<
+    if (_debugLevel >=2) _debugfile << "Event: " << event->eventNumber() <<
                                        std::endl;
-    if (_debugLevel >=2) genTrackSet->print(std::cout);
-    if (_debugLevel >=2) genHitSet->print(std::cout);
-    if (_debugLevel >=2) stripSet->print(std::cout);
+    if (_debugLevel >=2) genTrackSet->print(_debugfile);
+    if (_debugLevel >=2) genHitSet->print(_debugfile);
+    if (_debugLevel >=2) stripSet->print(_debugfile);
 
     event->put("genData", std::unique_ptr<bool>( new bool {_genData} ) );
     event->put(_outTracksLabel, std::move(genTrackSet) );

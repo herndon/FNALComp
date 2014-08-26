@@ -9,11 +9,12 @@
 #include "Services/include/Config.hh"
 
 
-fc::TrackRecoModule::TrackRecoModule(int debugLevel,
+fc::TrackRecoModule::TrackRecoModule(int debugLevel,    std::ofstream & debugfile,
                                      const std::string& inputHitsLabel,
                                      const std::string& inputTracksLabel, const std::string& outputTracksLabel,
                                      const Config& config, const DetectorGeometry & detectorGeometry):
     _debugLevel(debugLevel),
+    _debugfile(debugfile),
     _inHitsLabel(inputHitsLabel),
     _inTracksLabel(inputTracksLabel),
     _outTracksLabel(outputTracksLabel),
@@ -57,8 +58,8 @@ void fc::TrackRecoModule::recoTracks(const TrackSet& inputTrackSeedSet,
     }
 
     if (_debugLevel>=2) {
-        std::cout << "Reconstructed track set" << std::endl;
-        recoTrackSet.print(std::cout);
+        _debugfile << "Reconstructed track set" << std::endl;
+        recoTrackSet.print(_debugfile);
     }
 
 }

@@ -14,6 +14,9 @@
 #include "TVector3.h"
 #include <vector>
 #include <string>
+#include <fstream>
+#include <iostream>
+
 
 
 namespace fc {
@@ -32,7 +35,8 @@ class HitRecoModule : public Module {
 
 public:
 
-    HitRecoModule(int, const std::string& iInputStripsLabel,
+  HitRecoModule(int,  std::ofstream & debugfile,
+		  const std::string& iInputStripsLabel,
                   const std::string& iOutputHitsLabel, const DetectorGeometry &);
 
     void processEvent(Event& ) override;
@@ -41,6 +45,8 @@ public:
 private:
 
     int _debugLevel;
+  std::ofstream & _debugfile;
+
     const std::string _inStripsLabel;
     const std::string _outHitsLabel;
 

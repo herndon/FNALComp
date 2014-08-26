@@ -107,6 +107,7 @@ void fc::EventDisplayModule::processEvent(Event& event) {
     gEve->AddElement(sasZHitList);
  
     gEve->Redraw3D(kTRUE);
+    // This output must go directly to the screen
     if (_debugLevel>=1) std::cout << "Exit Eve Veiwer to continue processing events." << std::endl;
     _tApp->Run(kTRUE);
   }

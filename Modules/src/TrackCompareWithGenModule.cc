@@ -11,11 +11,12 @@
 #include "Tracking/include/TrackMatching.hh"
 #include "Modules/include/TrackCompareWithGenModule.hh"
 
-fc::TrackCompareWithGenModule::TrackCompareWithGenModule(int debugLevel,
+fc::TrackCompareWithGenModule::TrackCompareWithGenModule(int debugLevel,std::ofstream & debugfile,
         const std::string& inputGenTracksLabel,
         const std::string& inputRecTracksLabel,
         const DetectorGeometry & detectorGeometry ):
     _debugLevel(debugLevel),
+    _debugfile(debugfile),
     _detectorGeometry(detectorGeometry),
     _genTracksLabel(inputGenTracksLabel),
     _recTracksLabel(inputRecTracksLabel),  
@@ -129,7 +130,6 @@ void fc::TrackCompareWithGenModule::processEvent(Event& event)
     Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_genTracksLabel);
     Handle<TrackSet> recoTrackSet = event.get<TrackSet>(_recTracksLabel);
 
-    if (_debugLevel>=5) std::cout << "Event " << event.eventNumber() << std::endl;
     compareTracks(*genTrackSet,*recoTrackSet);
 
     _genTracks += genTrackSet->genTracks().size();
@@ -154,8 +154,8 @@ void fc::TrackCompareWithGenModule::compareTracks(const GenTrackSet & genTrackSe
  
     // 	const GenTrack& genTrack = fcf::matchTrack(track,genTrackSet,_detectorGeometry,goodMatchLoose,goodMatchXYLoose,goodMatchTight,goodMatchXYTight);
  
-    // 	if (!goodMatchLoose) std::cout << "Found a ghost track" << std::endl;
-    // 	if (!goodMatchXYLoose) std::cout << "also bad in xy" << std::endl;
+    // 	if (!goodMatchLoose) _debugfile << "Found a ghost track" << std::endl;
+    // 	if (!goodMatchXYLoose) _debugfile << "also bad in xy" << std::endl;
 
     //   }
     // }
@@ -252,16 +252,16 @@ void fc::TrackCompareWithGenModule::fillHistograms(const TVectorD & deltaHP,
 void fc::TrackCompareWithGenModule::endJob() {
   if (_debugLevel >=1) {
 
-    std::cout << "TrackCompareWithGenModule Results" << std::endl;
-  std::cout << "Gen Tracks:                     " << _genTracks << std::endl;
-  std::cout << "Reco eff:                       " << static_cast<double>(_matchedRecoTracksTight)/static_cast<double>(_genTracks) << std::endl;     
-  std::cout << "Misreconstructed Track rate:    " << (static_cast<double>(_matchedRecoTracksLoose) - static_cast<double>(_matchedRecoTracksTight))/static_cast<double>(_recoTracks) << std::endl;
-  std::cout << "Ghost Track rate:               " << (static_cast<double>(_recoTracks) - static_cast<double>(_matchedRecoTracksLoose))/static_cast<double>(_recoTracks) << std::endl;
+  _debugfile << "TrackCompareWithGenModule Results" << std::endl;
+  _debugfile << "Gen Tracks:                     " << _genTracks << std::endl;
+  _debugfile << "Reco eff:                       " << static_cast<double>(_matchedRecoTracksTight)/static_cast<double>(_genTracks) << std::endl;     
+  _debugfile << "Misreconstructed Track rate:    " << (static_cast<double>(_matchedRecoTracksLoose) - static_cast<double>(_matchedRecoTracksTight))/static_cast<double>(_recoTracks) << std::endl;
+  _debugfile << "Ghost Track rate:               " << (static_cast<double>(_recoTracks) - static_cast<double>(_matchedRecoTracksLoose))/static_cast<double>(_recoTracks) << std::endl;
 
-  std::cout << "Reco eff XY:                    " << static_cast<double>(_matchedRecoTracksXYTight)/static_cast<double>(_genTracks) << std::endl;     
-  std::cout << "Misreconstructed Track rate XY: " << (static_cast<double>(_matchedRecoTracksXYLoose) - static_cast<double>(_matchedRecoTracksXYTight))/static_cast<double>(_recoTracks) << std::endl;
+  _debugfile << "Reco eff XY:                    " << static_cast<double>(_matchedRecoTracksXYTight)/static_cast<double>(_genTracks) << std::endl;     
+  _debugfile << "Misreconstructed Track rate XY: " << (static_cast<double>(_matchedRecoTracksXYLoose) - static_cast<double>(_matchedRecoTracksXYTight))/static_cast<double>(_recoTracks) << std::endl;
 
-  std::cout << "Ghost Track rate XY:            " << (static_cast<double>(_recoTracks) - static_cast<double>(_matchedRecoTracksXYLoose))/static_cast<double>(_recoTracks) << std::endl;
+  _debugfile << "Ghost Track rate XY:            " << (static_cast<double>(_recoTracks) - static_cast<double>(_matchedRecoTracksXYLoose))/static_cast<double>(_recoTracks) << std::endl;
   }
 
 

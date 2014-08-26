@@ -5,7 +5,6 @@ Number Events: 10
 Number Tracks 10
 Random number seed 1
 Root file name genHistograms.root
-Random::Random constructor. Using seed: 1
 Detector Geometry information
 Detector Geometry version: 2
 Magnetic field, Bz 1 Tesla
@@ -23,9 +22,13 @@ X position (m) 0
 Y position (m) 0.2
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
+X 1
+Y 0
+Z 0
 Normal  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+X 0
+Y 1
+Z 0
 Intrinsic Hit Resolution (m) 1.2e-05
 Hit Resolution           (m) 1.25e-05
 Bad Hit Resolution       (m) 4.7e-05
@@ -40,9 +43,13 @@ X position (m) 0
 Y position (m) 0.4
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
+X 1
+Y 0
+Z 0
 Normal  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+X 0
+Y 1
+Z 0
 Intrinsic Hit Resolution (m) 2.5e-05
 Hit Resolution           (m) 2.6e-05
 Bad Hit Resolution       (m) 9.5e-05
@@ -57,9 +64,13 @@ X position (m) 0
 Y position (m) 0.6
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
+X 1
+Y 0
+Z 0
 Normal  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+X 0
+Y 1
+Z 0
 Intrinsic Hit Resolution (m) 5e-05
 Hit Resolution           (m) 5.2e-05
 Bad Hit Resolution       (m) 0.00019
@@ -74,9 +85,13 @@ X position (m) 0
 Y position (m) 0.8
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
+X 1
+Y 0
+Z 0
 Normal  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+X 0
+Y 1
+Z 0
 Intrinsic Hit Resolution (m) 5e-05
 Hit Resolution           (m) 5.2e-05
 Bad Hit Resolution       (m) 0.00019
@@ -91,9 +106,13 @@ X position (m) 0
 Y position (m) 1
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(1.000000,0.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,0.000000)
+X 1
+Y 0
+Z 0
 Normal  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+X 0
+Y 1
+Z 0
 Intrinsic Hit Resolution (m) 5e-05
 Hit Resolution           (m) 5.2e-05
 Bad Hit Resolution       (m) 0.00019
@@ -108,9 +127,13 @@ X position (m) 0
 Y position (m) 0.2002
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi)=(1.000000,0.000000,0.000000)
+X 0
+Y 0
+Z 1
 Normal  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+X 0
+Y 1
+Z 0
 Intrinsic Hit Resolution (m) 1.2e-05
 Hit Resolution           (m) 1.25e-05
 Bad Hit Resolution       (m) 4.7e-05
@@ -125,9 +148,13 @@ X position (m) 0
 Y position (m) 0.4002
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi)=(1.000000,0.000000,0.000000)
+X 0
+Y 0
+Z 1
 Normal  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+X 0
+Y 1
+Z 0
 Intrinsic Hit Resolution (m) 2.5e-05
 Hit Resolution           (m) 2.6e-05
 Bad Hit Resolution       (m) 9.5e-05
@@ -142,9 +169,13 @@ X position (m) 0
 Y position (m) 0.6002
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,0.000000,1.000000) (rho,theta,phi)=(1.000000,0.000000,0.000000)
+X 0
+Y 0
+Z 1
 Normal  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+X 0
+Y 1
+Z 0
 Intrinsic Hit Resolution (m) 5e-05
 Hit Resolution           (m) 5.2e-05
 Bad Hit Resolution       (m) 0.00019
@@ -159,9 +190,13 @@ X position (m) 0
 Y position (m) 0.8002
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(0.984808,0.000000,-0.173648) (rho,theta,phi)=(1.000000,100.000000,0.000000)
+X 0.984808
+Y 0
+Z -0.173648
 Normal  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+X 0
+Y 1
+Z 0
 Intrinsic Hit Resolution (m) 5e-05
 Hit Resolution           (m) 5.2e-05
 Bad Hit Resolution       (m) 0.00019
@@ -176,9 +211,13 @@ X position (m) 0
 Y position (m) 1.0002
 Z position (m) 0
 Measurement direction  
-TVector3 A 3D physics vector (x,y,z)=(0.984808,0.000000,0.173648) (rho,theta,phi)=(1.000000,80.000000,0.000000)
+X 0.984808
+Y 0
+Z 0.173648
 Normal  
-TVector3 A 3D physics vector (x,y,z)=(0.000000,1.000000,0.000000) (rho,theta,phi)=(1.000000,90.000000,90.000000)
+X 0
+Y 1
+Z 0
 Intrinsic Hit Resolution (m) 5e-05
 Hit Resolution           (m) 5.2e-05
 Bad Hit Resolution       (m) 0.00019

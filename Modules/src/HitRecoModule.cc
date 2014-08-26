@@ -6,10 +6,11 @@
 #include "DataObjects/include/StripSet.hh"
 #include "Modules/include/HitRecoModule.hh"
 
-fc::HitRecoModule::HitRecoModule(int debugLevel,
+fc::HitRecoModule::HitRecoModule(int debugLevel,  std::ofstream & debugfile,
                                  const std::string& iInputStripsLabel, const std::string& iOutputHitsLabel,
                                  const DetectorGeometry & detectorGeometry):
     _debugLevel(debugLevel),
+    _debugfile(debugfile),
     _inStripsLabel(iInputStripsLabel),
     _outHitsLabel(iOutputHitsLabel),
     _detectorGeometry(detectorGeometry) {
@@ -22,7 +23,7 @@ void fc::HitRecoModule::processEvent(fc::Event& event)
 
     recoHits(*genStripSet,*recoHitSet);
 
-    if (_debugLevel >= 2) recoHitSet->print(std::cout);
+    if (_debugLevel >= 2) recoHitSet->print(_debugfile);
 
     event.put(_outHitsLabel, std::move(recoHitSet));
 }

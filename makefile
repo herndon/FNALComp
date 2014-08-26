@@ -32,7 +32,7 @@ $(MLIB_PATH)%.o: */test/%.cc
 test: $(TESTTARGETS)
 
 %.test: 
-	./$* > testlog_$*
+	./$* 
 	diff -qs $(TEST_PATH)log_$* testlog_$*
 
 clean:

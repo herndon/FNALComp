@@ -1,7 +1,8 @@
 #define _USE_MATH_DEFINES
 #include <string>
 #include<stdlib.h>
-#include<iostream>
+#include <iostream>
+#include <fstream>
 #include<cmath>
 #include "Services/include/Random.hh"
 #include "DataObjects/include/GenTrack.hh"
@@ -15,7 +16,7 @@
 #include "Geometry/include/StripHitFunctions.hh"
 #include "Modules/include/HitStripGenModule.hh"
 
-fc::HitStripGenModule::HitStripGenModule(int debugLevel,
+fc::HitStripGenModule::HitStripGenModule(int debugLevel,std::ofstream & debugfile,
         const std::string& iInputTracksLabel,
         const std::string& iOutputHitsLabel,
         const std::string& iOutputStripsLabel,
@@ -24,7 +25,8 @@ fc::HitStripGenModule::HitStripGenModule(int debugLevel,
     _outHitsLabel(iOutputHitsLabel),
     _outStripsLabel(iOutputStripsLabel),
     _debugLevel(debugLevel),
-    _detectorGeometry(detectorGeometry),
+    _debugfile(debugfile), 
+   _detectorGeometry(detectorGeometry),
     _random(random) {
 }
 

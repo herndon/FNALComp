@@ -10,10 +10,11 @@
 #include "Services/include/Config.hh"
 #include "Services/include/Exception.hh"
 
-fc::TrackSeedModule::TrackSeedModule(int debugLevel,
+fc::TrackSeedModule::TrackSeedModule(int debugLevel,  std::ofstream & debugfile,
 	const std::string& inputHitsLabel, const std::string& outputTracksLabel, const std::string& trackSeedStrategy,
         const Config& config, const DetectorGeometry & detectorGeometry):
     _debugLevel(debugLevel),
+    _debugfile(debugfile),
     _inHitsLabel(inputHitsLabel),
     _outTracksLabel(outputTracksLabel),
     _trackSeedStrategy(trackSeedStrategy),
@@ -31,8 +32,8 @@ void fc::TrackSeedModule::processEvent(Event& event)
     findTrackSeeds(*recoHitSet,*recoTrackSeedSet);
 
     if (_debugLevel>=2) {
-        std::cout << "Seed track set" << std::endl;
-        recoTrackSeedSet->print(std::cout);
+        _debugfile << "Seed track set" << std::endl;
+        recoTrackSeedSet->print(_debugfile);
     }
 
 

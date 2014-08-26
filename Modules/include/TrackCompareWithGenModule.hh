@@ -11,6 +11,9 @@
 
 #include "Framework/include/Module.hh"
 #include "TVectorD.h"
+#include <fstream>
+#include <iostream>
+
 
 class TH1F;
 
@@ -32,7 +35,7 @@ class TrackCompareWithGenModule : public Module {
 
 public:
 
-    TrackCompareWithGenModule(int debugLevel,
+  TrackCompareWithGenModule(int debugLevel, std::ofstream & debugfile,
                        const std::string& inputGenTracksLabel,
                        const std::string& inputRecTracksLabel,
                        const DetectorGeometry & detectorGeometry );
@@ -45,6 +48,7 @@ public:
 private:
 
     int _debugLevel;
+    std::ofstream & _debugfile;
 
     // Detector information
     const DetectorGeometry & _detectorGeometry;

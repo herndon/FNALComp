@@ -33,15 +33,21 @@ int main (int argc,const char *argv[])
   int eventNumber = -1;
   if (argc>1) eventNumber = std::atoi( argv[1] );
 
-  
-  std::cout << "EventNumber " << eventNumber << std::endl;
-
     // data objects created in this module are reconstruted, not generated
     bool genData = false;
 
     // Get configuration information.
     std::ifstream configfile("configfilereco.txt");
     fc::Config config(configfile,genData,eventNumber);
+
+
+    // iostream file for debug output
+    std::ofstream debugfile(config.debugFileName().c_str());
+
+    if (config.debugLevel() == 0 ) std::cout << "dataReco running " << std::endl;
+
+    if (config.debugLevel() >=1 ) config.printConfig(debugfile);
+
 
     // Intialize Objects and Modules that are persistant
 
@@ -50,8 +56,7 @@ int main (int argc,const char *argv[])
     fc::DetectorGeometry detectorGeometry(fc::buildDetectorGeometry(
             detectorgeometryfile));
     // files are closed by the default destructor
-    if (config.debugLevel() >= 1) detectorGeometry.printDetectorGeometry(
-            std::cout);
+    if (config.debugLevel() >= 2) detectorGeometry.printDetectorGeometry(debugfile);
 
     // Input and output files
     std::ifstream inputeventdatafile("genoutputeventdatafile.bin",std::ios::binary);
@@ -62,7 +67,7 @@ int main (int argc,const char *argv[])
 
 
 // Instantiate the class which handles the details of processing the events
-    fc::EventProcessor processor( new fc::DataSource(config.debugLevel(),
+    fc::EventProcessor processor( new fc::DataSource(config.debugLevel(),debugfile,
                                   inputeventdatafile, genData,
                                   "genTracks", //get these tracks from file
                                   "genHits", //get these hits from file
@@ -80,35 +85,36 @@ int main (int argc,const char *argv[])
 						     detectorGeometry)); //get these strips
  
   if (config.runHitRecoModule()) 
-    processor.addModule( new fc::HitRecoModule(config.debugLevel(),"genStrips",
-					       "recoHits", detectorGeometry));
+    processor.addModule( new fc::HitRecoModule(config.debugLevel(),debugfile,
+					       "genStrips","recoHits", detectorGeometry));
+
   if (config.runHitCompareModule()) 
     processor.addModule( new fc::HitCompareModule(config.debugLevel(),"genHits",
 						  "recoHits", detectorGeometry));
 
   if (config.runPerfectTrackRecoModule()) 
-    processor.addModule( new fc::PerfectTrackRecoModule(config.debugLevel(),
+    processor.addModule( new fc::PerfectTrackRecoModule(config.debugLevel(),debugfile,
 							"recoHits", "genHits", "perfectRecoTracks", detectorGeometry) );
   if (config.runPerfectTrackCompareWithGenModule()) 
-    processor.addModule( new fc::TrackCompareWithGenModule(config.debugLevel(),
+    processor.addModule( new fc::TrackCompareWithGenModule(config.debugLevel(),debugfile,
 							   "genTracks", "perfectRecoTracks", detectorGeometry) );
 
   if (config.runTrackSeedModule()) 
-    processor.addModule( new fc::TrackSeedModule(config.debugLevel(),
+    processor.addModule( new fc::TrackSeedModule(config.debugLevel(),debugfile,
 						      "recoHits", "seedTracks","trackSeedStrategy2X1SASML",config,detectorGeometry) );
   if (config.runTrackSeedCompareModule()) 
-    processor.addModule( new fc::TrackSeedCompareModule(config.debugLevel(),
+    processor.addModule( new fc::TrackSeedCompareModule(config.debugLevel(),debugfile,
 							"perfectRecoTracks", "seedTracks", detectorGeometry) );
 
 
   if (config.runTrackRecoModule()) 
-    processor.addModule( new fc::TrackRecoModule(config.debugLevel(), "recoHits",
+    processor.addModule( new fc::TrackRecoModule(config.debugLevel(), debugfile,"recoHits",
 						 "seedTracks", "recoTracks",config,detectorGeometry) );
   if (config.runTrackCompareWithPerfectModule()) 
     processor.addModule( new fc::TrackCompareWithPerfectModule(config.debugLevel(),
 							       "perfectRecoTracks", "recoTracks", detectorGeometry) );
   if (config.runRecoTrackCompareWithGenModule()) 
-    processor.addModule( new fc::TrackCompareWithGenModule(config.debugLevel(),
+    processor.addModule( new fc::TrackCompareWithGenModule(config.debugLevel(), debugfile,
 							   "genTracks", "recoTracks", detectorGeometry) );
  
 

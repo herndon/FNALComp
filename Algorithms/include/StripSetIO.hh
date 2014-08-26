@@ -43,7 +43,7 @@ public:
     void readEvent(StripSet &,
                    std::ifstream&);  //!< Read all strip information for all sensors std::ifstream file for event _event
 
-    void printRawData(std::ifstream&) const;
+  void printRawData(std::ifstream&, std::ofstream&) const;
 
 private:
 

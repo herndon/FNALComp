@@ -8,13 +8,14 @@
 #include "Modules/include/DataOutputModule.hh"
 
 
-fc::DataOutputModule::DataOutputModule(int debugLevel,
+fc::DataOutputModule::DataOutputModule(int debugLevel,std::ofstream & debugfile,
                                        std::ofstream& outputeventdatafile,
                                        const std::string& iInputTracksLabel,
                                        const std::string& iInputHitsLabel,
                                        const std::string& iInputStripsLabel,
                                        const DetectorGeometry & detectorGeometry):
     _debugLevel(debugLevel),
+    _debugfile(debugfile),
     _inTracksLabel(iInputTracksLabel),
     _inHitsLabel(iInputHitsLabel),
     _inStripsLabel(iInputStripsLabel),
@@ -32,10 +33,10 @@ void fc::DataOutputModule::processEvent(Event& event) {
     auto genHitSet = event.get<fc::GenHitSet>(_inHitsLabel);
     auto stripSet = event.get<fc::StripSet>(_inStripsLabel);
 
-    if (_debugLevel >=2) std::cout << "Event: " << event.eventNumber() << std::endl;
-    if (_debugLevel >=2) genTrackSet->print(std::cout);
-    if (_debugLevel >=2) genHitSet->print(std::cout);
-    if (_debugLevel >=2) stripSet->print(std::cout);
+    if (_debugLevel >=2) _debugfile << "Event: " << event.eventNumber() << std::endl;
+    if (_debugLevel >=2) genTrackSet->print(_debugfile);
+    if (_debugLevel >=2) genHitSet->print(_debugfile);
+    if (_debugLevel >=2) stripSet->print(_debugfile);
 
     _outputeventdatafile << event.eventNumber() << std::endl;
 

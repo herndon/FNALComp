@@ -9,6 +9,8 @@
 // 2014-06-11
 //============================================================================
 
+#include <fstream>
+#include <iostream>
 #include "Framework/include/Module.hh"
 
 
@@ -27,7 +29,7 @@ class PerfectTrackRecoModule : public Module {
 
 public:
 
-    PerfectTrackRecoModule(int, const std::string& inputHitsLabel,
+    PerfectTrackRecoModule(int,std::ofstream& debugfile, const std::string& inputHitsLabel,
                            const std::string& inputGenHitsLabel, const std::string& outputTracksLabel,
                            const DetectorGeometry &);
 
@@ -37,6 +39,7 @@ public:
 private:
 
     int _debugLevel;
+  std::ofstream & _debugfile;
 
     const std::string _inHitsLabel;
     const std::string _inGenHitsLabel;

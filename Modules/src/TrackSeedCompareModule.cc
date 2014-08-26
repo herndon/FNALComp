@@ -9,11 +9,12 @@
 #include "TH1F.h"
 #include "Services/include/UniqueRootDirectory.hh"
 
-fc::TrackSeedCompareModule::TrackSeedCompareModule(int debugLevel,
+fc::TrackSeedCompareModule::TrackSeedCompareModule(int debugLevel,  std::ofstream & debugfile,
         const std::string& inputPerfectTracksLabel,
         const std::string& inputSeedTracksLabel,
         const DetectorGeometry & detectorGeometry ):
     _debugLevel(debugLevel),
+    _debugfile(debugfile),
     _detectorGeometry(detectorGeometry),
     _perfectTracksLabel(inputPerfectTracksLabel),
     _seedTracksLabel(inputSeedTracksLabel) {

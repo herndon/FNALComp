@@ -34,7 +34,8 @@ class DataSource : public Source {
 
 public:
 
-    DataSource(int, std::ifstream&, bool genData,
+    DataSource(int, std::ofstream & debugfile,
+	       std::ifstream&, bool genData,
                const std::string& iOutputTracksLabel,
                const std::string& iOutputHitsLabel,
                const std::string& iOutputStripsLabel,
@@ -48,7 +49,9 @@ private:
     std::string const _outTracksLabel;
     std::string const _outHitsLabel;
     std::string const _outStripsLabel;
+
     int _debugLevel;
+    std::ofstream & _debugfile;
 
     const DetectorGeometry & _detectorGeometry;
 

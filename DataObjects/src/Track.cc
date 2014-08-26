@@ -75,7 +75,7 @@ void fc::Track::print(ostream& out) const {
     if (_nDof > 0) {
 
       out << "chi2 " << chi2() << " ndof " << nDof() << std::endl;
-      covMatrix().Print();
+      //covMatrix().Print();
 
     }
 

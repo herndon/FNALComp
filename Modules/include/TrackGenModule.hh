@@ -32,7 +32,7 @@ class TrackGenModule : public Module {
 
 public:
 
-    TrackGenModule(int debugLevel, int numberOfTracks,
+  TrackGenModule(int debugLevel, std::ofstream & debugfile, int numberOfTracks,
                    const std::string& iTracksLabel, //label used for the generated tracks
                    const DetectorGeometry &,Random &);
 
@@ -41,8 +41,10 @@ public:
 
 private:
 
-    int _debugLevel;
-    int _numberOfTracks;
+  int _debugLevel;
+  std::ofstream & _debugfile;
+
+  int _numberOfTracks;
 
     const std::string _tracksLabel;
 

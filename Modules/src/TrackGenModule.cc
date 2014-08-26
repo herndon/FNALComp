@@ -11,10 +11,11 @@
 #include "TLorentzVector.h"
 
 
-fc::TrackGenModule::TrackGenModule(int debugLevel, int numberOfTracks,
+fc::TrackGenModule::TrackGenModule(int debugLevel, std::ofstream & debugfile, int numberOfTracks,
                                    const std::string& iTracksLabel, const DetectorGeometry & detectorGeometry,
                                    Random & random):
     _debugLevel(debugLevel),
+    _debugfile(debugfile),
     _numberOfTracks(numberOfTracks),
     _tracksLabel(iTracksLabel),
     _detectorGeometry(detectorGeometry),

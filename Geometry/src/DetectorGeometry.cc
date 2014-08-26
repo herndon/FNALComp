@@ -43,9 +43,14 @@ void fc::DetectorGeometry::printDetectorGeometry(ostream& out) const {
         out << "Y position (m) "  << sensor.center().y()       << std::endl;
         out << "Z position (m) "  << sensor.center().z()       << std::endl;
         out << "Measurement direction  "  << std::endl;
-        sensor.measurementDirection().Print();
+        out << "X "  << sensor.measurementDirection().x()       << std::endl;
+        out << "Y "  << sensor.measurementDirection().y()       << std::endl;
+        out << "Z "  << sensor.measurementDirection().z()       << std::endl;
         out << "Normal  "  << std::endl;
-        sensor.normal().Print();
+       out << "X "  << sensor.normal().x()       << std::endl;
+        out << "Y "  << sensor.normal().y()       << std::endl;
+        out << "Z "  << sensor.normal().z()       << std::endl;
+ 
         out << "Intrinsic Hit Resolution (m) "  <<
 	  sensor.intrinsicHitResolution() << std::endl;
         out << "Hit Resolution           (m) "  << sensor.hitResolution() <<

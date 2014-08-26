@@ -14,7 +14,6 @@ fc::Config::Config(std::ifstream & configfile,int genData,int eventNumberForEven
     _eventNumberForEventDisplay(eventNumberForEventDisplay) {
 
     _initConfig(configfile);
-    if (_debugLevel >=1 )printConfig(std::cout);
 
 }
 
@@ -39,18 +38,22 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
             } else if (configString == "NumberTracks") {
                 configfile >> _numberTracks;
             } else if (configString == "Seed") {
-                configfile >> _seed;
-            } else if (configString == "RootFileName") {
-                configfile >> _rootFileName;
+	      configfile >> _seed;
+	    } else if (configString == "DebugOutputFileName") {
+	      configfile >> _debugFileName;
+	    } else if (configString == "RootFileName") {
+	      configfile >> _rootFileName;
             } else {
-                throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
+	      throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
             }
         } else {
 	  if (configString == "DebugLevel") {
 	    configfile >> _debugLevel;
 	  } else if (configString == "RootFileName") {
 	    configfile >> _rootFileName;
-	  } else if (configString == "RunGenHistogrammingModule") {
+          } else if (configString == "DebugOutputFileName") {
+	    configfile >> _debugFileName;
+ 	  } else if (configString == "RunGenHistogrammingModule") {
 	    configfile >> _runGenHistogrammingModule;
 	  } else if (configString == "RunHitRecoModule") {
 	    configfile >> _runHitRecoModule;
@@ -83,7 +86,7 @@ void fc::Config::_initConfig(std::ifstream & configfile) {
 	  } else if (configString == "maxChi2NDofCut") {
 	    configfile >> _maxChi2NDofCut;
 	  } else {
-	    throw Exception("Config::_initConfig: Unrecognized parameter in configfile.txt");
+	    throw Exception("Config::_initConfig: Unrecognized parameter in configfilereco.txt");
 	  }
 
         }

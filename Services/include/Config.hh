@@ -78,6 +78,10 @@ public:
         return _numberTracks;
     }; //!< Returns number of tracks to generate per event
 
+    std::string const& debugFileName() const {
+        return _debugFileName;    //!< Returns the name of text file for debug output
+    }
+
     std::string const& rootFileName() const {
         return _rootFileName;    //!< Returns the name of the root file to be created.
     }
@@ -128,6 +132,8 @@ private:
   int _numberEvents;
   int _numberTracks;
   int _seed;
+
+  std::string _debugFileName;
 
   std::string _rootFileName;
 
