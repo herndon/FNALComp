@@ -77,12 +77,17 @@ the strip data to be stored in a sparse and ordered format.
 
 Access methods:
 \begin{itemize}
-\item int getNumberLayers() To assist in iterating over the vector or directly over the layerMaps
-\item getStrips(): const reference access to the vector using a generic method. The underlying vector container could be 
+\item int numberLayers() To assist in iterating over the vector or directly over the layerMaps
+\item strips(): const reference access to the vector using a generic method. The underlying vector container could be 
 changed to several different container types without effecting the user interface.
-\item getLayerStripMap(int layer): const reference access to a the strip data from a single layer. The method explicitly 
-indicates that a map is retrieved since maps have access methods methods that are not common to all containers.
-\item insertStrip(unsigned int layer, int stripNumber, int acd):  To insert data into the set.
+\item layerStrips(int layer): const reference access to a the strip
+  data from a single layer. Note that a map is retrieved since maps
+  have access methods that are not common to all containers.
+\item stripNumber(const iterator) or stripNumber(map pair) to get the
+  strip Number
+\item stripAdc(const iterator) or stripAdc(map pair) to get the
+  strip ADC
+\item insertStrip(unsigned int layer, int stripNumber, int adc):  To insert data into the set.
 \item print(ostream\&): To print to an a user specified ostream.
 \end{itemize}
 
@@ -98,11 +103,12 @@ The data is stored, or ``streamed'', to disk in bit packed format to illustrate 
 format in many experiments.  The data is stored in individual bytes or pairs of bytes for information
 that does not fit in one byte.  The data structure is as follows.
 \begin{itemize}
-\item Strips: In clear test to identify the Set
+\item Strips: In clear text to identify the Set
 \item  1 byte, version: The version is checked on input to make sure the correct streamer code is being used.
 \item - 1 byte, layer number: 0-9 (repeated once per layer)
 \item - 1 byte, number of strips: max 256
-\item -- 2 bytes. strip number and adc: strip number 11 bytes, max 2048, and acd 5 bytes, max 32. (repeated number of strips times)
+\item -- 2 bytes. strip number max 4048  (these items repeated number of strips times)
+\item -- 1 byte. adc max 64 
 \end{itemize}
 
 Note layer numbers are not necessary to the
@@ -131,13 +137,13 @@ Implemented in the GenHit.hh and GenHit.cc files in the DataObjects directories.
 The GenHit class contains:\\
 
 \begin{itemize}
-\item TVector3 \_hitPosition
+\item TVector3 \_position
 \item int \_layer
 \item Int \_trackNumber
 \end{itemize}
 
 
-The class server for generator GenHits only.\\
+This class serves for generator GenHits only.\\
 \\  
 
 Constructor:
@@ -148,11 +154,14 @@ Constructor:
 
 Access methods:
 \begin{itemize}
-\item getHitPosition():... names correspond to the data members
-\item getLayer()
-\item getTrackNumber()
+\item position():... names correspond to the data members
+\item layer()
+\item trackNumber()
 \item print(ostream\&): To print to an a user specified ostream.
 \end{itemize}
+
+Accessor are named for class variables.  For example position()
+retrieves the hit \_position. 
 
 A number of helper functions exist in the StripHitFunctions file in Geometry directories.  These functions
 can convert from hit position to local and strip number position or back identify whether a hit position at a sensor
@@ -169,7 +178,7 @@ The GenHitSet contains a typedef GenHitSetContainer of type std::vector of GenHi
 Access methods:
 
 \begin{itemize}
-\item getGenHits(): const reference access to the vector using a generic method.
+\item genHits(): const reference access to the vector using a generic method.
 The vector index indexes the GenHit number to allow direct access to a hit of a known number.
 
 \item insertGenHit(GenHit): Provided to insert data into the set.
@@ -189,7 +198,7 @@ are performed by the readEvent and writeEvent functions.
 The data is stored in text format for simplicity.
 
 \begin{itemize}
-\item  Hits: to identify the set
+\item  Hits: text string to identify the set
 \item version: The version is checked on input to make sure the correct streamer code is being used.
 \item number of hits
 \item hit number (repeated number of hits times)
@@ -208,17 +217,17 @@ Implemented in the Hit.hh and Hit.cc files in the DataObjects directories.
 The Hit class contains:\\
 
 \begin{itemize}
-\item TVector3 \_hitPosition
+\item TVector3 \_position
 \item int \_layer
 \item int \_numberStrips
 \item int \_charge
-\item bool \_isGoodHit
+\item bool \_goodHit
 \item double \_resolution 
 \end{itemize}
 
 
 The class server for reconstructed Hits only.   Associated information such as Hit resolutions
-are read from DetectorGeometry though a resolution variable exists per hit to allow for any resolution model
+are set using information from DetectorGeometry though a resolution variable exists per hit to allow for any resolution model
 to be developed.  Also note that a hit is classified of as ``bad'' if it has a large ADC
 value or more than two associated strips indicating that it is actually due to several overlapping hits from
 different tracks.
@@ -232,12 +241,12 @@ Constructors:
 
 Access methods:
 \begin{itemize}
-\item getHitPosition():... names correspond to the data members
-\item getLayer()
-\item getNumberStrips()
-\item getCharge()
-\item bool isGoodHit()
-\item getResolution
+\item TVector3 position():... names correspond to the data members
+\item layer()
+\item numberStrips()
+\item charge()
+\item goodHit()
+\item resolution
 \item print(ostream\&): To print to an a user specified ostream.
 \end{itemize}
 
@@ -256,7 +265,7 @@ The HitSet contains a typedef HitSetContainer of type std::vector of Hits.
 Access methods:
 
 \begin{itemize}
-\item getHits(): const reference access to the vector using a generic method.
+\item hits(): const reference access to the vector using a generic method.
 The vector index indexes the Hit number to allow direct access to a hit of a known number.
 
 \item insertHit(Hit): Provided to insert data into the set.
@@ -276,7 +285,7 @@ are performed by the readEvent and writeEvent functions.
 The data is stored in text format for simplicity.
 
 \begin{itemize}
-\item  Hits: to identify the set
+\item  Hits: text string to identify the set
 \item version: The version is checked on input to make sure the correct streamer code is being used.
 \item number of hits
 \item hit number (repeated number of hits times)
@@ -286,7 +295,7 @@ The data is stored in text format for simplicity.
 \item - layer number
 \item - number of strips
 \item - charge
-\item - isGoodHit
+\item - goodHit
 \item - resolution
 \end{itemize}
 
@@ -312,8 +321,9 @@ Constructor:
 
 Access:
 \begin{itemize}
-\item getLorentzVector():
-\item getPosition(): \_dr
+\item lorentzVector()::... names correspond to the data members
+\item charge()
+\item dR(): \_dr
 
 \item makeHelix(TVector3 bField,curvatureC): function which takes the magnetic field and the curvature constant and returns
 a Helix which can be used for operations like finding intersections with layers.  Note the magnetic field
@@ -333,7 +343,7 @@ The GenTrackSet contains a typedef GenTrackSetContainer of type std::vector of G
 Access:
 
 \begin{itemize}
-\item getGenTracks(): const reference access to the vector using a generic method.
+\item genTracks(): const reference access to the vector using a generic method.
 The vector index indexes the GenTrack number to allow direct access to a hit of a known number.
 
 \item insertTrack(GenTrack): Provided to insert data into the set.
@@ -354,7 +364,7 @@ are performed by the readEvent and writeEvent functions.
 The data is stored in text format for simplicity.
 
 \begin{itemize}
-\item  GenTracks: to identify the set
+\item  GenTracks: text string to identify the set
 \item version: The version is checked on input to make sure the correct streamer code is being used.
 \item number of GenTracks
 \item - GenTrack number (repeated number of GenTrackNumber times)
@@ -388,42 +398,47 @@ Constructor:
 \item Tracks are constructed by the full set of parameters above.  These parameters
 are generated by the BuildTrack helper function in the Algorithms directories.
 That class fits a track based the input hits.
-\item setHelix() expert method for use in TrackFit where the helix must be updated frequently
+\item note that the Helix class includes the public setHelix() expert method for use in TrackFit where the helix must be updated frequently
 \end{itemize}
 
 
 Access:
 \begin{itemize}
-\item getHelix() get Helix object with track parameters
-\begin{itemize}
-\item Helix accessor functions called as getHelix().getDr() ...:
-\item getDr(): Impact parameter, distance in the x-y place to the reference point (0,0,0) at the point of closest
-approach. Signed positive to indicate the reference point is within the circle or negative is outside.
-\item getPhi0(): Phi angle from the reference point to the point of closest approach.
-\item getKappa(): inverse Pt signed to indicate handedness + right handed (negative charge) - left handed
-(positive charge)
-\item getDz(): z distance to reference point at point of closest approach
-\item getTanL(): pZ/pT or cot(theta) where theta is the dip angle which is 90 for track perpendicular
-to the z axis and 0 degrees for parallel to the position z axis.
-\item getAlpha() get inverse curvature constant in the magnetic field at the origin
-\item getRadiusOfCurvatureAtOrigin()
-\item getRadiusOfCurvature(TVector3 bField) at an arbitrary point with field bField
-\item getPT()
-\item getPZ()
-\item getCotTheta() same as tanL
-\item getCosTheta() where theta is the dip angle
-\item getSinTheta() where theta is the dip angle 
-\end{itemize}
+\item helix() get Helix object with track parameters\\
 The Helix helix parameter follow the convention of~\cite{helix} and are described in detail there.\\
 Note that helix parameters are always referenced from (0,0,0) in the parametrization used in this code.
-\item getSigmDR() ... unceartianties for the five track parameters from the covariance matrix
-\item getCharge()
-\item getCovMatrix()
-\item getChi2()
-\item getNDof()
-\item getChi2Prob()
-\item getLorentzVector() get a root TLorentzVector object based on the track parameters
-\item getHits() get TrackHitContainer vector of hit indices's
+\item TVectorD helixParam(), access to the helix parameter vector
+\item Helix parameter accessor functions called  from the helix as
+  helix().dR() or directly as dR() ...:
+\begin{itemize}
+\item dR(): Impact parameter, distance in the x-y place to the reference point (0,0,0) at the point of closest
+approach. Signed positive to indicate the reference point is within the circle or negative is outside.
+\item phi0(): Phi angle from the reference point to the point of closest approach.
+\item kappa(): inverse Pt signed to indicate handedness + right handed (negative charge) - left handed
+(positive charge)
+\item dZ(): z distance to reference point at point of closest approach
+\item tanL(): pZ/pT or cot(theta) where theta is the dip angle which is 90 for track perpendicular
+to the z axis and 0 degrees for parallel to the position z axis.
+\end{itemize}
+\item Other Helix accessors available from helix()
+\begin{itemize}
+\item alpha() get inverse curvature constant in the magnetic field at the origin
+\item radiusOfCurvatureAtOrigin()
+\item radiusOfCurvature(TVector3 bField) at an arbitrary point with field bField
+\item pT()
+\item pZ()
+\item cotTheta() same as tanL
+\item cosTheta() where theta is the dip angle
+\item sinTheta() where theta is the dip angle 
+\end{itemize}
+\item covMatrix()
+\item sigmDr() ... uncertainties for the five track parameters from the covariance matrix
+\item charge()
+\item chi2()
+\item nDof()
+\item chi2Prob()
+\item lorentzVector() get a root TLorentzVector object based on the track parameters
+\item trackHits() get TrackHitContainer vector of hit indices's
 \item numberHits()
 \item print(ostream\&): to print to an a user specified ostream.
 
@@ -439,7 +454,7 @@ The TrackSet is a typedef TrackSetContainer of type std::vector of Tracks.
 
 Access:
 \begin{itemize}
-\item getTracks(): const reference access to the vector using a generic method.
+\item tracks(): const reference access to the vector using a generic method.
 The vector index indexes the Track number to allow direct access to a hit of a known number.
 
 \item insertTrack(Track): provided to insert data into the set.
@@ -461,10 +476,10 @@ are performed by the readEvent and writeEvent functions.
 The data is stored in text format for simplicity.
 
 \begin{itemize}
-\item Tracks: to identify the set
+\item Tracks: text string to identify the set
 \item version: The version is checked on input to make sure the correct streamer code is being used.
-\item number of GenTracks
-\item - Track number (repeated number of GenTrackNumber times)
+\item number of tracks
+\item - Track number (repeated number of trackNumber times)
 \item - charge
 \item - px
 \item - py

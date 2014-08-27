@@ -1,6 +1,6 @@
-DebugLevel 2 
+DebugLevel 1 
 DebugOutputFileName testlog_dataGen 
-NumberEvents 10 
+NumberEvents 200 
 NumberTracks 10 
 Seed 1
 RootFileName genHistograms.root

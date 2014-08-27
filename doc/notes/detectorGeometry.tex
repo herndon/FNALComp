@@ -115,6 +115,8 @@ Figure ~\ref{fig:detector} shows a view of the detector with one track and assoc
   \end{center}
 \end{figure}
 
+More information on the event display used to make this figure is
+given is the event display section below.
 
 The sensors digitize approximately 64 ADC counts of charge per charged
 particle hit and have a hit resolution given in microns which is due to
@@ -178,7 +180,41 @@ Detector geometry class functions:
   as is nXSensors() is named for \_nXSensors
 \end{itemize}
 
+\section{Event display}
 
+Some information on the event display is given here.  The display can give the
+following information.  
+
+\begin{itemize}
+\item Sensors: semitransparent blue
+
+\item Generated Hits: yellow  (you can toggle on and off X and SAS+Z hits separately)(the 3D position of where the track crossed the sensor is shown)
+
+\item Generated tracks, matched to a reco track: Green
+
+\item Generated tracks, reconstructed track not found within a very loose tolerance: Yellow-green
+
+\item Reconstructed tracks, matches gen track: Red
+
+\item Reconstructed tracks, no matching gen track within a very loose tolerance: Orange
+
+\item Reconstructed hits, for the reconstructed tracks with no matching generated tracks the reconstructed hits for that track are shown.  Remember that reconstructed hits are found when a strip on the detector has charge somewhere on the strip.   The hit could be anywhere on the strip so a purple line is drawn on top of the sensor to represent the strip.  From this you can see how real hits could be put together in the wrong way to make a completely false tracks.   
+\end{itemize}
+
+
+Figure ~\ref{fig:eventdisplay} shows an event display example including
+a ghost track not corresponding to any generated track.
+
+\begin{figure}[hbtp]
+  \begin{center}
+    \includegraphics[width=17.0cm]{eventdisplay.png}
+   \caption{Event display including a ghost track.}
+    \label{fig:eventdisplay}
+  \end{center}
+\end{figure}
+
+The event display is invoked by running ./dataReco N, where N is the
+event numer to display.
 
 
 \end{document}
