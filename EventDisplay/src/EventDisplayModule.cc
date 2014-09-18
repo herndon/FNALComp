@@ -75,20 +75,41 @@ fc::EventDisplayModule::EventDisplayModule(int debugLevel,const std::string& inp
   _drawGenHits(true),
   _drawRecoTracks(false),
   _drawSeedRecoTracks(false),
-  _drawRecoHits(false){
+  _drawRecoHits(false),
+  _genDataOnly(true){
 
 
   }
 
 void fc::EventDisplayModule::processEvent(Event& event) {
 
-  Handle<GenHitSet> genHitSet = event.get<GenHitSet>(_genHitsLabel);
-  Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_genTracksLabel);
-  Handle<HitSet> recoHitSet = event.get<HitSet>(_recoHitsLabel);
-  Handle<TrackSet> recoTrackSet = event.get<TrackSet>(_recoTracksLabel);
 
 
   if (event.eventNumber() == _eventNumber) {
+
+    if (_genDataOnly) {
+  Handle<GenHitSet> genHitSet = event.get<GenHitSet>(_genHitsLabel);
+  Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_genTracksLabel);
+ 
+   displayGeometry();
+
+   TrackSet recoTrackSet;
+    TEveTrackList *genTrackList = new TEveTrackList();
+    fillGenTrackList(*genTrackSet,recoTrackSet,*genTrackList);
+    gEve->AddElement(genTrackList);
+
+    TEveElementList* hitList = new TEveElementList("XHits"); 
+    TEveElementList* sasZHitList = new TEveElementList("SASZHits"); 
+    fillGenHitList(*genHitSet,*hitList,*sasZHitList);
+    gEve->AddElement(hitList);
+    gEve->AddElement(sasZHitList);
+
+
+    } else { 
+   Handle<GenHitSet> genHitSet = event.get<GenHitSet>(_genHitsLabel);
+    Handle<GenTrackSet> genTrackSet = event.get<GenTrackSet>(_genTracksLabel);
+    Handle<HitSet> recoHitSet = event.get<HitSet>(_recoHitsLabel);
+    Handle<TrackSet> recoTrackSet = event.get<TrackSet>(_recoTracksLabel);
 
     displayGeometry();
 
@@ -107,6 +128,8 @@ void fc::EventDisplayModule::processEvent(Event& event) {
     gEve->AddElement(sasZHitList);
  
     fillHitList(*recoHitSet);
+
+    }
 
     gEve->Redraw3D(kTRUE);
     // This output must go directly to the screen
@@ -216,8 +239,12 @@ void fc::EventDisplayModule::fillGenTrackList(const fc::GenTrackSet& genTrackSet
     eveTrack->SetIndex(n);
     eveTrack->SetStdTitle();
     eveTrack->SetLineWidth(2);
+    if (_genDataOnly){
+      eveTrack->SetMainColor(210);
+    }else{
     Track track= fcf::matchTrack(genTrack,recoTrackSet,_detectorGeometry,matchedTrackLoose,matchedTrackXYLoose,matchedTrackTight,matchedTrackXYTight);
     if (matchedTrackLoose) {eveTrack->SetMainColor(210);} else {eveTrack->SetMainColor(88);}
+    }
     eveTrack->MakeTrack();
     trackList.AddElement(eveTrack);
     ++n;

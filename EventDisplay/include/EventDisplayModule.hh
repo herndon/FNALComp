@@ -66,7 +66,8 @@ private:
     bool            _drawRecoTracks;
     bool            _drawSeedRecoTracks;
     bool            _drawRecoHits;
- 
+    bool            _genDataOnly; 
+
   void fillGenTrackList(const GenTrackSet& genTrackSet,const TrackSet& recoTrackSet,TEveTrackList& trackList);
   void fillRecoTrackList(const TrackSet& recoTrackSet,const GenTrackSet& genTrackSet,const HitSet& recoHitSet,TEveTrackList& trackList);
   void fillGenHitList(const GenHitSet& genHitSet,TEveElementList& hitList,TEveElementList& sasZHitList);
