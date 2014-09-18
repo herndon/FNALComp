@@ -78,12 +78,7 @@ int main (int argc,const char *argv[])
 
 
   // Instantiate and initialize Module classes
-  if (config.runGenHistogrammingModule()) 
-    processor.addModule( new fc::Day0HistogrammingModule("genTracks", // tracks from file
-						     "genHits", // hits from file
-						     "genStrips", // strips from file
-						     detectorGeometry)); //get these strips
- 
+  
   if (config.runHitRecoModule()) 
     processor.addModule( new fc::HitRecoModule(config.debugLevel(),debugfile,
 					       "genStrips","recoHits", detectorGeometry));
@@ -101,7 +96,7 @@ int main (int argc,const char *argv[])
 
   if (config.runTrackSeedModule()) 
     processor.addModule( new fc::TrackSeedModule(config.debugLevel(),debugfile,
-						      "recoHits", "seedTracks","trackSeedStrategy2X1SASML",config,detectorGeometry) );
+						      "recoHits", "seedTracks","trackSeedStrategy2X1SAS",config,detectorGeometry) );
   if (config.runTrackSeedCompareModule()) 
     processor.addModule( new fc::TrackSeedCompareModule(config.debugLevel(),debugfile,
 							"perfectRecoTracks", "seedTracks", detectorGeometry) );
