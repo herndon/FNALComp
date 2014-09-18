@@ -6,7 +6,6 @@
 #include "DataObjects/include/TrackSet.hh"
 #include "Modules/include/TrackSeedModule.hh"
 #include "Tracking/include/TrackSeedStrategy2X1SAS.hh"
-#include "Tracking/include/TrackSeedStrategy2X1SASML.hh"
 #include "Services/include/Config.hh"
 #include "Services/include/Exception.hh"
 
@@ -52,12 +51,6 @@ void fc::TrackSeedModule::findTrackSeeds(const HitSet& recoHitSet,
             _config.minCandPTCut());
     seedStrategy.findTrackSeeds(recoHitSet,trackSeedSet);
 
-
-  } else if  (_trackSeedStrategy=="trackSeedStrategy2X1SASML"){
-
-    TrackSeedStrategy2X1SASML seedStrategy(_debugLevel,_detectorGeometry,
-            _config.minCandPTCut());
-    seedStrategy.findTrackSeeds(recoHitSet,trackSeedSet);
 
   } else {
     throw Exception("TrackSeedModule::findTrackSeeds strategy not recongnized");
