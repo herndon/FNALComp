@@ -16,8 +16,7 @@ fc::HitCompareModule::HitCompareModule(int debugLevel,
     _debugLevel(debugLevel),
     _detectorGeometry(detectorGeometry),
     _genHitsLabel(inputGenHitsLabel),
-    _recHitsLabel(inputRecHitsLabel),
-    _hHitResults(nullptr) {
+    _recHitsLabel(inputRecHitsLabel){
 
     initializeHistograms();
 
@@ -35,14 +34,7 @@ void fc::HitCompareModule::initializeHistograms() {
         _hDeltaHitPositions.push_back(new TH1D(histNameC,
                                              "Delta X Hit Positions;delta X (m);number of hits",200, -0.0004, 0.0004));
     }
-    for (int iiLayer = 0; iiLayer < _detectorGeometry.nSensors(); ++iiLayer) {
-        std::string histName = "deltaBadHitPositionsLayer" + std::to_string(iiLayer);
-        const char * histNameC = histName.c_str();
-        _hDeltaBadHitPositions.push_back(new TH1D(histNameC,
-                                             "Delta X Bad Hit Positions;delta X (m);number of hits",200, -0.001, 0.001));
-    }
-    _hHitResults    = new TH1D("HitResults", "Hit results, gen, found, good, bad;N",4,-0.5,3.5);
-
+ 
 
 
 }
