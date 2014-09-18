@@ -12,7 +12,6 @@
 #include "Geometry/include/BuildDetectorGeometry.hh"
 #include "Framework/include/EventProcessor.hh"
 #include "Modules/include/DataSource.hh"
-#include "Modules/include/Day0HistogrammingModule.hh"
 #include "Modules/include/HitRecoModule.hh"
 #include "Modules/include/HitCompareModule.hh"
 #include "Modules/include/PerfectTrackRecoModule.hh"
