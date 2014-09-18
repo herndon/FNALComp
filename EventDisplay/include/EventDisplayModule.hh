@@ -70,6 +70,7 @@ private:
   void fillGenTrackList(const GenTrackSet& genTrackSet,const TrackSet& recoTrackSet,TEveTrackList& trackList);
   void fillRecoTrackList(const TrackSet& recoTrackSet,const GenTrackSet& genTrackSet,const HitSet& recoHitSet,TEveTrackList& trackList);
   void fillGenHitList(const GenHitSet& genHitSet,TEveElementList& hitList,TEveElementList& sasZHitList);
+  void fillHitList(const HitSet& hitSet);
 
 
 

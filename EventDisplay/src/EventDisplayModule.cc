@@ -106,6 +106,8 @@ void fc::EventDisplayModule::processEvent(Event& event) {
     gEve->AddElement(hitList);
     gEve->AddElement(sasZHitList);
  
+    fillHitList(*recoHitSet);
+
     gEve->Redraw3D(kTRUE);
     // This output must go directly to the screen
     if (_debugLevel>=1) std::cout << "Exit Eve Veiwer to continue processing events." << std::endl;
@@ -283,8 +285,9 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
  
   }
 
-  lineSet->SetLineColor(6);
+ lineSet->SetLineColor(6);
   gEve->AddElement(lineSet);
+
 
 }
 
@@ -314,3 +317,34 @@ void fc::EventDisplayModule::fillGenHitList(const fc::GenHitSet& genHitSet,TEveE
   }
 
 }
+
+void fc::EventDisplayModule::fillHitList(const fc::HitSet& hitSet){
+ 
+  TEveStraightLineSet* lineSet = new TEveStraightLineSet();
+  lineSet->SetLineWidth(2);
+
+  int n = 0;
+  for (auto const& hit : hitSet.hits()){
+    std::string hstr=" hit %d";
+    std::string dstr=" hit# %d\nLayer: %d";
+    std::string strlst=hstr;
+    std::string strlab=dstr;
+
+	TVector3 hitPosition = hit.position();
+	TVector3 stripDir = _detectorGeometry.sensor(hit.layer()).perpDirection();
+	stripDir *= _detectorGeometry.sensor(hit.layer()).perpSize()/2.0;
+	lineSet->AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y()+0.001,hitPosition.Z()-stripDir.Z(),
+			 hitPosition.X()+stripDir.X(),hitPosition.Y()+stripDir.Y()+0.001,hitPosition.Z()+stripDir.Z());
+ 
+
+   n++;
+
+  }
+
+ lineSet->SetLineColor(6);
+  gEve->AddElement(lineSet);
+
+
+}
+
+
