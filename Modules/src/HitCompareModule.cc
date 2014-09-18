@@ -87,26 +87,10 @@ void fc::HitCompareModule::compareHits(const GenHitSet & genHitSet,
 	    ++recoHitNumber;
 
         }
-       // HitResults fills 0 if there is a gen Hit
-       //                  1 if any hit is found that is withing 10x the standard resolution, 5x gives an inefficiency for badHits
-       //                  2 if a isGoodHit
-       //                  3 if a bad hit
       _hHitResults->Fill(0);
-	if (recoHitSet.hits()[bestHit].goodHit()) {
-	  if (std::abs(deltaPosition)<(10.0*_detectorGeometry.sensor(genHit.layer()).hitResolution())){
-	    _hHitResults->Fill(1);
-	    _hHitResults->Fill(2);
-	  }
+	if (recoHitSet.hits()[bestHit].goodHit()||(!recoHitSet.hits()[bestHit].goodHit())) {
 	  _hDeltaHitPositions[genHit.layer()]->Fill(deltaPosition);
-
-	} else {
-	  if (std::abs(deltaPosition)<(10.0*_detectorGeometry.sensor(genHit.layer()).hitResolution())){
-	    _hHitResults->Fill(1);
-	    _hHitResults->Fill(3);
-	  }
-	  _hDeltaBadHitPositions[genHit.layer()]->Fill(deltaPosition);
-
-	}
+	} 
 
     }
 }
