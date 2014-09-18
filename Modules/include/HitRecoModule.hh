@@ -58,7 +58,7 @@ private:
     void recoHitsLayer(const StripSet &, int layer, HitSet &) const;
 
 
-    Hit buildHit(int, int,const std::vector<int> &) const;
+  //Hit buildHit(int, int,const std::vector<int> &) const;
 
     //double calculateStripHitPositionFromCluster(int, const std::vector<int> &) const;
 
