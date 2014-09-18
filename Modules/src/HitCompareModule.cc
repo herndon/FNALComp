@@ -79,7 +79,6 @@ void fc::HitCompareModule::compareHits(const GenHitSet & genHitSet,
 	    ++recoHitNumber;
 
         }
-      _hHitResults->Fill(0);
 	if (recoHitSet.hits()[bestHit].goodHit()||(!recoHitSet.hits()[bestHit].goodHit())) {
 	  _hDeltaHitPositions[genHit.layer()]->Fill(deltaPosition);
 	} 
