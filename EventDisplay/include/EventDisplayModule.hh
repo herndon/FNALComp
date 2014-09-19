@@ -14,7 +14,8 @@
 class TApplication;
 class TEveTrackList;
 class TEveElementList;
-
+class TEveStraightLineSet;
+ 
 namespace fc {
 
   class Config;
@@ -69,9 +70,10 @@ private:
     bool            _genDataOnly; 
 
   void fillGenTrackList(const GenTrackSet& genTrackSet,const TrackSet& recoTrackSet,TEveTrackList& trackList);
-  void fillRecoTrackList(const TrackSet& recoTrackSet,const GenTrackSet& genTrackSet,const HitSet& recoHitSet,TEveTrackList& trackList);
+  void fillRecoTrackList(const TrackSet& recoTrackSet,const GenTrackSet& genTrackSet,const HitSet& recoHitSet,
+			 TEveTrackList& trackList,TEveStraightLineSet& recoHitFakeTrackLineSet);
   void fillGenHitList(const GenHitSet& genHitSet,TEveElementList& hitList,TEveElementList& sasZHitList);
-  void fillHitList(const HitSet& hitSet);
+  void fillHitList(const HitSet& hitSet,TEveStraightLineSet& recoHitLineSet);
 
 
 

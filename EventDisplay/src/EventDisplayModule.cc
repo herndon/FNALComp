@@ -73,9 +73,9 @@ fc::EventDisplayModule::EventDisplayModule(int debugLevel,const std::string& inp
   _detectorGeometry(detectorGeometry),
   _drawGenTracks(true),
   _drawGenHits(true),
-  _drawRecoTracks(false),
+  _drawRecoTracks(true),
   _drawSeedRecoTracks(false),
-  _drawRecoHits(false),
+  _drawRecoHits(true),
   _genDataOnly(true){
 
 
@@ -118,8 +118,12 @@ void fc::EventDisplayModule::processEvent(Event& event) {
     gEve->AddElement(genTrackList);
 
     TEveTrackList *recoTrackList = new TEveTrackList();
-    fillRecoTrackList(*recoTrackSet,*genTrackSet,*recoHitSet,*recoTrackList);
+    TEveStraightLineSet* recoHitFakeTrackLineSet = new TEveStraightLineSet("ReconstructedHitsFakeTracks");
+ 
+    fillRecoTrackList(*recoTrackSet,*genTrackSet,*recoHitSet,*recoTrackList,*recoHitFakeTrackLineSet);
     gEve->AddElement(recoTrackList);
+    gEve->AddElement(recoHitFakeTrackLineSet);
+
 
     TEveElementList* hitList = new TEveElementList("XHits"); 
     TEveElementList* sasZHitList = new TEveElementList("SASZHits"); 
@@ -127,7 +131,9 @@ void fc::EventDisplayModule::processEvent(Event& event) {
     gEve->AddElement(hitList);
     gEve->AddElement(sasZHitList);
  
-    fillHitList(*recoHitSet);
+    TEveStraightLineSet* recoHitLineSet = new TEveStraightLineSet("ReconstructedHits");
+    fillHitList(*recoHitSet,*recoHitLineSet);
+    gEve->AddElement(recoHitLineSet);
 
     }
 
@@ -253,7 +259,8 @@ void fc::EventDisplayModule::fillGenTrackList(const fc::GenTrackSet& genTrackSet
 }
 
 
-void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,const fc::GenTrackSet& genTrackSet,const fc::HitSet& recoHitSet,TEveTrackList& recoTrackList){
+void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,const fc::GenTrackSet& genTrackSet,const fc::HitSet& recoHitSet,
+					       TEveTrackList& recoTrackList,TEveStraightLineSet& recoHitFakeTrackLineSet){
 
 
 
@@ -270,8 +277,7 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
  
   recoTrackList.SetName("RecoTrackList");
 
-  TEveStraightLineSet* lineSet = new TEveStraightLineSet();
-  lineSet->SetLineWidth(2);
+  recoHitFakeTrackLineSet.SetLineWidth(2);
 
   bool matchedTrackLoose = false;
   bool matchedTrackXYLoose = false;
@@ -301,7 +307,7 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
 	TVector3 hitPosition = hit.position();
 	TVector3 stripDir = _detectorGeometry.sensor(hit.layer()).perpDirection();
 	stripDir *= _detectorGeometry.sensor(hit.layer()).perpSize()/2.0;
-	lineSet->AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y()+0.001,hitPosition.Z()-stripDir.Z(),
+	recoHitFakeTrackLineSet.AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y()+0.001,hitPosition.Z()-stripDir.Z(),
 			 hitPosition.X()+stripDir.X(),hitPosition.Y()+stripDir.Y()+0.001,hitPosition.Z()+stripDir.Z());
       }
       ++n;
@@ -312,8 +318,7 @@ void fc::EventDisplayModule::fillRecoTrackList(const fc::TrackSet& recoTrackSet,
  
   }
 
- lineSet->SetLineColor(6);
-  gEve->AddElement(lineSet);
+ recoHitFakeTrackLineSet.SetLineColor(6);
 
 
 }
@@ -345,10 +350,9 @@ void fc::EventDisplayModule::fillGenHitList(const fc::GenHitSet& genHitSet,TEveE
 
 }
 
-void fc::EventDisplayModule::fillHitList(const fc::HitSet& hitSet){
+void fc::EventDisplayModule::fillHitList(const fc::HitSet& hitSet,TEveStraightLineSet& recoHitLineSet){
  
-  TEveStraightLineSet* lineSet = new TEveStraightLineSet();
-  lineSet->SetLineWidth(2);
+  recoHitLineSet.SetLineWidth(2);
 
   int n = 0;
   for (auto const& hit : hitSet.hits()){
@@ -360,7 +364,7 @@ void fc::EventDisplayModule::fillHitList(const fc::HitSet& hitSet){
 	TVector3 hitPosition = hit.position();
 	TVector3 stripDir = _detectorGeometry.sensor(hit.layer()).perpDirection();
 	stripDir *= _detectorGeometry.sensor(hit.layer()).perpSize()/2.0;
-	lineSet->AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y()+0.001,hitPosition.Z()-stripDir.Z(),
+	recoHitLineSet.AddLine(hitPosition.X()-stripDir.X(),hitPosition.Y()-stripDir.Y()+0.001,hitPosition.Z()-stripDir.Z(),
 			 hitPosition.X()+stripDir.X(),hitPosition.Y()+stripDir.Y()+0.001,hitPosition.Z()+stripDir.Z());
  
 
@@ -368,9 +372,7 @@ void fc::EventDisplayModule::fillHitList(const fc::HitSet& hitSet){
 
   }
 
- lineSet->SetLineColor(6);
-  gEve->AddElement(lineSet);
-
+ recoHitLineSet.SetLineColor(6);
 
 }
 
