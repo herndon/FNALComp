@@ -74,63 +74,12 @@ void fc::TrackSeedCompareModule::initializeHistograms() {
 
 void fc::TrackSeedCompareModule::processEvent(Event& event)
 {
-    Handle<TrackSet> perfectTrackSet = event.get<TrackSet>(_perfectTracksLabel);
-    Handle<TrackSet> seedTrackSet = event.get<TrackSet>(_seedTracksLabel);
+  //Handle<TrackSet> perfectTrackSet = event.get<TrackSet>(_perfectTracksLabel);
+  //Handle<TrackSet> seedTrackSet = event.get<TrackSet>(_seedTracksLabel);
 
-    compareTrackSeeds(*perfectTrackSet,*seedTrackSet);
-
-
-}
-
-void fc::TrackSeedCompareModule::compareTrackSeeds(const TrackSet & perfectTrackSet,
-						   const TrackSet& seedTrackSet) const {
+    //compareTrackSeeds(*perfectTrackSet,*seedTrackSet);
 
 
-  for (auto const& track : perfectTrackSet.tracks()) {
-
-    std::vector<int> seeds =  matchTrackSeeds(track,seedTrackSet);
-
-    for (auto seed: seeds) {
-      TVectorD deltaPos = fcf::deltaHP(track,seedTrackSet.tracks()[seed]);
-      fillHistograms(deltaPos,seedTrackSet.tracks()[seed]);
-    }
-
-  }
-
-}
-
-
-
-const std::vector<int> fc::TrackSeedCompareModule::matchTrackSeeds(const Track & track,
-        const TrackSet& seedTrackSet) const {
-
-  int seedNumber = 0;
-  std::vector<int> seedNumbers;
-    for (auto const& seed : seedTrackSet.tracks()) {
-
-      if (matchTrackSeed(track,seed)) seedNumbers.push_back(seedNumber);
-        ++seedNumber;
-    }
-
-    _hMatchedTrackSeeds->Fill(seedNumbers.size());
-
-    return seedNumbers;
-
-}
-
-bool fc::TrackSeedCompareModule::matchTrackSeed(const Track & track,
-        const Track& seed) const {
-
-  unsigned int matchedHits = 0;
-  for (auto const hitp : track.trackHits()) {
-
-    for (auto const hits : seed.trackHits()){
-
-      if (hitp == hits) matchedHits++;
-    }
-  }
-
-  return (matchedHits == seed.trackHits().size());
 }
 
 

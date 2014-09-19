@@ -57,9 +57,7 @@ private:
 
     // Comparison of hits
 
-    void compareTrackSeeds(const TrackSet &, const TrackSet &) const;
-    const std::vector<int> matchTrackSeeds(const Track &,const TrackSet &) const;
-    bool matchTrackSeed(const Track &, const Track&) const; 
+    //void compareTrackSeeds(const TrackSet &, const TrackSet &) const;
     void fillHistograms(const TVectorD &,const Track&) const;
 
     // Histograms
