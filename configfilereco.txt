@@ -1,4 +1,4 @@
-DebugLevel 2 
+DebugLevel 1 
 DebugOutputFileName testlog_dataReco
 RunGenHistogrammingModule 1
 RunHitRecoModule 1

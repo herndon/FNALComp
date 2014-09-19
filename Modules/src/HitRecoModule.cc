@@ -53,35 +53,43 @@ void fc::HitRecoModule::recoHitsLayer(const StripSet & stripSet,int layer,
 
     for (auto const & strip : layerStrips){
 
- 
-  
-      if (strip.second > _detectorGeometry.sensor(layer).threshold() && strip.first == (initialStrip+stripAdcs.size())){
-	//Found an above threshold and an ajacent strip
-	stripAdcs.push_back(strip.second);
-      } else if (stripAdcs.size() > 0){
-	// Was not adjacent and above threshold and a cluster is in stripAdc
-	hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
-	stripAdcs.clear();
-	if (strip.second > _detectorGeometry.sensor(layer).threshold()) {
-	  // Was above threhold but not adjacent start new cluster
+      if (_detectorGeometry.sensor(layer).threshold() > 0) {
+  	if (strip.second > _detectorGeometry.sensor(layer).threshold() && strip.first == (initialStrip+stripAdcs.size())){
+	  //Found an above threshold and an ajacent strip
+	  stripAdcs.push_back(strip.second);
+	} else if (stripAdcs.size() > 0){
+	  // Was not adjacent and above threshold and a cluster is in stripAdc
+	  hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
+	  stripAdcs.clear();
+	  if (strip.second > _detectorGeometry.sensor(layer).threshold()) {
+	    // Was above threhold but not adjacent start new cluster
+	    initialStrip = strip.first;
+	    stripAdcs.push_back(strip.second);
+	  }
+	} else if (strip.second > _detectorGeometry.sensor(layer).threshold()){
+	  // Was above threhold but not adjacent start new cluster, no previous cluster to store
+	  initialStrip = strip.first;
+	  stripAdcs.push_back(strip.second);
+	} else {
+
+	}
+
+      } else {
+	if (strip.first == (initialStrip+stripAdcs.size())){
+	  //Found an ajacent strip, put strip in adc bugger
+	  stripAdcs.push_back(strip.second);
+	} else {
+	  // Was not adjacent, store hit
+	  hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
+	  stripAdcs.clear();
 	  initialStrip = strip.first;
 	  stripAdcs.push_back(strip.second);
 	}
-      } else if (strip.second > _detectorGeometry.sensor(layer).threshold()){
-	// Was above threhold but not adjacent start new cluster, no previous cluster to store
-	initialStrip = strip.first;
-	stripAdcs.push_back(strip.second);
-      } else {
-
       }
-
     }
 
-    // Was there a cluster in the stripAdc buffer
+    // Was there a cluster in the stripAdc buffer?
     if (stripAdcs.size()>0)	hitSet.insertHit(std::move(buildHit(layer, initialStrip,stripAdcs)));
-
-
-
 
 
 }
