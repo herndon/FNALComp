@@ -137,20 +137,35 @@ std::vector<int> fcf::bestTracksFilter(const fc::FastTrackSetContainer & tracks)
         ++trackNumber;
     }
 
-    trackNumber = 0;
 
-    // Keep all if not yet constrainted since we can't compare chi2/ndof
-    for (auto const& track : tracks) {
-        if (track.nDof() <= 0) trackList.push_back(trackNumber);
-        ++trackNumber;
-    }
-
+ 
     // Tested keeping all or just the best track.  Keeping top 2 works best
     if (bestTrack > -1)  trackList.push_back(bestTrack);
     if (secondBestTrack > -1)  trackList.push_back(secondBestTrack);
 
 
+    // keep close by tracks in chi2
+    trackNumber = 0;
+    double testChi2 = 999;
+    if (bestTrack > -1) testChi2 = bestChi2;
+    if (secondBestTrack > -1) testChi2 = secondBestChi2;
+    if (testChi2 < 999.0){
 
+      for (auto const& track : tracks) {
+	if (trackNumber!=bestTrack && trackNumber !=secondBestTrack && track.nDof() > 0 && track.chi2()< (testChi2+0.1)) trackList.push_back(trackNumber);
+	++trackNumber;
+      }
+    }
+
+     // Keep all if not yet constrainted since we can't compare chi2/ndof
+    trackNumber = 0;
+    for (auto const& track : tracks) {
+        if (track.nDof() <= 0) trackList.push_back(trackNumber);
+        ++trackNumber;
+    }
+
+
+    std::sort(trackList.begin(),trackList.end()); 
 
 
     return trackList;

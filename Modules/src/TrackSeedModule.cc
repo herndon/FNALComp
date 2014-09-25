@@ -32,8 +32,8 @@ void fc::TrackSeedModule::processEvent(Event& event)
     findTrackSeeds(*recoHitSet,*recoTrackSeedSet);
 
     if (_debugLevel>=2) {
-        _debugfile << "Seed track set" << std::endl;
-        recoTrackSeedSet->print(_debugfile);
+      _debugfile << "Seed track set " << recoTrackSeedSet->tracks().size() << std::endl;
+	//recoTrackSeedSet->print(_debugfile);
     }
 
 

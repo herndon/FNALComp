@@ -55,16 +55,17 @@ void fc::LayerTrackFinder::findTrack(const Track& track,
 
 
     std::vector<int> hits = findHits(track,recoHitSet);
+ 
     FastTrackSetContainer newTracks = buildTracks(track, hits, recoHitSet);
     std::vector<int> tracks = fcf::bestTracksFilter(newTracks);
     //We may want to decide whether to remove the seed track
     //removeSeedTrack(trackSet,trackSet);
 
     int ii_track=0; 
-    for (auto & track: newTracks){
+    for (auto & newTrack: newTracks){
 
       for (auto trackNumber: tracks) {
-	if (trackNumber == ii_track) allNewTracks.push_back(std::move(track));
+	if (trackNumber == ii_track) allNewTracks.push_back(std::move(newTrack));
       }
 
       ++ii_track;
@@ -114,24 +115,35 @@ std::vector<int>  fc::LayerTrackFinder::findHits(const Track & track ,
 
 
 
-fc::FastTrackSetContainer fc::LayerTrackFinder::buildTracks(
-    const Track & track, const std::vector<int> & hits,
-    const HitSet & recoHitSet) const {
+fc::FastTrackSetContainer fc::LayerTrackFinder::buildTracks(const Track & track, const std::vector<int> & hits,
+							    const HitSet & recoHitSet) const {
 
   fcf::TrackingSelector trackSelector = {_minPTCut,_dRCut,_dZCut,_nExpHits,_maxChi2NDofCut,true,true};
-    FastTrackSetContainer newTracks;
-    for (auto hitNumber : hits) {
-      //TrackHitContainer trackHits = track.trackHits();
-      TrackHitContainer trackHits;
-        trackHits.push_back(hitNumber);
+  FastTrackSetContainer newTracks;
 
-        Track newTrack(buildTrack(track,recoHitSet,trackHits,_detectorGeometry,
-                                  _debugLevel));
+  for (auto hitNumber : hits) {
+    // version where we build based on previous track
+    // TrackHitContainer trackHits;
+    // trackHits.push_back(hitNumber);
 
-        if (fcf::goodTrack(newTrack,_detectorGeometry,
-                                    trackSelector)) newTracks.push_back(std::move(newTrack));
+    // Track newTrack(buildTrack(track,recoHitSet,trackHits,_detectorGeometry,
+    // 			      _debugLevel));
+
+    // version where we start over from hits
+
+    TrackHitContainer trackHits;
+    for (auto oldHit: track.trackHits()){
+      trackHits.push_back(oldHit);
     }
-    return newTracks;
+    trackHits.push_back(hitNumber);
+    Track newTrack(buildTrack(recoHitSet,trackHits,_detectorGeometry,_debugLevel));
+
+    if (fcf::goodTrack(newTrack,_detectorGeometry,
+		       trackSelector)) {
+      newTracks.push_back(std::move(newTrack));
+    }
+  }
+  return newTracks;
 
 }
 
