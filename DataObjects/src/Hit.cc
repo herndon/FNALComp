@@ -12,7 +12,7 @@ fc::Hit::Hit(const TVector3 & hitPosition, int layer, int numberStrips,
     _resolution(resolution) {
 }
 
-void fc::Hit::print(ostream& out) const {
+void fc::Hit::print(std::ostream& out) const {
 
   out << "Hit position:  " << position().x() << " " <<  position().y() << " " << position().z() << std::endl;
   out << "Layer          " << layer() << std::endl;

@@ -13,7 +13,7 @@ void fc::HitSet::insertHit(Hit&& hit) {
     _hitSet.push_back(std::move(hit));
 }
 
-void fc::HitSet::print(ostream& out) const {
+void fc::HitSet::print(std::ostream& out) const {
 
     out << "HitSet" << std::endl;
 

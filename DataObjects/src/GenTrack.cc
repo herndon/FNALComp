@@ -33,7 +33,7 @@ const fc::Helix fc::GenTrack::makeHelix(const TVector3& bField,
 // Only called in GenTrack print method.
 
 
-void fc::GenTrack::print(ostream& out) const {
+void fc::GenTrack::print(std::ostream& out) const {
 
     // dummy field for makeHelix  Can not be used to retrieve the radius of curvature with needs the magentic field
     TVector3 bField(0.0,0.0,0.0);

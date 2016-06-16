@@ -21,7 +21,7 @@ fc::DetectorGeometry::DetectorGeometry(int detectorGeometryVersion,
     _primaryVertexZ(primaryVertexZ) {
 }
 
-void fc::DetectorGeometry::printDetectorGeometry(ostream& out) const {
+void fc::DetectorGeometry::printDetectorGeometry(std::ostream& out) const {
 
     out << "Detector Geometry information" << std::endl;
     out << "Detector Geometry version: " << detectorGeometryVersion() << std::endl;

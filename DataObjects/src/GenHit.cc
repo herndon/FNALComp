@@ -8,7 +8,7 @@ fc::GenHit::GenHit(const TVector3 & position, int layer, int trackNumber):
 }
 
 
-void fc::GenHit::print(ostream& out) const {
+void fc::GenHit::print(std::ostream& out) const {
 
   out << "GenHit position:  " << position().x() << " " <<  position().y() << " " << position().z() << std::endl;
   out << "Layer:         " << layer() << std::endl;

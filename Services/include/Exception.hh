@@ -1,6 +1,7 @@
 #ifndef Services_Exception_hh
 #define Services_Exception_hh
 #include<stdexcept>
+#include<string>
 
 namespace fc {
 

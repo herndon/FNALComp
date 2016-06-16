@@ -46,7 +46,7 @@ public:
         return _resolution;
     }
 
-    void print(ostream& out) const;
+    void print(std::ostream& out) const;
 
 private:
 

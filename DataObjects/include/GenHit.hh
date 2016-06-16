@@ -36,7 +36,7 @@ public:
         return _trackNumber;
     }
 
-    void print(ostream& out) const;
+    void print(std::ostream& out) const;
 
 private:
 

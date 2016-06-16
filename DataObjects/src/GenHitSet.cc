@@ -10,7 +10,7 @@ void fc::GenHitSet::insertGenHit(GenHit&& hit) {
     _genHitSet.push_back(std::move(hit));
 }
 
-void fc::GenHitSet::print(ostream& out) const {
+void fc::GenHitSet::print(std::ostream& out) const {
 
     out << "GenHitSet" << std::endl;
 

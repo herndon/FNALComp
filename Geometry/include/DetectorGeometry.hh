@@ -141,7 +141,7 @@ public:
     }
 
 
-    void printDetectorGeometry(ostream& out) const;
+    void printDetectorGeometry(std::ostream& out) const;
 
 
 

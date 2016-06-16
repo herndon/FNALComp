@@ -135,7 +135,7 @@ public:
 
   //void insertHit(int hitNumber);
 
-    void print(ostream& out) const;
+    void print(std::ostream& out) const;
 
 private:
 

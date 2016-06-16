@@ -9,7 +9,7 @@ void fc::GenTrackSet::insertTrack(GenTrack&& genTrack) {
 }
 
 
-void fc::GenTrackSet::print(ostream& out) const {
+void fc::GenTrackSet::print(std::ostream& out) const {
 
     out << "GenTrackSet" << std::endl;
 

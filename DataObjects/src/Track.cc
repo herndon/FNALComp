@@ -54,7 +54,7 @@ double fc::Track::chi2Prob() const {
 }
 
 
-void fc::Track::print(ostream& out) const {
+void fc::Track::print(std::ostream& out) const {
 
     TLorentzVector lorentzVec = lorentzVector();
 

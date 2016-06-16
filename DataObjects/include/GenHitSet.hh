@@ -34,7 +34,7 @@ public:
 
     void insertGenHit(GenHit&&);
 
-    void print(ostream& out) const;
+    void print(std::ostream& out) const;
 
 private:
 
