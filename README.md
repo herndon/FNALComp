@@ -3,36 +3,36 @@ FNALComp
 
 FNAL Programming Reconstruction Software for Large Computing Projects Course Code Repository
 
-Prerequisites
-git
+Prerequisites<br>
+git<br>
 c++11
-root: https://root.cern/install/
-setup root using (from base root directory)
+root: https://root.cern/install/<br>
+setup root using (from base root directory)<br>
 . ./bin/thisroot.sh
 
 
-checkout
+checkout<br>
 git clone https://github.com/herndon/FNALComp.git FNALComp
 
 compiling<br>
 make
 
-running
-generate simulated data for muons traversing a muon detector (silicon tracker)
-./dataGen
-reconstruct data in the tracker
-./dataReco
-event display for reconstructed data
-./dataReco <eventNumber>
-i.e.
-./dataReco 1
+running<br>
+generate simulated data for muons traversing a muon detector (silicon tracker)<br>
+./dataGen<br>
+reconstruct data in the tracker<br>
+./dataReco<br>
+event display for reconstructed data<br>
+./dataReco <eventNumber><br>
+i.e.<br>
+./dataReco 1<br>
 
-configuration files
-configfile.txt
+configuration files<br>
+configfile.txt<br>
 configfilereco.txt
 
-Software course using this code package
-https://indico.fnal.gov/event/8568/overview
+Software course using this code package<br>
+https://indico.fnal.gov/event/8568/overview<br>
 https://cdcvs.fnal.gov/redmine/projects/fnal-soft-school-summer-2014
 
 
