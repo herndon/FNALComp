@@ -14,7 +14,7 @@ setup root using (from base root directory)
 checkout
 git clone https://github.com/herndon/FNALComp.git FNALComp
 
-compiling
+compiling<br>
 make
 
 running
